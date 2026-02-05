@@ -133,20 +133,19 @@ Key Elements:
 
 ---
 
-## Zeus.Academia.2
+## Zeus.Academia.3b
 
 - Based on a publicly available model of a commonly understood domain
   - [https://orm.net/pdf/ORMwhitePaper.pdf](https://orm.net/pdf/ORMwhitePaper.pdf)
 - Allows us to quickly move from requirements to implementation
   - [https://github.com/johnmillerATcodemag-com/zeus.academia.2](https://github.com/johnmillerATcodemag-com/zeus.academia.2)
-- Why 2?
-  - Second Iteration
-  - Third in planning
+- Why 3b?
+  - Third Iteration
   - If something is hard, do it often
 
 ---
 
-## Use
+## Use Cases
 
 Use cases are specific scenarios that guide data capture and processing in the
 application
@@ -160,13 +159,13 @@ application
 
 ---
 
-## Exercise #9 -- Create Project Requirement Instructions
+## Exercise: Create Project Requirement Instructions
 
 - **Objective**: Create project requirement instructions, some
   project-specific, some generic, using both manual and Copilot-assisted
   methods.
 
-- Manually create a copilot-instructions.md file and add:
+- Manually create a business-requirements.md file and add:
 
   - Business rules
   - Workflows
@@ -175,7 +174,7 @@ application
   - Architecture
 
 - Use Copilot to generate instruction files using the
-  copilot-instructions.md and the codebase for context.
+  business-requirements.md and the codebase for context.
 
 **Bonus**:
 
