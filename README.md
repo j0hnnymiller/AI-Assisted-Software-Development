@@ -2,14 +2,28 @@
 # AI-Assisted-Software-Development-Course
 
 Files suppoting the CODE Training AI Assisted Software Development not included in the public repos.-Course
+This repo was created for the AIASD CODE Training Course
 
 ## Guidance & Instructions
 
 - [`.github/instructions/marp-slides.instructions.md`](.github/instructions/marp-slides.instructions.md) — Instructions and templates for creating Marp slide files. Slides created using these instructions must be placed in `Slides/individual-slides/` and include AI provenance metadata linking to an `ai-logs/` conversation (see `.github/instructions/ai-assisted-output.instructions.md` and `.github/instructions/copilot-instructions.md`).
 
-# AI-Assisted Software Development
+## Useful Keybinding
 
-This repo was created for the 2025 Next Gen AI Conference Leveraging AI for Legacy Code Refactoring session
+This keybinding opens markdown files in a side-by-side preview and copies the editor to a new window for easier review:
+
+```json
+  {
+    "key": "ctrl+shift+alt+x",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["markdown.showPreviewToSide", "workbench.action.copyEditorToNewWindow"]
+    },
+    "when": "editorLangId == mdc"
+  }
+```
+This requires the `multiCommand` extension and is configured to trigger when editing Marp markdown files (`.mdc`).
+
 
 ## Prompts
 
