@@ -1,4 +1,3 @@
-
 # AI-Assisted-Software-Development-Course
 
 Files suppoting the CODE Training AI Assisted Software Development not included in the public repos.-Course
@@ -13,17 +12,20 @@ This repo was created for the AIASD CODE Training Course
 This keybinding opens markdown files in a side-by-side preview and copies the editor to a new window for easier review:
 
 ```json
-  {
-    "key": "ctrl+shift+alt+x",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": ["markdown.showPreviewToSide", "workbench.action.copyEditorToNewWindow"]
-    },
-    "when": "editorLangId == mdc"
-  }
+{
+  "key": "ctrl+shift+alt+x",
+  "command": "extension.multiCommand.execute",
+  "args": {
+    "sequence": [
+      "markdown.showPreviewToSide",
+      "workbench.action.copyEditorToNewWindow"
+    ]
+  },
+  "when": "editorLangId == mdc"
+}
 ```
-This requires the `multiCommand` extension and is configured to trigger when editing Marp markdown files (`.mdc`).
 
+This requires the `multiCommand` extension and is configured to trigger when editing Marp markdown files (`.mdc`).
 
 ## Prompts
 
@@ -92,7 +94,6 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 ### Notable Artifacts
 
 - **Prompt Authoring Instructions** ([`.github/instructions/create-prompt.instructions.md`](.github/instructions/create-prompt.instructions.md))
-
   - Comprehensive guidelines for creating effective, well-structured repository prompts
   - Generated from: [`.github/prompts/prompt-file.instructions.prompt.md`](.github/prompts/prompt-file.instructions.prompt.md)
   - Provenance: [Chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md)
@@ -104,6 +105,12 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Status: Critical fixes applied (Option C executed - 4 issues resolved, 3 deferred for refactoring)
   - Provenance: [Chat log](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/conversation.md) | [Summary](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/summary.md)
   - Verification: [Fixes verified 2025-10-16](validation-fixes-verified-20251016.md) ([chat log](ai-logs/2025/10/16/resume-validation-fixes-20251016/conversation.md))
+
+- **CQRS Architecture Slides** ([`Slides/individual-slides/cqrs-architecture.md`](Slides/individual-slides/cqrs-architecture.md))
+  - Comprehensive presentation explaining Command Query Responsibility Segregation (CQRS) pattern
+  - Covers when to use CQRS, core principles, implementation examples, and migration strategies
+  - Includes detailed speaker notes for effective delivery
+  - Provenance: [Chat log](ai-logs/2026/02/07/cqrs-architecture-slides-20260207/conversation.md)
 
 ## Utility Scripts
 
@@ -117,6 +124,7 @@ Identify branches with changes that haven't been merged to main:
 - **PowerShell:** [`scripts/check_unmerged_branches.ps1`](scripts/check_unmerged_branches.ps1) - For Windows/PowerShell Core
 
 **Usage:**
+
 ```bash
 # Bash
 ./scripts/check_unmerged_branches.sh
