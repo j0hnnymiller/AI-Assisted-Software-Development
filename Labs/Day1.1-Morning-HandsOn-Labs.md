@@ -51,7 +51,6 @@ Based on the material covered in the training session, here are targeted hands-o
 ### Activities
 
 1. **Basic Context Addition:**
-
    - Use `@workspace` to search across your codebase
    - Use `@file` to reference specific files
    - Use `@terminal` to include terminal output in chat
@@ -59,9 +58,108 @@ Based on the material covered in the training session, here are targeted hands-o
 
 2. **Prompt Practice:**
 
-   - Write a vague prompt, observe results
-   - Rewrite with specific context, compare results
-   - Add file references to improve accuracy
+   Practice the progression from vague to specific to context-aware prompts using these examples:
+
+   **Example 1: Adding Error Handling**
+
+   **Vague Prompt:**
+
+   ```
+   Add error handling to my code
+   ```
+
+   _Result: Generic response asking what type of errors, what language, what code?_
+
+   **Specific Context:**
+
+   ```
+   Add error handling to my JavaScript function that calls an external API.
+   I want to handle network timeouts, 404 errors, and JSON parsing failures.
+   Return user-friendly error messages.
+   ```
+
+   _Result: Better, but still generic without seeing actual code structure_
+
+   **With File References:**
+
+   ```
+   @file:api-client.js Add comprehensive error handling to the fetchUserData function.
+   Handle network timeouts (>5s), HTTP errors (404, 500, etc.), and JSON parsing failures.
+   Return user-friendly error messages that match our existing error format in @file:error-types.js
+   ```
+
+   _Result: Specific implementation that matches existing code patterns_
+
+   **Example 2: Writing Tests**
+
+   **Vague Prompt:**
+
+   ```
+   Write tests for my functions
+   ```
+
+   _Result: Generic test examples without knowing your testing framework or code structure_
+
+   **Specific Context:**
+
+   ```
+   Write unit tests for my user authentication functions using Jest.
+   Include tests for successful login, failed login, and session validation.
+   Mock the database calls.
+   ```
+
+   _Result: Better structure but might not match existing test patterns_
+
+   **With File References:**
+
+   ```
+   @file:auth.js Write Jest unit tests for the login() and validateSession() functions.
+   Follow the testing patterns used in @file:__tests__/user.test.js
+   Mock the database using the same approach as existing tests.
+   ```
+
+   _Result: Tests that match existing code style and testing patterns_
+
+   **Example 3: Refactoring Code**
+
+   **Vague Prompt:**
+
+   ```
+   Refactor this code to make it better
+   ```
+
+   _Result: Unclear what "better" means - performance, readability, maintainability?_
+
+   **Specific Context:**
+
+   ```
+   Refactor this React component to improve performance by memoizing expensive calculations
+   and splitting into smaller components. Follow modern React patterns.
+   ```
+
+   _Result: Focused improvements but might not follow project conventions_
+
+   **With File References:**
+
+   ```
+   @file:UserProfile.jsx Refactor this component to improve performance using React.memo and useMemo.
+   Follow the component structure pattern used in @file:ProductCard.jsx
+   Split into smaller components following our naming convention in @file:components/index.js
+   ```
+
+   _Result: Refactoring that maintains consistency with existing codebase_
+
+   **Your Turn - Practice Exercise:**
+   1. Choose a simple task (e.g., "add validation", "fix a bug", "create a function")
+   2. Start with a vague prompt - notice the generic/clarifying response
+   3. Rewrite with specific requirements and constraints
+   4. Add file references using @file or @workspace
+   5. Compare the quality and usability of each response
+
+   **Key Observations:**
+   - Vague prompts require back-and-forth clarification
+   - Specific prompts give actionable but potentially inconsistent results
+   - Context-aware prompts with file references produce code that integrates well
 
 3. **Context Window Experiment:**
    - Start a long conversation in one chat
@@ -90,14 +188,12 @@ Based on the material covered in the training session, here are targeted hands-o
 ### Activities
 
 1. **Ask Mode:**
-
    - Ask Copilot to explain a code snippet (no changes made)
    - Request multiple implementation approaches
    - Try different models and observe response quality
    - **Note:** This doesn't consume premium tokens for advanced models
 
 2. **Edit Mode:**
-
    - Select code in a file
    - Ask Copilot to refactor it
    - Observe inline suggestions and changes
@@ -131,13 +227,11 @@ Based on the material covered in the training session, here are targeted hands-o
 ### Activities
 
 1. **Project Initialization:**
-
    - Ask Copilot: "Create a new calculator console application in [C#/.NET or Go]"
    - Review generated project structure
    - Verify build configuration
 
 2. **Implement Basic Operations:**
-
    - Prompt: "Add methods for addition, subtraction, multiplication, and division"
    - Review generated code for:
      - Error handling (division by zero)
@@ -173,20 +267,17 @@ Based on the material covered in the training session, here are targeted hands-o
 ### Activities
 
 1. **Generate Initial Tests:**
-
    - Prompt: "Create unit tests for the calculator operations"
    - Review generated test structure
    - **Critical Review:** Are tests actually calling your calculator code?
 
 2. **Fix Test Issues (Replicating Session Demo):**
-
    - If tests are too simple (like `1 + 1 = 2` without calling calculator):
      - Identify the problem
      - Ask Copilot to fix it: "Update tests to call Calculator class methods"
    - Verify tests now test actual implementation
 
 3. **Run Tests:**
-
    - Execute test suite
    - Review test output
    - Debug any failing tests with Copilot's help
@@ -222,13 +313,11 @@ This lab replicates the exact issue discovered in the training session where ini
 ### Activities
 
 1. **Enable Coverage Collection:**
-
    - Prompt: "Add code coverage reporting to my test project"
    - Review package dependencies added
    - Handle any NuGet/dependency issues with Copilot's help
 
 2. **Generate Coverage Report:**
-
    - Run tests with coverage enabled
    - Review coverage percentage
    - Identify uncovered code paths
@@ -267,18 +356,15 @@ This lab replicates the exact issue discovered in the training session where ini
 ### Activities
 
 1. **Simulate or Identify a Dependency Issue:**
-
    - Introduce a version conflict (or use existing issue)
    - Prompt: "I'm getting [specific error]. How do I fix it?"
 
 2. **Follow Copilot's Guidance:**
-
    - Review suggested solutions
    - Evaluate multiple approaches if offered
    - Choose best solution collaboratively
 
 3. **Iterative Resolution (as seen in demo):**
-
    - If first solution doesn't work, provide error details
    - Continue conversation until resolved
    - Note: This mirrors the NuGet config issue from the demo
@@ -319,19 +405,16 @@ This lab replicates the exact dependency challenges encountered in the training 
 ### Activities
 
 1. **Security Review:**
-
    - Prompt: "Review this code for security vulnerabilities"
    - Address any identified issues
    - Add input validation where missing
 
 2. **Code Quality Check:**
-
    - Prompt: "Suggest improvements for code quality and maintainability"
    - Evaluate suggestions critically
    - Implement valuable improvements
 
 3. **Documentation:**
-
    - Ask Copilot to generate XML/doc comments
    - Review for accuracy and completeness
    - Add README with usage instructions
@@ -373,20 +456,17 @@ This lab replicates the exact dependency challenges encountered in the training 
 ### Activities
 
 1. **Same Prompt, Different Models:**
-
    - Choose a coding task (e.g., "implement bubble sort")
    - Try with GPT-4 (standard - unlimited)
    - Try with Claude Sonnet (premium - 1x token)
    - Compare results for quality, style, completeness
 
 2. **Token Usage Analysis:**
-
    - Check premium token bar before and after
    - Calculate tokens consumed
    - Discuss: Was premium model worth the cost?
 
 3. **Best Use Cases:**
-
    - Identify tasks where standard models suffice
    - Identify tasks requiring premium models
    - Create personal guidelines for model selection
@@ -426,19 +506,16 @@ This lab replicates the exact dependency challenges encountered in the training 
 ### Activities
 
 1. **Chat Organization:**
-
    - Review your chat history
    - Identify chats that should have been separate sessions
    - Practice starting new chats at appropriate times
 
 2. **Context Preservation:**
-
    - Start a focused chat for one feature
    - Add relevant context systematically
    - Complete task without context overflow
 
 3. **Quick Chat Practice:**
-
    - Use main chat for primary task
    - Use quick chat for side questions
    - Return to main chat without losing context
