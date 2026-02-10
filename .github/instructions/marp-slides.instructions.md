@@ -30,7 +30,7 @@ Generate Marp slides in `Slides/individual-slides/` with required AI provenance 
 ```yaml
 ---
 ai_generated: true
-model: "<provider>/<model-name>@<version>"
+model: "<provider>/<model-name>@<version>"  # The model that created the slides
 operator: "<github-username>"
 chat_id: "<chat-id>"
 prompt: |
@@ -51,7 +51,7 @@ source: "<source-identifier>"
 ```markdown
 ---
 ai_generated: true
-model: "anthropic/claude-3.5-sonnet@2024-10-22"
+model: "model-provider/model-name@version"  # The model that created the slides 
 operator: "username"
 chat_id: "unique-id"
 prompt: |
