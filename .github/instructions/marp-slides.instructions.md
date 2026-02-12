@@ -30,7 +30,7 @@ Generate Marp slides in `Slides/individual-slides/` with required AI provenance 
 ```yaml
 ---
 ai_generated: true
-model: "<provider>/<model-name>@<version>"  # The model that created the slides
+model: "<provider>/<model-name>@<version>" # The model that created the slides
 operator: "<github-username>"
 chat_id: "<chat-id>"
 prompt: |
@@ -51,7 +51,7 @@ source: "<source-identifier>"
 ```markdown
 ---
 ai_generated: true
-model: "model-provider/model-name@version"  # The model that created the slides 
+model: "model-provider/model-name@version" # The model that created the slides
 operator: "username"
 chat_id: "unique-id"
 prompt: |
@@ -90,11 +90,40 @@ Detailed speaker notes for slide 2. Explain each bullet point, provide examples,
 
 ## Speaker Notes Requirements
 
-**MANDATORY**: Every slide MUST include comprehensive speaker notes using pandoc syntax:
+**MANDATORY**: Every slide MUST include comprehensive speaker notes using pandoc syntax.
+
+**REQUIRED SYNTAX** (exact format):
 
 ```markdown
 ::: notes
 Speaker notes content here
+:::
+```
+
+**PROHIBITED FORMATS** (these will FAIL CI validation):
+
+```markdown
+❌ WRONG: Note:
+❌ WRONG: Speaker notes:
+❌ WRONG: <!-- Speaker: ... -->
+❌ WRONG: Notes: ...
+❌ WRONG: Any format other than ::: notes
+```
+
+**CORRECT vs INCORRECT Examples**:
+
+```markdown
+# Slide Title
+
+Content here
+
+❌ WRONG:
+Note:
+Speaker: Explain this concept
+
+✅ CORRECT:
+::: notes
+Speaker: Explain this concept with timing and context
 :::
 ```
 
@@ -109,6 +138,57 @@ Speaker notes content here
 - **Background Context**: Additional details not shown on slide
 
 **Placement**: Speaker notes MUST be placed immediately after each slide's content, before the next slide separator (`---`).
+
+## Diagram Requirements
+
+**REQUIRED**: Use Mermaid for all diagrams and visualizations.
+
+**Supported Mermaid Diagram Types**:
+
+- `flowchart` / `graph` - Flow diagrams and architecture
+- `sequenceDiagram` - Interaction flows
+- `classDiagram` - Class structures
+- `stateDiagram` - State machines
+- `erDiagram` - Entity relationships
+- `journey` - User journeys
+- `gantt` - Project timelines
+
+**Syntax**:
+
+````markdown
+```mermaid
+graph LR
+    A[Component A] --> B[Component B]
+    B --> C[Component C]
+```
+````
+
+````
+
+**PROHIBITED**:
+- ❌ ASCII art diagrams
+- ❌ Embedded images without source
+- ❌ Hand-drawn text diagrams
+
+**Example**:
+```markdown
+## System Architecture
+
+```mermaid
+graph TB
+    Client[Client Application]
+    Server[API Server]
+    DB[(Database)]
+
+    Client --> Server
+    Server --> DB
+````
+
+::: notes
+Architecture explanation...
+:::
+
+````
 
 ## Generation Rules
 
@@ -129,7 +209,25 @@ Speaker notes content here
 - Creating slides without active chat context
 - Omitting any required metadata fields
 - **Creating slides without speaker notes**
-- Using incorrect speaker notes syntax
+- **Using ANY speaker note syntax other than pandoc `::: notes` blocks**
+- Using "Note:", "Speaker:", "Notes:", or plain paragraph speaker notes
+- HTML comments for speaker notes
+- Any custom or non-standard note format
+
+## Validation
+
+**Automated CI Check**: Files will be validated for:
+
+- Presence of `::: notes` blocks (at least one per file)
+- Required YAML front matter fields
+- No usage of prohibited note formats ("Note:", "Speaker:", etc.)
+
+**Manual Validation Script**:
+
+```bash
+# Quick check before commit
+grep -L '::: notes' Slides/individual-slides/*.md && echo "ERROR: Missing pandoc notes" || echo "OK"
+````
 
 ## Checklist
 
@@ -138,15 +236,82 @@ Speaker notes content here
 - [ ] `ai_log` path exists with conversation.md
 - [ ] `operator` is GitHub username
 - [ ] Timestamps in ISO8601 format
-- [ ] **Every slide has comprehensive speaker notes**
-- [ ] **Speaker notes use correct pandoc `:::notes` syntax**
+- [ ] **Every slide has `::: notes` block (search file for "::: notes" to verify)**
+- [ ] **NO plain "Note:" paragraphs used**
+- [ ] **NO HTML comments used for speaker notes**
 - [ ] **Speaker notes include delivery guidance, timing, and context**
+- [ ] **Diagrams use Mermaid syntax (no ASCII art)**
+- [ ] Run validation: `grep '::: notes' <filename>` returns matches
 - [ ] Complete [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#post-creation-requirements-canonical)
 
 ## README Entry Template
 
 ```markdown
 - **[Title]** (`Slides/individual-slides/[filename].md`) — [Description]. Provenance: `ai-logs/[yyyy]/[mm]/[dd]/[chat-id]/`
+```
+
+## Common Mistakes to Avoid
+
+### Mistake 1: Using Plain "Note:" Paragraphs
+
+❌ **WRONG**:
+
+```markdown
+# My Slide
+
+Content
+
+Note:
+Speaker: Explain this
+```
+
+✅ **CORRECT**:
+
+```markdown
+# My Slide
+
+Content
+
+::: notes
+Speaker: Explain this with detailed delivery guidance
+:::
+```
+
+### Mistake 2: Wrong Syntax Variations
+
+❌ **WRONG**: `:::notes` (no space)
+❌ **WRONG**: `:: notes` (only two colons)
+❌ **WRONG**: `::: Notes` (capitalized)
+✅ **CORRECT**: `::: notes` (three colons, space, lowercase)
+
+### Mistake 3: Placing Notes After Slide Separator
+
+❌ **WRONG**:
+
+```markdown
+# Slide 1
+
+Content
+
+---
+
+::: notes
+Notes for slide 1
+:::
+```
+
+✅ **CORRECT**:
+
+```markdown
+# Slide 1
+
+Content
+
+::: notes
+Notes for slide 1
+:::
+
+---
 ```
 
 ## Reference
