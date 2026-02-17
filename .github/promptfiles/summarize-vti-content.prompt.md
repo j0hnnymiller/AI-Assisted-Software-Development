@@ -40,10 +40,17 @@ Analyze the VTI (Video Training Index) file at **{{vti_file}}** and create a com
 2. **Identify Structure**: Detect sections, topics, and subsections
 3. **Extract Timing**: Find duration or timestamp information for each section
 4. **Organize Content**: Create a hierarchical outline
+5. **Create Output File**: Generate a markdown file named `[vti_filename_without_extension]-summary.md` in the same folder as the VTI file
+
+## Output Requirements
+
+- **File Creation**: Create a markdown file in the same directory as {{vti_file}}
+- **File Naming**: Use the pattern `[original-vti-filename]-summary.md` (without the .vti extension)
+- **Example**: If VTI file is `/path/to/training-session.vti`, create `/path/to/training-session-summary.md`
 
 ## Output Format
 
-Your output must be a structured outline in Markdown format:
+The generated markdown file must contain a structured outline:
 
 ### Document Overview
 - **Title**: [Document/Video Title]
