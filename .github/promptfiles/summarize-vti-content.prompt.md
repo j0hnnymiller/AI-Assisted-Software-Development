@@ -1,21 +1,17 @@
 ---
 name: summarize-vti-content
-description: Create an outline that summarizes the content of a VTI (Video Training Index) file with section durations
-
+description: Analyze VTI or VTT transcript files and generate a structured outline with section durations and content summary
 arguments:
-  vti_file:
+  transcript_file:
     type: string
-    description: Path to the VTI file to summarize
-
-tags: ["documentation", "analysis", "video", "training", "outline"]
-
-# AI Provenance Metadata
+    description: Path to the VTI (Video Training Index) or VTT (WebVTT) transcript file to analyze
+tags: ["documentation", "analysis", "transcript", "summary"]
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
 chat_id: "create-vti-summarizer-20260217"
 prompt: |
-  create a prompt that takes a vti filename as a parameter that creates an outline that summerizes the content presented. Include the duration of each section.
+  Create a prompt that takes a VTI filename as a parameter that creates an outline that summarizes the content presented. Include the duration of each section.
 started: "2026-02-17T18:36:14Z"
 ended: "2026-02-17T18:50:00Z"
 task_durations:
@@ -26,72 +22,128 @@ task_durations:
 total_duration: "00:14:00"
 ai_log: "ai-logs/2026/02/17/create-vti-summarizer-20260217/conversation.md"
 source: "johnmillerATcodemag-com"
-owner: "Documentation Team"
-version: "1.0.0"
 ---
 
-# Summarize VTI Content
+# Summarize VTI/VTT Content
 
-Analyze the VTI (Video Training Index) file at **{{vti_file}}** and create a comprehensive outline that summarizes the content with timing information.
+Read and analyze the file at `{{transcript_file}}` and generate a comprehensive structured outline.
 
-## Analysis Requirements
+## Your Task
 
-1. **Read the File**: Load and parse the content from {{vti_file}}
-2. **Identify Structure**: Detect sections, topics, and subsections
-3. **Extract Timing**: Find duration or timestamp information for each section
-4. **Organize Content**: Create a hierarchical outline
-5. **Create Output File**: Generate a markdown file named `[vti_filename_without_extension]-summary.md` in the same folder as the VTI file
-
-## Output Requirements
-
-- **File Creation**: Create a markdown file in the same directory as {{vti_file}}
-- **File Naming**: Use the pattern `[original-vti-filename]-summary.md` (without the .vti extension)
-- **Example**: If VTI file is `/path/to/training-session.vti`, create `/path/to/training-session-summary.md`
+1. **Read the file** from the provided path
+2. **Identify the format**:
+   - **VTT (WebVTT)**: Video caption format with timestamps (e.g., `00:00:12.340 --> 00:00:15.430`)
+   - **VTI (Video Training Index)**: Structured training content with section markers and durations
+3. **Extract structure**:
+   - Document title/overview
+   - Main sections and subsections (hierarchical)
+   - Duration information for each section
+   - Key points and topics covered
+4. **Generate output** in the format specified below
 
 ## Output Format
 
-The generated markdown file must contain a structured outline:
+Produce a well-structured Markdown outline:
 
-### Document Overview
-- **Title**: [Document/Video Title]
-- **Total Duration**: [HH:MM:SS or minutes]
-- **Main Topics**: [Count]
+```markdown
+# [Document Title]
 
-### Detailed Outline
+## Overview
+- **Total Duration**: [HH:MM:SS or MM:SS]
+- **Sections**: [count]
+- **Format**: [VTT/VTI]
 
+---
+
+## Section 1: [Section Name] (Duration: [HH:MM:SS])
+
+### Key Topics
+- [Topic 1]
+- [Topic 2]
+- [Topic 3]
+
+### Subsections (if present)
+
+### Subsection 1.1: [Name] (Duration: [MM:SS])
+- [Key point 1]
+- [Key point 2]
+
+### Subsection 1.2: [Name] (Duration: [MM:SS])
+- [Key point 1]
+- [Key point 2]
+
+---
+
+## Section 2: [Section Name] (Duration: [HH:MM:SS])
+
+[... continue for all sections ...]
+
+---
+
+## Summary Statistics
+- **Total sections**: [count]
+- **Average section length**: [MM:SS]
+- **Longest section**: [Section name] - [duration]
+- **Shortest section**: [Section name] - [duration]
 ```
-## Section 1: [Title] (Duration: MM:SS)
-   ### Key Points
-   - [Point 1]
-   - [Point 2]
-   
-   ### Subsection 1.1: [Title] (Duration: MM:SS)
-   - [Detail 1]
-   - [Detail 2]
-
-## Section 2: [Title] (Duration: MM:SS)
-   ### Key Points
-   - [Point 1]
-   - [Point 2]
-```
-
-### Summary Statistics
-- Total sections: [count]
-- Average section length: [MM:SS]
-- Longest section: [title] ([duration])
-- Shortest section: [title] ([duration])
 
 ## Processing Guidelines
 
-- **Timing Formats**: Handle various formats (HH:MM:SS, MM:SS, minutes, timestamps)
-- **Missing Durations**: If timing info is not explicit, estimate based on content or note as "Duration not specified"
-- **Hierarchical Structure**: Preserve the document's organizational hierarchy
-- **Key Concepts**: Extract and highlight the main learning objectives or topics
-- **Context**: Include brief descriptions that convey what each section covers
+### For VTT Files (WebVTT format)
+- Parse timestamps to identify time spans
+- Group content by logical topics based on content similarity
+- Calculate durations from timestamp differences
+- Extract speaker names if present (after timestamps)
+- Preserve hierarchical relationships based on content patterns
 
-## Quality Checks
+### For VTI Files (Training Index format)
+- Identify section markers (##, headers, or explicit section labels)
+- Extract explicit duration information (e.g., "Duration: 8:30", "(12:15)", "45:00")
+- Maintain document hierarchy as specified
+- Extract topic lists and bullet points
 
-- Ensure all sections have duration information (or note when unavailable)
-- Verify the outline is logically organized and easy to scan
-- Include timestamps or time markers if present in the source
-- Total duration should sum correctly if calculable
+### Duration Format Handling
+Support multiple duration formats:
+- **HH:MM:SS** (e.g., 01:23:45)
+- **MM:SS** (e.g., 12:30)
+- **Minutes** (e.g., "45 minutes", "8:30")
+- **Seconds** (e.g., "90 seconds")
+
+If duration is missing or cannot be determined:
+- Note as `Duration: Not specified`
+- Calculate from timestamps if VTT format
+- Do not fabricate duration data
+
+## Quality Requirements
+
+- ✅ Preserve all hierarchical structure from source
+- ✅ Include all major topics and subtopics
+- ✅ Calculate accurate durations where possible
+- ✅ Use consistent formatting throughout
+- ✅ Provide complete summary statistics
+- ✅ Handle missing duration data gracefully
+- ✅ Identify and handle both VTT and VTI formats correctly
+
+## Example Recognition Patterns
+
+### VTT Format Recognition
+```
+WEBVTT
+
+00:00:12.340 --> 00:00:15.430
+Hello and welcome to this training session.
+
+00:00:15.430 --> 00:00:20.120
+Today we'll cover GitHub Copilot features.
+```
+
+### VTI Format Recognition
+```
+## Section 1: Introduction (8:30)
+
+### What are Custom Agents?
+- Custom agents extend GitHub Copilot
+- Available across multiple environments
+```
+
+Parse the file and generate the structured outline following these guidelines.
