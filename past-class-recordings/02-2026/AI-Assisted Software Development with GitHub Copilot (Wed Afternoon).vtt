@@ -1,0 +1,5155 @@
+WEBVTT
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/35-0
+00:04:39.365 --> 00:04:39.445
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/50-0
+00:05:38.525 --> 00:05:42.181
+<v John Miller>Welcome back.
+Let's go ahead and continue on with this</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/50-1
+00:05:42.181 --> 00:05:43.045
+<v John Miller>exercise. So.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/53-0
+00:05:44.605 --> 00:05:49.832
+<v John Miller>If you could raise your hands so that I
+can see when we're when you're getting</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/53-1
+00:05:49.832 --> 00:05:54.860
+<v John Miller>when you're finished with this exercise.
+What we're trying to do here is to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/53-2
+00:05:54.860 --> 00:05:58.565
+<v John Miller>continue our process of increasing our
+test automation.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/75-0
+00:07:53.445 --> 00:07:53.605
+<v John Miller>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/94-0
+00:09:34.605 --> 00:09:39.200
+<v John Miller>So we're continuing on this exercise,
+so raise your hands if you're if you</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/94-1
+00:09:39.200 --> 00:09:41.405
+<v John Miller>haven't completed this exercise yet.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/95-0
+00:09:49.685 --> 00:09:51.965
+<v John Miller>And if you have a question,
+just shout it out.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/96-0
+00:09:56.045 --> 00:09:59.325
+<v Dan Blanchard>Raise your hand if you were completed or
+not completed.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/97-0
+00:09:58.845 --> 00:10:00.085
+<v John Miller>Not completed.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/155-0
+00:16:41.285 --> 00:16:41.685
+<v Bui, Tom>John.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/156-0
+00:16:41.965 --> 00:16:42.685
+<v John Miller>Yes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/160-0
+00:16:43.325 --> 00:16:49.153
+<v Bui, Tom>Is it possible you can post some example
+prompts for these activity items?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/160-1
+00:16:49.153 --> 00:16:55.292
+<v Bui, Tom>Because otherwise I feel like I'm just
+typing exactly what I see. For example,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/158-0
+00:16:51.365 --> 00:16:51.525
+<v John Miller>Sure.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/160-2
+00:16:55.292 --> 00:17:01.430
+<v Bui, Tom>run linting and architectural checks.
+That's literally what I would write into</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/159-0
+00:16:57.765 --> 00:16:58.045
+<v John Miller>Yeah.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/160-3
+00:17:01.430 --> 00:17:02.285
+<v Bui, Tom>the prompt.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/161-0
+00:17:02.765 --> 00:17:06.285
+<v Bui, Tom>Unless there's a better way to do it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/162-0
+00:17:06.885 --> 00:17:06.965
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/164-0
+00:17:09.125 --> 00:17:13.973
+<v John Miller>Yeah, well, I mean you could say,
+you know, you could, you could, well,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/164-1
+00:17:13.973 --> 00:17:17.272
+<v John Miller>let me,
+I'll type in and I'll change over to it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/164-2
+00:17:17.272 --> 00:17:22.928
+<v John Miller>But the idea would be that you're you'll
+be asking for the architectural alignment,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/164-3
+00:17:22.928 --> 00:17:25.285
+<v John Miller>you know, review the the code base.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/165-0
+00:17:25.645 --> 00:17:32.636
+<v John Miller>For the conformance to the architectural
+standards for the project, right?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/165-1
+00:17:32.636 --> 00:17:39.253
+<v John Miller>Or look for deviations between the
+architecture or weaknesses with the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/165-2
+00:17:39.253 --> 00:17:45.405
+<v John Miller>architecture or how the architecture
+could be improved things as.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/166-0
+00:17:46.285 --> 00:17:51.894
+<v John Miller>Jobs like that would be how I would go
+about that. And in terms of linting,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/166-1
+00:17:51.894 --> 00:17:57.651
+<v John Miller>you're you're basically asking it to
+identify, you know, a good one would be,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/166-2
+00:17:57.651 --> 00:18:01.488
+<v John Miller>you know,
+review the code base and identify any bad</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/166-3
+00:18:01.488 --> 00:18:02.005
+<v John Miller>smells.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/167-0
+00:18:04.085 --> 00:18:10.605
+<v John Miller>So that would be one way of accomplishing
+that because I mean we don't want to.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/168-0
+00:18:12.405 --> 00:18:19.655
+<v John Miller>Implement in a I something that that's
+already well established in other tools</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/168-1
+00:18:19.655 --> 00:18:25.896
+<v John Miller>like you know like a linter.
+So we want to we want to try to target</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/168-2
+00:18:25.896 --> 00:18:28.925
+<v John Miller>analysis of the code base that's.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/169-0
+00:18:29.365 --> 00:18:35.005
+<v John Miller>That goes beyond what the linting this,
+you know, the static linting tools can do.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/171-0
+00:18:36.285 --> 00:18:43.176
+<v Bui, Tom>OK. Yeah. Just my general comment was I'm,
+I'm not really an expert on the prompting</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/171-1
+00:18:43.176 --> 00:18:47.877
+<v Bui, Tom>side of things.
+So any kind of guidance would be helpful.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/170-0
+00:18:44.805 --> 00:18:44.965
+<v John Miller>Sure.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/171-2
+00:18:47.877 --> 00:18:48.445
+<v Bui, Tom>Thanks.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/210-0
+00:22:06.885 --> 00:22:09.285
+<v John Miller>Anybody's can you update your?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/211-0
+00:22:10.685 --> 00:22:12.685
+<v John Miller>You raised hands, so if you finish this.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/214-0
+00:22:16.125 --> 00:22:19.899
+<v Dan Blanchard>Yeah,
+it made ETETE and integration tests as</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/214-1
+00:22:19.899 --> 00:22:23.840
+<v Dan Blanchard>well for me just in the one unit test
+project.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/214-2
+00:22:23.840 --> 00:22:30.549
+<v Dan Blanchard>You know it's put up its own web server
+and it's using like in memory databases</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/213-0
+00:22:24.485 --> 00:22:24.885
+<v John Miller>None.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/214-3
+00:22:30.549 --> 00:22:32.645
+<v Dan Blanchard>and things like that, so.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/216-0
+00:22:34.205 --> 00:22:37.013
+<v Dan Blanchard>I was gonna look and see how the speed is
+if that's slow,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/216-1
+00:22:37.013 --> 00:22:39.822
+<v Dan Blanchard>like whether that's something we'd want
+to run, you know,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/216-2
+00:22:39.822 --> 00:22:43.357
+<v Dan Blanchard>on every commit or that would be
+something that we want to do maybe just</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/216-3
+00:22:43.357 --> 00:22:45.245
+<v Dan Blanchard>like once a day or something like this.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/217-0
+00:22:45.205 --> 00:22:51.626
+<v John Miller>Right, if it's fast, you could do this,
+you know, before allowing a a a commit.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/217-1
+00:22:51.626 --> 00:22:56.282
+<v John Miller>If it's slower,
+you would maybe do this on a merge to the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/217-2
+00:22:56.282 --> 00:22:57.245
+<v John Miller>main branch.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/218-0
+00:22:58.125 --> 00:23:00.205
+<v John Miller>And yeah, and added as a.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/220-0
+00:23:02.445 --> 00:23:09.189
+<v John Miller>Like a a part of your get up actions or
+your or any of the the kind of triggers</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/220-1
+00:23:09.189 --> 00:23:12.645
+<v John Miller>that you can capture in in your whatever.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/221-0
+00:23:14.565 --> 00:23:17.245
+<v John Miller>Source control system that you're working
+with.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/222-0
+00:23:18.325 --> 00:23:18.565
+<v Dan Blanchard>Yeah.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/250-0
+00:25:06.845 --> 00:25:11.365
+<v John Miller>All right, and we about ready to move on.
+What I want to show is.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/251-0
+00:25:15.845 --> 00:25:18.605
+<v John Miller>What I've done here in in terms of.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/252-0
+00:25:20.805 --> 00:25:25.405
+<v John Miller>In terms of, you know,
+examining that code base.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/253-0
+00:25:26.925 --> 00:25:31.205
+<v John Miller>I I did a fairly simple prompt.
+I'll put this in the chat.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/260-0
+00:25:56.525 --> 00:26:03.165
+<v John Miller>Yeah, I see that, Steve. And that's not.
+I've also seen it where.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/261-0
+00:26:04.845 --> 00:26:09.055
+<v John Miller>It'll it at least in the past haven't
+seen it recently where would they say</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/261-1
+00:26:09.055 --> 00:26:13.542
+<v John Miller>that well somebody has modified this file
+and therefore it's it's been corrupted</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/261-2
+00:26:13.542 --> 00:26:17.863
+<v John Miller>and I need to recreate it when nobody,
+when actually nobody has actually made</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/261-3
+00:26:17.863 --> 00:26:20.466
+<v John Miller>the change,
+it just somehow loses the context.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/261-4
+00:26:20.466 --> 00:26:23.125
+<v John Miller>That could be a context window problem as
+well.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/262-0
+00:26:24.445 --> 00:26:24.525
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/263-0
+00:26:26.525 --> 00:26:30.732
+<v John Miller>Right. So it's, you know,
+it's sometimes just really you need need</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/263-1
+00:26:30.732 --> 00:26:35.882
+<v John Miller>a little bit of lecture guidance or you
+need to point it to something or ask it a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/263-2
+00:26:35.882 --> 00:26:38.205
+<v John Miller>question that will help it, you know.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/264-0
+00:26:39.965 --> 00:26:45.285
+<v John Miller>That'll help direct it towards a a a a
+proper solution.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/265-0
+00:26:47.965 --> 00:26:50.205
+<v John Miller>So I ran this prompt which is.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/266-0
+00:26:51.085 --> 00:26:57.194
+<v John Miller>In the workspace review report any bad
+smells and what I thought is interesting</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/266-1
+00:26:57.194 --> 00:26:58.645
+<v John Miller>about this is that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/267-0
+00:27:01.005 --> 00:27:03.725
+<v John Miller>I didn't define what bad smells were.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/268-0
+00:27:08.205 --> 00:27:11.285
+<v John Miller>And so basically again relying on
+inference.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/269-0
+00:27:16.205 --> 00:27:19.518
+<v John Miller>It was able to essentially come up with
+these smells.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/269-1
+00:27:19.518 --> 00:27:24.487
+<v John Miller>Some of this is redundant with some of
+the other prompts that and other findings</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/269-2
+00:27:24.487 --> 00:27:28.965
+<v John Miller>that we've got from other prompts,
+but it's looking for security issues.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/270-0
+00:27:30.685 --> 00:27:32.005
+<v John Miller>Code duplication.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/271-0
+00:27:35.685 --> 00:27:37.685
+<v John Miller>Some some naming problems.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/272-0
+00:27:39.605 --> 00:27:46.378
+<v John Miller>Missing validation, architectural issues,
+business logic issues and error handling</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/272-1
+00:27:46.378 --> 00:27:47.765
+<v John Miller>testing problems.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/273-0
+00:27:49.765 --> 00:27:57.161
+<v John Miller>Performance and data integrity. So,
+so this is again just another way that we</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/273-1
+00:27:57.161 --> 00:28:04.747
+<v John Miller>can ask AI to examine that code base for
+things that might need to be addressed</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/273-2
+00:28:04.747 --> 00:28:05.885
+<v John Miller>and have it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/274-0
+00:28:05.885 --> 00:28:10.528
+<v John Miller>You know,
+go ahead and identify those those areas.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/274-1
+00:28:10.528 --> 00:28:17.446
+<v John Miller>And here I've got to create files that
+describe each issue in a way that we</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/274-2
+00:28:17.446 --> 00:28:21.725
+<v John Miller>could actually have them posted to GitHub
+and.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/275-0
+00:28:22.085 --> 00:28:29.111
+<v John Miller>Or whatever issue of tracking system that
+you're using and get and then get that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/275-1
+00:28:29.111 --> 00:28:30.325
+<v John Miller>onto onto the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/276-0
+00:28:31.405 --> 00:28:35.325
+<v John Miller>Onto the plate of things that we actually
+want to try to address.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/277-0
+00:28:38.445 --> 00:28:38.485
+<v John Miller>Uh.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/278-0
+00:28:40.605 --> 00:28:43.925
+<v John Miller>Any questions on this exercise and what
+we've done here?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/279-0
+00:28:49.685 --> 00:28:51.045
+<v John Miller>All right then.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/280-0
+00:28:52.685 --> 00:28:55.565
+<v John Miller>Let's go ahead and move on to Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/281-0
+00:28:58.005 --> 00:28:59.325
+<v John Miller>The next area.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/288-0
+00:29:30.725 --> 00:29:31.205
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/292-0
+00:29:39.805 --> 00:29:43.375
+<v John Miller>Sorry about that.
+I'm just having a little issue with</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/292-1
+00:29:43.375 --> 00:29:46.085
+<v John Miller>resuming the PowerPoint presentation, so.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/293-0
+00:29:48.365 --> 00:29:49.005
+<v John Miller>Mhm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/294-0
+00:29:58.285 --> 00:29:59.805
+<v John Miller>Let me get it started.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/295-0
+00:30:01.885 --> 00:30:03.045
+<v John Miller>There we go.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/296-0
+00:30:04.925 --> 00:30:06.845
+<v John Miller>All right, so.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/297-0
+00:30:09.965 --> 00:30:12.765
+<v John Miller>Let's talk just a bit about testing
+frameworks.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/298-0
+00:30:14.525 --> 00:30:18.904
+<v John Miller>So here we've talked talking about
+comprehensive test weeks,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/298-1
+00:30:18.904 --> 00:30:24.216
+<v John Miller>dealing with test weeks over time,
+test review and validation strategies,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/298-2
+00:30:24.216 --> 00:30:27.805
+<v John Miller>balancing test coverage with
+maintainability and.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/299-0
+00:30:28.845 --> 00:30:32.562
+<v John Miller>Right.
+So some key practices by managing tests</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/299-1
+00:30:32.562 --> 00:30:37.386
+<v John Miller>over time is that we want to regularly
+prune obsolete tests.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/299-2
+00:30:37.386 --> 00:30:42.763
+<v John Miller>So if we have tests that are testing old
+functionality or the like,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/299-3
+00:30:42.763 --> 00:30:46.085
+<v John Miller>we want to get those out of the code base.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/300-0
+00:30:46.125 --> 00:30:50.958
+<v John Miller>We really want to try to update those
+tests alongside the code changes and you</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/300-1
+00:30:50.958 --> 00:30:53.772
+<v John Miller>know,
+preferably actually write tests for new</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/300-2
+00:30:53.772 --> 00:30:58.666
+<v John Miller>code or update those tests when we want
+to make changes so that the test we can</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/300-3
+00:30:58.666 --> 00:31:01.725
+<v John Miller>use a more of a test driven development
+approach.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/302-0
+00:31:02.045 --> 00:31:06.605
+<v John Miller>And since we have AI as a to help us
+write test,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/302-1
+00:31:06.605 --> 00:31:13.957
+<v John Miller>it's you know test driven development is
+a lot more a lot easier to to achieve</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/302-2
+00:31:13.957 --> 00:31:20.285
+<v John Miller>because you can actually ask AI to write
+the test and then have it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/303-0
+00:31:20.445 --> 00:31:24.873
+<v John Miller>And then you can actually go and make
+sure that the implementation matches or</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/303-1
+00:31:24.873 --> 00:31:28.506
+<v John Miller>or or cause the test to pass.
+You want clear naming and a clear</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/303-2
+00:31:28.506 --> 00:31:32.196
+<v John Miller>structure of your test.
+You want to use those code cover reports</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/303-3
+00:31:32.196 --> 00:31:35.205
+<v John Miller>to to guide where you need to actually
+make changes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/304-0
+00:31:35.645 --> 00:31:40.243
+<v John Miller>And when you're creating a a test
+strategy document or an implementation</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/304-1
+00:31:40.243 --> 00:31:43.330
+<v John Miller>document,
+make that part of the the code base as</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/304-2
+00:31:43.330 --> 00:31:43.645
+<v John Miller>well.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/305-0
+00:31:44.525 --> 00:31:49.524
+<v John Miller>For reviewing tests and validation,
+we can get the AI assistant that can</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/305-1
+00:31:49.524 --> 00:31:52.811
+<v John Miller>detect any mission assertions,
+redundant tests,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/305-2
+00:31:52.811 --> 00:31:56.030
+<v John Miller>edge cases and flag any inconsistent
+patterns.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/305-3
+00:31:56.030 --> 00:31:59.864
+<v John Miller>And when we're when we're looking at
+tests, we want to,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/305-4
+00:31:59.864 --> 00:32:01.645
+<v John Miller>we want to make sure that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/306-0
+00:32:01.725 --> 00:32:06.976
+<v John Miller>That the test encapsulates the the the
+intent of the code so that we're we're</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/306-1
+00:32:06.976 --> 00:32:11.554
+<v John Miller>validating what we expect it to do and
+not validating what it does.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/306-2
+00:32:11.554 --> 00:32:16.536
+<v John Miller>We certainly want to focus on business
+logic validation and architectural</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/306-3
+00:32:16.536 --> 00:32:19.565
+<v John Miller>alignment as being one of our main
+concerns.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/307-0
+00:32:20.605 --> 00:32:27.410
+<v John Miller>Going forward and and I I mentioned a day
+or so ago that from my perspective as a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/307-1
+00:32:27.410 --> 00:32:33.883
+<v John Miller>as an architect and somebody who is
+interested in the the project as a whole,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/307-2
+00:32:33.883 --> 00:32:38.365
+<v John Miller>I'm very interested in making sure that
+the the test.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/308-0
+00:32:38.525 --> 00:32:45.267
+<v John Miller>Suite that I'm building gives me the
+confidence that I can make the changes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/308-1
+00:32:45.267 --> 00:32:50.784
+<v John Miller>I'm not as concerned at the
+implementation and you can make an</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/308-2
+00:32:50.784 --> 00:32:56.125
+<v John Miller>argument that if the code is primarily
+being written by a I.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/309-0
+00:32:56.125 --> 00:33:01.114
+<v John Miller>That the the implementation,
+if it conforms to the instructions that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/309-1
+00:33:01.114 --> 00:33:04.801
+<v John Miller>we provide,
+is going to be pretty close to what we</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/309-2
+00:33:04.801 --> 00:33:08.055
+<v John Miller>would expect if we were to write it by
+hand.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/309-3
+00:33:08.055 --> 00:33:14.056
+<v John Miller>And so we should be able to to see decent,
+decent code generation coming out of AI</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/309-4
+00:33:14.056 --> 00:33:15.285
+<v John Miller>that we wouldn't.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/311-0
+00:33:15.805 --> 00:33:20.792
+<v John Miller>Have to make a whole lot of changes to
+because if we found that we needed to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/310-0
+00:33:20.245 --> 00:33:20.325
+<v Dan Blanchard>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/311-1
+00:33:20.792 --> 00:33:24.614
+<v John Miller>make code changes,
+we would want to go back and update our</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/311-2
+00:33:24.614 --> 00:33:29.925
+<v John Miller>instructions to make sure that those get
+flagged and don't get implemented again.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/312-0
+00:33:31.325 --> 00:33:33.605
+<v John Miller>Questions. Yeah, Lyle.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/313-0
+00:33:38.605 --> 00:33:41.165
+<v John Miller>All right, moving forward then.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/314-0
+00:33:40.285 --> 00:33:42.245
+<v Lyle Ubben>Sorry about that. I hit that accident.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/315-0
+00:33:42.285 --> 00:33:43.805
+<v John Miller>Well, no worries.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/316-0
+00:33:44.525 --> 00:33:44.845
+<v John Miller>Well.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/318-0
+00:33:46.725 --> 00:33:49.051
+<v Dan Blanchard>Yeah, I just had a comment about,
+you know,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/318-1
+00:33:49.051 --> 00:33:53.386
+<v Dan Blanchard>unit tests and AI generated unit tests.
+I find that it just creates way too much,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/317-0
+00:33:51.685 --> 00:33:51.885
+<v John Miller>Yeah.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/318-2
+00:33:53.386 --> 00:33:56.082
+<v Dan Blanchard>you know,
+it's just it creates way too many tests.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/318-3
+00:33:56.082 --> 00:34:00.363
+<v Dan Blanchard>I I also always have to tell it to like
+scale it back. Otherwise I'll have like,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/318-4
+00:34:00.363 --> 00:34:01.685
+<v Dan Blanchard>you know, 10 tests for a.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/319-0
+00:34:02.285 --> 00:34:12.205
+<v Dan Blanchard>1010 line method with 10 lines of code.
+So I'm wondering you know is that?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/322-0
+00:34:14.365 --> 00:34:18.584
+<v Dan Blanchard>I mean, have you seen that too?
+The the unit tests are also overly</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/320-0
+00:34:15.325 --> 00:34:16.125
+<v John Miller>But.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/322-1
+00:34:18.584 --> 00:34:20.725
+<v Dan Blanchard>verbose and overly too much stuff.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/323-0
+00:34:21.565 --> 00:34:24.748
+<v John Miller>Yeah,
+I think that at times I I think if you,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/323-1
+00:34:24.748 --> 00:34:28.277
+<v John Miller>you know,
+create an instruction file that helps it</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/323-2
+00:34:28.277 --> 00:34:33.881
+<v John Miller>understand what your expectations are in
+terms of tests, you know, some sort of,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/323-3
+00:34:33.881 --> 00:34:37.272
+<v John Miller>you know,
+some sort of value guidance that would</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/323-4
+00:34:37.272 --> 00:34:40.662
+<v John Miller>tell it,
+you know how much value this particular</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/323-5
+00:34:40.662 --> 00:34:41.285
+<v John Miller>test has.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/324-0
+00:34:41.485 --> 00:34:45.729
+<v John Miller>In terms of in terms of what code is
+actually testing,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/324-1
+00:34:45.729 --> 00:34:51.979
+<v John Miller>you know like that that can that can help
+fine tune that test suite so that it's</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/324-2
+00:34:51.979 --> 00:34:56.687
+<v John Miller>has a a larger impact.
+So that would be something I would be</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/324-3
+00:34:56.687 --> 00:35:01.085
+<v John Miller>looking to do if I started to notice that
+that the test.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/325-0
+00:35:01.325 --> 00:35:04.685
+<v John Miller>Sweet was getting too big.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/326-0
+00:35:06.685 --> 00:35:09.268
+<v John Miller>Yeah.
+And the other thing that you can that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/326-1
+00:35:09.268 --> 00:35:13.728
+<v John Miller>just I'm thinking that you can do is
+going forward is that when you need to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/326-2
+00:35:13.728 --> 00:35:17.426
+<v John Miller>make a modification,
+you can ask AI to identify the tests that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/326-3
+00:35:17.426 --> 00:35:22.122
+<v John Miller>need to be updated in order to make that
+particular change in the code and that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/326-4
+00:35:22.122 --> 00:35:23.765
+<v John Miller>way you can focus the AI on.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/327-0
+00:35:24.005 --> 00:35:29.937
+<v John Miller>Updating and modifying the tests that are
+applicable and in that way, if you have a,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/327-1
+00:35:29.937 --> 00:35:33.147
+<v John Miller>even if you have a lot of tests,
+you can get,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/327-2
+00:35:33.147 --> 00:35:38.450
+<v John Miller>you can keep those tests up to date,
+up to date with the code base and make</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/327-3
+00:35:38.450 --> 00:35:40.125
+<v John Miller>sure that it's accurate.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/328-0
+00:35:40.845 --> 00:35:44.550
+<v John Miller>And it's not testing things that
+shouldn't be tested.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/328-1
+00:35:44.550 --> 00:35:49.834
+<v John Miller>We talked about suggesting edge cases.
+We want to make sure that we're we're</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/328-2
+00:35:49.834 --> 00:35:55.529
+<v John Miller>seeing in the code in the test suite that
+we're we're we're seeing a sad path test</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/328-3
+00:35:55.529 --> 00:35:57.725
+<v John Miller>as well as our happy path tests.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/329-0
+00:35:58.285 --> 00:36:03.605
+<v John Miller>And again,
+we're looking for validating intents.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/330-0
+00:36:06.845 --> 00:36:14.904
+<v Bui, Tom>I had a question on on this a bit more.
+So let's say you make a code change to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/330-1
+00:36:14.904 --> 00:36:22.045
+<v Bui, Tom>the architecture or like add a feature.
+How do you know if the AI is?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/332-0
+00:36:22.285 --> 00:36:27.445
+<v Bui, Tom>Correcting the unit test to comply to the
+new feature,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/332-1
+00:36:27.445 --> 00:36:34.576
+<v Bui, Tom>or if it's actually catching a real
+mistake due to the inclusion of the new</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/332-2
+00:36:34.576 --> 00:36:35.045
+<v Bui, Tom>code.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/333-0
+00:36:35.405 --> 00:36:39.725
+<v John Miller>You're saying a a a mistake in the test
+or a mistake or a mistake in the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/334-0
+00:36:37.725 --> 00:36:42.779
+<v Bui, Tom>Yeah. How, how, how,
+how confident are you in AI making the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/334-1
+00:36:42.779 --> 00:36:44.885
+<v Bui, Tom>right decision there for?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/335-0
+00:36:42.925 --> 00:36:47.927
+<v John Miller>Yeah, that's, you know,
+we kind of showed it that a little bit</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/335-1
+00:36:47.927 --> 00:36:51.738
+<v John Miller>yesterday where we selected and tested.
+We had,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/335-2
+00:36:51.738 --> 00:36:56.502
+<v John Miller>we had the AI explain what that test did,
+right. And again,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/335-3
+00:36:56.502 --> 00:36:58.805
+<v John Miller>this is a useful exercise to.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/336-0
+00:36:58.925 --> 00:37:04.495
+<v John Miller>Try a a model that didn't create the code
+that so that you kind of try to eliminate</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/336-1
+00:37:04.495 --> 00:37:09.401
+<v John Miller>the some bias in that response.
+But the idea would be you can have that a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/336-2
+00:37:09.401 --> 00:37:14.706
+<v John Miller>I examine that that test to make sure
+that it's accurate and you can accurately</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/336-3
+00:37:14.706 --> 00:37:18.485
+<v John Miller>explain the test to see if you if it
+makes sense to you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/338-0
+00:37:18.845 --> 00:37:24.017
+<v John Miller>And I think that that those kinds of
+strategies or techniques will help you</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/338-1
+00:37:24.017 --> 00:37:29.530
+<v John Miller>raise the the confidence that you have in
+that particular test you know and then</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/338-2
+00:37:29.530 --> 00:37:34.838
+<v John Miller>you could or and you can also take a test
+driven approach before you make the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/337-0
+00:37:32.565 --> 00:37:32.885
+<v Bui, Tom>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/338-3
+00:37:34.838 --> 00:37:38.445
+<v John Miller>change at all.
+Say I need a way to modify this test.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/339-0
+00:37:38.525 --> 00:37:44.234
+<v John Miller>Test to test for this change in the
+functionality of the application and then</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/339-1
+00:37:44.234 --> 00:37:49.577
+<v John Miller>those tests will then start to fail
+because the new implementation isn't</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/339-2
+00:37:49.577 --> 00:37:55.287
+<v John Miller>there and then you can then ask it to
+implement the functionality so that the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/339-3
+00:37:55.287 --> 00:37:56.165
+<v John Miller>test passes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/340-0
+00:37:56.525 --> 00:38:01.509
+<v John Miller>And I think that's a also a good way to
+verify that that the tests are actually</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/340-1
+00:38:01.509 --> 00:38:03.565
+<v John Miller>doing what you're expected to do.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/341-0
+00:38:04.325 --> 00:38:05.805
+<v Bui, Tom>OK. Thanks.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/342-0
+00:38:06.085 --> 00:38:07.245
+<v John Miller>Other question.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/343-0
+00:38:08.805 --> 00:38:09.525
+<v John Miller>Moving on.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/344-0
+00:38:13.885 --> 00:38:15.685
+<v John Miller>OK, so um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/345-0
+00:38:18.045 --> 00:38:22.092
+<v John Miller>Let's start now moving towards how we're
+going to do some coding.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/345-1
+00:38:22.092 --> 00:38:26.753
+<v John Miller>So we want to do some things here that we
+in order for us to be comfortable</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/345-2
+00:38:26.753 --> 00:38:31.842
+<v John Miller>actually starting to make these changes.
+We talked about feature flags in the past</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/345-3
+00:38:31.842 --> 00:38:32.885
+<v John Miller>to minimize risk.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/346-0
+00:38:34.045 --> 00:38:37.720
+<v John Miller>You can write some some queries to help
+us do that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/346-1
+00:38:37.720 --> 00:38:43.516
+<v John Miller>I want to talk about as is and to be test
+suites as a a technique for making sure</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/346-2
+00:38:43.516 --> 00:38:48.605
+<v John Miller>that our our our that we're able to go to
+production at any moment and.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/347-0
+00:38:49.565 --> 00:38:54.655
+<v John Miller>And that we have good tests around the
+new code that's going in in and how to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/347-1
+00:38:54.655 --> 00:38:58.049
+<v John Miller>manage that.
+We'll talk about testing in production</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/347-2
+00:38:58.049 --> 00:39:03.074
+<v John Miller>and retiring some retiring feature flags.
+So feature flags, why they matter,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/347-3
+00:39:03.074 --> 00:39:05.685
+<v John Miller>but they do a lot of things they enable.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/348-0
+00:39:06.245 --> 00:39:10.027
+<v John Miller>In my mind,
+a lot of capabilities on the release side</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/348-1
+00:39:10.027 --> 00:39:13.249
+<v John Miller>of things that can really add a lot of
+value.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/348-2
+00:39:13.249 --> 00:39:17.311
+<v John Miller>So you can do things like enable an
+incremental roll out,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/348-3
+00:39:17.311 --> 00:39:22.984
+<v John Miller>which is what I mentioned before where
+you start with a small group of users and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/348-4
+00:39:22.984 --> 00:39:24.805
+<v John Miller>then slowly incrementally.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/349-0
+00:39:25.085 --> 00:39:31.765
+<v John Miller>Roll the feature out while you're
+monitoring the system for failures and if</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/349-1
+00:39:31.765 --> 00:39:38.093
+<v John Miller>you see anything that's a problem,
+you can just roll back or change the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/349-2
+00:39:38.093 --> 00:39:44.246
+<v John Miller>state of the feature flag and
+automatically roll back that feature so</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/349-3
+00:39:44.246 --> 00:39:44.685
+<v John Miller>that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/350-0
+00:39:44.765 --> 00:39:51.071
+<v John Miller>It's not affecting users experiences.
+This allows you to also reduce the blast</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/350-1
+00:39:51.071 --> 00:39:56.181
+<v John Miller>radius by not rolling out a feature to
+the entire organization.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/350-2
+00:39:56.181 --> 00:40:02.168
+<v John Miller>You're reducing the potential for
+problems and the risk of that rollout as</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/350-3
+00:40:02.168 --> 00:40:03.445
+<v John Miller>well as you can.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/351-0
+00:40:03.725 --> 00:40:09.738
+<v John Miller>Use those feature flags to to hide code
+that isn't actually ready to to for users</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/351-1
+00:40:09.738 --> 00:40:13.185
+<v John Miller>to see.
+You can do AB testing and do do what's</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/351-2
+00:40:13.185 --> 00:40:17.878
+<v John Miller>called shadow traffic.
+AB testing would be that I implement the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/351-3
+00:40:17.878 --> 00:40:20.445
+<v John Miller>a feature maybe two different ways.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/352-0
+00:40:20.605 --> 00:40:26.397
+<v John Miller>And so half the users one way and half
+the users the other and then monitor for</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/352-1
+00:40:26.397 --> 00:40:31.754
+<v John Miller>what their experience is and and then
+essentially roll out either the ARM</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/352-2
+00:40:31.754 --> 00:40:35.085
+<v John Miller>version.
+A shadow traffic is a nice technique</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/352-3
+00:40:35.085 --> 00:40:36.605
+<v John Miller>where you can take a.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/353-0
+00:40:36.925 --> 00:40:42.481
+<v John Miller>A piece of code and you can direct
+traffic to both implementations and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/353-1
+00:40:42.481 --> 00:40:47.724
+<v John Miller>verify that the the new implementation
+performs as well as the old</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/353-2
+00:40:47.724 --> 00:40:54.063
+<v John Miller>implementation does and or and make a and
+then it that it functions properly and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/353-3
+00:40:54.063 --> 00:40:56.645
+<v John Miller>doesn't generate a lot of errors.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/354-0
+00:40:56.685 --> 00:41:01.231
+<v John Miller>And this could be before anybody actually
+sees the activity.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/354-1
+00:41:01.231 --> 00:41:06.896
+<v John Miller>It just happens behind the scenes and it
+helps you decouple deployment from</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/354-2
+00:41:06.896 --> 00:41:10.473
+<v John Miller>release,
+which means that you can have a set of</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/354-3
+00:41:10.473 --> 00:41:14.125
+<v John Miller>feature flags that are off in production
+but on.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/356-0
+00:41:14.525 --> 00:41:20.600
+<v John Miller>In your development environment and by
+and which allows you effectively to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/356-1
+00:41:20.600 --> 00:41:26.756
+<v John Miller>continue to roll out new code changes
+with the comfort that that the things</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/356-2
+00:41:26.756 --> 00:41:30.725
+<v John Miller>that you don't want the users to see are
+hidden.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/357-0
+00:41:31.925 --> 00:41:35.431
+<v John Miller>And then whenever you feel comfortable
+with that new feature,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/357-1
+00:41:35.431 --> 00:41:39.784
+<v John Miller>you can turn the toggle on and you don't
+need to do a deployment in order to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/357-2
+00:41:39.784 --> 00:41:43.855
+<v John Miller>release the feature to the users.
+This allows you to deploy many times,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/357-3
+00:41:43.855 --> 00:41:46.965
+<v John Miller>but only release when you're when you
+have confidence.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/358-0
+00:41:47.205 --> 00:41:51.847
+<v John Miller>Some practices you want to keep the the
+feature flags as short lived as you can,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/358-1
+00:41:51.847 --> 00:41:56.547
+<v John Miller>so it's really wrapped around a feature
+and it only exists for the length of time</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/358-2
+00:41:56.547 --> 00:42:01.018
+<v John Miller>it takes for you to get that feature
+deployed to all to your entire user base</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/358-3
+00:42:01.018 --> 00:42:02.565
+<v John Miller>and then you can remove it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/359-0
+00:42:02.925 --> 00:42:07.802
+<v John Miller>You want them to have a follow a naming
+convention that allows you to easily</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/359-1
+00:42:07.802 --> 00:42:12.108
+<v John Miller>identify what they're for,
+and you want to document what the intent</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/359-2
+00:42:12.108 --> 00:42:17.238
+<v John Miller>was and what the retirement criteria is
+so that you can go back and you know and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/359-3
+00:42:17.238 --> 00:42:18.885
+<v John Miller>remove the and remove the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/360-0
+00:42:19.085 --> 00:42:25.152
+<v John Miller>The the the feature flag and any old code
+that might be associated that might not</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/360-1
+00:42:25.152 --> 00:42:30.922
+<v John Miller>be executed anymore because of that
+feature flag is is permanently on or that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/360-2
+00:42:30.922 --> 00:42:35.805
+<v John Miller>code is now permanently permanently a
+part of the code code base.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/361-0
+00:42:35.885 --> 00:42:43.365
+<v John Miller>Any future comments on feature flags?
+Anybody use them in in your applications?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/363-0
+00:42:46.605 --> 00:42:53.489
+<v Buddy Toups>Yeah, we actually use them quite a bit.
+Even before AI, we've been using them for,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/363-1
+00:42:53.489 --> 00:42:55.645
+<v Buddy Toups>you know, five plus years.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/365-0
+00:42:56.205 --> 00:42:58.325
+<v John Miller>Right? Yeah.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/364-0
+00:42:57.765 --> 00:42:58.165
+<v Childs, Stephen>Thank.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/366-0
+00:42:59.645 --> 00:43:00.445
+<v John Miller>Go ahead.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/367-0
+00:43:01.885 --> 00:43:03.085
+<v Childs, Stephen>Just agreed, same.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/368-0
+00:43:03.845 --> 00:43:05.205
+<v John Miller>OK, great.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/369-0
+00:43:07.525 --> 00:43:07.605
+Um.
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/370-0
+00:43:07.565 --> 00:43:09.365
+<v John Miller>And then, yeah, Chris.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/372-0
+00:43:09.565 --> 00:43:14.642
+<v Chris Bishop>We develop heavily.
+Our product is heavily Power Platform,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/372-1
+00:43:14.642 --> 00:43:20.752
+<v Chris Bishop>so a lot of plugins through Power
+Platform and solutions and I've been</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/372-2
+00:43:20.752 --> 00:43:25.485
+<v Chris Bishop>looking at feature flags as an option for
+us, but I'm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/373-0
+00:43:26.605 --> 00:43:30.685
+<v Chris Bishop>I haven't seen any examples of it used in
+that development stack.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/374-0
+00:43:33.445 --> 00:43:33.565
+<v John Miller>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/376-0
+00:43:34.765 --> 00:43:37.685
+<v Chris Bishop>I was wondering if anyone has any
+experience around that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/375-0
+00:43:35.365 --> 00:43:35.445
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/377-0
+00:43:41.965 --> 00:43:47.916
+<v John Miller>Without knowing a lot about it,
+I would think that if you have the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/377-1
+00:43:47.916 --> 00:43:54.843
+<v John Miller>ability to to call out to an external
+component that can manage the flags for</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/377-2
+00:43:54.843 --> 00:43:58.485
+<v John Miller>you and branch based upon that component.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/378-0
+00:43:58.685 --> 00:44:04.685
+<v John Miller>Return values and that might be a
+strategy that would work, but.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/380-0
+00:44:07.325 --> 00:44:11.765
+<v John Miller>I don't know for sure.
+So any other questions?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/379-0
+00:44:09.845 --> 00:44:10.085
+<v Buddy Toups>Right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/381-0
+00:44:14.285 --> 00:44:19.307
+<v John Miller>So retirement of flags you want.
+You don't want flag bloat and you don't</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/381-1
+00:44:19.307 --> 00:44:24.811
+<v John Miller>want code that's in your code base that's
+no longer gonna be executed because a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/381-2
+00:44:24.811 --> 00:44:29.077
+<v John Miller>flag has been changed.
+So you want to basically retire all of</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/381-3
+00:44:29.077 --> 00:44:29.765
+<v John Miller>that code.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/382-0
+00:44:29.965 --> 00:44:35.415
+<v John Miller>This will reduce the cognitive load and
+the complexity of the implementation</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/382-1
+00:44:35.415 --> 00:44:41.078
+<v John Miller>because you're simplifying the code paths
+and it makes a more a long-term makes</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/382-2
+00:44:41.078 --> 00:44:46.245
+<v John Miller>makes it more maintainable long-term.
+So the retirement workflow is you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/383-0
+00:44:46.685 --> 00:44:51.020
+<v John Miller>Once you reach a stable point where
+everybody has the the feature flag</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/383-1
+00:44:51.020 --> 00:44:55.478
+<v John Miller>enabled and it appears to be working fine,
+you remove the old code pass,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/383-2
+00:44:55.478 --> 00:45:00.301
+<v John Miller>you update the documentation and add the
+the provenance to that change so that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/383-3
+00:45:00.301 --> 00:45:02.805
+<v John Miller>you've recorded that modification and in.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/384-0
+00:45:02.925 --> 00:45:08.480
+<v John Miller>You know you can use AI and one of the
+techniques that I had used in the past</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/384-1
+00:45:08.480 --> 00:45:11.685
+<v John Miller>before AI was this was to actually create
+a.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/385-0
+00:45:12.645 --> 00:45:16.205
+<v John Miller>A pull request when I implemented the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/386-0
+00:45:17.565 --> 00:45:23.648
+<v John Miller>The feature flag that I where I can merge
+that Pearl request in and at some later</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/386-1
+00:45:23.648 --> 00:45:28.618
+<v John Miller>date and then retire the flag that way
+and some success with that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/386-2
+00:45:28.618 --> 00:45:33.365
+<v John Miller>But you can also just then with AI just
+say I want to identify.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/387-0
+00:45:33.645 --> 00:45:39.196
+<v John Miller>You know the changes that I need to make
+in order to move this feature flag and it</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/387-1
+00:45:39.196 --> 00:45:44.479
+<v John Miller>it it would be it would be effective at
+easily removing that feature flag from</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/387-2
+00:45:44.479 --> 00:45:46.485
+<v John Miller>the code base. Questions here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/388-0
+00:45:50.045 --> 00:45:53.018
+<v John Miller>All right,
+so let's talk about as is in in 2B test</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/388-1
+00:45:53.018 --> 00:45:55.700
+<v John Miller>suites.
+This is and the idea here is that you</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/388-2
+00:45:55.700 --> 00:46:00.247
+<v John Miller>have a a a suite of tests which are the
+as is tests which capture the current</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/388-3
+00:46:00.247 --> 00:46:04.036
+<v John Miller>behavior. As I as I mentioned,
+it doesn't necessarily have to be</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/388-4
+00:46:04.036 --> 00:46:06.485
+<v John Miller>comprehensive, but what tests you do have.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/389-0
+00:46:06.765 --> 00:46:11.774
+<v John Miller>You trust and and they they verify the
+behaviour that you actually have for</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/389-1
+00:46:11.774 --> 00:46:15.597
+<v John Miller>testing purposes.
+And I would increase or grow that as is</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/389-2
+00:46:15.597 --> 00:46:20.540
+<v John Miller>test suite as I identify changes that
+need to be made to the code base and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/389-3
+00:46:20.540 --> 00:46:25.285
+<v John Miller>write the as is test before I would make
+any modifications to the code.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/390-0
+00:46:25.885 --> 00:46:31.672
+<v John Miller>And then you have a this basically
+protects you against regressions and and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/390-1
+00:46:31.672 --> 00:46:36.697
+<v John Miller>and documents what your expectations are
+for going to production.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/390-2
+00:46:36.697 --> 00:46:42.864
+<v John Miller>So the idea would be is that you can go
+to production anytime all the as is test</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/390-3
+00:46:42.864 --> 00:46:43.245
+<v John Miller>pass.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/391-0
+00:46:44.125 --> 00:46:47.397
+<v John Miller>You don't care about the new
+implementations,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/391-1
+00:46:47.397 --> 00:46:52.945
+<v John Miller>they will be hidden behind feature flags
+that cause keep the application from</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/391-2
+00:46:52.945 --> 00:46:56.359
+<v John Miller>executing.
+So as long as the code base compiles</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/391-3
+00:46:56.359 --> 00:46:59.987
+<v John Miller>successfully,
+you can do and the test as this test</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/391-4
+00:46:59.987 --> 00:47:00.485
+<v John Miller>passed.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/392-0
+00:47:01.085 --> 00:47:05.970
+<v John Miller>You can have a a high level of confidence
+that you're not introducing something</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/392-1
+00:47:05.970 --> 00:47:10.183
+<v John Miller>that would cause a problem.
+What you do want to look for when you're</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/392-2
+00:47:10.183 --> 00:47:14.213
+<v John Miller>running these tests though,
+is you want to make sure that the the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/392-3
+00:47:14.213 --> 00:47:18.792
+<v John Miller>feature flags that you're implementing
+don't bleed into production, right?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/392-4
+00:47:18.792 --> 00:47:20.685
+<v John Miller>So you have to be careful that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/393-0
+00:47:20.925 --> 00:47:26.576
+<v John Miller>That that to be that the to be test that
+you've actually in in effect what you're</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/393-1
+00:47:26.576 --> 00:47:31.538
+<v John Miller>looking for is any code that you've
+implemented that's not wrapped by a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/393-2
+00:47:31.538 --> 00:47:36.845
+<v John Miller>feature test that's going to show up in
+the in production when you do it at.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/394-0
+00:47:37.245 --> 00:47:41.809
+<v John Miller>When you do a deployment,
+so the two B test suite defines that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/394-1
+00:47:41.809 --> 00:47:46.012
+<v John Miller>future behaviour.
+So you're you're basically you know the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/394-2
+00:47:46.012 --> 00:47:51.373
+<v John Miller>the the workflow would be you would
+implement a a feature flag around the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/394-3
+00:47:51.373 --> 00:47:56.445
+<v John Miller>code that you want to modify and then
+implement when it's flag is on.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/395-0
+00:47:56.765 --> 00:47:57.685
+<v John Miller>You want to?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/396-0
+00:47:58.485 --> 00:48:03.450
+<v John Miller>Execute the new behaviour and you want to
+have a test around that new behaviour</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/396-1
+00:48:03.450 --> 00:48:06.491
+<v John Miller>that would only run when the feature flag
+is on.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/396-2
+00:48:06.491 --> 00:48:11.208
+<v John Miller>So you so the idea would be if you were
+had had a test suite and were using</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/396-3
+00:48:11.208 --> 00:48:15.615
+<v John Miller>automation in your pipeline,
+you would first set your flags in a state</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/396-4
+00:48:15.615 --> 00:48:15.925
+<v John Miller>that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/397-0
+00:48:15.965 --> 00:48:18.930
+<v John Miller>Is the same as what you have in
+production.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/397-1
+00:48:18.930 --> 00:48:23.445
+<v John Miller>You run all your current behaviour tests
+and look for regressions.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/397-2
+00:48:23.445 --> 00:48:28.903
+<v John Miller>Then you would run all the 2B tests with
+the the appropriate flags turned on and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/397-3
+00:48:28.903 --> 00:48:30.925
+<v John Miller>that would then execute those.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/398-0
+00:48:31.405 --> 00:48:36.930
+<v John Miller>To be testing and give you a sense of how
+you're doing in terms of being able to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/398-1
+00:48:36.930 --> 00:48:42.387
+<v John Miller>finish the the work that's in progress.
+And this is also useful in that you can</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/398-2
+00:48:42.387 --> 00:48:46.685
+<v John Miller>use these two bit Dooby tests,
+which should be a much smaller.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/399-0
+00:48:46.725 --> 00:48:52.204
+<v John Miller>Test suite than the as this test as a
+part of your your check in procedure.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/399-1
+00:48:52.204 --> 00:48:58.259
+<v John Miller>So if you're checking in a piece of code,
+you want to make sure that the associated</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/399-2
+00:48:58.259 --> 00:48:59.845
+<v John Miller>2B tests are executed.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/400-0
+00:49:01.965 --> 00:49:06.085
+<v John Miller>This helps you, you know,
+as a guide to your modernization and how</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/400-1
+00:49:06.085 --> 00:49:10.758
+<v John Miller>to validate those new practices and
+architectures that you might be putting</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/400-2
+00:49:10.758 --> 00:49:14.079
+<v John Miller>into place.
+And the the one piece of maintenance that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/400-3
+00:49:14.079 --> 00:49:18.445
+<v John Miller>you have to consider is that after you've
+turned on that feature flag.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/401-0
+00:49:20.285 --> 00:49:25.028
+<v John Miller>For that feature in production,
+you need to move the tests that are</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/401-1
+00:49:25.028 --> 00:49:30.260
+<v John Miller>associated with that feature into the as
+is test suite because it's now in</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/401-2
+00:49:30.260 --> 00:49:34.445
+<v John Miller>production and it needs to be part of the
+regression suite.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/402-0
+00:49:35.605 --> 00:49:37.845
+<v John Miller>Is it? Does that make sense?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/403-0
+00:49:43.565 --> 00:49:46.789
+<v John Miller>Now testing and production,
+you know this is well,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/403-1
+00:49:46.789 --> 00:49:51.784
+<v John Miller>in many applications it's exactly what
+you do is you got to test everything in</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/403-2
+00:49:51.784 --> 00:49:54.629
+<v John Miller>production.
+But we want to do this in a more</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/403-3
+00:49:54.629 --> 00:49:58.423
+<v John Miller>engineered approach,
+which means that we want that all that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/403-4
+00:49:58.423 --> 00:49:59.245
+<v John Miller>feature flag.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/404-0
+00:49:59.365 --> 00:50:03.588
+<v John Miller>Feature flags so it's hidden from users
+until until it's actually ready.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/404-1
+00:50:03.588 --> 00:50:07.810
+<v John Miller>This before you could use your shadow
+traffic techniques and your Canary</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/404-2
+00:50:07.810 --> 00:50:10.702
+<v John Miller>releases.
+You could have observability dashboards</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/404-3
+00:50:10.702 --> 00:50:14.925
+<v John Miller>that can report about issues that are
+being raised and you can actually.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/405-0
+00:50:15.325 --> 00:50:24.125
+<v John Miller>You can even automatically flip features
+flags off if it observes that the that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/405-1
+00:50:24.125 --> 00:50:31.605
+<v John Miller>the application is generating errors at
+at at at an excessive rate.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/406-0
+00:50:32.365 --> 00:50:37.351
+<v John Miller>So you can set a budget that says if you
+see more errors than than a certain</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/406-1
+00:50:37.351 --> 00:50:41.495
+<v John Miller>number in a certain amount of time for
+this particular feature,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/406-2
+00:50:41.495 --> 00:50:46.870
+<v John Miller>you want to basically turn that that that
+feature off and then notify you know the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/406-3
+00:50:46.870 --> 00:50:48.165
+<v John Miller>powers that be that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/407-0
+00:50:48.365 --> 00:50:53.605
+<v John Miller>That you need to take a look at this
+particular feature because it's it's not</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/407-1
+00:50:53.605 --> 00:50:58.442
+<v John Miller>functioning properly in in the production
+world. So this gives us some.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/407-2
+00:50:58.442 --> 00:51:04.085
+<v John Miller>So the in terms of testing in production,
+the way I the way I've done this is that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/408-0
+00:51:04.685 --> 00:51:11.693
+<v John Miller>You essentially have a a a pool of users
+that are internal users or beta testers</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/408-1
+00:51:11.693 --> 00:51:18.615
+<v John Miller>or whatever you like that you can then
+say as a group say I want to enable this</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/408-2
+00:51:18.615 --> 00:51:20.605
+<v John Miller>particular feature for.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/410-0
+00:51:21.005 --> 00:51:26.081
+<v John Miller>Just this group of people and therefore
+there they can see this feature in in the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/410-1
+00:51:26.081 --> 00:51:30.166
+<v John Miller>in the production environment.
+They can test it in the production</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/410-2
+00:51:30.166 --> 00:51:35.118
+<v John Miller>environment and and and vet it out and
+verify that in production it meets their</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/410-3
+00:51:35.118 --> 00:51:37.285
+<v John Miller>expectations and that can help you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/411-0
+00:51:37.605 --> 00:51:40.032
+<v John Miller>Make a determination of whether you need
+more,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/411-1
+00:51:40.032 --> 00:51:43.904
+<v John Miller>need to do more work or whether you you
+can actually move this closer to a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/411-2
+00:51:43.904 --> 00:51:44.885
+<v John Miller>production rollout.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/412-0
+00:51:46.005 --> 00:51:50.567
+<v John Miller>So this gives you some real world
+validation in a in a real environment</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/412-1
+00:51:50.567 --> 00:51:55.319
+<v John Miller>with real loads being put put on the
+application at the at the time it can</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/412-2
+00:51:55.319 --> 00:52:00.388
+<v John Miller>give you some early detection of of Ed
+cases that you might not have considered</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/412-3
+00:52:00.388 --> 00:52:01.085
+<v John Miller>because of.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/413-0
+00:52:01.645 --> 00:52:05.204
+<v John Miller>When people actually touch it and try to
+do things with it,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/413-1
+00:52:05.204 --> 00:52:07.813
+<v John Miller>they might do things that you don't
+expect,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/413-2
+00:52:07.813 --> 00:52:10.779
+<v John Miller>and it reduces that risk of a full-scale
+feature,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/413-3
+00:52:10.779 --> 00:52:15.405
+<v John Miller>full-scale failure of that feature when
+you actually roll it into production.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/414-0
+00:52:16.365 --> 00:52:20.965
+<v John Miller>Any questions on this test testing in
+production? Anybody doing this right now?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/415-0
+00:52:21.965 --> 00:52:23.925
+<v John Miller>Buddy, is that something you do?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/416-0
+00:52:29.285 --> 00:52:31.285
+<v John Miller>Dan, you had a comment?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/417-0
+00:52:30.925 --> 00:52:35.424
+<v Dan Blanchard>Well, yeah, you know, I'm just wondering,
+I think with feature flags,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/417-1
+00:52:35.424 --> 00:52:40.245
+<v Dan Blanchard>like can it get quite complicated and
+almost impossible like if we need to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/417-2
+00:52:40.245 --> 00:52:42.045
+<v Dan Blanchard>update like database schema?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/419-0
+00:52:42.925 --> 00:52:46.442
+<v Dan Blanchard>And you know,
+just all the different dependencies like</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/419-1
+00:52:46.442 --> 00:52:51.174
+<v Dan Blanchard>doesn't that can can it get quite
+complicated and almost like impractical</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/419-2
+00:52:51.174 --> 00:52:52.325
+<v Dan Blanchard>for some features?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/420-0
+00:52:53.485 --> 00:52:59.799
+<v John Miller>My thinking for at first would be one I I
+would for in terms of database schema</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/420-1
+00:52:59.799 --> 00:53:04.298
+<v John Miller>modifications,
+I tend to take an approach that says that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/420-2
+00:53:04.298 --> 00:53:08.165
+<v John Miller>modifications are additive, right?
+So you would.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/421-0
+00:53:08.565 --> 00:53:12.506
+<v John Miller>Add and it.
+Let's just say that if you wanted to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/421-1
+00:53:12.506 --> 00:53:17.090
+<v John Miller>retire a field,
+you would add or replace it or just make</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/421-2
+00:53:17.090 --> 00:53:23.283
+<v John Miller>a simple one or just rename a column.
+I would add the new column and I would</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/421-3
+00:53:23.283 --> 00:53:23.685
+<v John Miller>then.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/422-0
+00:53:24.045 --> 00:53:27.551
+<v John Miller>Copy the information into the new column
+that you would need,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/422-1
+00:53:27.551 --> 00:53:31.340
+<v John Miller>and then make the modifications to the
+code to use the new column.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/422-2
+00:53:31.340 --> 00:53:35.298
+<v John Miller>And then once you're confident that
+you're not using that new column,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/422-3
+00:53:35.298 --> 00:53:38.691
+<v John Miller>I would retire it.
+And so you can use a technique like that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/422-4
+00:53:38.691 --> 00:53:43.045
+<v John Miller>where you're gradually moving your schema
+forward, but you're adding things.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/425-0
+00:53:43.765 --> 00:53:47.896
+<v John Miller>In production,
+well before you actually decide to take</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/425-1
+00:53:47.896 --> 00:53:51.953
+<v John Miller>anything out,
+and that gives you some confidence that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/425-2
+00:53:51.953 --> 00:53:56.685
+<v John Miller>you're able to move forward efficiently
+and effectively, yeah.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/423-0
+00:53:54.645 --> 00:53:54.685
+<v Buddy Toups>Oh.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/426-0
+00:53:56.765 --> 00:54:02.761
+<v Buddy Toups>I would say one benefit of doing it this
+way that the reason why we do it a lot of</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/426-1
+00:54:02.761 --> 00:54:08.540
+<v Buddy Toups>times is because if you're developing
+like a very large feature that's going to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/426-2
+00:54:08.540 --> 00:54:14.102
+<v Buddy Toups>take months and you want, you want,
+you don't want it to go stale, you know,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/426-3
+00:54:14.102 --> 00:54:16.125
+<v Buddy Toups>so like basically if you're.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/427-0
+00:54:16.445 --> 00:54:21.659
+<v Buddy Toups>Constantly rolling it out on every
+release, but it's buying a feature flag.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/427-1
+00:54:21.659 --> 00:54:27.148
+<v Buddy Toups>You could catch those migration problems
+and usually it would make the original</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/427-2
+00:54:27.148 --> 00:54:31.471
+<v Buddy Toups>code base like if you really really need
+to change the schema,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/427-3
+00:54:31.471 --> 00:54:36.205
+<v Buddy Toups>just go ahead and do it on both and that
+way you know for sure that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/428-0
+00:54:36.445 --> 00:54:40.867
+<v Buddy Toups>It's gonna be backwards compatible and
+then and and you get that database clean</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/428-1
+00:54:40.867 --> 00:54:43.354
+<v Buddy Toups>up.
+But the the main thing that's a very a a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/428-2
+00:54:43.354 --> 00:54:47.611
+<v Buddy Toups>benefit with big teams or even a even
+small teams and you're you know you're</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/428-3
+00:54:47.611 --> 00:54:50.485
+<v Buddy Toups>you're all each doing different features
+and stuff.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/429-0
+00:54:51.965 --> 00:54:56.651
+<v Buddy Toups>Is that if it's constantly rolling out
+but it's behind feature flags you you'll</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/429-1
+00:54:56.651 --> 00:55:00.811
+<v Buddy Toups>catch it in QA and and and hopefully you
+don't catch it in production.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/429-2
+00:55:00.811 --> 00:55:04.384
+<v Buddy Toups>But you know like basically the the more
+that you integrate,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/429-3
+00:55:04.384 --> 00:55:08.485
+<v Buddy Toups>you know have that integration point you
+know with all your branches.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/430-0
+00:55:08.925 --> 00:55:13.626
+<v Buddy Toups>And have it roll out. It's just there.
+It's just less surface area I guess you</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/430-1
+00:55:13.626 --> 00:55:16.125
+<v Buddy Toups>could say on every release to worry about.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/432-0
+00:55:17.085 --> 00:55:20.545
+<v John Miller>Right. Yeah,
+that was mentioned a few slides ago about</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/432-1
+00:55:20.545 --> 00:55:23.313
+<v John Miller>reducing, reducing the blast radius,
+right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/431-0
+00:55:22.805 --> 00:55:23.045
+<v Buddy Toups>Yeah.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/432-2
+00:55:23.313 --> 00:55:28.031
+<v John Miller>So you're if you're constantly rolling
+into production with a small set of</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/432-3
+00:55:28.031 --> 00:55:31.805
+<v John Miller>changes, if something goes wrong,
+you know what went wrong.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/433-0
+00:55:32.365 --> 00:55:36.662
+<v John Miller>Whereas if you're working on a feature on
+a feature branch and it takes you two</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/433-1
+00:55:36.662 --> 00:55:40.529
+<v John Miller>months to finish that feature,
+getting that integrated into the rest of</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/433-2
+00:55:40.529 --> 00:55:44.450
+<v John Miller>the code base and out into production is
+going to be a challenge, right?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/433-3
+00:55:44.450 --> 00:55:48.801
+<v John Miller>It's from a both a testing perspective
+and just to just making sure that you got</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/433-4
+00:55:48.801 --> 00:55:51.325
+<v John Miller>a solid merge going in and that's one
+thing I.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/434-0
+00:55:51.325 --> 00:55:57.034
+<v John Miller>I really try to avoid as much as I can is
+work as closely to the the main trunk as</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/434-1
+00:55:57.034 --> 00:56:02.193
+<v John Miller>I can, which means keeping your branches.
+Any branch that you take for any</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/434-2
+00:56:02.193 --> 00:56:07.765
+<v John Miller>particular purpose gets merged back into
+the main code base as soon as possible.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/435-0
+00:56:08.205 --> 00:56:11.583
+<v John Miller>And if you put it in a feature flag under
+a feature flag,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/435-1
+00:56:11.583 --> 00:56:16.008
+<v John Miller>that means you can do this almost
+immediately and integrate it into the the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/435-2
+00:56:16.008 --> 00:56:20.609
+<v John Miller>main code base and then and then easily
+deploy that into production and get it</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/435-3
+00:56:20.609 --> 00:56:24.045
+<v John Miller>out there and integrate it with the rest
+of the code base.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/436-0
+00:56:24.045 --> 00:56:28.116
+<v John Miller>And if you've got a larger team where
+you've got a lot of change,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/436-1
+00:56:28.116 --> 00:56:31.694
+<v John Miller>a lot of churn in the code base,
+it's even more, I think,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/436-2
+00:56:31.694 --> 00:56:36.505
+<v John Miller>more important to get that code merged
+early rather than waiting for it to be</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/436-3
+00:56:36.505 --> 00:56:41.193
+<v John Miller>ready before you actually push it out
+into production and get it integrated</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/436-4
+00:56:41.193 --> 00:56:42.365
+<v John Miller>with the code base.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/437-0
+00:56:45.725 --> 00:56:50.565
+<v John Miller>All right. Questions on this.
+Other comments. Good.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/438-0
+00:56:53.965 --> 00:56:56.165
+<v John Miller>Alright, so we talked a lot about that.
+Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/439-0
+00:56:57.565 --> 00:57:04.311
+<v John Miller>About the the code gaps.
+So let's talk about like a remediation</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/439-1
+00:57:04.311 --> 00:57:11.689
+<v John Miller>plan for our our test suites.
+So we I I built that a simple test plan</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/439-2
+00:57:11.689 --> 00:57:13.165
+<v John Miller>coming out of.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/440-0
+00:57:13.165 --> 00:57:17.941
+<v John Miller>Coming out of the the last exercise,
+so when we talk about creating a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/440-1
+00:57:17.941 --> 00:57:21.898
+<v John Miller>remediation plan,
+now we're dealing with how we deal with</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/440-2
+00:57:21.898 --> 00:57:27.151
+<v John Miller>new code modifications and how do we,
+how do we want to move forward to have</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/440-3
+00:57:27.151 --> 00:57:27.765
+<v John Miller>you know?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/441-0
+00:57:28.445 --> 00:57:32.760
+<v John Miller>How do we want to implement this?
+So we want to make sure that for we have</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/441-1
+00:57:32.760 --> 00:57:37.362
+<v John Miller>an that we create an issue for something
+that we have a strong remediation plan</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/441-2
+00:57:37.362 --> 00:57:40.181
+<v John Miller>for those,
+for those new changes that we want to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/441-3
+00:57:40.181 --> 00:57:42.827
+<v John Miller>make,
+whatever that be a change the technical</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/441-4
+00:57:42.827 --> 00:57:43.805
+<v John Miller>debt or the like.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/442-0
+00:57:44.125 --> 00:57:49.262
+<v John Miller>So we want to make sure that the the the
+definition of the problem is is clear,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/442-1
+00:57:49.262 --> 00:57:52.858
+<v John Miller>that any root cause analysis if it's a
+defect is clear,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/442-2
+00:57:52.858 --> 00:57:57.738
+<v John Miller>that there is a a proposed solution in
+that issue that would guide anybody,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/442-3
+00:57:57.738 --> 00:58:01.205
+<v John Miller>either a human or an A I in terms of
+implementing it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/443-0
+00:58:01.405 --> 00:58:04.428
+<v John Miller>Potentially a step-by-step implementation
+plan,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/443-1
+00:58:04.428 --> 00:58:08.962
+<v John Miller>particularly if more than one
+modification needs to be made to in order</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/443-2
+00:58:08.962 --> 00:58:12.992
+<v John Miller>to address this particular issue,
+and then a rollback strategy,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/443-3
+00:58:12.992 --> 00:58:16.645
+<v John Miller>particularly if you don't have feature
+flags implemented.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/444-0
+00:58:16.925 --> 00:58:21.142
+<v John Miller>You have to determine how you're going to
+get back to a known good state if</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/444-1
+00:58:21.142 --> 00:58:25.304
+<v John Miller>something actually goes wrong with this
+implementation and if it actually,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/444-2
+00:58:25.304 --> 00:58:28.244
+<v John Miller>you know,
+makes its way all the way into production.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/444-3
+00:58:28.244 --> 00:58:32.517
+<v John Miller>And then of course you need to include
+whatever test updates that need to be</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/444-4
+00:58:32.517 --> 00:58:35.458
+<v John Miller>made and then and you want that
+Providence metadata.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/444-5
+00:58:35.458 --> 00:58:36.845
+<v John Miller>So if your A I change it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/445-0
+00:58:37.125 --> 00:58:42.392
+<v John Miller>Makes changes to files or influence new
+things that it it gets properly tagged</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/445-1
+00:58:42.392 --> 00:58:47.125
+<v John Miller>and marked so that it's you,
+you know what the A I was asked to do and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/445-2
+00:58:47.125 --> 00:58:47.925
+<v John Miller>what it did.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/446-0
+00:58:54.765 --> 00:58:58.395
+<v John Miller>All right,
+so So what we want to do now is start to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/446-1
+00:58:58.395 --> 00:59:03.352
+<v John Miller>we talked about making generated issues
+to make a code base Evergreen.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/446-2
+00:59:03.352 --> 00:59:08.379
+<v John Miller>So anybody need any time to to finish
+that exercise that we did for the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/446-3
+00:59:08.379 --> 00:59:09.845
+<v John Miller>Evergreen issues and.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/447-0
+00:59:10.165 --> 00:59:11.885
+<v John Miller>Raise your hand if you do.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/448-0
+00:59:12.845 --> 00:59:15.157
+<v John Miller>Um.
+Otherwise we'll move on and start to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/448-1
+00:59:15.157 --> 00:59:16.285
+<v John Miller>implement some code.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/449-0
+00:59:18.525 --> 00:59:20.005
+<v Buddy Toups>Was that the last one?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/451-0
+00:59:20.525 --> 00:59:25.472
+<v John Miller>Was I think 1 either last one or one
+before that where we went through and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/451-1
+00:59:25.472 --> 00:59:30.485
+<v John Miller>said you know do we want to we want to
+verify that the application or or or</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/451-2
+00:59:30.485 --> 00:59:35.300
+<v John Miller>identify issues where the application has
+problems with being Evergreen.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/451-3
+00:59:35.300 --> 00:59:40.445
+<v John Miller>I I did that in our project and created a
+dozen or so issues related to that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/450-0
+00:59:43.045 --> 00:59:43.445
+<v Dan Blanchard>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/453-0
+00:59:45.685 --> 00:59:49.693
+<v John Miller>All right,
+so a couple of ways that we can we can do</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/453-1
+00:59:49.693 --> 00:59:52.945
+<v John Miller>this.
+We can prompt a copilot to address a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/453-2
+00:59:52.945 --> 00:59:56.045
+<v John Miller>technical debt. Let me kind of jump over.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/454-0
+00:59:57.325 --> 01:00:00.454
+<v John Miller>Thank you here.
+So if you have a if you have them as</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/454-1
+01:00:00.454 --> 01:00:03.112
+<v John Miller>files,
+you can just reference that file in a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/454-2
+01:00:03.112 --> 01:00:03.525
+<v John Miller>prompt.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/455-0
+01:00:05.685 --> 01:00:06.965
+<v John Miller>And we can say something like.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/456-0
+01:00:08.845 --> 01:00:09.885
+<v John Miller>Uh, let me create a new.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/457-0
+01:00:11.525 --> 01:00:11.645
+<v John Miller>Chat.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/458-0
+01:00:15.045 --> 01:00:16.245
+<v John Miller>Uh, take propose.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/459-0
+01:00:22.725 --> 01:00:23.765
+<v John Miller>Implementation.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/460-0
+01:00:27.405 --> 01:00:28.285
+<v John Miller>My dress.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/461-0
+01:00:33.565 --> 01:00:34.325
+<v John Miller>Question #1.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/465-0
+01:00:51.645 --> 01:00:56.093
+<v John Miller>So let's see what it produces here.
+So this will give us, you know,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/465-1
+01:00:56.093 --> 01:00:59.363
+<v John Miller>when we're working with a a brownfield
+code base,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/465-2
+01:00:59.363 --> 01:01:04.596
+<v John Miller>it's it's often a good idea to ask it
+what it thinks it would like to do before</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/465-3
+01:01:04.596 --> 01:01:07.605
+<v John Miller>it actually executes it.
+We know that in the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/466-0
+01:01:07.685 --> 01:01:07.925
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/467-0
+01:01:09.165 --> 01:01:11.365
+<v John Miller>The issue itself we have defined.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/468-0
+01:01:13.285 --> 01:01:15.125
+<v John Miller>What that issue should be?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/469-0
+01:01:17.325 --> 01:01:18.845
+<v John Miller>And um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/471-0
+01:01:20.965 --> 01:01:24.955
+<v John Miller>And it has a proposed fix,
+but we're just asking here to to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/471-1
+01:01:24.955 --> 01:01:29.876
+<v John Miller>reiterate what it thinks it's going to do
+in order to affect that change,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/471-2
+01:01:29.876 --> 01:01:31.405
+<v John Miller>one of the things that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/472-0
+01:01:32.525 --> 01:01:37.791
+<v John Miller>That this recommended fix doesn't have
+that we might want to include,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/472-1
+01:01:37.791 --> 01:01:43.810
+<v John Miller>and this is just a an example of where we
+want to review the is that it doesn't</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/472-2
+01:01:43.810 --> 01:01:48.323
+<v John Miller>take any actions to remove this from the
+GitHub repository,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/472-3
+01:01:48.323 --> 01:01:52.085
+<v John Miller>but it does ask us to rotate that current
+secret.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/473-0
+01:01:52.365 --> 01:01:59.495
+<v John Miller>So that it it doesn't actually exist in
+the in the new code base and therefore</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/473-1
+01:01:59.495 --> 01:02:05.090
+<v John Miller>can't be retrieved.
+So that's one of the steps that you would</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/473-2
+01:02:05.090 --> 01:02:10.325
+<v John Miller>want to do if you were to to to take on
+this remediation.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/474-0
+01:02:10.605 --> 01:02:10.765
+<v John Miller>8.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/475-0
+01:02:11.805 --> 01:02:15.773
+<v John Miller>But having said that,
+it's very difficult to remove something</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/475-1
+01:02:15.773 --> 01:02:18.205
+<v John Miller>from git that's that's been committed.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/476-0
+01:02:19.845 --> 01:02:29.495
+<v John Miller>So that that step number for the rotation
+is something that is important and you</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/476-1
+01:02:29.495 --> 01:02:30.805
+<v John Miller>need to do.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/477-0
+01:02:31.645 --> 01:02:39.574
+<v John Miller>If it actually accidentally gets
+submitted to the committed to the code</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/477-1
+01:02:39.574 --> 01:02:40.125
+<v John Miller>base.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/478-0
+01:02:41.005 --> 01:02:45.765
+<v John Miller>So it's going through doing analysis.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/479-0
+01:02:47.365 --> 01:02:48.805
+<v John Miller>That will work.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/480-0
+01:02:51.085 --> 01:02:58.261
+<v John Miller>It's now produced something here,
+so that's security fix for the JWT</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/480-1
+01:02:58.261 --> 01:03:02.525
+<v John Miller>secrets. Let's go ahead and open that up.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/481-0
+01:03:04.565 --> 01:03:11.319
+<v John Miller>Things want immediate remediation is to
+remove the secret from the source control.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/481-1
+01:03:11.319 --> 01:03:18.073
+<v John Miller>This is the code where it exists, right?
+This is what it would look like if it was</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/481-2
+01:03:18.073 --> 01:03:18.805
+<v John Miller>modified.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/482-0
+01:03:19.165 --> 01:03:23.285
+<v John Miller>Then we'll have the configuration
+validation logic.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/483-0
+01:03:26.685 --> 01:03:33.823
+<v John Miller>So it's now added a it's added logic here
+to test for the JW secret contains this</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/483-1
+01:03:33.823 --> 01:03:40.525
+<v John Miller>placeholder value which will allow it to
+throw an exception based upon that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/484-0
+01:03:41.725 --> 01:03:47.194
+<v John Miller>That an exception if it actually sees
+that placeholder and then it would look</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/484-1
+01:03:47.194 --> 01:03:52.102
+<v John Miller>for the length and say that it it doesn't
+conform to what its expect,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/484-2
+01:03:52.102 --> 01:03:53.925
+<v John Miller>what its expectations are.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/485-0
+01:03:55.845 --> 01:04:02.605
+<v John Miller>And here it's grabbing the JW secret from
+the secret from the configuration file.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/486-0
+01:04:04.765 --> 01:04:10.111
+<v John Miller>So at this point it's it would initialize
+those user secrets for deployment.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/486-1
+01:04:10.111 --> 01:04:15.666
+<v John Miller>So it would then create a user secret,
+initialize that for the project and then</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/486-2
+01:04:15.666 --> 01:04:19.485
+<v John Miller>set that user secret to what the whatever
+the the new.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/487-0
+01:04:20.245 --> 01:04:20.565
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/488-0
+01:04:22.045 --> 01:04:27.368
+<v John Miller>It would have set that new new secret to
+whatever we decided to rotate it to and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/488-1
+01:04:27.368 --> 01:04:31.705
+<v John Miller>then then we could use the.
+net user secret to list it so that we</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/488-2
+01:04:31.705 --> 01:04:37.028
+<v John Miller>actually stored it in the user secrets
+and then configure production environment</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/488-3
+01:04:37.028 --> 01:04:37.685
+<v John Miller>variables.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/489-0
+01:04:38.205 --> 01:04:45.164
+<v John Miller>That that would contain that in a secret
+so that I can be use it depending upon</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/489-1
+01:04:45.164 --> 01:04:49.165
+<v John Miller>actually how we're deploying the
+application.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/490-0
+01:04:51.565 --> 01:05:00.331
+<v John Miller>Then a phase two would be moving it from
+the configuration into actually a a a key</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/490-1
+01:05:00.331 --> 01:05:00.965
+<v John Miller>vault.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/491-0
+01:05:02.725 --> 01:05:08.920
+<v John Miller>So here it's using an Azure key vault
+process to actually configure that secret</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/491-1
+01:05:08.920 --> 01:05:14.340
+<v John Miller>in the in the key vault and then
+retrieving that from the the the key</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/491-2
+01:05:14.340 --> 01:05:14.805
+<v John Miller>vault.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/492-0
+01:05:16.925 --> 01:05:21.622
+<v John Miller>In the application as a part of the
+configuration service,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/492-1
+01:05:21.622 --> 01:05:28.230
+<v John Miller>so and then implementing an interface to
+actually retrieve that token and then all</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/492-2
+01:05:28.230 --> 01:05:33.485
+<v John Miller>right here it is proposing a.
+So here we're actually proposing a.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/493-0
+01:05:33.725 --> 01:05:39.805
+<v John Miller>To remove the secret from the git
+repository, here we see the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/494-0
+01:05:40.525 --> 01:05:49.713
+<v John Miller>An installation for a filter repo command
+and we would then run a command to look</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/494-1
+01:05:49.713 --> 01:05:58.117
+<v John Miller>for in any app settings Jason file and
+then examine that file to see if it</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/494-2
+01:05:58.117 --> 01:05:59.125
+<v John Miller>actually.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/495-0
+01:05:59.765 --> 01:06:01.485
+<v John Miller>And the purge that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/496-0
+01:06:02.445 --> 01:06:08.528
+<v John Miller>That secret from the repository,
+creating a new secret and then a a test</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/496-1
+01:06:08.528 --> 01:06:11.445
+<v John Miller>strategy would test to to validate.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/497-0
+01:06:12.365 --> 01:06:19.576
+<v John Miller>The the work that we've done and then
+implement a new security tests for that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/497-1
+01:06:19.576 --> 01:06:20.685
+<v John Miller>that secret.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/498-0
+01:06:22.125 --> 01:06:24.165
+<v John Miller>Some immigration tests.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/499-0
+01:06:25.605 --> 01:06:28.125
+<v John Miller>Some environment configuration tests.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/500-0
+01:06:29.645 --> 01:06:35.191
+<v John Miller>And then we have some quality metrics and
+some success criteria and a deployment</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/500-1
+01:06:35.191 --> 01:06:40.942
+<v John Miller>checklist to get this out into production
+and a developer guide that describes what</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/500-2
+01:06:40.942 --> 01:06:43.750
+<v John Miller>it is.
+So this is a pretty comprehensive</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/500-3
+01:06:43.750 --> 01:06:48.885
+<v John Miller>implementation plan for a little bit
+better than what we saw in the issue.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/501-0
+01:06:49.405 --> 01:06:52.867
+<v John Miller>And so this is also a good opportunity
+for us to make a change.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/501-1
+01:06:52.867 --> 01:06:55.301
+<v John Miller>I don't think I'm going to execute this
+one.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/501-2
+01:06:55.301 --> 01:06:59.683
+<v John Miller>I think I'll pick a different one because
+there's a lot of non coding steps that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/501-3
+01:06:59.683 --> 01:07:04.064
+<v John Miller>need to be done to implement this one,
+but it would be a good thing to attach to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/501-4
+01:07:04.064 --> 01:07:04.605
+<v John Miller>the issue.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/502-0
+01:07:05.005 --> 01:07:08.716
+<v John Miller>And when it comes time to actually
+implement it,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/502-1
+01:07:08.716 --> 01:07:14.700
+<v John Miller>you could even say here to add all of
+these steps as sub issues or tasks under</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/502-2
+01:07:14.700 --> 01:07:20.077
+<v John Miller>the the core issue so that you could
+track the implementation of those</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/502-3
+01:07:20.077 --> 01:07:21.365
+<v John Miller>individual steps.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/503-0
+01:07:22.845 --> 01:07:27.325
+<v John Miller>So let let's take a look at something
+else that might be better suitable.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/504-0
+01:07:31.405 --> 01:07:33.005
+<v John Miller>That's refers to JWT.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/505-0
+01:07:39.365 --> 01:07:41.085
+<v John Miller>There's no data persistence.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/506-0
+01:07:48.685 --> 01:07:52.565
+<v John Miller>So it wants us to switch to a new
+database provider. I think that will.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/507-0
+01:07:54.325 --> 01:07:57.445
+<v John Miller>And I saw that level 2 involves.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/508-0
+01:08:03.045 --> 01:08:06.525
+<v John Miller>Authorization checks for the endpoints.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/509-0
+01:08:09.725 --> 01:08:14.005
+<v John Miller>And it talks about here's some problems
+with the try catch.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/510-0
+01:08:15.605 --> 01:08:19.125
+<v John Miller>So that might be something that we can
+tackle today.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/511-0
+01:08:20.525 --> 01:08:22.885
+<v John Miller>So this is issue #5.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/514-0
+01:08:37.645 --> 01:08:37.765
+<v John Miller>Yes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/515-0
+01:08:40.205 --> 01:08:41.485
+<v John Miller>Issue buys.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/516-0
+01:08:43.245 --> 01:08:45.165
+<v John Miller>And the weather think about that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/517-0
+01:08:46.085 --> 01:08:48.965
+<v John Miller>All right. Any questions at this point?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/519-0
+01:09:01.165 --> 01:09:06.010
+<v John Miller>All right, so here what it's gonna,
+it's gonna go through what we just did</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/519-1
+01:09:06.010 --> 01:09:11.372
+<v John Miller>and basically go in and try to plan a a a
+mitigation strategy which will give us a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/519-2
+01:09:11.372 --> 01:09:15.765
+<v John Miller>a sense of what the A I understands about
+the the issue itself. So.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/520-0
+01:09:16.285 --> 01:09:20.577
+<v John Miller>Get an interpretation of the issue and
+then we'll be able to see what it</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/520-1
+01:09:20.577 --> 01:09:25.045
+<v John Miller>actually would attempt to do if it was
+going to try to make a modification.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/521-0
+01:09:32.485 --> 01:09:35.565
+<v John Miller>So while we're here,
+since it's going to take some time to do</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/521-1
+01:09:35.565 --> 01:09:37.205
+<v John Miller>that, let's create a new session.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/522-0
+01:09:45.965 --> 01:09:48.445
+<v John Miller>And I'll just say propose.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/523-0
+01:09:49.365 --> 01:09:50.085
+<v John Miller>Options.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/524-0
+01:09:52.805 --> 01:09:53.605
+<v John Miller>Or internally.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/525-0
+01:09:58.165 --> 01:09:59.005
+<v John Miller>Future slides.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/532-0
+01:10:43.485 --> 01:10:49.014
+<v John Miller>So we can see here that it's actually
+it's going through not only making some</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/532-1
+01:10:49.014 --> 01:10:54.473
+<v John Miller>proposals on what we should consider,
+but also has pros and cons of each and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/532-2
+01:10:54.473 --> 01:10:57.805
+<v John Miller>looks like we have a a comparison matrix
+here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/533-0
+01:11:03.605 --> 01:11:08.325
+<v John Miller>That we can use to actually, uh,
+compare on the output. So let's see.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/534-0
+01:11:09.445 --> 01:11:10.725
+<v John Miller>OK, let's ask it to.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/535-0
+01:11:13.365 --> 01:11:13.445
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/536-0
+01:11:13.525 --> 01:11:13.605
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/537-0
+01:11:15.805 --> 01:11:19.525
+<v John Miller>Great issue.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/538-0
+01:11:25.085 --> 01:11:25.285
+<v John Miller>It sure.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/539-0
+01:11:28.965 --> 01:11:29.165
+<v John Miller>Once.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/540-0
+01:11:33.445 --> 01:11:33.685
+<v John Miller>And.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/541-0
+01:11:36.605 --> 01:11:41.085
+<v John Miller>This information.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/546-0
+01:12:10.045 --> 01:12:15.325
+<v John Miller>So here we see that it's thinking about
+that problem.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/547-0
+01:12:16.925 --> 01:12:19.405
+<v John Miller>Same quirk that we were seeing yesterday
+about the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/549-0
+01:12:21.285 --> 01:12:23.405
+<v John Miller>Problems dipping bars.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/550-0
+01:12:24.205 --> 01:12:24.885
+<v John Miller>And sessions.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/551-0
+01:12:34.125 --> 01:12:36.230
+<v John Miller>Um,
+let's see how we're doing in other</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/551-1
+01:12:36.230 --> 01:12:38.605
+<v John Miller>session while we're looking for a
+proposal.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/552-0
+01:12:42.885 --> 01:12:43.365
+<v John Miller>It's uh.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/553-0
+01:12:49.245 --> 01:12:52.485
+<v John Miller>That's a great test file. Well,
+it looks like.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/554-0
+01:12:59.005 --> 01:13:02.005
+<v John Miller>But we may be doing more than we asked
+for here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/555-0
+01:13:17.445 --> 01:13:21.445
+<v John Miller>It looks to me like what it's done here
+is actually making some modifications, so.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/556-0
+01:13:22.605 --> 01:13:25.925
+<v John Miller>I think you wanna.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/557-0
+01:13:27.245 --> 01:13:33.765
+<v John Miller>I'm doing these modifications since it's
+something that we didn't ask for.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/558-0
+01:13:36.845 --> 01:13:41.765
+<v John Miller>And then we can.
+I'm gonna go back and set a new.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/559-0
+01:13:43.685 --> 01:13:46.445
+<v John Miller>Toms you can go back and and say.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/560-0
+01:13:47.445 --> 01:13:48.165
+<v John Miller>And.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/562-0
+01:14:02.645 --> 01:14:06.965
+<v John Miller>I don't let's see proposal for issue one.
+That's fine.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/563-0
+01:14:08.365 --> 01:14:10.765
+<v John Miller>So let's go back and say I want the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/564-0
+01:14:11.765 --> 01:14:12.725
+<v John Miller>Propose.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/565-0
+01:14:16.325 --> 01:14:16.645
+<v John Miller>And.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/566-0
+01:14:18.325 --> 01:14:19.685
+<v John Miller>Commentation.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/567-0
+01:14:22.405 --> 01:14:22.485
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/569-0
+01:14:33.685 --> 01:14:34.005
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/570-0
+01:14:36.485 --> 01:14:37.125
+<v John Miller>Note.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/571-0
+01:14:38.685 --> 01:14:40.125
+<v John Miller>One moment.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/572-0
+01:14:43.925 --> 01:14:44.485
+<v John Miller>Mhm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/573-0
+01:14:47.285 --> 01:14:47.965
+<v John Miller>The fixes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/574-0
+01:14:50.925 --> 01:14:53.565
+<v John Miller>And we'll see if that's really better.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/575-0
+01:15:03.845 --> 01:15:05.925
+<v John Miller>And looks like our feature flag.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/576-0
+01:15:07.685 --> 01:15:08.645
+<v John Miller>Guidance is is ready.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/577-0
+01:15:17.805 --> 01:15:25.285
+<v John Miller>So it's basically put in this issue.
+So this is issue 16. What's that end up?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/579-0
+01:15:36.885 --> 01:15:37.365
+<v John Miller>Mhm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/580-0
+01:15:41.805 --> 01:15:44.532
+<v John Miller>Let's see here.
+So it looks like it tried to create an</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/580-1
+01:15:44.532 --> 01:15:45.325
+<v John Miller>issue in GitHub.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/582-0
+01:15:53.965 --> 01:15:54.885
+<v John Miller>Let's ask you to um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/583-0
+01:15:56.885 --> 01:15:58.525
+<v John Miller>I'm gonna go to the bottom.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/585-0
+01:16:14.925 --> 01:16:16.525
+<v John Miller>Give me a link.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/586-0
+01:16:17.885 --> 01:16:19.165
+<v John Miller>And then new this thing.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/587-0
+01:16:21.965 --> 01:16:28.605
+<v John Miller>And that hopefully won't take too long.
+Looks like we can. Here we go.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/588-0
+01:16:29.965 --> 01:16:32.365
+<v John Miller>If I not up.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/589-0
+01:16:42.125 --> 01:16:47.221
+<v John Miller>So here's the the general problem
+statement that we want to create feature</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/589-1
+01:16:47.221 --> 01:16:50.958
+<v John Miller>toggles and then it gives us various
+options for that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/589-2
+01:16:50.958 --> 01:16:56.393
+<v John Miller>So the first one it wants to allow us to
+use is the feature feature management.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/589-3
+01:16:56.393 --> 01:17:00.470
+<v John Miller>It's nice is that it's free and it's a
+it's from Microsoft.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/589-4
+01:17:00.470 --> 01:17:01.965
+<v John Miller>This is the recommend.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/590-0
+01:17:02.605 --> 01:17:03.765
+<v John Miller>one. Umm</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/591-0
+01:17:05.485 --> 01:17:10.027
+<v John Miller>But it looks to me like you change the
+app settings dot Jason file in order for</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/591-1
+01:17:10.027 --> 01:17:12.525
+<v John Miller>you to change features,
+so that may not be.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/592-0
+01:17:13.805 --> 01:17:17.361
+<v John Miller>What we wanted,
+how we wanted to to work on it,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/592-1
+01:17:17.361 --> 01:17:23.288
+<v John Miller>because we would have to do a commit to
+the app settings dot Jason or modify it</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/592-2
+01:17:23.288 --> 01:17:24.325
+<v John Miller>in production.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/593-0
+01:17:25.525 --> 01:17:27.285
+<v John Miller>So there are some limited.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/594-0
+01:17:28.685 --> 01:17:32.213
+<v John Miller>There's in terms of usability,
+I think it's somewhat limited.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/594-1
+01:17:32.213 --> 01:17:34.831
+<v John Miller>You can use configuration based simple
+flags.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/594-2
+01:17:34.831 --> 01:17:39.327
+<v John Miller>This is very similar in the sense that
+you're using a configuration file to do</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/594-3
+01:17:39.327 --> 01:17:41.831
+<v John Miller>this.
+Then there's Azure app configuration.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/594-4
+01:17:41.831 --> 01:17:45.245
+<v John Miller>I mentioned that which also have a
+feature manager feature.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/595-0
+01:17:45.725 --> 01:17:51.349
+<v John Miller>Launchdarkly is a commercial service
+which is very sophisticated that allows</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/595-1
+01:17:51.349 --> 01:17:56.753
+<v John Miller>you to do sophisticated rollouts.
+So it supports all of those Canary type</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/595-2
+01:17:56.753 --> 01:18:02.523
+<v John Miller>rollouts and and the and the selective
+rollout to individual groups of people,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/595-3
+01:18:02.523 --> 01:18:03.765
+<v John Miller>things like that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/596-0
+01:18:04.045 --> 01:18:09.292
+<v John Miller>You can use database driven flags where
+you have something in the database that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/596-1
+01:18:09.292 --> 01:18:14.212
+<v John Miller>gets checked that gives you like full
+full dependency, full customization,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/596-2
+01:18:14.212 --> 01:18:17.098
+<v John Miller>right?
+But you have to have to write it all</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/596-3
+01:18:17.098 --> 01:18:19.525
+<v John Miller>yourself and so it's suggesting this.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/597-0
+01:18:19.965 --> 01:18:23.885
+<v John Miller>As our potential implementation.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/598-0
+01:18:25.325 --> 01:18:28.285
+<v John Miller>So that gives you some options in terms
+of feature flags.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/599-0
+01:18:29.245 --> 01:18:33.605
+<v John Miller>Let's go back and look at what we're you
+know in terms of our.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/600-0
+01:18:34.685 --> 01:18:38.885
+<v John Miller>Implementation for issue five.
+Need some assistance here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/601-0
+01:18:41.005 --> 01:18:43.205
+<v John Miller>That's not what I was looking for.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/602-0
+01:18:48.725 --> 01:18:49.765
+<v John Miller>And um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/603-0
+01:18:55.525 --> 01:18:57.405
+<v John Miller>Oh, here's issue 5.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/605-0
+01:19:09.285 --> 01:19:13.245
+<v John Miller>Doesn't look like I got an implementation
+plans. I must have done something wrong.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/606-0
+01:19:19.845 --> 01:19:25.365
+<v John Miller>So um, maybe we should try it again.
+Let's go ahead and clear the session.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/607-0
+01:19:27.005 --> 01:19:27.125
+<v John Miller>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/608-0
+01:19:31.805 --> 01:19:33.285
+<v John Miller>In the session say.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/609-0
+01:19:35.125 --> 01:19:35.605
+<v John Miller>Ready.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/610-0
+01:19:39.405 --> 01:19:39.525
+<v John Miller>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/611-0
+01:19:47.325 --> 01:19:49.085
+<v John Miller>or issue number five.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/617-0
+01:20:29.805 --> 01:20:31.925
+<v John Miller>Alright, I see this new session.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/620-0
+01:20:48.365 --> 01:20:52.125
+<v John Miller>And whoever gets to know it's creating
+our plan for us.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/621-0
+01:20:55.325 --> 01:20:58.243
+<v John Miller>And like I said, this is a a good,
+you know,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/621-1
+01:20:58.243 --> 01:21:03.300
+<v John Miller>first step is to make sure that we really
+understand what the what the A I is</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/621-2
+01:21:03.300 --> 01:21:07.709
+<v John Miller>intending to do before we actually give
+it the permission to do it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/621-3
+01:21:07.709 --> 01:21:12.442
+<v John Miller>That way we we avoid anything,
+any misunderstandings or any conflicts in</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/621-4
+01:21:12.442 --> 01:21:15.165
+<v John Miller>terms of its what it understands from its.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/622-0
+01:21:15.205 --> 01:21:18.485
+<v John Miller>Instructions in order what it wants to
+actually do.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/624-0
+01:21:20.685 --> 01:21:24.447
+<v John Miller>That's all.
+It's also a good idea to write these out</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/624-1
+01:21:24.447 --> 01:21:30.124
+<v John Miller>into markdown files and you can include
+them as a part of your issue history so</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/624-2
+01:21:30.124 --> 01:21:35.518
+<v John Miller>that you documented what the actual
+implementation approach is going to be,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/624-3
+01:21:35.518 --> 01:21:36.725
+<v John Miller>and that way you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/625-0
+01:21:37.045 --> 01:21:40.365
+<v John Miller>You can refer back to that information in
+the future.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/626-0
+01:21:43.165 --> 01:21:43.325
+<v John Miller>Mm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/627-0
+01:21:53.165 --> 01:21:53.405
+<v John Miller>Alright.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/628-0
+01:21:58.685 --> 01:21:59.685
+<v John Miller>Any questions on that?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/629-0
+01:22:04.365 --> 01:22:07.285
+<v John Miller>So now we can basically, uh, say.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/630-0
+01:22:09.405 --> 01:22:09.565
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/631-0
+01:22:11.245 --> 01:22:15.525
+<v John Miller>Then go ahead with the implementation.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/632-0
+01:22:19.285 --> 01:22:24.407
+<v John Miller>And if we had saved this to a file at
+somewhat later point on a different</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/632-1
+01:22:24.407 --> 01:22:26.968
+<v John Miller>machine,
+we could just refer to this</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/632-2
+01:22:26.968 --> 01:22:31.605
+<v John Miller>implementation conversation and have it
+go ahead and perform that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/633-0
+01:22:32.885 --> 01:22:37.304
+<v John Miller>That perform that implementation for us.
+So while this is going to go on,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/633-1
+01:22:37.304 --> 01:22:41.365
+<v John Miller>because it's likely will take some time,
+let's go back to our deck.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/634-0
+01:22:44.085 --> 01:22:44.365
+<v John Miller>And.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/635-0
+01:22:46.725 --> 01:22:52.205
+<v John Miller>Talk about prompting copilot to address
+that tactical debt, so.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/636-0
+01:22:53.765 --> 01:22:58.751
+<v John Miller>Effective prompts would include the clear
+description of the debt they're trying to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/636-1
+01:22:58.751 --> 01:23:03.500
+<v John Miller>to affect. And we've been doing, I think,
+a decent job of building that out and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/636-2
+01:23:03.500 --> 01:23:06.290
+<v John Miller>building issues that contain that
+description,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/636-3
+01:23:06.290 --> 01:23:08.605
+<v John Miller>any constraints or architectural rules.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/637-0
+01:23:09.605 --> 01:23:14.969
+<v John Miller>That aren't listed in your instruction
+files should be included in the in in the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/637-1
+01:23:14.969 --> 01:23:19.339
+<v John Miller>in the prompts that you give it,
+what your expected outcomes are,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/637-2
+01:23:19.339 --> 01:23:23.113
+<v John Miller>what required test and documentation
+updates are needed,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/637-3
+01:23:23.113 --> 01:23:27.285
+<v John Miller>and then with the Providence requirements
+that aren't in your.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/638-0
+01:23:27.965 --> 01:23:31.821
+<v John Miller>In your instruction files should be
+included,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/638-1
+01:23:31.821 --> 01:23:37.856
+<v John Miller>so this will give us a a faster
+remediation of a consistent application</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/638-2
+01:23:37.856 --> 01:23:42.885
+<v John Miller>and reduced manual effort when we
+actually execute the the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/639-0
+01:23:42.885 --> 01:23:44.325
+<v John Miller>Go to the products.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/640-0
+01:23:45.285 --> 01:23:49.685
+<v John Miller>And we also can assign these issues to
+copod. I've shown you this.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/641-0
+01:23:50.965 --> 01:23:57.085
+<v John Miller>In the past,
+let's go ahead and bring up copilot.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/642-0
+01:23:59.765 --> 01:24:04.045
+<v John Miller>And switch to our project.
+Let me bring this up here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/643-0
+01:24:06.165 --> 01:24:09.165
+<v John Miller>And I want to go to a repo.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/644-0
+01:24:14.445 --> 01:24:14.565
+<v John Miller>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/645-0
+01:24:20.045 --> 01:24:21.565
+<v John Miller>So here at the top.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/646-0
+01:24:30.325 --> 01:24:34.049
+<v John Miller>I don't see issues either. I mean,
+I haven't.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/646-1
+01:24:34.049 --> 01:24:37.125
+<v John Miller>I haven't possibly not turned them on.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/648-0
+01:24:48.125 --> 01:24:49.445
+<v John Miller>No, it's not here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/649-0
+01:24:51.765 --> 01:24:55.805
+<v Chris Bishop>Issues are under the general section
+about halfway down.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/650-0
+01:25:04.285 --> 01:25:05.565
+<v John Miller>I'm missing it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/652-0
+01:25:07.725 --> 01:25:10.045
+<v Rockwell, Christopher L>You have to click general at the top.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/651-0
+01:25:08.085 --> 01:25:08.565
+<v John Miller>Mhm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/653-0
+01:25:09.845 --> 01:25:11.365
+<v John Miller>Oh, there, thank you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/655-0
+01:25:11.325 --> 01:25:13.805
+<v Rockwell, Christopher L>And on the right Scroll down.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/654-0
+01:25:12.445 --> 01:25:13.365
+<v John Miller>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/656-0
+01:25:19.365 --> 01:25:20.565
+<v Chris Bishop>We just passed it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/657-0
+01:25:25.765 --> 01:25:26.725
+<v John Miller>Right now.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/658-0
+01:25:28.165 --> 01:25:32.037
+<v John Miller>That explains that.
+So I I need to save this.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/658-1
+01:25:32.037 --> 01:25:33.805
+<v John Miller>Does it look like it?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/659-0
+01:25:38.045 --> 01:25:38.445
+<v John Miller>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/660-0
+01:25:48.805 --> 01:25:53.485
+<v John Miller>All right,
+so let's go back and let's let's ask.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/661-0
+01:25:58.965 --> 01:26:04.085
+<v John Miller>So it's working on that implementation.
+What about issue #6?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/662-0
+01:26:12.405 --> 01:26:18.088
+<v John Miller>Something that related to note checking,
+so I'm gonna create a a new session here</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/662-1
+01:26:18.088 --> 01:26:19.405
+<v John Miller>and just ask it to.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/663-0
+01:26:23.725 --> 01:26:24.525
+<v John Miller>Post.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/664-0
+01:26:26.325 --> 01:26:27.325
+<v John Miller>Issue.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/665-0
+01:26:29.365 --> 01:26:33.485
+<v John Miller>Using this I can say post issue number
+six to the GitHub.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/666-0
+01:26:35.565 --> 01:26:35.685
+<v John Miller>Zoom.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/667-0
+01:26:40.485 --> 01:26:41.445
+<v John Miller>Let's see how I.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/668-0
+01:26:52.045 --> 01:26:54.765
+<v John Miller>All right,
+so it's going to create that issue.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/669-0
+01:27:06.005 --> 01:27:07.565
+<v John Miller>You need a file instead.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/670-0
+01:27:11.285 --> 01:27:14.045
+<v John Miller>So it's gonna create the issue without
+like the labels.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/671-0
+01:27:18.965 --> 01:27:23.005
+<v John Miller>All right, so it's created an issue and.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/672-0
+01:27:24.325 --> 01:27:25.725
+<v John Miller>Go back to the GitHub.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/673-0
+01:27:30.565 --> 01:27:35.165
+<v Rockwell, Christopher L>I get created in the original repo.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/674-0
+01:27:38.205 --> 01:27:38.685
+<v John Miller>What's that?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/676-0
+01:27:39.925 --> 01:27:44.814
+<v Rockwell, Christopher L>If you look,
+you see there you can view and manage the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/676-1
+01:27:44.814 --> 01:27:47.125
+<v Rockwell, Christopher L>issue at GitHub VBMACIEEL.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/677-0
+01:27:48.125 --> 01:27:49.445
+<v John Miller>No. Oh, geez.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/678-0
+01:27:50.605 --> 01:27:52.005
+<v John Miller>That's not what I wanted.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/680-0
+01:28:01.205 --> 01:28:05.805
+<v Chris Bishop>I found it tried to do that with me too
+and I had to reset the default repo.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/681-0
+01:28:08.565 --> 01:28:09.765
+<v John Miller>How'd you do that?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/682-0
+01:28:10.725 --> 01:28:11.805
+<v Chris Bishop>I just asked Copilot.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/683-0
+01:28:18.925 --> 01:28:22.566
+<v John Miller>You asked it to reset the repo.
+You already asked it why it posted this</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/683-1
+01:28:22.566 --> 01:28:23.325
+<v John Miller>into the wrong.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/684-0
+01:28:22.725 --> 01:28:29.355
+<v Chris Bishop>I told it it needed to post to the other
+URL and it determined that the default</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/684-1
+01:28:29.355 --> 01:28:33.085
+<v Chris Bishop>needed to be set and then changed it for
+me.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/685-0
+01:28:33.365 --> 01:28:35.005
+<v John Miller>All right, post the issue to.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/686-0
+01:28:38.725 --> 01:28:39.565
+<v John Miller>Uh um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/691-0
+01:28:59.965 --> 01:29:02.472
+<v John Miller>OK,
+so it's gonna go ahead and try to do that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/691-1
+01:29:02.472 --> 01:29:05.192
+<v John Miller>We're still doing the implementation for
+issue #5.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/691-2
+01:29:05.192 --> 01:29:07.165
+<v John Miller>We can see that it's working here on.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/692-0
+01:29:08.005 --> 01:29:09.845
+<v John Miller>Uh, the error structure.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/693-0
+01:29:12.965 --> 01:29:15.485
+<v John Miller>And here, uh, it's.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/694-0
+01:29:19.405 --> 01:29:21.245
+<v John Miller>It's uh gonna create that issue.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/695-0
+01:29:27.045 --> 01:29:31.822
+<v John Miller>Let me look in in GitHub,
+so hopefully we'll see that soon.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/695-1
+01:29:31.822 --> 01:29:35.325
+<v John Miller>Other comments or questions on this so
+far?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/696-0
+01:29:36.565 --> 01:29:41.213
+<v John Miller>The goal here is that we want if we get
+to put the issue into GitHub and we have</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/696-1
+01:29:41.213 --> 01:29:43.565
+<v John Miller>a paid subscription, we can actually ask.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/697-0
+01:29:45.325 --> 01:29:45.485
+<v John Miller>Uh.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/698-0
+01:29:47.445 --> 01:29:50.338
+<v John Miller>In fact,
+that's probably a setting I need to check</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/698-1
+01:29:50.338 --> 01:29:50.565
+<v John Miller>too.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/699-0
+01:29:53.965 --> 01:29:57.445
+<v John Miller>Just to make sure that I've enabled in
+copilot.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/700-0
+01:29:59.365 --> 01:30:04.205
+<v John Miller>The coding agent. Yeah, it's a user.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/701-0
+01:30:06.685 --> 01:30:08.205
+<v John Miller>And it's right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/702-0
+01:30:09.405 --> 01:30:10.205
+<v John Miller>Then come with me.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/703-0
+01:30:11.805 --> 01:30:12.965
+<v John Miller>That's all.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/704-0
+01:30:15.005 --> 01:30:15.325
+<v John Miller>All right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/705-0
+01:30:24.445 --> 01:30:26.205
+<v John Miller>Well, it's asking for something here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/706-0
+01:30:28.325 --> 01:30:34.128
+<v John Miller>The Clearplay repository you provided me
+the full repository name in the format of</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/706-1
+01:30:34.128 --> 01:30:37.205
+<v John Miller>owner repository. All right,
+I can do that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/707-0
+01:30:44.045 --> 01:30:44.925
+<v John Miller>Think I can.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/710-0
+01:31:00.725 --> 01:31:04.919
+<v John Miller>All right, let's see how there we go.
+And so now it looks like it's going to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/710-1
+01:31:04.919 --> 01:31:05.845
+<v John Miller>create the issue.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/711-0
+01:31:08.965 --> 01:31:11.965
+<v John Miller>Well,
+it's not giving us a link to issue #1.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/712-0
+01:31:16.525 --> 01:31:20.645
+<v John Miller>Right.
+So here we see our issue and it's got the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/712-1
+01:31:20.645 --> 01:31:25.606
+<v John Miller>information in it.
+The what the the the proposed fix would</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/712-2
+01:31:25.606 --> 01:31:32.165
+<v John Miller>be gonna change two new 2 files and
+create a new file and if we go ahead and.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/713-0
+01:31:33.165 --> 01:31:35.445
+<v John Miller>Uh, assign it to copilot.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/715-0
+01:31:38.685 --> 01:31:46.035
+<v John Miller>Then what it will do is then it will take
+on responsibility for implementing that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/715-1
+01:31:46.035 --> 01:31:50.285
+<v John Miller>Then we can down here we can see that
+it's now.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/716-0
+01:31:51.245 --> 01:31:53.685
+<v John Miller>You mentioned in this particular.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/717-0
+01:31:55.605 --> 01:31:55.685
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/718-0
+01:31:58.525 --> 01:32:04.045
+<v John Miller>The project it's it's creating a work in
+progress branch to do the implementation.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/719-0
+01:32:06.805 --> 01:32:12.792
+<v John Miller>And so it will continue with that and
+we'll get notifications then like we just</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/719-1
+01:32:12.792 --> 01:32:13.765
+<v John Miller>got one here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/720-0
+01:32:15.245 --> 01:32:23.725
+<v John Miller>That way you've created a new branch to
+do that work. Let's go back to our a line.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/721-0
+01:32:26.845 --> 01:32:33.285
+<v John Miller>So it's thinking up for giving it some
+something to do. We see that our proposal.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/722-0
+01:32:34.965 --> 01:32:36.245
+<v John Miller>We're implementing.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/723-0
+01:32:37.845 --> 01:32:41.045
+<v John Miller>The Um notifications is done.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/724-0
+01:32:47.005 --> 01:32:51.005
+<v John Miller>So this was for issue #5 I believe.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/725-0
+01:32:55.965 --> 01:33:00.325
+<v John Miller>And we can keep that and say go ahead and.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/726-0
+01:33:02.645 --> 01:33:02.725
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/728-0
+01:33:10.765 --> 01:33:12.285
+<v John Miller>Yeah, implements.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/732-0
+01:33:30.525 --> 01:33:35.446
+<v John Miller>So you can see here that this is now
+showing us that we're close to exceeding</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/732-1
+01:33:35.446 --> 01:33:36.645
+<v John Miller>our context window.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/734-0
+01:33:44.605 --> 01:33:48.245
+<v John Miller>So it would have been a good idea to
+capture this into a file and then and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/734-1
+01:33:48.245 --> 01:33:52.224
+<v John Miller>then use that file as the context rather
+than the line out what we currently what</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/734-2
+01:33:52.224 --> 01:33:54.165
+<v John Miller>we currently have in the context window.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/735-0
+01:34:01.405 --> 01:34:06.965
+<v John Miller>All right, if we go back to to GitHub.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/736-0
+01:34:13.925 --> 01:34:15.045
+<v John Miller>Uh, let's see here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/737-0
+01:34:23.765 --> 01:34:28.485
+<v John Miller>Looks like it's created a pull request.
+Let me look at that pull request.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/738-0
+01:34:31.405 --> 01:34:34.525
+<v John Miller>You'll see that it started work on this 2
+minutes ago,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/738-1
+01:34:34.525 --> 01:34:38.837
+<v John Miller>and here's our review session button
+where we can see it co-power what it's</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/738-2
+01:34:38.837 --> 01:34:40.085
+<v John Miller>actually trying to do.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/739-0
+01:34:41.645 --> 01:34:46.684
+<v John Miller>So this would be similar to what we would
+see inside of Visual Studio code,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/739-1
+01:34:46.684 --> 01:34:50.463
+<v John Miller>and we can see that it's actually
+reviewing the changes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/739-2
+01:34:50.463 --> 01:34:55.038
+<v John Miller>So it's already created a generic
+extension that it reduced the code</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/739-3
+01:34:55.038 --> 01:34:58.685
+<v John Miller>duplication and it's made that code more
+maintainable.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/740-0
+01:34:59.005 --> 01:35:04.245
+<v John Miller>I'm getting a piece of toast that tells
+me that it's done with the refactoring.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/741-0
+01:35:05.805 --> 01:35:12.205
+<v John Miller>Here we can see that it's working on
+making a change.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/742-0
+01:35:17.805 --> 01:35:22.405
+<v John Miller>So it's gotten some feedback from the
+code review so we can see.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/743-0
+01:35:24.525 --> 01:35:27.405
+<v John Miller>We we go back to the pull request.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/744-0
+01:35:31.045 --> 01:35:34.165
+<v John Miller>And we we looked at this, we'll see.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/745-0
+01:35:38.725 --> 01:35:38.805
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/746-0
+01:35:42.925 --> 01:35:46.285
+<v John Miller>That there's a modification here. Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/747-0
+01:35:47.805 --> 01:35:51.085
+<v John Miller>It's to change 3 files.
+It's got 3 commits.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/748-0
+01:35:51.845 --> 01:35:55.976
+<v John Miller>Well,
+I don't see anything mentioned here as a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/748-1
+01:35:55.976 --> 01:35:58.085
+<v John Miller>comment to possibly the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/749-0
+01:36:01.165 --> 01:36:06.405
+<v John Miller>The code the review hasn't been done,
+so maybe what we need to do here is.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/750-0
+01:36:08.925 --> 01:36:10.845
+<v John Miller>market ready for review.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/751-0
+01:36:15.165 --> 01:36:19.240
+<v John Miller>And if Copilot understands that,
+we should be able to see a code review at</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/751-1
+01:36:19.240 --> 01:36:21.685
+<v John Miller>some point on the code that we've just
+done.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/753-0
+01:36:32.605 --> 01:36:36.125
+<v John Miller>So yeah, so here see we see copilot as.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/754-0
+01:36:38.485 --> 01:36:43.245
+<v John Miller>And then it has been assigned a reviewer.
+You can see here that it's actually we're</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/754-1
+01:36:43.245 --> 01:36:44.605
+<v John Miller>waiting for that review.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/755-0
+01:36:47.205 --> 01:36:51.582
+<v John Miller>And so we'll get a notification back when
+it's actually reviewed the code and we'll</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/755-1
+01:36:51.582 --> 01:36:52.885
+<v John Miller>see where we stand there.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/756-0
+01:36:54.365 --> 01:36:56.485
+<v John Miller>So moving them back to Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/757-0
+01:37:01.085 --> 01:37:01.885
+<v John Miller>I work here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/758-0
+01:37:05.965 --> 01:37:08.845
+<v John Miller>Here we're continuing to work on Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/759-0
+01:37:10.845 --> 01:37:12.845
+<v John Miller>the implementation for</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/760-0
+01:37:14.925 --> 01:37:16.725
+<v John Miller>Uh, issue number of size.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/761-0
+01:37:21.445 --> 01:37:24.294
+<v John Miller>All right.
+So the notifications will tell us that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/761-1
+01:37:24.294 --> 01:37:28.398
+<v John Miller>that's done. We talked about assigning.
+So we're seeing how to do that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/761-2
+01:37:28.398 --> 01:37:32.045
+<v John Miller>We'll come up and review the changes when
+we get notified that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/762-0
+01:37:33.005 --> 01:37:36.959
+<v John Miller>That it's done with the work that we've
+assigned it.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/762-1
+01:37:36.959 --> 01:37:42.405
+<v John Miller>This this could creates A repeatable
+workflow. Dan, you have a question.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/764-0
+01:37:46.125 --> 01:37:50.618
+<v Dan Blanchard>Yeah, maybe it was a little premature,
+but basically we're using Visual Studio</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/764-1
+01:37:50.618 --> 01:37:53.860
+<v Dan Blanchard>to create the issues and then we go,
+we go up to GitHub,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/764-2
+01:37:53.860 --> 01:37:58.069
+<v Dan Blanchard>the website and then we assign it
+basically to copilot and then let it do</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/764-3
+01:37:58.069 --> 01:38:02.335
+<v Dan Blanchard>it, let it, let it do its thing.
+And then when it makes a PR and the PR is</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/763-0
+01:38:02.245 --> 01:38:02.405
+<v John Miller>Right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/764-4
+01:38:02.335 --> 01:38:05.009
+<v Dan Blanchard>done,
+then we review it and then approve it if</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/764-5
+01:38:05.009 --> 01:38:05.805
+<v Dan Blanchard>we want it to.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/766-0
+01:38:05.885 --> 01:38:10.278
+<v John Miller>Well, yeah,
+but you we could probably improve on that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/765-0
+01:38:05.925 --> 01:38:07.725
+<v Dan Blanchard>Is that basically the workflow?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/766-1
+01:38:10.278 --> 01:38:16.297
+<v John Miller>workflow by taking advantage of the
+GitHub CLI to assign it to, you know,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/766-2
+01:38:16.297 --> 01:38:22.561
+<v John Miller>to assign the the issue to copilot.
+That is one thing that we could probably</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/766-3
+01:38:22.561 --> 01:38:22.805
+<v John Miller>do.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/767-0
+01:38:23.245 --> 01:38:28.599
+<v John Miller>To improve the workflow,
+you also have the ability to review pull</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/767-1
+01:38:28.599 --> 01:38:34.358
+<v John Miller>requests directly inside of Visual Studio
+code through the the GitHub.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/767-2
+01:38:34.358 --> 01:38:37.765
+<v John Miller>See if I doesn't think I'm signed in here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/768-0
+01:38:43.605 --> 01:38:46.526
+<v John Miller>Well, anyway,
+once you're signed into GitHub through</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/768-1
+01:38:46.526 --> 01:38:49.502
+<v John Miller>this mechanism,
+you can you can then use this tool to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/768-2
+01:38:49.502 --> 01:38:53.635
+<v John Miller>talk to GitHub and actually do the pull
+requests from there if you wanted.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/768-3
+01:38:53.635 --> 01:38:57.989
+<v John Miller>So those are different ways that you can
+accomplish this in terms of your your</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/768-4
+01:38:57.989 --> 01:38:58.485
+<v John Miller>workflow.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/769-0
+01:39:01.485 --> 01:39:05.874
+<v Dan Blanchard>OK, that I think that GitHub.
+I don't see it in my Visual Studio code.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/769-1
+01:39:05.874 --> 01:39:08.285
+<v Dan Blanchard>That must be an extension then is that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/770-0
+01:39:06.925 --> 01:39:10.445
+<v John Miller>No, it's. Oh, you don't see it. Yeah,
+it is an extension.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/771-0
+01:39:12.325 --> 01:39:12.485
+<v John Miller>So.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/772-0
+01:39:12.845 --> 01:39:15.925
+<v Dan Blanchard>That they get a pull request extension.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/773-0
+01:39:16.165 --> 01:39:16.325
+<v John Miller>Yes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/774-0
+01:39:18.005 --> 01:39:18.125
+<v Dan Blanchard>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/775-0
+01:39:21.285 --> 01:39:24.094
+<v John Miller>All right,
+so it's done some work here that we</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/775-1
+01:39:24.094 --> 01:39:27.442
+<v John Miller>haven't reviewed.
+So we've marked the pull request as I</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/775-2
+01:39:27.442 --> 01:39:32.224
+<v John Miller>want to pull this is ready to review and
+then I reviewed requested to automatic</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/775-3
+01:39:32.224 --> 01:39:37.125
+<v John Miller>review settings so it determined that it
+needed to do that. Here we can view the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/776-0
+01:39:37.325 --> 01:39:41.781
+<v John Miller>The session that it used that it went
+into in terms of reviewing the pull</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/776-1
+01:39:41.781 --> 01:39:43.045
+<v John Miller>request, what it did.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/777-0
+01:39:47.645 --> 01:39:49.765
+<v John Miller>Right. And then, um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/778-0
+01:39:52.805 --> 01:39:53.285
+<v John Miller>Good.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/780-0
+01:39:52.885 --> 01:39:56.725
+<v Dan Blanchard>Where is the setting to do the automatic
+review of the pull request? Is that?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/779-0
+01:39:54.245 --> 01:39:54.405
+<v John Miller>Mm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/781-0
+01:39:57.325 --> 01:40:01.405
+<v John Miller>Uh, that's under settings under copilot.
+There's settings for that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/782-0
+01:40:06.285 --> 01:40:06.765
+<v John Miller>Mhm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/783-0
+01:40:08.765 --> 01:40:10.525
+<v Dan Blanchard>Under code would be right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/784-0
+01:40:10.365 --> 01:40:12.845
+<v John Miller>Yeah, right here.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/785-0
+01:40:13.925 --> 01:40:15.285
+<v Dan Blanchard>Uh, I see.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/786-0
+01:40:22.045 --> 01:40:26.005
+<v John Miller>All right,
+So what it looks like here is it wants to.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/787-0
+01:40:29.245 --> 01:40:30.925
+<v John Miller>On a PowerShell commands.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/790-0
+01:40:42.925 --> 01:40:46.862
+<v John Miller>All right,
+so it thinks it's done the job with issue</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/790-1
+01:40:46.862 --> 01:40:47.085
+<v John Miller>#6.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/791-0
+01:40:50.925 --> 01:40:55.165
+<v John Miller>Let's go back to the the pull request
+that we were looking at.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/792-0
+01:41:01.245 --> 01:41:04.885
+<v John Miller>And just go back a little bit further
+down we were.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/793-0
+01:41:06.525 --> 01:41:10.045
+<v John Miller>It looks like it changed the title of the
+pull requests.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/794-0
+01:41:10.925 --> 01:41:12.285
+<v John Miller>And um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/795-0
+01:41:13.805 --> 01:41:20.782
+<v John Miller>It's now assigned me as a reviewer so
+that I can review the the work as well.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/795-1
+01:41:20.782 --> 01:41:26.685
+<v John Miller>It's finished that work and it has a
+review code review overview.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/796-0
+01:41:28.205 --> 01:41:30.085
+<v John Miller>And it doesn't uh.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/797-0
+01:41:32.765 --> 01:41:33.845
+<v John Miller>Oh um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/798-0
+01:41:35.325 --> 01:41:39.746
+<v John Miller>Review changes.
+The only suggestion it's making is to use</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/798-1
+01:41:39.746 --> 01:41:43.938
+<v John Miller>a copilot instructions.
+So it's telling us here to oh,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/798-2
+01:41:43.938 --> 01:41:49.349
+<v John Miller>here's an extension to querable.
+It's actually it's suggesting that we</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/798-3
+01:41:49.349 --> 01:41:50.645
+<v John Miller>would modify our.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/799-0
+01:41:50.965 --> 01:41:51.045
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/801-0
+01:41:53.765 --> 01:41:57.958
+<v John Miller>So that this basically currently requires
+a non null error message,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/801-1
+01:41:57.958 --> 01:42:02.830
+<v John Miller>which means that we every call still has
+to pass the same boulder crate string</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/801-2
+01:42:02.830 --> 01:42:07.270
+<v John Miller>consider making error message optional
+and so so it's it's just sort of</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/801-3
+01:42:07.270 --> 01:42:10.353
+<v John Miller>modification.
+If we like that we can go ahead and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/801-4
+01:42:10.353 --> 01:42:11.525
+<v John Miller>commit that change.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/802-0
+01:42:12.885 --> 01:42:18.328
+<v John Miller>And that will actually make a
+modification to the code to do what it's</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/802-1
+01:42:18.328 --> 01:42:22.928
+<v John Miller>suggesting that we do and we can resolve
+that conversation.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/802-2
+01:42:22.928 --> 01:42:24.845
+<v John Miller>It's also here proposing.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/804-0
+01:42:26.205 --> 01:42:31.782
+<v John Miller>Exclamation mark change here,
+so it lets it change the code for that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/804-1
+01:42:31.782 --> 01:42:37.845
+<v John Miller>and it wants to modify a method that
+contains a name that contains a typo.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/803-0
+01:42:40.045 --> 01:42:40.085
+<v Rockwell, Christopher L>Uh.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/805-0
+01:42:40.685 --> 01:42:45.768
+<v John Miller>And here's a exceptions appear to be
+unused in this file after switching to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/805-1
+01:42:45.768 --> 01:42:48.376
+<v John Miller>this,
+so it wants to remove this using</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/805-2
+01:42:48.376 --> 01:42:49.045
+<v John Miller>statement.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/806-0
+01:42:53.165 --> 01:43:00.819
+<v John Miller>And that the this also using data it
+wants to remove from the other file and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/806-1
+01:43:00.819 --> 01:43:03.205
+<v John Miller>then it allows us to to.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/807-0
+01:43:04.205 --> 01:43:07.638
+<v John Miller>To go ahead and and merge that in.
+If we if we choose,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/807-1
+01:43:07.638 --> 01:43:12.320
+<v John Miller>we can either choose to make these
+modifications which is up to us and and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/807-2
+01:43:12.320 --> 01:43:16.565
+<v John Miller>then we can then merge that pull request
+back into the main branch.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/808-0
+01:43:17.485 --> 01:43:21.900
+<v John Miller>So this is the the workflow here.
+So the idea is that you know the the code</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/808-1
+01:43:21.900 --> 01:43:26.723
+<v John Miller>review is great because it modifies that
+pull request and adds comments for things</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/808-2
+01:43:26.723 --> 01:43:31.429
+<v John Miller>and it looks like you know that it was
+able to make suggestions for improvements</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/808-3
+01:43:31.429 --> 01:43:35.205
+<v John Miller>that it can make for all of these issues.
+So it would be just a.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/809-0
+01:43:35.325 --> 01:43:36.165
+<v John Miller>The simple.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/810-0
+01:43:37.445 --> 01:43:40.765
+<v John Miller>Chain simple activity to go ahead and say.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/811-0
+01:43:41.805 --> 01:43:44.685
+<v John Miller>Commit that suggestion.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/812-0
+01:43:49.845 --> 01:43:50.405
+<v John Miller>And then?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/813-0
+01:43:54.045 --> 01:43:55.685
+<v John Miller>Move on and commit.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/814-0
+01:43:56.925 --> 01:44:00.293
+<v John Miller>Well,
+here we can say just all the all the all</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/814-1
+01:44:00.293 --> 01:44:03.805
+<v John Miller>the changes and then we'll go ahead and
+do that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/815-0
+01:44:09.005 --> 01:44:12.483
+<v John Miller>So when it's done,
+when we should select that copilot,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/815-1
+01:44:12.483 --> 01:44:15.771
+<v John Miller>apply changes based on the comments in
+this thread.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/815-2
+01:44:15.771 --> 01:44:20.956
+<v John Miller>And so this is something that's also nice
+to be aware of that any app con copilot</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/815-3
+01:44:20.956 --> 01:44:25.762
+<v John Miller>in a comment will allow you to instruct
+the copilot to do something on your</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/815-4
+01:44:25.762 --> 01:44:26.205
+<v John Miller>behalf.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/816-0
+01:44:27.165 --> 01:44:32.435
+<v John Miller>And here it's basically applying these
+changes for this particular review</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/816-1
+01:44:32.435 --> 01:44:33.005
+<v John Miller>comment.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/817-0
+01:44:36.525 --> 01:44:40.186
+<v John Miller>And so this will queue up those changes
+and we should then see that it's going to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/817-1
+01:44:40.186 --> 01:44:41.525
+<v John Miller>implement those modifications.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/818-0
+01:44:44.365 --> 01:44:46.645
+<v John Miller>All right. Any questions on this so far?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/819-0
+01:44:48.765 --> 01:44:55.806
+<v John Miller>So then why don't we spend some time
+going through our own list of issues and</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/819-1
+01:44:55.806 --> 01:45:00.139
+<v John Miller>let's see if we can create some
+implementation,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/819-2
+01:45:00.139 --> 01:45:05.285
+<v John Miller>proposed implementation fixes for those
+issues and then.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/820-0
+01:45:07.005 --> 01:45:08.885
+<v John Miller>Uh, implement those fixes.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/821-0
+01:45:12.045 --> 01:45:16.641
+<v John Miller>Go ahead and raise your hand so I know
+when you're finished and we've got about</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/821-1
+01:45:16.641 --> 01:45:18.365
+<v John Miller>20 minutes to to work on this.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/829-0
+01:45:51.885 --> 01:45:52.165
+<v Rockwell, Christopher L>Yeah.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/833-0
+01:46:08.205 --> 01:46:12.723
+<v Dan Blanchard>I have a question so on on I I did this
+earlier and so one of the pull requests</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/833-1
+01:46:12.723 --> 01:46:16.845
+<v Dan Blanchard>there is failing checks and it looks like
+it says it's ready for review.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/833-2
+01:46:16.845 --> 01:46:19.725
+<v Dan Blanchard>So can I just add a comment to tell it to
+fix the?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/834-0
+01:46:21.605 --> 01:46:23.165
+<v Dan Blanchard>Fix the failing checks or?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/835-0
+01:46:22.525 --> 01:46:25.685
+<v John Miller>Yeah, yeah, you can.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/836-0
+01:46:26.845 --> 01:46:27.165
+<v Dan Blanchard>Pilot.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/837-0
+01:46:27.645 --> 01:46:31.755
+<v John Miller>Copilot go ahead and you know address
+that particular problem.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/837-1
+01:46:31.755 --> 01:46:34.365
+<v John Miller>You may need to copy some text into the.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/838-0
+01:46:35.605 --> 01:46:39.169
+<v John Miller>Into the comment if it's not easily
+referable.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/838-1
+01:46:39.169 --> 01:46:45.463
+<v John Miller>I think comments have a link like we were
+saying that you can capture and use that</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/838-2
+01:46:45.463 --> 01:46:50.013
+<v John Miller>and to to point copilot to what you
+actually want it to do.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/838-3
+01:46:50.013 --> 01:46:51.605
+<v John Miller>It really depends on.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/839-0
+01:46:53.285 --> 01:46:56.369
+<v John Miller>You know,
+if copilot isn't actually proposing a a a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/839-1
+01:46:56.369 --> 01:46:59.157
+<v John Miller>a fix for a change or for something that
+it's,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/839-2
+01:46:59.157 --> 01:47:03.605
+<v John Miller>then it may need more information in
+order to be able to actually execute.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/840-0
+01:47:07.445 --> 01:47:10.645
+<v John Miller>So it's Copilot has now finished the work
+that I did there.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/841-0
+01:47:15.525 --> 01:47:16.005
+<v John Miller>Mhm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/842-0
+01:47:24.965 --> 01:47:27.925
+<v John Miller>So I'm getting notifications for all the
+work that's done.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/846-0
+01:47:48.925 --> 01:47:52.078
+<v John Miller>And you know,
+go ahead and raise your hand if you're</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/846-1
+01:47:52.078 --> 01:47:56.005
+<v John Miller>still working on it so that I can see
+when everybody's completed.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/896-0
+01:53:03.765 --> 01:53:03.925
+<v John Miller>Mm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/897-0
+01:53:09.565 --> 01:53:09.765
+<v John Miller>Mm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/913-0
+01:54:37.605 --> 01:54:37.645
+<v John Miller>Oh.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/947-0
+01:57:46.285 --> 01:57:47.445
+<v John Miller>Is the voice still working?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/948-0
+01:57:57.285 --> 01:57:58.445
+<v Childs, Stephen>Yep, still working.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/949-0
+01:57:58.085 --> 01:57:58.325
+<v John Miller>All right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/979-0
+01:59:54.845 --> 01:59:57.485
+<v Dan Blanchard>I have a question. So it's saying um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/982-0
+01:59:59.365 --> 02:00:02.709
+<v Dan Blanchard>Pending view,
+it's one workflow awaiting approval.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/982-1
+02:00:02.709 --> 02:00:07.365
+<v Dan Blanchard>I guess I have to approve workflows to
+run. This is on a pull request.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/981-0
+02:00:04.805 --> 02:00:05.285
+<v John Miller>Mhm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/983-0
+02:00:10.765 --> 02:00:14.205
+<v John Miller>You're getting this in GitHub or you're
+seeing this in Visual Studio?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/984-0
+02:00:13.485 --> 02:00:16.565
+<v Dan Blanchard>It's in GitHub I can show you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/985-0
+02:00:18.805 --> 02:00:18.885
+<v Dan Blanchard>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/986-0
+02:00:26.565 --> 02:00:27.965
+<v Dan Blanchard>And I'll show you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/987-0
+02:00:31.125 --> 02:00:32.725
+<v Dan Blanchard>Put in the chat a screenshot.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/988-0
+02:00:33.925 --> 02:00:34.685
+<v John Miller>Thank you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/989-0
+02:00:45.085 --> 02:00:48.180
+<v Dan Blanchard>I guess I can approve it,
+but it's happened on a couple of them.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/989-1
+02:00:48.180 --> 02:00:50.085
+<v Dan Blanchard>I guess I was wondering whether there's.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/990-0
+02:00:51.085 --> 02:00:55.125
+<v Dan Blanchard>The setting or something or do they
+really want us to approve everything?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/991-0
+02:00:57.365 --> 02:00:57.485
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/992-0
+02:00:59.605 --> 02:01:02.485
+<v John Miller>Yeah, I haven't. I haven't seen that,
+but um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/993-0
+02:01:05.805 --> 02:01:08.608
+<v John Miller>You can always click the link that tells
+to meet more,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/993-1
+02:01:08.608 --> 02:01:12.737
+<v John Miller>but and it might give you some guidance
+in terms of what it's actually trying to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/993-2
+02:01:12.737 --> 02:01:14.725
+<v John Miller>do, because that's what I don't see is.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/994-0
+02:01:15.845 --> 02:01:15.925
+<v John Miller>Um.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/996-0
+02:01:20.685 --> 02:01:24.522
+<v Dan Blanchard>Yeah,
+I guess here I guess I can set it to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/996-1
+02:01:24.522 --> 02:01:25.325
+<v Dan Blanchard>approved.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/997-0
+02:01:33.285 --> 02:01:33.525
+<v Dan Blanchard>OK.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1000-0
+02:01:44.685 --> 02:01:49.511
+<v Matt Hoffman>I tagged copilot in my my PR same way
+that you did, John,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1000-1
+02:01:49.511 --> 02:01:54.004
+<v Matt Hoffman>but it does not seem to be taking any
+sort of action.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/999-0
+02:01:49.805 --> 02:01:50.325
+<v John Miller>Mhm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1000-2
+02:01:54.004 --> 02:01:58.165
+<v Matt Hoffman>I'm guessing that that's an
+organizational thing.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1001-0
+02:01:59.565 --> 02:02:03.259
+<v John Miller>Yeah, it could be.
+If you're using the free plan,</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1001-1
+02:02:03.259 --> 02:02:05.845
+<v John Miller>it's probably not available to you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1002-0
+02:02:05.925 --> 02:02:08.645
+<v John Miller>Preplan.
+It's probably not available to you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1003-0
+02:02:13.485 --> 02:02:16.965
+<v Matt Hoffman>I think I'm on the free one, but uh,
+it might not be the enterprise.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1004-0
+02:02:19.805 --> 02:02:24.274
+<v John Miller>I shouldn't. I don't have any.
+I'm just running Pro Plus and I'm able to</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1004-1
+02:02:24.274 --> 02:02:27.212
+<v John Miller>do this.
+So there must be something else that's</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1004-2
+02:02:27.212 --> 02:02:30.885
+<v John Miller>that we're that you're missing that
+that's preventing that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1005-0
+02:02:36.005 --> 02:02:40.885
+<v Chris Bishop>I think with enterprise your repo has to
+be in the enterprise org.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1006-0
+02:02:40.805 --> 02:02:41.125
+<v John Miller>Right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1007-0
+02:02:42.125 --> 02:02:44.405
+<v Chris Bishop>Or compile it to work for code review.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1008-0
+02:02:49.245 --> 02:02:53.125
+<v Dan Blanchard>The enterprise to for compiles work with
+code review, that's what you said.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1009-0
+02:02:53.325 --> 02:02:57.925
+<v Chris Bishop>The repo should be in the enterprise like
+org.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1012-0
+02:03:00.125 --> 02:03:03.154
+<v John Miller>Right.
+So they could get how about the</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1010-0
+02:03:01.925 --> 02:03:02.165
+<v Chris Bishop>4.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1012-1
+02:03:03.154 --> 02:03:09.601
+<v John Miller>enterprise implementation that they that
+they put everybody that has an enterprise</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1012-2
+02:03:09.601 --> 02:03:13.485
+<v John Miller>license into.
+So your repos have to go into that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1011-0
+02:03:12.245 --> 02:03:12.485
+<v Chris Bishop>.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1014-0
+02:03:14.445 --> 02:03:19.049
+<v John Miller>Into that.
+I'm sure it has a different URL than just</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1014-1
+02:03:19.049 --> 02:03:20.005
+<v John Miller>github.com.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1015-0
+02:03:22.085 --> 02:03:27.365
+<v John Miller>And I'd use that to further isolate into
+implants.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1016-0
+02:03:29.085 --> 02:03:31.676
+<v John Miller>Uh,
+additional features other than what you</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1016-1
+02:03:31.676 --> 02:03:33.325
+<v John Miller>get in the standard version.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1026-0
+02:04:09.605 --> 02:04:09.765
+<v John Miller>Mm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1028-0
+02:04:22.245 --> 02:04:22.565
+<v John Miller>Mm.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1033-0
+02:04:33.645 --> 02:04:36.924
+<v John Miller>So it looks like these are all done.
+Anybody else still working?</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1033-1
+02:04:36.924 --> 02:04:39.245
+<v John Miller>Looks like we're just about done for the
+day.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1035-0
+02:04:41.245 --> 02:04:47.230
+<v John Miller>All right, good. So what I'm working on,
+I'll show you in the morning is that is a</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1035-1
+02:04:47.230 --> 02:04:51.844
+<v John Miller>multi implementation comparison and how
+to go about doing that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1035-2
+02:04:51.844 --> 02:04:57.684
+<v John Miller>I'm a little messed up here that I got to
+clean up my workspace to be able to do</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1035-3
+02:04:57.684 --> 02:04:58.045
+<v John Miller>that.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1036-0
+02:04:58.365 --> 02:05:04.380
+<v John Miller>But that's a a great technique for
+evaluating the pros and cons of different</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1036-1
+02:05:04.380 --> 02:05:08.677
+<v John Miller>implementations,
+and that way you can use that to find</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1036-2
+02:05:08.677 --> 02:05:15.005
+<v John Miller>different solutions to problems and and
+then evaluate the pros and cons of each.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1040-0
+02:05:15.085 --> 02:05:19.746
+<v John Miller>And then we'll move on into the
+Greenfield part of the course. All right.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1040-1
+02:05:19.746 --> 02:05:23.589
+<v John Miller>So that's it for today.
+If you have any questions about this</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1040-2
+02:05:23.589 --> 02:05:26.486
+<v John Miller>exercise,
+we can pick them up in the morning.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1040-3
+02:05:26.486 --> 02:05:28.565
+<v John Miller>So have a good day. Good evening.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1047-0
+02:05:29.445 --> 02:05:32.165
+<v Dan Blanchard>Thank you. Night.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1045-0
+02:05:30.085 --> 02:05:31.765
+<v Rockwell, Christopher L>Thanks. Take care.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1042-0
+02:05:30.565 --> 02:05:31.045
+Thank you.
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1043-0
+02:05:31.285 --> 02:05:31.525
+<v Bui, Tom>Thanks.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1050-0
+02:05:34.125 --> 02:05:35.205
+<v Chris Bishop>Thank you. Good evening.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1049-0
+02:05:34.645 --> 02:05:35.245
+<v Lyle Ubben>Thank you.</v>
+
+2bfdf67a-b12e-4032-9cac-b12c9b72ac29/1054-0
+02:05:38.405 --> 02:05:38.725
+<v Childs, Stephen>Right.</v>
