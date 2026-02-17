@@ -40,6 +40,10 @@ Read and analyze the file at `{{transcript_file}}` and generate a comprehensive 
    - Duration information for each section
    - Key points and topics covered
 4. **Generate output** in the format specified below
+5. **Create a markdown file**:
+   - Generate the output filename by replacing the transcript file extension with `-summary.md`
+   - Save the file in the same directory as the input transcript file
+   - Example: `transcript.vti` → `transcript-summary.md`
 
 ## Output Format
 
@@ -146,4 +150,25 @@ Today we'll cover GitHub Copilot features.
 - Available across multiple environments
 ```
 
-Parse the file and generate the structured outline following these guidelines.
+## File Creation Instructions
+
+1. **Determine output path**:
+   - Extract the directory path from `{{transcript_file}}`
+   - Extract the base filename (without extension) from `{{transcript_file}}`
+   - Create output filename: `[base-filename]-summary.md`
+   - Full output path: `[directory]/[base-filename]-summary.md`
+
+2. **Create the markdown file**:
+   - Use the `create_file` tool to save the generated outline
+   - Save to the calculated output path
+   - Ensure proper markdown formatting
+
+3. **Confirm completion**:
+   - Report the full path of the created summary file
+   - Include a brief confirmation message
+
+**Example Path Transformation**:
+- Input: `c:\git\AIASD\past-class-recordings\2026-02\session1.vti`
+- Output: `c:\git\AIASD\past-class-recordings\2026-02\session1-summary.md`
+
+Parse the file, generate the structured outline, and create the markdown file following these guidelines.
