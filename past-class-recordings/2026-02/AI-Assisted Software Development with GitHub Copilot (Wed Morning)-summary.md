@@ -1,310 +1,380 @@
-# AI-Assisted Software Development with GitHub Copilot (Wed Morning)
+# AI-Assisted Software Development with GitHub Copilot (Wednesday Morning Session)
 
 ## Overview
 
-- **Total Duration**: 01:57:53
-- **Sections**: 9
+- **Total Duration**: 01:57:51 (1 hour 57 minutes 51 seconds)
+- **Sections**: 9 main sections
 - **Format**: VTT (WebVTT)
-- **Session**: Day 3 - Wednesday Morning
-- **Instructor**: John Miller
-- **Topic**: Brownfield Development - Code Analysis and Technical Debt Management
+- **Date**: Wednesday (Day 3 of course)
+- **Primary Speaker**: John Miller
+- **Session Focus**: Brownfield development, technical debt identification, backlog building, and test automation
 
 ---
 
-## Section 1: Opening and Introductions (Duration: 00:03:19)
+## Section 1: Introduction & Morning Greetings (Duration: 00:02:48)
+
+### Timestamp Range
+
+00:00:30 - 00:03:18
 
 ### Key Topics
 
-- Morning greetings and weather chat
-- Day 3 introduction
-- Setting session context for brownfield work
+- Morning welcome and roll call
+- Weather chat between participants
+- Course housekeeping
+- Introduction to Day 3 agenda
 
-### Content Summary
+### Subsections
 
-Session begins at 00:00:30 with informal greetings. Instructor welcomes participants to day three, preparing to finish brownfield work but first addressing questions from previous sessions.
+- **Opening** (00:00:30 - 00:01:40): Welcome and initial greetings
+- **Agenda Preview** (00:03:18): Introduction to finishing brownfield work
 
 ---
 
-## Section 2: Azure DevOps and GitHub Copilot Integration (Duration: 00:03:02)
+## Section 2: Azure DevOps & GitHub Copilot Extensions (Duration: 00:03:01)
 
-**Timestamps**: 00:03:19 - 00:06:21
+### Timestamp Range
+
+00:03:25 - 00:06:26
 
 ### Key Topics
 
-- Azure DevOps extensions for GitHub Copilot
-- GitHub Copilot CLI extension for Azure DevOps pipelines
-- Using Copilot in CI/CD workflows
-- GitHub marketplace extensions
+- Azure DevOps integration with GitHub Copilot
+- Two relevant marketplace extensions discussed
+- Git DevOps extension for using Copilot with Azure DevOps
+- Copilot CLI extension for Azure DevOps pipelines
+- Using Copilot for pipeline automation and commit evaluation
 
-### Content Summary
+### Subsections
 
-Instructor shares two relevant marketplace extensions:
-
-1. **Git DevOps Extension** - Enables GitHub Copilot usage with Azure DevOps (built by Microsoft team, not GitHub Copilot team)
-2. **Copilot CLI Extension** - Allows Copilot CLI usage in Azure DevOps pipelines for automated code evaluation
-
-Both extensions found by searching "GitHub Copilot" + "Azure DevOps" in the marketplace. Resources committed to course repository for participant access.
+- **Extension Introduction** (00:03:41 - 00:04:37): Git DevOps extension overview
+- **CLI Integration** (00:04:37 - 00:05:34): Copilot CLI in Azure DevOps pipelines
+- **Resource Location** (00:05:34 - 00:06:26): Where to find extensions in marketplace
 
 ---
 
-## Section 3: GitHub Copilot Licensing Discussion (Duration: 00:01:19)
+## Section 3: GitHub Copilot Pricing & Licensing (Duration: 00:00:22)
 
-**Timestamps**: 00:06:21 - 00:07:40
+### Timestamp Range
+
+00:06:35 - 00:06:57
 
 ### Key Topics
 
-- Business vs Enterprise licensing comparison
-- Organization-level access
-- Cost-effective licensing for individuals
+- Business vs Enterprise license comparison
+- $19/month per user for business license
 - GitHub organization requirements
+- Single-person shop access to business features
+- Organization-level instruction files
 
-### Content Summary
+### Notable Points
 
-Instructor presents comparison table showing:
-
-- **Business license**: $19/month per user
-- **Requirement**: GitHub organization (can be single person)
-- **Benefits**: Pro Plus features, business-level configuration, org-level instruction files
-- **Strategy**: Individual developers can create GitHub org for cost-effective access
+- Only need one person to create an org
+- Access to pro+ features for $19/month
+- Cheaper alternative to individual pro license
 
 ---
 
-## Section 4: Exercise 1 - Repository Setup (Duration: 00:36:02)
+## Section 4: Exercise Setup - Fork Repository & Personal Access Token (Duration: 00:10:13)
 
-**Timestamps**: 00:07:40 - 00:43:42
+### Timestamp Range
+
+00:06:52 - 00:17:05
 
 ### Key Topics
 
-- Forking brownfield repository
-- Cloning forked repository locally
+- Forking the AI-assisted software development brownfield repository
 - Creating GitHub personal access token
-- Setting environment variables
-- Visual Studio Code configuration
+- Setting up environment variables
+- Cloning forked repository locally
+- Exploring unfamiliar codebase scenario
 
-### Exercise Steps
+### Subsections
 
-1. Fork AI-assisted brownfield repository
-2. Clone forked repo to local machine
-3. Create GitHub personal access token (classic vs fine-grained)
-4. Store token in environment variable
-5. Restart VS Code to recognize token
+#### Repository Setup (00:07:00 - 00:08:22)
 
-### Technical Issues Addressed
+- Fork the brownfield demo repository
+- Clone to local machine
+- Standalone copy for pushing changes
 
-- Enterprise GitHub accounts preventing forks (solution: use personal account)
-- Personal access token scope (classic recommended for training, fine-grained for production)
-- Environment variable configuration (user vs system level)
-- VS Code workspace context management
+#### Personal Access Token (00:08:22 - 00:13:39)
 
-### Participant Questions
+- Creating classic vs fine-grained tokens
+- Setting environment variable (user or system)
+- Restarting VS Code after setup
+- Token permissions and scope discussion
 
-- **Chris Bishop**: Folder organization and Copilot context (separate workspaces recommended)
-- **Tom Bui**: Fine-grain vs classic tokens
-- **Tom Bui**: Enterprise fork restrictions
-- **Matt Hoffman**: Environment variable location
-- **Dan Blanchard**: Token repository access scope
+#### Exercise Completion (00:14:29 - 00:17:05)
 
----
-
-## Section 5: Exercise 2 - Building Technical Debt Backlog (Duration: 00:24:00)
-
-**Timestamps**: 00:43:42 - 01:07:42
-
-### Key Topics
-
-- Technical debt identification
-- Automated GitHub issue creation
-- Code base assessment strategies
-- Backlog prioritization
-- AI-assisted code review
-
-### Technical Debt Categories Identified
-
-- Outdated coding patterns and styles
-- High complexity code
-- Duplicate logic
-- Missing tests and test gaps
-- Security vulnerabilities
-- Architectural drift
-- Dead code
-
-### Benefits Discussed
-
-- Rapid rediscovery of technical debt
-- Consistent classification of issues
-- Prioritized modernization roadmap
-- Change control process facilitation
-- Visibility of technical debt to organization
-
-### Available Prompts (from course repository)
-
-- Code base vs instruction audit
-- Create issues for dead code
-- Create issues for found bugs
-- Security audit
-- Test gap analysis
-
-### Issue Creation Workflow
-
-1. Use GitHub CLI for authentication (`gh auth login`)
-2. Run analysis prompts against codebase
-3. Automatically create GitHub issues with findings
-4. Prioritize by impact vs effort
-5. Consider issue dependencies
-
-### GitHub CLI Integration
-
-- **Check auth status**: `gh auth status`
-- **Login**: `gh auth login`
-- Copilot can use GitHub CLI commands directly
-- Requires proper authentication to create issues
-
-### Technical Challenges
-
-- Copilot not creating issues automatically (solution: explicitly request with follow-up prompt)
-- GitHub authentication required
-- Alternative: Create issues in files if GitHub interaction fails
+- Participants complete setup
+- Hand-raising system for tracking progress
+- Repository context: fork of existing project
+- Code base characteristics: modest size, multiple issues
 
 ---
 
-## Section 6: Prioritization and Impact Analysis (Duration: 00:04:00)
+## Section 5: Building a Backlog - Technical Debt Identification (Duration: 00:31:52)
 
-**Timestamps**: 01:07:42 - 01:11:42
+### Timestamp Range
+
+00:17:08 - 00:49:00
 
 ### Key Topics
+
+- Identifying technical debt in unfamiliar codebase
+- Automating GitHub issue creation
+- Using AI prompts for code analysis
+- Creating comprehensive backlog for modernization
+- Categorizing and prioritizing technical debt
+
+### Subsections
+
+#### Technical Debt Categories (00:17:08 - 00:18:59)
+
+- **What AI Can Identify**:
+  - Outdated coding patterns and styles
+  - High complexity areas
+  - Duplicate logic
+  - Missing tests
+  - Security vulnerabilities
+  - Architectural drift
+- **Benefits**:
+  - Rapid debt discovery
+  - Consistent classification
+  - Prioritized modernization roadmap
+  - Supports change control process
+
+#### Exercise: Building Backlog (00:18:59 - 00:32:20)
+
+- Exploring new code base scenario
+- Creating GitHub issues for identified problems
+- Using workspace prompts for analysis:
+  - Code base review prompts
+  - Dead code detection
+  - Bug identification
+  - Security audits
+  - Test gap analysis
+- Comprehensive backlog creation in ~1 hour
+
+#### Prioritization Discussion (00:32:20 - 00:45:40)
 
 - Impact vs effort evaluation
-- Dependency mapping
-- Backlog organization strategies
-- Prompt file sharing across projects
+- Risk scoring for changes
+- Dependency analysis between issues
+- AI-assisted prioritization
+- Visibility of technical debt to organization
 
-### Content Summary
+#### Issue Creation Methods (00:40:00 - 00:45:31)
 
-Discusses methods for evaluating technical debt issues:
+- Using GitHub issues vs Azure DevOps work items
+- Issue types in GitHub (all are "issues" with labels)
+- Azure DevOps comparison (features, PBIs, tasks, bugs)
+- Extension for Azure DevOps integration
+- Creating issues from VS Code
 
-- **Impact Assessment**: Business impact of not fixing
-- **Effort Estimation**: Development time required
-- **Dependency Analysis**: Issues blocking other work
-- **Prioritization Matrix**: Impact vs Effort quadrants
+#### Process Bottlenecks (00:45:40 - 00:49:00)
 
-Methods for sharing prompts:
-
-- Sync approach (copy files between repos)
-- Copilot settings files
-- Sub-repositories
-- Organization-level instruction files (recommended)
-
----
-
-## Section 7: GitHub Copilot Workspace Integration (Duration: 00:08:00)
-
-**Timestamps**: 01:11:42 - 01:19:42
-
-### Key Topics
-
-- Assigning issues to Copilot
-- Monitoring Copilot progress
-- Copilot code reviews
-- Pull request automation
-- Session viewing
-
-### Copilot Workspace Features
-
-- **Issue Assignment**: Assign issues directly to Copilot from GitHub
-- **Progress Monitoring**: View Copilot session while working on issues
-- **Initial Plan Commit**: Copilot creates plan before implementation
-- **Pull Request Creation**: Automatic PR creation with changes
-- **Code Review**: Enable automatic Copilot code reviews in settings
-
-### Code Review Configuration
-
-1. Navigate to repository settings
-2. Select Copilot section
-3. Enable "Code Review"
-4. Create rule set
-5. Copilot auto-assigns as reviewer on all PRs
-
-### Multi-Model Review Strategy
-
-- Use different models to review same code
-- Eliminates model bias (models prefer their own code)
-- **Voting System**: 2-of-3 model agreement provides confidence
-- **Best Practice**: Review by different model than code generator
-- Can create separate branches for each model evaluation
+- Real bottleneck: prioritization and review, not fixing
+- AI can fix issues quickly
+- Human review remains essential for:
+  - Verifying accuracy
+  - Approving fixes
+  - Testing changes
+  - Ensuring alignment with standards
+- Making technical debt visible accelerates approval
 
 ---
 
-## Section 8: Custom Agents and Chat Modes (Duration: 00:08:00)
+## Section 6: Managing Instruction Files & Context Windows (Duration: 00:06:39)
 
-**Timestamps**: 01:19:42 - 01:27:42
+### Timestamp Range
+
+00:49:00 - 00:55:39
 
 ### Key Topics
 
-- Creating domain-specific agents
-- Prompt files vs instruction files
-- Agent command definition
-- Solutions architect example
-- Agent expertise areas
+- Sharing instruction files across projects
+- Context window management
+- Limitation of instruction file usage
+- Monitoring token consumption
 
-### Agent Use Cases
+### Subsections
 
-- **C# Development**: Language-specific standards
-- **C++ Development**: Language-specific patterns
-- **Unit Testing**: Testing best practices
-- **Refactoring**: Code improvement strategies
-- **Architecture**: Design patterns and decisions
+#### Sharing Strategies (00:49:00 - 00:51:43)
 
-### Agent Configuration
+- **Current Approach**: Copying files between repositories (async)
+- **Alternative Methods**:
+  - Copody setting files
+  - Sub-repositories
+  - Central location sharing
+  - Organizational-level instruction files (ideal for many scenarios)
 
-- Define expert domain areas
-- Create custom commands for agent
-- Link commands to specific prompts
-- Target functionality to agent specialization
+#### Instruction File Scope (00:51:43 - 00:53:25)
 
-### Example: Solutions Architect Agent
+- Explicit reference in prompts
+- Reference in prompt files
+- Using agents for encapsulated instructions (discussed tomorrow)
+- File extension-based application
+- Pattern-based file matching
+- Folder-specific instruction files
 
-- Expert in specific software development areas
-- Custom commands for common architectural tasks
-- Integrates with prompt files for standardized workflows
-- Maintains consistent architectural guidance
+#### Context Window Limits (00:53:25 - 00:55:39)
+
+- **Monitoring Tools**:
+  - Diagnostics panel showing token usage
+  - System instructions view
+  - Context window percentage indicators
+- **Observed Growth**: Started at 5%, reached 33%, demonstrated at 68%
+- **UI Warnings**: Visual changes when approaching limits
+- **Management Need**: Will discuss focusing strategies on Day 4
+- **Finite Limit**: All instruction files consume context window space
 
 ---
 
-## Section 9: Advanced Topics and Q&A (Duration: 00:30:11)
+## Section 7: Prioritization & Issue Management (Duration: 00:04:29)
 
-**Timestamps**: 01:27:42 - 01:57:53
+### Timestamp Range
+
+01:06:54 - 01:11:23
 
 ### Key Topics
 
-- Azure DevOps vs GitHub future
-- Complex code base scenario discussions
-- Agent-based workflow optimization
-- Brownfield modernization strategies
+- Security issue identification (exposed secrets)
+- Missing HTTPS implementation
+- No test coverage
+- Missing CI/CD pipeline
+- AI-assisted prioritization matrix
 
-### Azure DevOps Discussion
+### Subsections
 
-- Microsoft favoring GitHub long-term
-- GitHub has better AI integration currently
-- Azure DevOps extensions available but less mature
-- Issue types: Azure (features, PBIs, tasks, bugs) vs GitHub (issues with labels)
+#### Security Findings (01:06:54 - 01:07:24)
 
-### Brownfield Modernization Insights
+- Exposed secret detected
+- Not using HTTPS
+- Missing AI logs (expected compliance)
+- No test coverage
+- No CI/CD pipeline
 
-- Real-world scenario: inheriting unfamiliar codebase
-- Hour-long analysis can establish comprehensive backlog
-- Bottleneck shifts from fixing to reviewing and prioritizing
-- Human oversight critical for:
-  - Prioritization decisions
-  - Code review validation
-  - Business impact assessment
-  - Architecture decisions
+#### Prioritization Approach (01:07:35 - 01:09:12)
 
-### Visual Studio Code Version Issue
+- Prioritizing by impact vs effort
+- Asking AI to analyze issues
+- Creating prioritization matrix
+- Visual representation options (Mermaid diagrams)
+- Updating GitHub issues with priorities
 
-- Compatibility issue between VS Code and Copilot extensions
-- Solution: Update to VS Code 1.109.2 or later
-- API change required updated VS Code version
-- Critical for Copilot functionality
+#### Technical Debt Visibility (01:09:12 - 01:11:17)
+
+- Making debt visible to organization
+- Low-effort, high-impact items first
+- AI can propose implementation solutions
+- Rapid pay-down of technical debt
+- Achieving "Evergreen" state efficiently
+- Phase Zero security with infinite ROI
+
+---
+
+## Section 8: Protecting Brownfield Code Bases (Duration: 00:02:19)
+
+### Timestamp Range
+
+01:11:31 - 01:13:50
+
+### Key Topics
+
+- Safety nets for brownfield systems
+- Preserving existing behavior
+- Incremental modernization strategies
+- Risk management approaches
+
+### Subsections
+
+#### Protection Strategies (01:11:31 - 01:12:43)
+
+- **Test Suite Importance**: Constant reassurance of no breakage
+- **Automated Verification**: Minimize human intervention
+- **Avoid Risky Refactors**: Break into small, verifiable pieces
+- **Fast Deployment**: Quick production releases
+- **Feature Flags**: Hide incomplete features while in production
+
+#### Modernization Approach (01:12:43 - 01:13:50)
+
+- **Incremental Changes**: Slow, steady stream of improvements
+- **Size Management**: Nothing too big or risky
+- **Architectural Boundaries**: Well-isolated, decoupled areas
+- **Independent Testing**: Areas can be tested separately
+- **AI Change Documentation**: AI logs and metadata tracking
+- **Critical System Protection**: Avoid AI-introduced production issues
+
+---
+
+## Section 9: Test Automation & Code Quality (Duration: 00:05:16)
+
+### Timestamp Range
+
+01:52:35 - 01:57:51
+
+### Key Topics
+
+- AI-assisted test generation
+- Intelligent linting beyond static analysis
+- Coverage analysis and adequacy assessment
+- Automated quality gates
+- Continuous deployment strategies
+
+### Subsections
+
+#### Test Generation Capabilities (01:52:47 - 01:54:16)
+
+- **Test Types Supported**:
+  - Unit tests
+  - Integration tests
+  - End-to-end tests
+  - Performance tests
+- **Benefits**:
+  - Rapidly expand test coverage
+  - Quality equals comprehensive testing
+  - Consistent structure and naming conventions
+  - Reduced onboarding time for developers
+
+#### Intelligent Linting (01:54:16 - 01:55:21)
+
+- **Beyond Syntax Checking**:
+  - Architectural violations
+  - Anti-pattern detection
+  - Unsafe refactors
+  - Missing documentation
+  - Inconsistent naming
+  - Domain terminology consistency
+- **Semantic Analysis**: Understanding code meaning, not just syntax
+- **Architectural Guardrails**: Enforce boundaries and patterns
+- **Long-term Benefits**: Reduce technical debt accumulation
+
+#### Coverage Analysis (01:55:21 - 01:56:22)
+
+- **Gap Identification**:
+  - Coverage gaps
+  - Missing edge cases
+  - Over-testing implementation details
+  - Under-testing business logic
+  - Redundant or brittle tests
+- **Meaningful Metrics**: Signal of production readiness
+- **Goal**: Confidence to auto-deploy passing PRs
+- **Continuous Deployment**: Push small changes rapidly
+- **Maintenance Reduction**: Consistent, reliable test suite
+
+#### Automated Quality Gates (01:56:22 - 01:57:51)
+
+- **PR-Level Requirements**:
+  - Minimum test coverage for PR creation
+  - Higher coverage requirements for merge to main
+  - Linting and architectural checks
+  - Provenance requirements for auditing
+- **Pipeline Integration**:
+  - PR-level test generation
+  - Risk scoring for changes
+  - Automated regression prevention
+- **Development Philosophy**: Support Evergreen development mindset
 
 ---
 
@@ -312,45 +382,53 @@ Methods for sharing prompts:
 
 - **Total sections**: 9
 - **Average section length**: ~13 minutes
-- **Longest section**: Exercise 2 - Building Technical Debt Backlog (24:00)
-- **Shortest section**: Copilot Licensing Discussion (01:19)
-- **Total exercises**: 2
-- **Technical issues resolved**: 6+
-- **Participant questions**: 15+
+- **Longest section**: Building a Backlog - Technical Debt Identification (31:52)
+- **Shortest section**: GitHub Copilot Pricing & Licensing (00:22)
+- **Primary Focus Areas**:
+  1. Technical debt identification and management (26% of session)
+  2. Hands-on exercises and setup (18% of session)
+  3. Test automation and quality (4% of session)
+  4. Context management and tooling (6% of session)
 
 ---
 
 ## Key Takeaways
 
-1. **Azure DevOps Integration**: Multiple paths for GitHub Copilot integration with Azure DevOps through marketplace extensions
+### For Brownfield Development
 
-2. **Cost-Effective Licensing**: Individual developers can access business features by creating GitHub organization for $19/month
+1. AI can rapidly identify technical debt across multiple dimensions
+2. Automating backlog creation makes debt visible organization-wide
+3. Prioritization based on impact vs effort enables strategic improvements
+4. Incremental modernization reduces risk while maintaining production systems
+5. Test automation is critical for confidence in AI-assisted changes
 
-3. **Technical Debt Discovery**: AI can rapidly identify and categorize technical debt across multiple dimensions (security, testing, complexity, etc.)
+### For Tool Usage
 
-4. **Automated Backlog Creation**: GitHub CLI integration enables automatic issue creation from code analysis
+1. Azure DevOps has extensions for Copilot integration
+2. Personal access tokens enable programmatic GitHub access
+3. Instruction files consume context window space - monitor usage
+4. Organization-level instruction files ideal for team standardization
+5. Multiple prompts available for different analysis needs
 
-5. **Multi-Model Review Strategy**: Using different AI models for code review eliminates bias and increases confidence
+### For Quality & Testing
 
-6. **Copilot Workspace**: Issues can be assigned directly to Copilot for autonomous implementation with human oversight
+1. AI can generate comprehensive test suites across all test types
+2. Intelligent linting goes beyond syntax to semantic analysis
+3. Coverage analysis identifies gaps in edge cases and business logic
+4. Automated quality gates enable continuous deployment
+5. Consistent naming and structure accelerate team effectiveness
 
-7. **Custom Agents**: Domain-specific agents (architecture, testing, security) provide specialized guidance and workflows
+### Session Logistics
 
-8. **Modernization Workflow**:
-   - Analyze codebase (~1 hour for comprehensive audit)
-   - Create prioritized backlog
-   - AI implements fixes
-   - Human reviews and approves
-   - Bottleneck is review/prioritization, not implementation
-
-9. **Enterprise Constraints**: Enterprise GitHub accounts may restrict forking; personal accounts provide workaround
-
-10. **Tool Integration**: GitHub CLI, VS Code extensions, and environment configuration critical for smooth workflow
+- Break taken at 01:57:51 (1 hour break mentioned)
+- Hands-on exercises with participant interaction
+- Hand-raising system for tracking progress
+- Active Q&A throughout session
+- Recorded for later reference
 
 ---
 
-**Document Created**: 2026-02-17
+**Generated**: February 17, 2026
 **Source File**: AI-Assisted Software Development with GitHub Copilot (Wed Morning).vtt
-**Generated By**: AI Summary Tool
-**Session Date**: 2026-02 (Week of course delivery)
-**Course**: AI-Assisted Software Development with GitHub Copilot
+**Session Type**: Training - Day 3 Morning
+**Participants**: 8-10 active participants (Chris Bishop, Dan Blanchard, Peter Goostree, Matt Hoffman, Tom Bui, Rich LaVorgna, Rockwell Christopher, Rebecca/Regalberto, and instructor John Miller)
