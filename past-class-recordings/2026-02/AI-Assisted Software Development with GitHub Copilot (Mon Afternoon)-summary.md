@@ -1,12 +1,13 @@
-# AI-Assisted Software Development with GitHub Copilot (Monday Afternoon Session)
+# AI-Assisted Software Development with GitHub Copilot (Monday Afternoon)
 
 ## Overview
 
-- **Total Duration**: 02:00:10
-- **Sections**: 13
+- **Total Duration**: 02:00:10 (120 minutes, 10 seconds)
+- **Sections**: 14
 - **Format**: VTT (WebVTT)
 - **Instructor**: John Miller
 - **Date**: February 9, 2026 (Monday Afternoon)
+- **Session Type**: Interactive mob programming session building a calculator application
 
 ---
 
@@ -349,10 +350,10 @@
 
 ## Summary Statistics
 
-- **Total sections**: 13
-- **Average section length**: 09:14
-- **Longest section**: Mob Programming Tool Configuration - 16:00
-- **Shortest section**: Introduction and Welcome Back - 00:28
+- **Total sections**: 14
+- **Average section length**: ~8 minutes 35 seconds
+- **Longest section**: Tool Setup and Repository Configuration (~16 minutes 30 seconds)
+- **Shortest section**: Final Feature Additions and Wrap-up (~1 minute 10 seconds)
 
 ## Participants Mentioned
 
@@ -380,12 +381,37 @@
 
 ## Main Learning Outcomes
 
-1. Understanding mob programming workflow and benefits
-2. Hands-on experience with GitHub Copilot for code generation
-3. Learning to evaluate and accept/reject AI-generated code changes
-4. Practical experience building applications with AI assistance
-5. Understanding when to use traditional tools vs. AI tools
-6. Introduction to Evergreen code quality concepts
+1. **Mob Programming Workflow**: Understanding collaborative development with defined roles (driver, navigator, supporters)
+2. **GitHub Copilot Integration**: Hands-on experience generating code, tests, and UI components with AI assistance
+3. **Evaluating AI Code**: Learning to review and accept/reject AI-generated changes at different granularity levels
+4. **Practical Application Building**: Building a complete calculator from console to web interface using AI assistance
+5. **Tool Selection Strategy**: Understanding when to use traditional tools vs. AI tools (CLI for scaffolding, AI for features)
+6. **Evergreen Code Concepts**: Introduction to maintaining code quality and preventing technical debt accumulation
+7. **Iterative Development**: Building features incrementally with quick testing cycles
+8. **AI Inference**: Observing how AI can infer requirements and add functionality proactively
+
+## Technologies and Tools Discussed
+
+- **mob.sh**: Remote mob programming tool for branch management and rotation
+- **GitHub Copilot**: AI-assisted code generation and completion
+- **C#/.NET**: Primary programming language and framework
+- **ASP.NET**: Web application framework
+- **xUnit**: Testing framework for automated tests
+- **Visual Studio Code**: Primary development environment
+- **Git/GitHub**: Version control and collaboration platform
+- **NuGet**: Package management for .NET dependencies
+- **DataTable.Compute()**: Expression evaluation method
+
+## Key Learning Outcomes from Session
+
+1. **Mob programming enables effective team collaboration with AI tools** - coordinated approach prevents divergent AI responses
+2. **AI can generate significant functionality quickly with proper prompting** - calculator built from scratch in ~2 hours
+3. **Iterative development with AI assistance produces working software rapidly** - start simple, add features incrementally
+4. **Test-driven development integrates naturally with AI code generation** - AI can generate tests alongside implementation
+5. **Technical debt accumulates even with AI-generated code** - Evergreen concept addresses this proactively
+6. **Cross-platform considerations influence technology choices** - web UI chosen for compatibility
+7. **AI can infer requirements and add functionality proactively** - exit command added without explicit request
+8. **Combine traditional and AI tooling strategically** - use CLI for scaffolding, AI for feature implementation
 
 ## Notable Challenges and Solutions
 
