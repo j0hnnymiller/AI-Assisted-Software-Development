@@ -28,7 +28,7 @@
 
 ---
 
-## Section 2: Prompt Guidance Discussion (Duration: ~00:12:30)
+## Section 2: Prompt Guidance Discussion (Duration: ~00:12:30) [x]
 
 **Time Range**: 00:16:41 - 00:29:09
 
@@ -57,7 +57,7 @@
 
 ---
 
-## Section 3: Testing Frameworks (Duration: ~00:13:00)
+## Section 3: Testing Frameworks (Duration: ~00:13:00) [x]
 
 **Time Range**: 00:30:09 - 00:43:09
 
@@ -127,7 +127,7 @@
 
 ---
 
-## Section 4: Feature Flags and Test Suites (Duration: ~00:07:00)
+## Section 4: Feature Flags and Test Suites (Duration: ~00:07:00) [x]
 
 **Time Range**: 00:45:12 - 00:52:12
 
@@ -280,7 +280,7 @@
 
 ---
 
-## Section 6: Addressing Technical Debt (Duration: ~00:08:00)
+## Section 6: Addressing Technical Debt (Duration: ~00:08:00) [x]
 
 **Time Range**: 00:59:49 - 01:07:49
 
@@ -370,7 +370,7 @@ Working with technical debt issue (JWT secrets hardcoded in code)
 
 ---
 
-## Section 7: Implementation Review (Duration: ~00:04:00)
+## Section 7: Implementation Review (Duration: ~00:04:00) [ ]
 
 **Time Range**: 01:07:50 - 01:11:50
 

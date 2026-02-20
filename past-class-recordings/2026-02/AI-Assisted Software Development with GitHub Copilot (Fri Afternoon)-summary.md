@@ -178,7 +178,7 @@
 
 ---
 
-## Section 7: Development Process Q&A (01:05:34 - 01:11:21)
+## Section 7: Development Process Q&A (01:05:34 - 01:11:21) [ ]
 
 **Duration**: 05:47
 

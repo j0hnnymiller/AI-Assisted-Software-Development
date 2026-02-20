@@ -11,7 +11,7 @@
 
 ---
 
-## Section 1: Introduction & Morning Greetings (Duration: 00:02:48)
+## Section 1: Introduction & Morning Greetings (Duration: 00:02:48) [ ]
 
 ### Timestamp Range
 
@@ -31,7 +31,7 @@
 
 ---
 
-## Section 2: Azure DevOps & GitHub Copilot Extensions (Duration: 00:03:01)
+## Section 2: Azure DevOps & GitHub Copilot Extensions (Duration: 00:03:01) [x]
 
 ### Timestamp Range
 
@@ -53,7 +53,7 @@
 
 ---
 
-## Section 3: GitHub Copilot Pricing & Licensing (Duration: 00:00:22)
+## Section 3: GitHub Copilot Pricing & Licensing (Duration: 00:00:22) [x]
 
 ### Timestamp Range
 
@@ -75,7 +75,7 @@
 
 ---
 
-## Section 4: Exercise Setup - Fork Repository & Personal Access Token (Duration: 00:10:13)
+## Section 4: Exercise Setup - Fork Repository & Personal Access Token (Duration: 00:10:13) [x]
 
 ### Timestamp Range
 
@@ -113,7 +113,7 @@
 
 ---
 
-## Section 5: Building a Backlog - Technical Debt Identification (Duration: 00:31:52)
+## Section 5: Building a Backlog - Technical Debt Identification (Duration: 00:31:52) [x]
 
 ### Timestamp Range
 
@@ -185,7 +185,7 @@
 
 ---
 
-## Section 6: Managing Instruction Files & Context Windows (Duration: 00:06:39)
+## Section 6: Managing Instruction Files & Context Windows (Duration: 00:06:39) [x]
 
 ### Timestamp Range
 
@@ -231,7 +231,7 @@
 
 ---
 
-## Section 7: Prioritization & Issue Management (Duration: 00:04:29)
+## Section 7: Prioritization & Issue Management (Duration: 00:04:29) [x]
 
 ### Timestamp Range
 
@@ -274,7 +274,7 @@
 
 ---
 
-## Section 8: Protecting Brownfield Code Bases (Duration: 00:02:19)
+## Section 8: Protecting Brownfield Code Bases (Duration: 00:02:19) [x]
 
 ### Timestamp Range
 
@@ -308,7 +308,7 @@
 
 ---
 
-## Section 9: Test Automation & Code Quality (Duration: 00:05:16)
+## Section 9: Test Automation & Code Quality (Duration: 00:05:16) [x]
 
 ### Timestamp Range
 
@@ -324,7 +324,7 @@
 
 ### Subsections
 
-#### Test Generation Capabilities (01:52:47 - 01:54:16)
+#### Test Generation Capabilities (01:52:47 - 01:54:16) [x]
 
 - **Test Types Supported**:
   - Unit tests

@@ -68,7 +68,7 @@ This morning session focused on brownfield development with GitHub Copilot, emph
 
 ---
 
-### 3. Safety Measures & Best Practices
+### 3. Safety Measures & Best Practices [x]
 
 **Duration**: 00:35:29 - 00:58:01 (22:32)
 
@@ -132,7 +132,7 @@ This morning session focused on brownfield development with GitHub Copilot, emph
 
 ---
 
-### 5. Instruction Files & Provenance Tracking
+### 5. Instruction Files & Provenance Tracking [x]
 
 **Duration**: 00:52:18 - 01:30:46 (38:28)
 
@@ -188,7 +188,7 @@ This morning session focused on brownfield development with GitHub Copilot, emph
 
 ---
 
-### 6. Hands-On Exercise: Creating Prompt Files
+### 6. Hands-On Exercise: Creating Prompt Files [x]
 
 **Duration**: 01:35:07 - 01:57:29 (22:22)
 
@@ -258,7 +258,7 @@ This morning session focused on brownfield development with GitHub Copilot, emph
 
 ---
 
-### 7. Creating Instruction Files from Prompts
+### 7. Creating Instruction Files from Prompts [x]
 
 **Duration**: 01:57:34 - 02:04:14 (6:40)
 

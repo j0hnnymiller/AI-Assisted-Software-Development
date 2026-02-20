@@ -11,7 +11,7 @@
 
 ---
 
-## Section 1: Introduction and Welcome Back (Duration: 00:00:28)
+## Section 1: Introduction and Welcome Back (Duration: 00:00:28) [x]
 
 **Timestamp**: 00:01:49 - 00:02:17
 
@@ -28,7 +28,7 @@
 
 ---
 
-## Section 2: Mob Programming Introduction (Duration: 00:04:13)
+## Section 2: Mob Programming Introduction (Duration: 00:04:13) [ ]
 
 **Timestamp**: 00:02:17 - 00:06:30
 
@@ -57,7 +57,7 @@
 
 ---
 
-## Section 3: Installing Mob.sh Tools (Duration: 00:04:30)
+## Section 3: Installing Mob.sh Tools (Duration: 00:04:30) [ ]
 
 **Timestamp**: 00:06:30 - 00:11:00
 
@@ -76,7 +76,7 @@
 
 ---
 
-## Section 4: Repository Cloning and Setup (Duration: 00:15:00)
+## Section 4: Repository Cloning and Setup (Duration: 00:15:00) [x]
 
 **Timestamp**: 00:11:00 - 00:26:00
 
@@ -139,7 +139,7 @@
 
 ---
 
-## Section 6: Working with GitHub Copilot - Creating .gitignore (Duration: 00:02:00)
+## Section 6: Working with GitHub Copilot - Creating .gitignore (Duration: 00:02:00) [x]
 
 **Timestamp**: 00:42:00 - 00:44:00
 
@@ -155,7 +155,7 @@
 
 ---
 
-## Section 7: Understanding Copilot's Keep/Undo Functionality (Duration: 00:06:00)
+## Section 7: Understanding Copilot's Keep/Undo Functionality (Duration: 00:06:00) [x]
 
 **Timestamp**: 00:44:00 - 00:50:00
 
@@ -182,7 +182,7 @@
 
 ---
 
-## Section 8: Building a Calculator Application (Duration: 00:22:00)
+## Section 8: Building a Calculator Application (Duration: 00:22:00) [x]
 
 **Timestamp**: 00:50:00 - 01:12:00
 
@@ -219,7 +219,7 @@
 
 ---
 
-## Section 9: Creating Web Calculator Project with Copilot (Duration: 00:20:30)
+## Section 9: Creating Web Calculator Project with Copilot (Duration: 00:20:30) [x]
 
 **Timestamp**: 01:12:00 - 01:32:30
 
@@ -252,7 +252,7 @@
 
 ---
 
-## Section 10: Continuing Web Calculator Development (Duration: 00:16:30)
+## Section 10: Continuing Web Calculator Development (Duration: 00:16:30) [x]
 
 **Timestamp**: 01:32:30 - 01:49:00
 
@@ -272,7 +272,7 @@
 
 ---
 
-## Section 11: Preview of Evergreen Code Concepts (Duration: 00:01:30)
+## Section 11: Preview of Evergreen Code Concepts (Duration: 00:01:30) [x]
 
 **Timestamp**: 01:49:00 - 01:50:30
 
@@ -308,7 +308,7 @@
 
 ---
 
-## Section 12: Final Feature Development (Duration: 00:08:30)
+## Section 12: Final Feature Development (Duration: 00:08:30) [x]
 
 **Timestamp**: 01:50:30 - 01:59:00
 
@@ -328,7 +328,7 @@
 
 ---
 
-## Section 13: Wrap-up and Closing (Duration: 00:01:10)
+## Section 13: Wrap-up and Closing (Duration: 00:01:10) [x]
 
 **Timestamp**: 01:59:00 - 02:00:10
 

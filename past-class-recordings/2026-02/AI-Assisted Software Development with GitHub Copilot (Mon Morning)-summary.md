@@ -13,7 +13,7 @@
 
 ## Detailed Outline
 
-### Section 1: Pre-Class Arrival and Small Talk (00:00:57 - 00:09:58)
+### Section 1: Pre-Class Arrival and Small Talk (00:00:57 - 00:09:58) [x]
 
 **Duration**: ~9 minutes
 
@@ -25,7 +25,7 @@
 
 ---
 
-### Section 2: Course Opening and Welcome (00:09:58 - 00:14:45)
+### Section 2: Course Opening and Welcome (00:09:58 - 00:14:45) [x]
 
 **Duration**: ~5 minutes
 
@@ -48,7 +48,7 @@
 
 ---
 
-### Section 3: Code Organization Overview (00:11:56 - 00:12:52)
+### Section 3: Code Organization Overview (00:11:56 - 00:12:52) [x]
 
 **Duration**: ~1 minute
 
@@ -63,7 +63,7 @@
 
 ---
 
-### Section 4: Student Introductions (00:12:52 - 00:31:44)
+### Section 4: Student Introductions (00:12:52 - 00:31:44) [x]
 
 **Duration**: ~19 minutes
 
@@ -88,7 +88,7 @@
 
 ---
 
-### Section 5: Course Agenda and Five-Day Overview (00:31:44 - 00:35:14)
+### Section 5: Course Agenda and Five-Day Overview (00:31:44 - 00:35:14) [x]
 
 **Duration**: ~3.5 minutes
 
@@ -116,7 +116,7 @@
 
 ---
 
-### Section 6: AI-Assisted Development Philosophy (00:35:14 - 00:44:00)
+### Section 6: AI-Assisted Development Philosophy (00:35:14 - 00:44:00) [x]
 
 **Duration**: ~9 minutes
 
@@ -185,7 +185,7 @@
 
 ---
 
-### Section 8: Large Language Models (LLMs) - Part 2: Capabilities (00:47:00 - 00:50:14)
+### Section 8: Large Language Models (LLMs) - Part 2: Capabilities (00:47:00 - 00:50:14) [ ]
 
 **Duration**: ~3 minutes
 
@@ -214,11 +214,11 @@
 
 ---
 
-### Section 9: LLM Architecture for Code Generation (00:50:14 - 00:53:00)
+### Section 9: LLM Architecture for Code Generation (00:50:14 - 00:53:00) [ ]
 
 **Duration**: ~3 minutes
 
-#### 9.1: Architecture Diagram Walkthrough
+#### 9.1: Architecture Diagram Walkthrough [ ]
 
 **Processing Pipeline**:
 
@@ -239,11 +239,11 @@
 
 ---
 
-### Section 10: Model Selection and Capabilities (00:53:00 - 00:58:00+)
+### Section 10: Model Selection and Capabilities (00:53:00 - 00:58:00+) [x]
 
 **Duration**: ~5+ minutes _(transcript continues)_
 
-#### 10.1: Available Models in GitHub Copilot
+#### 10.1: Available Models in GitHub Copilot [x]
 
 **Model Characteristics Displayed**:
 

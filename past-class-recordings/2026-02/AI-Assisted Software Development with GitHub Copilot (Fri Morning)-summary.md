@@ -19,7 +19,7 @@
 
 ---
 
-## 1. Opening and Introductions
+## 1. Opening and Introductions [ ]
 **Time**: 00:00:57 - 00:04:10
 **Duration**: ~3 minutes
 
@@ -31,7 +31,7 @@ Brief greetings and session setup. John Miller welcomes participants and prepare
 
 ---
 
-## 2. AI Practitioner Resources Overview
+## 2. AI Practitioner Resources Overview [x]
 **Time**: 00:04:10 - 00:14:05
 **Duration**: ~10 minutes
 
@@ -59,7 +59,7 @@ John Miller introduces and demonstrates the "AI Practitioner Resources" applicat
 
 ---
 
-## 3. AI-First Development Methodology
+## 3. AI-First Development Methodology [x]
 **Time**: 00:14:05 - 00:18:00
 **Duration**: ~4 minutes
 
@@ -79,7 +79,7 @@ Discussion of the AI-first and prompt-first development philosophy that guides t
 
 ---
 
-## 4. GitHub Project Workflow Exploration
+## 4. GitHub Project Workflow Exploration [x]
 **Time**: 00:18:00 - 00:45:00
 **Duration**: ~27 minutes
 

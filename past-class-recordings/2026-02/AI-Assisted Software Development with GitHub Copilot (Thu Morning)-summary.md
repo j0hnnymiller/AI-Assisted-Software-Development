@@ -10,7 +10,7 @@
 
 ---
 
-## Section 1: Pre-Class Questions and Setup (Duration: 00:00:24 - 00:08:02)
+## Section 1: Pre-Class Questions and Setup (Duration: 00:00:24 - 00:08:02) [ ]
 
 ### Key Topics
 
