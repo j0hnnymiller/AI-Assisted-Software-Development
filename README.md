@@ -112,6 +112,13 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes detailed speaker notes for effective delivery
   - Provenance: [Chat log](ai-logs/2026/02/07/cqrs-architecture-slides-20260207/conversation.md)
 
+- **Instruction File ApplyTo Patterns Slides** ([`Slides/individual-slides/instruction-file-applyto-patterns.md`](Slides/individual-slides/instruction-file-applyto-patterns.md))
+  - 13-slide Marp presentation explaining glob pattern matching for instruction file applyTo fields
+  - Covers universal patterns, file extension matching, directory-specific patterns, and best practices
+  - Includes comprehensive speaker notes (1-3 minutes per slide) with timing, examples, and audience interaction cues
+  - Features real-world examples from this repository, common pitfalls, testing strategies, and decision frameworks
+  - Provenance: [Chat log](ai-logs/2026/03/03/applyto-patterns-marp-deck-20260303/conversation.md) | [Summary](ai-logs/2026/03/03/applyto-patterns-marp-deck-20260303/summary.md)
+
 ## Utility Scripts
 
 This repository includes utility scripts for repository management and maintenance:
