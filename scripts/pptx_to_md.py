@@ -1,133 +1,161 @@
 #!/usr/bin/env python3
 """
-Convert PPTX to Markdown by extracting text content from slides.
+Convert PPTX to Markdown using python-pptx.
+Extracts text (with shape context), speaker notes, and images from each slide.
 """
 
-import os
-import re
 import sys
-import xml.etree.ElementTree as ET
-import zipfile
 from pathlib import Path
 
+from pptx import Presentation
+from pptx.enum.shapes import MSO_SHAPE_TYPE
 
-def extract_text_from_pptx(pptx_path):
-    """Extract text from PPTX file by parsing the XML structure."""
-    try:
-        slides_text = []
 
-        with zipfile.ZipFile(pptx_path, 'r') as pptx:
-            # List all files in the PPTX
-            file_list = pptx.namelist()
+def get_text_from_shape(shape):
+    """Return (is_title, paragraphs_list) for a text-bearing shape."""
+    if not shape.has_text_frame:
+        return False, []
 
-            # Get slide files and sort them properly
-            slide_files = []
-            for filename in file_list:
-                if filename.startswith('ppt/slides/slide') and filename.endswith('.xml'):
-                    # Extract slide number
-                    match = re.search(r'slide(\d+)\.xml', filename)
-                    if match:
-                        slide_num = int(match.group(1))
-                        slide_files.append((slide_num, filename))
+    is_title = shape.shape_type == MSO_SHAPE_TYPE.PLACEHOLDER and hasattr(shape, "placeholder_format") and shape.placeholder_format is not None and shape.placeholder_format.idx in (0, 1)
 
-            # Sort by slide number
-            slide_files.sort(key=lambda x: x[0])
+    paragraphs = []
+    for para in shape.text_frame.paragraphs:
+        text = para.text.strip()
+        if not text:
+            continue
+        level = para.level  # 0 = top level, 1+ = sub-bullets
+        paragraphs.append((level, text))
 
-            print(f"Found {len(slide_files)} slides")
+    return is_title, paragraphs
 
-            for slide_num, slide_file in slide_files:
-                try:
-                    slide_xml = pptx.read(slide_file)
 
-                    # Parse XML with namespace handling
-                    root = ET.fromstring(slide_xml)
+def extract_slide_data(slide, slide_num, images_dir, pptx_stem):
+    """
+    Extract all content from a slide.
+    Returns a dict with keys: title, shapes, notes, images.
+    """
+    data = {
+        "title": None,
+        "shapes": [],   # list of (level, text) tuples
+        "notes": None,
+        "images": [],   # list of saved image relative paths
+    }
 
-                    # Extract text elements
-                    text_elements = []
+    # --- Text shapes ---
+    for shape in slide.shapes:
+        if shape.has_text_frame:
+            is_title, paragraphs = get_text_from_shape(shape)
+            if is_title and paragraphs and data["title"] is None:
+                data["title"] = paragraphs[0][1]
+                # remaining paragraphs of title shape go to body
+                for item in paragraphs[1:]:
+                    data["shapes"].append(item)
+            else:
+                for item in paragraphs:
+                    data["shapes"].append(item)
 
-                    # Find all text runs
-                    for t_elem in root.iter():
-                        if t_elem.tag.endswith('}t') and t_elem.text:
-                            text_elements.append(t_elem.text.strip())
+        # --- Images / picture shapes ---
+        if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
+            try:
+                image = shape.image
+                ext = image.ext  # e.g. 'png', 'jpeg'
+                img_filename = f"{pptx_stem}_slide{slide_num:02d}_{shape.shape_id}.{ext}"
+                img_path = images_dir / img_filename
+                img_path.write_bytes(image.blob)
+                data["images"].append(img_filename)
+                print(f"  Saved image: {img_filename}")
+            except Exception as e:
+                print(f"  Warning: could not save image on slide {slide_num}: {e}")
 
-                    if text_elements:
-                        slide_text = '\n'.join(text_elements)
-                        slides_text.append((slide_num, slide_text))
-                        print(f"Slide {slide_num}: {len(text_elements)} text elements")
-                    else:
-                        print(f"Slide {slide_num}: No text found")
+    # --- Speaker notes ---
+    if slide.has_notes_slide:
+        notes_text = slide.notes_slide.notes_text_frame.text.strip()
+        if notes_text:
+            data["notes"] = notes_text
 
-                except Exception as e:
-                    print(f"Error processing slide {slide_num}: {e}")
-                    continue
+    return data
 
-        return slides_text
 
-    except FileNotFoundError:
-        print(f"Error: File not found: {pptx_path}")
-        return []
-    except zipfile.BadZipFile:
-        print(f"Error: Invalid PPTX file: {pptx_path}")
-        return []
-    except Exception as e:
-        print(f"Error reading PPTX: {e}")
-        return []
+def format_paragraphs(paragraphs):
+    """Convert (level, text) list to indented Markdown bullet lines."""
+    lines = []
+    for level, text in paragraphs:
+        indent = "  " * level
+        # Detect if text already starts with a list marker
+        if text.startswith(("•", "○", "▪", "-", "*", "–")):
+            lines.append(f"{indent}- {text[1:].strip()}")
+        else:
+            lines.append(f"{indent}- {text}")
+    return lines
 
 
 def convert_pptx_to_md(pptx_path, md_path):
-    """Convert PPTX file to Markdown."""
+    """Convert a PPTX file to Markdown, saving images alongside the output."""
+    pptx_path = Path(pptx_path)
+    md_path = Path(md_path)
+
     print(f"Converting: {pptx_path}")
 
-    if not os.path.exists(pptx_path):
+    if not pptx_path.exists():
         print(f"Error: Input file not found: {pptx_path}")
         return False
 
-    # Extract slides
-    slides = extract_text_from_pptx(pptx_path)
+    # Create output directory and images sub-folder
+    md_path.parent.mkdir(parents=True, exist_ok=True)
+    images_dir = md_path.parent / "images"
+    images_dir.mkdir(exist_ok=True)
 
-    if not slides:
-        print("No content extracted from PPTX")
+    try:
+        prs = Presentation(str(pptx_path))
+    except Exception as e:
+        print(f"Error opening PPTX: {e}")
         return False
 
-    # Write markdown
+    total_slides = len(prs.slides)
+    print(f"Found {total_slides} slides")
+
+    pptx_stem = pptx_path.stem.replace(" ", "_")
+
     try:
-        os.makedirs(os.path.dirname(md_path), exist_ok=True)
+        with open(md_path, "w", encoding="utf-8") as f:
+            # Document title from file name
+            doc_title = pptx_path.stem.lstrip("_").replace("-", " ").replace("_", " ")
+            f.write(f"# {doc_title}\n\n")
+            f.write(f"*Converted from: `{pptx_path.name}`*\n\n---\n\n")
 
-        with open(md_path, 'w', encoding='utf-8') as f:
-            # Get the base filename for title
-            title = Path(pptx_path).stem.replace('-', ' ').title()
-            f.write(f"# {title}\n\n")
-            f.write(f"Converted from: {os.path.basename(pptx_path)}\n\n")
+            for slide_idx, slide in enumerate(prs.slides, start=1):
+                data = extract_slide_data(slide, slide_idx, images_dir, pptx_stem)
 
-            for slide_num, slide_text in slides:
-                f.write(f"## Slide {slide_num}\n\n")
-
-                # Clean up text formatting
-                lines = slide_text.split('\n')
-                formatted_lines = []
-
-                for line in lines:
-                    line = line.strip()
-                    if line:
-                        # If line looks like a title (all caps or title case), make it a header
-                        if line.isupper() and len(line.split()) <= 6:
-                            formatted_lines.append(f"### {line.title()}")
-                        else:
-                            # Check if it's a bullet point
-                            if any(line.startswith(bullet) for bullet in ['•', '○', '▪', '-', '*']):
-                                formatted_lines.append(line)
-                            else:
-                                formatted_lines.append(f"- {line}")
-
-                if formatted_lines:
-                    f.write('\n'.join(formatted_lines))
+                # Slide heading
+                if data["title"]:
+                    f.write(f"## Slide {slide_idx}: {data['title']}\n\n")
                 else:
-                    f.write(slide_text)
+                    f.write(f"## Slide {slide_idx}\n\n")
 
-                f.write('\n\n')
+                # Body text
+                if data["shapes"]:
+                    body_lines = format_paragraphs(data["shapes"])
+                    f.write("\n".join(body_lines))
+                    f.write("\n\n")
 
-        print(f"Successfully created: {md_path}")
-        print(f"Converted {len(slides)} slides")
+                # Embedded images
+                for img_filename in data["images"]:
+                    f.write(f"![Slide {slide_idx} image](images/{img_filename})\n\n")
+
+                # Speaker notes — pandoc fenced div format
+                if data["notes"]:
+                    f.write("::: notes\n")
+                    f.write(data["notes"])
+                    f.write("\n:::\n\n")
+
+                f.write("---\n\n")
+
+                print(f"  Slide {slide_idx}: {len(data['shapes'])} text items, "
+                      f"{len(data['images'])} image(s), "
+                      f"{'notes' if data['notes'] else 'no notes'}")
+
+        print(f"\nSuccessfully created: {md_path}")
+        print(f"Converted {total_slides} slides")
         return True
 
     except Exception as e:
