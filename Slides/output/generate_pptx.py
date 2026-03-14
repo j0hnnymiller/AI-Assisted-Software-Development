@@ -146,7 +146,16 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
     sections_cfg = config.get("sections", [])
     all_section_names = [s.get("name", "Unnamed Section") for s in sections_cfg]
 
-    prs = Presentation()
+    template = config.get("template")
+    if template:
+        template_path = yaml_path.parent.parent / template if not Path(template).is_absolute() else Path(template)
+        if not template_path.exists():
+            # try relative to cwd
+            template_path = Path(template)
+        prs = Presentation(str(template_path))
+        print(f"Using template: {template_path}")
+    else:
+        prs = Presentation()
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     # python-pptx exposes the underlying <p:presentation> element via part._element.
