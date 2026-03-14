@@ -19,15 +19,7 @@ source: "johnmillerATcodemag-com"
 
 <!-- _class: lead -->
 
-# What's the Big Deal?
-
-## AI-Assisted Software Development: Evolution, Not Revolution
-
-_By John Miller_
-
----
-
-## The Core Thesis
+## WTBD - The Core Thesis
 
 > "Programming hasn't changed, but how we go about it has changed, again."
 
