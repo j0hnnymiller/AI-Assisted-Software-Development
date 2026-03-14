@@ -14,131 +14,100 @@ except ImportError:
     print("Error: python-pptx not installed. Install with: pip install python-pptx")
     sys.exit(1)
 
+TITLE_PLACEHOLDER_TYPES = {1, 13, 15}   # TITLE, CENTER_TITLE, and legacy values
+SUBTITLE_PLACEHOLDER_TYPES = {2, 12}    # SUBTITLE
+
+
+def get_placeholder_type(shape):
+    try:
+        if shape.is_placeholder:
+            return shape.placeholder_format.type
+    except Exception:
+        pass
+    return None
+
 
 def extract_text_from_shape(shape):
-    """Extract text from a shape, handling text frames and tables."""
+    """Extract text from a non-title shape, including tables."""
     text_parts = []
-
     try:
-        # Try text frame first
         if hasattr(shape, "text_frame") and shape.has_text_frame:
             for paragraph in shape.text_frame.paragraphs:
                 text = paragraph.text.strip()
                 if text:
-                    # Determine if it's a bullet point based on paragraph level
                     level = paragraph.level
                     if level > 0:
                         indent = "  " * (level - 1)
                         text_parts.append(f"{indent}- {text}")
                     else:
                         text_parts.append(text)
-
-        # Try table
-        elif shape.shape_type == 19:  # 19 = MSO_SHAPE_TYPE.TABLE
+        elif shape.shape_type == 19:  # TABLE
             try:
                 table = shape.table
+                rows = []
                 for row in table.rows:
-                    row_text = []
-                    for cell in row.cells:
-                        row_text.append(cell.text.strip())
-                    if any(row_text):
-                        text_parts.append(" | ".join(row_text))
-            except:
+                    rows.append([cell.text.strip() for cell in row.cells])
+                if rows:
+                    text_parts.append(" | ".join(rows[0]))
+                    text_parts.append(" | ".join(["---"] * len(rows[0])))
+                    for row in rows[1:]:
+                        text_parts.append(" | ".join(row))
+            except Exception:
                 pass
     except Exception:
-        # Silently skip shapes that cause errors
         pass
-
     return text_parts
 
 
 def convert_pptx_to_marp(pptx_path, output_path):
-    """Convert PPTX to Marp Markdown with speaker notes."""
-
+    """Convert PPTX to Marp Markdown with ::: notes speaker notes."""
     print(f"Loading presentation: {pptx_path}")
     prs = Presentation(pptx_path)
 
-    # Get presentation title
-    title = Path(pptx_path).stem.replace('-', ' ').replace('_', ' ')
+    lines = ["---", "marp: true", "theme: default", "paginate: true", "---", ""]
 
-    # Start building markdown
-    markdown_lines = []
-
-    # Add Marp header
-    markdown_lines.extend([
-        "---",
-        "marp: true",
-        "theme: default",
-        "paginate: true",
-        "header: ''",
-        "footer: ''",
-        "---",
-        "",
-        f"# {title}",
-        "",
-        "---",
-        ""
-    ])
-
-    # Process each slide
     for slide_num, slide in enumerate(prs.slides, 1):
         print(f"Processing slide {slide_num}...")
 
-        slide_content = []
+        title_text = None
+        body_lines = []
 
-        # Extract text from all shapes
         for shape in slide.shapes:
-            text_parts = extract_text_from_shape(shape)
-            if text_parts:  # Only extend if we got results
-                slide_content.extend(text_parts)
+            ph_type = get_placeholder_type(shape)
+            if ph_type in TITLE_PLACEHOLDER_TYPES or ph_type in SUBTITLE_PLACEHOLDER_TYPES:
+                if hasattr(shape, "text_frame") and shape.has_text_frame:
+                    t = shape.text_frame.text.strip()
+                    if t:
+                        if title_text is None:
+                            title_text = t
+                        else:
+                            body_lines.append(t)
+            else:
+                body_lines.extend(extract_text_from_shape(shape))
 
-        # Add slide content
-        if slide_content:
-            # First line is typically the title
-            if slide_content:
-                first_line = slide_content[0]
-                # Check if it looks like a title (short and not a bullet)
-                if len(first_line) < 100 and not first_line.startswith('-'):
-                    markdown_lines.append(f"# {first_line}")
-                    remaining = slide_content[1:]
-                else:
-                    remaining = slide_content
+        if title_text:
+            lines.append(f"## {title_text}")
+        if body_lines:
+            lines.append("")
+            lines.extend(body_lines)
 
-                # Add remaining content
-                if remaining:
-                    markdown_lines.append("")
-                    markdown_lines.extend(remaining)
-
-        # Extract speaker notes
         if slide.has_notes_slide:
-            notes_slide = slide.notes_slide
-            notes_text_frame = notes_slide.notes_text_frame
-            notes_text = notes_text_frame.text.strip()
-
+            notes_text = slide.notes_slide.notes_text_frame.text.strip()
             if notes_text:
-                markdown_lines.append("")
-                markdown_lines.append("<!--")
-                markdown_lines.append("Speaker Notes:")
-                markdown_lines.append("")
-                # Add notes with proper formatting
-                for line in notes_text.split('\n'):
-                    line = line.strip()
-                    if line:
-                        markdown_lines.append(line)
-                markdown_lines.append("-->")
+                lines.append("")
+                lines.append("::: notes")
+                for note_line in notes_text.splitlines():
+                    lines.append(note_line.strip())
+                lines.append(":::")
 
-        # Add slide separator
-        markdown_lines.append("")
-        markdown_lines.append("---")
-        markdown_lines.append("")
+        lines.append("")
+        lines.append("---")
+        lines.append("")
 
-    # Write output file
     print(f"Writing output to: {output_path}")
-    with open(output_path, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(markdown_lines))
-
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
     print(f"Successfully converted {len(prs.slides)} slides")
-    print(f"Output file: {output_path}")
 
 
 if __name__ == "__main__":
@@ -147,12 +116,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     input_path = sys.argv[1]
-
-    if len(sys.argv) >= 3:
-        output_path = sys.argv[2]
-    else:
-        # Default output path
-        output_path = Path(input_path).with_suffix('.marp.md')
+    output_path = sys.argv[2] if len(sys.argv) >= 3 else str(Path(input_path).with_suffix(".md"))
 
     if not os.path.exists(input_path):
         print(f"Error: Input file not found: {input_path}")

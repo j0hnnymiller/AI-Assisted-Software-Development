@@ -1,0 +1,42 @@
+sections:
+  - name: Intro
+    slides:
+      - Slides\individual-slides\welcome-to-aiasd.md
+      - Slides\individual-slides\john-michael-miller-intro.md
+      - Slides\individual-slides\introductions.md
+      - Slides\individual-slides\about-code.md
+
+  - name: Module 1 - AIASD
+    slides:
+      # Add your Module 1 slide files here
+      - Slides\individual-slides\whats-the-big-deal.md
+      - Slides\individual-slides\the-ai-revolution.md
+
+  - name: Module 2 - Intro to Copilot
+    slides:
+      # Add your Module 2 slide files here
+      - Slides\individual-slides\repository-and-tool-setup.md
+      - Slides\individual-slides\hands-on-with-github-copilot-vs-code.md
+
+  - name: Module 3 - Vibbing
+    slides:
+      # Add your Module 3 slide files here
+      - Slides\individual-slides\vibe-coding.md
+      - Slides\individual-slides\multi‑model-implementation-comparison.md
+
+  - name: Module 4 - Adding AI Guardrails
+    slides:
+      # Add your Module 4 slide files here
+      - Slides\individual-slides\adding-ai-guardrails.md
+      - Slides\individual-slides\instruction-files.md
+      - Slides\individual-slides\instruction-file-applyto-patterns.md
+      - Slides\individual-slides\core-instruction-files.md
+
+  - name: Module 5 - Managing Context
+    slides:
+      # Add your Module 5 slide files here
+      - Slides\individual-slides\managing-github-copilot-effectively.md
+
+  - name: Module 6 - Copilot for Teams
+    slides:
+      # Add your Module 6 slide files here

@@ -128,9 +128,9 @@ def convert_pptx_to_md(pptx_path, md_path):
 
                 # Slide heading
                 if data["title"]:
-                    f.write(f"## Slide {slide_idx}: {data['title']}\n\n")
+                    f.write(f"## {data['title']}\n\n")
                 else:
-                    f.write(f"## Slide {slide_idx}\n\n")
+                    f.write("##\n\n")
 
                 # Body text
                 if data["shapes"]:
