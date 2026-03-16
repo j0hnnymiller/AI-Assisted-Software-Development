@@ -316,7 +316,7 @@ build script to produce the final editable PPTX.
 ### 7.1 Script location
 
 ```
-Slides/output/generate_pptx.py      (written by agent; retained for re-runs)
+Slides/output/generate_pptx.py      (existing script invoked by the agent)
 ```
 
 ### 7.2 What the script produces
@@ -340,7 +340,7 @@ Slides/output/generate_pptx.py      (written by agent; retained for re-runs)
 
 ```bash
 pip install python-pptx pyyaml --quiet
-python Slides/output/generate_pptx.py
+python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT
 ```
 
 The agent runs both commands, reports any missing-file warnings, and confirms
@@ -348,19 +348,19 @@ The agent runs both commands, reports any missing-file warnings, and confirms
 
 ### 7.5 Outputs
 
-| File           | Description                                               |
-| -------------- | --------------------------------------------------------- |
-| `$OUTPUT_FILE` | Merged Marp deck (valid for Marp preview)                 |
-| `$PPTX_SCRIPT` | Generated python-pptx build script (retained for re-runs) |
-| `$PPTX_OUTPUT` | Editable PPTX with named section groupings                |
+| File           | Description                                            |
+| -------------- | ------------------------------------------------------ |
+| `$OUTPUT_FILE` | Merged Marp deck (valid for Marp preview)              |
+| `$PPTX_SCRIPT` | Existing python-pptx build script invoked by the agent |
+| `$PPTX_OUTPUT` | Editable PPTX with named section groupings             |
 
 Default values:
 
-| Variable       | Default                                 |
-| -------------- | --------------------------------------- |
-| `$OUTPUT_FILE` | `Slides/aiasd-draft.monday.md`          |
-| `$PPTX_SCRIPT` | `Slides/output/generate_pptx.py`        |
-| `$PPTX_OUTPUT` | `Slides/output/aiasd-draft.monday.pptx` |
+| Variable       | Default                                     |
+| -------------- | ------------------------------------------- |
+| `$OUTPUT_FILE` | `Slides/aiasd-311-monday-draft.md`          |
+| `$PPTX_SCRIPT` | `Slides/output/generate_pptx.py`            |
+| `$PPTX_OUTPUT` | `Slides/output/aiasd-311-monday-draft.pptx` |
 
 ---
 
@@ -371,7 +371,7 @@ Default values:
 2. Click "Run Prompt" in the Copilot chat panel (agent mode)
    — or —
    Type in Copilot chat:  /merge-marp-decks
-3. Optionally override $YAML_FILE, $OUTPUT_FILE, $PPTX_SCRIPT, $PPTX_OUTPUT
+3. Optionally override $MANIFEST, $OUTPUT_FILE, $PPTX_SCRIPT, $PPTX_OUTPUT
    by editing the Default Values section of the prompt before running
 ```
 
@@ -403,17 +403,17 @@ Default values:
 │      c. Section agenda slide  (## Section Name + slide titles) │
 │      d. Content slides from source files (merged verbatim)     │
 │                                                                │
-│    → Slides/aiasd-draft.monday.md                             │
+│    → Slides/aiasd-311-monday-draft.md                         │
 └─────────────────────────────┬────────────────────────────────┘
                               │
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
 │    Agent PPTX phase                                            │
-│      Writes + runs Slides/output/generate_pptx.py             │
+│      Runs Slides/output/generate_pptx.py                      │
 │      - Section-header, agenda, and content slides              │
 │      - <p14:section> XML groups per section                    │
 │                                                                │
-│    → Slides/output/aiasd-draft.monday.pptx                    │
+│    → Slides/output/aiasd-311-monday-draft.pptx                │
 │        Editable text boxes, bullets, presenter notes           │
 │        Named section groupings visible in PowerPoint           │
 └──────────────────────────────────────────────────────────────┘
@@ -423,12 +423,12 @@ Default values:
 
 ## 9. File naming conventions
 
-| Pattern                            | Example                          | Description                 |
-| ---------------------------------- | -------------------------------- | --------------------------- |
-| `<course>-<format>-<day>.yaml`     | `aiasd-311-monday.yaml`          | Manifest file               |
-| `<course>-<format>-<day>-draft.md` | `aiasd-311-monday-draft.md`      | Merged Marp deck            |
-| `generate_pptx.py`                 | `Slides/output/generate_pptx.py` | Generated PPTX build script |
-| `<course>-draft.<day>.pptx`        | `aiasd-draft.monday.pptx`        | Editable PPTX output        |
+| Pattern                              | Example                          | Description                |
+| ------------------------------------ | -------------------------------- | -------------------------- |
+| `<course>-<format>-<day>.yaml`       | `aiasd-311-monday.yaml`          | Manifest file              |
+| `<course>-<format>-<day>-draft.md`   | `aiasd-311-monday-draft.md`      | Merged Marp deck           |
+| `generate_pptx.py`                   | `Slides/output/generate_pptx.py` | Existing PPTX build script |
+| `<course>-<format>-<day>-draft.pptx` | `aiasd-311-monday-draft.pptx`    | Editable PPTX output       |
 
 `course` = identifier prefix (e.g. `aiasd`)
 `format` = numeric format code (e.g. `311` = 3-day, 1st delivery)

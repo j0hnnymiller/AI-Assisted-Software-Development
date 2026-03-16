@@ -1,0 +1,40 @@
+template: Slides\individual-slides\jMM-CODE-Training-Slide-Template-clean.pptx
+
+sections:
+  - name: Intro
+    slides:
+      - Slides\individual-slides\welcome-back.md
+      - Slides\individual-slides\copilot-pricing-licensing.md
+      - Slides\individual-slides\vscode-configuration-tips.md
+
+  - name: Module 1 - LLM
+    slides:
+      # Add your Module 1 slide files here
+      - Slides\individual-slides\large-language-models.md
+      -
+
+  - name: Module 2 - Copilot for Teams
+    slides:
+      # Add your Module 2 slide files here
+      - Slides\individual-slides\github-copilot-for-teams.md
+      -
+
+  - name: Module 3 - Models and Context
+    slides:
+      # Add your Module 3 slide files here
+      - Slides\individual-slides\model-selection-and-comparison.pptx
+      - Slides\individual-slides\advanced-context-techniques.md
+
+  - name: Module 4 - Adding AI Guardrails
+    slides:
+      # Add your Module 4 slide files here
+      -
+
+  - name: Module 5 - Managing Context
+    slides:
+      # Add your Module 5 slide files here
+      -
+
+  - name: Module 6 - Copilot for Teams
+    slides:
+      # Add your Module 6 slide files here

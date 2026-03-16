@@ -1,4 +1,6 @@
 template: Slides\individual-slides\jMM-CODE-Training-Slide-Template-clean.pptx
+title: "AI-Assisted Software Development"
+subtitle: "From Code to Copilot"
 
 sections:
   - name: Intro
@@ -25,6 +27,8 @@ sections:
       # Add your Module 3 slide files here
       - Slides\individual-slides\vibe-coding.md
       - Slides\individual-slides\multi‑model-implementation-comparison.md
+      - Slides\individual-slides\ai-assisted-cicd-pipelines.md
+      - Slides\individual-slides\ai-assisted-github-pull-requests.md
 
   - name: Module 4 - Adding AI Guardrails
     slides:
@@ -42,3 +46,4 @@ sections:
   - name: Module 6 - Copilot for Teams
     slides:
       # Add your Module 6 slide files here
+      - Slides\individual-slides\github-copilot-for-teams.md

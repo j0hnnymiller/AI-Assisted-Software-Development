@@ -7,9 +7,9 @@ prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 2.1.0
+  version: 2.1.3
   created: 2026-03-12
-  updated: 2026-03-13
+  updated: 2026-03-15
   output_path: Slides/aiasd-311-monday-draft.md
   output_format: markdown
   category: slides
@@ -18,23 +18,29 @@ prompt_metadata:
 
 # Merge Marp Slide Decks and Generate PPTX
 
-Merge the Marp slide decks defined in `$YAML_FILE` into a single Marp slide deck saved as
+Merge the Marp slide decks defined in `$MANIFEST` into a single Marp slide deck saved as
 `$OUTPUT_FILE`, then generate a PPTX with named sections using `python-pptx`.
 
 ## Default Values
 
-- `$YAML_FILE` = `Slides/aiasd-311-monday.yaml`
-- `$OUTPUT_FILE` = derived from `$YAML_FILE`: strip `.yaml` and append `-draft.md`
+- `$MANIFEST` = `Slides/aiasd-311-monday.yaml`
+- `$OUTPUT_FILE` = derived from `$MANIFEST`: strip `.yaml` and append `-draft.md`
   (e.g. `Slides/aiasd-311-monday.yaml` → `Slides/aiasd-311-monday-draft.md`)
 - `$PPTX_SCRIPT` = `Slides/output/generate_pptx.py`
-- `$PPTX_OUTPUT` = `Slides/output/aiasd-draft.monday.pptx`
+- `$PPTX_OUTPUT` = `Slides/output/aiasd-311-monday-draft.pptx`
+
+## Execution Rule
+
+- Perform **Phase 0** and **Phase 1** directly in this agent run using the prompt logic.
+- Do **not** call or rely on `scripts/merge_marp_decks.py` for Phase 0/1.
+- Read source files, validate them, build merged markdown in memory, and write `$OUTPUT_FILE`.
 
 > **Agent verification (Issue 3)**: After computing `$OUTPUT_FILE`, confirm its filename
-> matches the pattern `<course>-<format>-<day>-draft.md` derived from the `$YAML_FILE` stem.
+> matches the pattern `<course>-<format>-<day>-draft.md` derived from the `$MANIFEST` stem.
 
 ## YAML Structure
 
-`$YAML_FILE` uses a sectioned structure:
+`$MANIFEST` uses a sectioned structure:
 
 ```yaml
 sections:
@@ -54,16 +60,23 @@ Each section has a `name` and an optional `slides` list. Sections with no slide 
 
 ## Phase 0 — Validate Source Files
 
-For every source file path referenced in `$YAML_FILE`, read the file and check:
+Collect the complete list of unique source file paths from `$MANIFEST`, then **read and
+validate all files in parallel** (issue all file reads simultaneously, do not read them one
+at a time). Once all reads are complete, apply the checks below to each file's content.
 
-| # | Rule | Check |
-|---|------|-------|
-| 1 | **Front matter** | File begins with a valid Marp YAML front-matter block (`---` … `---`) |
-| 2 | **No H1 in body** | No `# H1` headings appear after the front-matter block |
-| 3 | **H2 present** | At least one `## H2` heading exists in the body |
-| 4 | **Image paths** | No `../images/` references (must use `images/` prefix) |
-| 5 | **No trailing separator** | File does not end with a bare `---` line |
-| 6 | **Encoding** | No vertical-tab (`\x0b`) characters |
+Apply the following checks to every source file:
+
+| #   | Rule                      | Check                                                                 |
+| --- | ------------------------- | --------------------------------------------------------------------- |
+| 1   | **Front matter**          | File begins with a valid Marp YAML front-matter block (`---` … `---`) |
+| 2   | **No H1 in body**         | No `# H1` headings appear after the front-matter block                |
+| 3   | **H2 present**            | At least one `## H2` heading exists in the body                       |
+| 4   | **Image paths**           | No `../images/` references (must use `images/` prefix)                |
+| 5   | **No trailing separator** | File does not end with a bare `---` line                              |
+| 6   | **Encoding**              | No vertical-tab (`\x0b`) characters                                   |
+
+**Parallel read requirement**: All source file reads must be dispatched concurrently before
+any validation logic runs. Do not await each read before starting the next.
 
 Log a warning for each violation and continue — do not abort. Print a validation summary
 before writing `$OUTPUT_FILE`:
@@ -82,7 +95,7 @@ Validation complete: N file(s) checked, M warning(s) found.
 
 ### Steps
 
-1. Read `$YAML_FILE`; collect all sections (names + slide file lists) in manifest order
+1. Read `$MANIFEST`; collect all sections (names + slide file lists) in manifest order
 2. Collect all section names into a list — used to build every module list slide
 3. For each section, build the section block following the rules below
 4. Concatenate all section blocks (each injected slide and each merged source block
@@ -170,6 +183,8 @@ Slide title extraction:
 - Preserve all `---` separators that appear within each source file's content
 - `---` lines that appear inside fenced code blocks (` ``` ` or `~~~`) are **never** treated
   as slide separators — preserve them verbatim
+- Strip one leading `---` (and surrounding blank lines) from each source file body
+- Strip one trailing `---` (and surrounding blank lines) from each source file body
 - Between injected slides and between source file blocks use exactly one `\n\n---\n\n`
 - Do not double-up separators
 
@@ -216,250 +231,18 @@ Report the count in the form: `Merged deck: N slide(s) across M section(s).`
 
 ## Phase 2 — Generate PPTX with Sections
 
-Create `$PPTX_SCRIPT` using the template below, then execute it.
-
-### Script Requirements
-
-The script must:
-
-1. Parse `$YAML_FILE` to get sections and their slide file lists
-2. Collect all section names — used to build every module list slide
-3. For **every** section (including empty ones) emit four slide groups in order:
-   a. Module list slide (all section names; current section highlighted)
-   b. Section header slide
-   c. Section agenda slide (only when section has source files)
-   d. One content slide per source file
-4. Group every slide in the section under a named `<p14:section>` XML element
-5. Save to `$PPTX_OUTPUT`
-
-### Script Template
-
-```python
-"""
-generate_pptx.py — Build a PPTX from a YAML manifest using python-pptx.
-Requires: pip install python-pptx pyyaml
-
-Usage:
-    python generate_pptx.py <yaml_path> <output_pptx_path>
-"""
-import argparse
-import re
-import yaml
-from pathlib import Path
-from pptx import Presentation
-from lxml import etree
-
-LAYOUT_TITLE_CONTENT  = 1  # adjust index if template differs
-LAYOUT_SECTION_HEADER = 2  # adjust index if template differs
-LAYOUT_TITLE_ONLY     = 5  # adjust index if template differs
-
-
-def extract_slide_title(file_path: Path) -> str:
-    """Return the first ## H2 heading text, or the file stem as fallback."""
-    try:
-        text = file_path.read_text(encoding="utf-8")
-    except FileNotFoundError:
-        return file_path.stem
-    # Strip YAML front matter
-    if text.startswith("---"):
-        end = text.find("\n---", 3)
-        if end != -1:
-            text = text[end + 4:]
-    for line in text.splitlines():
-        m = re.match(r"^## (.+)", line)
-        if m:
-            return m.group(1).strip()
-    return file_path.stem
-
-
-def parse_slide(md_content: str) -> tuple[str, str]:
-    """Return (title, body) parsed from a markdown slide block."""
-    lines = md_content.strip().splitlines()
-    if lines and lines[0].strip() == "---":
-        end = next((i for i, l in enumerate(lines[1:], 1) if l.strip() == "---"), None)
-        if end:
-            lines = lines[end + 1:]
-    title, body_lines = "", []
-    for line in lines:
-        if not title and line.startswith("# "):
-            title = line[2:].strip()
-        elif line.startswith("## "):
-            if not title:
-                title = line[3:].strip()
-        else:
-            body_lines.append(line)
-    return title, "\n".join(body_lines).strip()
-
-
-def add_title_content_slide(prs: Presentation, title: str, body: str) -> None:
-    """Add a Title and Content layout slide."""
-    layout = prs.slide_layouts[LAYOUT_TITLE_CONTENT]
-    slide = prs.slides.add_slide(layout)
-    if slide.shapes.title:
-        slide.shapes.title.text = title
-    for shape in slide.placeholders:
-        if shape.placeholder_format.idx == 1:
-            tf = shape.text_frame
-            tf.clear()
-            for line in body.splitlines():
-                p = tf.add_paragraph()
-                if line.startswith("- "):
-                    p.text = line[2:]
-                    p.level = 0
-                else:
-                    p.text = line
-            break
-
-
-def add_title_only_slide(prs: Presentation, title: str) -> None:
-    """Add a Title Only layout slide (no body content)."""
-    try:
-        layout = prs.slide_layouts[LAYOUT_TITLE_ONLY]
-    except IndexError:
-        layout = prs.slide_layouts[LAYOUT_TITLE_CONTENT]
-    slide = prs.slides.add_slide(layout)
-    if slide.shapes.title:
-        slide.shapes.title.text = title
-
-
-def add_section_header_slide(prs: Presentation, section_name: str) -> None:
-    """Add a section header slide (# Section Name, lead layout)."""
-    try:
-        layout = prs.slide_layouts[LAYOUT_SECTION_HEADER]
-    except IndexError:
-        layout = prs.slide_layouts[0]
-    slide = prs.slides.add_slide(layout)
-    if slide.shapes.title:
-        slide.shapes.title.text = section_name
-
-
-def add_module_list_slide(
-    prs: Presentation, all_sections: list[str], current: str
-) -> None:
-    """Add a 'Course Modules' navigation slide; current section is bold + arrow."""
-    layout = prs.slide_layouts[LAYOUT_TITLE_CONTENT]
-    slide = prs.slides.add_slide(layout)
-    if slide.shapes.title:
-        slide.shapes.title.text = "Course Modules"
-    for shape in slide.placeholders:
-        if shape.placeholder_format.idx == 1:
-            tf = shape.text_frame
-            tf.clear()
-            for name in all_sections:
-                p = tf.add_paragraph()
-                p.level = 0
-                run = p.add_run()
-                if name == current:
-                    run.text = f"▶ {name}"
-                    run.font.bold = True
-                else:
-                    run.text = name
-            break
-
-
-def add_section_agenda_slide(
-    prs: Presentation, section_name: str, slide_files: list
-) -> None:
-    """Add an agenda slide listing titles extracted from source files."""
-    if not slide_files:
-        return
-    titles = [extract_slide_title(Path(f)) for f in slide_files]
-    add_title_content_slide(prs, section_name, "\n".join(f"- {t}" for t in titles))
-
-
-def build_presentation(yaml_path: Path, output_path: Path) -> None:
-    with open(yaml_path, "r", encoding="utf-8") as f:
-        config = yaml.safe_load(f)
-
-    sections_cfg = config.get("sections", [])
-    all_section_names = [s.get("name", "Unnamed Section") for s in sections_cfg]
-
-    prs = Presentation()
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-
-    prs_el = prs.presentation
-    ns14 = "http://schemas.microsoft.com/office/powerpoint/2010/main"
-    etree.register_namespace("p14", ns14)
-    section_lst_tag = f"{{{ns14}}}sectionLst"
-    section_lst = prs_el.find(section_lst_tag)
-    if section_lst is None:
-        section_lst = etree.SubElement(prs_el, section_lst_tag)
-
-    for section in sections_cfg:
-        section_name = section.get("name", "Unnamed Section")
-        slides = [s for s in (section.get("slides") or []) if s]
-
-        slide_start_idx = len(prs.slides)
-
-        # 1. Module list slide
-        add_module_list_slide(prs, all_section_names, section_name)
-
-        # 2. Section header slide
-        add_section_header_slide(prs, section_name)
-
-        # 3. Section agenda slide (only when source files exist)
-        add_section_agenda_slide(prs, section_name, slides)
-
-        # 4. Content slides
-        for slide_path in slides:
-            slide_file = Path(slide_path)
-            if not slide_file.exists():
-                print(f"  WARNING: not found — {slide_file}")
-                continue
-            md = slide_file.read_text(encoding="utf-8")
-            title, body = parse_slide(md)
-            if body:
-                add_title_content_slide(prs, title or slide_file.stem, body)
-            else:
-                add_title_only_slide(prs, title or slide_file.stem)
-
-        # Register named section in XML
-        slide_end_idx = len(prs.slides)
-        all_sld_ids = list(prs.slides._sldIdLst)
-        section_el = etree.SubElement(
-            section_lst,
-            f"{{{ns14}}}section",
-            attrib={
-                "name": section_name,
-                "id": str(abs(hash(section_name + str(slide_start_idx))) % (10**8)),
-            },
-        )
-        sld_id_lst_section = etree.SubElement(section_el, f"{{{ns14}}}sldIdLst")
-        for sld_el in all_sld_ids[slide_start_idx:slide_end_idx]:
-            etree.SubElement(
-                sld_id_lst_section,
-                f"{{{ns14}}}sldId",
-                attrib={"id": sld_el.get("id")},
-            )
-        if not slides:
-            print(f"  INFO: Section '{section_name}' is empty — only injected slides added")
-
-    prs.save(output_path)
-    print(f"✅ Saved: {output_path}")
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Build PPTX from YAML manifest")
-    parser.add_argument("yaml_path", help="Path to the YAML manifest file")
-    parser.add_argument("output_path", help="Path for the generated PPTX")
-    args = parser.parse_args()
-    build_presentation(Path(args.yaml_path), Path(args.output_path))
-```
+Run `$PPTX_SCRIPT` (`Slides/output/generate_pptx.py`) to produce `$PPTX_OUTPUT`.
 
 ### Execution
 
-After creating `$PPTX_SCRIPT`, run:
-
 ```bash
 pip install python-pptx pyyaml --quiet
-python $PPTX_SCRIPT $YAML_FILE $PPTX_OUTPUT
+python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT
 ```
 
 Report any warnings (missing slide files) and confirm the output path on success.
 
-> **Agent verification (Issue 4)**: Inspect the written `$PPTX_SCRIPT` — confirm no
-> hard-coded `YAML_PATH` or `OUTPUT_PATH` variables exist and the script accepts `yaml_path`
-> and `output_path` as positional arguments. Run `python $PPTX_SCRIPT $YAML_FILE $PPTX_OUTPUT`
+> **Agent verification (Issue 4)**: Run `python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT`
 > and verify the PPTX is created at `$PPTX_OUTPUT`.
 >
 > **Agent verification (Issue 5)**: Open the generated PPTX. For any source slide whose
@@ -472,8 +255,7 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 1. `$OUTPUT_FILE` — merged Marp markdown deck (with injected module list, section header,
    and agenda slides)
-2. `$PPTX_SCRIPT` (`Slides/output/generate_pptx.py`) — PPTX generation script
-3. `$PPTX_OUTPUT` — generated PPTX with named sections
+2. `$PPTX_OUTPUT` — generated PPTX with named sections
 
 ## Section Handling Rules
 
@@ -486,7 +268,7 @@ Report any warnings (missing slide files) and confirm the output path on success
 - Section names in the PPTX match the `name` field in the YAML exactly
 - Slide file paths are resolved relative to the repository root
 
-> **Agent verification (Issue 6)**: Add a section to `$YAML_FILE` with no `slides:` entries.
+> **Agent verification (Issue 6)**: Add a section to `$MANIFEST` with no `slides:` entries.
 > Run the PPTX phase and confirm `INFO: Section '...' is empty — only injected slides added`
 > is printed, and the resulting PPTX contains a named section group with only the module
 > list and section header slides.
@@ -497,12 +279,12 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 Run all checks below after the pipeline completes to confirm spec conformance.
 
-| # | Issue | Check | Pass condition |
-|---|-------|-------|----------------|
-| V1 | Source validation | Phase 0 summary printed before `$OUTPUT_FILE` is written | `Validation complete: N file(s) checked, M warning(s) found.` appears in output |
-| V2 | Code-fence `---` preserved | Merge a source file that contains `---` inside a fenced code block | No unexpected extra slides; the embedded `---` appears verbatim in `$OUTPUT_FILE` |
-| V3 | Output file named correctly | Inspect `$OUTPUT_FILE` path | Filename matches `<course>-<format>-<day>-draft.md` derived from `$YAML_FILE` stem |
-| V4 | Script accepts CLI arguments | Inspect written `$PPTX_SCRIPT` | No hard-coded `YAML_PATH`/`OUTPUT_PATH`; `argparse` with `yaml_path` and `output_path` positional args present |
-| V5 | `Title Only` layout used | Source file with `## heading` and no body content | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
-| V6 | Empty section logged | YAML section with no `slides:` entries | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase |
-| V7 | Slide count reported | Any successful merge run | Output includes `Merged deck: N slide(s) across M section(s).` |
+| #   | Issue                        | Check                                                              | Pass condition                                                                                                 |
+| --- | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| V1  | Source validation            | Phase 0 summary printed before `$OUTPUT_FILE` is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output                                |
+| V2  | Code-fence `---` preserved   | Merge a source file that contains `---` inside a fenced code block | No unexpected extra slides; the embedded `---` appears verbatim in `$OUTPUT_FILE`                              |
+| V3  | Output file named correctly  | Inspect `$OUTPUT_FILE` path                                        | Filename matches `<course>-<format>-<day>-draft.md` derived from `$MANIFEST` stem                              |
+| V4  | Script accepts CLI arguments | Inspect written `$PPTX_SCRIPT`                                     | No hard-coded `YAML_PATH`/`OUTPUT_PATH`; `argparse` with `yaml_path` and `output_path` positional args present |
+| V5  | `Title Only` layout used     | Source file with `## heading` and no body content                  | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content`                       |
+| V6  | Empty section logged         | YAML section with no `slides:` entries                             | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase                          |
+| V7  | Slide count reported         | Any successful merge run                                           | Output includes `Merged deck: N slide(s) across M section(s).`                                                 |
