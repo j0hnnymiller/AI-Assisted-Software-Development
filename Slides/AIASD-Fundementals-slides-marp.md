@@ -74,6 +74,15 @@ Day One: Outline the day’s goals and emphasize participation and hands-on exer
 
 # Agenda
 
+- **Overview** ◀
+- The AI Revolution
+- Introduction to LLMs
+- LLM Architecture & Model Selection
+- GitHub Copilot for Teams
+- Hands-On with GitHub Copilot
+- Mob Programming with mob.sh
+- Software Engineering vs Vibe Coding
+- Wrap-up
 <!--
 Speaker Notes:
 
@@ -94,6 +103,15 @@ Speaker Notes:
 
 # Agenda
 
+- Overview
+- **The AI Revolution** ◀
+- Introduction to LLMs
+- LLM Architecture & Model Selection
+- GitHub Copilot for Teams
+- Hands-On with GitHub Copilot
+- Mob Programming with mob.sh
+- Software Engineering vs Vibe Coding
+- Wrap-up
 <!--
 Speaker Notes:
 
@@ -295,6 +313,15 @@ Benefits
 
 # Agenda
 
+- Overview
+- The AI Revolution
+- **Introduction to LLMs** ◀
+- LLM Architecture & Model Selection
+- GitHub Copilot for Teams
+- Hands-On with GitHub Copilot
+- Mob Programming with mob.sh
+- Software Engineering vs Vibe Coding
+- Wrap-up
 <!--
 Speaker Notes:
 
@@ -414,6 +441,15 @@ Don’ts: Warn against blind acceptance of suggestions, entering sensitive data 
 
 # Agenda
 
+- Overview
+- The AI Revolution
+- Introduction to LLMs
+- **LLM Architecture & Model Selection** ◀
+- GitHub Copilot for Teams
+- Hands-On with GitHub Copilot
+- Mob Programming with mob.sh
+- Software Engineering vs Vibe Coding
+- Wrap-up
 <!--
 Speaker Notes:
 
@@ -549,6 +585,15 @@ A contamination‑free benchmark is designed to eliminate that inflation and giv
 
 # Agenda
 
+- Overview
+- The AI Revolution
+- Introduction to LLMs
+- LLM Architecture & Model Selection
+- **GitHub Copilot for Teams** ◀
+- Hands-On with GitHub Copilot
+- Mob Programming with mob.sh
+- Software Engineering vs Vibe Coding
+- Wrap-up
 <!--
 Speaker Notes:
 
@@ -723,6 +768,15 @@ Point attendees to official docs and FAQs; recommend follow-up reading links on 
 
 # Agenda
 
+- Overview
+- The AI Revolution
+- Introduction to LLMs
+- LLM Architecture & Model Selection
+- GitHub Copilot for Teams
+- **Hands-On with GitHub Copilot** ◀
+- Mob Programming with mob.sh
+- Software Engineering vs Vibe Coding
+- Wrap-up
 <!--
 Speaker Notes:
 
@@ -959,6 +1013,15 @@ Claude Code | Terminal-first AI coding assistant; autonomous repo-wide reasoning
 
 # Agenda
 
+- Overview
+- The AI Revolution
+- Introduction to LLMs
+- LLM Architecture & Model Selection
+- GitHub Copilot for Teams
+- Hands-On with GitHub Copilot
+- **Mob Programming with mob.sh** ◀
+- Software Engineering vs Vibe Coding
+- Wrap-up
 <!--
 Speaker Notes:
 
@@ -1171,6 +1234,15 @@ Objectives
 
 # Agenda
 
+- Overview
+- The AI Revolution
+- Introduction to LLMs
+- LLM Architecture & Model Selection
+- GitHub Copilot for Teams
+- Hands-On with GitHub Copilot
+- Mob Programming with mob.sh
+- **Software Engineering vs Vibe Coding** ◀
+- Wrap-up
 <!--
 Speaker Notes:
 
@@ -1742,6 +1814,15 @@ Intent Rot
 
 # Agenda
 
+- Overview
+- The AI Revolution
+- Introduction to LLMs
+- LLM Architecture & Model Selection
+- GitHub Copilot for Teams
+- Hands-On with GitHub Copilot
+- Mob Programming with mob.sh
+- Software Engineering vs Vibe Coding
+- **Wrap-up** ◀
 <!--
 Speaker Notes:
 

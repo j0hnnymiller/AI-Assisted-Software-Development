@@ -36,32 +36,32 @@ Welcome to this presentation on instruction file applyTo patterns. This is a cri
 **Transition**: "Let's start by understanding what the applyTo field actually does"
 :::
 
-------------------------------------------------------------------------
+---
 
 ## Where `appliesTo` Fits
 
 The filtering mechanism for instruction files
 
-`appliesTo` is a **selector** that determines *when* an instruction file
+`appliesTo` is a **selector** that determines _when_ an instruction file
 is included in the stack.
 
 Common selectors include:
 
--   **repositories** -- include only for specific repos
--   **languages** -- include only for certain languages
--   **filePatterns** -- include only when editing certain files
--   **tools** -- include only when using specific Copilot features
--   **scopes** -- include only in chat, only in editor, etc.
+- **repositories** -- include only for specific repos
+- **languages** -- include only for certain languages
+- **filePatterns** -- include only when editing certain files
+- **tools** -- include only when using specific Copilot features
+- **scopes** -- include only in chat, only in editor, etc.
 
 **Speaker Notes:** `appliesTo` is not a guardrail itself. It's a routing
 rule. It prevents irrelevant instructions from polluting the stack and
 keeps the assistant focused.
 
-------------------------------------------------------------------------
+---
 
 ## How `appliesTo` Interacts with the Stack
 
-Filtering happens *before* merging
+Filtering happens _before_ merging
 
 1.  Copilot discovers all instruction files in scope
 2.  Copilot filters them using `appliesTo`
@@ -141,13 +141,13 @@ The double asterisk wildcard is the universal matcher. Use this for repository-w
 Target specific file types using extension patterns:
 
 ```yaml
-# Single extension
+## Single extension
 applyTo: "**/*.md"
 
-# Multiple extensions (brace expansion)
+## Multiple extensions (brace expansion)
 applyTo: "**/*.{cs,ts,js}"
 
-# Specific file naming pattern
+## Specific file naming pattern
 applyTo: "**/*.instructions.md"
 ```
 
@@ -184,13 +184,13 @@ File extension matching is probably the most common pattern you'll use. The key 
 Limit instructions to specific directories:
 
 ```yaml
-# All files in a directory
+## All files in a directory
 applyTo: "Slides/individual-slides/**"
 
-# Specific file type in directory
+## Specific file type in directory
 applyTo: "src/Features/**/*.cs"
 
-# Multiple directory levels
+## Multiple directory levels
 applyTo: ".github/instructions/**/*.md"
 ```
 
@@ -281,19 +281,19 @@ This slide is your reference guide for glob pattern syntax. Let's walk through e
 From this repository's instruction files:
 
 ```yaml
-# 1. AI Output Standards (Universal)
+## 1. AI Output Standards (Universal)
 applyTo: "**/*"
 
-# 2. Vertical Slice Architecture (Code)
+## 2. Vertical Slice Architecture (Code)
 applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
 
-# 3. Business Rules Documentation
+## 3. Business Rules Documentation
 applyTo: "**/*.{md,txt}"
 
-# 4. Marp Slide Formatting
+## 4. Marp Slide Formatting
 applyTo: "Slides/individual-slides/**"
 
-# 5. Prompt File Authoring
+## 5. Prompt File Authoring
 applyTo: "**/*.prompt.md"
 ```
 
@@ -358,10 +358,10 @@ These are actual examples from the AI-Assisted-Software-Development-Course repos
 **3. Match Scope to Purpose**
 
 ```yaml
-# Architecture → Code files
+## Architecture → Code files
 applyTo: "src/**/*.{cs,ts,js}"
 
-# Formatting → Specific directory
+## Formatting → Specific directory
 applyTo: "Slides/individual-slides/**"
 ```
 
@@ -429,13 +429,13 @@ The pattern should make the instruction's purpose obvious at a glance.
 **Pitfall 3: Overlapping Instructions**
 
 ```yaml
-# File 1
+## File 1
 applyTo: "**/*.cs"  # All C# files
 
-# File 2
+## File 2
 applyTo: "src/**/*.cs"  # C# files in src
 
-# Result: Both apply to src/**/*.cs → potential conflicts
+## Result: Both apply to src/**/*.cs → potential conflicts
 ```
 
 ::: notes
@@ -493,10 +493,10 @@ This is the trickiest pitfall. When multiple instruction files match the same fi
 1. **Use file search to preview matches:**
 
 ```powershell
-# PowerShell
+## PowerShell
 Get-ChildItem -Path . -Filter "*.md" -Recurse
 
-# Bash/Zsh
+## Bash/Zsh
 find . -name "*.md"
 ```
 
@@ -700,8 +700,8 @@ In your instruction file, add a comment in the front matter explaining the patte
 
 ```yaml
 applyTo: "src/Features/**/*.cs"
-# Rationale: Apply vertical slice architecture to feature code only,
-# excluding infrastructure, shared utilities, and tests
+## Rationale: Apply vertical slice architecture to feature code only,
+## excluding infrastructure, shared utilities, and tests
 ```
 
 This helps future developers (including yourself) understand the reasoning.

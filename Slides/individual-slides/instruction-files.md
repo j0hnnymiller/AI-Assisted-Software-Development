@@ -33,14 +33,14 @@ description: Azure best practices for AI development
 applyTo: "**" # File pattern scope
 ---
 
-# Core Instructions
+## Core Instructions
 
 - Use Azure Tools when handling Azure requests
 - Follow security best practices
 - Implement proper error handling
 - Generate comprehensive documentation
 
-# Code Generation Rules
+## Code Generation Rules
 
 - Write tests before implementation
 - Use dependency injection patterns
@@ -68,7 +68,7 @@ security-requirements.instructions.md
 
 ✅ Do This:
 Keep instructions clear and actionable
-Use file patterns (applyTo: '**') for broad scope
+Use file patterns (applyTo: '\*\*') for broad scope
 Version control and document changes
 Test instruction effectiveness regularly
 ❌ Avoid This:
