@@ -130,6 +130,11 @@ During the merge the agent inserts three auto-generated slides at the start of e
 section, **before** any of that section's source content slides. They are produced
 entirely from the manifest data and the source file titles — no content is invented.
 
+**Exception**: For the **first section** in the manifest, **all three injected
+slides are suppressed** (module list, section header, agenda). The first section starts
+directly with the first source content slide. This prevents navigation-heavy opening
+that would precede the welcome slide.
+
 ### 4.1 Module list slide
 
 **One module list slide is inserted at the very start of every section.**
@@ -283,7 +288,18 @@ Each injected slide (module list, section header, section agenda) counts as 1 sl
 
 ## 6. Merge phase — full slide order per section
 
-For each section in the manifest, slides appear in this order in the merged deck:
+**For the first section in the manifest**:
+
+```
+┌──────────────────────────────────────────────┐
+│  1.  Content slides from source file 1               │
+│      (injected slides suppressed)                   │
+│  2.  Content slides from source file 2               │
+│  …                                                   │
+└──────────────────────────────────────────────┘
+```
+
+**For all other sections**, slides appear in this order in the merged deck:
 
 ```
 ┌──────────────────────────────────────────────────────┐
@@ -305,6 +321,11 @@ For each section in the manifest, slides appear in this order in the merged deck
 
 This block repeats for every section. The merged deck begins with the first file's
 front matter and then the first section's block.
+
+> **⚠️ IMPORTANT**: The merged output file (e.g., `Slides/aiasd-311-monday-draft.md`)
+> is a **generated artifact**. Do not manually edit this file. All changes must be made
+> to individual source slide files in `Slides/individual-slides/` or to the manifest YAML
+> structure. Re-run `.github/prompts/merge-marp-decks.prompt.md` to regenerate the deck.
 
 ---
 
