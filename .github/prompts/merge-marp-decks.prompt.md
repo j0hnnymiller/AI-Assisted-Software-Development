@@ -7,9 +7,9 @@ prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 2.1.3
+  version: 2.4.0
   created: 2026-03-12
-  updated: 2026-03-15
+  updated: 2026-03-16
   output_path: Slides/aiasd-311-monday-draft.md
   output_format: markdown
   category: slides
@@ -28,6 +28,10 @@ Merge the Marp slide decks defined in `$MANIFEST` into a single Marp slide deck 
   (e.g. `Slides/aiasd-311-monday.yaml` → `Slides/aiasd-311-monday-draft.md`)
 - `$PPTX_SCRIPT` = `Slides/output/generate_pptx.py`
 - `$PPTX_OUTPUT` = `Slides/output/aiasd-311-monday-draft.pptx`
+
+> **⚠️ IMPORTANT**: `$OUTPUT_FILE` is a **generated artifact**. Do not manually edit this file.
+> All changes must be made to individual source slide files in `Slides/individual-slides/`
+> or to the `$MANIFEST` YAML structure. Re-run this prompt to regenerate the merged deck.
 
 ## Execution Rule
 
@@ -60,11 +64,30 @@ Each section has a `name` and an optional `slides` list. Sections with no slide 
 
 ## Phase 0 — Validate Source Files
 
-Collect the complete list of unique source file paths from `$MANIFEST`, then **read and
-validate all files in parallel** (issue all file reads simultaneously, do not read them one
-at a time). Once all reads are complete, apply the checks below to each file's content.
+Collect the complete list of unique source file paths from `$MANIFEST`, then **validate
+each source file using a subagent**. Launch one subagent per source file — all subagents
+may run concurrently. Each subagent must read the file it is assigned and apply the six
+validation rules listed below, returning a structured result (file path, pass/fail per
+rule, and any warning messages).
 
-Apply the following checks to every source file:
+### Subagent task
+
+For each source file, invoke a subagent with a prompt that instructs it to:
+
+1. Read the entire file content
+2. Apply the six validation rules below
+3. Extract the first `## H2` heading text from the body (after stripping front matter)
+4. Return a JSON-style result containing:
+   - `file`: the source file path
+   - `rules`: an object with keys `1`–`6`, each `true` (pass) or `false` (fail)
+   - `warnings`: a list of human-readable warning strings (empty if all rules pass)
+   - `content`: the full file content (used by Phase 1 — avoids re-reading files)
+   - `first_h2`: the text of the first `## H2` heading, or `null` if none found
+
+> **Why return content?** Phase 1 needs every source file's content for merging.
+> By capturing it here, each file is read exactly once across the entire pipeline.
+
+### Validation rules
 
 | #   | Rule                      | Check                                                                 |
 | --- | ------------------------- | --------------------------------------------------------------------- |
@@ -75,8 +98,10 @@ Apply the following checks to every source file:
 | 5   | **No trailing separator** | File does not end with a bare `---` line                              |
 | 6   | **Encoding**              | No vertical-tab (`\x0b`) characters                                   |
 
-**Parallel read requirement**: All source file reads must be dispatched concurrently before
-any validation logic runs. Do not await each read before starting the next.
+### Collecting results
+
+After all subagents complete, the orchestrating agent collects their results, aggregates
+warnings, and prints the validation summary.
 
 Log a warning for each violation and continue — do not abort. Print a validation summary
 before writing `$OUTPUT_FILE`:
@@ -97,15 +122,22 @@ Validation complete: N file(s) checked, M warning(s) found.
 
 1. Read `$MANIFEST`; collect all sections (names + slide file lists) in manifest order
 2. Collect all section names into a list — used to build every module list slide
-3. For each section, build the section block following the rules below
-4. Concatenate all section blocks (each injected slide and each merged source block
+3. Build a lookup map from Phase 0 subagent results, keyed by file path, containing
+   each file's `content` and `first_h2` — do **not** re-read source files from disk
+4. For each section, build the section block following the rules below
+5. Concatenate all section blocks (each injected slide and each merged source block
    separated by exactly one `\n\n---\n\n`)
-5. Write the result to `$OUTPUT_FILE`
+6. Write the result to `$OUTPUT_FILE`
 
 ### Injected slides
 
 Insert three auto-generated slides at the start of **every** section, before any source
 content slides. They are produced entirely from manifest data and source file titles.
+
+**Exception**: For the **first section** in the manifest, **suppress all three
+injected slides** (module list, section header, agenda). Start the first section directly
+with the first source content slide. This prevents navigation-heavy opening that would
+precede the welcome slide.
 
 #### 1. Module list slide (always, first in every section)
 
@@ -148,12 +180,19 @@ Lists the first `## H2` heading from each source file as a bullet.
 
 Slide title extraction:
 
-1. Strip the YAML front-matter block (`---` … `---`) from the file content
-2. Find the **first `## H2` heading** in the remaining text
-3. Use its text (without `## `) as the title
-4. Fallback: file stem (filename without extension) if no `## H2` is found
+1. Use the `first_h2` value from the Phase 0 subagent result for this file
+2. Fallback: file stem (filename without extension) if `first_h2` is `null`
 
 #### Full slide order per section
+
+**For the first section in the manifest**:
+
+```
+1. Content slides from file 1     (injected slides suppressed)
+2. Content slides from file 2 …
+```
+
+**For all other sections**:
 
 ```
 1. Module list slide              (always)
