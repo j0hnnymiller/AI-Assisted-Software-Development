@@ -107,6 +107,48 @@ Welcome to the course. Use Marp features (--- for new slide) below.
 <!-- Additional slides -->
 ```
 
+## Markdown formatting in slides
+
+**IMPORTANT**: When authoring slide content, use standard markdown formatting syntax. The PPTX generation pipeline automatically renders these formats in PowerPoint:
+
+### Supported formatting
+
+| Markdown Syntax   | Example                                   | PPTX Rendering                                             |
+| ----------------- | ----------------------------------------- | ---------------------------------------------------------- |
+| **Bold text**     | `**Principal Software Engineer at CODE**` | **Principal Software Engineer at CODE** (actual bold font) |
+| **Bold in lists** | `- **Key Point**: explanation`            | • **Key Point** (bold): explanation                        |
+| **Multiple bold** | `This is **bold** and **also bold**`      | This is **bold** (bold) and **also bold** (bold)           |
+
+### Usage guidelines
+
+- Use `**double asterisks**` around text that should appear bold in the PPTX output
+- Bold formatting works in headings, body text, and bullet lists
+- Multiple bold sections on one line are supported
+- The PPTX generator (`Slides/output/generate_pptx.py`) automatically parses bold syntax and applies `font.bold = True` to the appropriate text runs
+
+### Example slide with formatting
+
+```markdown
+---
+marp: true
+---
+
+## About the Instructor
+
+**John Michael Miller**
+**Principal Software Engineer at CODE**
+
+Experience:
+
+- **15+ years** in software development
+- **AI/ML Enthusiast** and practitioner
+- Multiple roles: developer, architect, **DevOps engineer**
+
+Contact: [john.miller@codemag.com](john.miller@codemag.com)
+```
+
+This produces a slide where "John Michael Miller", "Principal Software Engineer at CODE", "15+ years", "AI/ML Enthusiast", and "DevOps engineer" all appear in bold font in the final PowerPoint presentation.
+
 ## Authoring rules and checklist
 
 Before committing or generating slides, ensure:

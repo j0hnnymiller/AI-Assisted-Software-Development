@@ -1,29 +1,12 @@
 ---
-marp: true
-theme: default
-paginate: true
+ai_generated: false
+operator: "johnmillerATcodemag-com"
+source: "johnmillerATcodemag-com"
 ---
 
 ## The AI Revolution?
 
 What hasn't changed and what has.
-
----
-
-## The AI Revolution
-
-“Programming hasn’t changed, but how we go about it has changed, again.”
-AI-assisted development is evolutionary, not revolutionary
-Programming has always been about expressing human intent to machines
-What changes is the sophistication of our tools for expressing intent
-The essence remains: bridging the gap between what we want and what machines can do
-
-::: notes
-What is significant
-
-Natural Language
-Vast amount of knowledge available
-:::
 
 ---
 

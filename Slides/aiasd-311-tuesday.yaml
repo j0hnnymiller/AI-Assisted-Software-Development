@@ -25,16 +25,3 @@ sections:
       - Slides\individual-slides\model-selection-and-comparison.pptx
       - Slides\individual-slides\advanced-context-techniques.md
 
-  - name: Module 4 - Adding AI Guardrails
-    slides:
-      # Add your Module 4 slide files here
-      -
-
-  - name: Module 5 - Managing Context
-    slides:
-      # Add your Module 5 slide files here
-      -
-
-  - name: Module 6 - Copilot for Teams
-    slides:
-      # Add your Module 6 slide files here

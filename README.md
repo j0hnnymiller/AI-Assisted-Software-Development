@@ -93,6 +93,26 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Notable Artifacts
 
+- **Managing Instruction Files & Context Windows** ([`Slides/individual-slides/managing-instruction-files-context-windows.md`](Slides/individual-slides/managing-instruction-files-context-windows.md))
+  - 7-slide Marp deck covering instruction sharing strategy, scoped application patterns, context monitoring, and token tracking
+  - Includes an operational workflow blueprint and implementation checklist
+  - Provenance: [Chat log](ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/summary.md)
+
+- **Exercise: Technology Inventory & Instruction Generation** ([`Slides/individual-slides/exercise-technology-inventory-instruction-generation.md`](Slides/individual-slides/exercise-technology-inventory-instruction-generation.md))
+  - Exercise slide covering technology inventory creation, concurrent background sessions, simultaneous instruction generation, and session management workflows
+  - Template-aligned with objectives, activities, success criteria, and facilitator notes
+  - Provenance: [Chat log](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/summary.md)
+
+- **Organizational vs. Repository Instruction Files Deck** ([`Slides/individual-slides/organizational-vs-repository-instruction-files.md`](Slides/individual-slides/organizational-vs-repository-instruction-files.md))
+  - 7-slide Marp deck covering enterprise-tier capabilities, path-scoped instruction files, and folder-level technology-specific rules
+  - Includes layering and precedence guidance for multi-level instruction governance
+  - Provenance: [Chat log](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/summary.md)
+
+- **Evergreen Software Development Exercise Deck** ([`Slides/individual-slides/evergreen-software-development-exercise-deck.md`](Slides/individual-slides/evergreen-software-development-exercise-deck.md))
+  - Two exercise slides covering evergreen core principles and common failure modes
+  - Template-aligned structure with duration, objectives, activities, success criteria, and speaker notes
+  - Provenance: [Chat log](ai-logs/2026/03/16/evergreen-exercise-deck-20260316/conversation.md) | [Summary](ai-logs/2026/03/16/evergreen-exercise-deck-20260316/summary.md)
+
 - **Prompt Authoring Instructions** ([`.github/instructions/create-prompt.instructions.md`](.github/instructions/create-prompt.instructions.md))
   - Comprehensive guidelines for creating effective, well-structured repository prompts
   - Generated from: [`.github/prompts/prompt-file.instructions.prompt.md`](.github/prompts/prompt-file.instructions.prompt.md)

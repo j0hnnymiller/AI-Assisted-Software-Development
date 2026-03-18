@@ -60,3 +60,5 @@ style: |
 ---
 
 ## Welcome to AI Assisted Software Development
+
+From Code to Copilot

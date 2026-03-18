@@ -59,51 +59,22 @@ style: |
   }
 ---
 
-<!-- _class: lead -->
-
-## Course Modules
-
-- **▶ Intro**
-- Module 1 - AIASD
-- Module 2 - Intro to Copilot
-- Module 3 - Vibbing
-- Module 4 - Adding AI Guardrails
-- Module 5 - Managing Context
-- Module 6 - Copilot for Teams
-
----
-
-<!-- _class: lead -->
-
-# Intro
-
----
-
-## Intro
-
-- Welcome to AI Assisted Software Development
-- John Michael Miller
-- Introductions
-- About CODE
-
----
-
 ## Welcome to AI Assisted Software Development
+
+From Code to Copilot
 
 ---
 
 ## John Michael Miller
 
-👤 **Principal Software Engineer at CODE**
+**Principal Software Engineer at CODE**
+Played roles of developer, architect, devops engineer, platform engineer, test architect, release manager
+AI/ML Enthusiast and advocate for effectively using AI to write code
 
-🏢 Played roles of developer, architect, devops engineer, platform engineer, test architect, release manager
-
-🤖 AI/ML Enthusiast and advocate for effectively using AI to write code
-
-- LinkedIn: [www.linkedin.com/in/johnmichaelmiller](https://www.linkedin.com/in/johnmichaelmiller)
-- Email: [john.miller@codemag.com](mailto:john.miller@codemag.com)
-- Blog: [codemag.com/blog/AIPractitioner](https://codemag.com/blog/AIPractitioner)
-- [AI Practitioner Resources](https://codemag.com/aipractitioner)
+- LinkedIn: [www.linkedin.com/in/johnmichaelmiller](www.linkedin.com/in/johnmichaelmiller)
+- Email: [john.miller@codemag.com](john.miller@codemag.com)
+- Blog: [codemag.com/blog/AIPractitioner](codemag.com/blog/AIPractitioner)
+- [AI Practitioner Resources](codemag.com/aipractitioner)
 
 ---
 
@@ -123,11 +94,23 @@ Day One: Outline the day’s goals and emphasize participation and hands-on exer
 
 ## About CODE
 
-![bg contain](images/CODE-Group.png)
+![](images/CODE-30.jpg){width=100%}
 
 ::: notes
 CODE is a custom software company, a staff augmentation company, CODE Magazine for software developers, and training like this webinar. We've been in business for 30 years and the magazine just hit its 25th anniversary. Visit the website at https://www.codemag.com/ for more details.
 :::
+
+---
+
+## Daily Themes
+
+| Day | Theme |
+|-----|-------|
+| Monday | AI Guardrails, Instructions |
+| Tuesday | AI Guardrails, Prompts |
+| Wednesday | AI Guardrails, Agents |
+| Thursday | AI Assisted Brownfield Software Development |
+| Friday | AI Assisted Greenfield Software Development |
 
 ---
 
@@ -141,7 +124,6 @@ CODE is a custom software company, a staff augmentation company, CODE Magazine f
 - Module 3 - Vibbing
 - Module 4 - Adding AI Guardrails
 - Module 5 - Managing Context
-- Module 6 - Copilot for Teams
 
 ---
 
@@ -400,23 +382,6 @@ What hasn't changed and what has.
 
 ---
 
-## The AI Revolution
-
-“Programming hasn’t changed, but how we go about it has changed, again.”
-AI-assisted development is evolutionary, not revolutionary
-Programming has always been about expressing human intent to machines
-What changes is the sophistication of our tools for expressing intent
-The essence remains: bridging the gap between what we want and what machines can do
-
-::: notes
-What is significant
-
-Natural Language
-Vast amount of knowledge available
-:::
-
----
-
 ## Why AI Assisted Software Development
 
 If used effectively, it will give you superpowers
@@ -651,7 +616,6 @@ It’s the cleanest way to remember the relationship.
 - Module 3 - Vibbing
 - Module 4 - Adding AI Guardrails
 - Module 5 - Managing Context
-- Module 6 - Copilot for Teams
 
 ---
 
@@ -954,7 +918,6 @@ Claude Code | Terminal-first AI coding assistant; autonomous repo-wide reasoning
 - **▶ Module 3 - Vibbing**
 - Module 4 - Adding AI Guardrails
 - Module 5 - Managing Context
-- Module 6 - Copilot for Teams
 
 ---
 
@@ -967,9 +930,10 @@ Claude Code | Terminal-first AI coding assistant; autonomous repo-wide reasoning
 ## Module 3 - Vibbing
 
 - Collaborating on a Solution
-- Multi‑Model Implementation Comparison
 - AI-Assisted CI/CD Pipelines
 - AI-Assisted GitHub Pull Requests
+- Multi‑Model Implementation Comparison
+- Evergreen Software Development - Core Principles
 
 ---
 
@@ -1013,628 +977,1064 @@ The project should be ready to build and run from the command line.
 
 ---
 
-## Exercise: Calculator Project - Setup & Basic Implementation
+## Exercise: Calculator Project - Setup and Basic Implementation
 
 Duration: 45-60 minutes
+
 Objectives
+
 - Use AI to generate starter code for arithmetic operations
-- Understand how to validate AI‑generated logic
+- Understand how to validate AI-generated logic
 - Integrate addition, subtraction, multiplication, and division functions
+
 Activities
+
 1. Project Initialization:
+
 - Prompt AI to create a new project
 - Review generated project structure
 - Verify build configuration
+
 2. Implement Basic Operations:
+
 - Prompt AI to add methods for addition, subtraction, multiplication, and division
+
 3. Review the Code:
-- For correctness and edge cases
+
+- Check correctness and edge cases
+
 4. Build and Run:
+
 - Use Copilot to help with build commands
-- Troubleshoot any compilation errors with Copilot's help
+- Troubleshoot compilation errors with Copilot
 - Run the application
+
 Success Criteria
+
 - Working calculator with 4 basic operations
 - Application compiles and runs successfully
-- You've critically reviewed all generated code
+- Generated code is critically reviewed
+
+::: notes
+
+## Setup and Basic Implementation Exercise Instructions
+
+**Duration:** 45-60 minutes
+**Prerequisites:** Calculator project context available
+
+### Objectives
+
+- Scaffold core operations with AI assistance.
+- Validate generated logic before accepting changes.
+- Deliver a working baseline calculator.
+
+### Activities
+
+- Build project skeleton, implement 4 operations, and verify behavior.
+- Emphasize manual review of AI output before merge.
+
+### Success Criteria
+
+- Four operations work end-to-end.
+- Build is green.
+- Team can explain logic and edge-case handling.
+  :::
 
 ---
 
-## Exercise: Calculator Project – Clear / Reset
+## Exercise: Calculator Project - Clear / Reset
 
 Duration: 15 minutes
+
 Objectives
-- Use AI to scaffold state‑management logic
+
+- Use AI to scaffold state-management logic
 - Implement CE (clear entry) and C (clear all) behaviors
-- Understand how AI can help reason about UI state transitions
+- Understand UI state transitions
+
 Activities
-Prompt AI to outline the difference between CE and C
-Generate code for clearing the current input vs. full state
-Integrate the logic into your calculator’s state object
-Test transitions by simulating user input sequences
+
+1. Ask AI to outline the difference between CE and C
+2. Generate code for clearing current input vs full state
+3. Integrate logic into calculator state object
+4. Test transitions with sample input sequences
+
 Success Criteria
-- - CE clears only the active entry
-- - C resets the entire calculator state
+
+- CE clears only the active entry
+- C resets the entire calculator state
+
+::: notes
+
+## Clear / Reset Exercise Instructions
+
+**Duration:** 15 minutes
+**Prerequisites:** Basic calculator state model
+
+### Objectives
+
+- Separate entry-level clear from full reset behavior.
+- Verify expected transitions from each action.
+
+### Activities
+
+- Use focused prompts and test state transitions quickly.
+
+### Success Criteria
+
+- CE and C behaviors are consistent and explainable.
+  :::
 
 ---
 
-## Exercise: Calculator Project – Decimal Input
+## Exercise: Calculator Project - Decimal Input
 
 Duration: 12 minutes
+
 Objectives
-Use AI to generate input‑validation logic
-Prevent multiple decimal points
-Ensure decimals flow correctly through arithmetic operation
+
+- Use AI to generate input-validation logic
+- Prevent multiple decimal points
+- Ensure decimals flow through arithmetic operations
+
 Activities
-Ask AI to propose a strategy for handling decimal input
-Generate code to block multiple decimals in a single number
-Integrate decimal support into the existing input parser
-Test decimal operations using AI‑generated test cases
+
+1. Ask AI for a decimal input strategy
+2. Generate code to block duplicate decimals in one number
+3. Integrate decimal support into input parser
+4. Test decimal operations with AI-generated test cases
+
 Success Criteria
-Decimal input works without duplication errors
-Arithmetic with decimals produces correct results
-Learner can explain the validation logic
+
+- Decimal input works without duplication errors
+- Arithmetic with decimals is correct
+- Validation logic is explainable
+
+::: notes
+
+## Decimal Input Exercise Instructions
+
+**Duration:** 12 minutes
+**Prerequisites:** Input parser in place
+
+### Objectives
+
+- Implement robust decimal parsing and validation.
+
+### Activities
+
+- Target parser rules, then validate with focused tests.
+
+### Success Criteria
+
+- No duplicate decimal points accepted.
+- Decimal math behaves correctly.
+  :::
 
 ---
 
-## Exercise: Calculator Project – Sign Toggle (+/–)
+## Exercise: Calculator Project - Sign Toggle (+/-)
 
 Duration: 8 minutes
+
 Objectives
-- Use AI to generate logic for toggling numeric sign
-- Understand how sign toggling interacts with current input and stored values
+
+- Use AI to generate sign-toggle logic
+- Understand effect on active input and stored value
+
 Activities
-Ask AI to generate a function that toggles sign on the active value
-Integrate the function into the input workflow
-Test sign toggling before and after entering digits
+
+1. Ask AI to generate toggle-sign function for active value
+2. Integrate into input workflow
+3. Test before and after digit entry
+
 Success Criteria
-- Sign toggle works consistently for integers and decimals
-- Learner can explain how the toggle affects stored vs. active value
+
+- Sign toggle works for integers and decimals
+- Learner can explain stored vs active value impact
+
+::: notes
+
+## Sign Toggle Exercise Instructions
+
+**Duration:** 8 minutes
+**Prerequisites:** Numeric input flow functioning
+
+### Objectives
+
+- Add predictable sign toggling.
+
+### Activities
+
+- Keep implementation minimal and test transitions.
+
+### Success Criteria
+
+- Toggle is stable across value states.
+  :::
 
 ---
 
-## Exercise: Calculator Project – Percentage
+## Exercise: Calculator Project - Percentage
 
 Duration: 15 minutes
+
 Objectives
-- Use AI to clarify how calculators interpret %
+
+- Use AI to clarify percentage interpretation rules
 - Implement percentage logic for common patterns
-- Validate behavior with AI‑generated examples
+- Validate behavior with AI-generated examples
+
 Activities
-Ask AI to explain how % should behave in a standard calculator
-Generate code for:
-X × Y%
-Y + X%
-Y – X%
-3. Test each pattern with AI‑generated sample values
+
+1. Ask AI how percentage should behave in a standard calculator
+2. Generate code for:
+
+- X x Y%
+- Y + X%
+- Y - X%
+
+3. Test each pattern with AI-generated values
+
 Success Criteria
-Percentage operations match standard calculator behavior
-Learner can articulate the interpretation rules for %
+
+- Percentage operations match standard calculator behavior
+- Learner can articulate percentage interpretation rules
+
+::: notes
+
+## Percentage Exercise Instructions
+
+**Duration:** 15 minutes
+**Prerequisites:** Core arithmetic implemented
+
+### Objectives
+
+- Align percentage behavior with user expectations.
+
+### Activities
+
+- Compare generated logic with known calculator semantics.
+
+### Success Criteria
+
+- Three key percentage patterns operate correctly.
+  :::
 
 ---
 
-## Exercise: Calculator Project – Memory Functions (M+, M–, MR, MC)
+## Exercise: Calculator Project - Memory Functions (M+, M-, MR, MC)
 
 Duration: 18 minutes
+
 Objectives
-- Use AI to design a memory subsystem
+
+- Use AI to design memory subsystem
 - Implement memory add, subtract, recall, and clear
-- Validate memory behavior across multiple operations
+- Validate memory across multiple operations
+
 Activities
-Ask AI to propose a memory‑state structure
-Generate functions for M+, M–, MR, MC
-Integrate memory operations into the calculator workflow
-Test memory persistence across multiple calculations
+
+1. Ask AI for memory-state structure
+2. Generate functions for M+, M-, MR, MC
+3. Integrate memory operations into calculator flow
+4. Test memory persistence over sequences
+
 Success Criteria
+
 - Memory functions behave as expected
-- Learner can explain how memory state is stored and updated
+- Learner can explain memory state updates
+
+::: notes
+
+## Memory Functions Exercise Instructions
+
+**Duration:** 18 minutes
+**Prerequisites:** Calculator state architecture defined
+
+### Objectives
+
+- Add reliable memory operations.
+
+### Activities
+
+- Ensure memory state is explicit and testable.
+
+### Success Criteria
+
+- Memory operations are consistent and validated.
+  :::
 
 ---
 
-## Exercise: Calculator Project – Error Handling
+## Exercise: Calculator Project - Error Handling
 
 Duration: 10 minutes
+
 Objectives
+
 - Use AI to identify common error conditions
 - Implement error messages and recovery logic
-- Ensure the calculator resets gracefully after errors
+- Ensure graceful reset after errors
+
 Activities
-Ask AI to list typical calculator errors (e.g., divide by zero)
-Generate code for error detection and display
-Implement a reset path after an error
-Test error scenarios using AI‑generated test cases
+
+1. Ask AI to list calculator errors (for example divide by zero)
+2. Generate error detection and display logic
+3. Implement reset path after an error
+4. Test error scenarios with AI-generated tests
+
 Success Criteria
+
 - Errors are detected and displayed correctly
-- Calculator recovers cleanly after reset
-- Learner can describe the error‑handling flow
+- Calculator recovers cleanly
+- Learner can explain error-handling flow
+
+::: notes
+
+## Error Handling Exercise Instructions
+
+**Duration:** 10 minutes
+**Prerequisites:** Core operations implemented
+
+### Objectives
+
+- Build robust error paths without breaking user flow.
+
+### Activities
+
+- Validate both error detection and post-error recovery.
+
+### Success Criteria
+
+- Error handling is visible, predictable, and recoverable.
+  :::
 
 ---
 
-## Exercise: Calculator Project – Add Trigonometric Functions
+## Exercise: Calculator Project - Add Trigonometric Functions
 
 Duration: 15 minutes
+
 Objectives
-- Integrate trigonometric functions into the calculator’s operation set
-- Use AI to generate math‑library wrappers and input‑parsing logic
-- Ensure correct handling of degrees vs. radians
+
+- Integrate trigonometric operations
+- Use AI for math wrappers and parsing logic
+- Handle degrees vs radians correctly
+
 Activities
-Ask AI to generate functions for sin, cos, and tan using your language’s math library
-Prompt AI to propose a strategy for handling degree/radian mode
-Implement UI bindings or command triggers for each trig function
-Use AI to generate a table of sample inputs and expected outputs
+
+1. Ask AI to generate sin, cos, tan functions using language math library
+2. Ask AI for degree/radian mode strategy
+3. Implement UI bindings or command triggers
+4. Generate sample input/output table with AI and validate
+
 Success Criteria
-- Trig functions compute correct values in the selected angle mode
-- Degree/radian mode switching works consistently
-- UI or command triggers correctly call the trig functions
-- Learner can explain how AI‑generated code was validated and refine
+
+- Trig results are correct for selected angle mode
+- Degree/radian switching works consistently
+- UI or commands correctly call trig functions
+- Learner can explain validation and refinement steps
+
+::: notes
+
+## Trigonometric Functions Exercise Instructions
+
+**Duration:** 15 minutes
+**Prerequisites:** Advanced operation framework available
+
+### Objectives
+
+- Add trig support with explicit angle-mode handling.
+
+### Activities
+
+- Implement and validate both behavior and mode switching.
+
+### Success Criteria
+
+- Trig pipeline works end-to-end with tested expectations.
+  :::
 
 ---
 
-## Exercise: Calculator Project – UI
+## Exercise: Calculator Project - UI
 
 Duration: 15 minutes
+
 Objectives
+
 - Use AI to scaffold UI event handlers
-- Connect buttons to logic functions
-- Validate end‑to‑end user workflow
+- Connect UI controls to logic functions
+- Validate end-to-end workflow
+
 Activities
-Ask AI to generate event‑binding code for numeric and operator buttons
-Integrate logic functions from previous labs
-Test a full workflow:
+
+1. Ask AI to generate event-binding code for numeric/operator controls
+2. Integrate logic functions from prior exercises
+3. Test full workflow:
+
 - Enter decimal
 - Toggle sign
 - Apply percentage
 - Store result in memory
+
 Success Criteria
-- UI correctly triggers all calculator functions
-- Full workflow completes without errors
-- Learner can explain how UI events map to logic functions
+
+- UI triggers all calculator functions correctly
+- End-to-end workflow completes without errors
+- Learner can explain UI-to-logic mapping
+
+::: notes
+
+## UI Exercise Instructions
+
+**Duration:** 15 minutes
+**Prerequisites:** Core logic stable and testable
+
+### Objectives
+
+- Wire UI interactions cleanly to existing logic.
+
+### Activities
+
+- Prioritize event mapping clarity over visual polish.
+
+### Success Criteria
+
+- Workflow passes from input to output with no breaks.
+  :::
 
 ---
 
 ## Exercise: Calculator Project - Testing
 
 Duration: 45-60 minutes
+
 Objectives
+
 - Generate unit tests with AI assistance
 - Identify quality issues in generated tests
-- Understand the importance of reviewing AI-generated tests
+- Understand why generated tests require review
+
 Activities
+
 1. Generate Initial Tests:
+
 - Prompt: "Create unit tests for the calculator operations"
 - Review generated test structure
-- Critical Review: Are tests calling your calculator code?
-2. Fix Test Issues (Replicating Session Demo):
-- If tests are too simple (like `1 + 1 = 2` without calling calculator):
-- Identify the problem
-- Ask Copilot to fix it: "Update tests to call Calculator class methods"
-- Verify tests now test actual implementation
+- Verify tests call calculator code
+
+2. Fix Test Issues:
+
+- If tests are trivial (for example 1 + 1 only), identify issue
+- Prompt: "Update tests to call Calculator class methods"
+- Verify improved test quality
+
 3. Run Tests:
+
 - Execute test suite
-- Review test output
-- Debug any failing tests with Copilot's help
+- Review output
+- Debug failing tests with Copilot
+
 4. Add Edge Cases:
+
 - Prompt: "Add tests for edge cases like division by zero"
-- Verify exception handling tests are correct
+- Verify exception handling tests
+
 Success Criteria
-- Test suite with minimum 8 test cases
-- All tests call actual calculator methods (not just language arithmetic)
-- Tests include edge cases and error conditions
+
+- Minimum 8 test cases
+- Tests call actual calculator methods
+- Edge cases and error conditions included
 - All tests pass
+
+::: notes
+
+## Testing Exercise Instructions
+
+**Duration:** 45-60 minutes
+**Prerequisites:** Calculator logic implemented
+
+### Objectives
+
+- Improve test quality, not just test count.
+
+### Activities
+
+- Review generated tests critically before accepting.
+
+### Success Criteria
+
+- Test suite is meaningful, comprehensive, and green.
+  :::
 
 ---
 
 ## Exercise: Code Coverage
 
 Duration: 30-40 minutes
+
 Objectives
+
 - Set up code coverage reporting
-- Interpret coverage results
-- Improve test coverage based on gaps
+- Interpret coverage data
+- Improve coverage based on identified gaps
+
 Activities
+
 1. Enable Coverage Collection:
+
 - Prompt: "Add code coverage reporting to my test project"
-- Review package dependencies added
-- Handle any NuGet/dependency issues with Copilot's help
+- Review dependencies added
+- Resolve NuGet/dependency issues with Copilot
+
 2. Generate Coverage Report:
-- Run tests with coverage enabled
-- Review coverage percentage
-- Identify uncovered code paths
+
+- Run tests with coverage
+- Review percentage
+- Identify uncovered paths
+
 3. Improve Coverage:
+
 - Add tests for uncovered methods
-- Re-run coverage to verify improvement
-- Discuss: Is 100% coverage always necessary?
+- Re-run coverage and verify improvement
+- Discuss if 100% coverage is necessary
+
 Success Criteria
-- Code coverage reporting successfully configured
-- Can generate and read coverage reports
-- Achieved reasonable coverage (>80% line coverage)
-- Understand what coverage metrics mean
-Discussion Points
-- Feature coverage vs. code coverage (as raised by Tom in the session)
-- When is test coverage sufficient?
-- Quality of tests vs. quantity
+
+- Coverage reporting configured successfully
+- Coverage reports can be generated and interpreted
+- Reasonable coverage achieved (>80% line coverage)
+- Learner understands what coverage metrics mean
+
+::: notes
+
+## Code Coverage Exercise Instructions
+
+**Duration:** 30-40 minutes
+**Prerequisites:** Stable test suite
+
+### Objectives
+
+- Use coverage as a guide for targeted testing.
+
+### Activities
+
+- Treat uncovered code as investigation points, not automatic defects.
+
+### Success Criteria
+
+- Coverage setup works and leads to actionable improvements.
+  :::
 
 ---
 
-## Exercise: Dependency Management & Troubleshooting
+## Exercise: Dependency Management and Troubleshooting
 
 Duration: 30-40 minutes
+
 Objectives
+
 - Use Copilot to resolve dependency issues
 - Handle package restoration problems
-- Practice iterative problem-solving with AI
+- Practice iterative AI-assisted troubleshooting
+
 Activities
+
 1. Simulate or Identify a Dependency Issue:
-- Introduce a version conflict (or use existing issue)
+
+- Introduce version conflict or use an existing issue
 - Prompt: "I'm getting [specific error]. How do I fix it?"
-2. Follow Copilot's Guidance:
+
+2. Follow Copilot Guidance:
+
 - Review suggested solutions
-- Evaluate multiple approaches if offered
-- Choose best solution collaboratively
+- Evaluate alternatives
+- Select best option collaboratively
+
 3. Iterative Resolution:
-- If first solution doesn't work, provide error details
-- Continue conversation until resolved
-4. Common Issues to Practice:
+
+- Provide new error details when needed
+- Continue until resolved
+
+4. Practice common issues:
+
 - NuGet package source configuration
 - MSTest adapter version conflicts
 - .NET SDK targeting issues
 - Package restoration failures
+
 Success Criteria
-- Successfully resolved at least one dependency issue
-- Understand how to provide error context to Copilot
-- Practiced iterative problem-solving approach
-Real-World Scenario
-- This lab replicates the exact dependency challenges encountered in the training session:
-- Updating test project to target .NET 8
-- Resolving NuGet.org package source mapping
-- MSTest adapter compatibility issues
+
+- At least one dependency issue resolved
+- Learner can provide useful error context to Copilot
+- Iterative problem-solving pattern demonstrated
+
+::: notes
+
+## Dependency Troubleshooting Exercise Instructions
+
+**Duration:** 30-40 minutes
+**Prerequisites:** Build/test environment configured
+
+### Objectives
+
+- Build confidence in diagnosing and fixing dependency failures.
+
+### Activities
+
+- Emphasize iterative debugging and evidence-based prompts.
+
+### Success Criteria
+
+- Issue resolution is repeatable and well-documented.
+  :::
 
 ---
 
-## Exercise: Best Practices Review & Code Quality
+## Exercise: Best Practices Review and Code Quality
 
 Duration: 30-40 minutes
+
 Objectives
-- Apply best practices learned in session
+
+- Apply best practices from session
 - Review code quality systematically
-- Identify and fix issues
+- Identify and implement meaningful improvements
+
 Activities
+
 1. Code Quality Check:
+
 - Prompt: "Suggest improvements for code quality and maintainability"
 - Evaluate suggestions critically
-- Implement valuable improvements
+- Implement high-value improvements
+
 Success Criteria
-- Comprehensive documentation added
-- Critically evaluated all AI suggestions
+
+- Documentation and maintainability improved
+- AI suggestions are critically evaluated before adoption
+
+::: notes
+
+## Best Practices Review Exercise Instructions
+
+**Duration:** 30-40 minutes
+**Prerequisites:** Working project baseline
+
+### Objectives
+
+- Turn AI suggestions into intentional quality improvements.
+
+### Activities
+
+- Keep only changes with clear maintainability value.
+
+### Success Criteria
+
+- Improvements are justified and validated.
+  :::
 
 ---
 
 ## Exercise: Model Comparisons
 
 Duration: 20-30 minutes
+
 Objectives
+
 - Compare outputs from different AI models
-- Understand when to use premium vs standard models
-- Monitor token usage
+- Understand premium vs standard model trade-offs
+- Monitor token usage impact
+
 Activities
+
 1. Same Prompt, Different Models:
-- Choose a coding task (e.g., "implement bubble sort")
-- Try with GPT-4 (standard - unlimited)
-- Try with Claude Sonnet (premium - 1x token)
-- Compare results for quality, style, completeness
+
+- Use one coding task (for example implement bubble sort)
+- Compare standard and premium model outputs
+
 2. Token Usage Analysis:
-- Check premium token bar before and after
-- Calculate tokens consumed
-- Discuss: Was premium model worth the cost?
+
+- Check premium token bar before/after
+- Estimate consumed tokens
+- Discuss value vs cost
+
 3. Best Use Cases:
-- Identify tasks where standard models suffice
-- Identify tasks requiring premium models
-- Create personal guidelines for model selection
+
+- Identify tasks for standard vs premium models
+- Create model selection guidelines
+
 4. Ask Mode Advantage:
-- Use Ask mode with premium models (no token cost)
-- Compare to Agent mode token consumption
+
+- Use Ask mode with premium model
+- Compare with Agent mode token behavior
+
 Success Criteria
-- Compared at least 2 different models
-- Understand token consumption impact
-- Can make informed model selection decisions
-Token Economics
-- Standard models (unlimited): ChatGPT-4
-- Premium tokens (counted):
-- Claude Haiku 4.5: 1/3 token per request
-- Claude Sonnet: 1x token per request
-- O2 mini: 1/3 token per request
-- New models: May be 10x when first released
+
+- At least two models compared
+- Token consumption trade-offs understood
+- Learner can choose model by task type
+
+::: notes
+
+## Model Comparisons Exercise Instructions
+
+**Duration:** 20-30 minutes
+**Prerequisites:** Access to multiple model options
+
+### Objectives
+
+- Build practical model-selection judgment.
+
+### Activities
+
+- Compare quality, speed, and token cost for same prompt.
+
+### Success Criteria
+
+- Team can explain when premium models are worth it.
+  :::
 
 ---
 
-## Exercise: Calculator Project – Encapsulate Core Logic
+## Exercise: Calculator Project - Encapsulate Core Logic
 
 Duration: 15 minutes
+
 Objectives
-Separate UI concerns from computational logic
-Use AI to scaffold a standalone “core logic” module/class
-Ensure the UI communicates with the logic layer through a clean, well‑defined API
-Validate that encapsulation improves testability and maintainability
+
+- Separate UI concerns from computational logic
+- Use AI to scaffold standalone core logic module/class
+- Ensure UI communicates through a clean API
+- Validate improved testability and maintainability
+
 Activities
-1. - Ask AI to generate a dedicated component (e.g., CalculatorEngine, CalculatorCore) containing:
+
+1. Ask AI to generate dedicated component (for example CalculatorEngine or CalculatorCore) containing:
+
 - Arithmetic operations
 - State management
-- Trig/percentage/memory logic (if implemented)
-2. Review the AI‑generated API surface and refine naming, inputs, and return types
-3. Replace UI‑embedded logic with calls into the new component
+- Trig/percentage/memory logic where implemented
+
+2. Review and refine API surface (naming, inputs, outputs)
+3. Replace UI-embedded logic with component calls
+
 Success Criteria
-- All calculator features run through the external logic component
-- UI contains no computational logic — only event handling and display updates
-- Learner can explain how encapsulation improves modularity, reuse, and AI‑assisted development workflow
+
+- All features route through external logic component
+- UI contains only event handling/display updates
+- Learner can explain modularity and reuse benefits
+
+::: notes
+
+## Encapsulate Core Logic Exercise Instructions
+
+**Duration:** 15 minutes
+**Prerequisites:** UI and logic currently coupled
+
+### Objectives
+
+- Improve architecture through separation of concerns.
+
+### Activities
+
+- Create clear, testable boundaries between UI and engine.
+
+### Success Criteria
+
+- Core logic is isolated and reusable.
+  :::
 
 ---
 
 ## Exercise: Security Review
 
 Duration: 30-40 minutes
+
 Objectives
-- Apply best practices learned in session
-- Review code quality systematically
-- Identify and fix issues
+
+- Systematically review code for security issues
+- Address discovered vulnerabilities
+- Strengthen input validation and safe patterns
+
 Activities
+
 1. Security Review:
+
 - Prompt: "Review this code for security vulnerabilities"
-- Address any identified issues
+- Address identified issues
 - Add input validation where missing
+
 Success Criteria
-- Code has no obvious security issues
-- Critically evaluated all AI suggestions
+
+- No obvious security issues remain
+- AI recommendations are critically evaluated and validated
+
+::: notes
+
+## Security Review Exercise Instructions
+
+**Duration:** 30-40 minutes
+**Prerequisites:** Functional calculator project
+
+### Objectives
+
+- Apply practical security checks to working code.
+
+### Activities
+
+- Validate fixes with tests and review, not assumptions.
+
+### Success Criteria
+
+- Security posture improves with documented rationale.
+  :::
 
 ---
 
 ## Exercise: Documentation
 
 Duration: 30-40 minutes
+
 Objectives
-- Add documentation to a project
-- Update existing documentation
+
+- Add and improve project documentation
+- Review AI-generated docs for accuracy and completeness
+
 Activities
+
 1. Documentation:
+
 - Ask Copilot to generate XML/doc comments
-- Review for accuracy and completeness
-- Add README with usage instruction
-- Ask AI to update existing documentation
+- Review and refine for correctness
+- Add README usage instructions
+- Ask AI to update existing documentation sections
+
 Success Criteria
-- Comprehensive documentation added
-- Critically evaluated all AI suggestions
+
+- Documentation is comprehensive and accurate
+- AI-generated content is critically reviewed before acceptance
+
+::: notes
+
+## Documentation Exercise Instructions
+
+**Duration:** 30-40 minutes
+**Prerequisites:** Stable code to document
+
+### Objectives
+
+- Produce maintainable, user-focused documentation.
+
+### Activities
+
+- Treat generated docs as drafts requiring technical review.
+
+### Success Criteria
+
+- Docs are complete, correct, and actionable.
+  :::
 
 ---
 
 ## Exercise: Refactoring
 
 Duration: 30-40 minutes
+
 Objectives
-- Apply best practices learned in session
-- Review code quality systematically
-- Identify and fix issues
+
+- Apply refactoring best practices
+- Compare alternative implementations
+- Evaluate trade-offs before choosing changes
+
 Activities
+
 1. Refactoring Exercise:
-- Ask Copilot for alternative implementation approaches
-- Compare different solutions
-- Discuss trade-offs (as mentioned in session)
+
+- Ask Copilot for alternative implementations
+- Compare readability, complexity, and maintainability
+- Discuss trade-offs and select best approach
+
 Success Criteria
-- Code has no obvious security issues
-- Comprehensive documentation added
+
 - At least one refactoring improvement implemented
-- Critically evaluated all AI suggestions
-
----
-
-## Evergreen Software Development - Core Principles
-
-Intent‑First Design
-- Define the system’s purpose, invariants, and boundaries before writing code to ensure long‑term clarity.
-Stable Interfaces, Evolving Internals
-- Keep contracts predictable while allowing implementations to improve continuously.
-Continuous Regeneration with Guardrails
-- Use AI to rewrite or extend components safely, backed by tests, specs, and architectural constraints.
-Modular, Replaceable Components
-- Structure the system so any part can be regenerated, swapped, or upgraded without cascading breakage.
-Lifecycle Governance
-- Maintain quality through automated tests, versioning discipline, and human‑in‑the‑loop validation.
-
----
-
-## Software Engineering vs “Vibe Coding”
-
-Engineering approach: systematic, tested, documented, maintainable
-Vibe coding: “it works” mentality, technical debt accumulation
-AI should enhance engineering practices, not replace them
-Proper testing, code review, and architecture still essential
+- Code quality and maintainability improved
+- AI suggestions critically evaluated
 
 ::: notes
-Contrast disciplined engineering practices with quick “vibe” coding; stress that AI should augment engineering rigor, not replace it.
-:::
+
+## Refactoring Exercise Instructions
+
+**Duration:** 30-40 minutes
+**Prerequisites:** Existing implementation with improvement opportunities
+
+### Objectives
+
+- Use AI for option generation, then apply engineering judgment.
+
+### Activities
+
+- Compare alternatives using explicit criteria.
+
+### Success Criteria
+
+- Selected refactor improves clarity without regressions.
+  :::
 
 ---
 
-## Why Software Fails to Be Evergreen
+## Exercise: Test Coverage Improvement
 
-Intent Rot
-- The original purpose, constraints, and invariants are undocumented or lost, making safe regeneration impossible.
-Unstable or Leaky Interfaces
-- APIs, data contracts, and boundaries change unpredictably, causing cascading breakage when internals evolve.
-Tightly Coupled Architecture
-- Components depend on each other’s internal details, preventing isolated regeneration or replacement.
-Insufficient Guardrails
-- Missing tests, specs, or validation layers mean AI‑assisted regeneration can’t be trusted to preserve behavior.
-One‑Off Patches and Drift
-- Ad‑hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
+Duration: 30-45 minutes
 
----
-
-## Multi‑Model Implementation Comparison
-
-Implementing changes with different AI models
-Comparing approaches and outcomes
-Risk assessment and quality evaluation
-Best practice synthesis
-Exercises for hands‑on practice
-
-::: notes
-Introduce this module as a way to help teams understand how different AI models behave when given the same task. Emphasize that multi‑model comparison is a powerful guardrail: it reduces hallucinations, improves quality, and helps teams choose the right model for the right job.
-:::
-
----
-
-## Implementing Changes With Different AI Models
-
-Why use multiple models?
-Different reasoning styles
-Different strengths (refactoring, documentation, architecture)
-Cross‑validation reduces risk
-Helps detect missing context or contradictions
-Typical use cases
-Refactoring comparisons
-Documentation consistency checks
-Architecture proposal validation
-
-::: notes
-Explain that no single model is perfect. Using multiple models gives teams a broader perspective and helps catch errors or blind spots that one model alone might miss.
-:::
-
----
-
-## Comparing Approaches & Outcomes
-
-What to compare
-Code structure and clarity
-Architectural alignment
-Test quality
-Documentation completeness
-Risk level of proposed changes
-Benefits
-Identifies the safest implementation
-Surfaces hidden assumptions
-Highlights model‑specific biases
-
-::: notes
-Encourage participants to treat model outputs like multiple drafts from different engineers. The goal is not to pick a winner — it’s to synthesize the best ideas.
-:::
-
----
-
-## Risk Assessment & Quality Evaluation
-
-Risk indicators
-Missing tests
-Large or unnecessary refactors
-Violations of instruction files
-Unclear or undocumented behavior
-Quality indicators
-Small, incremental changes
-Clear reasoning
-Strong test coverage
-Alignment with evergreen principles
-
-::: notes
-Reinforce that risk assessment is essential in brownfield systems. Even if a model produces elegant code, it may be too risky without proper guardrails.
-:::
-
----
-
-## Best Practice Synthesis
-
-Combine the strengths of each model
-Use one model for architecture
-Another for implementation
-Another for documentation
-Cross‑validate tests and reasoning
-Outcome
-Higher quality
-Lower risk
-More predictable modernization
-
-::: notes
-Explain that synthesis is the real power of multi‑model workflows. Teams can build a composite solution that is better than any single model’s output.
-:::
-
----
-
-## Exercise: Prompt Multiple Models to Address Technical Debt
-
-Duration
-15 minutes
 Objectives
-Compare outputs from different models
-Identify strengths and weaknesses
-Evaluate risk and quality
+- Analyze code coverage reports
+- Use Copilot to intelligently add tests
+- Achieve target coverage percentage
+- Balance quantity vs. quality of tests
+
 Activities
-Select a small technical debt item.
-Prompt two or more models to propose a fix.
-Compare outputs for:
-- Safety
-- Clarity
-- Test coverage
-- Architectural alignment
-Synthesize the best elements into a final solution.
+1. Review Current Coverage:
+  - Run tests with coverage reporting
+  - Identify uncovered code paths
+  - Analyze coverage percentage by file/class
+2. Targeted Test Generation:
+  - Prompt: "Add tests to increase code coverage to [X]%"
+  - Observe how Copilot identifies gaps
+  - Review generated tests for quality
+3. Strategic Coverage Improvement:
+  - Prompt: "Add tests for edge cases in division operation"
+  - Prompt: "Add tests for corner cases like divide by zero"
+  - Prompt: "Add integration tests for evaluate arithmetic method"
+4. Verify Test Quality:
+  - Confirm tests call real implementation code
+  - Confirm tests verify expected behavior, not just execution
+  - Confirm edge cases are properly handled
+5. Re-run Coverage:
+  - Execute test suite with coverage
+  - Compare before/after percentages
+  - Identify remaining gaps
+
 Success Criteria
-Differences between models are clearly identified
-Risks and strengths are evaluated
-Final synthesized solution is safe and incremental
-Provenance metadata is included
+- Code coverage increased by at least 20 percentage points
+- All new tests are meaningful and test actual implementation
+- Tests include edge cases and error conditions
+- Coverage report shows improved metrics
+- Understanding of test quality vs. quantity trade-offs
 
 ::: notes
-Encourage participants to think like reviewers comparing multiple PRs. The goal is to understand model behavior, not to pick a favorite.
+## Test Coverage Improvement Exercise Instructions
+
+**Duration:** 30-45 minutes
+**Prerequisites:** Lab 1 completed, existing test suite
+
+### Objectives
+
+- Analyze code coverage reports
+- Use Copilot to intelligently add tests
+- Achieve target coverage percentage
+- Balance quantity vs. quality of tests
+
+### Activities
+
+1. Review current coverage metrics and identify weak areas by file/class.
+2. Use Copilot prompts to generate targeted tests for uncovered code paths.
+3. Improve strategically with edge-case and integration-focused prompts.
+4. Validate test quality to ensure behavior is truly verified.
+5. Re-run coverage and compare before/after outcomes.
+
+### Success Criteria
+
+- Coverage increases by at least 20 percentage points.
+- New tests are meaningful and exercise actual implementation logic.
+- Edge cases and error conditions are covered.
+- Coverage reporting clearly shows improvement.
+- Participants can explain quality vs. quantity trade-offs.
+
+### Key Learning Point
+
+As discovered in the session, asking Copilot to "increase coverage to 50%" can work because it can intelligently identify which code paths need testing. This can be more efficient than manually finding every gap, but quality checks are still required.
 :::
 
 ---
 
-## Exercise: Assigning an Issue to Multiple Models
+## Exercise: Lab 3 - Test-Driven Development (TDD) with Copilot
 
-Duration
-10 minutes
+Duration: 45-60 minutes
+
 Objectives
-Practice delegating the same issue to different models
-Evaluate how each model interprets constraints
-Identify missing context
+- Practice TDD workflow with AI assistance
+- Write failing tests before implementation
+- Use tests to drive design decisions
+- Understand red-green-refactor cycle
+
 Activities
-Create a GitHub‑style issue describing a technical debt item.
-Assign the issue to two different models.
-Compare their proposed remediation plans.
-Identify missing context or contradictions.
+1. Define New Feature:
+  - Choose a feature (for example, memory operations for calculator)
+  - Store current result (ANS/answer functionality)
+  - Recall previous result
+  - Handle "ANS + 5" style operations
+2. Write Failing Tests First:
+  - Prompt: "Using TDD, create tests for a memory/answer feature in the calculator. DO NOT implement the feature yet."
+  - Review generated tests
+  - Verify tests reference methods that do not exist yet
+3. Run Tests (Expect Failures):
+  - Execute test suite
+  - Observe compilation errors or test failures
+  - Document what is missing
+4. Implement Feature to Pass Tests:
+  - Prompt: "Implement the memory/answer feature to make the tests pass"
+  - Review generated implementation
+  - Run tests again
+  - Verify all tests now pass
+5. Refactor:
+  - With tests passing, ask for improvements
+  - Prompt: "Refactor the answer implementation for better readability"
+  - Verify tests still pass after refactoring
+
 Success Criteria
-Issue is clear and well‑structured
-Each model produces a distinct approach
-Missing context is identified and documented
-A preferred plan is selected based on safety and clarity
+- Tests written before implementation
+- Initial test run shows failures (red phase)
+- Implementation makes all tests pass (green phase)
+- Code refactored while maintaining passing tests
+- Understanding of TDD benefits and workflow
 
 ::: notes
-This exercise helps participants see how different models interpret the same instructions — a key skill for multi‑model workflows.
-:::
+## Lab 3 - Test-Driven Development (TDD) with Copilot Exercise Instructions
 
----
+**Duration:** 45-60 minutes
+**Prerequisites:** Understanding of TDD principles
 
-## Exercise: Delegating Work to Multiple Models
+### Objectives
 
-Duration
-20 minutes
-Objectives
-Practice multi‑model delegation
-Evaluate multi‑step reasoning
-Synthesize best practices into a unified plan
-Activities
-Select a multi‑step modernization task.
-Ask multiple models to:
-- Analyze the problem
-- Propose a remediation plan
-- Suggest tests
-- Suggest documentation updates
-Compare the outputs.
-Synthesize a final, safe, incremental plan.
-Success Criteria
-Multi‑model differences are clearly understood
-Final plan is incremental, reversible, and well‑tested
-Documentation and provenance are included
-Risks are identified and mitigated
+- Practice TDD workflow with AI assistance
+- Write failing tests before implementation
+- Use tests to drive design decisions
+- Understand red-green-refactor cycle
 
-::: notes
-This exercise builds confidence in orchestrating multiple models as collaborators. The goal is synthesis, not competition.
+### Activities
+
+1. Select a small feature and define expected behavior.
+2. Ask Copilot for tests only, and confirm the implementation is still missing.
+3. Run tests and capture failures to validate the red phase.
+4. Implement the minimum code required to satisfy tests.
+5. Refactor for readability and maintainability while keeping tests green.
+
+### Success Criteria
+
+- Tests are authored before implementation code.
+- The first execution clearly fails (red).
+- Feature implementation makes tests pass (green).
+- Refactoring preserves passing tests.
+- Participants can explain the value of TDD in AI-assisted development.
+
+### TDD Cycle
+
+1. **Red:** Write a failing test.
+2. **Green:** Write minimal code to make it pass.
+3. **Refactor:** Improve code while keeping tests green.
 :::
 
 ---
@@ -1819,7 +2219,6 @@ Maintenance is where AI pays long-term dividends. Demo: paste a failing workflow
 AI generates caller and callee in one prompt
 
 ```yaml
-# .github/workflows/reusable-test.yml
 on:
   workflow_call:
     inputs:
@@ -2022,7 +2421,6 @@ GitHub Copilot can **draft your PR description** based on your diff:
 Getting great AI output starts with **good context**:
 
 ```markdown
-# Good PR Description Prompt Pattern
 
 ## What changed
 
@@ -2161,7 +2559,6 @@ AI accelerates **addressing reviewer comments**:
 Integrate AI into your **CI/CD pipeline**:
 
 ```yaml
-# .github/workflows/pr-review.yml
 - name: Copilot Code Review
   uses: github/copilot-code-review@v1
 
@@ -2322,6 +2719,207 @@ Integrate AI into your **CI/CD pipeline**:
 
 ---
 
+## Multi‑Model Implementation Comparison
+
+Implementing changes with different AI models
+Comparing approaches and outcomes
+Risk assessment and quality evaluation
+Best practice synthesis
+Exercises for hands‑on practice
+
+::: notes
+Introduce this module as a way to help teams understand how different AI models behave when given the same task. Emphasize that multi‑model comparison is a powerful guardrail: it reduces hallucinations, improves quality, and helps teams choose the right model for the right job.
+:::
+
+---
+
+## Implementing Changes With Different AI Models
+
+Why use multiple models?
+Different reasoning styles
+Different strengths (refactoring, documentation, architecture)
+Cross‑validation reduces risk
+Helps detect missing context or contradictions
+Typical use cases
+Refactoring comparisons
+Documentation consistency checks
+Architecture proposal validation
+
+::: notes
+Explain that no single model is perfect. Using multiple models gives teams a broader perspective and helps catch errors or blind spots that one model alone might miss.
+:::
+
+---
+
+## Comparing Approaches & Outcomes
+
+What to compare
+Code structure and clarity
+Architectural alignment
+Test quality
+Documentation completeness
+Risk level of proposed changes
+Benefits
+Identifies the safest implementation
+Surfaces hidden assumptions
+Highlights model‑specific biases
+
+::: notes
+Encourage participants to treat model outputs like multiple drafts from different engineers. The goal is not to pick a winner — it’s to synthesize the best ideas.
+:::
+
+---
+
+## Risk Assessment & Quality Evaluation
+
+Risk indicators
+Missing tests
+Large or unnecessary refactors
+Violations of instruction files
+Unclear or undocumented behavior
+Quality indicators
+Small, incremental changes
+Clear reasoning
+Strong test coverage
+Alignment with evergreen principles
+
+::: notes
+Reinforce that risk assessment is essential in brownfield systems. Even if a model produces elegant code, it may be too risky without proper guardrails.
+:::
+
+---
+
+## Best Practice Synthesis
+
+Combine the strengths of each model
+Use one model for architecture
+Another for implementation
+Another for documentation
+Cross‑validate tests and reasoning
+Outcome
+Higher quality
+Lower risk
+More predictable modernization
+
+::: notes
+Explain that synthesis is the real power of multi‑model workflows. Teams can build a composite solution that is better than any single model’s output.
+:::
+
+---
+
+## Exercise: Prompt Multiple Models to Address Technical Debt
+
+Duration
+15 minutes
+Objectives
+Compare outputs from different models
+Identify strengths and weaknesses
+Evaluate risk and quality
+Activities
+Select a small technical debt item.
+Prompt two or more models to propose a fix.
+Compare outputs for:
+- Safety
+- Clarity
+- Test coverage
+- Architectural alignment
+Synthesize the best elements into a final solution.
+Success Criteria
+Differences between models are clearly identified
+Risks and strengths are evaluated
+Final synthesized solution is safe and incremental
+Provenance metadata is included
+
+::: notes
+Encourage participants to think like reviewers comparing multiple PRs. The goal is to understand model behavior, not to pick a favorite.
+:::
+
+---
+
+## Exercise: Assigning an Issue to Multiple Models
+
+Duration
+10 minutes
+Objectives
+Practice delegating the same issue to different models
+Evaluate how each model interprets constraints
+Identify missing context
+Activities
+Create a GitHub‑style issue describing a technical debt item.
+Assign the issue to two different models.
+Compare their proposed remediation plans.
+Identify missing context or contradictions.
+Success Criteria
+Issue is clear and well‑structured
+Each model produces a distinct approach
+Missing context is identified and documented
+A preferred plan is selected based on safety and clarity
+
+::: notes
+This exercise helps participants see how different models interpret the same instructions — a key skill for multi‑model workflows.
+:::
+
+---
+
+## Exercise: Delegating Work to Multiple Models
+
+Duration
+20 minutes
+Objectives
+Practice multi‑model delegation
+Evaluate multi‑step reasoning
+Synthesize best practices into a unified plan
+Activities
+Select a multi‑step modernization task.
+Ask multiple models to:
+- Analyze the problem
+- Propose a remediation plan
+- Suggest tests
+- Suggest documentation updates
+Compare the outputs.
+Synthesize a final, safe, incremental plan.
+Success Criteria
+Multi‑model differences are clearly understood
+Final plan is incremental, reversible, and well‑tested
+Documentation and provenance are included
+Risks are identified and mitigated
+
+::: notes
+This exercise builds confidence in orchestrating multiple models as collaborators. The goal is synthesis, not competition.
+:::
+
+---
+
+## Evergreen Software Development - Core Principles
+
+Intent‑First Design
+  - Define the system’s purpose, invariants, and boundaries before writing code to ensure long‑term clarity.
+Stable Interfaces, Evolving Internals
+  - Keep contracts predictable while allowing implementations to improve continuously.
+Continuous Regeneration with Guardrails
+  - Use AI to rewrite or extend components safely, backed by tests, specs, and architectural constraints.
+Modular, Replaceable Components
+  - Structure the system so any part can be regenerated, swapped, or upgraded without cascading breakage.
+Lifecycle Governance
+  - Maintain quality through automated tests, versioning discipline, and human‑in‑the‑loop validation.
+
+---
+
+## Why Software Fails to Be Evergreen
+
+Intent Rot
+  - The original purpose, constraints, and invariants are undocumented or lost, making safe regeneration impossible.
+Unstable or Leaky Interfaces
+  - APIs, data contracts, and boundaries change unpredictably, causing cascading breakage when internals evolve.
+Tightly Coupled Architecture
+  - Components depend on each other’s internal details, preventing isolated regeneration or replacement.
+Insufficient Guardrails
+  - Missing tests, specs, or validation layers mean AI‑assisted regeneration can’t be trusted to preserve behavior.
+One‑Off Patches and Drift
+  - Ad‑hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
+
+---
+
 <!-- _class: lead -->
 
 ## Course Modules
@@ -2332,7 +2930,6 @@ Integrate AI into your **CI/CD pipeline**:
 - Module 3 - Vibbing
 - **▶ Module 4 - Adding AI Guardrails**
 - Module 5 - Managing Context
-- Module 6 - Copilot for Teams
 
 ---
 
@@ -2348,6 +2945,7 @@ Integrate AI into your **CI/CD pipeline**:
 - Instruction Files
 - 🎯 Instruction File `applyTo` Patterns
 - Core Instructions
+- Organizational vs. Repository Instruction Files
 
 ---
 
@@ -3664,6 +4262,211 @@ instruction-prompt-files.instructions.md | Guidance for generating prompts that 
 
 <!-- _class: lead -->
 
+## Organizational vs. Repository Instruction Files
+
+- Business/Enterprise tier capabilities
+- Path-scoped instruction files
+- Folder-level technology-specific rules
+
+::: notes
+Frame this as a layering strategy, not an either-or choice. The audience should leave with a practical model for deciding what belongs at enterprise scope versus repository scope. Keep this opening to about 60-90 seconds.
+:::
+
+---
+
+## Why Two Instruction Layers Exist
+
+- Enterprise instructions enforce baseline policy and governance
+- Repository instructions optimize for project context and implementation detail
+- Together they balance consistency and local autonomy
+
+### Key Idea
+
+Define global guardrails once, then narrow behavior where code lives.
+
+::: notes
+Explain that teams usually fail by over-centralizing or over-fragmenting. Centralize non-negotiables, decentralize implementation guidance. Emphasize this prevents policy drift while keeping day-to-day delivery fast.
+:::
+
+---
+
+## Business/Enterprise Tier Capabilities
+
+- Organization-wide safety and compliance standards
+- Approved model and tool usage policy
+- Mandatory provenance and audit requirements
+- Security and legal baselines (secret handling, license constraints)
+- Shared quality gates for CI/CD
+
+### Typical Scope
+
+All repositories, all teams, all environments.
+
+::: notes
+Call out that enterprise-tier files should be stable and short. They should define constraints, not feature behavior. Give examples: required metadata fields, approved hosts, restricted operations, and mandatory security checks.
+:::
+
+---
+
+## Path-Scoped Instruction Files
+
+Path-scoped instructions apply behavior only where it is needed.
+
+```yaml
+applyTo: "Slides/individual-slides/**"
+```
+
+```yaml
+applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+```
+
+```yaml
+applyTo: "**/*.instructions.md"
+```
+
+### Benefit
+
+Granular control without forcing unrelated files to follow irrelevant rules.
+
+::: notes
+Explain that path scoping is the precision tool. Show that slide-authoring rules should not apply to backend code, and coding constraints should not apply to markdown content. Mention that good glob design reduces noisy or conflicting behavior.
+:::
+
+---
+
+## Folder-Level Technology-Specific Rules
+
+Use folder-level rules to match local stack and workflow.
+
+- `Slides/` for Marp formatting and speaker-note conventions
+- `Labs/lab1-3-python/` for Python lint/test guidance
+- `Labs/lab1-3-typescript/` for TypeScript build/test patterns
+- `Course/course.github/` for docs automation and publishing rules
+
+### Pattern
+
+Place rules near code ownership boundaries.
+
+::: notes
+Reinforce proximity: put guidance where teams actually work. This improves discoverability and lowers onboarding time. Mention that folder-level rules should refine enterprise policy, not duplicate it.
+:::
+
+---
+
+## Layering Model and Precedence
+
+```mermaid
+flowchart TD
+  A[Enterprise Instructions\nGlobal Guardrails] --> B[Repository Instructions\nProject Standards]
+  B --> C[Path-Scoped Rules\nTargeted Behavior]
+  C --> D[Folder-Level Tech Rules\nLocal Implementation]
+```
+
+### Resolution Rule
+
+Prefer the most specific matching instruction when guidance overlaps.
+
+::: notes
+Walk the stack top-to-bottom. Describe how specificity should increase as scope narrows. If conflicts appear, resolve by specificity first, then by explicit policy precedence defined by your organization.
+:::
+
+---
+
+## Practical Governance Checklist
+
+- Keep enterprise files policy-focused and durable
+- Keep repository files implementation-focused and current
+- Use explicit `applyTo` patterns for every specialized rule file
+- Review instruction overlap quarterly to reduce conflicts
+- Validate behavior with small representative prompts per folder
+
+::: notes
+End with action items. Suggest teams pilot this in one repo before scaling. Encourage adding quick validation prompts in CI or review checklists so instruction drift is detected early.
+:::
+
+---
+
+## Exercise: Technology Inventory & Instruction Generation
+
+Duration: 25-30 minutes
+
+Objectives
+
+- Create a clear inventory of project technologies across the repository
+- Use background sessions to run concurrent analysis and drafting work
+- Generate multiple instruction files simultaneously from the inventory results
+- Practice session management interface workflows for parallel task control
+
+Activities
+
+1. Technology Inventory Build:
+
+- Scan the repository and list languages, frameworks, build tools, and test stacks
+- Group technologies by folder ownership and lifecycle criticality
+- Identify missing or outdated instruction coverage per technology area
+
+2. Background Session Orchestration:
+
+- Start parallel background sessions for discovery, drafting, and validation
+- Assign one focused outcome per session (inventory, file generation, review)
+- Capture each session's outputs and merge findings into one working backlog
+
+3. Simultaneous Instruction Generation:
+
+- Generate multiple instruction files for high-priority technology folders
+- Apply path-scoped patterns to each generated instruction file
+- Validate that each file is targeted, non-overlapping, and implementation-ready
+
+4. Session Management Interface Review:
+
+- Track session state, ownership, and completion status
+- Resolve collisions between concurrently generated instruction outputs
+- Close sessions with a summarized decision log and next-step actions
+
+Success Criteria
+
+- Technology inventory includes stack, location, and risk/priority attributes
+- At least three instruction files are generated concurrently and scoped correctly
+- Background sessions are documented with clear responsibilities and outcomes
+- Session management process is repeatable for future multi-stream work
+
+::: notes
+
+## Technology Inventory & Instruction Generation Exercise Instructions
+
+**Duration:** 25-30 minutes
+**Prerequisites:** Access to repository tree, instruction conventions, and team roles for parallel work
+
+### Objectives
+
+- Build a practical technology inventory that informs instruction planning.
+- Execute concurrent work safely with background sessions.
+- Produce multiple scoped instruction files in one coordinated workflow.
+- Use the session management interface to maintain control and traceability.
+
+### Activities
+
+1. Build a structured inventory first; avoid writing instruction files until the landscape is clear.
+2. Split participants into concurrent roles: inventory lead, instruction generator, and session coordinator.
+3. Generate scoped instruction files in parallel, then run a conflict review before acceptance.
+4. Finalize with a short session-management retrospective: what scaled, what collided, what to improve.
+
+### Success Criteria
+
+- Inventory coverage is complete enough to drive instruction priorities.
+- Parallel sessions finish with non-conflicting outputs.
+- Generated instruction files include clear scoping and ownership boundaries.
+- Team can reproduce the same workflow on another repository without redesigning the process.
+
+### Facilitation Tip
+
+Use a visible board (status: active, blocked, complete) for each session stream so the team can rebalance quickly when one stream stalls.
+:::
+
+---
+
+<!-- _class: lead -->
+
 ## Course Modules
 
 - Intro
@@ -3672,7 +4475,6 @@ instruction-prompt-files.instructions.md | Guidance for generating prompts that 
 - Module 3 - Vibbing
 - Module 4 - Adding AI Guardrails
 - **▶ Module 5 - Managing Context**
-- Module 6 - Copilot for Teams
 
 ---
 
@@ -3685,6 +4487,7 @@ instruction-prompt-files.instructions.md | Guidance for generating prompts that 
 ## Module 5 - Managing Context
 
 - Managing GitHub Copilot Effectively
+- Managing Instruction Files & Context Windows
 
 ---
 
@@ -3802,166 +4605,129 @@ For example: use a reasoning‑heavy model for designing a module, then switch t
 
 <!-- _class: lead -->
 
-## Course Modules
+## Managing Instruction Files & Context Windows
 
-- Intro
-- Module 1 - AIASD
-- Module 2 - Intro to Copilot
-- Module 3 - Vibbing
-- Module 4 - Adding AI Guardrails
-- Module 5 - Managing Context
-- **▶ Module 6 - Copilot for Teams**
-
----
-
-<!-- _class: lead -->
-
-# Module 6 - Copilot for Teams
-
----
-
-## Module 6 - Copilot for Teams
-
-- GitHub Copilot for Teams
-
----
-
-## GitHub Copilot for Teams
-Key Considerations for Adoption
-
-Empowering developers with AI while protecting your codebase
+- Instruction sharing strategies
+- Instruction file scope and application
+- Context window monitoring tools
+- Token consumption tracking
 
 ::: notes
-Outline governance, admin controls, and adoption factors (training, policy, developer onboarding).
+Set expectations for a practical session focused on repeatable team workflows. Emphasize that instruction quality and context discipline are the two biggest multipliers for reliable AI-assisted development.
 :::
 
 ---
 
-## What Prompted This Deck?
+## Instruction Sharing Strategies
 
-I want to know how GitHub Copilot protects the intellectual property in the code and documentation submitted to the model. Is this information isolated from other users? Is it incorporated into the model and leaked to other users? How can I protect my IP while using GitHub Copilot?
+- Establish a central baseline in organization-level instructions
+- Keep repository-level instructions close to implementation details
+- Use reusable templates for recurring instruction patterns
+- Share proven prompts and instruction snippets through version control
+
+### Team Pattern
+
+Centralize policy, decentralize implementation guidance.
 
 ::: notes
-Explain the motivating questions about IP, privacy, and safe use that led to this presentation.
+Explain that teams should avoid copy-paste drift by maintaining canonical files and linking to them. Encourage pull-request reviews specifically for instruction changes, not just code changes.
 :::
 
 ---
 
-## Benefits for Organizations
+## Instruction File Scope and Application
 
-Accelerated Development
-  - Faster prototyping, fewer boilerplate tasks
-Improved Documentation
-  - Auto-generates comments and README content
-Enhanced Testing
-  - Suggests unit tests and edge cases
-Team Productivity
-  - Reduces cognitive load, supports onboarding
+Use scope to target behavior precisely with `applyTo` patterns.
+
+```yaml
+applyTo: "**/*"
+```
+
+```yaml
+applyTo: "Slides/individual-slides/**"
+```
+
+```yaml
+applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+```
+
+### Rule of Thumb
+
+The narrower the scope, the lower the risk of unintended instruction collisions.
 
 ::: notes
-Highlight productivity, documentation, test generation, and onboarding benefits with brief examples.
+Walk through broad-to-narrow scoping. Clarify that broad scopes are for policy and compliance, while narrow scopes are for stack-specific implementation rules.
 :::
 
 ---
 
-## Risks to Consider
+## Context Window Monitoring Tools
 
-IP Leakage Concerns
-  - Copilot may suggest code similar to public repositories
-  - Risk of inadvertently using copyrighted or licensed code
-  - Mitigation: Enable public code filters and review suggestions carefully
-Code Quality and Accuracy
-  - AI-generated code may contain bugs, inefficiencies, or security flaws
-  - Always validate and test before deployment
-  - Treat Copilot as a drafting tool, not a source of truth
-Developer Overreliance
-  - Risk of reduced understanding or critical thinking
-  - Encourage code reviews and pair programming to maintain rigor
+- Use chat/session history panels to detect topic drift
+- Track context attachments (`@workspace`, `@file`, `@terminal`) intentionally
+- Start fresh chats when switching goals or bounded contexts
+- Use lightweight check-ins: "What context are we currently using?"
+
+### Signals of Context Saturation
+
+- Repeated clarifying questions
+- Loss of earlier constraints
+- Increasingly generic responses
 
 ::: notes
-Cover IP leakage, code quality risks, and developer overreliance; suggest mitigations for each.
+Teach participants to recognize degradation early rather than trying to salvage overloaded context. A clean new chat is usually cheaper than continued correction loops.
 :::
 
 ---
 
-## Governance and Compliance Risks
+## Token Consumption Tracking
 
-Regulatory Compliance
-  - Generated code may not meet industry-specific standards (e.g., HIPAA, PCI-DSS)
-  - Organizations must enforce coding policies and audits
-Data Privacy and Security
-  - Sensitive data should never be typed into prompts
-  - Use Copilot in secure environments with clear usage guidelines
-Licensing Ambiguity
-  - Copilot suggestions may resemble code under restrictive licenses
-  - Legal teams should define acceptable use policies and monitor compliance
+- Monitor token usage indicators in the chat interface
+- Prefer concise prompts with explicit file targets
+- Split large tasks into smaller, well-bounded sessions
+- Archive outcomes in files instead of keeping all context in-chat
+
+### Cost-Control Tactics
+
+- Reduce redundant restatement
+- Reuse instruction files over repeated long prompts
+- Move stable constraints into persistent instruction artifacts
 
 ::: notes
-Discuss regulatory impacts, auditability, and how to enforce coding policies with automated checks.
+Stress that token efficiency is not only cost control; it improves response quality by reducing noise. Show that structured prompts plus instruction files usually outperform long conversational buildup.
 :::
 
 ---
 
-## IP and Data Protection
+## Workflow Blueprint
 
-Your code is not used to retrain the model (with Copilot for Business/Enterprise)
-Suggestions are generated locally — no code is shared unless feedback is submitted
-No leakage between users: your private code is not exposed to others
-Admins can disable suggestions matching public code for added safety
+```mermaid
+flowchart LR
+  A[Define Task Goal] --> B[Select Relevant Instruction Files]
+  B --> C[Scope with applyTo Patterns]
+  C --> D[Run Focused Chat Session]
+  D --> E[Monitor Context and Tokens]
+  E --> F[Persist Output and Start Next Session]
+```
+
+### Outcome
+
+Predictable outputs, lower token waste, and better team-level reuse.
 
 ::: notes
-Clarify data flows, model retraining policy for enterprise plans, and recommended org controls to protect IP.
+Use this as the operational model teams can adopt immediately. Recommend adding this flow to onboarding docs so new contributors learn instruction and context discipline from day one.
 :::
 
 ---
 
-## Licensing and Legal Considerations
+## Practical Checklist
 
-Copilot may suggest code similar to public repositories
-GitHub provides a filter to block matching public code
-Organizations should review Copilot’s Terms of Service and Privacy Statement
-
-::: notes
-Explain risks of suggested code resembling public repos and recommend legal review and filter settings.
-:::
-
----
-
-## Deployment Options
-
-Plan | Key Features | IP Protection
---- | --- | ---
-Copilot Individual (Pro, Pro+) | Personal use, no admin controls | Limited
-Copilot for Business | Admin controls, policy enforcement | Strong
-Copilot for Enterprise | Org-wide policy, audit tools | Strongest
+- Define where instructions live: org, repo, folder, or file scope
+- Validate `applyTo` patterns before broad adoption
+- Monitor context quality every major prompt turn
+- Track token trends for long-running work streams
+- Capture reusable instruction improvements in versioned files
 
 ::: notes
-Summarize plan differences and pick considerations (control, audit, scale) for each offering.
-:::
-
----
-
-## Best Practices for Safe Use
-
-Enable public code filters
-Establish a review process
-Educate teams on responsible use and licensing awareness
-
-::: notes
-Practical checklist: avoid secrets in prompts, enable public-code filters, and establish review processes.
-:::
-
----
-
-## Resources
-
-Copilot Documentation:
-  - https://docs.github.com/en/copilot
-Copilot for Business Overview
-  - https://github.com/features/copilot-for-business
-Security and Privacy FAQ
-  - https://docs.github.com/en/copilot/security
-
-::: notes
-Point attendees to official docs and FAQs; recommend follow-up reading links on the slide.
+End with execution guidance. Suggest running a short retrospective after one sprint to measure improvements in output quality, rework rate, and token efficiency.
 :::

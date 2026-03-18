@@ -5,10 +5,12 @@ subtitle: "From Code to Copilot"
 sections:
   - name: Intro
     slides:
-      - Slides\individual-slides\welcome-to-aiasd.md
+      - file: Slides\individual-slides\welcome-to-aiasd.md
+        layout: title slide
       - Slides\individual-slides\john-michael-miller-intro.md
       - Slides\individual-slides\introductions.md
       - Slides\individual-slides\about-code.md
+      - Slides\individual-slides\daily-themes.md
 
   - name: Module 1 - AIASD
     slides:
@@ -26,9 +28,13 @@ sections:
     slides:
       # Add your Module 3 slide files here
       - Slides\individual-slides\vibe-coding.md
-      - Slides\individual-slides\multi‑model-implementation-comparison.md
+      - Slides\individual-slides\exercise-calculator-project.md
+      - Slides\individual-slides\exercise-test-coverage-improvement.md
+      - Slides\individual-slides\exercise-test-driven-development.md
       - Slides\individual-slides\ai-assisted-cicd-pipelines.md
       - Slides\individual-slides\ai-assisted-github-pull-requests.md
+      - Slides\individual-slides\multi‑model-implementation-comparison.md
+      - Slides\individual-slides\evergreen-software-core-principles.md
 
   - name: Module 4 - Adding AI Guardrails
     slides:
@@ -37,13 +43,11 @@ sections:
       - Slides\individual-slides\instruction-files.md
       - Slides\individual-slides\instruction-file-applyto-patterns.md
       - Slides\individual-slides\core-instruction-files.md
+      - Slides\individual-slides\organizational-vs-repository-instruction-files.md
+      - Slides\individual-slides\exercise-technology-inventory-instructions.md
 
   - name: Module 5 - Managing Context
     slides:
       # Add your Module 5 slide files here
       - Slides\individual-slides\managing-github-copilot-effectively.md
-
-  - name: Module 6 - Copilot for Teams
-    slides:
-      # Add your Module 6 slide files here
-      - Slides\individual-slides\github-copilot-for-teams.md
+      - Slides\individual-slides\managing-instruction-files-context-windows.md

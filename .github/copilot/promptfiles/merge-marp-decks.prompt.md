@@ -7,9 +7,9 @@ prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 2.4.0
+  version: 2.5.0
   created: 2026-03-12
-  updated: 2026-03-16
+  updated: 2026-03-17
   output_path: Slides/aiasd-311-monday-draft.md
   output_format: markdown
   category: slides
@@ -36,7 +36,7 @@ Merge the Marp slide decks defined in `$MANIFEST` into a single Marp slide deck 
 ## Execution Rule
 
 - Perform **Phase 0** and **Phase 1** directly in this agent run using the prompt logic.
-- Do **not** call or rely on `scripts/merge_marp_decks.py` for Phase 0/1.
+- Do **not** call or rely on any script for Phase 0/1.
 - Read source files, validate them, build merged markdown in memory, and write `$OUTPUT_FILE`.
 
 > **Agent verification (Issue 3)**: After computing `$OUTPUT_FILE`, confirm its filename
@@ -272,6 +272,28 @@ Report the count in the form: `Merged deck: N slide(s) across M section(s).`
 
 Run `$PPTX_SCRIPT` (`Slides/output/generate_pptx.py`) to produce `$PPTX_OUTPUT`.
 
+### Markdown formatting support
+
+**CRITICAL FEATURE**: The PPTX generator automatically parses markdown bold syntax (`**text**`) and renders it as actual bold formatting in PowerPoint slides (not literal asterisks).
+
+**How it works**:
+
+- The `apply_markdown_formatting()` function parses each line of slide content
+- Text wrapped in `**double asterisks**` is rendered with `font.bold = True`
+- Text outside bold markers appears as normal text
+- Multiple bold sections per line are supported
+- Works correctly with bulleted lists
+
+**Example transformations**:
+
+| Markdown Source                            | PPTX Rendering                                      |
+| ------------------------------------------ | --------------------------------------------------- |
+| `**Principal Software Engineer at CODE**`  | **Principal Software Engineer at CODE** (bold font) |
+| `- **Key Point**: explanation text`        | • **Key Point** (bold): explanation text            |
+| `Experience: **15+ years** in development` | Experience: **15+ years** (bold) in development     |
+
+This ensures that markdown bold syntax in source slides (e.g., `Slides/individual-slides/*.md`) is properly rendered as visual bold formatting when viewed in PowerPoint, improving readability and emphasis.
+
 ### Execution
 
 ```bash
@@ -323,7 +345,7 @@ Run all checks below after the pipeline completes to confirm spec conformance.
 | V1  | Source validation            | Phase 0 summary printed before `$OUTPUT_FILE` is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output                                |
 | V2  | Code-fence `---` preserved   | Merge a source file that contains `---` inside a fenced code block | No unexpected extra slides; the embedded `---` appears verbatim in `$OUTPUT_FILE`                              |
 | V3  | Output file named correctly  | Inspect `$OUTPUT_FILE` path                                        | Filename matches `<course>-<format>-<day>-draft.md` derived from `$MANIFEST` stem                              |
-| V4  | Script accepts CLI arguments | Inspect written `$PPTX_SCRIPT`                                     | No hard-coded `YAML_PATH`/`OUTPUT_PATH`; `argparse` with `yaml_path` and `output_path` positional args present |
+| V4  | PPTX generated               | Run `python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT`                   | PPTX file created at `$PPTX_OUTPUT` without errors                                                             |
 | V5  | `Title Only` layout used     | Source file with `## heading` and no body content                  | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content`                       |
 | V6  | Empty section logged         | YAML section with no `slides:` entries                             | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase                          |
 | V7  | Slide count reported         | Any successful merge run                                           | Output includes `Merged deck: N slide(s) across M section(s).`                                                 |
