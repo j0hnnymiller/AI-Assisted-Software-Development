@@ -46,7 +46,7 @@ Provides version‑controlled guardrails
 Enables team‑wide consistency
 File types
 .github/instructions/myinstructions.instructions.md
-.github/prompts/myprompt.prompt.md
+.github/copilot/Promptfiles/myprompt.prompt.md
 .github/chatmodes/mychatmode.chatmode.md
 
 ::: notes
@@ -96,12 +96,13 @@ This prevents drift and ensures the output is usable without heavy editing.
 
 Provenance requirements
 Declare:
+
 - AI involvement
 - Model used
 - Date generated
 - Human reviewer
-Store provenance in headers, footers, or side cars
-Track revisions in version control
+  Store provenance in headers, footers, or side cars
+  Track revisions in version control
 
 ::: notes
 Provenance is essential for conformance, auditability, and long‑term maintainability.
@@ -119,19 +120,20 @@ Understand file organization for AI-assisted output policies
 Practice copying files between repositories
 Ensure compliance with output metadata requirements
 Activities:
+
 1. Locate .github/instructions/ai-assisted-output.instructions.md in the AI-Assisted-Software-Development repository
 2. Copy the file into the .github/instructions folder of the current repository
 3. Copy these files as well:
-chatmode-file.instructions.md
-instruction-files.instructions.md
-instruction-prompt-files.instructions.md
-prompt-file.instructions.md
+   chatmode-file.instructions.md
+   instruction-files.instructions.md
+   instruction-prompt-files.instructions.md
+   prompt-file.instructions.md
 4. Verify the copied files matches the original
 5. Review the instructions
-Success Criteria:
-The files are present in the current repo
-The content matches the source file
-No metadata or formatting is lost
+   Success Criteria:
+   The files are present in the current repo
+   The content matches the source file
+   No metadata or formatting is lost
 
 ::: notes
 This exercise reinforces the importance of maintaining consistent AI-assisted output policies across repositories. By copying the instructions file, participants learn to manage compliance and provenance requirements for AI-generated artifacts. Ensure the copied file is identical and properly placed to support future AI work.
@@ -166,6 +168,7 @@ This slide introduces the purpose of the AI-Assisted Output Instructions file: t
 ## Required Provenance Metadata
 
 Every AI-assisted artifact must include:
+
 - ai_generated: true
 - model: provider/model@version
 - operator: username
@@ -204,10 +207,11 @@ Note: Instructions files have limited support for metadata and must use sidecar 
 
 Each chat creates a unique log folder: ai-logs/yyyy/mm/dd/<chat-id>/
 Required files:
+
 - conversation.md (full transcript)
 - summary.md (objectives, decisions, outcomes)
 - artifacts/ (optional)
-Never reuse chat logs between sessions
+  Never reuse chat logs between sessions
 
 ::: notes
 This slide describes the logging structure for AI chats.
@@ -279,12 +283,13 @@ This slide reinforces the value of these instructions: they ensure every AI-assi
 ## Core Instruction files
 
 chatmode-file.instructions.md
+
 - Defines the structure and contents of agents
-instruction-files.instructions.md
+  instruction-files.instructions.md
 - Defines the structure and contents of instruction files
-prompt-file.instructions.md
+  prompt-file.instructions.md
 - Defines the structure and contents of prompts
-instruction-prompt-files.instructions.md
+  instruction-prompt-files.instructions.md
 - Defines the structure and contents of prompts the create instruction files
 
 ---
@@ -347,16 +352,17 @@ Emphasize safety and incrementalism
 Encode risk‑aware behaviors
 Activities
 Draft a Agent that:
+
 - Respects working systems
 - Avoids risky rewrites
 - Surfaces context gaps
 - Encourages incremental changes
-Add tone and behavioral guidelines
-Add provenance metadata
-Success Criteria
-Agent behaves like a cautious senior engineer
-Encourages safe modernization
-Includes clear behavioral rules
+  Add tone and behavioral guidelines
+  Add provenance metadata
+  Success Criteria
+  Agent behaves like a cautious senior engineer
+  Encourages safe modernization
+  Includes clear behavioral rules
 
 ::: notes
 This helps participants shape AI behavior to match brownfield realities.

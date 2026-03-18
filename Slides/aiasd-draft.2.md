@@ -372,6 +372,7 @@ Vast amount of knowledge available
 ## Why AI Assisted Software Development
 
 If used effectively, it will give you superpowers
+
 - The courage to
   - Take on codebases that few would touch
   - Use technologies you should know but don’t
@@ -405,12 +406,12 @@ AI‑First is the broad philosophy. Prompt‑First is the tactical layer that en
 
 ## What Each Optimizes For
 
-Focus Area | AI‑First | Prompt‑First
---- | --- | ---
-Scope | Entire SDLC | Interaction layer
-Goal | Lifecycle integration | Deterministic AI behavior
-Optimization | Velocity, governance | Prompt quality, reproducibility
-Risk Controls | Human‑in‑loop, provenance | Versioned prompts, context control
+| Focus Area    | AI‑First                  | Prompt‑First                       |
+| ------------- | ------------------------- | ---------------------------------- |
+| Scope         | Entire SDLC               | Interaction layer                  |
+| Goal          | Lifecycle integration     | Deterministic AI behavior          |
+| Optimization  | Velocity, governance      | Prompt quality, reproducibility    |
+| Risk Controls | Human‑in‑loop, provenance | Versioned prompts, context control |
 
 ::: notes
 This table is the heart of the comparison. AI‑First is about organizational and architectural change. Prompt‑First is about artifact discipline and predictable outputs.
@@ -453,16 +454,17 @@ This is the conceptual hierarchy. Prompt‑First is necessary but not sufficient
 
 Building software where AI is a core capability, not an add‑on
 Why AI‑First
+
 - Software requirements increasingly expressed in natural language
 - AI copilots accelerate architecture, coding, testing, and documentation
 - Teams shift from “writing code” to “designing intent + validating outputs”
-Core Principles
+  Core Principles
 - Prompt‑First Design: Requirements, architecture, and workflows expressed as structured prompts
 - AI‑Native Architecture: Modular services, clear boundaries, deterministic interfaces for AI‑generated components
 - Human‑in‑the‑Loop: Review, validation, and traceability baked into every stage
 - Continuous Verification: Automated tests, static analysis, and guardrails to ensure safe outputs
 - Lifecycle Governance: Versioning, provenance, and risk‑based controls for AI‑generated artifacts
-Outcomes
+  Outcomes
 - Faster iteration cycles
 - Higher coverage of documentation and tests
 - Reduced cognitive load on developers
@@ -506,16 +508,17 @@ Outcomes
 
 Design the intent first — let AI generate the implementation
 Why Prompt‑First
+
 - Behaviors, and constraints expressed in structured natural language
 - Prompts become the new “source of truth” artifacts
 - Teams shift from writing functions to defining outcomes, invariants, and interfaces
-Core Practices
+  Core Practices
 - Structured Prompts: Use templates for features, APIs, data models, tests, and refactors
 - Instruction Files: Persistent, versioned artifacts guiding AI code generation
 - Deterministic Boundaries: Clear module contracts so AI‑generated code stays predictable
 - Validation Loops: Automated tests + human review ensure correctness and safety
 - Prompt Versioning: Track evolution of intent just like code changes
-Benefits
+  Benefits
 - Faster iteration from idea → working software
 - Higher consistency across generated components
 - Reduced cognitive load on developers
@@ -558,11 +561,13 @@ Benefits
 ## **Concrete Examples**
 
 **Prompt‑First Example**
+
 - Promptfile for generating unit tests
 - Instruction file for documentation
 - Chat mode for brownfield developers
 
 **AI‑First Example**
+
 - Requirements → AI‑generated scaffolds
 - Code changes → AI‑assisted reviews
 - Docs → continuously AI‑generated
@@ -642,9 +647,10 @@ Repo is available locally
 
 Objective: Fork the course repos
 Search GitHub for
+
 - AI-Assisted-Software-Development
 - zeus.academia.3b
-Fork the repos
+  Fork the repos
 - This will create a personal copy under your GitHub account
 - You can make changes without affecting the original repo
 
@@ -653,12 +659,13 @@ Fork the repos
 ## Hands-On with GitHub Copilot
 
 Installation and configuration
+
 - Installing the extension
 - Setting up authentication
 - Configuring settings
-Sharing configuration across an organization
+  Sharing configuration across an organization
 - Shared configuration templates (e.g., .copilot/settings.json) can be distributed across projects to standardize behavior.
-https://www.codemag.com/Blog/AI/AIASD-install-guide
+  https://www.codemag.com/Blog/AI/AIASD-install-guide
 
 ::: notes
 Walk through installation, auth, and a quick coding session; encourage participants to follow along.
@@ -677,69 +684,67 @@ Activities
 Install GitHub Copilot extension from VS Code marketplace
 Sign in with your GitHub account (verify Copilot subscription)
 Locate and explore:
+
 - Chat window and chat history
 - New chat button
 - Quick chat feature (keyboard shortcut)
 - Settings menu
 - Model selection dropdown
-Check your premium token usage bar
-Create a new chat and experiment with the interface
-Success Criteria
+  Check your premium token usage bar
+  Create a new chat and experiment with the interface
+  Success Criteria
 - Copilot extension installed and authenticated
 - Can open/close chat windows
 - Understand difference between main chat and quick chat
 - Know where to find chat history
 
 ::: notes
-## **Lab 1: Getting Started with GitHub Copilot**
 
+## **Lab 1: Getting Started with GitHub Copilot**
 
 **Duration:** 20-30 minutes
 **Prerequisites:** VS Code installed
 
-
 ### Objectives
-
 
 - Install and configure GitHub Copilot
 - Verify authentication with GitHub account
 - Explore the Copilot UI components
 
-
 ### Activities
-
 
 1. Install GitHub Copilot extension from VS Code marketplace
 2. Sign in with your GitHub account (verify Copilot subscription)
 3. Locate and explore:
+
 - Chat window and chat history
 - New chat button
 - Quick chat feature (keyboard shortcut)
 - Settings menu
 - Model selection dropdown
+
 4. Check your premium token usage bar
 5. Create a new chat and experiment with the interface
 
-
 ### Success Criteria
-
 
 - Copilot extension installed and authenticated
 - Can open/close chat windows
 - Understand difference between main chat and quick chat
 - Know where to find chat history
-:::
+  :::
 
 ---
 
 ## Prompt Specificity
 
 Add error handling to my code
+
 - Result: Generic response asking what type of errors, what language, what code?
-Add error handling to my JavaScript function that calls an external API. I want to handle network timeouts, 404 errors, and JSON parsing failures. Return user-friendly error messages.
+  Add error handling to my JavaScript function that calls an external API. I want to handle network timeouts, 404 errors, and JSON parsing failures. Return user-friendly error messages.
 - Result: Better, but still generic without seeing actual code structure
-@file:api-client.js Add comprehensive error handling to the fetchUserData function. Handle network timeouts (>5s), HTTP errors (404, 500, etc.), and JSON parsing failures.   Return user-friendly error messages that match our existing error format in @file:error-types.js
-- Result: Specific implementation that matches existing code patterns*
+  @file:api-client.js Add comprehensive error handling to the fetchUserData function. Handle network timeouts (>5s), HTTP errors (404, 500, etc.), and JSON parsing failures.   Return user-friendly error messages that match our existing error format in @file:error-types.js
+- Result: Specific implementation that matches existing code patterns\*
 
 ---
 
@@ -751,23 +756,24 @@ Learn to add context using @ symbols
 Understand context window limitations
 Practice writing effective prompts
 Activities
+
 1. Basic Context Addition:
-Use `@workspace` to search across your codebase
-Use `@file` to reference specific files
-Use `@terminal` to include terminal output in chat
-Use `@vscode` to ask VS Code-specific questions
+   Use `@workspace` to search across your codebase
+   Use `@file` to reference specific files
+   Use `@terminal` to include terminal output in chat
+   Use `@vscode` to ask VS Code-specific questions
 2. Prompt Practice:
-Write a vague prompt, observe results
-Rewrite with specific context, compare results
-Add file references to improve accuracy
+   Write a vague prompt, observe results
+   Rewrite with specific context, compare results
+   Add file references to improve accuracy
 3. Context Window Experiment:
-Start a long conversation in one chat
-Notice when Copilot starts "forgetting" earlier context
-Practice starting new chats for new topics
-Success Criteria
-Can use all @ context types
-Understand when to start fresh chat sessions
-Notice quality difference between vague and specific prompts
+   Start a long conversation in one chat
+   Notice when Copilot starts "forgetting" earlier context
+   Practice starting new chats for new topics
+   Success Criteria
+   Can use all @ context types
+   Understand when to start fresh chat sessions
+   Notice quality difference between vague and specific prompts
 
 ---
 
@@ -775,31 +781,40 @@ Notice quality difference between vague and specific prompts
 
 Duration: Follow along
 Objectives
+
 - Organize chat sessions effectively
 - Use chat history for reference
 - Develop efficient workflow patterns
-Activities
+  Activities
+
 1. Chat Organization:
+
 - Review your chat history
 - Identify chats that should have been separate sessions
 - Practice starting new chats at appropriate times
+
 2. Context Preservation:
+
 - Start a focused chat for one feature
 - Add relevant context systematically
 - Complete task without context overflow
+
 3. Quick Chat Practice:
+
 - Use main chat for primary task
 - Use quick chat for side questions
 - Return to main chat without losing context
+
 4. Chat History Review:
+
 - Find and reference previous solutions
 - Learn from past prompts that worked well
 - Identify patterns in effective conversations
-Success Criteria
+  Success Criteria
 - Chat history is organized and meaningful
 - Can find and reference previous solutions
 - Efficient workflow developed for using multiple chat windows
-Context Window Management
+  Context Window Management
 - Remember from the session:
   - Context is a **limited resource**
   - Start new chat when changing focus areas
@@ -811,12 +826,13 @@ Context Window Management
 ## Using Copilot in different modes
 
 Ask Mode
+
 - Simple prompt completion and inline suggestions
-Edit Mode
+  Edit Mode
 - Automatic file edits
-Agent Mode
+  Agent Mode
 - Perform actions on your behalf
-Custom Modes
+  Custom Modes
 - Execute specific workflows
 
 ::: notes
@@ -833,40 +849,41 @@ Understand differences between Ask, Edit, and Agent modes
 Know when to use each mode
 Understand premium token implications
 Activities
+
 1. Ask Mode:
-Ask Copilot to explain a code snippet (no changes made)
-Request multiple implementation approaches
-Try different models and observe response quality
-Note: This doesn't consume premium tokens for advanced models
+   Ask Copilot to explain a code snippet (no changes made)
+   Request multiple implementation approaches
+   Try different models and observe response quality
+   Note: This doesn't consume premium tokens for advanced models
 2. Edit Mode:
-Select code in a file
-Ask Copilot to refactor it
-Observe inline suggestions and changes
-Accept or reject proposed changes
+   Select code in a file
+   Ask Copilot to refactor it
+   Observe inline suggestions and changes
+   Accept or reject proposed changes
 3. Agent Mode:
-Ask Copilot to create a new file and add content
-Request changes across multiple files
-Have Copilot run terminal commands
-Check premium token usage after agent actions
-Success Criteria
-Can distinguish when to use each mode
-Understand token consumption differences
-Successfully use agent mode for multi-file operations
+   Ask Copilot to create a new file and add content
+   Request changes across multiple files
+   Have Copilot run terminal commands
+   Check premium token usage after agent actions
+   Success Criteria
+   Can distinguish when to use each mode
+   Understand token consumption differences
+   Successfully use agent mode for multi-file operations
 
 ---
 
 ## IDE Support for AI Assistance
 
-IDE / Editor | Built-In AI Features | Supported AI Assistants | Strengths | Limitations
---- | --- | --- | --- | ---
-VS Code | Deep AI integration through extensions; increasingly AI-first workflows | GitHub Copilot, Cline, ChatGPT-based extensions, Gemini integrations | Extremely flexible; huge ecosystem; top-tier AI support; widely adopted | Requires extension management; quality varies by plugin
-Visual Studio (Windows) | Native GitHub Copilot integration; AI-powered IntelliCode | GitHub Copilot, IntelliCode | Strong enterprise + .NET support; excellent refactoring and debugging | Less flexible than VS Code for non-Microsoft stacks
-JetBrains IDEs | JetBrains AI Assistant; code completion, refactoring, doc generation | JetBrains AI Assistant, GitHub Copilot | Deep static analysis + AI; strong multi-language support | JetBrains AI Assistant is subscription-based; Copilot integration not as seamless
-Cursor IDE | AI-first editor; conversational coding; multi-file reasoning | Built-in AI models (GPT-based, Claude-based), Copilot alternatives | Designed for AI pair-programming; strong repo-wide reasoning | Not a traditional IDE; still maturing for large enterprise workflows
-Replit | AI-powered Ghostwriter for code generation, debugging, and explanations | Ghostwriter | Great for beginners and rapid prototyping; browser-based | Less powerful for large, multi-module projects
-Builder.io / Builder Code Editor | AI-enhanced coding environment with integrated assistants | Multiple AI integrations depending on setup | Strong web-dev focus; modern AI-native UX | Not a general-purpose IDE
-Code-B Editors | Predictive code generation, debugging, and review | Multiple AI models depending on configuration | Strong AI-centric workflows; optimized for speed | Less mainstream; smaller ecosystem
-Claude Code | Terminal-first AI coding assistant; autonomous repo-wide reasoning | Latest models from Anthropic and other via configuration | Exceptional multi-file context handling; ideal for agentic workflows and automated patching | Not a GUI IDE; best suited for terminal-centric development and large codebases
+| IDE / Editor                     | Built-In AI Features                                                    | Supported AI Assistants                                              | Strengths                                                                                   | Limitations                                                                       |
+| -------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| VS Code                          | Deep AI integration through extensions; increasingly AI-first workflows | GitHub Copilot, Cline, ChatGPT-based extensions, Gemini integrations | Extremely flexible; huge ecosystem; top-tier AI support; widely adopted                     | Requires extension management; quality varies by plugin                           |
+| Visual Studio (Windows)          | Native GitHub Copilot integration; AI-powered IntelliCode               | GitHub Copilot, IntelliCode                                          | Strong enterprise + .NET support; excellent refactoring and debugging                       | Less flexible than VS Code for non-Microsoft stacks                               |
+| JetBrains IDEs                   | JetBrains AI Assistant; code completion, refactoring, doc generation    | JetBrains AI Assistant, GitHub Copilot                               | Deep static analysis + AI; strong multi-language support                                    | JetBrains AI Assistant is subscription-based; Copilot integration not as seamless |
+| Cursor IDE                       | AI-first editor; conversational coding; multi-file reasoning            | Built-in AI models (GPT-based, Claude-based), Copilot alternatives   | Designed for AI pair-programming; strong repo-wide reasoning                                | Not a traditional IDE; still maturing for large enterprise workflows              |
+| Replit                           | AI-powered Ghostwriter for code generation, debugging, and explanations | Ghostwriter                                                          | Great for beginners and rapid prototyping; browser-based                                    | Less powerful for large, multi-module projects                                    |
+| Builder.io / Builder Code Editor | AI-enhanced coding environment with integrated assistants               | Multiple AI integrations depending on setup                          | Strong web-dev focus; modern AI-native UX                                                   | Not a general-purpose IDE                                                         |
+| Code-B Editors                   | Predictive code generation, debugging, and review                       | Multiple AI models depending on configuration                        | Strong AI-centric workflows; optimized for speed                                            | Less mainstream; smaller ecosystem                                                |
+| Claude Code                      | Terminal-first AI coding assistant; autonomous repo-wide reasoning      | Latest models from Anthropic and other via configuration             | Exceptional multi-file context handling; ideal for agentic workflows and automated patching | Not a GUI IDE; best suited for terminal-centric development and large codebases   |
 
 ---
 
@@ -880,6 +897,7 @@ Claude Code | Terminal-first AI coding assistant; autonomous repo-wide reasoning
 
 Project Setup
 Adding Features
+
 - Basic Arithmetic - Addition, subtraction, multiplication, division
 - Clear / Reset Function - Quickly resets the current input or entire calculation
 - Decimal Support - Allows entry and computation with decimal numbers
@@ -888,12 +906,12 @@ Adding Features
 - Memory Functions (M+, M–, MR, MC) - Store, recall, add to, or clear memory values
 - Error Handling - Displays errors such as division by zero
 - Simple, Intuitive Interface - Numeric keypad, operation buttons, and display screen
-Test Automation
+  Test Automation
 - Code Coverage
-Dependency Management
-Comparing Implementations
-Chat Management
-Intro to Evergreen Software Development
+  Dependency Management
+  Comparing Implementations
+  Chat Management
+  Intro to Evergreen Software Development
 
 ::: notes
 This slide outlines the collaborative development process we’ll follow for building our calculator application — and mob programming will be central to how we work together.
@@ -920,23 +938,32 @@ The project should be ready to build and run from the command line.
 
 Duration: 45-60 minutes
 Objectives
+
 - Use AI to generate starter code for arithmetic operations
 - Understand how to validate AI‑generated logic
 - Integrate addition, subtraction, multiplication, and division functions
-Activities
+  Activities
+
 1. Project Initialization:
+
 - Prompt AI to create a new project
 - Review generated project structure
 - Verify build configuration
+
 2. Implement Basic Operations:
+
 - Prompt AI to add methods for addition, subtraction, multiplication, and division
+
 3. Review the Code:
+
 - For correctness and edge cases
+
 4. Build and Run:
+
 - Use Copilot to help with build commands
 - Troubleshoot any compilation errors with Copilot's help
 - Run the application
-Success Criteria
+  Success Criteria
 - Working calculator with 4 basic operations
 - Application compiles and runs successfully
 - You've critically reviewed all generated code
@@ -947,15 +974,16 @@ Success Criteria
 
 Duration: 15 minutes
 Objectives
+
 - Use AI to scaffold state‑management logic
 - Implement CE (clear entry) and C (clear all) behaviors
 - Understand how AI can help reason about UI state transitions
-Activities
-Prompt AI to outline the difference between CE and C
-Generate code for clearing the current input vs. full state
-Integrate the logic into your calculator’s state object
-Test transitions by simulating user input sequences
-Success Criteria
+  Activities
+  Prompt AI to outline the difference between CE and C
+  Generate code for clearing the current input vs. full state
+  Integrate the logic into your calculator’s state object
+  Test transitions by simulating user input sequences
+  Success Criteria
 - - CE clears only the active entry
 - - C resets the entire calculator state
 
@@ -984,13 +1012,14 @@ Learner can explain the validation logic
 
 Duration: 8 minutes
 Objectives
+
 - Use AI to generate logic for toggling numeric sign
 - Understand how sign toggling interacts with current input and stored values
-Activities
-Ask AI to generate a function that toggles sign on the active value
-Integrate the function into the input workflow
-Test sign toggling before and after entering digits
-Success Criteria
+  Activities
+  Ask AI to generate a function that toggles sign on the active value
+  Integrate the function into the input workflow
+  Test sign toggling before and after entering digits
+  Success Criteria
 - Sign toggle works consistently for integers and decimals
 - Learner can explain how the toggle affects stored vs. active value
 
@@ -1000,19 +1029,21 @@ Success Criteria
 
 Duration: 15 minutes
 Objectives
+
 - Use AI to clarify how calculators interpret %
 - Implement percentage logic for common patterns
 - Validate behavior with AI‑generated examples
-Activities
-Ask AI to explain how % should behave in a standard calculator
-Generate code for:
-X × Y%
-Y + X%
-Y – X%
+  Activities
+  Ask AI to explain how % should behave in a standard calculator
+  Generate code for:
+  X × Y%
+  Y + X%
+  Y – X%
+
 3. Test each pattern with AI‑generated sample values
-Success Criteria
-Percentage operations match standard calculator behavior
-Learner can articulate the interpretation rules for %
+   Success Criteria
+   Percentage operations match standard calculator behavior
+   Learner can articulate the interpretation rules for %
 
 ---
 
@@ -1020,15 +1051,16 @@ Learner can articulate the interpretation rules for %
 
 Duration: 18 minutes
 Objectives
+
 - Use AI to design a memory subsystem
 - Implement memory add, subtract, recall, and clear
 - Validate memory behavior across multiple operations
-Activities
-Ask AI to propose a memory‑state structure
-Generate functions for M+, M–, MR, MC
-Integrate memory operations into the calculator workflow
-Test memory persistence across multiple calculations
-Success Criteria
+  Activities
+  Ask AI to propose a memory‑state structure
+  Generate functions for M+, M–, MR, MC
+  Integrate memory operations into the calculator workflow
+  Test memory persistence across multiple calculations
+  Success Criteria
 - Memory functions behave as expected
 - Learner can explain how memory state is stored and updated
 
@@ -1038,15 +1070,16 @@ Success Criteria
 
 Duration: 10 minutes
 Objectives
+
 - Use AI to identify common error conditions
 - Implement error messages and recovery logic
 - Ensure the calculator resets gracefully after errors
-Activities
-Ask AI to list typical calculator errors (e.g., divide by zero)
-Generate code for error detection and display
-Implement a reset path after an error
-Test error scenarios using AI‑generated test cases
-Success Criteria
+  Activities
+  Ask AI to list typical calculator errors (e.g., divide by zero)
+  Generate code for error detection and display
+  Implement a reset path after an error
+  Test error scenarios using AI‑generated test cases
+  Success Criteria
 - Errors are detected and displayed correctly
 - Calculator recovers cleanly after reset
 - Learner can describe the error‑handling flow
@@ -1057,15 +1090,16 @@ Success Criteria
 
 Duration: 15 minutes
 Objectives
+
 - Integrate trigonometric functions into the calculator’s operation set
 - Use AI to generate math‑library wrappers and input‑parsing logic
 - Ensure correct handling of degrees vs. radians
-Activities
-Ask AI to generate functions for sin, cos, and tan using your language’s math library
-Prompt AI to propose a strategy for handling degree/radian mode
-Implement UI bindings or command triggers for each trig function
-Use AI to generate a table of sample inputs and expected outputs
-Success Criteria
+  Activities
+  Ask AI to generate functions for sin, cos, and tan using your language’s math library
+  Prompt AI to propose a strategy for handling degree/radian mode
+  Implement UI bindings or command triggers for each trig function
+  Use AI to generate a table of sample inputs and expected outputs
+  Success Criteria
 - Trig functions compute correct values in the selected angle mode
 - Degree/radian mode switching works consistently
 - UI or command triggers correctly call the trig functions
@@ -1077,18 +1111,19 @@ Success Criteria
 
 Duration: 15 minutes
 Objectives
+
 - Use AI to scaffold UI event handlers
 - Connect buttons to logic functions
 - Validate end‑to‑end user workflow
-Activities
-Ask AI to generate event‑binding code for numeric and operator buttons
-Integrate logic functions from previous labs
-Test a full workflow:
+  Activities
+  Ask AI to generate event‑binding code for numeric and operator buttons
+  Integrate logic functions from previous labs
+  Test a full workflow:
 - Enter decimal
 - Toggle sign
 - Apply percentage
 - Store result in memory
-Success Criteria
+  Success Criteria
 - UI correctly triggers all calculator functions
 - Full workflow completes without errors
 - Learner can explain how UI events map to logic functions
@@ -1099,27 +1134,36 @@ Success Criteria
 
 Duration: 45-60 minutes
 Objectives
+
 - Generate unit tests with AI assistance
 - Identify quality issues in generated tests
 - Understand the importance of reviewing AI-generated tests
-Activities
+  Activities
+
 1. Generate Initial Tests:
+
 - Prompt: "Create unit tests for the calculator operations"
 - Review generated test structure
 - Critical Review: Are tests calling your calculator code?
+
 2. Fix Test Issues (Replicating Session Demo):
+
 - If tests are too simple (like `1 + 1 = 2` without calling calculator):
 - Identify the problem
 - Ask Copilot to fix it: "Update tests to call Calculator class methods"
 - Verify tests now test actual implementation
+
 3. Run Tests:
+
 - Execute test suite
 - Review test output
 - Debug any failing tests with Copilot's help
+
 4. Add Edge Cases:
+
 - Prompt: "Add tests for edge cases like division by zero"
 - Verify exception handling tests are correct
-Success Criteria
+  Success Criteria
 - Test suite with minimum 8 test cases
 - All tests call actual calculator methods (not just language arithmetic)
 - Tests include edge cases and error conditions
@@ -1131,28 +1175,35 @@ Success Criteria
 
 Duration: 30-40 minutes
 Objectives
+
 - Set up code coverage reporting
 - Interpret coverage results
 - Improve test coverage based on gaps
-Activities
+  Activities
+
 1. Enable Coverage Collection:
+
 - Prompt: "Add code coverage reporting to my test project"
 - Review package dependencies added
 - Handle any NuGet/dependency issues with Copilot's help
+
 2. Generate Coverage Report:
+
 - Run tests with coverage enabled
 - Review coverage percentage
 - Identify uncovered code paths
+
 3. Improve Coverage:
+
 - Add tests for uncovered methods
 - Re-run coverage to verify improvement
 - Discuss: Is 100% coverage always necessary?
-Success Criteria
+  Success Criteria
 - Code coverage reporting successfully configured
 - Can generate and read coverage reports
 - Achieved reasonable coverage (>80% line coverage)
 - Understand what coverage metrics mean
-Discussion Points
+  Discussion Points
 - Feature coverage vs. code coverage (as raised by Tom in the session)
 - When is test coverage sufficient?
 - Quality of tests vs. quantity
@@ -1163,30 +1214,39 @@ Discussion Points
 
 Duration: 30-40 minutes
 Objectives
+
 - Use Copilot to resolve dependency issues
 - Handle package restoration problems
 - Practice iterative problem-solving with AI
-Activities
+  Activities
+
 1. Simulate or Identify a Dependency Issue:
+
 - Introduce a version conflict (or use existing issue)
 - Prompt: "I'm getting [specific error]. How do I fix it?"
+
 2. Follow Copilot's Guidance:
+
 - Review suggested solutions
 - Evaluate multiple approaches if offered
 - Choose best solution collaboratively
+
 3. Iterative Resolution:
+
 - If first solution doesn't work, provide error details
 - Continue conversation until resolved
+
 4. Common Issues to Practice:
+
 - NuGet package source configuration
 - MSTest adapter version conflicts
 - .NET SDK targeting issues
 - Package restoration failures
-Success Criteria
+  Success Criteria
 - Successfully resolved at least one dependency issue
 - Understand how to provide error context to Copilot
 - Practiced iterative problem-solving approach
-Real-World Scenario
+  Real-World Scenario
 - This lab replicates the exact dependency challenges encountered in the training session:
 - Updating test project to target .NET 8
 - Resolving NuGet.org package source mapping
@@ -1198,15 +1258,18 @@ Real-World Scenario
 
 Duration: 30-40 minutes
 Objectives
+
 - Apply best practices learned in session
 - Review code quality systematically
 - Identify and fix issues
-Activities
+  Activities
+
 1. Code Quality Check:
+
 - Prompt: "Suggest improvements for code quality and maintainability"
 - Evaluate suggestions critically
 - Implement valuable improvements
-Success Criteria
+  Success Criteria
 - Comprehensive documentation added
 - Critically evaluated all AI suggestions
 
@@ -1216,31 +1279,40 @@ Success Criteria
 
 Duration: 20-30 minutes
 Objectives
+
 - Compare outputs from different AI models
 - Understand when to use premium vs standard models
 - Monitor token usage
-Activities
+  Activities
+
 1. Same Prompt, Different Models:
+
 - Choose a coding task (e.g., "implement bubble sort")
 - Try with GPT-4 (standard - unlimited)
 - Try with Claude Sonnet (premium - 1x token)
 - Compare results for quality, style, completeness
+
 2. Token Usage Analysis:
+
 - Check premium token bar before and after
 - Calculate tokens consumed
 - Discuss: Was premium model worth the cost?
+
 3. Best Use Cases:
+
 - Identify tasks where standard models suffice
 - Identify tasks requiring premium models
 - Create personal guidelines for model selection
+
 4. Ask Mode Advantage:
+
 - Use Ask mode with premium models (no token cost)
 - Compare to Agent mode token consumption
-Success Criteria
+  Success Criteria
 - Compared at least 2 different models
 - Understand token consumption impact
 - Can make informed model selection decisions
-Token Economics
+  Token Economics
 - Standard models (unlimited): ChatGPT-4
 - Premium tokens (counted):
 - Claude Haiku 4.5: 1/3 token per request
@@ -1259,13 +1331,17 @@ Use AI to scaffold a standalone “core logic” module/class
 Ensure the UI communicates with the logic layer through a clean, well‑defined API
 Validate that encapsulation improves testability and maintainability
 Activities
+
 1. - Ask AI to generate a dedicated component (e.g., CalculatorEngine, CalculatorCore) containing:
+
 - Arithmetic operations
 - State management
 - Trig/percentage/memory logic (if implemented)
+
 2. Review the AI‑generated API surface and refine naming, inputs, and return types
 3. Replace UI‑embedded logic with calls into the new component
-Success Criteria
+   Success Criteria
+
 - All calculator features run through the external logic component
 - UI contains no computational logic — only event handling and display updates
 - Learner can explain how encapsulation improves modularity, reuse, and AI‑assisted development workflow
@@ -1276,15 +1352,18 @@ Success Criteria
 
 Duration: 30-40 minutes
 Objectives
+
 - Apply best practices learned in session
 - Review code quality systematically
 - Identify and fix issues
-Activities
+  Activities
+
 1. Security Review:
+
 - Prompt: "Review this code for security vulnerabilities"
 - Address any identified issues
 - Add input validation where missing
-Success Criteria
+  Success Criteria
 - Code has no obvious security issues
 - Critically evaluated all AI suggestions
 
@@ -1294,15 +1373,18 @@ Success Criteria
 
 Duration: 30-40 minutes
 Objectives
+
 - Add documentation to a project
 - Update existing documentation
-Activities
+  Activities
+
 1. Documentation:
+
 - Ask Copilot to generate XML/doc comments
 - Review for accuracy and completeness
 - Add README with usage instruction
 - Ask AI to update existing documentation
-Success Criteria
+  Success Criteria
 - Comprehensive documentation added
 - Critically evaluated all AI suggestions
 
@@ -1312,15 +1394,18 @@ Success Criteria
 
 Duration: 30-40 minutes
 Objectives
+
 - Apply best practices learned in session
 - Review code quality systematically
 - Identify and fix issues
-Activities
+  Activities
+
 1. Refactoring Exercise:
+
 - Ask Copilot for alternative implementation approaches
 - Compare different solutions
 - Discuss trade-offs (as mentioned in session)
-Success Criteria
+  Success Criteria
 - Code has no obvious security issues
 - Comprehensive documentation added
 - At least one refactoring improvement implemented
@@ -1331,14 +1416,15 @@ Success Criteria
 ## Evergreen Software Development - Core Principles
 
 Intent‑First Design
+
 - Define the system’s purpose, invariants, and boundaries before writing code to ensure long‑term clarity.
-Stable Interfaces, Evolving Internals
+  Stable Interfaces, Evolving Internals
 - Keep contracts predictable while allowing implementations to improve continuously.
-Continuous Regeneration with Guardrails
+  Continuous Regeneration with Guardrails
 - Use AI to rewrite or extend components safely, backed by tests, specs, and architectural constraints.
-Modular, Replaceable Components
+  Modular, Replaceable Components
 - Structure the system so any part can be regenerated, swapped, or upgraded without cascading breakage.
-Lifecycle Governance
+  Lifecycle Governance
 - Maintain quality through automated tests, versioning discipline, and human‑in‑the‑loop validation.
 
 ---
@@ -1359,14 +1445,15 @@ Contrast disciplined engineering practices with quick “vibe” coding; stress 
 ## Why Software Fails to Be Evergreen
 
 Intent Rot
+
 - The original purpose, constraints, and invariants are undocumented or lost, making safe regeneration impossible.
-Unstable or Leaky Interfaces
+  Unstable or Leaky Interfaces
 - APIs, data contracts, and boundaries change unpredictably, causing cascading breakage when internals evolve.
-Tightly Coupled Architecture
+  Tightly Coupled Architecture
 - Components depend on each other’s internal details, preventing isolated regeneration or replacement.
-Insufficient Guardrails
+  Insufficient Guardrails
 - Missing tests, specs, or validation layers mean AI‑assisted regeneration can’t be trusted to preserve behavior.
-One‑Off Patches and Drift
+  One‑Off Patches and Drift
 - Ad‑hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
 
 ---
@@ -1471,16 +1558,17 @@ Activities
 Select a small technical debt item.
 Prompt two or more models to propose a fix.
 Compare outputs for:
+
 - Safety
 - Clarity
 - Test coverage
 - Architectural alignment
-Synthesize the best elements into a final solution.
-Success Criteria
-Differences between models are clearly identified
-Risks and strengths are evaluated
-Final synthesized solution is safe and incremental
-Provenance metadata is included
+  Synthesize the best elements into a final solution.
+  Success Criteria
+  Differences between models are clearly identified
+  Risks and strengths are evaluated
+  Final synthesized solution is safe and incremental
+  Provenance metadata is included
 
 ::: notes
 Encourage participants to think like reviewers comparing multiple PRs. The goal is to understand model behavior, not to pick a favorite.
@@ -1524,17 +1612,18 @@ Synthesize best practices into a unified plan
 Activities
 Select a multi‑step modernization task.
 Ask multiple models to:
+
 - Analyze the problem
 - Propose a remediation plan
 - Suggest tests
 - Suggest documentation updates
-Compare the outputs.
-Synthesize a final, safe, incremental plan.
-Success Criteria
-Multi‑model differences are clearly understood
-Final plan is incremental, reversible, and well‑tested
-Documentation and provenance are included
-Risks are identified and mitigated
+  Compare the outputs.
+  Synthesize a final, safe, incremental plan.
+  Success Criteria
+  Multi‑model differences are clearly understood
+  Final plan is incremental, reversible, and well‑tested
+  Documentation and provenance are included
+  Risks are identified and mitigated
 
 ::: notes
 This exercise builds confidence in orchestrating multiple models as collaborators. The goal is synthesis, not competition.
@@ -1590,7 +1679,7 @@ Provides version‑controlled guardrails
 Enables team‑wide consistency
 File types
 .github/instructions/myinstructions.instructions.md
-.github/prompts/myprompt.prompt.md
+.github/copilot/Promptfiles/myprompt.prompt.md
 .github/chatmodes/mychatmode.chatmode.md
 
 ::: notes
@@ -1640,12 +1729,13 @@ This prevents drift and ensures the output is usable without heavy editing.
 
 Provenance requirements
 Declare:
+
 - AI involvement
 - Model used
 - Date generated
 - Human reviewer
-Store provenance in headers, footers, or side cars
-Track revisions in version control
+  Store provenance in headers, footers, or side cars
+  Track revisions in version control
 
 ::: notes
 Provenance is essential for conformance, auditability, and long‑term maintainability.
@@ -1663,19 +1753,20 @@ Understand file organization for AI-assisted output policies
 Practice copying files between repositories
 Ensure compliance with output metadata requirements
 Activities:
+
 1. Locate .github/instructions/ai-assisted-output.instructions.md in the AI-Assisted-Software-Development repository
 2. Copy the file into the .github/instructions folder of the current repository
 3. Copy these files as well:
-chatmode-file.instructions.md
-instruction-files.instructions.md
-instruction-prompt-files.instructions.md
-prompt-file.instructions.md
+   chatmode-file.instructions.md
+   instruction-files.instructions.md
+   instruction-prompt-files.instructions.md
+   prompt-file.instructions.md
 4. Verify the copied files matches the original
 5. Review the instructions
-Success Criteria:
-The files are present in the current repo
-The content matches the source file
-No metadata or formatting is lost
+   Success Criteria:
+   The files are present in the current repo
+   The content matches the source file
+   No metadata or formatting is lost
 
 ::: notes
 This exercise reinforces the importance of maintaining consistent AI-assisted output policies across repositories. By copying the instructions file, participants learn to manage compliance and provenance requirements for AI-generated artifacts. Ensure the copied file is identical and properly placed to support future AI work.
@@ -1710,6 +1801,7 @@ This slide introduces the purpose of the AI-Assisted Output Instructions file: t
 ## Required Provenance Metadata
 
 Every AI-assisted artifact must include:
+
 - ai_generated: true
 - model: provider/model@version
 - operator: username
@@ -1748,10 +1840,11 @@ Note: Instructions files have limited support for metadata and must use sidecar 
 
 Each chat creates a unique log folder: ai-logs/yyyy/mm/dd/<chat-id>/
 Required files:
+
 - conversation.md (full transcript)
 - summary.md (objectives, decisions, outcomes)
 - artifacts/ (optional)
-Never reuse chat logs between sessions
+  Never reuse chat logs between sessions
 
 ::: notes
 This slide describes the logging structure for AI chats.
@@ -1823,12 +1916,13 @@ This slide reinforces the value of these instructions: they ensure every AI-assi
 ## Core Instruction files
 
 chatmode-file.instructions.md
+
 - Defines the structure and contents of agents
-instruction-files.instructions.md
+  instruction-files.instructions.md
 - Defines the structure and contents of instruction files
-prompt-file.instructions.md
+  prompt-file.instructions.md
 - Defines the structure and contents of prompts
-instruction-prompt-files.instructions.md
+  instruction-prompt-files.instructions.md
 - Defines the structure and contents of prompts the create instruction files
 
 ---
@@ -1891,16 +1985,17 @@ Emphasize safety and incrementalism
 Encode risk‑aware behaviors
 Activities
 Draft a Agent that:
+
 - Respects working systems
 - Avoids risky rewrites
 - Surfaces context gaps
 - Encourages incremental changes
-Add tone and behavioral guidelines
-Add provenance metadata
-Success Criteria
-Agent behaves like a cautious senior engineer
-Encourages safe modernization
-Includes clear behavioral rules
+  Add tone and behavioral guidelines
+  Add provenance metadata
+  Success Criteria
+  Agent behaves like a cautious senior engineer
+  Encourages safe modernization
+  Includes clear behavioral rules
 
 ::: notes
 This helps participants shape AI behavior to match brownfield realities.
@@ -2020,7 +2115,7 @@ security-requirements.instructions.md
 
 ✅ Do This:
 Keep instructions clear and actionable
-Use file patterns (applyTo: '**') for broad scope
+Use file patterns (applyTo: '\*\*') for broad scope
 Version control and document changes
 Test instruction effectiveness regularly
 ❌ Avoid This:
@@ -2045,32 +2140,32 @@ Welcome to this presentation on instruction file applyTo patterns. This is a cri
 **Transition**: "Let's start by understanding what the applyTo field actually does"
 :::
 
-------------------------------------------------------------------------
+---
 
 ## Where `appliesTo` Fits
 
 The filtering mechanism for instruction files
 
-`appliesTo` is a **selector** that determines *when* an instruction file
+`appliesTo` is a **selector** that determines _when_ an instruction file
 is included in the stack.
 
 Common selectors include:
 
--   **repositories** -- include only for specific repos
--   **languages** -- include only for certain languages
--   **filePatterns** -- include only when editing certain files
--   **tools** -- include only when using specific Copilot features
--   **scopes** -- include only in chat, only in editor, etc.
+- **repositories** -- include only for specific repos
+- **languages** -- include only for certain languages
+- **filePatterns** -- include only when editing certain files
+- **tools** -- include only when using specific Copilot features
+- **scopes** -- include only in chat, only in editor, etc.
 
 **Speaker Notes:** `appliesTo` is not a guardrail itself. It's a routing
 rule. It prevents irrelevant instructions from polluting the stack and
 keeps the assistant focused.
 
-------------------------------------------------------------------------
+---
 
 ## How `appliesTo` Interacts with the Stack
 
-Filtering happens *before* merging
+Filtering happens _before_ merging
 
 1.  Copilot discovers all instruction files in scope
 2.  Copilot filters them using `appliesTo`
@@ -2825,13 +2920,13 @@ Thank you all for your attention. The applyTo pattern system might seem simple o
 
 ## Core Instructions
 
-Instruction File | Purpose
---- | ---
-ai-assisted-output.instructions.md | Guidance for AI generated artifacts
-chatmode-file.instructions.md | Guidance for generating chat modes
-instruction-files.instructions.md | Guidance for generating instruction files
-prompt-file.instructions.md | Guidance for generating prompt files
-instruction-prompt-files.instructions.md | Guidance for generating prompts that generate instruction files
+| Instruction File                         | Purpose                                                         |
+| ---------------------------------------- | --------------------------------------------------------------- |
+| ai-assisted-output.instructions.md       | Guidance for AI generated artifacts                             |
+| chatmode-file.instructions.md            | Guidance for generating chat modes                              |
+| instruction-files.instructions.md        | Guidance for generating instruction files                       |
+| prompt-file.instructions.md              | Guidance for generating prompt files                            |
+| instruction-prompt-files.instructions.md | Guidance for generating prompts that generate instruction files |
 
 ---
 
@@ -2890,6 +2985,7 @@ Copilot can only “see” a limited amount of text at once
 Large files, long conversations, or complex repos can exceed context
 Important details may fall out of the window without you realizing
 Use these techniques to keep context focused:
+
 - Summaries
 - Instruction files
 - Modular prompts
@@ -2929,15 +3025,16 @@ Think of prompts as design briefs, not commands.
 
 Different models excel at different tasks
 High‑end models (e.g., GPT‑4o, Claude Sonnet) are best for:
+
 - Architecture
 - Refactoring
 - Complex reasoning
 - Multi‑file changes
-Lightweight models are ideal for:
+  Lightweight models are ideal for:
 - Boilerplate
 - Repetitive tasks
 - Quick iterations
-Match the model to the task, not the other way around
+  Match the model to the task, not the other way around
 
 ::: notes
 Model selection is a strategic decision.

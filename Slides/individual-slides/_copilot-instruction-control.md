@@ -118,7 +118,7 @@ One important caveat: If an instruction file has NO applyTo field, it won't be a
 **Prompt files execute tasks, they don't control instruction inclusion**
 
 ```markdown
-<!-- .github/prompts/create-api.prompt.md -->
+<!-- .github/copilot/Promptfiles/create-api.prompt.md -->
 
 **CRITICAL**: All AI-generated artifacts MUST comply with
 `.github/instructions/ai-assisted-output.instructions.md`

@@ -44,4 +44,25 @@ paginate: true
 - Regeneration workflow is governed by tests and review.
 - Team can explain how this supports evergreen outcomes.
 
+::: notes
+Introduce the Evergreen Software Development exercise. This exercise teaches participants to design software that can evolve indefinitely.
+
+Key talking points:
+
+- Duration: 20-25 minutes for exploration and discussion
+- Prerequisites: Participants should understand basic architecture and testing concepts
+- Objectives focus on three core practices: intent-first design, stable interfaces, and AI guardrails
+
+Activities breakdown:
+
+1. Capture intent BEFORE making changes (prevents intent rot)
+2. Define clear contracts that won't change (enables safe internal evolution)
+3. Add validation gates (tests, specs) that govern AI regeneration
+
+Success criteria are specific and measurable. Teams should be able to demonstrate each criterion.
+
+Timing: 2-3 minutes to introduce exercise.
+Transition: "Let's start by capturing intent..."
+:::
+
 ---

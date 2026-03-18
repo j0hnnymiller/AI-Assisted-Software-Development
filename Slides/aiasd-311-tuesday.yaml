@@ -9,19 +9,23 @@ sections:
 
   - name: Module 1 - LLM
     slides:
-      # Add your Module 1 slide files here
       - Slides\individual-slides\large-language-models.md
       -
 
   - name: Module 2 - Copilot for Teams
     slides:
-      # Add your Module 2 slide files here
       - Slides\individual-slides\github-copilot-for-teams.md
       -
 
-  - name: Module 3 - Models and Context
+  - name: Module 3 - Safety Measures and Best Practices
     slides:
-      # Add your Module 3 slide files here
+      - Slides\individual-slides\safety-measures-best-practices.md
+
+  - name: Module 4 - Models and Context
+    slides:
       - Slides\individual-slides\model-selection-and-comparison.pptx
       - Slides\individual-slides\advanced-context-techniques.md
 
+  - name: Module 5 - Guardrails and Prompt Files
+    slides:
+      - Slides\individual-slides\prompt-files.md
