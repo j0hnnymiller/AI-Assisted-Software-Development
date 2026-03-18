@@ -253,7 +253,7 @@ This morning session focused on brownfield development with GitHub Copilot, emph
 
 - Boris Giterman asked about sequence of instruction files (which to use first)
 - John clarified the exercise is about creating a prompt that creates a prompt that creates an instruction
-- Dan Blanchard asked about file location (.github/prompts vs .github/instructions)
+- Dan Blanchard asked about file location (.github/copilot/Promptfiles vs .github/instructions)
 - Confusion resolved: prompt files go in /prompts, instruction files in /instructions
 
 ---
@@ -381,7 +381,7 @@ This morning session focused on brownfield development with GitHub Copilot, emph
 ### Repository Structure
 
 - `.github/instructions/` - Instruction files directory
-- `.github/prompts/` - Prompt files directory
+- `.github/copilot/Promptfiles/` - Prompt files directory
 - `ai-logs/yyyy/mm/dd/<chat-id>/` - Conversation logs
 - `ai-logs/yyyy/mm/dd/<chat-id>/conversation.md` - Full transcript
 - `ai-logs/yyyy/mm/dd/<chat-id>/summary.md` - Session summary

@@ -13,7 +13,7 @@ task_durations:
     duration: "00:00:00"
 total_duration: "00:00:00"
 ai_log: "ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md"
-source: ".github/prompts/create-evergreen-go-instructions.prompt.md"
+source: ".github/copilot/Promptfiles/create-evergreen-go-instructions.prompt.md"
 ---
 
 <!-- _class: lead -->

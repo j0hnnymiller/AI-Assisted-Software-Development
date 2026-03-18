@@ -85,11 +85,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Meta-Prompts (Prompt Generators)
 
-- [`.github/prompts/meta/create-instruction-prompt.prompt.md`](.github/prompts/meta/create-instruction-prompt.prompt.md) — Generates new instruction-generating prompts with AI provenance built-in ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
+- [`.github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md`](.github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md) — Generates new instruction-generating prompts with AI provenance built-in ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
 
 ### Instruction-Generating Prompts
 
-- [`.github/prompts/create-chatmode-instructions.prompt.md`](.github/prompts/create-chatmode-instructions.prompt.md) — Generates comprehensive authoring guidelines for creating custom GitHub Copilot chat modes
+- [`.github/copilot/Promptfiles/create-chatmode-instructions.prompt.md`](.github/copilot/Promptfiles/create-chatmode-instructions.prompt.md) — Generates comprehensive authoring guidelines for creating custom GitHub Copilot chat modes
 
 ### Notable Artifacts
 
@@ -115,13 +115,13 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 - **Prompt Authoring Instructions** ([`.github/instructions/create-prompt.instructions.md`](.github/instructions/create-prompt.instructions.md))
   - Comprehensive guidelines for creating effective, well-structured repository prompts
-  - Generated from: [`.github/prompts/prompt-file.instructions.prompt.md`](.github/prompts/prompt-file.instructions.prompt.md)
+  - Generated from: [`.github/copilot/Promptfiles/prompt-file.instructions.prompt.md`](.github/copilot/Promptfiles/prompt-file.instructions.prompt.md)
   - Provenance: [Chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md)
 
 - **Instruction Validation Report** ([`validation-report-20251015-212137.md`](validation-report-20251015-212137.md))
   - Comprehensive analysis of instruction file conflicts and inconsistencies
   - Identifies 7 issues (1 high, 4 medium, 3 low severity) with fixes applied to critical issues
-  - Generated from: [`.github/prompts/meta/validate-and-improve-instructions.prompt.md`](.github/prompts/meta/validate-and-improve-instructions.prompt.md)
+  - Generated from: [`.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md`](.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md)
   - Status: Critical fixes applied (Option C executed - 4 issues resolved, 3 deferred for refactoring)
   - Provenance: [Chat log](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/conversation.md) | [Summary](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/summary.md)
   - Verification: [Fixes verified 2025-10-16](validation-fixes-verified-20251016.md) ([chat log](ai-logs/2025/10/16/resume-validation-fixes-20251016/conversation.md))

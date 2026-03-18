@@ -336,13 +336,11 @@ gantt
 ### Scenario: Implementing User Authentication
 
 1. **Instruction Files** provide:
-
    - Security coding standards
    - Testing requirements
    - Documentation standards
 
 2. **Prompt File** executes:
-
    - "Implement OAuth2 Authentication System"
    - Step-by-step implementation guide
 
@@ -502,7 +500,7 @@ Expertise layer that delivers **specialized knowledge and perspectives**
 ### Implementation Templates:
 
 - **Instruction Files**: `.github/instructions/*.instructions.md`
-- **Prompt Files**: `.github/prompts/*.prompt.md`
+- **Prompt Files**: `.github/copilot/Promptfiles/*.prompt.md`
 - **Chat Mode Configs**: Custom mode documentation
 
 ### Documentation:
