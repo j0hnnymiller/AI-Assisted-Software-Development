@@ -28,7 +28,7 @@ prompt_metadata:
   version: 2.0.0
   created: 2025-10-15
   updated: 2025-10-15
-  output_path: .github/prompts/<instruction-name>.prompt.md
+  output_path: .github/copilot/Promptfiles/<instruction-name>.prompt.md
   category: meta-prompt
   tags: [meta-prompt, prompt-generation, ai-provenance, standards]
   output_format: markdown
@@ -125,7 +125,7 @@ Based on your answers, I'll create a prompt file with:
 
 - **Domain:** _[your domain]_
 - **Prompt ID:** _[your instruction-id]_
-- **Prompt File Path:** `.github/prompts/<instruction-id>.prompt.md`
+- **Prompt File Path:** `.github/copilot/Promptfiles/<instruction-id>.prompt.md`
 - **Generated Instruction File Path:** _[your output path]_
 - **ApplyTo Pattern:** _[your pattern or "N/A"]_
 - **Key Requirements:** _[your requirements]_
@@ -143,7 +143,7 @@ The generated prompt will ensure that any instruction file it creates includes:
 ## Deliverable
 
 Once confirmed, I'll create the prompt file at:
-`.github/prompts/<instruction-id>.prompt.md`
+`.github/copilot/Promptfiles/<instruction-id>.prompt.md`
 
 The prompt file will have this structure:
 
@@ -212,7 +212,7 @@ task_durations:
   duration: "<hh:mm:ss>"
   total_duration: "<hh:mm:ss>"
   ai_log: "ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md"
-  source: ".github/prompts/meta/create-instruction-prompt.prompt.md"
+  source: ".github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md"
   applyTo: "<pattern>" # If specified
 
 ---
@@ -254,7 +254,7 @@ The file should be comprehensive, self-contained, and immediately usable.
 
 ## Output Format
 
-Generate a complete prompt file at `.github/prompts/<instruction-id>.prompt.md` that:
+Generate a complete prompt file at `.github/copilot/Promptfiles/<instruction-id>.prompt.md` that:
 
 1. ✅ Follows the structure above
 2. ✅ Includes AI provenance requirements in Deliverable section
@@ -299,7 +299,7 @@ The generated prompt must:
 
 Generate a complete, executable prompt file that will produce instruction files with full AI provenance metadata compliance.
 
-**File Location**: `.github/prompts/<instruction-id>.prompt.md`
+**File Location**: `.github/copilot/Promptfiles/<instruction-id>.prompt.md`
 
 **File Content**: Complete YAML front matter + markdown prompt following the structure above
 
@@ -315,7 +315,7 @@ Add the new prompt to the **Artifacts Produced** section:
 
 ```markdown
 **Artifacts Produced**:
-- `.github/prompts/<instruction-id>.prompt.md` - <Brief description>
+- `.github/copilot/Promptfiles/<instruction-id>.prompt.md` - <Brief description>
 ````
 
 **Important**: In conversation.md, use the operator's GitHub username (not "USER") for all exchanges:
@@ -355,7 +355,7 @@ Add entry to appropriate section:
 ```markdown
 ### Meta-Prompts (Prompt Generators)
 
-- [`.github/prompts/meta/<filename>.prompt.md`](.github/prompts/meta/<filename>.prompt.md) — <Description> ([chat log](ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md))
+- [`.github/copilot/Promptfiles/meta/<filename>.prompt.md`](.github/copilot/Promptfiles/meta/<filename>.prompt.md) — <Description> ([chat log](ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md))
 ```
 
 Or for instruction-generating prompts:
@@ -363,7 +363,7 @@ Or for instruction-generating prompts:
 ```markdown
 ### Guidance & Instructions
 
-- [`.github/prompts/<filename>.prompt.md`](.github/prompts/<filename>.prompt.md) — <Description> ([chat log](ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md))
+- [`.github/copilot/Promptfiles/<filename>.prompt.md`](.github/copilot/Promptfiles/<filename>.prompt.md) — <Description> ([chat log](ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md))
 ```
 
 ---

@@ -11,7 +11,7 @@ prompt_metadata:
 	version: 1.1.0
 	created: 2025-10-14
 	updated: 2025-01-27
-	output_path: .github/prompts/prompt-file.instructions.prompt.md
+	output_path: .github/copilot/Promptfiles/prompt-file.instructions.prompt.md
 	category: meta-documentation
 	tags: [meta-prompts, documentation, prompt-engineering, authoring-guidelines]
 	output_format: markdown
@@ -27,7 +27,7 @@ This prompt generates instructions for creating prompts that follow repository s
 
 ## Output Requirements
 
-- **Target File**: Create or overwrite `.github/prompts/prompt-file.instructions.prompt.md`
+- **Target File**: Create or overwrite `.github/copilot/Promptfiles/prompt-file.instructions.prompt.md`
 - **Format**: Valid Markdown with proper YAML frontmatter
 - **Standards Compliance**: Must conform to Repository Prompt File Standards
 - **Completeness**: Include comprehensive guidance for all prompt authoring aspects
@@ -55,25 +55,21 @@ Additional prompt_metadata structure:
 ### Content Structure Requirements
 
 1. **Audience and Scope Definition**
-
    - Target audience (developers, prompt authors)
    - Skill level expectations
 
 2. **Prompt File Structure Guide**
-
    - YAML frontmatter requirements with mandatory top-level fields (mode, model, tools, description)
    - Section organization standards
    - Metadata field specifications for both top-level and prompt_metadata sections
 
 3. **Field-by-Field Documentation**
-
    - Required top-level fields: mode ('agent' for file-creating prompts), model ('Auto (copilot)' if unspecified), tools (array of required tools), description (moved from prompt_metadata)
    - Optional prompt_metadata fields (excluding description)
    - Field validation rules
    - Example values and formats
 
 4. **Best Practices Guidelines**
-
    - Metadata structure: Top-level fields (mode, model, tools, description) + prompt_metadata section
    - Tool selection: Analyze prompt requirements to determine needed tools (create, edit, search, etc.)
    - Mode specification: 'agent' for file-creating prompts, 'chat' for interactive prompts
@@ -83,7 +79,6 @@ Additional prompt_metadata structure:
    - Version control considerations
 
 5. **Quality Assurance Elements**
-
    - Metadata validation checklist (mode, model, tools, description present at top level)
    - Tool array verification (matches prompt execution requirements)
    - Description placement verification (not in prompt_metadata)
@@ -116,4 +111,4 @@ The generated prompt must ensure the instruction file will:
 
 ## Deliverable
 
-Output only the complete `.github/prompts/prompt-file.instructions.prompt.md` file content as Markdown. No additional commentary, explanations, or wrapper text.
+Output only the complete `.github/copilot/Promptfiles/prompt-file.instructions.prompt.md` file content as Markdown. No additional commentary, explanations, or wrapper text.

@@ -21,13 +21,28 @@ prompt_metadata:
 Merge the Marp slide decks defined in `$MANIFEST` into a single Marp slide deck saved as
 `$OUTPUT_FILE`, then generate a PPTX with named sections using `python-pptx`.
 
-## Default Values
+## Parameters
+
+**To generate from a different manifest**, specify when running this prompt:
+
+```
+$MANIFEST = Slides/aiasd-311-<day>.yaml
+```
+
+**Auto-derived values** (calculated from `$MANIFEST`):
+
+- `$OUTPUT_FILE` = derived from `$MANIFEST`: strip `.yaml` and append `-draft.md`
+  (e.g. `Slides/aiasd-311-tuesday.yaml` → `Slides/aiasd-311-tuesday-draft.md`)
+- `$PPTX_OUTPUT` = derived from `$MANIFEST`: strip `.yaml`, get basename, prepend `Slides/output/` and append `-draft.pptx`
+  (e.g. `Slides/aiasd-311-tuesday.yaml` → `Slides/output/aiasd-311-tuesday-draft.pptx`)
+
+**Fixed values**:
+
+- `$PPTX_SCRIPT` = `Slides/output/generate_pptx.py`
+
+**Default values** (if not specified):
 
 - `$MANIFEST` = `Slides/aiasd-311-monday.yaml`
-- `$OUTPUT_FILE` = derived from `$MANIFEST`: strip `.yaml` and append `-draft.md`
-  (e.g. `Slides/aiasd-311-monday.yaml` → `Slides/aiasd-311-monday-draft.md`)
-- `$PPTX_SCRIPT` = `Slides/output/generate_pptx.py`
-- `$PPTX_OUTPUT` = `Slides/output/aiasd-311-monday-draft.pptx`
 
 > **⚠️ IMPORTANT**: `$OUTPUT_FILE` is a **generated artifact**. Do not manually edit this file.
 > All changes must be made to individual source slide files in `Slides/individual-slides/`
@@ -131,11 +146,11 @@ Validation complete: N file(s) checked, M warning(s) found.
 
 ### Injected slides
 
-Insert three auto-generated slides at the start of **every** section, before any source
+Insert two auto-generated slides at the start of **every** section, before any source
 content slides. They are produced entirely from manifest data and source file titles.
 
-**Exception**: For the **first section** in the manifest, **suppress all three
-injected slides** (module list, section header, agenda). Start the first section directly
+**Exception**: For the **first section** in the manifest, **suppress both
+injected slides** (module list and agenda). Start the first section directly
 with the first source content slide. This prevents navigation-heavy opening that would
 precede the welcome slide.
 
@@ -157,17 +172,7 @@ Rules:
 - The section being introduced: `**▶ Section Name**` (bold, arrow prefix)
 - All other sections: plain `Section Name`
 
-#### 2. Section header slide (always, second)
-
-```markdown
-<!-- _class: lead -->
-
-# Section Name
-```
-
-`Section Name` is the exact `name` value from the manifest.
-
-#### 3. Section agenda slide (third, only when section has source files)
+#### 2. Section agenda slide (second, only when section has source files)
 
 Lists the first `## H2` heading from each source file as a bullet.
 
@@ -196,10 +201,9 @@ Slide title extraction:
 
 ```
 1. Module list slide              (always)
-2. Section header slide           (always)
-3. Section agenda slide           (only when section has source files)
-4. Content slides from file 1     (only when section has source files)
-5. Content slides from file 2 …
+2. Section agenda slide           (only when section has source files)
+3. Content slides from file 1     (only when section has source files)
+4. Content slides from file 2 …
 ```
 
 ### Merge rules for source content files
@@ -248,7 +252,7 @@ Slide title extraction:
 - Single YAML front matter block at top (from first source file, with `title:` and
   `subtitle:` fields)
 - No `# H1` headings in the body
-- `<!-- _class: lead -->` directives present on module list and section header slides
+- `<!-- _class: lead -->` directives present on module list slides
 - `## H2` headings on all content slides and section agenda slides
 
 ### Slide counting
@@ -259,7 +263,7 @@ After writing `$OUTPUT_FILE`, count and report the total number of slides produc
 slide_count = 1 + (number of bare --- lines outside fenced code blocks)
 ```
 
-Each injected slide (module list, section header, section agenda) counts as 1 slide.
+Each injected slide (module list and section agenda) counts as 1 slide.
 Report the count in the form: `Merged deck: N slide(s) across M section(s).`
 
 > **Agent verification (Issue 7)**: Compare the reported slide count against a manual count
@@ -314,25 +318,23 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 ## Deliverables
 
-1. `$OUTPUT_FILE` — merged Marp markdown deck (with injected module list, section header,
-   and agenda slides)
+1. `$OUTPUT_FILE` — merged Marp markdown deck (with injected module list and agenda slides)
 2. `$PPTX_OUTPUT` — generated PPTX with named sections
 
 ## Section Handling Rules
 
 - **Every** section in the YAML becomes a named section in the PPTX, regardless of whether
   it contains source slide files
-- Every section gets a module list slide and a section header slide
+- Every section gets a module list slide
 - Sections with source files additionally get a section agenda slide followed by content slides
-- Sections with no source files produce only the module list slide and section header slide,
-  and an empty PPTX section group
+- Sections with no source files produce only the module list slide and an empty PPTX section group
 - Section names in the PPTX match the `name` field in the YAML exactly
 - Slide file paths are resolved relative to the repository root
 
 > **Agent verification (Issue 6)**: Add a section to `$MANIFEST` with no `slides:` entries.
 > Run the PPTX phase and confirm `INFO: Section '...' is empty — only injected slides added`
 > is printed, and the resulting PPTX contains a named section group with only the module
-> list and section header slides.
+> list slide.
 
 ---
 
@@ -340,12 +342,12 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 Run all checks below after the pipeline completes to confirm spec conformance.
 
-| #   | Issue                        | Check                                                              | Pass condition                                                                                                 |
-| --- | ---------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| V1  | Source validation            | Phase 0 summary printed before `$OUTPUT_FILE` is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output                                |
-| V2  | Code-fence `---` preserved   | Merge a source file that contains `---` inside a fenced code block | No unexpected extra slides; the embedded `---` appears verbatim in `$OUTPUT_FILE`                              |
-| V3  | Output file named correctly  | Inspect `$OUTPUT_FILE` path                                        | Filename matches `<course>-<format>-<day>-draft.md` derived from `$MANIFEST` stem                              |
-| V4  | PPTX generated               | Run `python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT`                   | PPTX file created at `$PPTX_OUTPUT` without errors                                                             |
-| V5  | `Title Only` layout used     | Source file with `## heading` and no body content                  | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content`                       |
-| V6  | Empty section logged         | YAML section with no `slides:` entries                             | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase                          |
-| V7  | Slide count reported         | Any successful merge run                                           | Output includes `Merged deck: N slide(s) across M section(s).`                                                 |
+| #   | Issue                       | Check                                                              | Pass condition                                                                           |
+| --- | --------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| V1  | Source validation           | Phase 0 summary printed before `$OUTPUT_FILE` is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output          |
+| V2  | Code-fence `---` preserved  | Merge a source file that contains `---` inside a fenced code block | No unexpected extra slides; the embedded `---` appears verbatim in `$OUTPUT_FILE`        |
+| V3  | Output file named correctly | Inspect `$OUTPUT_FILE` path                                        | Filename matches `<course>-<format>-<day>-draft.md` derived from `$MANIFEST` stem        |
+| V4  | PPTX generated              | Run `python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT`                   | PPTX file created at `$PPTX_OUTPUT` without errors                                       |
+| V5  | `Title Only` layout used    | Source file with `## heading` and no body content                  | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
+| V6  | Empty section logged        | YAML section with no `slides:` entries                             | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase    |
+| V7  | Slide count reported        | Any successful merge run                                           | Output includes `Merged deck: N slide(s) across M section(s).`                           |

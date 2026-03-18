@@ -4,12 +4,12 @@ This directory contains meta-prompts that generate other prompts and instruction
 
 ## Meta Prompt Files
 
-| File                                                                                                                 | Purpose                        | Generates                                  | Output Location         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------ | ----------------------- |
-| [`create-instruction-files-instructions.prompt.md`](create-instruction-files-instructions.prompt.md)                 | Instruction File Generator     | Guidelines for creating instruction files  | `.github/instructions/` |
-| [`create-instruction-files-prompt-file.prompt.md`](create-instruction-files-prompt-file.prompt.md)                   | Instruction Prompt Generator   | Prompts that create instruction files      | `.github/prompts/`      |
-| [`create-use-case-instructions-file-prompt-file.prompt.md`](create-use-case-instructions-file-prompt-file.prompt.md) | Use Case Instruction Generator | Use case documentation guidelines          | `.github/instructions/` |
-| [`validate-and-improve-instructions.prompt.md`](validate-and-improve-instructions.prompt.md)                         | Instruction Validator          | Improved versions of existing instructions | Various locations       |
+| File                                                                                                                 | Purpose                        | Generates                                  | Output Location                |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------ | ------------------------------ |
+| [`create-instruction-files-instructions.prompt.md`](create-instruction-files-instructions.prompt.md)                 | Instruction File Generator     | Guidelines for creating instruction files  | `.github/instructions/`        |
+| [`create-instruction-files-prompt-file.prompt.md`](create-instruction-files-prompt-file.prompt.md)                   | Instruction Prompt Generator   | Prompts that create instruction files      | `.github/copilot/Promptfiles/` |
+| [`create-use-case-instructions-file-prompt-file.prompt.md`](create-use-case-instructions-file-prompt-file.prompt.md) | Use Case Instruction Generator | Use case documentation guidelines          | `.github/instructions/`        |
+| [`validate-and-improve-instructions.prompt.md`](validate-and-improve-instructions.prompt.md)                         | Instruction Validator          | Improved versions of existing instructions | Various locations              |
 
 ## What Are Meta Prompts?
 

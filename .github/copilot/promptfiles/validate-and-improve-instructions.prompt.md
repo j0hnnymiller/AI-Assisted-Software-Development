@@ -46,16 +46,16 @@ Record initial state (file count, baseline), initialize iteration counter (max: 
 
 Execute prompts in sequence:
 
-1. `.github/prompts/create-ai-assisted-output-instructions.prompt.md` → `ai-assisted-output.instructions.md`
-2. `.github/prompts/meta/create-instruction-files-instructions.prompt.md` → `instruction-standards.instruction.md`
-3. `.github/prompts/create-prompt-file-instructions-file.prompt.md` → `prompt-file.instructions.md`
-4. `.github/prompts/create-use-case-instructions.prompt.md` → `create-use-case.instructions.md`
+1. `.github/copilot/Promptfiles/create-ai-assisted-output-instructions.prompt.md` → `ai-assisted-output.instructions.md`
+2. `.github/copilot/Promptfiles/meta/create-instruction-files-instructions.prompt.md` → `instruction-standards.instruction.md`
+3. `.github/copilot/Promptfiles/create-prompt-file-instructions-file.prompt.md` → `prompt-file.instructions.md`
+4. `.github/copilot/Promptfiles/create-use-case-instructions.prompt.md` → `create-use-case.instructions.md`
 
 Wait for completion, verify each created successfully.
 
 ### Phase 3: Validation & Analysis
 
-Submit `.github/prompts/check-context.prompt.md` targeting `.github/instructions/`
+Submit `.github/copilot/Promptfiles/check-context.prompt.md` targeting `.github/instructions/`
 Analyze output for:
 
 - Conflicting instructions

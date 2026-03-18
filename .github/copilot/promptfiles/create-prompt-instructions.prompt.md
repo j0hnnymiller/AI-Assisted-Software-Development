@@ -235,7 +235,7 @@ task_durations:
     duration: "<hh:mm:ss>"
 total_duration: "<hh:mm:ss>"
 ai_log: "ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md"
-source: ".github/prompts/prompt-file.instructions.prompt.md"
+source: ".github/copilot/Promptfiles/prompt-file.instructions.prompt.md"
 applyTo: "**/*.prompt.md"
 ---
 ```

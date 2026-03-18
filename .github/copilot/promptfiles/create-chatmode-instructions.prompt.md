@@ -328,7 +328,7 @@ task_durations:
     duration: "<hh:mm:ss>"
 total_duration: "<hh:mm:ss>"
 ai_log: "ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md"
-source: ".github/prompts/create-chatmode-instructions.prompt.md"
+source: ".github/copilot/Promptfiles/create-chatmode-instructions.prompt.md"
 applyTo: "**/*.chatmode.md"
 ---
 ```
