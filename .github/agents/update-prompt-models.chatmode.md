@@ -68,32 +68,36 @@ Present selection interface like this:
 Found X prompt files. Select which to update:
 
 ### ✅ Files Using Old Default (can be updated)
-- [ ] 1. `.github/prompts/create-api-docs.prompt.md`
+
+- [ ] 1. `.github/copilot/Promptfiles/create-api-docs.prompt.md`
   - **Current**: `anthropic/claude-3.5-sonnet@2024-10-22`
   - **New**: `anthropic/claude-3.5-sonnet-4.5@2024-12-15`
   - **Description**: API documentation generator
 
-- [ ] 2. `.github/prompts/analyze-code.prompt.md`
+- [ ] 2. `.github/copilot/Promptfiles/analyze-code.prompt.md`
   - **Current**: `anthropic/claude-3.5-sonnet@2024-10-22`
   - **New**: `anthropic/claude-3.5-sonnet-4.5@2024-12-15`
   - **Description**: Code analysis and review
 
 ### ✅ Files Missing Model (can add default)
-- [ ] 3. `.github/prompts/legacy-helper.prompt.md`
+
+- [ ] 3. `.github/copilot/Promptfiles/legacy-helper.prompt.md`
   - **Current**: No model specified
   - **New**: Add `anthropic/claude-3.5-sonnet-4.5@2024-12-15`
   - **Description**: Legacy utility functions
 
 ### ❌ Files with Custom Models (preserved - reference only)
-- 4. `.github/prompts/openai-specific.prompt.md`
+
+- 4. `.github/copilot/Promptfiles/openai-specific.prompt.md`
   - **Current**: `openai/gpt-4o@2024-11-20` (PRESERVED)
   - **Description**: OpenAI-specific functionality
 
-- 5. `.github/prompts/google-gemini.prompt.md`
+- 5. `.github/copilot/Promptfiles/google-gemini.prompt.md`
   - **Current**: `google/gemini-1.5-pro@2024-02` (PRESERVED)
   - **Description**: Google Gemini integration
 
 **Selection Options**:
+
 - Enter numbers: "1, 3, 5"
 - Enter ranges: "1-3, 5"
 - Enter "all" for all updateable files (1-3 in this example)
@@ -107,12 +111,14 @@ Which files should I update?
 Parse user input and update only selected files:
 
 **Valid Selection Formats**:
+
 - Numbers: `"1, 3"` or `"1,3"`
 - Ranges: `"1-3"` or `"1-5"`
 - Combined: `"1, 3-5, 7"`
 - Keywords: `"all"`, `"none"`
 
 **Update Logic**:
+
 ```yaml
 # Only for selected files:
 # Before
@@ -130,14 +136,17 @@ After updates, provide:
 ## Update Summary
 
 ### ✅ Updated Files
-- `.github/prompts/create-api-docs.prompt.md` - Updated model to 4.5
-- `.github/prompts/legacy-helper.prompt.md` - Added model specification
+
+- `.github/copilot/Promptfiles/create-api-docs.prompt.md` - Updated model to 4.5
+- `.github/copilot/Promptfiles/legacy-helper.prompt.md` - Added model specification
 
 ### ❌ Skipped Files
-- `.github/prompts/analyze-code.prompt.md` - Not selected
-- `.github/prompts/openai-specific.prompt.md` - Custom model preserved
+
+- `.github/copilot/Promptfiles/analyze-code.prompt.md` - Not selected
+- `.github/copilot/Promptfiles/openai-specific.prompt.md` - Custom model preserved
 
 ### 📊 Statistics
+
 - Total files found: 5
 - Updateable files: 3
 - Selected for update: 2
@@ -148,15 +157,18 @@ After updates, provide:
 ## File Categories
 
 ### ✅ Updateable (show checkboxes)
+
 1. **Old Default**: Using `anthropic/claude-3.5-sonnet@2024-10-22`
 2. **Missing Model**: No model field in front matter
 
 ### ❌ Preserved (show for reference)
+
 1. **Custom Models**: Different providers (`openai/*`, `google/*`)
 2. **Custom Versions**: Intentionally different Claude versions
 3. **Newer Models**: Already using Claude 4.x or newer
 
 ### ⚠️ Special Cases (ask user)
+
 1. **Ambiguous Versions**: Cannot determine if intentional
 2. **Invalid Format**: Malformed model specifications
 

@@ -46,34 +46,34 @@ You are an expert Solution Architect specializing in designing scalable, secure,
 Interactive commands trigger specialized prompts for focused architectural analysis:
 
 - **`@architecture-design`** - Create comprehensive system architecture designs
-  - Learn more: [.github/prompts/solution-architect/architecture-design.prompt.md](.github/prompts/solution-architect/architecture-design.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/architecture-design.prompt.md](.github/copilot/Promptfiles/solution-architect/architecture-design.prompt.md)
 
 - **`@pattern-analysis`** - Analyze and recommend architectural patterns
-  - Learn more: [.github/prompts/solution-architect/pattern-analysis.prompt.md](.github/prompts/solution-architect/pattern-analysis.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/pattern-analysis.prompt.md](.github/copilot/Promptfiles/solution-architect/pattern-analysis.prompt.md)
 
 - **`@technology-evaluation`** - Evaluate technology options and tradeoffs
-  - Learn more: [.github/prompts/solution-architect/technology-evaluation.prompt.md](.github/prompts/solution-architect/technology-evaluation.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/technology-evaluation.prompt.md](.github/copilot/Promptfiles/solution-architect/technology-evaluation.prompt.md)
 
 - **`@scalability-planning`** - Design for performance and scale requirements
-  - Learn more: [.github/prompts/solution-architect/scalability-planning.prompt.md](.github/prompts/solution-architect/scalability-planning.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/scalability-planning.prompt.md](.github/copilot/Promptfiles/solution-architect/scalability-planning.prompt.md)
 
 - **`@integration-design`** - Plan system integrations and API strategies
-  - Learn more: [.github/prompts/solution-architect/integration-design.prompt.md](.github/prompts/solution-architect/integration-design.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/integration-design.prompt.md](.github/copilot/Promptfiles/solution-architect/integration-design.prompt.md)
 
 - **`@security-architecture`** - Design security controls and threat mitigation
-  - Learn more: [.github/prompts/solution-architect/security-architecture.prompt.md](.github/prompts/solution-architect/security-architecture.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/security-architecture.prompt.md](.github/copilot/Promptfiles/solution-architect/security-architecture.prompt.md)
 
 - **`@performance-analysis`** - Analyze performance characteristics and bottlenecks
-  - Learn more: [.github/prompts/solution-architect/performance-analysis.prompt.md](.github/prompts/solution-architect/performance-analysis.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/performance-analysis.prompt.md](.github/copilot/Promptfiles/solution-architect/performance-analysis.prompt.md)
 
 - **`@migration-strategy`** - Plan system migration and modernization approaches
-  - Learn more: [.github/prompts/solution-architect/migration-strategy.prompt.md](.github/prompts/solution-architect/migration-strategy.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/migration-strategy.prompt.md](.github/copilot/Promptfiles/solution-architect/migration-strategy.prompt.md)
 
 - **`@compliance-check`** - Validate architecture against standards and regulations
-  - Learn more: [.github/prompts/solution-architect/compliance-check.prompt.md](.github/prompts/solution-architect/compliance-check.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/compliance-check.prompt.md](.github/copilot/Promptfiles/solution-architect/compliance-check.prompt.md)
 
 - **`@risk-assessment`** - Identify architectural risks and mitigation plans
-  - Learn more: [.github/prompts/solution-architect/risk-assessment.prompt.md](.github/prompts/solution-architect/risk-assessment.prompt.md)
+  - Learn more: [.github/copilot/Promptfiles/solution-architect/risk-assessment.prompt.md](.github/copilot/Promptfiles/solution-architect/risk-assessment.prompt.md)
 
 ## Response Format
 
