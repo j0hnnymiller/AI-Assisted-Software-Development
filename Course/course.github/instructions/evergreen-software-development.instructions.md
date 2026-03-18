@@ -14,7 +14,7 @@ task_durations:
     duration: "00:00:34"
 total_duration: "00:04:04"
 ai_log: "ai-logs/2025/10/19/evergreen-instructions-20251019-153556/conversation.md"
-source: ".github/prompts/create-evergreen-instructions.prompt.md"
+source: ".github/copilot/Promptfiles/create-evergreen-instructions.prompt.md"
 ---
 
 # Evergreen Software Development — Instructions

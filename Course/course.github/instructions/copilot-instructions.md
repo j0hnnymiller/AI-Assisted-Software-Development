@@ -196,7 +196,7 @@ Add appropriate entry to `README.md`:
 ```markdown
 ### Meta-Prompts (Prompt Generators)
 
-- [`.github/prompts/meta/<name>.prompt.md`](...) — <Description> ([chat log](...))
+- [`.github/copilot/Promptfiles/meta/<name>.prompt.md`](...) — <Description> ([chat log](...))
 ```
 
 **For instruction files**:
@@ -237,7 +237,7 @@ Add appropriate entry to `README.md`:
 
 ### Meta-Prompt Files
 
-- **Location**: `.github/prompts/meta/`
+- **Location**: `.github/copilot/Promptfiles/meta/`
 - **Format**: `create-<domain>-prompt.prompt.md`
 - **Examples**:
   - `create-instruction-prompt.prompt.md`

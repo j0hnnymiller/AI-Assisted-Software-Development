@@ -18,7 +18,7 @@ task_durations:
     duration: "00:05:00"
 total_duration: "00:45:00"
 ai_log: "ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md"
-source: ".github/prompts/prompt-file.instructions.prompt.md"
+source: ".github/copilot/Promptfiles/prompt-file.instructions.prompt.md"
 applyTo: "**/*.prompt.md"
 ---
 
@@ -96,7 +96,6 @@ Prompt content goes here...
 **Selection Criteria**:
 
 - Use `agent` when the prompt will:
-
   - Create or modify files
   - Execute terminal commands
   - Perform automated tasks
@@ -770,7 +769,7 @@ repository-root/
 
 **Guidelines**:
 
-- Store prompts in `.github/prompts/`
+- Store prompts in `.github/copilot/Promptfiles/`
 - Generate instructions to `.github/instructions/`
 - Keep output separate from prompts
 - Use subdirectories for organization if needed
@@ -850,13 +849,11 @@ repository-root/
 **Validation Steps**:
 
 1. **Structural Validation**:
-
    - Files created in correct locations
    - Naming conventions followed
    - Directory structure correct
 
 2. **Content Validation**:
-
    - All required sections present
    - Content is complete and accurate
    - Format specifications followed
@@ -961,7 +958,7 @@ repository-root/
 
 - [ ] Filename uses kebab-case
 - [ ] File has .prompt.md extension
-- [ ] Located in .github/prompts/
+- [ ] Located in .github/copilot/Promptfiles/
 - [ ] output_path follows conventions
 
 **Content Standards**:
@@ -1438,25 +1435,21 @@ tools: ["search", "read", "create", "edit"]
 ### Creation Process
 
 1. **Plan the Prompt**:
-
    - Define clear objectives
    - Identify required tools
    - Determine output format
 
 2. **Create Prompt File**:
-
    - Use kebab-case filename
-   - Place in `.github/prompts/`
+   - Place in `.github/copilot/Promptfiles/`
    - Follow structure template
 
 3. **Write Frontmatter**:
-
    - Add required top-level fields
    - Complete prompt_metadata section
    - Validate YAML syntax
 
 4. **Author Content**:
-
    - Provide clear context
    - Specify detailed requirements
    - Define quality standards
@@ -1593,23 +1586,23 @@ Create a file at `examples/example.md` with "Hello, World!" content.
 
 ### Field Quick Reference
 
-| Field         | Location  | Required | Format      | Example                                 |
-| ------------- | --------- | -------- | ----------- | --------------------------------------- |
-| mode          | Top-level | ✅       | agent\|chat | agent                                   |
+| Field         | Location  | Required | Format      | Example                                  |
+| ------------- | --------- | -------- | ----------- | ---------------------------------------- |
+| mode          | Top-level | ✅       | agent\|chat | agent                                    |
 | model         | Top-level | ✅       | string      | "anthropic/claude-3.5-sonnet@2024-10-22" |
-| tools         | Top-level | ✅       | array       | ["create", "edit"]                      |
-| description   | Top-level | ✅       | string      | Generates API docs                      |
-| id            | metadata  | ✅       | kebab-case  | api-doc-generator  |
-| title         | metadata  | ✅       | Title Case  | Generate API Docs  |
-| owner         | metadata  | ✅       | string      | john-smith         |
-| output_path   | metadata  | ✅       | path        | docs/api.md        |
-| output_format | metadata  | ✅       | string      | markdown           |
-| tags          | metadata  | ✅       | array       | [api, docs]        |
-| repository    | metadata  | ⭕       | string      | my-repo            |
-| version       | metadata  | ⭕       | semver      | 1.0.0              |
-| created       | metadata  | ⭕       | YYYY-MM-DD  | 2025-10-15         |
-| updated       | metadata  | ⭕       | YYYY-MM-DD  | 2025-10-15         |
-| category      | metadata  | ⭕       | string      | documentation      |
+| tools         | Top-level | ✅       | array       | ["create", "edit"]                       |
+| description   | Top-level | ✅       | string      | Generates API docs                       |
+| id            | metadata  | ✅       | kebab-case  | api-doc-generator                        |
+| title         | metadata  | ✅       | Title Case  | Generate API Docs                        |
+| owner         | metadata  | ✅       | string      | john-smith                               |
+| output_path   | metadata  | ✅       | path        | docs/api.md                              |
+| output_format | metadata  | ✅       | string      | markdown                                 |
+| tags          | metadata  | ✅       | array       | [api, docs]                              |
+| repository    | metadata  | ⭕       | string      | my-repo                                  |
+| version       | metadata  | ⭕       | semver      | 1.0.0                                    |
+| created       | metadata  | ⭕       | YYYY-MM-DD  | 2025-10-15                               |
+| updated       | metadata  | ⭕       | YYYY-MM-DD  | 2025-10-15                               |
+| category      | metadata  | ⭕       | string      | documentation                            |
 
 ### Tool Selection Guide
 
@@ -1636,7 +1629,7 @@ Add the new prompt file to the **Artifacts Produced** section of the relevant co
 ```markdown
 **Artifacts Produced**:
 
-- `.github/prompts/<path>/<filename>.prompt.md` - <Brief description of what the prompt does>
+- `.github/copilot/Promptfiles/<path>/<filename>.prompt.md` - <Brief description of what the prompt does>
 ```
 
 **Location**: `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md`

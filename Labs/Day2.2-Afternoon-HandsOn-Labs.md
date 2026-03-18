@@ -25,7 +25,6 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
 ### Tasks:
 
 1. **Analyze Your Project**
-
    - Open a project in VS Code
    - Identify the technologies used (e.g., C#, Python, React, etc.)
 
@@ -39,13 +38,11 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    - Review the generated instruction files
 
 3. **Examine the Structure**
-
    - Note the `applyTo` clause in each file
    - Understand how path-based filtering works
    - Review the content and rules in each file
 
 4. **Customize the Instructions**
-
    - Modify at least one instruction file to match your team's coding standards
    - Change indentation preferences (e.g., 2 spaces vs 4 spaces)
    - Add specific naming conventions for your organization
@@ -68,25 +65,21 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
 ### Tasks:
 
 1. **Create the Instruction Files**
-
    - Copy the `copilot-instructions.md` from the course repository
    - Copy the `ai-assisted-output.instructions.md` file
    - Place both in your `.github/instructions/` folder
 
 2. **Test the Logging**
-
    - Start a new chat in GitHub Copilot
    - Ask it to perform a multi-step task (e.g., "Create a new class with tests")
    - Look for the generated log files in the `ai-logs/` folder
 
 3. **Review the Generated Files**
-
    - Examine the conversation log structure
    - Review the summary file
    - Check the front matter metadata
 
 4. **Test the Resume Feature**
-
    - Start a new chat
    - Attach the summary file
    - Try continuing from where you left off
@@ -108,7 +101,6 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
 ### Tasks:
 
 1. **Setup**
-
    - Create a new branch called `main` or use existing
    - Identify a bug or feature to implement
 
@@ -123,7 +115,6 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    - Note the branch name created
 
 3. **Switch Models and Repeat**
-
    - Return to main branch
    - Clear your chat context (start new chat)
    - Switch to a different model (e.g., GPT-4, Gemini)
@@ -159,7 +150,6 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
 ### Tasks:
 
 1. **Create Instruction Files** (if not done already)
-
    - Generate instruction files for your project
    - Ensure they include coding standards, naming conventions, etc.
 
@@ -172,7 +162,6 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    ```
 
 3. **Review the Findings**
-
    - Examine the list of non-compliant code
    - Categorize issues (naming, formatting, structure, etc.)
 
@@ -203,7 +192,6 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
 ### Tasks:
 
 1. **Identify Common Tasks**
-
    - List 3-5 tasks you perform regularly (e.g., code reviews, testing, documentation)
 
 2. **Create Your First Prompt File**
@@ -213,17 +201,15 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    for the technology in a project
    ```
 
-   - Save in `.github/prompts/` folder
+   - Save in `.github/copilot/Promptfiles/` folder
    - Review the structure and front matter
 
 3. **Create Additional Prompts**
-
    - Code review prompt
    - Test generation prompt
    - Documentation generation prompt
 
 4. **Test the Prompts**
-
    - Run at least two of your prompt files
    - Evaluate the quality of output
    - Refine as needed
@@ -232,7 +218,7 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    - Consider which prompts could be shared across projects
    - Plan how to maintain a prompt library
 
-**Deliverable**: At least 3 working prompt files in `.github/prompts/` folder
+**Deliverable**: At least 3 working prompt files in `.github/copilot/Promptfiles/` folder
 
 ---
 
@@ -252,7 +238,6 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    ```
 
 2. **Define Your Standards**
-
    - Review the generated file
    - Customize with your team's definition of "Evergreen"
    - Include principles like:
@@ -312,14 +297,12 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    ```
 
 3. **Review Generated Issues**
-
    - Check the issues folder
    - Evaluate each issue for validity
    - Note false positives
    - Identify genuinely useful findings
 
 4. **Customize Issue Template**
-
    - Modify the issue format if needed
    - Add sections like:
      - Impact assessment
@@ -353,19 +336,16 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    ```
 
 2. **Create a Chat Mode or Prompt**
-
    - Document the workflow steps
    - Create a prompt that executes all steps
    - Include branch naming conventions
 
 3. **Test the Workflow**
-
    - Pick a simple feature or bug fix
    - Run the complete workflow
    - Time the execution
 
 4. **Evaluate the Results**
-
    - Did both models solve the problem?
    - Was the comparison helpful?
    - What would you change?
@@ -396,12 +376,10 @@ These hands-on labs correspond to the Day 2 Afternoon session covering:
    ```
 
 2. **Test the Meta-Instruction**
-
    - Create a new instruction file using the meta-instruction
    - Verify it follows the template
 
 3. **Refine the Template**
-
    - Add sections for:
      - Required front matter
      - Recommended structure
@@ -433,25 +411,21 @@ For each lab, ensure you have:
 After completing the labs, consider:
 
 1. **Instruction Files**
-
    - How specific should instruction files be?
    - When is an instruction file too detailed?
    - How do you maintain instruction files as projects evolve?
 
 2. **AI Logging**
-
    - What are the security implications of logging AI conversations?
    - How long should logs be retained?
    - Who should have access to logs?
 
 3. **Model Comparison**
-
    - Is it worth the extra time/cost to compare implementations?
    - When would you use this approach?
    - How do you avoid bias in evaluations?
 
 4. **Code Quality**
-
    - Can AI truly enforce "Evergreen" principles?
    - Should AI automatically reject PRs?
    - How much human oversight is needed?

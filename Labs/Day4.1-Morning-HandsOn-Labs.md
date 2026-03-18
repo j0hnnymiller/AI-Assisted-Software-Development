@@ -27,7 +27,6 @@ Create a GitHub Actions workflow that executes a prompt on pull requests to vali
 #### Task 1.1: Set Up the Style Check Script
 
 1. Create a Python script `style-checker.py` that:
-
    - Accepts an instruction/prompt file as input
    - Reads changed files from a pull request
    - Uses an AI API (OpenAI, Azure OpenAI, or GitHub Copilot) to analyze code
@@ -44,7 +43,6 @@ Create a GitHub Actions workflow that executes a prompt on pull requests to vali
 
 1. Create `.github/workflows/style-check.yml`
 2. Configure the workflow to:
-
    - Trigger on pull request events
    - Install necessary dependencies (e.g., OpenAI SDK)
    - Run the style checker script
@@ -56,7 +54,7 @@ Create a GitHub Actions workflow that executes a prompt on pull requests to vali
 
 #### Task 1.3: Create an Instruction File
 
-1. Create `.github/prompts/style-guidelines.md` with:
+1. Create `.github/copilot/Promptfiles/style-guidelines.md` with:
    - Coding standards for your language
    - Naming conventions
    - Specific style rules to check
@@ -64,7 +62,6 @@ Create a GitHub Actions workflow that executes a prompt on pull requests to vali
 #### Task 1.4: Test the Workflow
 
 1. Create a test file with intentional style violations:
-
    - Incorrect naming conventions
    - Missing documentation
    - Improper indentation
@@ -112,7 +109,6 @@ Vertical slice architecture organizes code by features rather than technical lay
 #### Task 2.1: Create Instruction Files for Vertical Slices
 
 1. Create `.github/copilot-instructions.md` with:
-
    - Feature-centric organization structure
    - Naming conventions for features
    - CQRS pattern guidelines
@@ -137,29 +133,24 @@ Vertical slice architecture organizes code by features rather than technical lay
 Using AI assistance, create a complete user registration feature that includes:
 
 1. **Command/Query Object**:
-
    - `RegisterUserCommand` with necessary properties
    - Input validation attributes
 
 2. **Handler**:
-
    - Process the registration request
    - Apply business rules
    - Return appropriate results
 
 3. **Validator**:
-
    - Validate email format
    - Check password strength
    - Verify unique username
 
 4. **Repository**:
-
    - Data access layer
    - Database context integration
 
 5. **API Endpoint**:
-
    - RESTful endpoint for registration
    - Proper HTTP response codes
    - Error handling
@@ -215,19 +206,16 @@ ORM (Object-Role Modeling) provides a formal, graphical way to capture business 
 Choose a simple domain (e.g., library system, course enrollment, project management) and create an ORM model that includes:
 
 1. **Entities** (at least 3):
-
    - Students, Courses, Enrollments
    - OR: Books, Authors, Borrowers
    - OR: Your own domain
 
 2. **Facts/Predicates** showing relationships:
-
    - "Student is enrolled in Course"
    - "Student has StudentID"
    - "Course has maximum enrollment"
 
 3. **Constraints**:
-
    - **Uniqueness constraints**: bars indicating which roles uniquely identify instances
    - **Mandatory constraints**: dots showing required relationships
    - **Exclusion constraints**: XOR relationships
@@ -240,7 +228,6 @@ Choose a simple domain (e.g., library system, course enrollment, project managem
 #### Task 3.2: Verbalize Your Model
 
 1. Write out the natural language statements for each fact:
-
    - "Each Student is enrolled in zero or more Courses"
    - "Each Course has exactly one maximum enrollment count"
 
@@ -253,13 +240,11 @@ Choose a simple domain (e.g., library system, course enrollment, project managem
 Using your ORM model as context:
 
 1. Create a prompt file that includes:
-
    - The verbalized business rules
    - Entity definitions
    - Constraint descriptions
 
 2. Ask AI to generate:
-
    - Database schema (SQL or NoSQL)
    - Entity classes/models
    - Validation logic for constraints
@@ -273,7 +258,6 @@ Using your ORM model as context:
 #### Task 3.4: Create Instruction Files from ORM
 
 1. Create `business-rules-to-vertical-slices.instructions.md`:
-
    - How to interpret ORM entities as features
    - How to enforce constraints in validation logic
    - How to implement relationships
@@ -350,13 +334,11 @@ A system for managing books, borrowers, and checkouts.
 #### Phase 1: Requirements and Modeling (20 minutes)
 
 1. **Create Use Cases**:
-
    - List 3-5 primary use cases
    - Write brief descriptions
    - Identify actors and preconditions
 
 2. **Create ORM/Conceptual Model**:
-
    - Identify entities and relationships
    - Define business rules and constraints
    - Document in text or diagram form
@@ -371,19 +353,16 @@ A system for managing books, borrowers, and checkouts.
 Create the following instruction files in `.github/copilot-instructions/`:
 
 1. `vertical-slices-implementation.instructions.md`:
-
    - Feature-centric folder structure
    - CQRS pattern usage
    - Naming conventions
 
 2. `business-rules.instructions.md`:
-
    - Your ORM-derived business rules
    - Constraint enforcement guidelines
    - Validation patterns
 
 3. `api-patterns.instructions.md`:
-
    - RESTful endpoint conventions
    - Error handling patterns
    - Response formats
@@ -398,7 +377,6 @@ Create the following instruction files in `.github/copilot-instructions/`:
 Using AI assistance throughout:
 
 1. **Backend Implementation**:
-
    - Create command/query objects
    - Implement handler with business logic
    - Create validator
@@ -406,7 +384,6 @@ Using AI assistance throughout:
    - Create API endpoint
 
 2. **Frontend Implementation**:
-
    - Create UI component
    - Wire up API calls
    - Add validation feedback
@@ -487,7 +464,6 @@ Practice coordinating AI assistance across separate frontend and backend reposit
 #### Task 5.1: Split Your Application
 
 1. Separate your application into two repositories:
-
    - Frontend repository
    - Backend API repository
 
@@ -498,7 +474,6 @@ Practice coordinating AI assistance across separate frontend and backend reposit
 #### Task 5.2: Cross-Repository Debugging
 
 1. Introduce an intentional mismatch:
-
    - Change an API endpoint path in backend
    - Keep old path in frontend
 

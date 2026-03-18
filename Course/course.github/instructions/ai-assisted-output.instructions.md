@@ -16,7 +16,7 @@ task_durations:
     duration: "00:05:00"
 total_duration: "00:30:00"
 ai_log: "ai-logs/2026/01/20/generate-ai-output-policy-20260120/conversation.md"
-source: ".github/prompts/create-ai-assisted-output-instructions.prompt.md"
+source: ".github/copilot/Promptfiles/create-ai-assisted-output-instructions.prompt.md"
 applyTo: "**/*"
 ---
 

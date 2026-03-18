@@ -15,7 +15,7 @@ task_durations:
     duration: "00:02:00"
 total_duration: "00:10:00"
 ai_log: "ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md"
-source: ".github/prompts/meta/create-instruction-file-instructions.prompt.md"
+source: ".github/copilot/Promptfiles/meta/create-instruction-file-instructions.prompt.md"
 applyTo: "**/*.instructions.prompt.md"
 ---
 
@@ -223,7 +223,7 @@ Before creating or modifying an instruction-generating prompt, verify:
 Execute the meta-prompt generator:
 
 ```
-Submit .github/prompts/meta/create-instruction-prompt.prompt.md
+Submit .github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md
 ```
 
 Provide domain information when prompted.
@@ -248,9 +248,9 @@ This requirement is enforced through:
 
 Compliant instruction-generating prompts in this repository:
 
-- `.github/prompts/prompt-file.instructions.prompt.md`
-- `.github/prompts/create-ai-assisted-output-instructions.prompt.md`
-- `.github/prompts/create-use-case-instructions.prompt.md`
+- `.github/copilot/Promptfiles/prompt-file.instructions.prompt.md`
+- `.github/copilot/Promptfiles/create-ai-assisted-output-instructions.prompt.md`
+- `.github/copilot/Promptfiles/create-use-case-instructions.prompt.md`
 
 ## Questions?
 
