@@ -64,14 +64,6 @@ Created **prompt files** that generate instruction files
 
 ---
 
-<!-- _class: lead -->
-
-# Running Your Prompt Files
-
-Executing What You Created
-
----
-
 ## How to Run a Prompt File
 
 **Simple Process, Powerful Results**
@@ -218,15 +210,7 @@ Include: principles, practices, quality standards, testing.
 
 ---
 
-<!-- _class: lead -->
-
 # Inference as Enabler
-
-AI's Hidden Superpower
-
----
-
-## What is AI Inference?
 
 **The Knowledge Between the Lines**
 
@@ -392,14 +376,6 @@ Section 2 should have exactly 5 bullet points...
 - Classified information
 
 **Always validate** outputs against your specific requirements
-
----
-
-<!-- _class: lead -->
-
-# Prompt-First Approach
-
-The Smarter Way to Create
 
 ---
 
@@ -634,14 +610,6 @@ Include: schema examples, authentication patterns, versioning.
 
 ---
 
-<!-- _class: lead -->
-
-# Version Control for Prompts
-
-Treating Prompts as Source Code
-
----
-
 ## Why Version Control Prompts?
 
 **Prompts ARE Code**
@@ -798,42 +766,6 @@ changelog:
     changes: "Initial version"
 ---
 ```
-
-**Complete provenance from creation to current state**
-
----
-
-## Comparing Prompt Versions
-
-**Understanding Impact of Changes**
-
-### Using Git Diff
-
-```bash
-git diff prompts/api-docs-v1.0 prompts/api-docs-v2.0
-```
-
-**Shows**:
-
-- What requirements were added
-- What constraints were clarified
-- What was removed (scope reduction)
-- Token optimization changes
-
-### Regenerating with Old Prompts
-
-**Reproduce historical outputs**:
-
-```bash
-git checkout prompts/api-docs-v1.0
-# Run old prompt
-git checkout main
-# Compare old output vs. new output
-```
-
-**Validates**: Did prompt changes improve output quality?
-
----
 
 ## Prompt Review Process
 
@@ -1037,19 +969,7 @@ org-prompts/
 
 ---
 
-<!-- _class: lead -->
-
-# Real-World Success Story
-
-Peter Goostree's Experience
-
----
-
-## "It's Crazy What It Created"
-
-**Peter Goostree's Reaction**
-
-### The Setup
+## The Setup
 
 - Created simple prompt for Evergreen instruction file
 - 50-100 words describing intent
@@ -1138,180 +1058,6 @@ Consistency: High (with instruction files)
 - Developer didn't micro-specify every section
 - Allowed AI to use embedded knowledge
 - Trusted AI's pattern recognition
-
----
-
-<!-- _class: lead -->
-
-# Practical Applications
-
-Putting It All Together
-
----
-
-## Application 1: Building Your Prompt Library
-
-**Week-by-Week Plan**
-
-### Week 1: Foundation Prompts
-
-```
-Create 3-5 core prompts:
-  - Generate code documentation
-  - Create unit tests
-  - Refactor legacy code
-  - Write API endpoints
-  - Generate migration scripts
-```
-
-### Week 2: Team-Specific Prompts
-
-```
-Add organization context:
-  - Company coding standards
-  - Internal frameworks
-  - Deployment processes
-  - Security requirements
-```
-
-### Week 3: Advanced Prompts
-
-```
-Meta-prompts and generators:
-  - Prompt that creates prompts
-  - Template generators
-  - Workflow automation prompts
-```
-
----
-
-## Application 2: Continuous Improvement Process
-
-**Iterating on Prompt Quality**
-
-### The Improvement Loop
-
-1. **Use Prompt** → Generate output
-2. **Measure Quality** → Does it meet requirements?
-3. **Identify Gaps** → What's missing or wrong?
-4. **Refine Prompt** → Add constraints, clarify intent
-5. **Regenerate** → Test improved prompt
-6. **Compare** → Old vs. new output
-7. **Commit** → If improved, commit new version
-8. **Repeat** → Continuous refinement
-
-### Metrics to Track
-
-- Time to acceptable output (decrease over time)
-- Manual editing required (decrease over time)
-- Output variance (decrease over time)
-- Team satisfaction (increase over time)
-
----
-
-## Application 3: Onboarding New Team Members
-
-**Accelerated Productivity**
-
-### Traditional Onboarding
-
-```
-Day 1-3: Read documentation
-Day 4-7: Shadow senior developers
-Day 8-10: First simple tasks
-Day 11-15: Review and refinement
-Week 3-4: Productive contributor
-
-Time to productivity: 3-4 weeks
-```
-
-### With Prompt Library
-
-```
-Day 1: Clone repository, run setup prompts
-Day 2: Use prompts to create first feature
-Day 3: Review outputs with team
-Day 4-5: Custom prompts for their domain
-Week 2: Fully productive contributor
-
-Time to productivity: 1-2 weeks
-```
-
-**50-75% faster onboarding through prompt-first approach**
-
----
-
-## Application 4: Cross-Project Consistency
-
-**Organization-Wide Standards**
-
-### The Challenge
-
-- 50+ projects across organization
-- Different tech stacks
-- Various team conventions
-- Inconsistent documentation
-
-### The Solution: Shared Prompt Repository
-
-```
-company-prompts/
-  ├── documentation/
-  ├── testing/
-  ├── api-design/
-  └── deployment/
-```
-
-**Result**:
-
-- Consistent output formats across projects
-- Embedded organizational standards
-- Reduced onboarding complexity
-- Easier cross-team collaboration
-
----
-
-## Application 5: Compliance and Auditing
-
-**FDA, SOC2, ISO Standards**
-
-### Regulatory Requirement
-
-"Demonstrate repeatable, documented software development process"
-
-### Prompt-Based Solution
-
-**Before**:
-
-```
-Manual documentation:
-  - Write process descriptions
-  - Record each development step
-  - Manual audit trail
-  - Difficult to prove consistency
-```
-
-**After**:
-
-```
-Automated documentation:
-  - Prompts codify the process
-  - Version control tracks evolution
-  - Conversation logs provide audit trail
-  - Reproducibility provable
-```
-
-**Audit Evidence**: "Here's our prompt library. Here's how we apply it. Here's the output history. Process is repeatable."
-
----
-
-<!-- _class: lead -->
-
-# Key Takeaways
-
-Essential Lessons
-
----
 
 ## Lesson 1: Prompts Are Assets
 
@@ -1431,125 +1177,30 @@ Essential Lessons
 
 ---
 
-<!-- _class: lead -->
-
-# Your Action Plan
-
-Implementing Prompt-First Workflow
-
----
-
-## This Week: Start Small
-
-**Immediate Actions**
-
-### Day 1-2: Create First Prompt
-
-- [ ] Choose one repetitive task
-- [ ] Write prompt describing the task
-- [ ] Run prompt, review output
-- [ ] Refine and commit
-
-### Day 3-4: Build Prompt Template
-
-- [ ] Create template for your prompts
-- [ ] Include standard metadata
-- [ ] Define output structure
-- [ ] Test with 2-3 examples
-
-### Day 5: Share with Team
-
-- [ ] Present prompt + outputs
-- [ ] Gather feedback
-- [ ] Document learnings
-- [ ] Plan next prompts
-
----
-
-## Next Week: Scale Up
-
-**Building Momentum**
-
-### Create Prompt Library
-
-```
-.github/copilot/Promptfiles/
-  ├── README.md  (catalog)
-  ├── documentation/
-  ├── testing/
-  └── code-generation/
-```
-
-### Add 5-10 Common Tasks
-
-- Code documentation generator
-- Test suite creator
-- Refactoring prompts
-- Code review prompts
-- Architecture diagram prompts
-
-### Measure Impact
-
-- Time saved per task
-- Quality improvement
-- Team adoption rate
-- Manual editing required
-
----
-
-## Next Month: Optimize
+## Optimize
 
 **Continuous Improvement**
 
 ### Token Optimization
 
-- [ ] Review verbose prompts
-- [ ] Terse rewrite of high-use prompts
-- [ ] Measure context window savings
-- [ ] A/B test prompt variations
+- Review verbose prompts
+- Terse rewrite of high-use prompts
+- Measure context window savings
+- A/B test prompt variations
 
 ### Quality Refinement
 
-- [ ] Collect team feedback on outputs
-- [ ] Identify common gaps or errors
-- [ ] Refine prompts to address issues
-- [ ] Version and tag improvements
+- Collect team feedback on outputs
+- Identify common gaps or errors
+- Refine prompts to address issues
+- Version and tag improvements
 
 ### Process Automation
 
-- [ ] Integrate prompts into CI/CD
-- [ ] Automate regeneration workflows
-- [ ] Set up quality gates
-- [ ] Monitor prompt effectiveness metrics
-
----
-
-## Ongoing: Maintain and Grow
-
-**Long-Term Strategy**
-
-### Monthly Review
-
-- [ ] Audit prompt library usage
-- [ ] Identify under-used prompts (improve or remove)
-- [ ] Identify manual processes (create prompts)
-- [ ] Share success stories
-
-### Quarterly Planning
-
-- [ ] Strategic prompt development
-- [ ] Cross-team prompt sharing
-- [ ] Organization-wide standardization
-- [ ] Training new team members
-
-### Annual Assessment
-
-- [ ] ROI measurement
-- [ ] Compliance audit
-- [ ] Technology updates
-- [ ] Strategy refinement
-
-**"Prompt management is a practice, not a project"**
+- Integrate prompts into CI/CD
+- Automate regeneration workflows
+- Set up quality gates
+- Monitor prompt effectiveness metrics
 
 ---
 
@@ -1606,34 +1257,3 @@ Implementing Prompt-First Workflow
 - **Time saved per week** (team aggregate)
 - **Quality improvement** (fewer defects)
 - **Onboarding acceleration** (time to productivity)
-
----
-
-<!-- _class: lead -->
-
-# Questions?
-
-**Remember Peter's Insight:**
-
-"Amazed at what it created. Architectural context. It's crazy."
-
-That's the power of inference + prompt-first approach.
-
----
-
-<!-- _class: lead -->
-
-# Session Complete
-
-**You Now Know How To:**
-
-✅ Run prompt files effectively
-✅ Leverage AI inference for comprehensive outputs
-✅ Use prompt-first approach for maximum efficiency
-✅ Version control prompts for reproducibility
-
-**Next Session:** Test Automation with AI
-
-AI-Assisted Software Development Course
-
-_Contact: john.miller@codemag.com_

@@ -19,8 +19,6 @@ ai_log: "ai-logs/2026/03/17/code-translation-hotspot-20260317/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
 
-<!-- _class: lead -->
-
 ## Code Translation and Technical Hotspot Analysis
 
 - **Code Translation** between programming languages
@@ -646,41 +644,3 @@ Analyze git history for the past 6 months to identify:
 - Modules with most bug fixes
 - Areas with declining test coverage
 ```
-
----
-
-## Resources and Next Steps
-
-**Key Instruction Files to Review**:
-
-- `.github/instructions/ai-assisted-output.instructions.md`
-- `.github/instructions/vertical-slice-architecture.instructions.md`
-- `.github/instructions/dependency-management-policy.instructions.md`
-
-**GitHub Copilot Features**:
-
-- `@copilot` issue assignment
-- GitHub CLI (`gh copilot`) commands
-- Workspace integration
-
-**Practice Exercise**:
-
-1. Choose a module in your codebase
-2. Run scoped analysis for compliance
-3. Generate issues from findings
-4. Assign to @copilot for resolution
-
----
-
-<!-- _class: lead -->
-
-## Questions?
-
-**Code Translation & Technical Hotspot Analysis**
-
-Use these techniques to:
-
-- Migrate code safely between languages
-- Maintain compliance with project standards
-- Focus analysis on problem areas
-- Automate issue tracking and resolution
