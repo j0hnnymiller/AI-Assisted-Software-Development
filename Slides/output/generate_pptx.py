@@ -48,6 +48,17 @@ Usage:
 
    Example: "**Principal Engineer**" renders as bold text, not literal asterisks.
 
+5. MARKDOWN BLOCKQUOTE RENDERING:
+   Blockquote lines (starting with '> ') are rendered as italic text in PPTX.
+
+   Rationale: PPTX has no native blockquote element. Italic is the closest visual
+   equivalent and distinguishes quoted material from normal body text.
+
+   Implementation: apply_markdown_formatting() detects lines starting with '> ',
+   strips the prefix, and wraps the content in italic runs.
+
+   Example: "> 'Programming hasn't changed'" renders as italic text without the '> '.
+
 See .github/instructions/slide-pipeline.instructions.md for full specification.
 Use the verification checklist in that file before committing changes.
 """
@@ -162,14 +173,25 @@ def process_markdown_links(text: str) -> str:
 
 def apply_markdown_formatting(text_frame, line_text: str) -> None:
     """
-    Parse markdown bold syntax and add formatted runs to the text frame paragraph.
-    Supports **bold text** syntax. Text outside bold markers is added as normal runs.
+    Parse markdown bold and blockquote syntax and add formatted runs to the text frame paragraph.
+    Supports **bold text** syntax and > blockquote syntax.
+
+    Blockquote lines (starting with '> ') are rendered as italic text — PPTX has no
+    native blockquote element so italic is the closest visual equivalent.
 
     Example: "This is **bold text** and normal"
     -> Run 1: "This is " (normal)
     -> Run 2: "bold text" (bold)
     -> Run 3: " and normal" (normal)
+
+    Example: "> 'Programming hasn't changed'"
+    -> Run 1: "'Programming hasn't changed'" (italic)
     """
+    # Handle blockquote lines: render as italic, strip the '> ' prefix
+    is_blockquote = line_text.startswith("> ")
+    if is_blockquote:
+        line_text = line_text[2:]
+
     # Pattern to match **bold text**
     # Using non-greedy matching to handle multiple bold sections on one line
     pattern = r'\*\*([^\*]+)\*\*'
@@ -179,7 +201,7 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
     for match in re.finditer(pattern, line_text):
         bold_sections.append((match.start(), match.end(), match.group(1)))
 
-    # If no bold sections, just add the text as-is
+    # If no bold sections, just add the text as-is (with italic if blockquote)
     if not bold_sections:
         p = text_frame.add_paragraph()
         if line_text.startswith("- "):
@@ -187,6 +209,15 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
             p.level = 0
         else:
             p.text = line_text
+        if is_blockquote:
+            for run in p.runs:
+                run.font.italic = True
+            # If text was set directly (no runs), we need to use a run
+            if not p.runs:
+                p.clear()
+                run = p.add_run()
+                run.text = line_text
+                run.font.italic = True
         return
 
     # Build the line with formatting
@@ -205,11 +236,15 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
         if start > last_pos:
             run = p.add_run()
             run.text = line_text[last_pos:start]
+            if is_blockquote:
+                run.font.italic = True
 
         # Add bold text
         run = p.add_run()
         run.text = bold_text
         run.font.bold = True
+        if is_blockquote:
+            run.font.italic = True
 
         last_pos = end
 
@@ -217,6 +252,8 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
     if last_pos < len(line_text):
         run = p.add_run()
         run.text = line_text[last_pos:]
+        if is_blockquote:
+            run.font.italic = True
 
 
 def contains_markdown_table(body: str) -> bool:

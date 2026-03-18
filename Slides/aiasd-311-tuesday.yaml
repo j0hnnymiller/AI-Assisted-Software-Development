@@ -29,3 +29,11 @@ sections:
   - name: Module 5 - Guardrails and Prompt Files
     slides:
       - Slides\individual-slides\prompt-files.md
+      - Slides\individual-slides\exercise-creating-prompt-files.md
+      - Slides\individual-slides\creating-instruction-files-from-prompts.md
+
+  - name: Module 6 - AI Assisted Documentation
+    slides:
+      - Slides\individual-slides\documentation-generation-code-analysis.md
+      - Slides\individual-slides\exercise-c4-diagrams-from-code.md
+      - 
