@@ -9,7 +9,7 @@
 
 ## Context
 
-- Inputs: `.github/prompts/create-chatmode-instructions.prompt.md`, existing chat mode files (SecurityAnalyzer, DocDesignArchitect, CodebaseExplorer, GitFlowStrategist)
+- Inputs: `.github/copilot/Promptfiles/create-chatmode-instructions.prompt.md`, existing chat mode files (SecurityAnalyzer, DocDesignArchitect, CodebaseExplorer, GitFlowStrategist)
 - Targets: `.github/instructions/create-chatmode.instructions.md`
 - Constraints/Policies: `.github/instructions/ai-assisted-output.instructions.md`, `.github/instructions/copilot-instructions.md`
 

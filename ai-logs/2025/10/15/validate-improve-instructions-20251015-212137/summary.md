@@ -104,14 +104,12 @@ Execute validation and improvement workflow for instruction files:
 ## Artifacts Produced
 
 1. **Validation Report** (`validation-report-20251015-212137.md`)
-
    - 7 issues documented with full analysis
    - Root cause identification
    - Remediation recommendations
    - Three fix strategy options
 
 2. **Conversation Log** (`ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/conversation.md`)
-
    - Complete session transcript
    - Decision rationale
    - Limitation documentation
@@ -127,7 +125,7 @@ Execute validation and improvement workflow for instruction files:
 
 If resuming this work, you should know:
 
-**What was attempted**: Execute `.github/prompts/meta/validate-and-improve-instructions.prompt.md`
+**What was attempted**: Execute `.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md`
 
 **What was completed**: Validation analysis phase only (Phases 1-3)
 
@@ -152,14 +150,12 @@ If resuming this work, you should know:
 Priority order for fixing:
 
 1. **High Priority** (blocks contributors):
-
-   - `.github/prompts/prompt-file.instructions.prompt.md` - clarify model field context
+   - `.github/copilot/Promptfiles/prompt-file.instructions.prompt.md` - clarify model field context
    - Metadata correction needed for model field
 
 2. **Medium Priority** (reduces maintenance burden):
-
-   - `.github/prompts/create-ai-assisted-output-instructions.prompt.md` - mark as canonical
-   - `.github/prompts/meta/create-instruction-file-instructions.prompt.md` - reference canonical
+   - `.github/copilot/Promptfiles/create-ai-assisted-output-instructions.prompt.md` - mark as canonical
+   - `.github/copilot/Promptfiles/meta/create-instruction-file-instructions.prompt.md` - reference canonical
    - All instruction prompts - add source field requirement
 
 3. **Low Priority** (minor cleanup):
@@ -246,7 +242,7 @@ All instruction files remain unchanged (by design - fix prompts, not generated f
 
 ## References
 
-- **Meta-Prompt**: `.github/prompts/meta/validate-and-improve-instructions.prompt.md`
+- **Meta-Prompt**: `.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md`
 - **Validation Report**: `validation-report-20251015-212137.md`
 - **Conversation Log**: `ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/conversation.md`
 - **Policy**: `.github/instructions/ai-assisted-output.instructions.md`

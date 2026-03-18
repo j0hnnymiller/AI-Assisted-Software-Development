@@ -15,7 +15,6 @@ Create comprehensive prompt authoring instructions and establish a governance sy
 ### Primary Deliverables
 
 1. **Prompt Authoring Instructions** (`.github/instructions/create-prompt.instructions.md`)
-
    - Comprehensive guidelines for creating effective repository prompts
    - Field-by-field documentation of YAML front matter
    - Tool selection methodologies
@@ -24,13 +23,11 @@ Create comprehensive prompt authoring instructions and establish a governance sy
    - Post-creation requirements for AI logs and README updates
 
 2. **Instruction Prompt Requirements** (`.github/instructions/instruction-prompt.instructions.md`)
-
    - Governance layer ensuring instruction-generating prompts include AI provenance
    - Automatic application via `applyTo: "**/*.instructions.prompt.md"`
    - Complete template and validation checklist
 
-3. **Meta-Prompt Generator** (`.github/prompts/meta/create-instruction-prompt.prompt.md`)
-
+3. **Meta-Prompt Generator** (`.github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md`)
    - Interactive chat-mode prompt for creating new instruction-generating prompts
    - Built-in AI provenance requirements
    - Step-by-step guidance with validation
@@ -98,16 +95,16 @@ Create comprehensive prompt authoring instructions and establish a governance sy
 
 ## Artifacts Produced
 
-| Artifact                                                                 | Type             | Purpose                                                    |
-| ------------------------------------------------------------------------ | ---------------- | ---------------------------------------------------------- |
-| `.github/instructions/create-prompt.instructions.md`                     | Instruction File | Prompt authoring guidelines with provenance                |
-| `.github/instructions/instruction-prompt.instructions.md`                | Governance File  | Ensures instruction-prompts include AI provenance          |
-| `.github/prompts/meta/create-instruction-prompt.prompt.md`               | Meta-Prompt      | Generates compliant instruction-generating prompts         |
-| `.github/instructions/copilot-instructions.md`                           | Reference Guide  | Consolidated Copilot-specific requirements (11 req fields) |
-| `.github/prompts/meta/validate-and-improve-instructions.prompt.md`       | Meta-Prompt (QA) | Iterative validation and improvement orchestrator          |
-| `ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md` | Documentation    | Complete session transcript with model format fixes        |
-| `ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/summary.md`      | Documentation    | This summary                                               |
-| Updated `README.md`                                                      | Documentation    | Links to artifacts with provenance trails                  |
+| Artifact                                                                       | Type             | Purpose                                                    |
+| ------------------------------------------------------------------------------ | ---------------- | ---------------------------------------------------------- |
+| `.github/instructions/create-prompt.instructions.md`                           | Instruction File | Prompt authoring guidelines with provenance                |
+| `.github/instructions/instruction-prompt.instructions.md`                      | Governance File  | Ensures instruction-prompts include AI provenance          |
+| `.github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md`         | Meta-Prompt      | Generates compliant instruction-generating prompts         |
+| `.github/instructions/copilot-instructions.md`                                 | Reference Guide  | Consolidated Copilot-specific requirements (11 req fields) |
+| `.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md` | Meta-Prompt (QA) | Iterative validation and improvement orchestrator          |
+| `ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md`       | Documentation    | Complete session transcript with model format fixes        |
+| `ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/summary.md`            | Documentation    | This summary                                               |
+| Updated `README.md`                                                            | Documentation    | Links to artifacts with provenance trails                  |
 
 ## Lessons Learned
 
