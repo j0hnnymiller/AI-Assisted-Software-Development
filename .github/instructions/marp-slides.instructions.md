@@ -199,20 +199,22 @@ Architecture explanation...
 - Create `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md`
 - Capture exact prompt verbatim
 - Use ISO8601 timestamps
-- **Include comprehensive speaker notes for EVERY slide**
-- Use pandoc `:::notes` syntax for speaker notes
-- Ensure speaker notes provide delivery guidance and context
+- **CRITICAL: Include comprehensive speaker notes for EVERY slide (no exceptions)**
+- **CRITICAL: Use ONLY pandoc `:::notes` syntax for speaker notes**
+- **CRITICAL: Speaker notes MUST provide delivery guidance, timing, key points, examples, and transitions**
+- **CRITICAL: Speaker notes MUST be comprehensive (minimum 3-4 sentences per slide)**
 
 **Prohibited**:
 
 - Generic model names like "github/copilot"
 - Creating slides without active chat context
 - Omitting any required metadata fields
-- **Creating slides without speaker notes**
+- **Creating ANY slide without comprehensive speaker notes**
 - **Using ANY speaker note syntax other than pandoc `::: notes` blocks**
 - Using "Note:", "Speaker:", "Notes:", or plain paragraph speaker notes
 - HTML comments for speaker notes
 - Any custom or non-standard note format
+- **Minimal or placeholder speaker notes (e.g., "Speaker notes here")**
 
 ## Validation
 

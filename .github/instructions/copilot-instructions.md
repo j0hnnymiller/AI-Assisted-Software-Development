@@ -143,21 +143,25 @@ All AI-generated artifacts must include complete provenance metadata as defined 
 When using GitHub Copilot, follow these specific guidelines:
 
 **Model Field**:
+
 - Use the **underlying AI model** format: `"<provider>/<model-name>@<version>"`
 - Examples: `"openai/gpt-4o@2024-11-20"`, `"anthropic/claude-3.5-sonnet@2024-10-22"`
 - ❌ NOT the interface name like "github/copilot"
 
 **Operator Field**:
+
 - Use your GitHub username (e.g., `"johnmillerATcodemag-com"`)
 
 **Chat ID**:
+
 - Use Copilot's generated chat identifier
 - Copilot should auto-generate this at chat start
 
 **Source Field Values**:
+
 - **User-created**: `"<github-username>"` (e.g., `"johnmillerATcodemag-com"`)
-- **Prompt-generated**: `"<path-to-prompt-file>"` (e.g., `".github/prompts/prompt-file.instructions.prompt.md"`)
-- **Meta-prompt-generated**: `"<path-to-meta-prompt-file>"` (e.g., `".github/prompts/meta/create-instruction-prompt.prompt.md"`)
+- **Prompt-generated**: `"<path-to-prompt-file>"` (e.g., `".github/copilot/Promptfiles/prompt-file.instructions.prompt.md"`)
+- **Meta-prompt-generated**: `"<path-to-meta-prompt-file>"` (e.g., `".github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md"`)
 
 See [complete field definitions and requirements](ai/ai-assisted-output.instructions.md#required-provenance-metadata-for-every-ai-assisted-artifact) in the canonical AI-assisted output policy.
 
@@ -176,12 +180,15 @@ GitHub Copilot should automatically:
 ### Quick Reference
 
 **Add to conversation.md**:
+
 ```markdown
 **Artifacts Produced**:
+
 - `<path-to-file>` - <Brief description>
 ```
 
 **Add to README.md** (for notable artifacts):
+
 ```markdown
 - [`.github/instructions/<name>.instructions.md`](...) — <Description> ([chat log](...))
 ```
@@ -208,7 +215,7 @@ See [complete post-creation workflow](ai/ai-assisted-output.instructions.md#ai-c
 
 ### Meta-Prompt Files
 
-- **Location**: `.github/prompts/meta/`
+- **Location**: `.github/copilot/Promptfiles/meta/`
 - **Format**: `create-<domain>-prompt.prompt.md`
 - **Examples**:
   - `create-instruction-prompt.prompt.md`

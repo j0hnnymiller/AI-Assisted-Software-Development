@@ -95,12 +95,20 @@ source: "johnmillerATcodemag-com"
 
 Welcome to the course. Use Marp features (--- for new slide) below.
 
+::: notes
+Welcome participants and set the tone for the session. Emphasize the hands-on nature of the course and encourage questions throughout. Timing: 1 minute.
+:::
+
 ---
 
 ## Slide 2: Goals
 
 - Understand provenance
 - Learn tools and patterns
+
+::: notes
+Explain each goal briefly. Provenance ensures we can trace AI-assisted work back to its source. Tools like GitHub Copilot will be demonstrated throughout. Emphasize that patterns are reusable approaches. Timing: 2 minutes.
+:::
 
 ---
 
@@ -149,6 +157,57 @@ Contact: [john.miller@codemag.com](john.miller@codemag.com)
 
 This produces a slide where "John Michael Miller", "Principal Software Engineer at CODE", "15+ years", "AI/ML Enthusiast", and "DevOps engineer" all appear in bold font in the final PowerPoint presentation.
 
+## Speaker Notes Requirements
+
+**MANDATORY**: Every slide MUST include comprehensive speaker notes using pandoc syntax.
+
+**REQUIRED SYNTAX** (exact format):
+
+```markdown
+::: notes
+Speaker notes content here
+:::
+```
+
+**PROHIBITED FORMATS** (these will FAIL CI validation):
+
+```markdown
+❌ WRONG: Note:
+❌ WRONG: Speaker notes:
+❌ WRONG: <!-- Speaker: ... -->
+❌ WRONG: Notes: ...
+❌ WRONG: Any format other than ::: notes
+```
+
+**CORRECT vs INCORRECT Examples**:
+
+```markdown
+# Slide Title
+
+Content here
+
+❌ WRONG:
+Note:
+Speaker: Explain this concept
+
+✅ CORRECT:
+::: notes
+Speaker: Explain this concept with timing and context
+:::
+```
+
+**Speaker Notes Content Guidelines**:
+
+- **Delivery Instructions**: How to present the content effectively
+- **Timing Guidance**: Suggested time allocation for each slide
+- **Key Points**: Essential messages to emphasize
+- **Examples**: Real-world illustrations or case studies
+- **Transitions**: How to connect to the next slide
+- **Audience Interaction**: Questions, polls, or discussion points
+- **Background Context**: Additional details not shown on slide
+
+**Placement**: Speaker notes MUST be placed immediately after each slide's content, before the next slide separator (`---`).
+
 ## Authoring rules and checklist
 
 Before committing or generating slides, ensure:
@@ -159,7 +218,13 @@ Before committing or generating slides, ensure:
 - [ ] `operator` is a GitHub username.
 - [ ] Prompt is captured verbatim in the `prompt` field.
 - [ ] Timestamps use ISO8601.
+- [ ] **CRITICAL: Every slide MUST have a `::: notes` block (search file for "::: notes" to verify)**
+- [ ] **CRITICAL: NO plain "Note:" paragraphs, HTML comments, or non-standard formats for speaker notes**
+- [ ] **CRITICAL: Speaker notes MUST include delivery guidance, timing, key points, examples, and transitions**
+- [ ] **CRITICAL: Speaker notes MUST be comprehensive (minimum 3-4 sentences per slide)**
 - [ ] README.md updated with an entry for notable AI-generated slides where applicable.
+
+**ENFORCEMENT**: PRs with slides missing speaker notes will be rejected automatically by CI validation.
 
 ## Copilot-specific guidance
 

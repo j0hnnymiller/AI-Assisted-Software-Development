@@ -16,7 +16,7 @@ task_durations:
     duration: "00:05:00"
 total_duration: "00:30:00"
 ai_log: "ai-logs/2026/01/20/generate-ai-output-policy-20260120/conversation.md"
-source: ".github/prompts/create-ai-assisted-output-instructions.prompt.md"
+source: ".github/copilot/Promptfiles/create-ai-assisted-output-instructions.prompt.md"
 applyTo: "**/*"
 ---
 
@@ -472,6 +472,7 @@ Before committing AI-assisted content, verify:
 - [ ] Chat scaffolding in place before artifact creation
 - [ ] Embedded metadata used for Markdown (no sidecar files; see “Metadata placement policy”)- [ ] **Artifact optimized for AI agent consumption and processing**
 - [ ] **Content structured to minimize token usage while maintaining clarity and completeness**
+
 ## PR and Commit Checklist (Mandatory)
 
 Before submitting pull requests containing AI-assisted content:
@@ -713,7 +714,7 @@ jobs:
         uses: CycloneDX/gh-action@v2
         with:
           version: v1
-          args: 'generate -o sbom.xml -t application'
+          args: "generate -o sbom.xml -t application"
 
       # Verify SBOM integrity
       - name: Validate SBOM
@@ -793,7 +794,9 @@ jobs:
    - Audit security check logs regularly for patterns
 
 Note: This example uses bash and is compatible with Linux/macOS runners. For Windows runners, adapt the script to PowerShell or use WSL. For non-GitHub CI systems, apply equivalent logic in your platform’s scripting language. README updates are typically verified during PR review rather than automated CI checks (teams may extend CI to detect new AI-generated files and verify corresponding README entries if desired).
+
 ## Non-Compliance and Remediation
+
 - Missing logs or references: Scaffold `ai-logs/yyyy/mm/dd/<chat-id>/`, add front matter `ai_log` and `chat_id`, update README (optionally link back to the chat folder), then re-request review.
 - Orphaned artifacts: Create or reconstruct `conversation.md` from available history and update artifacts to reference it.
 - Incomplete metadata: Add missing required fields, timestamps, and task durations; verify operator and model details.

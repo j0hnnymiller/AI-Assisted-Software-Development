@@ -40,7 +40,6 @@ prompt_metadata:
   category: category-name
   tags: [tag1, tag2, tag3]
 ---
-
 # Prompt Title
 [Prompt content]
 ```
@@ -48,11 +47,14 @@ prompt_metadata:
 ## Field Requirements
 
 ### mode
+
 - `agent`: Autonomous file operations, code generation
 - `chat`: Interactive guidance, Q&A
 
 ### model
+
 **REQUIRED**: Use explicit format `"<provider>/<model-name>@<version>"`
+
 - Default: `"anthropic/claude-3.5-sonnet@2024-10-22"`
 - Examples:
   - `"openai/gpt-4o@2024-11-20"`
@@ -62,7 +64,9 @@ prompt_metadata:
 **Prohibited**: `"Auto (copilot)"` (loses provenance)
 
 ### tools
+
 Array of required tools:
+
 - `create` - Create files
 - `edit` - Modify files
 - `search` - Search codebase
@@ -73,24 +77,30 @@ Array of required tools:
 **Rule**: Include only necessary tools
 
 ### description
+
 **Location**: Top-level (NOT in prompt_metadata)
+
 - Active voice, present tense
 - Specific about purpose
 - 1-2 sentences max
 - Focus on outcomes
 
 ### prompt_metadata.id
+
 kebab-case, descriptive, unique
 Pattern: `{domain}-{action}-{target}`
 Example: `api-documentation-generator`
 
 ### prompt_metadata.output_path
+
 Relative path from repo root
 Examples:
+
 - `.github/instructions/feature.instructions.md`
 - `docs/generated/api-docs.md`
 
 ### prompt_metadata.tags
+
 3-7 relevant tags
 Categories: technology, function, domain, type
 Example: `[python, testing, unit-tests, pytest]`
@@ -98,6 +108,7 @@ Example: `[python, testing, unit-tests, pytest]`
 ## Common Templates
 
 ### Code Generator
+
 ```yaml
 mode: agent
 tools: ["search", "read", "create"]
@@ -109,6 +120,7 @@ prompt_metadata:
 ```
 
 ### Documentation Generator
+
 ```yaml
 mode: agent
 tools: ["search", "read", "create"]
@@ -120,6 +132,7 @@ prompt_metadata:
 ```
 
 ### Interactive Assistant
+
 ```yaml
 mode: chat
 tools: ["search", "read"]
@@ -130,33 +143,43 @@ prompt_metadata:
 ```
 
 ## Content Structure
+
 ```markdown
 # Prompt Title
+
 [Brief introduction]
 
 ## Context
+
 [Background, repo structure, conventions]
 
 ## Target Audience
+
 [Who uses output, requirements]
 
 ## Requirements
+
 [Detailed requirements by category]
 
 ## Technical Requirements
+
 [Specifications, constraints, dependencies]
 
 ## Output Format
+
 [Detailed format specs]
 
 ## Quality Standards
+
 [Acceptance criteria, metrics]
 
 ## Deliverable
+
 [Clear statement of what to produce]
 ```
 
 ## Validation Checklist
+
 - [ ] All required top-level fields present (mode, model, tools, description)
 - [ ] All required prompt_metadata fields present
 - [ ] description at top-level (NOT in prompt_metadata)
@@ -167,6 +190,7 @@ prompt_metadata:
 - [ ] YAML syntax valid
 
 ## Anti-Patterns
+
 ❌ Description in prompt_metadata (should be top-level)
 ❌ Incomplete tools array
 ❌ Vague descriptions
@@ -175,22 +199,28 @@ prompt_metadata:
 ❌ Generic model names
 
 ## File Naming
+
 Pattern: `{domain}-{action}-{target}.prompt.md`
+
 - kebab-case
 - Include `.prompt.md` extension
 - Descriptive, specific
 - No abbreviations
 
 ## Directory Structure
-- Prompts: `.github/prompts/`
+
+- Prompts: `.github/copilot/Promptfiles/`
 - Output: `.github/instructions/` or domain-specific
 - Use subdirectories for organization
 
 ## Post-Creation
+
 After creating prompt:
+
 1. Follow [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#post-creation-requirements-canonical)
 2. Verify all links use correct relative paths
 
 ## Reference
+
 - `.github/instructions/ai-assisted-output.instructions.md` - Provenance requirements
 - `.github/instructions/copilot-instructions.md` - Copilot-specific guidance

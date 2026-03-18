@@ -21,15 +21,18 @@ applyTo: "**/*.instructions.prompt.md"
 Requirements for prompts that generate `*.instructions.md` files.
 
 ## Applies To
+
 Pattern: `**/*.instructions.prompt.md`
 
 ## Mandatory Requirements
 
 ### 1. Context Section
+
 Must include AI policy reference:
 
 ```markdown
 ## Context
+
 <domain-specific context>
 
 **CRITICAL**: All AI-generated artifacts MUST comply with
@@ -38,16 +41,17 @@ instruction file MUST include full AI provenance metadata.
 ```
 
 ### 2. Deliverable Section
+
 Must include AI provenance template:
 
-```markdown
+````markdown
 ## Deliverable
 
 Generate `.github/instructions/<domain>.instructions.md` with:
 
 ### Required AI Provenance Metadata (YAML Front Matter)
 
-```yaml
+````yaml
 ai_generated: true
 model: "<model-name-and-version>"
 operator: "<operator-username>"
@@ -77,7 +81,8 @@ prompt_metadata:
   output_path: .github/instructions/<domain>.instructions.md
   category: documentation
   output_format: markdown
-```
+````
+````
 
 ## Complete Template
 
@@ -100,16 +105,19 @@ prompt_metadata:
 # Generate <Domain> Instructions
 
 ## Context
+
 <domain-context>
 
 **CRITICAL**: All AI-generated artifacts MUST comply with
 `.github/instructions/ai-assisted-output.instructions.md`.
 
 ## Deliverable
+
 [Include provenance template from above]
 ```
 
 ## Validation Checklist
+
 - [ ] Context references AI policy
 - [ ] Deliverable includes provenance template with all 10 fields
 - [ ] Output path points to `.github/instructions/<name>.instructions.md`
@@ -118,6 +126,7 @@ prompt_metadata:
 - [ ] ID follows `create-<domain>-instructions` pattern
 
 ## Common Mistakes
+
 ❌ Missing AI provenance section → Add complete YAML template
 ❌ Not referencing AI policy → Add CRITICAL statement
 ❌ Vague deliverable → Be explicit about metadata fields
@@ -126,11 +135,13 @@ prompt_metadata:
 ## Creation Options
 
 **Option 1**: Use meta-prompt
+
 ```
-Submit .github/prompts/meta/create-instruction-prompt.prompt.md
+Submit .github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md
 ```
 
 **Option 2**: Manual
+
 1. Copy existing instruction prompt
 2. Update domain-specific content
 3. Ensure Context references AI policy
@@ -138,4 +149,5 @@ Submit .github/prompts/meta/create-instruction-prompt.prompt.md
 5. Validate against checklist
 
 ## Reference
+
 See `.github/instructions/ai-assisted-output.instructions.md` for complete provenance requirements.

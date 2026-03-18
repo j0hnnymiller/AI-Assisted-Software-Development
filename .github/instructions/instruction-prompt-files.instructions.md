@@ -157,7 +157,7 @@ prompt_metadata:
 **Option 1**: Use meta-prompt
 
 ```
-Submit .github/prompts/meta/create-instruction-files-prompt-file.prompt.md
+Submit .github/copilot/Promptfiles/meta/create-instruction-files-prompt-file.prompt.md
 ```
 
 **Option 2**: Manual

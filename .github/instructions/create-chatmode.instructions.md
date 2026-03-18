@@ -15,7 +15,7 @@ task_durations:
     duration: "00:10:00"
 total_duration: "00:15:00"
 ai_log: "ai-logs/2025/10/21/create-chatmode-instructions-20251021/conversation.md"
-source: ".github/prompts/create-chatmode-instructions.prompt.md"
+source: ".github/copilot/Promptfiles/create-chatmode-instructions.prompt.md"
 applyTo: "**/*.chatmode.md"
 ---
 
@@ -830,7 +830,6 @@ Before submitting a chat mode file, verify:
 **Test the Chat Mode**:
 
 1. **Manual Testing**:
-
    - Activate the chat mode in GitHub Copilot (`@<modename>`)
    - Try each documented command
    - Verify response format and quality
@@ -838,7 +837,6 @@ Before submitting a chat mode file, verify:
    - Check error handling for invalid inputs
 
 2. **Peer Review**:
-
    - Have a colleague use the chat mode
    - Gather feedback on clarity and usefulness
    - Identify missing capabilities or confusing instructions
@@ -1323,14 +1321,12 @@ You help developers with their code and other tasks.
 **Activating a Chat Mode in GitHub Copilot**:
 
 1. **In VS Code**:
-
    - Open GitHub Copilot chat panel
    - Type `@` to see available chat modes
    - Select your custom mode from the list
    - Or type `@<modename>` directly (e.g., `@SecurityAnalyzer`)
 
 2. **Using Commands**:
-
    - Activate mode: `@SecurityAnalyzer`
    - Use mode-specific command: `@security-scan`
    - Ask questions: "What security issues do you see?"
@@ -1478,13 +1474,11 @@ Consider adding a changelog section for frequently updated modes:
 **Gathering User Feedback**:
 
 1. **Direct Feedback**:
-
    - Ask users about their experience
    - Collect suggestions for improvements
    - Identify confusing or missing features
 
 2. **Usage Monitoring**:
-
    - Which commands are used most?
    - What questions do users ask repeatedly?
    - Where do users get stuck?
@@ -1715,7 +1709,7 @@ Create `ai-logs/2025/10/21/create-chatmode-instructions-20251021/conversation.md
 
 ## Context
 
-- Inputs: `.github/prompts/create-chatmode-instructions.prompt.md`
+- Inputs: `.github/copilot/Promptfiles/create-chatmode-instructions.prompt.md`
 - Targets: `.github/instructions/create-chatmode.instructions.md`
 - Constraints/Policies: `.github/instructions/ai-assisted-output.instructions.md`
 
