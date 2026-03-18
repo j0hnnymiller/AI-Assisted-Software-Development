@@ -262,13 +262,14 @@ def parse_markdown_table(body: str) -> list[list[str]]:
     return rows
 
 
-def parse_slide(md_content: str) -> tuple[str, str, str | None]:
-    """Return (title, body, background_image_path) parsed from a single markdown slide block."""
+def parse_slide(md_content: str) -> tuple[str, str, str | None, str]:
+    """Return (title, body, background_image_path, speaker_notes) parsed from a single markdown slide block."""
     lines = md_content.strip().splitlines()
 
     title = ""
     body_lines = []
     bg_image = None
+    speaker_notes = ""
 
     # Pattern to match Marp background images: ![bg ...](path)
     bg_pattern = re.compile(r'!\[bg[^\]]*\]\(([^)]+)\)')
@@ -290,14 +291,18 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None]:
             elif not stripped.startswith("<!--"):
                 body_lines.append(line)
 
-    # Strip speaker notes (::: notes ... :::) from body
+    # Extract speaker notes (::: notes ... :::) from body
     body = "\n".join(body_lines).strip()
-    body = re.sub(r":::[ \t]*notes.*?:::", "", body, flags=re.DOTALL).strip()
+    notes_pattern = re.compile(r":::[ \t]*notes(.*?):::", re.DOTALL | re.IGNORECASE)
+    notes_match = notes_pattern.search(body)
+    if notes_match:
+        speaker_notes = notes_match.group(1).strip()
+        body = notes_pattern.sub("", body).strip()
 
     # Process markdown links according to rendering rules
     body = process_markdown_links(body)
 
-    return title, body, bg_image
+    return title, body, bg_image, speaker_notes
 
 
 def set_slide_notes(slide, note_text: str) -> None:
@@ -609,7 +614,13 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
             md = slide_file.read_text(encoding="utf-8")
             slide_blocks = split_marp_slides(md)
             for block in slide_blocks:
-                title, body, bg_image = parse_slide(block)
+                title, body, bg_image, speaker_notes = parse_slide(block)
+
+                # Combine source path with speaker notes if they exist
+                if speaker_notes:
+                    combined_note = f"{speaker_notes}\n\n---\n\nSource: {slide_path}"
+                else:
+                    combined_note = note
 
                 # Resolve background image path relative to Slides folder (yaml_path.parent)
                 bg_image_path = None
@@ -629,15 +640,15 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                 if layout_type == "title" or layout_type == "title slide":
                     # Extract subtitle from body (first line)
                     subtitle = body.split("\n")[0] if body else ""
-                    add_title_slide(prs, title or slide_file.stem, subtitle, note=note)
+                    add_title_slide(prs, title or slide_file.stem, subtitle, note=combined_note)
                 elif contains_markdown_table(body):
                     # Parse and create table slide
                     table_data = parse_markdown_table(body)
-                    add_table_slide(prs, title or slide_file.stem, table_data, note=note)
+                    add_table_slide(prs, title or slide_file.stem, table_data, note=combined_note)
                 elif body:
-                    add_title_content_slide(prs, title or slide_file.stem, body, note=note)
+                    add_title_content_slide(prs, title or slide_file.stem, body, note=combined_note)
                 else:
-                    add_title_only_slide(prs, title or slide_file.stem, bg_image=bg_image_path, note=note)
+                    add_title_only_slide(prs, title or slide_file.stem, bg_image=bg_image_path, note=combined_note)
 
         slide_end_idx = len(prs.slides)
         all_sld_ids = list(prs.slides._sldIdLst)
