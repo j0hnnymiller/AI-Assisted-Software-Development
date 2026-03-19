@@ -126,7 +126,6 @@ Input Tokens
 - **Self-attention** lets every token "look at" every other token
 - Processes the **entire context window at once** (not word-by-word)
 - Stacked in **layers** — deeper = richer understanding
-- GPT-4 has ~1.8 trillion parameters across hundreds of layers
 
 ::: notes
 You don't need to explain the math — focus on the intuition of attention.
@@ -344,8 +343,6 @@ Timing: ~2 minutes.
 ### The bottom line for developers:
 
 > LLMs are powerful pattern matchers. Give them **clear context**, **good examples**, and **specific instructions** — and they'll surprise you.
-
-### ❓ Questions?
 
 ::: notes
 Wrap up by connecting the technical concepts back to practical developer behavior.
