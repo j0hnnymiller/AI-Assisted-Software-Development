@@ -197,7 +197,7 @@ artifact_protection: true # Prevent creation without chat context
 
 Implementation Requirements for Copilot:
 
-- Chat ID: Use Copilot’s chat ID directly as the identifier.
+- Chat ID: Use Copilot's chat ID directly as the identifier.
 - Automatic Scaffolding: Create `ai-logs/yyyy/mm/dd/<chat-id>/` when the first artifact is generated.
 - Conversation Logging: Export chat transcript to `conversation.md` automatically.
 - Artifact Metadata: Auto-populate chat ID reference in all generated files.
@@ -376,7 +376,7 @@ Include enough detail that someone unfamiliar with the chat can understand the "
 
 - Record the start and end timestamps for each significant task (e.g., drafting, refactor, diagram generation, test updates).
 - Compute each task duration and the overall total.
-- If multiple tools are used, list each tool’s portion or note parallel execution.
+- If multiple tools are used, list each tool's portion or note parallel execution.
 
 ## Placement and naming
 
@@ -497,7 +497,7 @@ type ChatMessage = {
 
 Automatic Behaviors:
 
-1. Chat Identity: Use Copilot’s chat ID as the identifier (no separate ID needed).
+1. Chat Identity: Use Copilot's chat ID as the identifier (no separate ID needed).
 2. Context Persistence: Maintain chat context throughout conversation lifecycle.
 3. Lazy Scaffolding: Create `ai-logs/yyyy/mm/dd/<chat-id>/` structure only when the first artifact is generated.
 4. Conversation Export: Auto-save chat transcript to `conversation.md` on artifact creation.
@@ -576,7 +576,7 @@ API Requirements:
 
 Single Identifier Approach: In the Copilot-integrated workflow, we use only one identifier.
 
-- Chat ID = Copilot chat ID: Copilot’s native chat identifier serves as the chat ID.
+- Chat ID = Copilot chat ID: Copilot's native chat identifier serves as the chat ID.
 - No Dual IDs: Do not create separate `chat_session_id` or similar.
 - Simplified Metadata: All artifacts reference the same chat ID consistently (`chat_id` field).
 - Unified Logging: The `ai-logs/yyyy/mm/dd/<chat-id>/` structure uses the chat ID directly.
@@ -654,7 +654,7 @@ jobs:
           exit $rc
 ```
 
-Note: This example uses bash and is compatible with Linux/macOS runners. For Windows runners, adapt the script to PowerShell or use WSL. For non-GitHub CI systems, apply equivalent logic in your platform’s scripting language. README updates are typically verified during PR review rather than automated CI checks (teams may extend CI to detect new AI-generated files and verify corresponding README entries if desired).
+Note: This example uses bash and is compatible with Linux/macOS runners. For Windows runners, adapt the script to PowerShell or use WSL. For non-GitHub CI systems, apply equivalent logic in your platform's scripting language. README updates are typically verified during PR review rather than automated CI checks (teams may extend CI to detect new AI-generated files and verify corresponding README entries if desired).
 
 ## Non-Compliance and Remediation
 

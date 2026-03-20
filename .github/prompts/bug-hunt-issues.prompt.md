@@ -28,19 +28,15 @@ Perform a read-only, static analysis to surface likely bugs with concrete eviden
 ## Steps
 
 1. Map key modules and contracts
-
    - Identify public APIs, core services, critical flows
 
 2. Scan for bug heuristics
-
    - Record evidence with file paths and line ranges; avoid speculation
 
 3. Validate and classify
-
    - Assign severity (Critical/High/Medium/Low) and impact description
 
 4. Create GitHub issue drafts
-
    - Provide issue titles, descriptions (evidence, impact), remediation steps, and labels
 
 5. Summarize and durations
@@ -72,7 +68,7 @@ Provide a section per finding with an issue-ready body.
 
 Description:
 
-- Promise returned by service call isn’t awaited or handled; errors are swallowed.
+- Promise returned by service call isn't awaited or handled; errors are swallowed.
 
 Impact:
 

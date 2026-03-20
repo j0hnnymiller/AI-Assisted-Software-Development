@@ -58,7 +58,7 @@ The generated `.md` file must follow this outline and headings (all required unl
 ## Standard sections to document (must include in the generated file)
 
 - Introduction: What this instruction covers and when to use it.
-- Audience and Scope: Who should use it; what’s included/excluded.
+- Audience and Scope: Who should use it; what's included/excluded.
 - Prerequisites: Tools, permissions, or context needed.
 - Output Requirements: Exact outputs, formats, and constraints.
 - Steps / Procedure: Ordered steps with sub-steps if needed.
@@ -82,8 +82,8 @@ Provide this template as a fenced Markdown block for users to copy:
 
 ## Audience and Scope
 - Audience: <Who>
-- Scope: <What’s included>
-- Out of scope: <What’s not covered>
+- Scope: <What's included>
+- Out of scope: <What's not covered>
 
 ## Prerequisites
 - <Tool/permission/context>
@@ -141,7 +141,7 @@ Provide this template as a fenced Markdown block for users to copy:
 ## Section-by-Section Guidance (what to write)
 
 - Title: Be specific; reflect the topic (e.g., "CI Pipeline Instructions").
-- Prerequisites: List only what’s truly required; link to setup docs.
+- Prerequisites: List only what's truly required; link to setup docs.
 - Output Requirements: State exact paths and formats; specify overwrite behavior.
 - Steps: Use numbered steps; one action per step; include expected outcomes.
 - Examples: Keep minimal and runnable/renderable where applicable.
