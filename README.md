@@ -103,6 +103,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Template-aligned with objectives, activities, success criteria, and facilitator notes
   - Provenance: [Chat log](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/summary.md)
 
+- **Exercise: Creating Prompt Files** ([`Slides/individual-slides/exercise-creating-prompt-files.md`](Slides/individual-slides/exercise-creating-prompt-files.md))
+  - Exercise slide covering baseline prompt execution, guided rerun with instruction files, and structured comparison of the resulting outputs
+  - Emphasizes prompt structure, context isolation, reproducibility, and the impact of instruction files on output quality
+  - Provenance: [Chat log](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/summary.md)
+
 - **Organizational vs. Repository Instruction Files Deck** ([`Slides/individual-slides/organizational-vs-repository-instruction-files.md`](Slides/individual-slides/organizational-vs-repository-instruction-files.md))
   - 7-slide Marp deck covering enterprise-tier capabilities, path-scoped instruction files, and folder-level technology-specific rules
   - Includes layering and precedence guidance for multi-level instruction governance
