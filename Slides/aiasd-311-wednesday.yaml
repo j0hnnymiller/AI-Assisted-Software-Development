@@ -1,0 +1,31 @@
+template: Slides\individual-slides\jMM-CODE-Training-Slide-Template-clean.pptx
+
+sections:
+  - name: Intro
+    slides:
+      - Slides\individual-slides\welcome-back.md
+
+  - name: Module 1 - Instructions vs Prompts vs Custom Chat Modes
+    slides:
+      - Instructions vs Prompts vs Custom Chat Modes; copilot-instruction-files-vs-prompt-files-vs-chatmodes.pptx;
+      - copilot-instruction-control.pptx;
+      - AI-Development-Approaches-Comparison.pptx
+
+  - name: Module 2 - Custom Agents
+    slides:
+      - Custom Agents.pptx
+      - github-copilot-chat-mode-personas.md
+      - vscode-copilot-agents-overview
+      - Exercise: Building Custom Agents
+      - Exercise: Defining Skills
+      - Agent Best Practices
+
+  - name: Module 3 - Skills
+    slides:
+      - skills.md
+
+  - name: Module 4 - MCP
+    slides:
+      - MCP Overview.pptx
+      - Exercise: Building an MCP
+      - MCP Best Practices
