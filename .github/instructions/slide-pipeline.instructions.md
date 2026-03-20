@@ -30,7 +30,7 @@ AI-driven run.
 
 **🔒 CRITICAL INVARIANTS**: Any modifications to `scripts/generate_pptx.py` MUST preserve:
 
-1. **First Section Exception**: The first section (idx=0) MUST NOT receive injected slides (module list and agenda). These slides are only added for idx > 0.
+1. **First Section Exception**: The first section (idx=0) MUST NOT receive the injected module list slide. That slide is only added for idx > 0.
 2. **Slide Notes (MANDATORY)**: ALL slides (injected and content) MUST have comprehensive speaker notes:
    - **Injected slides**: Notes explaining they were auto-generated and their purpose
    - **Content slides**: Notes showing source file path AND speaker delivery guidance
@@ -42,7 +42,7 @@ AI-driven run.
 
 - Always reference this specification
 - Test with a manifest where first section has content slides
-- Verify first section has NO injected slides in the output PPTX (no "Course Modules" or agenda)
+- Verify first section has NO injected module list slide in the output PPTX (no "Course Modules" before the first content slide)
 - **VERIFY ALL slides (including injected) have comprehensive speaker notes in the output PPTX**
 - **VERIFY speaker notes contain substantive delivery guidance (not just placeholders)**
 
@@ -53,9 +53,8 @@ AI-driven run.
 1. [Repository layout](#1-repository-layout)
 2. [YAML manifest](#2-yaml-manifest)
 3. [Individual slide file rules](#3-individual-slide-file-rules)
-4. [Merge phase — injected slides](#4-merge-phase--injected-slides)
+4. [Merge phase — injected module list slide](#4-merge-phase--injected-module-list-slide)
    - 4.1 [Module list slide](#41-module-list-slide)
-   - 4.2 [Section agenda slide](#42-section-agenda-slide)
 5. [Merge phase — content slides](#5-merge-phase--content-slides)
 6. [Merge phase — full slide order per section](#6-merge-phase--full-slide-order-per-section)
 7. [PPTX generation phase](#7-pptx-generation-phase)
@@ -121,10 +120,6 @@ sections:
 - A `slides:` list may be empty or absent; the section still produces a module list slide
   and an empty section grouping in the PPTX.
 - All section names are used to build the module list that appears on every module list slide.
-- **Exercise slides** (slides whose extracted title starts with `Exercise`, case-insensitive) may be
-  included in the `slides` list and will be merged into the deck, but they are **excluded from the
-  section agenda slide** — attendees discover exercises as they progress through the section rather
-  than seeing them previewed up front.
 
 ---
 
@@ -134,25 +129,25 @@ Each `.md` file under `Slides/individual-slides/` must conform to these rules.
 The agent validates and reports violations, but does not abort — it logs a warning and
 continues.
 
-| Rule               | Requirement                                                                                                                                                                                                          |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Front matter       | Must begin with a valid Marp YAML front-matter block (`---` … `---`)                                                                                                                                                 |
-| H1 headings        | No `# H1` headings in the body                                                                                                                                                                                       |
-| Slide title        | Must contain at least one `## H2` heading in the body; the **first** `## H2` is used as the slide title for the section agenda slide (slides with titles starting with `Exercise` are excluded from the agenda list) |
-| Image paths        | Use `images/` (not `../images/`); individual slide previews use `../images/` but the merged deck lives one level up                                                                                                  |
-| Trailing separator | Must not end with a bare `---`                                                                                                                                                                                       |
-| Encoding           | No vertical-tab (`\x0b`) characters                                                                                                                                                                                  |
+| Rule               | Requirement                                                                                                                |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| Front matter       | Must begin with a valid Marp YAML front-matter block (`---` … `---`)                                                       |
+| H1 headings        | No `# H1` headings in the body                                                                                             |
+| Slide title        | Should contain at least one `## H2` heading in the body so slide titles carry cleanly into the merged deck and PPTX output |
+| Image paths        | Use `images/` (not `../images/`); individual slide previews use `../images/` but the merged deck lives one level up        |
+| Trailing separator | Must not end with a bare `---`                                                                                             |
+| Encoding           | No vertical-tab (`\x0b`) characters                                                                                        |
 
 ---
 
-## 4. Merge phase — injected slides
+## 4. Merge phase — injected module list slide
 
-During the merge the agent inserts two auto-generated slides at the start of each
-section, **before** any of that section's source content slides. They are produced
-entirely from the manifest data and the source file titles — no content is invented.
+During the merge the agent inserts one auto-generated module list slide at the start
+of each section after the first, **before** any of that section's source content
+slides. It is produced entirely from the manifest data — no content is invented.
 
-**Exception**: For the **first section** in the manifest, **both injected
-slides are suppressed** (module list and agenda). The first section starts
+**Exception**: For the **first section** in the manifest, the injected module list
+slide is suppressed. The first section starts
 directly with the first source content slide. This prevents navigation-heavy opening
 that would precede the welcome slide.
 
@@ -210,84 +205,9 @@ the module list slide inserted before `Module 2 - Intro to Copilot` content look
 
 ---
 
-### 4.2 Section agenda slide
-
-**One section agenda slide is inserted after the module list slide for every section
-that has at least one source content slide.**
-
-Its purpose is to preview the topics covered in the section so attendees know what's
-coming before the content starts.
-
-#### Slide title extraction
-
-The agent extracts slide titles from source files as follows:
-
-1. Strip the YAML front-matter block (`---` … `---`) from the file content.
-2. Scan the remaining lines for the **first `## H2` heading**.
-3. The text of that heading (without the `## ` prefix) is the slide title.
-4. If no `## H2` heading is found, the file's stem (filename without extension) is used
-   as a fallback title.
-
-#### Content
-
-- **Title**: same as the section name (rendered as a `##` heading to produce a
-  Title-and-Content layout in the PPTX)
-- **Body**: numbered or bulleted list of slide titles, one per source file in the order
-  they appear in the manifest
-  - **Exercise slides are excluded**: any slide whose extracted title starts with `Exercise`
-    (case-insensitive) is skipped when building the agenda list. These slides are still merged
-    into the deck in their manifest order, but attendees discover them naturally as they
-    progress through the section rather than seeing them previewed in the agenda.
-
-#### Marp markdown template
-
-```markdown
-## Section Name
-
-- Slide Title From File 1
-- Slide Title From File 2
-- Slide Title From File 3
-```
-
-#### Example
-
-For `Module 2 - Intro to Copilot` with two source files whose first `## H2` headings are
-`Repository and Tool Setup` and `Hands-On with GitHub Copilot (VS Code)`:
-
-```markdown
-## Module 2 - Intro to Copilot
-
-- Repository and Tool Setup
-- Hands-On with GitHub Copilot (VS Code)
-```
-
-#### Example with Exercise slides
-
-For `Module 3 - Vibbing` with source files:
-
-- `vibe-coding.md` (title: "Vibe Coding")
-- `exercise-calculator-project.md` (title: "Exercise: Calculator Project")
-- `multi-model-implementation-comparison.md` (title: "Multi-Model Implementation Comparison")
-- `any-filename.md` (title: "Exercise: Test Coverage Improvement")
-
-The section agenda slide shows only the non-exercise slides (slides whose title does not start with "Exercise"):
-
-```markdown
-## Module 3 - Vibbing
-
-- Vibe Coding
-- Multi-Model Implementation Comparison
-```
-
-All four slides are merged into the deck in manifest order, but the two slides with titles
-starting with "Exercise" are omitted from the agenda preview. Note that the exclusion is
-based on the **slide title** (the first `## H2` heading), not the filename.
-
----
-
 ## 5. Merge phase — content slides
 
-After the two injected slides, the source files for the section are merged in order.
+After the injected module list slide, the source files for the section are merged in order.
 
 ### 5.1 Transformations applied to each source file
 
@@ -311,7 +231,7 @@ as slide separators — they are preserved verbatim.
 slide_count_for_block = 1 + (number of bare --- lines outside code fences in the block)
 ```
 
-Each injected slide (module list and section agenda) counts as 1 slide.
+Each injected module list slide counts as 1 slide.
 
 ---
 
@@ -322,7 +242,7 @@ Each injected slide (module list and section agenda) counts as 1 slide.
 ```
 ┌──────────────────────────────────────────────┐
 │  1.  Content slides from source file 1               │
-│      (injected slides suppressed)                   │
+│      (injected module list slide suppressed)        │
 │  2.  Content slides from source file 2               │
 │  …                                                   │
 └──────────────────────────────────────────────┘
@@ -334,13 +254,9 @@ Each injected slide (module list and section agenda) counts as 1 slide.
 ┌──────────────────────────────────────────────────────┐
 │  1.  Module list slide                                │
 │      (all section names; current section highlighted) │
-├──────────────────────────────────────────────────────┤
-│  2.  Section agenda slide          ← omitted when    │
-│      (## Section Name + bullet     ← section has     │
-│       list of slide titles)        ← no source files │
 ├──────────────────────────────────────────────────────────┤
-│  3.  Content slides from source file 1               │
-│  4.  Content slides from source file 2               │
+│  2.  Content slides from source file 1               │
+│  3.  Content slides from source file 2               │
 │  …                                                   │
 └──────────────────────────────────────────────────────┘
 ```
@@ -370,13 +286,12 @@ scripts/generate_pptx.py            (existing script invoked by the agent)
 
 - One PPTX slide per Marp slide in the merged deck.
 - For each section in the manifest: a named `<p14:section>` XML group in the PPTX
-  covering all slides belonging to that section (module list + agenda + content).
+  covering all slides belonging to that section (module list + content).
 - **Empty sections** (no source files) receive a section group containing only the
   module list slide.
 - **🔒 CRITICAL**: Speaker notes on EVERY slide:
   - **Injected slides**: Notes explaining auto-generation and purpose
     - Module list: "Auto-generated course navigation slide showing all modules with current section highlighted"
-    - Section agenda: "Auto-generated section agenda slide listing slide titles from manifest"
   - **Content slides**: Notes showing source file path (e.g., "Source: Slides\\individual-slides\\welcome.md")
 
 ### 7.3 Slide layout mapping
@@ -390,14 +305,13 @@ scripts/generate_pptx.py            (existing script invoked by the agent)
 
 ### 7.4 First Section Exception (🔒 CRITICAL)
 
-**REQUIRED BEHAVIOR**: The first section in the YAML manifest (index 0) MUST NOT receive the two injected slides. This is implemented in `generate_pptx.py` with:
+**REQUIRED BEHAVIOR**: The first section in the YAML manifest (index 0) MUST NOT receive the injected module list slide. This is implemented in `generate_pptx.py` with:
 
 ```python
 for idx, section in enumerate(sections_cfg):
     # ...
-    if idx > 0:  # Skip injected slides for first section
+  if idx > 0:  # Skip injected module list slide for first section
         add_module_list_slide(...)
-        add_section_agenda_slide(...)
 ```
 
 **Rationale**: The first section typically contains the welcome/title slide. Adding navigation slides before it creates an awkward opening that frontloads course structure before the course begins.
@@ -405,7 +319,7 @@ for idx, section in enumerate(sections_cfg):
 **Testing verification**: When testing modifications, confirm that:
 
 1. The first section in the PPTX starts with its first content slide (no "Course Modules" slide)
-2. Subsequent sections DO have the two injected slides (module list and agenda)
+2. Subsequent sections DO have the injected module list slide before their content
 3. ALL slides (including injected) have speaker notes
 
 ### 7.4.5 Markdown Formatting Support
@@ -506,8 +420,7 @@ Default values:
 │                                                                │
 │    Agent merge phase — for each section emits:                 │
 │      a. Module list slide (all modules; current highlighted)   │
-│      b. Section agenda slide  (## Section Name + slide titles) │
-│      c. Content slides from source files (merged verbatim)     │
+│      b. Content slides from source files (merged verbatim)     │
 │                                                                │
 │    → Slides/aiasd-311-monday-draft.md                         │
 └─────────────────────────────┬────────────────────────────────┘
@@ -550,7 +463,7 @@ Default values:
 | Marp CSS themes       | Custom CSS in front matter is not transferred to the PPTX. Apply visual identity via a python-pptx slide master or reference template.                                                                                             |
 | Module list highlight | Marp renders `**bold**` text using the theme's default bold style, not a custom colour. To use a custom highlight colour, apply a Marp theme with a styled `.highlight` span or adjust the reference PPTX master after generation. |
 | Slide title fallback  | If a source file has no `## H2` heading, the file stem is used as the agenda bullet. Ensure every content file has at least one `## H2` heading.                                                                                   |
-| Empty sections        | Sections with no source files produce only a module list slide and an empty PPTX section group — no agenda slide.                                                                                                                  |
+| Empty sections        | Sections with no source files produce only a module list slide and an empty PPTX section group.                                                                                                                                    |
 | Image paths           | Images referenced in individual slides must exist at `Slides/images/` (not only at `Slides/individual-slides/images/`) for the merged deck to render correctly.                                                                    |
 | Working directory     | Run the agent prompt from the repo root: `C:\git\AIASD\AI-Assisted-Software-Development-Course`.                                                                                                                                   |
 
@@ -566,21 +479,19 @@ Default values:
   - [ ] Open the PPTX in PowerPoint
   - [ ] Verify the **first slide** is a content slide from the manifest (NOT "Course Modules")
   - [ ] Verify NO "Course Modules" slide appears before the first content slide
-  - [ ] Verify NO section agenda slide appears before the first content slide
 
 - [ ] **Subsequent Sections Test**: Verify sections after the first
   - [ ] Each section DOES start with "Course Modules" slide
   - [ ] "Course Modules" slide highlights the current section with ▶ and bold
-  - [ ] Section agenda slide appears after "Course Modules" (if section has content slides)
+  - [ ] Section content begins immediately after "Course Modules"
 
 - [ ] **Speaker Notes Test**: Open PPTX and verify EVERY slide has speaker notes
   - [ ] Module list slides: Note says "Auto-generated course navigation slide..."
-  - [ ] Section agenda slides: Note says "Auto-generated section agenda slide..."
   - [ ] Content slides: Note says "Source: Slides\\individual-slides\\<filename>.md"
 
 - [ ] **Code Verification**: Confirm the following patterns exist in `generate_pptx.py`
   - [ ] Loop uses `enumerate(sections_cfg)` to get section index
-  - [ ] Injected slides wrapped in `if idx > 0:` check
+  - [ ] Injected module list slides wrapped in `if idx > 0:` check
   - [ ] All `add_*_slide()` functions accept `note` parameter
   - [ ] All calls to injected slide functions pass appropriate note text
   - [ ] `set_slide_notes(slide, note)` called in each add function when note is present
@@ -606,18 +517,17 @@ Expected PPTX slide order:
 1. Welcome to AI Assisted Software Development (content slide, has note "Source: ...")
 2. John Michael Miller (content slide, has note "Source: ...")
 3. Course Modules (injected, has note "Auto-generated course...")
-4. Module 1 - Test (section agenda, has note "Auto-generated section...")
-5. What's the Big Deal (content slide, has note "Source: ...")
+4. What's the Big Deal (content slide, has note "Source: ...")
 
 ---
 
 ## 12. Extension points
 
-| Scenario                                        | Approach                                                                                                                                      |
-| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add a new slide file                            | Create `Slides/individual-slides/<topic>.md`; add its path to the YAML manifest under the appropriate section                                 |
-| Add a new section                               | Append a `- name: … slides: …` block to the YAML manifest; all module list slides update automatically on next run                            |
-| Reorder sections                                | Change the order in the YAML manifest; module list slides re-generate in the new order                                                        |
-| Skip module list or agenda slides for a section | Add a manifest flag (e.g. `no_injected_slides: true`) and update the prompt to honour it                                                      |
-| Use a branded PPTX template                     | Extend `generate_pptx.py` to load a reference `.pptx` and copy its slide master before adding slides                                          |
-| Automate on push                                | Add a GitHub Actions step that runs the agent prompt via `gh copilot suggest` or invokes the python-pptx script directly after a manual merge |
+| Scenario                              | Approach                                                                                                                                      |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Add a new slide file                  | Create `Slides/individual-slides/<topic>.md`; add its path to the YAML manifest under the appropriate section                                 |
+| Add a new section                     | Append a `- name: … slides: …` block to the YAML manifest; all module list slides update automatically on next run                            |
+| Reorder sections                      | Change the order in the YAML manifest; module list slides re-generate in the new order                                                        |
+| Skip module list slides for a section | Add a manifest flag (e.g. `no_injected_slides: true`) and update the prompt to honour it                                                      |
+| Use a branded PPTX template           | Extend `generate_pptx.py` to load a reference `.pptx` and copy its slide master before adding slides                                          |
+| Automate on push                      | Add a GitHub Actions step that runs the agent prompt via `gh copilot suggest` or invokes the python-pptx script directly after a manual merge |

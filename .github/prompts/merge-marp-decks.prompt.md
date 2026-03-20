@@ -199,9 +199,9 @@ Validation complete: N file(s) checked, M warning(s) found.
 1. Read the manifest; collect all sections (names + slide file lists) in manifest order
 2. Collect all section names into a list — used to build every module list slide
 3. Build a lookup map from Phase 0 subagent results, keyed by file path, containing
-   each file's `content` and `first_h2` — do **not** re-read source files from disk
+   each file's `content` — do **not** re-read source files from disk
 4. For each section, build the section block following the rules below
-5. Concatenate all section blocks (each injected slide and each merged source block
+5. Concatenate all section blocks (each injected module list slide and each merged source block
    separated by exactly one `\n\n---\n\n`)
 6. Write the result to the merged deck path — check if the file exists first:
 
@@ -213,17 +213,17 @@ The manifest is the sole source of truth for slide selection and ordering. Never
 all files in `Slides/individual-slides/` unless every one of those files is explicitly
 listed in the manifest.
 
-### Injected slides
+### Injected module list slide
 
-Insert two auto-generated slides at the start of **every** section, before any source
-content slides. They are produced entirely from manifest data and source file titles.
+Insert one auto-generated module list slide at the start of each section after the
+first, before any source content slides. It is produced entirely from manifest data.
 
-**Exception**: For the **first section** in the manifest, **suppress both
-injected slides** (module list and agenda). Start the first section directly
+**Exception**: For the **first section** in the manifest, **suppress the
+injected module list slide**. Start the first section directly
 with the first source content slide. This prevents navigation-heavy opening that would
 precede the welcome slide.
 
-#### 1. Module list slide (always, first in every section)
+#### Module list slide (always, first in every non-first section)
 
 ```markdown
 <!-- _class: lead -->
@@ -241,28 +241,12 @@ Rules:
 - The section being introduced: `**▶ Section Name**` (bold, arrow prefix)
 - All other sections: plain `Section Name`
 
-#### 2. Section agenda slide (second, only when section has source files)
-
-Lists the first `## H2` heading from each source file as a bullet.
-
-```markdown
-## Section Name
-
-- Slide Title From File 1
-- Slide Title From File 2
-```
-
-Slide title extraction:
-
-1. Use the `first_h2` value from the Phase 0 subagent result for this file
-2. Fallback: file stem (filename without extension) if `first_h2` is `null`
-
 #### Full slide order per section
 
 **For the first section in the manifest**:
 
 ```
-1. Content slides from file 1     (injected slides suppressed)
+1. Content slides from file 1     (injected module list slide suppressed)
 2. Content slides from file 2 …
 ```
 
@@ -270,9 +254,8 @@ Slide title extraction:
 
 ```
 1. Module list slide              (always)
-2. Section agenda slide           (only when section has source files)
-3. Content slides from file 1     (only when section has source files)
-4. Content slides from file 2 …
+2. Content slides from file 1     (only when section has source files)
+3. Content slides from file 2 …
 ```
 
 ### Merge rules for source content files
@@ -286,8 +269,7 @@ Slide title extraction:
 
 #### Level-1 headings (`# H1`)
 
-- Strip **all** `# H1` headings from every source file (replaced by injected section
-  header slides)
+- Strip **all** `# H1` headings from every source file
 - Also strip any immediately-following provenance lines like `_Merged from: ..._`
 
 #### Slide separators (`---`)
@@ -297,7 +279,8 @@ Slide title extraction:
   as slide separators — preserve them verbatim
 - Strip one leading `---` (and surrounding blank lines) from each source file body
 - Strip one trailing `---` (and surrounding blank lines) from each source file body
-- Between injected slides and between source file blocks use exactly one `\n\n---\n\n`
+- Between the injected module list slide and source file blocks, and between source
+  file blocks, use exactly one `\n\n---\n\n`
 - Do not double-up separators
 
 > **Agent verification (Issue 2)**: Open a source file containing a YAML code block with
@@ -322,7 +305,7 @@ Slide title extraction:
   `subtitle:` fields)
 - No `# H1` headings in the body
 - `<!-- _class: lead -->` directives present on module list slides
-- `## H2` headings on all content slides and section agenda slides
+- `## H2` headings on all content slides
 
 ### Slide counting
 
@@ -332,7 +315,7 @@ After writing the merged deck path, count and report the total number of slides 
 slide_count = 1 + (number of bare --- lines outside fenced code blocks)
 ```
 
-Each injected slide (module list and section agenda) counts as 1 slide.
+Each injected module list slide counts as 1 slide.
 Report the count in the form: `Merged deck: N slide(s) across M section(s).`
 
 > **Agent verification (Issue 7)**: Compare the reported slide count against a manual count
@@ -387,7 +370,7 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 ## Deliverables
 
-1. Merged deck path — merged Marp markdown deck (with injected module list and agenda slides)
+1. Merged deck path — merged Marp markdown deck (with injected module list slides only)
 2. PPTX output path — generated PPTX with named sections
 
 ## Section Handling Rules
@@ -395,13 +378,13 @@ Report any warnings (missing slide files) and confirm the output path on success
 - **Every** section in the YAML becomes a named section in the PPTX, regardless of whether
   it contains source slide files
 - Every section gets a module list slide
-- Sections with source files additionally get a section agenda slide followed by content slides
+- Sections with source files then continue directly into content slides
 - Sections with no source files produce only the module list slide and an empty PPTX section group
 - Section names in the PPTX match the `name` field in the YAML exactly
 - Slide file paths are resolved relative to the repository root
 
 > **Agent verification (Issue 6)**: Add a section to the manifest with no `slides:` entries.
-> Run the PPTX phase and confirm `INFO: Section '...' is empty — only injected slides added`
+> Run the PPTX phase and confirm `INFO: Section '...' is empty — only module list slide added`
 > is printed, and the resulting PPTX contains a named section group with only the module
 > list slide.
 
@@ -418,5 +401,5 @@ Run all checks below after the pipeline completes to confirm spec conformance.
 | V3  | Output file named correctly | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem       |
 | V4  | PPTX generated              | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                 |
 | V5  | `Title Only` layout used    | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
-| V6  | Empty section logged        | YAML section with no `slides:` entries                                   | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase    |
+| V6  | Empty section logged        | YAML section with no `slides:` entries                                   | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase  |
 | V7  | Slide count reported        | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                           |
