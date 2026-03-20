@@ -7,10 +7,10 @@ prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 2.6.0
+  version: 2.8.0
   created: 2026-03-12
   updated: 2026-03-19
-  output_path: Slides/aiasd-311-monday-draft.md
+  output_path: Slides/<manifest-stem>-draft.md
   output_format: markdown
   category: slides
   tags: [marp, slides, merge, presentation, markdown, pptx, python-pptx]
@@ -18,45 +18,93 @@ prompt_metadata:
 
 # Merge Marp Slide Decks and Generate PPTX
 
-Merge the Marp slide decks defined in `$MANIFEST` into a single Marp slide deck saved as
-`$OUTPUT_FILE`, then generate a PPTX with named sections using `python-pptx`.
+Merge the Marp slide decks defined in the runtime manifest path into a single Marp slide
+deck, then generate a PPTX with named sections using `python-pptx`.
 
-## Parameters
+## Runtime Inputs
 
-**To generate from a different manifest**, specify when running this prompt:
+Provide the manifest path in the prompt invocation using plain language. Do not edit this
+prompt file to switch manifests.
+
+Preferred invocation format:
 
 ```
-$MANIFEST = Slides/aiasd-311-<day>.yaml
+Manifest: Slides/aiasd-311-<day>.yaml
 ```
 
-**Auto-derived values** (calculated from `$MANIFEST`):
+Also accepted:
 
-- `$OUTPUT_FILE` = derived from `$MANIFEST`: strip `.yaml` and append `-draft.md`
+```text
+Use manifest Slides/aiasd-311-tuesday.yaml
+```
+
+The manifest path is mandatory for every run. The agent must not assume a default manifest,
+infer a manifest from filenames, or build a deck from every file in `Slides/individual-slides/`.
+
+### Input Resolution
+
+Resolve the manifest path from the invocation text using this order:
+
+1. A line starting with `Manifest:`
+2. A plain-language instruction of the form `Use manifest <path>`
+3. A single unambiguous repo-relative YAML path under `Slides/`
+
+If none of the above yields exactly one manifest path, abort immediately.
+
+### Derived Runtime Paths
+
+After resolving the manifest path, derive these runtime paths automatically:
+
+- `Merged deck path`: strip `.yaml` and append `-draft.md`
   (e.g. `Slides/aiasd-311-tuesday.yaml` → `Slides/aiasd-311-tuesday-draft.md`)
-- `$PPTX_OUTPUT` = derived from `$MANIFEST`: strip `.yaml`, get basename, prepend `Slides/output/` and append `-draft.pptx`
+- `PPTX output path`: strip `.yaml`, get basename, prepend `Slides/output/` and append `-draft.pptx`
   (e.g. `Slides/aiasd-311-tuesday.yaml` → `Slides/output/aiasd-311-tuesday-draft.pptx`)
 
-**Fixed values**:
+Fixed path:
 
-- `$PPTX_SCRIPT` = `Slides/output/generate_pptx.py`
+- `PPTX script path` = `Slides/output/generate_pptx.py`
 
-**Default values** (if not specified):
+This prompt must be reusable across manifests. Do not modify the prompt file, front matter,
+or `prompt_metadata.output_path` when the caller wants a different manifest.
 
-- `$MANIFEST` = `Slides/aiasd-311-monday.yaml`
+Front matter note:
 
-> **⚠️ IMPORTANT**: `$OUTPUT_FILE` is a **generated artifact**. Do not manually edit this file.
+- `prompt_metadata.output_path` is a documentation pattern, not a fixed runtime destination.
+- The actual merged deck path must always be derived from the manifest path supplied in the invocation.
+- Example: `Manifest: Slides/aiasd-311-tuesday.yaml` produces `Slides/aiasd-311-tuesday-draft.md`.
+
+> **⚠️ IMPORTANT**: The merged deck path is a **generated artifact**. Do not manually edit it.
 > All changes must be made to individual source slide files in `Slides/individual-slides/`
-> or to the `$MANIFEST` YAML structure. Re-run this prompt to regenerate the merged deck.
+> or to the manifest YAML structure. Re-run this prompt to regenerate the merged deck.
+
+## Manifest Requirement
+
+Before doing any repository exploration or file generation, resolve and validate the manifest path.
+
+- If the invocation does not provide exactly one manifest path, abort immediately.
+- If the manifest path does not exist, abort immediately.
+- If the manifest file cannot be parsed as YAML with a top-level `sections:` array, abort immediately.
+- Do not guess the manifest path.
+- Do not fall back to `Slides/aiasd-311-monday.yaml` or any other file.
+- Do not scan `Slides/individual-slides/` to assemble a deck without a manifest.
+
+Abort message format:
+
+```text
+ERROR: Missing or invalid manifest path. Provide an explicit manifest path such as
+Slides/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest.
+```
 
 ## Execution Rule
 
+- Resolve the manifest path first. Abort on any manifest error before reading slide files.
 - Perform **Phase 0** and **Phase 1** directly in this agent run using the prompt logic.
 - Do **not** call or rely on any script for Phase 0/1.
-- Read source files, validate them, build merged markdown in memory, and write `$OUTPUT_FILE`.
+- Read source files, validate them, build merged markdown in memory, and write the merged deck path.
 
 ## File Write Strategy
 
-> **⚠️ CRITICAL (cloud compatibility)**: Output files (`$OUTPUT_FILE`, `$PPTX_OUTPUT`) may
+> **⚠️ CRITICAL (cloud compatibility)**: Output files (merged deck path and PPTX output path) may
 > already exist from a previous run. **Always overwrite** — never create a new file with a
 > modified name or leave the old content in place.
 >
@@ -65,12 +113,12 @@ $MANIFEST = Slides/aiasd-311-<day>.yaml
 >   (full-file replacement), **not** the `create` tool. The `create` tool must never be
 >   used on a file that already exists.
 
-> **Agent verification (Issue 3)**: After computing `$OUTPUT_FILE`, confirm its filename
-> matches the pattern `<course>-<format>-<day>-draft.md` derived from the `$MANIFEST` stem.
+> **Agent verification (Issue 3)**: After computing the merged deck path, confirm its filename
+> matches the pattern `<course>-<format>-<day>-draft.md` derived from the manifest stem.
 
 ## YAML Structure
 
-`$MANIFEST` uses a sectioned structure:
+The manifest uses a sectioned structure:
 
 ```yaml
 sections:
@@ -90,11 +138,13 @@ Each section has a `name` and an optional `slides` list. Sections with no slide 
 
 ## Phase 0 — Validate Source Files
 
-Collect the complete list of unique source file paths from `$MANIFEST`, then **validate
+Collect the complete list of unique source file paths from the manifest, then **validate
 each source file using a subagent**. Launch one subagent per source file — all subagents
 may run concurrently. Each subagent must read the file it is assigned and apply the six
 validation rules listed below, returning a structured result (file path, pass/fail per
 rule, and any warning messages).
+
+If the manifest path is missing or invalid, Phase 0 must not start.
 
 ### Subagent task
 
@@ -130,7 +180,7 @@ After all subagents complete, the orchestrating agent collects their results, ag
 warnings, and prints the validation summary.
 
 Log a warning for each violation and continue — do not abort. Print a validation summary
-before writing `$OUTPUT_FILE`:
+before writing the merged deck path:
 
 ```
 Validation complete: N file(s) checked, M warning(s) found.
@@ -146,17 +196,22 @@ Validation complete: N file(s) checked, M warning(s) found.
 
 ### Steps
 
-1. Read `$MANIFEST`; collect all sections (names + slide file lists) in manifest order
+1. Read the manifest; collect all sections (names + slide file lists) in manifest order
 2. Collect all section names into a list — used to build every module list slide
 3. Build a lookup map from Phase 0 subagent results, keyed by file path, containing
    each file's `content` and `first_h2` — do **not** re-read source files from disk
 4. For each section, build the section block following the rules below
 5. Concatenate all section blocks (each injected slide and each merged source block
    separated by exactly one `\n\n---\n\n`)
-6. Write the result to `$OUTPUT_FILE` — check if the file exists first:
-  - **Exists**: overwrite its entire contents using the `edit` tool (full replacement).
-  - **Does not exist**: create it with the `create` tool.
-  - Never rename or append a suffix to the file. The output path is fixed.
+6. Write the result to the merged deck path — check if the file exists first:
+
+- **Exists**: overwrite its entire contents using the `edit` tool (full replacement).
+- **Does not exist**: create it with the `create` tool.
+- Never rename or append a suffix to the file. The output path is fixed.
+
+The manifest is the sole source of truth for slide selection and ordering. Never merge
+all files in `Slides/individual-slides/` unless every one of those files is explicitly
+listed in the manifest.
 
 ### Injected slides
 
@@ -225,7 +280,7 @@ Slide title extraction:
 #### Front matter
 
 - Use the YAML front matter from the **first source file across all sections**
-- Place it at the very top of `$OUTPUT_FILE`, before the first section block
+- Place it at the very top of the merged deck path, before the first section block
 - Strip front matter from all subsequent source files
 - The first file's front matter provides `title:` and `subtitle:` — do not remove them
 
@@ -247,7 +302,7 @@ Slide title extraction:
 
 > **Agent verification (Issue 2)**: Open a source file containing a YAML code block with
 > internal `---` lines. After merging, confirm those `---` lines are present verbatim in
-> `$OUTPUT_FILE` and do not create unexpected extra slides (slide count must match
+> the merged deck path and do not create unexpected extra slides (slide count must match
 > expectation).
 
 #### All other content
@@ -271,7 +326,7 @@ Slide title extraction:
 
 ### Slide counting
 
-After writing `$OUTPUT_FILE`, count and report the total number of slides produced:
+After writing the merged deck path, count and report the total number of slides produced:
 
 ```
 slide_count = 1 + (number of bare --- lines outside fenced code blocks)
@@ -281,14 +336,14 @@ Each injected slide (module list and section agenda) counts as 1 slide.
 Report the count in the form: `Merged deck: N slide(s) across M section(s).`
 
 > **Agent verification (Issue 7)**: Compare the reported slide count against a manual count
-> of `---` separators in `$OUTPUT_FILE` (excluding those inside code fences). The counts
+> of `---` separators in the merged deck path (excluding those inside code fences). The counts
 > must match.
 
 ---
 
 ## Phase 2 — Generate PPTX with Sections
 
-Run `$PPTX_SCRIPT` (`Slides/output/generate_pptx.py`) to produce `$PPTX_OUTPUT`.
+Run the PPTX script path (`Slides/output/generate_pptx.py`) to produce the PPTX output path.
 
 ### Markdown formatting support
 
@@ -316,13 +371,13 @@ This ensures that markdown bold syntax in source slides (e.g., `Slides/individua
 
 ```bash
 pip install python-pptx pyyaml --quiet
-python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT
+python Slides/output/generate_pptx.py <manifest-path> <pptx-output-path>
 ```
 
 Report any warnings (missing slide files) and confirm the output path on success.
 
-> **Agent verification (Issue 4)**: Run `python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT`
-> and verify the PPTX is created at `$PPTX_OUTPUT`.
+> **Agent verification (Issue 4)**: Run `python Slides/output/generate_pptx.py <manifest-path> <pptx-output-path>`
+> and verify the PPTX is created at the PPTX output path.
 >
 > **Agent verification (Issue 5)**: Open the generated PPTX. For any source slide whose
 > `## heading` had no body content, confirm that slide uses the `Title Only` layout
@@ -332,8 +387,8 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 ## Deliverables
 
-1. `$OUTPUT_FILE` — merged Marp markdown deck (with injected module list and agenda slides)
-2. `$PPTX_OUTPUT` — generated PPTX with named sections
+1. Merged deck path — merged Marp markdown deck (with injected module list and agenda slides)
+2. PPTX output path — generated PPTX with named sections
 
 ## Section Handling Rules
 
@@ -345,7 +400,7 @@ Report any warnings (missing slide files) and confirm the output path on success
 - Section names in the PPTX match the `name` field in the YAML exactly
 - Slide file paths are resolved relative to the repository root
 
-> **Agent verification (Issue 6)**: Add a section to `$MANIFEST` with no `slides:` entries.
+> **Agent verification (Issue 6)**: Add a section to the manifest with no `slides:` entries.
 > Run the PPTX phase and confirm `INFO: Section '...' is empty — only injected slides added`
 > is printed, and the resulting PPTX contains a named section group with only the module
 > list slide.
@@ -356,12 +411,12 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 Run all checks below after the pipeline completes to confirm spec conformance.
 
-| #   | Issue                       | Check                                                              | Pass condition                                                                           |
-| --- | --------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| V1  | Source validation           | Phase 0 summary printed before `$OUTPUT_FILE` is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output          |
-| V2  | Code-fence `---` preserved  | Merge a source file that contains `---` inside a fenced code block | No unexpected extra slides; the embedded `---` appears verbatim in `$OUTPUT_FILE`        |
-| V3  | Output file named correctly | Inspect `$OUTPUT_FILE` path                                        | Filename matches `<course>-<format>-<day>-draft.md` derived from `$MANIFEST` stem        |
-| V4  | PPTX generated              | Run `python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT`                   | PPTX file created at `$PPTX_OUTPUT` without errors                                       |
-| V5  | `Title Only` layout used    | Source file with `## heading` and no body content                  | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
-| V6  | Empty section logged        | YAML section with no `slides:` entries                             | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase    |
-| V7  | Slide count reported        | Any successful merge run                                           | Output includes `Merged deck: N slide(s) across M section(s).`                           |
+| #   | Issue                       | Check                                                                          | Pass condition                                                                           |
+| --- | --------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| V1  | Source validation           | Phase 0 summary printed before the merged deck path is written                 | `Validation complete: N file(s) checked, M warning(s) found.` appears in output          |
+| V2  | Code-fence `---` preserved  | Merge a source file that contains `---` inside a fenced code block             | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path  |
+| V3  | Output file named correctly | Inspect the merged deck path                                                   | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem       |
+| V4  | PPTX generated              | Run `python Slides/output/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                 |
+| V5  | `Title Only` layout used    | Source file with `## heading` and no body content                              | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
+| V6  | Empty section logged        | YAML section with no `slides:` entries                                         | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase    |
+| V7  | Slide count reported        | Any successful merge run                                                       | Output includes `Merged deck: N slide(s) across M section(s).`                           |
