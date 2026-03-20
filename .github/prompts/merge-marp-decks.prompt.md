@@ -7,9 +7,9 @@ prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 2.5.0
+  version: 2.6.0
   created: 2026-03-12
-  updated: 2026-03-17
+  updated: 2026-03-19
   output_path: Slides/aiasd-311-monday-draft.md
   output_format: markdown
   category: slides
@@ -53,6 +53,17 @@ $MANIFEST = Slides/aiasd-311-<day>.yaml
 - Perform **Phase 0** and **Phase 1** directly in this agent run using the prompt logic.
 - Do **not** call or rely on any script for Phase 0/1.
 - Read source files, validate them, build merged markdown in memory, and write `$OUTPUT_FILE`.
+
+## File Write Strategy
+
+> **⚠️ CRITICAL (cloud compatibility)**: Output files (`$OUTPUT_FILE`, `$PPTX_OUTPUT`) may
+> already exist from a previous run. **Always overwrite** — never create a new file with a
+> modified name or leave the old content in place.
+>
+> - If the file **does not exist**: create it.
+> - If the file **already exists**: replace its entire content using the `edit` tool
+>   (full-file replacement), **not** the `create` tool. The `create` tool must never be
+>   used on a file that already exists.
 
 > **Agent verification (Issue 3)**: After computing `$OUTPUT_FILE`, confirm its filename
 > matches the pattern `<course>-<format>-<day>-draft.md` derived from the `$MANIFEST` stem.
@@ -142,7 +153,10 @@ Validation complete: N file(s) checked, M warning(s) found.
 4. For each section, build the section block following the rules below
 5. Concatenate all section blocks (each injected slide and each merged source block
    separated by exactly one `\n\n---\n\n`)
-6. Write the result to `$OUTPUT_FILE`
+6. Write the result to `$OUTPUT_FILE` — check if the file exists first:
+  - **Exists**: overwrite its entire contents using the `edit` tool (full replacement).
+  - **Does not exist**: create it with the `create` tool.
+  - Never rename or append a suffix to the file. The output path is fixed.
 
 ### Injected slides
 
