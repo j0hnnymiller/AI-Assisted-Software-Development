@@ -108,6 +108,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes layering and precedence guidance for multi-level instruction governance
   - Provenance: [Chat log](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/summary.md)
 
+- **Feature Flags and Test Suites** ([`Slides/individual-slides/feature-flags-and-test-suites.md`](Slides/individual-slides/feature-flags-and-test-suites.md))
+  - Marp deck covering feature flags for work-in-progress, As-Is vs. To-Be test suites, safe deployment gates, and AI-assisted flag retirement
+  - Includes speaker notes for delivery and operational guidance for CI pipeline separation
+  - Provenance: [Chat log](ai-logs/2026/03/19/feature-flags-test-suites-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/feature-flags-test-suites-20260319/summary.md)
+
 - **Evergreen Software Development Exercise Deck** ([`Slides/individual-slides/evergreen-software-development-exercise-deck.md`](Slides/individual-slides/evergreen-software-development-exercise-deck.md))
   - Two exercise slides covering evergreen core principles and common failure modes
   - Template-aligned structure with duration, objectives, activities, success criteria, and speaker notes

@@ -36,4 +36,12 @@ sections:
     slides:
       - Slides\individual-slides\documentation-generation-code-analysis.md
       - Slides\individual-slides\exercise-c4-diagrams-from-code.md
-      - 
+      - Slides\individual-slides\code-explanation-and-analysis.md
+
+  - name: Module 7 - Test Automation and Code Quality
+    slides:
+      - Slides\individual-slides\test-automation-and-code-quality.md
+      - Slides\individual-slides\exercise-test-automation-quality.md
+      - Slides\individual-slides\creating-robust-testing-frameworks.md
+      - Slides\individual-slides\feature-flags-and-test-suites.md
+      - Slides\individual-slides\testing-in-production.md
