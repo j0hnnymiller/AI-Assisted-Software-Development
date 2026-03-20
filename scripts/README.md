@@ -4,11 +4,28 @@ This directory contains scripts to help identify branches with changes that have
 
 ## Available Scripts
 
+### Slide Pipeline Utilities
+
+**Files:** `generate_pptx.py`, `phase1_merge_marp_decks.py`, `finalize_pptx_local.ps1`, `validation-results.json`
+
+**Purpose:** Support the Marp-to-PPTX slide workflow.
+
+**Usage:**
+
+```powershell
+# Generate a PPTX from a manifest
+python .\scripts\generate_pptx.py Slides\aiasd-311-monday.yaml Slides\output\aiasd-311-monday-draft.pptx
+
+# Finalize the generated PPTX locally with PowerPoint COM to force text fitting
+.\scripts\finalize_pptx_local.ps1 -Path Slides\output\aiasd-311-monday-draft.pptx
+```
+
 ### Bash Script (Linux/Mac/WSL)
 
 **File:** `check_unmerged_branches.sh`
 
 **Usage:**
+
 ```bash
 # Basic usage
 ./scripts/check_unmerged_branches.sh
@@ -28,6 +45,7 @@ MAX_COMMITS_TO_SHOW=20 ./scripts/check_unmerged_branches.sh
 **File:** `check_unmerged_branches.ps1`
 
 **Usage:**
+
 ```powershell
 # Basic usage
 .\scripts\check_unmerged_branches.ps1
@@ -46,12 +64,12 @@ MAX_COMMITS_TO_SHOW=20 ./scripts/check_unmerged_branches.sh
 
 Both scripts support the same configuration options:
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `MAIN_BRANCH`/`-MainBranch` | `main` | The main branch to compare against |
-| `REMOTE`/`-Remote` | `origin` | The remote repository name |
-| `SHOW_DETAILS`/`-ShowDetails` | `true` | Whether to show detailed commit and file information |
-| `MAX_COMMITS_TO_SHOW`/`-MaxCommitsToShow` | `10` | Maximum number of commits to display per branch |
+| Option                                    | Default  | Description                                          |
+| ----------------------------------------- | -------- | ---------------------------------------------------- |
+| `MAIN_BRANCH`/`-MainBranch`               | `main`   | The main branch to compare against                   |
+| `REMOTE`/`-Remote`                        | `origin` | The remote repository name                           |
+| `SHOW_DETAILS`/`-ShowDetails`             | `true`   | Whether to show detailed commit and file information |
+| `MAX_COMMITS_TO_SHOW`/`-MaxCommitsToShow` | `10`     | Maximum number of commits to display per branch      |
 
 ## Output
 
@@ -110,11 +128,12 @@ Tip: Review these branches to determine if they should be merged or deleted
 You can run these scripts as part of your CI/CD pipeline:
 
 **GitHub Actions Example:**
+
 ```yaml
 name: Branch Report
 on:
   schedule:
-    - cron: '0 9 * * 1'  # Every Monday at 9 AM
+    - cron: "0 9 * * 1" # Every Monday at 9 AM
   workflow_dispatch:
 
 jobs:
