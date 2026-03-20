@@ -62,7 +62,7 @@ After resolving the manifest path, derive these runtime paths automatically:
 
 Fixed path:
 
-- `PPTX script path` = `Slides/output/generate_pptx.py`
+- `PPTX script path` = `scripts/generate_pptx.py`
 
 This prompt must be reusable across manifests. Do not modify the prompt file, front matter,
 or `prompt_metadata.output_path` when the caller wants a different manifest.
@@ -343,7 +343,7 @@ Report the count in the form: `Merged deck: N slide(s) across M section(s).`
 
 ## Phase 2 — Generate PPTX with Sections
 
-Run the PPTX script path (`Slides/output/generate_pptx.py`) to produce the PPTX output path.
+Run the PPTX script path (`scripts/generate_pptx.py`) to produce the PPTX output path.
 
 ### Markdown formatting support
 
@@ -371,12 +371,12 @@ This ensures that markdown bold syntax in source slides (e.g., `Slides/individua
 
 ```bash
 pip install python-pptx pyyaml --quiet
-python Slides/output/generate_pptx.py <manifest-path> <pptx-output-path>
+python scripts/generate_pptx.py <manifest-path> <pptx-output-path>
 ```
 
 Report any warnings (missing slide files) and confirm the output path on success.
 
-> **Agent verification (Issue 4)**: Run `python Slides/output/generate_pptx.py <manifest-path> <pptx-output-path>`
+> **Agent verification (Issue 4)**: Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>`
 > and verify the PPTX is created at the PPTX output path.
 >
 > **Agent verification (Issue 5)**: Open the generated PPTX. For any source slide whose
@@ -411,12 +411,12 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 Run all checks below after the pipeline completes to confirm spec conformance.
 
-| #   | Issue                       | Check                                                                          | Pass condition                                                                           |
-| --- | --------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| V1  | Source validation           | Phase 0 summary printed before the merged deck path is written                 | `Validation complete: N file(s) checked, M warning(s) found.` appears in output          |
-| V2  | Code-fence `---` preserved  | Merge a source file that contains `---` inside a fenced code block             | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path  |
-| V3  | Output file named correctly | Inspect the merged deck path                                                   | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem       |
-| V4  | PPTX generated              | Run `python Slides/output/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                 |
-| V5  | `Title Only` layout used    | Source file with `## heading` and no body content                              | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
-| V6  | Empty section logged        | YAML section with no `slides:` entries                                         | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase    |
-| V7  | Slide count reported        | Any successful merge run                                                       | Output includes `Merged deck: N slide(s) across M section(s).`                           |
+| #   | Issue                       | Check                                                                    | Pass condition                                                                           |
+| --- | --------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| V1  | Source validation           | Phase 0 summary printed before the merged deck path is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output          |
+| V2  | Code-fence `---` preserved  | Merge a source file that contains `---` inside a fenced code block       | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path  |
+| V3  | Output file named correctly | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem       |
+| V4  | PPTX generated              | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                 |
+| V5  | `Title Only` layout used    | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
+| V6  | Empty section logged        | YAML section with no `slides:` entries                                   | `INFO: Section '...' is empty — only injected slides added` printed during PPTX phase    |
+| V7  | Slide count reported        | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                           |

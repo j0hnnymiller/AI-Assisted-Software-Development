@@ -28,7 +28,7 @@ Copilot agent-mode prompt that reads the YAML manifest, merges individual slide 
 into a single Marp deck, and generates an editable PPTX using python-pptx — all in one
 AI-driven run.
 
-**🔒 CRITICAL INVARIANTS**: Any modifications to `Slides/output/generate_pptx.py` MUST preserve:
+**🔒 CRITICAL INVARIANTS**: Any modifications to `scripts/generate_pptx.py` MUST preserve:
 
 1. **First Section Exception**: The first section (idx=0) MUST NOT receive injected slides (module list and agenda). These slides are only added for idx > 0.
 2. **Slide Notes (MANDATORY)**: ALL slides (injected and content) MUST have comprehensive speaker notes:
@@ -74,7 +74,7 @@ Slides/
 │   ├── images/                 # Images referenced by individual slides
 │   └── *.md
 ├── images/                     # Images referenced by the merged deck
-├── output/                     # Generated artefacts (PPTX, generated scripts)
+├── output/                     # Generated artefacts (PPTX)
 └── <course>-<format>-<day>-draft.md   # Merged Marp output (e.g. aiasd-311-monday-draft.md)
 
 .github/copilot/Promptfiles/
@@ -363,7 +363,7 @@ build script to produce the final editable PPTX.
 ### 7.1 Script location
 
 ```
-Slides/output/generate_pptx.py      (existing script invoked by the agent)
+scripts/generate_pptx.py            (existing script invoked by the agent)
 ```
 
 ### 7.2 What the script produces
@@ -466,7 +466,7 @@ Default values:
 | Variable       | Default                                     |
 | -------------- | ------------------------------------------- |
 | `$OUTPUT_FILE` | `Slides/aiasd-311-monday-draft.md`          |
-| `$PPTX_SCRIPT` | `Slides/output/generate_pptx.py`            |
+| `$PPTX_SCRIPT` | `scripts/generate_pptx.py`                  |
 | `$PPTX_OUTPUT` | `Slides/output/aiasd-311-monday-draft.pptx` |
 
 ---
@@ -515,7 +515,7 @@ Default values:
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
 │    Agent PPTX phase                                            │
-│      Runs Slides/output/generate_pptx.py                      │
+│      Runs scripts/generate_pptx.py                            │
 │      - Agenda and content slides                               │
 │      - <p14:section> XML groups per section                    │
 │                                                                │
@@ -529,12 +529,12 @@ Default values:
 
 ## 9. File naming conventions
 
-| Pattern                              | Example                          | Description                |
-| ------------------------------------ | -------------------------------- | -------------------------- |
-| `<course>-<format>-<day>.yaml`       | `aiasd-311-monday.yaml`          | Manifest file              |
-| `<course>-<format>-<day>-draft.md`   | `aiasd-311-monday-draft.md`      | Merged Marp deck           |
-| `generate_pptx.py`                   | `Slides/output/generate_pptx.py` | Existing PPTX build script |
-| `<course>-<format>-<day>-draft.pptx` | `aiasd-311-monday-draft.pptx`    | Editable PPTX output       |
+| Pattern                              | Example                       | Description                |
+| ------------------------------------ | ----------------------------- | -------------------------- |
+| `<course>-<format>-<day>.yaml`       | `aiasd-311-monday.yaml`       | Manifest file              |
+| `<course>-<format>-<day>-draft.md`   | `aiasd-311-monday-draft.md`   | Merged Marp deck           |
+| `generate_pptx.py`                   | `scripts/generate_pptx.py`    | Existing PPTX build script |
+| `<course>-<format>-<day>-draft.pptx` | `aiasd-311-monday-draft.pptx` | Editable PPTX output       |
 
 `course` = identifier prefix (e.g. `aiasd`)
 `format` = numeric format code (e.g. `311` = 3-day, 1st delivery)
@@ -558,7 +558,7 @@ Default values:
 
 ## 11. Verification Checklist
 
-**⚠️ USE THIS CHECKLIST** when modifying `Slides/output/generate_pptx.py` or the merge logic to prevent regressions:
+**⚠️ USE THIS CHECKLIST** when modifying `scripts/generate_pptx.py` or the merge logic to prevent regressions:
 
 ### Before Committing Changes
 

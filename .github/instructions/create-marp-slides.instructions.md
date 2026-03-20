@@ -132,7 +132,7 @@ Explain each goal briefly. Provenance ensures we can trace AI-assisted work back
 - Use `**double asterisks**` around text that should appear bold in the PPTX output
 - Bold formatting works in headings, body text, and bullet lists
 - Multiple bold sections on one line are supported
-- The PPTX generator (`Slides/output/generate_pptx.py`) automatically parses bold syntax and applies `font.bold = True` to the appropriate text runs
+- The PPTX generator (`scripts/generate_pptx.py`) automatically parses bold syntax and applies `font.bold = True` to the appropriate text runs
 
 ### Example slide with formatting
 

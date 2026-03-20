@@ -78,9 +78,25 @@ LAYOUT_TITLE_CONTENT = 1  # adjust index if template differs
 LAYOUT_SECTION_HEADER = 2  # adjust index if template differs
 LAYOUT_TITLE_ONLY = 5  # adjust index if template differs
 
+ALLOWED_SLIDE_EXTENSIONS = {".md", ".markdown"}
+
+
+def ensure_markdown_slide_entry(slide_path: str | Path) -> None:
+    """Fail fast when a manifest slide entry is not a markdown source file."""
+    path = Path(slide_path)
+    ext = path.suffix.lower()
+    if ext and ext not in ALLOWED_SLIDE_EXTENSIONS:
+        allowed = ", ".join(sorted(ALLOWED_SLIDE_EXTENSIONS))
+        raise ValueError(
+            f"Non-markdown slide entry detected: {slide_path} "
+            f"(extension: {ext}). Expected one of: {allowed}. "
+            "Use a markdown slide source in sections[].slides, or configure a .pptx under the top-level template field."
+        )
+
 
 def extract_slide_title(file_path: Path) -> str:
     """Return the first ## H2 heading text, or the file stem as fallback."""
+    ensure_markdown_slide_entry(file_path)
     try:
         text = file_path.read_text(encoding="utf-8")
     except FileNotFoundError:
@@ -641,6 +657,8 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
             else:
                 slide_path = slide_entry
                 layout_type = ""
+
+            ensure_markdown_slide_entry(slide_path)
 
             slide_file = resolve_repo_path(repo_root, slide_path)
             if not slide_file.exists():
