@@ -85,11 +85,11 @@ style: |
 - Who you are
 - Who do you work for
 - What you do
-- What you’ve done with AI tools
+- What you've done with AI tools
 - What you want to learn
 
 ::: notes
-Day One: Outline the day’s goals and emphasize participation and hands-on exercises.
+Day One: Outline the day's goals and emphasize participation and hands-on exercises.
 :::
 
 ---
@@ -354,7 +354,7 @@ What hasn't changed and what has.
 
 ## The AI Revolution
 
-“Programming hasn’t changed, but how we go about it has changed, again.”
+“Programming hasn't changed, but how we go about it has changed, again.”
 AI-assisted development is evolutionary, not revolutionary
 Programming has always been about expressing human intent to machines
 What changes is the sophistication of our tools for expressing intent
@@ -375,7 +375,7 @@ If used effectively, it will give you superpowers
 
 - The courage to
   - Take on codebases that few would touch
-  - Use technologies you should know but don’t
+  - Use technologies you should know but don't
   - Write more high-quality code than you have ever written before
   - Take on the nice to haves
 
@@ -386,84 +386,84 @@ Superpowers Explained: - Legacy codebases: AI can quickly understand and explain
 
 Examples to share: - Developer who used AI to modernize a 15-year-old PHP codebase in weeks instead of months - Team that adopted a new framework (React to Vue) with AI assistance in days - 80% reduction in boilerplate code writing time - Comprehensive test suites generated automatically
 
-Key message: AI doesn’t replace developers—it amplifies their capabilities
+Key message: AI doesn't replace developers—it amplifies their capabilities
 :::
 
 ---
 
-## AI‑First & Prompt‑First
+## AI-First & Prompt-First
 
-AI‑First Development
+AI-First Development
 A software engineering philosophy where AI is embedded across the entire SDLC–requirements, design, implementation, testing, documentation, compliance, and maintenance.
-Prompt‑First Development
-A workflow pattern where prompts, instruction files, and chat modes are treated as first‑class, version‑controlled artifacts.
+Prompt-First Development
+A workflow pattern where prompts, instruction files, and chat modes are treated as first-class, version-controlled artifacts.
 
 ::: notes
-AI‑First is the broad philosophy. Prompt‑First is the tactical layer that enables predictable AI behavior. You can do Prompt‑First without being AI‑First, but not the reverse.
+AI-First is the broad philosophy. Prompt-First is the tactical layer that enables predictable AI behavior. You can do Prompt-First without being AI-First, but not the reverse.
 :::
 
 ---
 
 ## What Each Optimizes For
 
-| Focus Area    | AI‑First                  | Prompt‑First                       |
+| Focus Area    | AI-First                  | Prompt-First                       |
 | ------------- | ------------------------- | ---------------------------------- |
 | Scope         | Entire SDLC               | Interaction layer                  |
 | Goal          | Lifecycle integration     | Deterministic AI behavior          |
 | Optimization  | Velocity, governance      | Prompt quality, reproducibility    |
-| Risk Controls | Human‑in‑loop, provenance | Versioned prompts, context control |
+| Risk Controls | Human-in-loop, provenance | Versioned prompts, context control |
 
 ::: notes
-This table is the heart of the comparison. AI‑First is about organizational and architectural change. Prompt‑First is about artifact discipline and predictable outputs.
+This table is the heart of the comparison. AI-First is about organizational and architectural change. Prompt-First is about artifact discipline and predictable outputs.
 :::
 
 ---
 
 ## How They Treat Artifacts
 
-AI‑First
+AI-First
 Requirements written with AI collaboration in mind
-AI‑generated scaffolds, tests, docs
+AI-generated scaffolds, tests, docs
 Provenance enforced across all AI outputs
 Architecture assumes AI participation
-Prompt‑First
-Prompts and instruction files are version‑controlled
+Prompt-First
+Prompts and instruction files are version-controlled
 Prompts define behavioral contracts
 Reusable prompt modules
 Chat modes define safe, predictable interactions
 
 ::: notes
-AI‑First changes what you build and how you build it. Prompt‑First changes how you communicate intent to the AI.
+AI-First changes what you build and how you build it. Prompt-First changes how you communicate intent to the AI.
 :::
 
 ---
 
 ## Relationship Between the Two
 
-Prompt‑First is a subset of AI‑First.
-Prompt‑First = mechanics
-AI‑First = philosophy + architecture + lifecycle integration
+Prompt-First is a subset of AI-First.
+Prompt-First = mechanics
+AI-First = philosophy + architecture + lifecycle integration
 
 ::: notes
-This is the conceptual hierarchy. Prompt‑First is necessary but not sufficient for AI‑First maturity.
+This is the conceptual hierarchy. Prompt-First is necessary but not sufficient for AI-First maturity.
 :::
 
 ---
 
 ## AI First Software Development
 
-Building software where AI is a core capability, not an add‑on
-Why AI‑First
+Building software where AI is a core capability, not an add-on
+Why AI-First
 
 - Software requirements increasingly expressed in natural language
 - AI copilots accelerate architecture, coding, testing, and documentation
 - Teams shift from “writing code” to “designing intent + validating outputs”
   Core Principles
-- Prompt‑First Design: Requirements, architecture, and workflows expressed as structured prompts
-- AI‑Native Architecture: Modular services, clear boundaries, deterministic interfaces for AI‑generated components
-- Human‑in‑the‑Loop: Review, validation, and traceability baked into every stage
+- Prompt-First Design: Requirements, architecture, and workflows expressed as structured prompts
+- AI-Native Architecture: Modular services, clear boundaries, deterministic interfaces for AI-generated components
+- Human-in-the-Loop: Review, validation, and traceability baked into every stage
 - Continuous Verification: Automated tests, static analysis, and guardrails to ensure safe outputs
-- Lifecycle Governance: Versioning, provenance, and risk‑based controls for AI‑generated artifacts
+- Lifecycle Governance: Versioning, provenance, and risk-based controls for AI-generated artifacts
   Outcomes
 - Faster iteration cycles
 - Higher coverage of documentation and tests
@@ -471,43 +471,43 @@ Why AI‑First
 - More resilient, adaptable systems
 
 ::: notes
-This slide frames what we mean by AI‑First development. The key idea is that AI isn’t an add‑on or a productivity booster—it becomes a core capability of the software lifecycle. When we design systems today, we assume AI will participate in requirements, architecture, coding, testing, and documentation.
+This slide frames what we mean by AI-First development. The key idea is that AI isn't an add-on or a productivity booster—it becomes a core capability of the software lifecycle. When we design systems today, we assume AI will participate in requirements, architecture, coding, testing, and documentation.
 
-Why AI‑First
+Why AI-First
 “Teams increasingly express requirements in natural language. AI can interpret those requirements and generate scaffolding, code, tests, and documentation.”
-“This shifts the developer’s role from writing every line of code to defining intent, constraints, and quality expectations.”
-“The goal isn’t to replace engineering judgment—it’s to amplify it.”
+“This shifts the developer's role from writing every line of code to defining intent, constraints, and quality expectations.”
+“The goal isn't to replace engineering judgment—it's to amplify it.”
 
 Core Principles
 
-Prompt‑First Design
+Prompt-First Design
 “We start with structured prompts that capture behaviors, invariants, and interfaces. These become durable artifacts, just like design docs.”
 
-AI‑Native Architecture
-“We design modules with clear boundaries so AI‑generated components remain predictable and testable. Deterministic interfaces are essential.”
+AI-Native Architecture
+“We design modules with clear boundaries so AI-generated components remain predictable and testable. Deterministic interfaces are essential.”
 
-Human‑in‑the‑Loop
+Human-in-the-Loop
 “AI accelerates creation, but humans validate correctness, safety, and alignment with business intent. Review is built into the workflow.”
 
 Continuous Verification
-“Every AI‑generated artifact—code, tests, docs—runs through automated checks. Static analysis, unit tests, and guardrails catch drift early.”
+“Every AI-generated artifact—code, tests, docs—runs through automated checks. Static analysis, unit tests, and guardrails catch drift early.”
 
 Lifecycle Governance
-“We treat prompts, outputs, and revisions as versioned assets. Provenance and traceability matter for compliance, debugging, and long‑term maintainability.”
+“We treat prompts, outputs, and revisions as versioned assets. Provenance and traceability matter for compliance, debugging, and long-term maintainability.”
 
 Outcomes
 “Teams iterate faster because intent moves directly into working prototypes.”
 “Documentation and test coverage improve because AI can generate them continuously.”
 “Developers spend more time on architecture and correctness, less on boilerplate.”
-“The result is software that’s more adaptable and resilient over time.”
+“The result is software that's more adaptable and resilient over time.”
 :::
 
 ---
 
-## Prompt‑First Software Development
+## Prompt-First Software Development
 
 Design the intent first — let AI generate the implementation
-Why Prompt‑First
+Why Prompt-First
 
 - Behaviors, and constraints expressed in structured natural language
 - Prompts become the new “source of truth” artifacts
@@ -515,7 +515,7 @@ Why Prompt‑First
   Core Practices
 - Structured Prompts: Use templates for features, APIs, data models, tests, and refactors
 - Instruction Files: Persistent, versioned artifacts guiding AI code generation
-- Deterministic Boundaries: Clear module contracts so AI‑generated code stays predictable
+- Deterministic Boundaries: Clear module contracts so AI-generated code stays predictable
 - Validation Loops: Automated tests + human review ensure correctness and safety
 - Prompt Versioning: Track evolution of intent just like code changes
   Benefits
@@ -525,70 +525,70 @@ Why Prompt‑First
 - Better alignment between business intent and implementation
 
 ::: notes
-“This slide introduces the core idea behind Prompt‑First development. Instead of starting with code, we start with intent. Prompts become the primary design artifact, and AI becomes the mechanism that turns intent into implementation.”
+“This slide introduces the core idea behind Prompt-First development. Instead of starting with code, we start with intent. Prompts become the primary design artifact, and AI becomes the mechanism that turns intent into implementation.”
 
-Why Prompt‑First
-“Modern development increasingly begins with natural‑language descriptions of behavior. Prompt‑First formalizes that by treating prompts as first‑class inputs to the software lifecycle.”
-“The developer’s role shifts from writing code line‑by‑line to defining outcomes, constraints, invariants, and interfaces.”
+Why Prompt-First
+“Modern development increasingly begins with natural-language descriptions of behavior. Prompt-First formalizes that by treating prompts as first-class inputs to the software lifecycle.”
+“The developer's role shifts from writing code line-by-line to defining outcomes, constraints, invariants, and interfaces.”
 “This creates a tighter alignment between business intent and the resulting system.”
 
 Core Practices
 
 Structured Prompts
-“We don’t rely on ad‑hoc prompting. We use templates for features, APIs, data models, tests, and refactors. This creates consistency and reduces ambiguity.”
+“We don't rely on ad-hoc prompting. We use templates for features, APIs, data models, tests, and refactors. This creates consistency and reduces ambiguity.”
 
 Instruction Files
 “These are durable, versioned prompt artifacts that guide AI generation. They act like living design documents that the AI reads every time it produces code.”
 
 Deterministic Boundaries
-“We design modules with clear contracts so AI‑generated code stays predictable. The AI can generate the internals, but the interfaces remain stable and human‑controlled.”
+“We design modules with clear contracts so AI-generated code stays predictable. The AI can generate the internals, but the interfaces remain stable and human-controlled.”
 
 Validation Loops
-“Every AI‑generated artifact goes through automated tests and human review. The goal is to catch drift early and ensure correctness.”
+“Every AI-generated artifact goes through automated tests and human review. The goal is to catch drift early and ensure correctness.”
 
 Prompt Versioning
 “Prompts evolve just like code. Tracking changes helps with debugging, reproducibility, and compliance.”
 
 Benefits
 “Teams move from idea to working software much faster because intent flows directly into generation.”
-“Generated components become more consistent because they’re driven by structured prompts, not one‑off instructions.”
+“Generated components become more consistent because they're driven by structured prompts, not one-off instructions.”
 “Developers spend more time on architecture and correctness, less on boilerplate.”
-“The end result is a system that’s easier to maintain and adapt over time.”
+“The end result is a system that's easier to maintain and adapt over time.”
 :::
 
 ---
 
 ## **Concrete Examples**
 
-**Prompt‑First Example**
+**Prompt-First Example**
 
 - Promptfile for generating unit tests
 - Instruction file for documentation
 - Chat mode for brownfield developers
 
-**AI‑First Example**
+**AI-First Example**
 
-- Requirements → AI‑generated scaffolds
-- Code changes → AI‑assisted reviews
-- Docs → continuously AI‑generated
-- Modernization → AI‑guided refactoring plans
+- Requirements → AI-generated scaffolds
+- Code changes → AI-assisted reviews
+- Docs → continuously AI-generated
+- Modernization → AI-guided refactoring plans
 - Provenance → enforced everywhere
 
 ::: notes
 Use these examples to help teams visualize the difference.
-Prompt‑First is about interfaces; AI‑First is about the entire workflow.
+Prompt-First is about interfaces; AI-First is about the entire workflow.
 :::
 
 ---
 
 ## **Shortest Summary**
 
-- **AI‑First = philosophy + architecture + lifecycle integration**
-- **Prompt‑First = structured, version‑controlled interfaces for interacting with AI**
+- **AI-First = philosophy + architecture + lifecycle integration**
+- **Prompt-First = structured, version-controlled interfaces for interacting with AI**
 
 ::: notes
 End with this summary to reinforce the distinction.
-It’s the cleanest way to remember the relationship.
+It's the cleanest way to remember the relationship.
 :::
 
 ---
@@ -836,7 +836,7 @@ Ask Mode
 - Execute specific workflows
 
 ::: notes
-Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and Custom Chat Modes briefly. We’ll work with those later.
+Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and Custom Chat Modes briefly. We'll work with those later.
 :::
 
 ---
@@ -914,7 +914,7 @@ Adding Features
   Intro to Evergreen Software Development
 
 ::: notes
-This slide outlines the collaborative development process we’ll follow for building our calculator application — and mob programming will be central to how we work together.
+This slide outlines the collaborative development process we'll follow for building our calculator application — and mob programming will be central to how we work together.
 
 Except for Project Setup and Basic Arithmetic functions, the mob controls the direction of the implementation. The other labs are optional and can be used when the mob directs the development of that feature or as suggestions should the mob struggle for direction.
 
@@ -940,7 +940,7 @@ Duration: 45-60 minutes
 Objectives
 
 - Use AI to generate starter code for arithmetic operations
-- Understand how to validate AI‑generated logic
+- Understand how to validate AI-generated logic
 - Integrate addition, subtraction, multiplication, and division functions
   Activities
 
@@ -975,13 +975,13 @@ Objectives
 Duration: 15 minutes
 Objectives
 
-- Use AI to scaffold state‑management logic
+- Use AI to scaffold state-management logic
 - Implement CE (clear entry) and C (clear all) behaviors
 - Understand how AI can help reason about UI state transitions
   Activities
   Prompt AI to outline the difference between CE and C
   Generate code for clearing the current input vs. full state
-  Integrate the logic into your calculator’s state object
+  Integrate the logic into your calculator's state object
   Test transitions by simulating user input sequences
   Success Criteria
 - - CE clears only the active entry
@@ -993,14 +993,14 @@ Objectives
 
 Duration: 12 minutes
 Objectives
-Use AI to generate input‑validation logic
+Use AI to generate input-validation logic
 Prevent multiple decimal points
 Ensure decimals flow correctly through arithmetic operation
 Activities
 Ask AI to propose a strategy for handling decimal input
 Generate code to block multiple decimals in a single number
 Integrate decimal support into the existing input parser
-Test decimal operations using AI‑generated test cases
+Test decimal operations using AI-generated test cases
 Success Criteria
 Decimal input works without duplication errors
 Arithmetic with decimals produces correct results
@@ -1032,7 +1032,7 @@ Objectives
 
 - Use AI to clarify how calculators interpret %
 - Implement percentage logic for common patterns
-- Validate behavior with AI‑generated examples
+- Validate behavior with AI-generated examples
   Activities
   Ask AI to explain how % should behave in a standard calculator
   Generate code for:
@@ -1040,7 +1040,7 @@ Objectives
   Y + X%
   Y – X%
 
-3. Test each pattern with AI‑generated sample values
+3. Test each pattern with AI-generated sample values
    Success Criteria
    Percentage operations match standard calculator behavior
    Learner can articulate the interpretation rules for %
@@ -1056,7 +1056,7 @@ Objectives
 - Implement memory add, subtract, recall, and clear
 - Validate memory behavior across multiple operations
   Activities
-  Ask AI to propose a memory‑state structure
+  Ask AI to propose a memory-state structure
   Generate functions for M+, M–, MR, MC
   Integrate memory operations into the calculator workflow
   Test memory persistence across multiple calculations
@@ -1078,11 +1078,11 @@ Objectives
   Ask AI to list typical calculator errors (e.g., divide by zero)
   Generate code for error detection and display
   Implement a reset path after an error
-  Test error scenarios using AI‑generated test cases
+  Test error scenarios using AI-generated test cases
   Success Criteria
 - Errors are detected and displayed correctly
 - Calculator recovers cleanly after reset
-- Learner can describe the error‑handling flow
+- Learner can describe the error-handling flow
 
 ---
 
@@ -1091,11 +1091,11 @@ Objectives
 Duration: 15 minutes
 Objectives
 
-- Integrate trigonometric functions into the calculator’s operation set
-- Use AI to generate math‑library wrappers and input‑parsing logic
+- Integrate trigonometric functions into the calculator's operation set
+- Use AI to generate math-library wrappers and input-parsing logic
 - Ensure correct handling of degrees vs. radians
   Activities
-  Ask AI to generate functions for sin, cos, and tan using your language’s math library
+  Ask AI to generate functions for sin, cos, and tan using your language's math library
   Prompt AI to propose a strategy for handling degree/radian mode
   Implement UI bindings or command triggers for each trig function
   Use AI to generate a table of sample inputs and expected outputs
@@ -1103,7 +1103,7 @@ Objectives
 - Trig functions compute correct values in the selected angle mode
 - Degree/radian mode switching works consistently
 - UI or command triggers correctly call the trig functions
-- Learner can explain how AI‑generated code was validated and refine
+- Learner can explain how AI-generated code was validated and refine
 
 ---
 
@@ -1114,9 +1114,9 @@ Objectives
 
 - Use AI to scaffold UI event handlers
 - Connect buttons to logic functions
-- Validate end‑to‑end user workflow
+- Validate end-to-end user workflow
   Activities
-  Ask AI to generate event‑binding code for numeric and operator buttons
+  Ask AI to generate event-binding code for numeric and operator buttons
   Integrate logic functions from previous labs
   Test a full workflow:
 - Enter decimal
@@ -1328,7 +1328,7 @@ Duration: 15 minutes
 Objectives
 Separate UI concerns from computational logic
 Use AI to scaffold a standalone “core logic” module/class
-Ensure the UI communicates with the logic layer through a clean, well‑defined API
+Ensure the UI communicates with the logic layer through a clean, well-defined API
 Validate that encapsulation improves testability and maintainability
 Activities
 
@@ -1338,13 +1338,13 @@ Activities
 - State management
 - Trig/percentage/memory logic (if implemented)
 
-2. Review the AI‑generated API surface and refine naming, inputs, and return types
-3. Replace UI‑embedded logic with calls into the new component
+2. Review the AI-generated API surface and refine naming, inputs, and return types
+3. Replace UI-embedded logic with calls into the new component
    Success Criteria
 
 - All calculator features run through the external logic component
 - UI contains no computational logic — only event handling and display updates
-- Learner can explain how encapsulation improves modularity, reuse, and AI‑assisted development workflow
+- Learner can explain how encapsulation improves modularity, reuse, and AI-assisted development workflow
 
 ---
 
@@ -1415,9 +1415,9 @@ Objectives
 
 ## Evergreen Software Development - Core Principles
 
-Intent‑First Design
+Intent-First Design
 
-- Define the system’s purpose, invariants, and boundaries before writing code to ensure long‑term clarity.
+- Define the system's purpose, invariants, and boundaries before writing code to ensure long-term clarity.
   Stable Interfaces, Evolving Internals
 - Keep contracts predictable while allowing implementations to improve continuously.
   Continuous Regeneration with Guardrails
@@ -1425,7 +1425,7 @@ Intent‑First Design
   Modular, Replaceable Components
 - Structure the system so any part can be regenerated, swapped, or upgraded without cascading breakage.
   Lifecycle Governance
-- Maintain quality through automated tests, versioning discipline, and human‑in‑the‑loop validation.
+- Maintain quality through automated tests, versioning discipline, and human-in-the-loop validation.
 
 ---
 
@@ -1450,24 +1450,24 @@ Intent Rot
   Unstable or Leaky Interfaces
 - APIs, data contracts, and boundaries change unpredictably, causing cascading breakage when internals evolve.
   Tightly Coupled Architecture
-- Components depend on each other’s internal details, preventing isolated regeneration or replacement.
+- Components depend on each other's internal details, preventing isolated regeneration or replacement.
   Insufficient Guardrails
-- Missing tests, specs, or validation layers mean AI‑assisted regeneration can’t be trusted to preserve behavior.
-  One‑Off Patches and Drift
-- Ad‑hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
+- Missing tests, specs, or validation layers mean AI-assisted regeneration can't be trusted to preserve behavior.
+  One-Off Patches and Drift
+- Ad-hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
 
 ---
 
-## Multi‑Model Implementation Comparison
+## Multi-Model Implementation Comparison
 
 Implementing changes with different AI models
 Comparing approaches and outcomes
 Risk assessment and quality evaluation
 Best practice synthesis
-Exercises for hands‑on practice
+Exercises for hands-on practice
 
 ::: notes
-Introduce this module as a way to help teams understand how different AI models behave when given the same task. Emphasize that multi‑model comparison is a powerful guardrail: it reduces hallucinations, improves quality, and helps teams choose the right model for the right job.
+Introduce this module as a way to help teams understand how different AI models behave when given the same task. Emphasize that multi-model comparison is a powerful guardrail: it reduces hallucinations, improves quality, and helps teams choose the right model for the right job.
 :::
 
 ---
@@ -1477,7 +1477,7 @@ Introduce this module as a way to help teams understand how different AI models 
 Why use multiple models?
 Different reasoning styles
 Different strengths (refactoring, documentation, architecture)
-Cross‑validation reduces risk
+Cross-validation reduces risk
 Helps detect missing context or contradictions
 Typical use cases
 Refactoring comparisons
@@ -1501,10 +1501,10 @@ Risk level of proposed changes
 Benefits
 Identifies the safest implementation
 Surfaces hidden assumptions
-Highlights model‑specific biases
+Highlights model-specific biases
 
 ::: notes
-Encourage participants to treat model outputs like multiple drafts from different engineers. The goal is not to pick a winner — it’s to synthesize the best ideas.
+Encourage participants to treat model outputs like multiple drafts from different engineers. The goal is not to pick a winner — it's to synthesize the best ideas.
 :::
 
 ---
@@ -1534,14 +1534,14 @@ Combine the strengths of each model
 Use one model for architecture
 Another for implementation
 Another for documentation
-Cross‑validate tests and reasoning
+Cross-validate tests and reasoning
 Outcome
 Higher quality
 Lower risk
 More predictable modernization
 
 ::: notes
-Explain that synthesis is the real power of multi‑model workflows. Teams can build a composite solution that is better than any single model’s output.
+Explain that synthesis is the real power of multi-model workflows. Teams can build a composite solution that is better than any single model's output.
 :::
 
 ---
@@ -1585,18 +1585,18 @@ Practice delegating the same issue to different models
 Evaluate how each model interprets constraints
 Identify missing context
 Activities
-Create a GitHub‑style issue describing a technical debt item.
+Create a GitHub-style issue describing a technical debt item.
 Assign the issue to two different models.
 Compare their proposed remediation plans.
 Identify missing context or contradictions.
 Success Criteria
-Issue is clear and well‑structured
+Issue is clear and well-structured
 Each model produces a distinct approach
 Missing context is identified and documented
 A preferred plan is selected based on safety and clarity
 
 ::: notes
-This exercise helps participants see how different models interpret the same instructions — a key skill for multi‑model workflows.
+This exercise helps participants see how different models interpret the same instructions — a key skill for multi-model workflows.
 :::
 
 ---
@@ -1606,11 +1606,11 @@ This exercise helps participants see how different models interpret the same ins
 Duration
 20 minutes
 Objectives
-Practice multi‑model delegation
-Evaluate multi‑step reasoning
+Practice multi-model delegation
+Evaluate multi-step reasoning
 Synthesize best practices into a unified plan
 Activities
-Select a multi‑step modernization task.
+Select a multi-step modernization task.
 Ask multiple models to:
 
 - Analyze the problem
@@ -1620,8 +1620,8 @@ Ask multiple models to:
   Compare the outputs.
   Synthesize a final, safe, incremental plan.
   Success Criteria
-  Multi‑model differences are clearly understood
-  Final plan is incremental, reversible, and well‑tested
+  Multi-model differences are clearly understood
+  Final plan is incremental, reversible, and well-tested
   Documentation and provenance are included
   Risks are identified and mitigated
 
@@ -1643,10 +1643,10 @@ What are instructions, prompts, and Agents
 Creating instruction, prompt, and Agent files
 Meta prompts that generate these files
 Instructions for generating artifacts
-Enforcing provenance for AI‑assisted artifacts
+Enforcing provenance for AI-assisted artifacts
 
 ::: notes
-Introduce this module as the foundation for safe, predictable AI‑assisted development.
+Introduce this module as the foundation for safe, predictable AI-assisted development.
 
 Guardrails ensure that AI output is intentional, reviewable, and aligned with architectural and organizational standards.
 
@@ -1658,9 +1658,9 @@ These practices turn AI from a novelty into a disciplined engineering tool.
 ## Instructions, Prompts & Agents
 
 Definitions
-Instructions – Persistent rules that guide the model’s behavior
-Prompts – Task‑specific requests defining intent and constraints
-Agents – Pre‑configured personas optimized for workflows
+Instructions – Persistent rules that guide the model's behavior
+Prompts – Task-specific requests defining intent and constraints
+Agents – Pre-configured personas optimized for workflows
 
 ::: notes
 Clarify the distinctions: instructions are stable, prompts are ephemeral, and Agents define how the model behaves in a particular role.
@@ -1675,8 +1675,8 @@ Together, they form a layered control system that shapes AI behavior and reduces
 Why create files?
 Ensures repeatability
 Reduces token usage
-Provides version‑controlled guardrails
-Enables team‑wide consistency
+Provides version-controlled guardrails
+Enables team-wide consistency
 File types
 .github/instructions/myinstructions.instructions.md
 .github/copilot/Promptfiles/myprompt.prompt.md
@@ -1738,9 +1738,9 @@ Declare:
   Track revisions in version control
 
 ::: notes
-Provenance is essential for conformance, auditability, and long‑term maintainability.
+Provenance is essential for conformance, auditability, and long-term maintainability.
 
-It ensures teams know which artifacts were AI‑generated, which were human‑generated, and which were hybrid.
+It ensures teams know which artifacts were AI-generated, which were human-generated, and which were hybrid.
 :::
 
 ---
@@ -1779,9 +1779,9 @@ This exercise reinforces the importance of maintaining consistent AI-assisted ou
 The one instruction file that rules them all
 
 ::: notes
-Provenance is essential for conformance, auditability, and long‑term maintainability.
+Provenance is essential for conformance, auditability, and long-term maintainability.
 
-It ensures teams know which artifacts were AI‑generated, which were human‑generated, and which were hybrid.
+It ensures teams know which artifacts were AI-generated, which were human-generated, and which were hybrid.
 :::
 
 ---
@@ -1944,7 +1944,7 @@ Includes constraints and success criteria
 Avoids unnecessary context
 
 ::: notes
-This exercise builds foundational prompt‑writing skills. Encourage participants to choose a real task to make the exercise concrete.
+This exercise builds foundational prompt-writing skills. Encourage participants to choose a real task to make the exercise concrete.
 
 Prompt: Create a prompt file that creates an instruction file for evergreen software development
 :::
@@ -1968,7 +1968,7 @@ Reflects evergreen development values
 Provides clear guardrails
 
 ::: notes
-This reinforces the evergreen mindset and produces a reusable artifact for future AI‑assisted work.
+This reinforces the evergreen mindset and produces a reusable artifact for future AI-assisted work.
 
 Prompt: Submit the prompt #file:create-evergreen-software-instructions.prompt.md
 :::
@@ -1982,7 +1982,7 @@ Duration
 Objectives
 Define a persona optimized for brownfield work
 Emphasize safety and incrementalism
-Encode risk‑aware behaviors
+Encode risk-aware behaviors
 Activities
 Draft a Agent that:
 
@@ -2008,8 +2008,8 @@ This helps participants shape AI behavior to match brownfield realities.
 Duration
 20 minutes
 Objectives
-Use meta prompts to scale instruction‑file creation
-Capture module‑specific rules
+Use meta prompts to scale instruction-file creation
+Capture module-specific rules
 Encode domain and architectural constraints
 Activities
 Prompt Copilot to create instruction files for the standards and conventions of the tech stack
@@ -2033,7 +2033,7 @@ Create instruction files for the front-end technologies
 
 ---
 
-## Exercise: Context‑Related Issues
+## Exercise: Context-Related Issues
 
 Duration
 10 minutes
@@ -2050,7 +2050,7 @@ Success Criteria
 Correctly identified context gaps
 
 ::: notes
-This exercise builds intuition for context management—one of the most important AI‑era engineering skills.
+This exercise builds intuition for context management—one of the most important AI-era engineering skills.
 :::
 
 ---
@@ -2948,7 +2948,7 @@ This slide frames Copilot as a tool that amplifies engineering discipline rather
 
 The message is: Copilot is not magic.
 
-It’s a reasoning engine that responds to structure, clarity, and context.
+It's a reasoning engine that responds to structure, clarity, and context.
 
 When managed well, it becomes a force multiplier.
 
@@ -2994,9 +2994,9 @@ Use these techniques to keep context focused:
 ::: notes
 Context windows are invisible but critical.
 
-When Copilot misses requirements or contradicts earlier decisions, it’s often because the relevant information fell outside its context window.
+When Copilot misses requirements or contradicts earlier decisions, it's often because the relevant information fell outside its context window.
 
-The solution is not to “prompt harder” – it’s to structure the environment so the model always has the right information in view.
+The solution is not to “prompt harder” – it's to structure the environment so the model always has the right information in view.
 :::
 
 ---
@@ -3010,7 +3010,7 @@ Use instruction files for stable rules and architectural boundaries
 Ask Copilot to explain its reasoning when correctness matters
 
 ::: notes
-Prompting is not about clever phrasing – it’s about clarity.
+Prompting is not about clever phrasing – it's about clarity.
 
 Copilot performs best when you define intent, boundaries, and examples.
 
@@ -3024,12 +3024,12 @@ Think of prompts as design briefs, not commands.
 ## Model Selection Strategies
 
 Different models excel at different tasks
-High‑end models (e.g., GPT‑4o, Claude Sonnet) are best for:
+High-end models (e.g., GPT-4o, Claude Sonnet) are best for:
 
 - Architecture
 - Refactoring
 - Complex reasoning
-- Multi‑file changes
+- Multi-file changes
   Lightweight models are ideal for:
 - Boilerplate
 - Repetitive tasks
@@ -3039,13 +3039,13 @@ High‑end models (e.g., GPT‑4o, Claude Sonnet) are best for:
 ::: notes
 Model selection is a strategic decision.
 
-High‑end models are great for deep reasoning but can be slower or more expensive.
+High-end models are great for deep reasoning but can be slower or more expensive.
 
 Smaller models are fast and efficient but less capable.
 
 The key is to choose based on task complexity.
 
-For example: use a reasoning‑heavy model for designing a module, then switch to a lighter model for generating tests or scaffolding
+For example: use a reasoning-heavy model for designing a module, then switch to a lighter model for generating tests or scaffolding
 :::
 
 ---

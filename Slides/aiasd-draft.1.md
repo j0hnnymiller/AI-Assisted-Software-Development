@@ -1,6 +1,6 @@
 # aiasd draft.1
 
-*Converted from: `aiasd-draft.1.pptx`*
+_Converted from: `aiasd-draft.1.pptx`_
 
 ---
 
@@ -25,11 +25,11 @@
 - Who you are
 - Who do you work for
 - What you do
-- What you’ve done with AI tools
+- What you've done with AI tools
 - What you want to learn
 
 ::: notes
-Day One: Outline the day’s goals and emphasize participation and hands-on exercises.
+Day One: Outline the day's goals and emphasize participation and hands-on exercises.
 :::
 
 ---
@@ -43,7 +43,7 @@ Day One: Outline the day’s goals and emphasize participation and hands-on exer
 ![Slide 4 image](slides/images/aiasd-draft.1_slide04_2.png)
 
 ::: notes
-CODE is a custom software company, a staff augmentation company, CODE Magazine for software developers, and training like this webinar. We’ve been in business for 30 years and the magazine just hit its 25th anniversary. Visit the website at https://www.codemag.com/ for more details.
+CODE is a custom software company, a staff augmentation company, CODE Magazine for software developers, and training like this webinar. We've been in business for 30 years and the magazine just hit its 25th anniversary. Visit the website at https://www.codemag.com/ for more details.
 :::
 
 ---

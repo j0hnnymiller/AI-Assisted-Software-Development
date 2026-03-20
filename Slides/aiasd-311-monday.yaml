@@ -33,7 +33,7 @@ sections:
       - Slides\individual-slides\exercise-test-driven-development.md
       - Slides\individual-slides\ai-assisted-cicd-pipelines.md
       - Slides\individual-slides\ai-assisted-github-pull-requests.md
-      - Slides\individual-slides\multi‑model-implementation-comparison.md
+      - Slides\individual-slides\multi-model-implementation-comparison.md
       - Slides\individual-slides\evergreen-software-core-principles.md
 
   - name: Module 4 - Adding AI Guardrails
