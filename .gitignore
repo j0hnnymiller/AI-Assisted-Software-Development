@@ -198,6 +198,6 @@ past-class-recordings/**/*.vtt
 !past-class-recordings/**/AI-Assisted*.vtt
 
 Labs/lab1-3-csharp/obj/
-Slides/output/
+
 Slides/output/_scan_tblstyles/
 Slides/output/_style_source/
