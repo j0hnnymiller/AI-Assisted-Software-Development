@@ -23,7 +23,7 @@ sections:
 
   - name: Module 4 - Models and Context
     slides:
-      - Slides\individual-slides\model-selection-and-comparison.pptx
+      - Slides\individual-slides\model-selection-and-comparison.md
       - Slides\individual-slides\advanced-context-techniques.md
 
   - name: Module 5 - Guardrails and Prompt Files
