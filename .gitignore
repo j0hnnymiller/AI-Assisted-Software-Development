@@ -187,14 +187,12 @@ Desktop.ini
 obj
 ~$*
 
-<<<<<<< HEAD
-Labs/lab1-3-csharp/obj/
-Slides/output/
-=======
 # VTT files (except sample files)
 # Keep small sample files but ignore large recordings
 past-class-recordings/**/*.vtt
 !past-class-recordings/**/AI-Assisted*.vtt
 
+Labs/lab1-3-csharp/obj/
+Slides/output/
 Slides/output/_scan_tblstyles/
->>>>>>> 434f4bd (fix: update .gitignore to include output directory for scanned table styles)
+Slides/output/_style_source/
