@@ -23,8 +23,6 @@ backgroundColor: #ffffff
 
 ---
 
-<!-- _class: lead -->
-
 ## Safety Measures & Best Practices
 
 **Safety measures are critical when using AI assistance**
@@ -57,8 +55,6 @@ Transition: "Let's start with feature flags..."
 :::
 
 ---
-
-<!-- _class: lead -->
 
 ## Why Feature Flags Matter
 
@@ -424,8 +420,6 @@ user.balance -= amount;
 
 ---
 
-<!-- _class: lead -->
-
 ## The Three-Level Review
 
 **Progressive validation strategy**
@@ -563,8 +557,6 @@ graph LR
 **Each layer catches different types of issues**
 
 ---
-
-<!-- _class: lead -->
 
 ## Why Size Matters
 

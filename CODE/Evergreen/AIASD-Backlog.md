@@ -20,20 +20,22 @@ Introduce this module as the bridge between analysis and action. Once AI identif
 # **Identifying Technical Debt**
 
 ### AI can surface:
+
 - Outdated patterns
-- High‑complexity functions
+- High-complexity functions
 - Duplicate logic
 - Missing tests
 - Security vulnerabilities
 - Architectural drift
 
 ### Benefits
+
 - Faster discovery
 - More consistent classification
 - Prioritized modernization roadmap
 
 ::: notes
-Explain that AI excels at scanning large brownfield systems and surfacing hotspots. This reduces the manual effort required to understand legacy code and helps teams focus on the highest‑impact areas first.
+Explain that AI excels at scanning large brownfield systems and surfacing hotspots. This reduces the manual effort required to understand legacy code and helps teams focus on the highest-impact areas first.
 :::
 
 ---
@@ -41,6 +43,7 @@ Explain that AI excels at scanning large brownfield systems and surfacing hotspo
 # **Automating the Creation of GitHub Issues**
 
 ### AI can help generate:
+
 - Issue titles
 - Detailed descriptions
 - Acceptance criteria
@@ -48,13 +51,14 @@ Explain that AI excels at scanning large brownfield systems and surfacing hotspo
 - Suggested remediation steps
 
 ### Why automate?
+
 - Ensures consistency
 - Reduces manual backlog grooming
-- Produces actionable, high‑signal issues
+- Produces actionable, high-signal issues
 - Accelerates modernization planning
 
 ::: notes
-Highlight that automation doesn’t replace human judgment — it accelerates it. Humans still validate, refine, and prioritize issues, but AI handles the heavy lifting of drafting them.
+Highlight that automation doesn't replace human judgment — it accelerates it. Humans still validate, refine, and prioritize issues, but AI handles the heavy lifting of drafting them.
 :::
 
 ---
@@ -62,15 +66,18 @@ Highlight that automation doesn’t replace human judgment — it accelerates it
 # **Exercise: Building the Backlog**
 
 ### Duration
+
 20 minutes
 
 ### Objectives
+
 - Practice identifying technical debt
 - Convert findings into actionable GitHub issues
 - Apply consistent structure and provenance
 - Prioritize issues based on risk and impact
 
 ### Activities
+
 1. Select a brownfield module or file.
 2. Ask AI to identify:
    - Technical debt
@@ -87,11 +94,12 @@ Highlight that automation doesn’t replace human judgment — it accelerates it
 5. Share your backlog with a partner for review.
 
 ### Success Criteria
-- Issues are clear, actionable, and well‑structured
+
+- Issues are clear, actionable, and well-structured
 - Provenance metadata is included
 - Prioritization reflects real risk and effort
 - Backlog is ready for team review
 
 ::: notes
-Encourage participants to treat this as a real backlog‑building session. The goal is not volume — it’s clarity and actionability. Reinforce that a well‑structured backlog is the foundation for safe, incremental modernization.
+Encourage participants to treat this as a real backlog-building session. The goal is not volume — it's clarity and actionability. Reinforce that a well-structured backlog is the foundation for safe, incremental modernization.
 :::

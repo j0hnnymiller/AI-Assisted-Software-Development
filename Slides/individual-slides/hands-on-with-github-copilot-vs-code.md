@@ -301,7 +301,7 @@ Ask Mode
 - Execute specific workflows
 
 ::: notes
-Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and Custom Chat Modes briefly. We’ll work with those later.
+Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and Custom Chat Modes briefly. We'll work with those later.
 :::
 
 ---

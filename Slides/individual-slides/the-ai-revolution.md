@@ -16,7 +16,7 @@ If used effectively, it will give you superpowers
 
 - The courage to
   - Take on codebases that few would touch
-  - Use technologies you should know but don’t
+  - Use technologies you should know but don't
   - Write more high-quality code than you have ever written before
   - Take on the nice to haves
 
@@ -27,7 +27,7 @@ Superpowers Explained: - Legacy codebases: AI can quickly understand and explain
 
 Examples to share: - Developer who used AI to modernize a 15-year-old PHP codebase in weeks instead of months - Team that adopted a new framework (React to Vue) with AI assistance in days - 80% reduction in boilerplate code writing time - Comprehensive test suites generated automatically
 
-Key message: AI doesn’t replace developers—it amplifies their capabilities
+Key message: AI doesn't replace developers—it amplifies their capabilities
 :::
 
 ---
@@ -112,12 +112,12 @@ Why AI-First
 - More resilient, adaptable systems
 
 ::: notes
-This slide frames what we mean by AI-First development. The key idea is that AI isn’t an add-on or a productivity booster—it becomes a core capability of the software lifecycle. When we design systems today, we assume AI will participate in requirements, architecture, coding, testing, and documentation.
+This slide frames what we mean by AI-First development. The key idea is that AI isn't an add-on or a productivity booster—it becomes a core capability of the software lifecycle. When we design systems today, we assume AI will participate in requirements, architecture, coding, testing, and documentation.
 
 Why AI-First
 “Teams increasingly express requirements in natural language. AI can interpret those requirements and generate scaffolding, code, tests, and documentation.”
-“This shifts the developer’s role from writing every line of code to defining intent, constraints, and quality expectations.”
-“The goal isn’t to replace engineering judgment—it’s to amplify it.”
+“This shifts the developer's role from writing every line of code to defining intent, constraints, and quality expectations.”
+“The goal isn't to replace engineering judgment—it's to amplify it.”
 
 Core Principles
 
@@ -140,7 +140,7 @@ Outcomes
 “Teams iterate faster because intent moves directly into working prototypes.”
 “Documentation and test coverage improve because AI can generate them continuously.”
 “Developers spend more time on architecture and correctness, less on boilerplate.”
-“The result is software that’s more adaptable and resilient over time.”
+“The result is software that's more adaptable and resilient over time.”
 :::
 
 ---
@@ -170,13 +170,13 @@ Why Prompt-First
 
 Why Prompt-First
 “Modern development increasingly begins with natural-language descriptions of behavior. Prompt-First formalizes that by treating prompts as first-class inputs to the software lifecycle.”
-“The developer’s role shifts from writing code line-by-line to defining outcomes, constraints, invariants, and interfaces.”
+“The developer's role shifts from writing code line-by-line to defining outcomes, constraints, invariants, and interfaces.”
 “This creates a tighter alignment between business intent and the resulting system.”
 
 Core Practices
 
 Structured Prompts
-“We don’t rely on ad-hoc prompting. We use templates for features, APIs, data models, tests, and refactors. This creates consistency and reduces ambiguity.”
+“We don't rely on ad-hoc prompting. We use templates for features, APIs, data models, tests, and refactors. This creates consistency and reduces ambiguity.”
 
 Instruction Files
 “These are durable, versioned prompt artifacts that guide AI generation. They act like living design documents that the AI reads every time it produces code.”
@@ -192,9 +192,9 @@ Prompt Versioning
 
 Benefits
 “Teams move from idea to working software much faster because intent flows directly into generation.”
-“Generated components become more consistent because they’re driven by structured prompts, not one-off instructions.”
+“Generated components become more consistent because they're driven by structured prompts, not one-off instructions.”
 “Developers spend more time on architecture and correctness, less on boilerplate.”
-“The end result is a system that’s easier to maintain and adapt over time.”
+“The end result is a system that's easier to maintain and adapt over time.”
 :::
 
 ---
@@ -229,5 +229,5 @@ Prompt-First is about interfaces; AI-First is about the entire workflow.
 
 ::: notes
 End with this summary to reinforce the distinction.
-It’s the cleanest way to remember the relationship.
+It's the cleanest way to remember the relationship.
 :::

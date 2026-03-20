@@ -19,21 +19,6 @@ theme: default
 paginate: true
 ---
 
-# Large Language Models
-
-### How they work — and why developers should care
-
-::: notes
-Set the stage: LLMs are the engine behind GitHub Copilot, ChatGPT, Claude, and every other AI coding tool. Understanding how they work helps developers use them more effectively and set realistic expectations.
-
-No deep math required — focus on intuition and mental models. This is a conceptual overview, not a research lecture.
-
-Timing: ~30 seconds on title slide.
-Transition: "Let's start with the big picture of what an LLM actually is."
-:::
-
----
-
 ## What Is a Large Language Model?
 
 > A statistical model trained to **predict the next token** given all preceding tokens.

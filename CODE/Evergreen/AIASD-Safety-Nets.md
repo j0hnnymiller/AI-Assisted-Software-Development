@@ -22,6 +22,7 @@ Introduce this module as the backbone of safe AI-assisted development. Safety ne
 # **Protecting Brownfield Codebases**
 
 ### Key Practices
+
 - Preserve existing behavior unless intentionally changed
 - Avoid large, risky refactors
 - Use incremental modernization
@@ -29,6 +30,7 @@ Introduce this module as the backbone of safe AI-assisted development. Safety ne
 - Document every AI-assisted change
 
 ### Why it matters
+
 - Brownfield systems run the business
 - Stability is more important than novelty
 - Safety nets reduce fear and increase confidence
@@ -42,6 +44,7 @@ Reinforce that brownfield systems are valuable assets, not liabilities. Protecti
 # **Leveraging AI Code Reviews**
 
 ### AI can assist by:
+
 - Highlighting risky changes
 - Detecting missing tests
 - Identifying architectural violations
@@ -49,6 +52,7 @@ Reinforce that brownfield systems are valuable assets, not liabilities. Protecti
 - Surfacing potential regressions
 
 ### Benefits
+
 - Faster feedback loops
 - More consistent review quality
 - Early detection of drift
@@ -62,6 +66,7 @@ AI code reviews are not replacements for human reviews — they are accelerators
 # **Effective Human Code Reviews**
 
 ### Human reviewers focus on:
+
 - Intent and correctness
 - Architectural alignment
 - Business logic validation
@@ -69,6 +74,7 @@ AI code reviews are not replacements for human reviews — they are accelerators
 - Ensuring changes are incremental and reversible
 
 ### Best practices
+
 - Review small change sets
 - Ask for context when missing
 - Validate AI-generated code with skepticism and curiosity
@@ -82,12 +88,14 @@ Humans bring judgment, domain knowledge, and intuition — things AI cannot repl
 # **The Role of Test Automation**
 
 ### Test automation provides:
+
 - Behavioral guarantees
 - Regression detection
 - Confidence for modernization
 - Guardrails for AI-assisted refactoring
 
 ### Types of tests
+
 - Unit tests
 - Integration tests
 - End-to-end tests
@@ -102,15 +110,18 @@ Test automation is the ultimate safety net. Without tests, AI-assisted developme
 # **Exercise: Building the Safety Nets**
 
 ### Duration
+
 20 minutes
 
 ### Objectives
+
 - Identify missing safety nets in a brownfield system
 - Strengthen protection using AI and human review practices
 - Apply test automation principles
 - Produce actionable improvements
 
 ### Activities
+
 1. Select a brownfield module or file.
 2. Identify existing safety nets (tests, reviews, documentation).
 3. Ask AI to identify missing or weak safety nets.
@@ -121,11 +132,12 @@ Test automation is the ultimate safety net. Without tests, AI-assisted developme
 5. Share findings with a partner for validation.
 
 ### Success Criteria
+
 - Missing safety nets are clearly identified
 - Proposed improvements are safe and incremental
 - Test coverage or clarity is improved
 - Review and documentation guardrails are strengthened
 
 ::: notes
-Encourage participants to treat this as a real modernization planning session. The goal is not to fix everything — it’s to identify gaps and build a roadmap for safer development.
+Encourage participants to treat this as a real modernization planning session. The goal is not to fix everything — it's to identify gaps and build a roadmap for safer development.
 :::

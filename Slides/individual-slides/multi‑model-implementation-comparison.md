@@ -4,16 +4,16 @@ theme: default
 paginate: true
 ---
 
-## Multi‑Model Implementation Comparison
+## Multi-Model Implementation Comparison
 
 Implementing changes with different AI models
 Comparing approaches and outcomes
 Risk assessment and quality evaluation
 Best practice synthesis
-Exercises for hands‑on practice
+Exercises for hands-on practice
 
 ::: notes
-Introduce this module as a way to help teams understand how different AI models behave when given the same task. Emphasize that multi‑model comparison is a powerful guardrail: it reduces hallucinations, improves quality, and helps teams choose the right model for the right job.
+Introduce this module as a way to help teams understand how different AI models behave when given the same task. Emphasize that multi-model comparison is a powerful guardrail: it reduces hallucinations, improves quality, and helps teams choose the right model for the right job.
 :::
 
 ---
@@ -23,7 +23,7 @@ Introduce this module as a way to help teams understand how different AI models 
 Why use multiple models?
 Different reasoning styles
 Different strengths (refactoring, documentation, architecture)
-Cross‑validation reduces risk
+Cross-validation reduces risk
 Helps detect missing context or contradictions
 Typical use cases
 Refactoring comparisons
@@ -47,10 +47,10 @@ Risk level of proposed changes
 Benefits
 Identifies the safest implementation
 Surfaces hidden assumptions
-Highlights model‑specific biases
+Highlights model-specific biases
 
 ::: notes
-Encourage participants to treat model outputs like multiple drafts from different engineers. The goal is not to pick a winner — it’s to synthesize the best ideas.
+Encourage participants to treat model outputs like multiple drafts from different engineers. The goal is not to pick a winner — it's to synthesize the best ideas.
 :::
 
 ---
@@ -80,14 +80,14 @@ Combine the strengths of each model
 Use one model for architecture
 Another for implementation
 Another for documentation
-Cross‑validate tests and reasoning
+Cross-validate tests and reasoning
 Outcome
 Higher quality
 Lower risk
 More predictable modernization
 
 ::: notes
-Explain that synthesis is the real power of multi‑model workflows. Teams can build a composite solution that is better than any single model’s output.
+Explain that synthesis is the real power of multi-model workflows. Teams can build a composite solution that is better than any single model's output.
 :::
 
 ---
@@ -104,16 +104,17 @@ Activities
 Select a small technical debt item.
 Prompt two or more models to propose a fix.
 Compare outputs for:
+
 - Safety
 - Clarity
 - Test coverage
 - Architectural alignment
-Synthesize the best elements into a final solution.
-Success Criteria
-Differences between models are clearly identified
-Risks and strengths are evaluated
-Final synthesized solution is safe and incremental
-Provenance metadata is included
+  Synthesize the best elements into a final solution.
+  Success Criteria
+  Differences between models are clearly identified
+  Risks and strengths are evaluated
+  Final synthesized solution is safe and incremental
+  Provenance metadata is included
 
 ::: notes
 Encourage participants to think like reviewers comparing multiple PRs. The goal is to understand model behavior, not to pick a favorite.
@@ -130,18 +131,18 @@ Practice delegating the same issue to different models
 Evaluate how each model interprets constraints
 Identify missing context
 Activities
-Create a GitHub‑style issue describing a technical debt item.
+Create a GitHub-style issue describing a technical debt item.
 Assign the issue to two different models.
 Compare their proposed remediation plans.
 Identify missing context or contradictions.
 Success Criteria
-Issue is clear and well‑structured
+Issue is clear and well-structured
 Each model produces a distinct approach
 Missing context is identified and documented
 A preferred plan is selected based on safety and clarity
 
 ::: notes
-This exercise helps participants see how different models interpret the same instructions — a key skill for multi‑model workflows.
+This exercise helps participants see how different models interpret the same instructions — a key skill for multi-model workflows.
 :::
 
 ---
@@ -151,23 +152,24 @@ This exercise helps participants see how different models interpret the same ins
 Duration
 20 minutes
 Objectives
-Practice multi‑model delegation
-Evaluate multi‑step reasoning
+Practice multi-model delegation
+Evaluate multi-step reasoning
 Synthesize best practices into a unified plan
 Activities
-Select a multi‑step modernization task.
+Select a multi-step modernization task.
 Ask multiple models to:
+
 - Analyze the problem
 - Propose a remediation plan
 - Suggest tests
 - Suggest documentation updates
-Compare the outputs.
-Synthesize a final, safe, incremental plan.
-Success Criteria
-Multi‑model differences are clearly understood
-Final plan is incremental, reversible, and well‑tested
-Documentation and provenance are included
-Risks are identified and mitigated
+  Compare the outputs.
+  Synthesize a final, safe, incremental plan.
+  Success Criteria
+  Multi-model differences are clearly understood
+  Final plan is incremental, reversible, and well-tested
+  Documentation and provenance are included
+  Risks are identified and mitigated
 
 ::: notes
 This exercise builds confidence in orchestrating multiple models as collaborators. The goal is synthesis, not competition.

@@ -11,10 +11,10 @@ title: Documentation Generation & Code Analysis
 - Architecture diagram generation
 - Complex code explanation and mapping
 - Identifying technical debt hotspots
-- Exercises for hands‑on practice
+- Exercises for hands-on practice
 
 ::: notes
-Introduce this module as a practical demonstration of how AI can accelerate documentation, analysis, and modernization in brownfield systems. Emphasize that documentation is not a side activity — it is a core guardrail for safe AI‑assisted development.
+Introduce this module as a practical demonstration of how AI can accelerate documentation, analysis, and modernization in brownfield systems. Emphasize that documentation is not a side activity — it is a core guardrail for safe AI-assisted development.
 :::
 
 ---
@@ -22,8 +22,9 @@ Introduce this module as a practical demonstration of how AI can accelerate docu
 # **Automated README & Documentation Updates**
 
 ### Capabilities
+
 - Generate or update README files
-- Create module‑level documentation
+- Create module-level documentation
 - Produce API references and usage examples
 - Keep documentation aligned with code changes
 
@@ -36,7 +37,8 @@ Explain that AI can maintain documentation continuously, reducing drift between 
 # **Architecture Diagram Generation**
 
 ### What AI can generate
-- High‑level system diagrams
+
+- High-level system diagrams
 - Module dependency graphs
 - Data flow diagrams
 - Deployment topologies
@@ -50,10 +52,11 @@ AI can infer architecture from code structure, configuration files, and naming c
 # **Complex Code Explanation & Mapping**
 
 ### AI can help with:
+
 - Explaining unfamiliar or legacy code
 - Mapping call chains and dependencies
 - Identifying hidden coupling
-- Translating code into human‑readable narratives
+- Translating code into human-readable narratives
 
 ::: notes
 This is one of the most powerful uses of AI in brownfield modernization. It reduces onboarding time and helps engineers understand risky areas before making changes.
@@ -64,10 +67,11 @@ This is one of the most powerful uses of AI in brownfield modernization. It redu
 # **Identifying Technical Debt Hotspots**
 
 ### AI can detect:
+
 - Outdated patterns
 - Duplicate logic
 - Missing tests
-- High‑complexity functions
+- High-complexity functions
 - Security risks
 
 ::: notes
@@ -79,14 +83,17 @@ AI can scan large codebases and surface hotspots that deserve attention. This he
 # **Exercise: Brownfield Code Documentation**
 
 ### Duration
+
 15 minutes
 
 ### Objectives
+
 - Practice generating documentation for legacy code
 - Identify missing or unclear areas
-- Produce high‑signal summaries
+- Produce high-signal summaries
 
 ### Activities
+
 1. Select a brownfield module or file
 2. Ask AI to generate:
    - A summary
@@ -97,6 +104,7 @@ AI can scan large codebases and surface hotspots that deserve attention. This he
 4. Review with a partner
 
 ### Success Criteria
+
 - Documentation is accurate and concise
 - Risks and gaps are clearly identified
 - Provenance is included
@@ -110,6 +118,7 @@ This exercise helps participants build confidence in using AI to document unfami
 # **Generate Development & Deployment Guides**
 
 ### AI can produce:
+
 - Setup instructions
 - Local development workflows
 - CI/CD pipeline explanations
@@ -123,7 +132,8 @@ These guides reduce onboarding time and ensure consistent workflows across teams
 
 # **Create Architecture Diagrams**
 
-### AI‑generated diagrams include:
+### AI-generated diagrams include:
+
 - System boundaries
 - Module interactions
 - Data flows
@@ -138,10 +148,11 @@ Encourage participants to treat diagrams as drafts — AI can generate the struc
 # **Update Project Documentation**
 
 ### AI can update:
+
 - CHANGELOGs
 - CONTRIBUTING guides
 - API references
-- Module‑level docs
+- Module-level docs
 
 ::: notes
 AI helps keep documentation evergreen by updating it alongside code changes. This reduces drift and improves maintainability.
@@ -149,16 +160,17 @@ AI helps keep documentation evergreen by updating it alongside code changes. Thi
 
 ---
 
-# **Cross‑Validate With Multiple AI Models**
+# **Cross-Validate With Multiple AI Models**
 
-### Why cross‑validate?
+### Why cross-validate?
+
 - Reduce hallucinations
 - Catch inconsistencies
 - Improve accuracy
 - Validate architectural assumptions
 
 ::: notes
-Different models have different strengths. Cross‑validation is a powerful guardrail for correctness, especially in brownfield systems.
+Different models have different strengths. Cross-validation is a powerful guardrail for correctness, especially in brownfield systems.
 :::
 
 ---
@@ -166,21 +178,25 @@ Different models have different strengths. Cross‑validation is a powerful guar
 # **Exercise: Identifying Code Outside the Guardrails**
 
 ### Duration
+
 10 minutes
 
 ### Objectives
+
 - Detect code that violates architectural rules
 - Identify patterns that contradict instruction files
 - Practice safe analysis workflows
 
 ### Activities
+
 1. Review a provided code sample
-2. Compare it against the project’s instruction file
+2. Compare it against the project's instruction file
 3. Identify violations or risky patterns
 4. Propose safe remediation steps
 5. Document findings with provenance
 
 ### Success Criteria
+
 - Violations are correctly identified
 - Remediation steps are safe and incremental
 - Documentation includes provenance

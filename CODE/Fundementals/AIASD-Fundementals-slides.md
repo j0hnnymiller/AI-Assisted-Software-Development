@@ -4,6 +4,7 @@ _class: lead
 paginate: true
 backgroundColor: #fff
 ---
+
 # AI Assisted Software Development
 
 ## John Michael Miller
@@ -62,9 +63,9 @@ Agenda: Quick walkthrough of topics; highlight hands-on demos and exercises.
 - Less emphasis on syntax
 - More emphasis on architecture, design, code quality, refactoring
 - Moving faster with less risk
-::: notes
-State course objective: practical skills for using Copilot responsibly on legacy codebases.
-:::
+  ::: notes
+  State course objective: practical skills for using Copilot responsibly on legacy codebases.
+  :::
 
 ---
 
@@ -81,22 +82,26 @@ State course objective: practical skills for using Copilot responsibly on legacy
 
 ::: notes
 **Revolutionary Impact:**
+
 - AI is fundamentally changing how we write, maintain, and understand code
 - Similar to how IDEs replaced text editors, AI assistance is becoming essential
 - Speed of development has increased 30-60% for many developers using AI tools effectively
 
 **Career Transformation:**
+
 - Those who adapt: become 10x more productive, tackle bigger challenges, expand skill sets
 - Those who resist: may find themselves struggling with modern development expectations
 - New roles emerging: AI prompt engineers, AI code reviewers, AI-assisted architects
 
 **Superpowers Explained:**
+
 - **Legacy codebases**: AI can quickly understand and explain complex, undocumented systems
 - **New technologies**: Learn frameworks/languages faster with AI as a coding partner
 - **Code quality**: AI suggests improvements, catches bugs, generates comprehensive tests
 - **Nice to haves**: Features that were "too time-consuming" become feasible
 
 **Examples to share:**
+
 - Developer who used AI to modernize a 15-year-old PHP codebase in weeks instead of months
 - Team that adopted a new framework (React to Vue) with AI assistance in days
 - 80% reduction in boilerplate code writing time
@@ -131,6 +136,7 @@ Introduce LLMs at a high level: what they are, how they're trained, and why they
 - No true "understanding" - pattern matching at massive scale
 
 ::: notes
+
 - Emphasize that LLMs don't actually "understand" code like humans do
 - They use transformer architecture to recognize patterns and context
 - Token-based processing: code is broken into tokens (words, symbols, operators)
@@ -141,7 +147,7 @@ Introduce LLMs at a high level: what they are, how they're trained, and why they
 - Example: An LLM can recognize that a variable declared early in a function should be referenced later, not because it understands variables conceptually, but because it has seen this pattern millions of times in training
 - The "understanding" is really about statistical associations between code patterns, not conceptual knowledge
 - This is why LLMs can generate syntactically correct code that is logically flawed - they match patterns without true comprehension of the underlying logic
-:::
+  :::
 
 ---
 
@@ -225,35 +231,40 @@ Don'ts: Warn against blind acceptance of suggestions, entering sensitive data in
 
 ::: notes
 **Input Processing**:
+
 - Developer provides natural language prompts + existing code context
 - Input is tokenized into discrete units the model can process
 - Tokens are converted to numerical vectors (embeddings)
 
 **Core Processing**:
+
 - Transformer layers use self-attention to understand relationships
 - Context window maintains recent conversation/code history
 - Pattern recognition identifies relevant code structures and syntax
 
 **Output Generation**:
+
 - Model generates probability distributions for next tokens
 - Decoding strategies determine how to select from probabilities
 - Output is converted back to readable code
 
 **Human in the Loop**:
+
 - Critical validation step - AI is a tool, not a replacement
 - Feedback loop for prompt refinement and learning
 
 **Training Influence**:
+
 - Large code repositories provide pattern knowledge
 - Fine-tuning specializes models for coding tasks
 - Quality of training data directly impacts output quality
-:::
+  :::
 
 ---
 
 ## GitHub Copilot for Teams: Key Considerations for Adoption
 
-*Empowering developers with AI while protecting your codebase*
+_Empowering developers with AI while protecting your codebase_
 
 ::: notes
 Outline governance, admin controls, and adoption factors (training, policy, developer onboarding).
@@ -353,11 +364,11 @@ Explain risks of suggested code resembling public repos and recommend legal revi
 
 ## Deployment Options
 
-| Plan | Key Features | IP Protection |
-|------|-------------|---------------|
-| Copilot Individual | Personal use, no admin controls | Limited |
-| Copilot for Business | Admin controls, policy enforcement | Strong |
-| Copilot for Enterprise | Org-wide policy, audit tools | Strongest |
+| Plan                   | Key Features                       | IP Protection |
+| ---------------------- | ---------------------------------- | ------------- |
+| Copilot Individual     | Personal use, no admin controls    | Limited       |
+| Copilot for Business   | Admin controls, policy enforcement | Strong        |
+| Copilot for Enterprise | Org-wide policy, audit tools       | Strongest     |
 
 ::: notes
 Summarize plan differences and pick considerations (control, audit, scale) for each offering.
@@ -410,14 +421,13 @@ Quick demo plan: show VS Code integration, suggestion modes, and settings.
 
 ## Instructions vs Prompts vs Custom Chat Modes
 
-
-| Feature | Instruction File | Prompt File | Custom Chat Mode |
-|--------|------------------|-------------|------------------|
-| **Scope** | Workspace-wide guidance | File-specific or task-specific nudging | Interactive behavior tuning for Copilot Chat |
-| **Format** | JSON or YAML (`.copilot.json`) | Markdown or plain text (`copilot-prompt.md`) | Configurable via UI or `.copilot-chat.json` |
-| **Purpose** | Define goals, conventions, and tasks for Copilot | Provide localized context to improve completions | Shape Copilot Chat’s tone, role, and response style |
-| **Audience** | Copilot autocomplete engine | Copilot autocomplete engine | Copilot Chat interface |
-| **Location** | Root or `.vscode/` folder | Root, `.github/`, inline comments | Root or `.vscode/` folder |
+| Feature      | Instruction File                                 | Prompt File                                      | Custom Chat Mode                                    |
+| ------------ | ------------------------------------------------ | ------------------------------------------------ | --------------------------------------------------- |
+| **Scope**    | Workspace-wide guidance                          | File-specific or task-specific nudging           | Interactive behavior tuning for Copilot Chat        |
+| **Format**   | JSON or YAML (`.copilot.json`)                   | Markdown or plain text (`copilot-prompt.md`)     | Configurable via UI or `.copilot-chat.json`         |
+| **Purpose**  | Define goals, conventions, and tasks for Copilot | Provide localized context to improve completions | Shape Copilot Chat's tone, role, and response style |
+| **Audience** | Copilot autocomplete engine                      | Copilot autocomplete engine                      | Copilot Chat interface                              |
+| **Location** | Root or `.vscode/` folder                        | Root, `.github/`, inline comments                | Root or `.vscode/` folder                           |
 
 ---
 
@@ -433,7 +443,6 @@ Quick demo plan: show VS Code integration, suggestion modes, and settings.
 ::: notes
 Walk through installation, auth, and a quick coding session; encourage participants to follow along.
 :::
-
 
 ---
 
@@ -507,6 +516,7 @@ Assign finding a repo and preparing it for the legacy code session; remind them 
 
 ::: notes
 There are two speaker objectives for this exercise:
+
 1. Get everyone a feel for what it's like to develop assisted by Copilot
 2. Demonstrate the perils of vibe coding with instruction files and chat modes
 
@@ -517,7 +527,6 @@ At the end of the day prompt the AI to list all the reasons why the calculator i
 Prompt: Review the code in the class repo and list all the reasons why it is not evergreen.
 
 Use this as a teaching moment to show that code is already legacy and how tomorrow we work on making it evergreen and more importantly how to keep it evergreen.
-
 
 Here are some suggested prompts to guide the exercise:
 
@@ -548,8 +557,6 @@ Using tdd, create tests that verify that the log is loaded into memory when the 
 Can you list the last 10 prompts I've given?
 
 Load the log into memory when the calculator starts
-
-
 
 After running the calculator I expected to see a list of the calculations. but the calc-default.log does not contain them. is that what you expected? (REPL transcript)
 

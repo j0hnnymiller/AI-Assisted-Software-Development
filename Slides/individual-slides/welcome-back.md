@@ -18,14 +18,12 @@ theme: default
 paginate: true
 ---
 
-# Welcome Back! 👋
+## Welcome Back to AI-Assisted Software Development
 
-## AI-Assisted Software Development
-
-- 🎯 Ready to continue where we left off
-- 💡 Today's session builds on what we've covered
-- 🤝 We're all in this together — participation welcome
-- ❓ **Questions are always welcome — ask anytime!**
+- Ready to continue where we left off
+- Today's session builds on what we've covered
+- We're all in this together — participation welcome
+- **Questions are always welcome — ask anytime!**
 
 ::: notes
 Welcome everyone back to the session. Take a moment to let people settle in before diving into content. Acknowledge that it's great to see everyone back and express enthusiasm for the session ahead.

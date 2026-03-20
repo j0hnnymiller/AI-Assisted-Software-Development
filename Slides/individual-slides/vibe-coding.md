@@ -8,6 +8,7 @@ paginate: true
 
 Project Setup
 Adding Features
+
 - Basic Arithmetic - Addition, subtraction, multiplication, division
 - Clear / Reset Function - Quickly resets the current input or entire calculation
 - Decimal Support - Allows entry and computation with decimal numbers
@@ -16,15 +17,15 @@ Adding Features
 - Memory Functions (M+, M–, MR, MC) - Store, recall, add to, or clear memory values
 - Error Handling - Displays errors such as division by zero
 - Simple, Intuitive Interface - Numeric keypad, operation buttons, and display screen
-Test Automation
+  Test Automation
 - Code Coverage
-Dependency Management
-Comparing Implementations
-Chat Management
-Intro to Evergreen Software Development
+  Dependency Management
+  Comparing Implementations
+  Chat Management
+  Intro to Evergreen Software Development
 
 ::: notes
-This slide outlines the collaborative development process we’ll follow for building our calculator application — and mob programming will be central to how we work together.
+This slide outlines the collaborative development process we'll follow for building our calculator application — and mob programming will be central to how we work together.
 
 Except for Project Setup and Basic Arithmetic functions, the mob controls the direction of the implementation. The other labs are optional and can be used when the mob directs the development of that feature or as suggestions should the mob struggle for direction.
 
@@ -41,4 +42,3 @@ A .csproj file configured for a console application.
 A README.md with build and run instructions.
 The project should be ready to build and run from the command line.
 :::
-

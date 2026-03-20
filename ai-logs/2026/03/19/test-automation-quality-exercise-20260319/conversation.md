@@ -43,7 +43,7 @@ Propose quality gates to enforce improvements.
 Add provenance metadata to all new artifacts.
 Success Criteria
 Coverage gaps are identified and addressed
-AI‑generated tests are validated and correct
+AI-generated tests are validated and correct
 Linting and architectural issues are resolved
 Proposed quality gates are actionable and safe
 Provenance metadata is included
@@ -51,7 +51,7 @@ Provenance metadata is included
 ::: notes
 Encourage participants to treat this as a real modernization task.
 
-The goal is not to generate as many tests as possible – it's to improve the safety, clarity, and maintainability of the testing framework in a targeted, evergreen‑aligned way.
+The goal is not to generate as many tests as possible – it's to improve the safety, clarity, and maintainability of the testing framework in a targeted, evergreen-aligned way.
 :::
 ```
 

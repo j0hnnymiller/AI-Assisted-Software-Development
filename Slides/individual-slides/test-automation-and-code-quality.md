@@ -6,7 +6,7 @@ paginate: true
 
 ## Test Automation & Code Quality
 
-AI‑assisted test generation (unit, integration, E2E)
+AI-assisted test generation (unit, integration, E2E)
 Intelligent linting beyond static analysis
 Coverage analysis and test adequacy assessment
 Automated quality gates
@@ -21,13 +21,13 @@ AI accelerates these workflows but must be guided by strong guardrails.
 
 ---
 
-## AI‑Assisted Test Generation
+## AI-Assisted Test Generation
 
 AI can generate:
 Unit tests for functions, classes, and utilities
 Integration tests for module interactions
-End‑to‑end tests for full workflows
-Edge‑case tests and regression scenarios
+End-to-end tests for full workflows
+Edge-case tests and regression scenarios
 Contract tests for APIs and services
 Benefits
 Rapid coverage expansion
@@ -44,16 +44,16 @@ Emphasize that tests are only valuable when they reflect real business behavior,
 
 ## Intelligent Linting
 
-AI‑enhanced linting can detect:
+AI-enhanced linting can detect:
 Architectural violations
-Anti‑patterns
+Anti-patterns
 Unsafe refactors
 Missing documentation
 Inconsistent naming or domain terminology
 Why it matters
 Goes beyond syntax
 Enforces architectural guardrails
-Reduces long‑term technical debt
+Reduces long-term technical debt
 
 ::: notes
 Static analysis tools catch syntax and style issues, but AI can reason about architecture, intent, and domain rules.
@@ -68,8 +68,8 @@ This creates a deeper layer of quality enforcement.
 AI can help evaluate:
 Coverage gaps
 Missing edge cases
-Over‑testing of implementation details
-Under‑testing of business logic
+Over-testing of implementation details
+Under-testing of business logic
 Redundant or brittle tests
 Outcomes
 More meaningful coverage
@@ -90,7 +90,7 @@ Quality gates can enforce:
 Minimum test coverage
 Linting and architectural checks
 Provenance requirements
-PR‑level test generation
+PR-level test generation
 Risk scoring for changes
 Benefits
 Prevents regressions
@@ -100,6 +100,5 @@ Supports evergreen development
 ::: notes
 Quality gates turn best practices into automated enforcement.
 
-They ensure that every change – human or AI‑generated – meets the team’s standards before merging.
+They ensure that every change – human or AI-generated – meets the team's standards before merging.
 :::
-

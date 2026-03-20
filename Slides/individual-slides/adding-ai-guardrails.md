@@ -10,10 +10,10 @@ What are instructions, prompts, and Agents
 Creating instruction, prompt, and Agent files
 Meta prompts that generate these files
 Instructions for generating artifacts
-Enforcing provenance for AI‑assisted artifacts
+Enforcing provenance for AI-assisted artifacts
 
 ::: notes
-Introduce this module as the foundation for safe, predictable AI‑assisted development.
+Introduce this module as the foundation for safe, predictable AI-assisted development.
 
 Guardrails ensure that AI output is intentional, reviewable, and aligned with architectural and organizational standards.
 
@@ -25,9 +25,9 @@ These practices turn AI from a novelty into a disciplined engineering tool.
 ## Instructions, Prompts & Agents
 
 Definitions
-Instructions – Persistent rules that guide the model’s behavior
-Prompts – Task‑specific requests defining intent and constraints
-Agents – Pre‑configured personas optimized for workflows
+Instructions – Persistent rules that guide the model's behavior
+Prompts – Task-specific requests defining intent and constraints
+Agents – Pre-configured personas optimized for workflows
 
 ::: notes
 Clarify the distinctions: instructions are stable, prompts are ephemeral, and Agents define how the model behaves in a particular role.
@@ -42,8 +42,8 @@ Together, they form a layered control system that shapes AI behavior and reduces
 Why create files?
 Ensures repeatability
 Reduces token usage
-Provides version‑controlled guardrails
-Enables team‑wide consistency
+Provides version-controlled guardrails
+Enables team-wide consistency
 File types
 .github/instructions/myinstructions.instructions.md
 .github/copilot/Promptfiles/myprompt.prompt.md
@@ -105,9 +105,9 @@ Declare:
   Track revisions in version control
 
 ::: notes
-Provenance is essential for conformance, auditability, and long‑term maintainability.
+Provenance is essential for conformance, auditability, and long-term maintainability.
 
-It ensures teams know which artifacts were AI‑generated, which were human‑generated, and which were hybrid.
+It ensures teams know which artifacts were AI-generated, which were human-generated, and which were hybrid.
 :::
 
 ---
@@ -146,9 +146,9 @@ This exercise reinforces the importance of maintaining consistent AI-assisted ou
 The one instruction file that rules them all
 
 ::: notes
-Provenance is essential for conformance, auditability, and long‑term maintainability.
+Provenance is essential for conformance, auditability, and long-term maintainability.
 
-It ensures teams know which artifacts were AI‑generated, which were human‑generated, and which were hybrid.
+It ensures teams know which artifacts were AI-generated, which were human-generated, and which were hybrid.
 :::
 
 ---
@@ -311,7 +311,7 @@ Includes constraints and success criteria
 Avoids unnecessary context
 
 ::: notes
-This exercise builds foundational prompt‑writing skills. Encourage participants to choose a real task to make the exercise concrete.
+This exercise builds foundational prompt-writing skills. Encourage participants to choose a real task to make the exercise concrete.
 
 Prompt: Create a prompt file that creates an instruction file for evergreen software development
 :::
@@ -335,7 +335,7 @@ Reflects evergreen development values
 Provides clear guardrails
 
 ::: notes
-This reinforces the evergreen mindset and produces a reusable artifact for future AI‑assisted work.
+This reinforces the evergreen mindset and produces a reusable artifact for future AI-assisted work.
 
 Prompt: Submit the prompt #file:create-evergreen-software-instructions.prompt.md
 :::
@@ -349,7 +349,7 @@ Duration
 Objectives
 Define a persona optimized for brownfield work
 Emphasize safety and incrementalism
-Encode risk‑aware behaviors
+Encode risk-aware behaviors
 Activities
 Draft a Agent that:
 
@@ -375,8 +375,8 @@ This helps participants shape AI behavior to match brownfield realities.
 Duration
 20 minutes
 Objectives
-Use meta prompts to scale instruction‑file creation
-Capture module‑specific rules
+Use meta prompts to scale instruction-file creation
+Capture module-specific rules
 Encode domain and architectural constraints
 Activities
 Prompt Copilot to create instruction files for the standards and conventions of the tech stack
@@ -400,7 +400,7 @@ Create instruction files for the front-end technologies
 
 ---
 
-## Exercise: Context‑Related Issues
+## Exercise: Context-Related Issues
 
 Duration
 10 minutes
@@ -417,5 +417,5 @@ Success Criteria
 Correctly identified context gaps
 
 ::: notes
-This exercise builds intuition for context management—one of the most important AI‑era engineering skills.
+This exercise builds intuition for context management—one of the most important AI-era engineering skills.
 :::

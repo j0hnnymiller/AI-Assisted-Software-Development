@@ -19,8 +19,6 @@ theme: default
 paginate: true
 ---
 
-# GitHub Copilot Pricing & Licensing
-
 ### What you need to know for your organization
 
 ::: notes

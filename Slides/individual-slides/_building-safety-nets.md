@@ -108,18 +108,19 @@ Select a brownfield module or file.
 Identify existing safety nets (tests, reviews, documentation).
 Ask AI to identify missing or weak safety nets.
 Strengthen the safety nets by:
-  - Adding or updating tests
-  - Drafting review checklists
-  - Documenting architectural constraints
-Share findings with a partner for validation.
-Success Criteria
-Missing safety nets are clearly identified
-Proposed improvements are safe and incremental
-Test coverage or clarity is improved
-Review and documentation guardrails are strengthened
+
+- Adding or updating tests
+- Drafting review checklists
+- Documenting architectural constraints
+  Share findings with a partner for validation.
+  Success Criteria
+  Missing safety nets are clearly identified
+  Proposed improvements are safe and incremental
+  Test coverage or clarity is improved
+  Review and documentation guardrails are strengthened
 
 ::: notes
-Encourage participants to treat this as a real modernization planning session. The goal is not to fix everything — it’s to identify gaps and build a roadmap for safer development.
+Encourage participants to treat this as a real modernization planning session. The goal is not to fix everything — it's to identify gaps and build a roadmap for safer development.
 :::
 
 ---

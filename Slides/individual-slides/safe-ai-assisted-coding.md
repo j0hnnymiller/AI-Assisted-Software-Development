@@ -22,7 +22,7 @@ source: "johnmillerATcodemag-com"
 ## Safe AI-Assisted Coding
 
 Using feature flags to minimize risk
-As‑Is and To‑Be test suites
+As-Is and To-Be test suites
 Essential safety measures
 Building safety nets
 Exercises throughout
@@ -38,7 +38,7 @@ Welcome to this combined module on safe AI-assisted coding in brownfield codebas
 ## Safe Brownfield Coding
 
 Using feature flags to minimize risk
-As‑Is and To‑Be test suites
+As-Is and To-Be test suites
 Testing in production
 Retiring feature flags
 Exercise: Implementing a feature flag
@@ -61,7 +61,7 @@ Part 1 focuses on the mechanics of introducing change safely into a living codeb
 
 **Best practices**
 
-- Keep flags short‑lived
+- Keep flags short-lived
 - Name flags clearly
 - Document intent and retirement criteria
 
@@ -78,7 +78,7 @@ Feature flags are the safest mechanism for introducing AI-generated changes into
 - Prevents flag bloat
 - Reduces cognitive load
 - Simplifies code paths
-- Ensures long‑term maintainability
+- Ensures long-term maintainability
 
 **Retirement workflow**
 
@@ -93,15 +93,15 @@ Feature flags that are never retired become permanent complexity. This is especi
 
 ---
 
-## As‑Is and To‑Be Test Suites
+## As-Is and To-Be Test Suites
 
-**As‑Is tests**
+**As-Is tests**
 
 - Capture current behavior
 - Protect against regressions
 - Document legacy expectations
 
-**To‑Be tests**
+**To-Be tests**
 
 - Define desired future behavior
 - Guide modernization
@@ -117,17 +117,17 @@ The As-Is / To-Be pairing is a foundational technique for brownfield modernizati
 
 **Safe production testing techniques**
 
-- Feature‑flag‑controlled exposure
+- Feature-flag-controlled exposure
 - Shadow traffic
 - Canary releases
 - Observability dashboards
-- Error‑budget‑based rollout
+- Error-budget-based rollout
 
 **Benefits**
 
-- Real‑world validation
+- Real-world validation
 - Early detection of edge cases
-- Reduced risk of full‑scale failures
+- Reduced risk of full-scale failures
 
 ::: notes
 No test suite in development can fully replicate production conditions. Shadow traffic — routing a copy of real requests to the new code path without affecting users — is the gold standard for validating AI-generated changes. Canary releases expose a small percentage of users to new behavior while monitoring error budgets. Emphasize that these techniques are layered: feature flags enable canaries; observability dashboards tell you when to stop. Ask: what does your current observability stack capture, and is it sufficient to detect a regression introduced by AI-generated code?
@@ -143,7 +143,7 @@ No test suite in development can fully replicate production conditions. Shadow t
 
 - Learn how to introduce a safe, reversible change
 - Practice designing a feature flag workflow
-- Understand As‑Is and To‑Be test implications
+- Understand As-Is and To-Be test implications
 - Document rollout and retirement criteria
 
 **Activities**
@@ -151,7 +151,7 @@ No test suite in development can fully replicate production conditions. Shadow t
 1. Select a small brownfield function or module
 2. Identify a safe, incremental change to introduce
 3. Design a feature flag with name, description, rollout plan, rollback plan, and retirement criteria
-4. Write As‑Is and To‑Be test cases
+4. Write As-Is and To-Be test cases
 5. Document the change with provenance metadata
 
 **Success Criteria**: flag is scoped, rollout/rollback plans are explicit, tests are correct, retirement criteria are documented
@@ -178,10 +178,10 @@ Part 2 elevates from individual techniques to organizational practices. The open
 
 ## Backup & Rollback Strategies
 
-- Use branching strategies that isolate AI‑generated changes
+- Use branching strategies that isolate AI-generated changes
 - Commit early and often to create natural rollback points
 - Archive snapshots of critical modules before modernization
-- Ensure you can revert any AI‑assisted change without drama
+- Ensure you can revert any AI-assisted change without drama
 - Use feature flags to separate release from deployment
 
 ::: notes
@@ -192,7 +192,7 @@ Branching strategy is the first line of defense. AI-generated changes should liv
 
 ## Confidence Frameworks
 
-- Strong tests are the backbone of safe AI‑assisted refactoring
+- Strong tests are the backbone of safe AI-assisted refactoring
 - Unit, integration, and behavioral tests validate AI output
 - Coverage matters less than signal quality
 - Tests should detect regressions, not just assert happy paths
@@ -207,7 +207,7 @@ The closing question is the most important slide on this topic. A high coverage 
 ## Change Review Processes
 
 - Treat AI as a junior developer: everything gets reviewed
-- Use human‑in‑the‑loop validation for correctness and intent
+- Use human-in-the-loop validation for correctness and intent
 - Require architectural review for structural changes
 - Enforce standards through linters, static analysis, and policy checks
 - Leverage AI to reduce the review burden

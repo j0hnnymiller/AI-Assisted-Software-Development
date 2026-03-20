@@ -81,7 +81,7 @@ Transition: "Let's look at the structure..."
 
 ## Prompt File Structure
 
-- --mode: agentmodel: "anthropic/claude-3.5-sonnet@2024-10-22"tools: ["create", "edit", "read"]description: Generate comprehensive API documentationprompt_metadata: id: generate-api-docs title: API Documentation Generator category: documentation output_format: markdown---# Generate API Documentation## ContextCreate comprehensive API documentation from code analysis...## Requirements1. Analyze existing API endpoints2. Generate OpenAPI specifications3. Create developer-friendly guides4. Include example requests/responses## DeliverableGenerate `docs/api/` folder with complete documentation...
+- -- mode: agent model: "anthropic/claude-3.5-sonnet@2024-10-22" tools: ["create", "edit", "read"] description: Generate comprehensive API documentation prompt_metadata: id: generate-api-docs title: API Documentation Generator category: documentation output_format: markdown --- # Generate API Documentation ## Context Create comprehensive API documentation from code analysis... ## Requirements 1. Analyze existing API endpoints 2. Generate OpenAPI specifications 3. Create developer-friendly guides 4. Include example requests/responses ## Deliverable Generate `docs/api/` folder with complete documentation...
 
 ---
 
@@ -111,5 +111,3 @@ Vague or ambiguous instructions
 Missing prerequisite information
 No success criteria defined
 Overly complex single prompts (break them down)
-
----

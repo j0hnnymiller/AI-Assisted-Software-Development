@@ -19,19 +19,6 @@ theme: default
 paginate: true
 ---
 
-# VS Code Configuration Tips
-
-### Custom Keyboard Shortcuts & the Multi-command Extension
-
-::: notes
-Welcome the audience and frame the session. VS Code is infinitely configurable, but most developers use only default settings. Today we'll look at two high-leverage customizations: custom keyboard shortcuts and the Multi-command extension—especially useful for Marp slide authors.
-
-Timing: ~30 seconds on the title slide.
-Transition: "Let's start with why keyboard shortcuts matter."
-:::
-
----
-
 ## Why Customize VS Code?
 
 - Default shortcuts cover **common tasks** — not YOUR workflow

@@ -116,7 +116,7 @@ create a marp deck titled "Feature Flags and Test Suites" explaining the followi
 [2026-03-19T19:47:00-07:00] openai/gpt-5.4@unknown
 
 ```text
-I’m pulling the slide-specific rules and the current README structure first so the new deck lands in the right place, with the required provenance and repo bookkeeping.
+I'm pulling the slide-specific rules and the current README structure first so the new deck lands in the right place, with the required provenance and repo bookkeeping.
 ```
 
 ### Exchange 2
@@ -124,7 +124,7 @@ I’m pulling the slide-specific rules and the current README structure first so
 [2026-03-19T19:51:00-07:00] openai/gpt-5.4@unknown
 
 ```text
-I have the Marp rules. Next I’m checking the existing artifact index and naming patterns so I can add the new deck cleanly and consistently.
+I have the Marp rules. Next I'm checking the existing artifact index and naming patterns so I can add the new deck cleanly and consistently.
 ```
 
 ### Exchange 3
@@ -132,7 +132,7 @@ I have the Marp rules. Next I’m checking the existing artifact index and namin
 [2026-03-19T19:55:00-07:00] openai/gpt-5.4@unknown
 
 ```text
-I have enough context. I’m adding the deck, the required provenance logs, and a README entry in one pass so the artifact is complete and repository-compliant.
+I have enough context. I'm adding the deck, the required provenance logs, and a README entry in one pass so the artifact is complete and repository-compliant.
 ```
 
 ## Work Burst Closure

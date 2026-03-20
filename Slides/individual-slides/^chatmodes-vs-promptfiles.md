@@ -6,21 +6,22 @@ paginate: false
 ---
 
 # Chat Modes vs. Promptfiles
+
 ### How They Work Together in GitHub Copilot
 
 ---
 
 ## The Relationship
 
-- **Chat Modes** define *how Copilot behaves*
+- **Chat Modes** define _how Copilot behaves_
   - Persona, guardrails, reasoning style
   - Safety, compliance, and workflow rules
-  - Determines *when* a promptfile should be invoked
+  - Determines _when_ a promptfile should be invoked
 
-- **Promptfiles** define *what task Copilot performs*
+- **Promptfiles** define _what task Copilot performs_
   - Structured, reusable task templates
   - Output formats, constraints, and steps
-  - Executed *inside* a chat mode
+  - Executed _inside_ a chat mode
 
 ---
 
@@ -38,9 +39,9 @@ paginate: false
 ## Why This Matters
 
 - Clear separation of **behavior** (chat mode) and **task logic** (promptfile)
-- Predictable, auditable, version‑controlled workflows
+- Predictable, auditable, version-controlled workflows
 - Scalable across teams and repositories
-- Perfect for brownfield modernization and safe AI‑assisted development
+- Perfect for brownfield modernization and safe AI-assisted development
 
 ::: notes
 This slide explains the architectural separation between chat modes and promptfiles.

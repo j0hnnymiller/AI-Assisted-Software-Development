@@ -16,7 +16,7 @@ This slide frames Copilot as a tool that amplifies engineering discipline rather
 
 The message is: Copilot is not magic.
 
-It’s a reasoning engine that responds to structure, clarity, and context.
+It's a reasoning engine that responds to structure, clarity, and context.
 
 When managed well, it becomes a force multiplier.
 
@@ -53,6 +53,7 @@ Copilot can only “see” a limited amount of text at once
 Large files, long conversations, or complex repos can exceed context
 Important details may fall out of the window without you realizing
 Use these techniques to keep context focused:
+
 - Summaries
 - Instruction files
 - Modular prompts
@@ -61,9 +62,9 @@ Use these techniques to keep context focused:
 ::: notes
 Context windows are invisible but critical.
 
-When Copilot misses requirements or contradicts earlier decisions, it’s often because the relevant information fell outside its context window.
+When Copilot misses requirements or contradicts earlier decisions, it's often because the relevant information fell outside its context window.
 
-The solution is not to “prompt harder” – it’s to structure the environment so the model always has the right information in view.
+The solution is not to “prompt harder” – it's to structure the environment so the model always has the right information in view.
 :::
 
 ---
@@ -77,7 +78,7 @@ Use instruction files for stable rules and architectural boundaries
 Ask Copilot to explain its reasoning when correctness matters
 
 ::: notes
-Prompting is not about clever phrasing – it’s about clarity.
+Prompting is not about clever phrasing – it's about clarity.
 
 Copilot performs best when you define intent, boundaries, and examples.
 
@@ -91,25 +92,26 @@ Think of prompts as design briefs, not commands.
 ## Model Selection Strategies
 
 Different models excel at different tasks
-High‑end models (e.g., GPT‑4o, Claude Sonnet) are best for:
+High-end models (e.g., GPT-4o, Claude Sonnet) are best for:
+
 - Architecture
 - Refactoring
 - Complex reasoning
-- Multi‑file changes
-Lightweight models are ideal for:
+- Multi-file changes
+  Lightweight models are ideal for:
 - Boilerplate
 - Repetitive tasks
 - Quick iterations
-Match the model to the task, not the other way around
+  Match the model to the task, not the other way around
 
 ::: notes
 Model selection is a strategic decision.
 
-High‑end models are great for deep reasoning but can be slower or more expensive.
+High-end models are great for deep reasoning but can be slower or more expensive.
 
 Smaller models are fast and efficient but less capable.
 
 The key is to choose based on task complexity.
 
-For example: use a reasoning‑heavy model for designing a module, then switch to a lighter model for generating tests or scaffolding
+For example: use a reasoning-heavy model for designing a module, then switch to a lighter model for generating tests or scaffolding
 :::

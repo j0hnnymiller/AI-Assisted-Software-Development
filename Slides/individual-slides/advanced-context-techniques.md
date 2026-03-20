@@ -9,12 +9,12 @@ paginate: true
 Modern AI tools rely heavily on context quality
 Developers can shape context intentionally
 Reduces hallucinations, drift, and rework
-Strong context discipline is a core AI‑era skill
+Strong context discipline is a core AI-era skill
 
 ::: notes
 This slide frames the idea that AI quality is directly tied to context quality.
 
-Models don’t “understand” your repo – they interpret whatever you give them.
+Models don't “understand” your repo – they interpret whatever you give them.
 
 Advanced context techniques let you control what the model sees and how reliably it stays aligned with your architecture.
 :::
@@ -26,7 +26,7 @@ Advanced context techniques let you control what the model sees and how reliably
 How it helps
 Explicitly pull files into context
 Ensures the model references real code, not guesses
-Supports cross‑file refactoring and API consistency
+Supports cross-file refactoring and API consistency
 Reduces drift in large repos
 Examples
 #src/utils/date.ts
@@ -47,7 +47,7 @@ This is essential when you want the model to follow existing patterns or avoid h
 Why they matter
 Persistent, structured context containers
 Store architectural rules, domain models, coding standards
-Provide long‑term memory beyond a single prompt
+Provide long-term memory beyond a single prompt
 Ideal for instruction files and evergreen boundaries
 Use cases
 Architecture constraints
@@ -56,7 +56,7 @@ API contracts
 Coding conventions
 
 ::: notes
-Spaces and knowledge bases give you a stable context layer that doesn’t depend on prompt length.
+Spaces and knowledge bases give you a stable context layer that doesn't depend on prompt length.
 
 Instead of repeating instructions every session, you store them once and let Copilot reference them automatically.
 
@@ -67,18 +67,19 @@ This is especially valuable for brownfield systems with scattered tribal knowled
 
 ## Premium Usage Monitoring
 
-High‑end models = high reasoning cost
+High-end models = high reasoning cost
 Monitor usage patterns to avoid unnecessary calls
 Use a tiered strategy:
-  - Premium for architecture & refactoring
-  - Mid‑tier for implementation
-  - Lightweight for boilerplate
-Optimize prompts to reduce token consumption
+
+- Premium for architecture & refactoring
+- Mid-tier for implementation
+- Lightweight for boilerplate
+  Optimize prompts to reduce token consumption
 
 ::: notes
-Premium models are incredible, but they’re not free.
+Premium models are incredible, but they're not free.
 
-Monitoring usage helps teams understand where they’re over‑relying on heavyweight models.
+Monitoring usage helps teams understand where they're over-relying on heavyweight models.
 
 A tiered strategy ensures the right model is used for the right task, keeping costs predictable and output quality high.
 :::
@@ -89,14 +90,15 @@ A tiered strategy ensures the right model is used for the right task, keeping co
 
 Models have strict token limits
 Overflow causes silent failures:
-  - Missing requirements
-  - Contradictions
-  - Forgotten rules
-Techniques to stay within limits:
-  - Summaries
-  - Chunking
-  - Scoped prompts
-  - Instruction files
+
+- Missing requirements
+- Contradictions
+- Forgotten rules
+  Techniques to stay within limits:
+- Summaries
+- Chunking
+- Scoped prompts
+- Instruction files
 
 ::: notes
 Open by explaining that token limits are one of the most important but least visible constraints in AI-assisted development.
@@ -141,7 +143,7 @@ Overflow is subtle.
 
 The model behaves as if you never gave it the missing information.
 
-Developers often misinterpret this as stubbornness or randomness, but it’s simply the model losing context due to token pressure.
+Developers often misinterpret this as stubbornness or randomness, but it's simply the model losing context due to token pressure.
 
 These symptoms are your early warning signs.
 :::
@@ -151,7 +153,7 @@ These symptoms are your early warning signs.
 ## Technique: Summaries
 
 How Summaries Help
-Compress large files into short, high‑signal descriptions
+Compress large files into short, high-signal descriptions
 Preserve intent without overwhelming the context window
 Reuse summaries across prompts
 Reduce noise and improve model alignment
@@ -161,7 +163,7 @@ Summaries are your first line of defense.
 
 Instead of pasting entire files, summarize their purpose, interfaces, and constraints.
 
-Summaries dramatically reduce token usage while keeping the model aligned with the system’s intent.
+Summaries dramatically reduce token usage while keeping the model aligned with the system's intent.
 
 They also become reusable context anchors for future prompts.
 :::
@@ -171,7 +173,7 @@ They also become reusable context anchors for future prompts.
 ## Technique: Chunking
 
 How Chunking Works
-Break large tasks into smaller, self‑contained steps
+Break large tasks into smaller, self-contained steps
 Provide only the relevant portion of the code
 Validate each chunk before moving on
 Prevents the model from being overloaded
@@ -189,7 +191,7 @@ This keeps each prompt within safe token limits and makes the output easier to r
 ## Technique: Scoped Prompts
 
 Benefits
-Limit the model’s focus to a single module or function
+Limit the model's focus to a single module or function
 Reduce irrelevant context
 Improve accuracy and reduce hallucinations
 Keep token usage predictable
@@ -199,7 +201,7 @@ Scoped prompts are about intentionality.
 
 Tell the model exactly what part of the system to focus on.
 
-This reduces token usage and improves reliability because the model isn’t trying to reason about the entire codebase at once.
+This reduces token usage and improves reliability because the model isn't trying to reason about the entire codebase at once.
 
 It also reduces hallucinations by narrowing the reasoning space.
 :::
@@ -212,14 +214,12 @@ Why They Matter
 Move stable rules out of the active prompt
 Provide persistent architectural and style guidance
 Reduce repeated tokens across sessions
-Keep prompts short and high‑signal
+Keep prompts short and high-signal
 
 ::: notes
 Instruction files are a powerful way to reduce token load.
 
 Instead of repeating architectural rules or coding standards in every prompt, store them in a persistent instruction file.
 
-This frees up space for task‑specific context and keeps the model aligned with your evergreen architecture.
+This frees up space for task-specific context and keeps the model aligned with your evergreen architecture.
 :::
-
----

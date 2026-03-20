@@ -2,19 +2,19 @@
 marp: true
 theme: default
 paginate: true
-title: Multi‑Model Implementation Comparison
+title: Multi-Model Implementation Comparison
 ---
 
-# **Multi‑Model Implementation Comparison**
+# **Multi-Model Implementation Comparison**
 
 - Implementing changes with different AI models
 - Comparing approaches and outcomes
 - Risk assessment and quality evaluation
 - Best practice synthesis
-- Exercises for hands‑on practice
+- Exercises for hands-on practice
 
 ::: notes
-Introduce this module as a way to help teams understand how different AI models behave when given the same task. Emphasize that multi‑model comparison is a powerful guardrail: it reduces hallucinations, improves quality, and helps teams choose the right model for the right job.
+Introduce this module as a way to help teams understand how different AI models behave when given the same task. Emphasize that multi-model comparison is a powerful guardrail: it reduces hallucinations, improves quality, and helps teams choose the right model for the right job.
 :::
 
 ---
@@ -22,12 +22,14 @@ Introduce this module as a way to help teams understand how different AI models 
 # **Implementing Changes With Different AI Models**
 
 ### Why use multiple models?
+
 - Different reasoning styles
 - Different strengths (refactoring, documentation, architecture)
-- Cross‑validation reduces risk
+- Cross-validation reduces risk
 - Helps detect missing context or contradictions
 
 ### Typical use cases
+
 - Refactoring comparisons
 - Documentation consistency checks
 - Architecture proposal validation
@@ -41,6 +43,7 @@ Explain that no single model is perfect. Using multiple models gives teams a bro
 # **Comparing Approaches & Outcomes**
 
 ### What to compare
+
 - Code structure and clarity
 - Architectural alignment
 - Test quality
@@ -48,12 +51,13 @@ Explain that no single model is perfect. Using multiple models gives teams a bro
 - Risk level of proposed changes
 
 ### Benefits
+
 - Identifies the safest implementation
 - Surfaces hidden assumptions
-- Highlights model‑specific biases
+- Highlights model-specific biases
 
 ::: notes
-Encourage participants to treat model outputs like multiple drafts from different engineers. The goal is not to pick a winner — it’s to synthesize the best ideas.
+Encourage participants to treat model outputs like multiple drafts from different engineers. The goal is not to pick a winner — it's to synthesize the best ideas.
 :::
 
 ---
@@ -61,12 +65,14 @@ Encourage participants to treat model outputs like multiple drafts from differen
 # **Risk Assessment & Quality Evaluation**
 
 ### Risk indicators
+
 - Missing tests
 - Large or unnecessary refactors
 - Violations of instruction files
 - Unclear or undocumented behavior
 
 ### Quality indicators
+
 - Small, incremental changes
 - Clear reasoning
 - Strong test coverage
@@ -81,18 +87,20 @@ Reinforce that risk assessment is essential in brownfield systems. Even if a mod
 # **Best Practice Synthesis**
 
 ### Combine the strengths of each model
+
 - Use one model for architecture
 - Another for implementation
 - Another for documentation
-- Cross‑validate tests and reasoning
+- Cross-validate tests and reasoning
 
 ### Outcome
+
 - Higher quality
 - Lower risk
 - More predictable modernization
 
 ::: notes
-Explain that synthesis is the real power of multi‑model workflows. Teams can build a composite solution that is better than any single model’s output.
+Explain that synthesis is the real power of multi-model workflows. Teams can build a composite solution that is better than any single model's output.
 :::
 
 ---
@@ -100,14 +108,17 @@ Explain that synthesis is the real power of multi‑model workflows. Teams can b
 # **Exercise: Prompt Multiple Models to Address Technical Debt**
 
 ### Duration
+
 15 minutes
 
 ### Objectives
+
 - Compare outputs from different models
 - Identify strengths and weaknesses
 - Evaluate risk and quality
 
 ### Activities
+
 1. Select a small technical debt item.
 2. Prompt two or more models to propose a fix.
 3. Compare outputs for:
@@ -118,6 +129,7 @@ Explain that synthesis is the real power of multi‑model workflows. Teams can b
 4. Synthesize the best elements into a final solution.
 
 ### Success Criteria
+
 - Differences between models are clearly identified
 - Risks and strengths are evaluated
 - Final synthesized solution is safe and incremental
@@ -132,27 +144,31 @@ Encourage participants to think like reviewers comparing multiple PRs. The goal 
 # **Exercise: Assigning an Issue to Multiple Models**
 
 ### Duration
+
 10 minutes
 
 ### Objectives
+
 - Practice delegating the same issue to different models
 - Evaluate how each model interprets constraints
 - Identify missing context
 
 ### Activities
-1. Create a GitHub‑style issue describing a technical debt item.
+
+1. Create a GitHub-style issue describing a technical debt item.
 2. Assign the issue to two different models.
 3. Compare their proposed remediation plans.
 4. Identify missing context or contradictions.
 
 ### Success Criteria
-- Issue is clear and well‑structured
+
+- Issue is clear and well-structured
 - Each model produces a distinct approach
 - Missing context is identified and documented
 - A preferred plan is selected based on safety and clarity
 
 ::: notes
-This exercise helps participants see how different models interpret the same instructions — a key skill for multi‑model workflows.
+This exercise helps participants see how different models interpret the same instructions — a key skill for multi-model workflows.
 :::
 
 ---
@@ -160,15 +176,18 @@ This exercise helps participants see how different models interpret the same ins
 # **Exercise: Delegating Work to Multiple Models**
 
 ### Duration
+
 20 minutes
 
 ### Objectives
-- Practice multi‑model delegation
-- Evaluate multi‑step reasoning
+
+- Practice multi-model delegation
+- Evaluate multi-step reasoning
 - Synthesize best practices into a unified plan
 
 ### Activities
-1. Select a multi‑step modernization task.
+
+1. Select a multi-step modernization task.
 2. Ask multiple models to:
    - Analyze the problem
    - Propose a remediation plan
@@ -178,8 +197,9 @@ This exercise helps participants see how different models interpret the same ins
 4. Synthesize a final, safe, incremental plan.
 
 ### Success Criteria
-- Multi‑model differences are clearly understood
-- Final plan is incremental, reversible, and well‑tested
+
+- Multi-model differences are clearly understood
+- Final plan is incremental, reversible, and well-tested
 - Documentation and provenance are included
 - Risks are identified and mitigated
 

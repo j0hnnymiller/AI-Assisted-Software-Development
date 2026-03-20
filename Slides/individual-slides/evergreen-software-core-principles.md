@@ -6,9 +6,9 @@ paginate: true
 
 ## Evergreen Software Development - Core Principles
 
-Intent‑First Design
+Intent-First Design
 
-- Define the system’s purpose, invariants, and boundaries before writing code to ensure long‑term clarity.
+- Define the system's purpose, invariants, and boundaries before writing code to ensure long-term clarity.
   Stable Interfaces, Evolving Internals
 - Keep contracts predictable while allowing implementations to improve continuously.
   Continuous Regeneration with Guardrails
@@ -16,7 +16,7 @@ Intent‑First Design
   Modular, Replaceable Components
 - Structure the system so any part can be regenerated, swapped, or upgraded without cascading breakage.
   Lifecycle Governance
-- Maintain quality through automated tests, versioning discipline, and human‑in‑the‑loop validation.
+- Maintain quality through automated tests, versioning discipline, and human-in-the-loop validation.
   ::: notes
   Introduce Evergreen Software Development as a philosophy for building systems that can evolve indefinitely without degrading. This is crucial for AI-assisted development.
 
@@ -44,11 +44,11 @@ Intent Rot
   Unstable or Leaky Interfaces
 - APIs, data contracts, and boundaries change unpredictably, causing cascading breakage when internals evolve.
   Tightly Coupled Architecture
-- Components depend on each other’s internal details, preventing isolated regeneration or replacement.
+- Components depend on each other's internal details, preventing isolated regeneration or replacement.
   Insufficient Guardrails
-- Missing tests, specs, or validation layers mean AI‑assisted regeneration can’t be trusted to preserve behavior.
-  One‑Off Patches and Drift
-- Ad‑hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
+- Missing tests, specs, or validation layers mean AI-assisted regeneration can't be trusted to preserve behavior.
+  One-Off Patches and Drift
+- Ad-hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
   ::: notes
   Explain the common anti-patterns that prevent software from being evergreen. These are the enemies of long-term maintainability.
 

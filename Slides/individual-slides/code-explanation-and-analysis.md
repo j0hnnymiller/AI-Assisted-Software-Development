@@ -44,8 +44,6 @@ theme: default
 paginate: true
 ---
 
-# Code Explanation and Analysis
-
 ## Understanding Unfamiliar Code with GitHub Copilot
 
 Section 10 · AI-Assisted Software Development

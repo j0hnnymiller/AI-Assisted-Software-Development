@@ -10,10 +10,10 @@ Automated README and documentation updates
 Architecture diagram generation
 Complex code explanation and mapping
 Identifying technical debt hotspots
-Exercises for hands‑on practice
+Exercises for hands-on practice
 
 ::: notes
-Introduce this module as a practical demonstration of how AI can accelerate documentation, analysis, and modernization in brownfield systems. Emphasize that documentation is not a side activity — it is a core guardrail for safe AI‑assisted development.
+Introduce this module as a practical demonstration of how AI can accelerate documentation, analysis, and modernization in brownfield systems. Emphasize that documentation is not a side activity — it is a core guardrail for safe AI-assisted development.
 :::
 
 ---
@@ -22,10 +22,11 @@ Introduce this module as a practical demonstration of how AI can accelerate docu
 
 Capabilities
 Generate or update README files
-Create module‑level documentation
+Create module-level documentation
 Produce API references and usage examples
 Keep documentation aligned with code changes
-  - Create a documentation instruction file
+
+- Create a documentation instruction file
 
 ::: notes
 Explain that AI can maintain documentation continuously, reducing drift between code and docs.
@@ -48,7 +49,7 @@ Create a prompt file that creates an instruction file for documenting the projec
 ## Architecture Diagram Generation
 
 What AI can generate
-High‑level system diagrams
+High-level system diagrams
 Module dependency graphs
 Data flow diagrams
 Deployment topologies
@@ -71,7 +72,7 @@ AI can help with:
 Explaining unfamiliar or legacy code
 Mapping call chains and dependencies
 Identifying hidden coupling
-Translating code into human‑readable narratives
+Translating code into human-readable narratives
 
 ::: notes
 This is one of the most powerful uses of AI in brownfield modernization.
@@ -87,7 +88,7 @@ AI can detect:
 Outdated patterns
 Duplicate logic
 Missing tests
-High‑complexity functions
+High-complexity functions
 Security risks
 
 ::: notes
@@ -105,20 +106,21 @@ Duration
 Objectives
 Practice generating documentation for legacy code
 Identify missing or unclear areas
-Produce high‑signal summaries
+Produce high-signal summaries
 Activities
 Select a brownfield module or file
 Ask AI to generate:
-  - A summary
-  - Key responsibilities
-  - Inputs/outputs
-  - Known risks
-Add provenance metadata
-Review with a partner
-Success Criteria
-Documentation is accurate and concise
-Risks and gaps are clearly identified
-Provenance is included
+
+- A summary
+- Key responsibilities
+- Inputs/outputs
+- Known risks
+  Add provenance metadata
+  Review with a partner
+  Success Criteria
+  Documentation is accurate and concise
+  Risks and gaps are clearly identified
+  Provenance is included
 
 ::: notes
 This exercise helps participants build confidence in using AI to document unfamiliar code safely and quickly.
@@ -144,7 +146,7 @@ They also help prevent tribal knowledge loss.
 
 ## Create Architecture Diagrams
 
-AI‑generated diagrams include:
+AI-generated diagrams include:
 System boundaries
 Module interactions
 Data flows
@@ -162,7 +164,7 @@ AI can update:
 CHANGELOGs
 CONTRIBUTING guides
 API references
-Module‑level docs
+Module-level docs
 
 ::: notes
 AI helps keep documentation evergreen by updating it alongside code changes.
@@ -172,9 +174,9 @@ This reduces drift and improves maintainability.
 
 ---
 
-## Cross‑Validate With Multiple AI Models
+## Cross-Validate With Multiple AI Models
 
-Why cross‑validate?
+Why cross-validate?
 Reduce hallucinations
 Catch inconsistencies
 Improve accuracy
@@ -183,7 +185,7 @@ Validate architectural assumptions
 ::: notes
 Different models have different strengths.
 
-Cross‑validation is a powerful guardrail for correctness, especially in brownfield systems.
+Cross-validation is a powerful guardrail for correctness, especially in brownfield systems.
 :::
 
 ---
@@ -211,5 +213,3 @@ Documentation includes provenance
 ::: notes
 This exercise reinforces the importance of guardrails and helps participants practice applying them to real code.
 :::
-
----

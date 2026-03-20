@@ -22,6 +22,7 @@ Introduce this module as the backbone of safe AI-assisted development. Testing f
 # **Generating Comprehensive Test Suites**
 
 ### AI can help generate:
+
 - Unit tests
 - Integration tests
 - End-to-end tests
@@ -29,6 +30,7 @@ Introduce this module as the backbone of safe AI-assisted development. Testing f
 - Edge-case and regression tests
 
 ### Benefits
+
 - Faster coverage expansion
 - Consistent test structure
 - Reduced onboarding time
@@ -42,6 +44,7 @@ Explain that AI accelerates test creation dramatically, but humans still validat
 # **Managing Test Suites Over Time**
 
 ### Key Practices
+
 - Regularly prune obsolete tests
 - Update tests alongside code changes
 - Maintain clear naming and structure
@@ -57,12 +60,14 @@ Test suites age just like code. Without maintenance, they become brittle, noisy,
 # **Test Review & Validation Strategies**
 
 ### AI-assisted review can:
+
 - Detect missing assertions
 - Identify redundant tests
 - Suggest edge cases
 - Flag inconsistent patterns
 
 ### Human reviewers focus on:
+
 - Intent correctness
 - Business logic validation
 - Architectural alignment
@@ -76,13 +81,14 @@ AI is excellent at pattern detection and coverage suggestions, but humans valida
 # **Balancing Test Coverage with Maintainability**
 
 ### Principles
+
 - Aim for meaningful coverage, not maximal coverage
 - Prioritize high-risk and high-change areas
 - Avoid over-testing implementation details
 - Keep tests readable and maintainable
 
 ::: notes
-High coverage numbers can be deceptive. The goal is not 100% coverage — it’s meaningful coverage that protects behavior without creating maintenance burdens. Encourage teams to focus on value, not vanity metrics.
+High coverage numbers can be deceptive. The goal is not 100% coverage — it's meaningful coverage that protects behavior without creating maintenance burdens. Encourage teams to focus on value, not vanity metrics.
 :::
 
 ---
@@ -90,15 +96,18 @@ High coverage numbers can be deceptive. The goal is not 100% coverage — it’s
 # **Exercise: Strengthening Your Testing Framework**
 
 ### Duration
+
 20 minutes
 
 ### Objectives
+
 - Identify gaps in an existing test suite
 - Use AI to generate missing tests
 - Improve maintainability and structure
 - Validate tests for correctness and intent
 
 ### Activities
+
 1. Select a brownfield module or function.
 2. Review existing tests for:
    - Coverage gaps
@@ -110,11 +119,12 @@ High coverage numbers can be deceptive. The goal is not 100% coverage — it’s
 6. Add provenance metadata to all new tests.
 
 ### Success Criteria
+
 - Coverage gaps are identified and addressed
 - AI-generated tests are validated and correct
 - Test suite readability and structure improve
 - Provenance metadata is included
 
 ::: notes
-Encourage participants to treat this as a real modernization task. The goal is not to generate as many tests as possible — it’s to improve the safety and clarity of the testing framework in a targeted, maintainable way.
+Encourage participants to treat this as a real modernization task. The goal is not to generate as many tests as possible — it's to improve the safety and clarity of the testing framework in a targeted, maintainable way.
 :::

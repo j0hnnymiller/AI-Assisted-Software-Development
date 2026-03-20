@@ -115,8 +115,6 @@ backgroundColor: #ffffff
 
 ---
 
-# Feature Flags and Test Suites
-
 ## Safe Delivery for Work in Progress
 
 Section 4 · 00:45:12 - 00:52:12
@@ -287,7 +285,7 @@ Transition: now introduce To-Be suites as the way to validate future behavior wi
 ::: notes
 Explain that To-Be tests are forward-looking. They are not the production gate while the feature is still in progress.
 
-Useful phrasing: “As-Is tells us whether we can ship now. To-Be tells us whether we’re getting closer to what we want to ship later.”
+Useful phrasing: “As-Is tells us whether we can ship now. To-Be tells us whether we're getting closer to what we want to ship later.”
 
 Suggested timing: 1 minute.
 Transition: show how the pipeline should execute both suites without mixing their purpose.
