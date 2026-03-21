@@ -16,16 +16,6 @@ Outline governance, admin controls, and adoption factors (training, policy, deve
 
 ---
 
-## What Prompted This Deck?
-
-I want to know how GitHub Copilot protects the intellectual property in the code and documentation submitted to the model. Is this information isolated from other users? Is it incorporated into the model and leaked to other users? How can I protect my IP while using GitHub Copilot?
-
-::: notes
-Explain the motivating questions about IP, privacy, and safe use that led to this presentation.
-:::
-
----
-
 ## Benefits for Organizations
 
 Accelerated Development

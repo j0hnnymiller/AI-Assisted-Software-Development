@@ -103,15 +103,10 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Template-aligned with objectives, activities, success criteria, and facilitator notes
   - Provenance: [Chat log](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/summary.md)
 
-- **Exercise: Creating Prompt Files** ([`Slides/individual-slides/exercise-creating-prompt-files.md`](Slides/individual-slides/exercise-creating-prompt-files.md))
-  - Exercise slide covering baseline prompt execution, guided rerun with instruction files, and structured comparison of the resulting outputs
-  - Emphasizes prompt structure, context isolation, reproducibility, and the impact of instruction files on output quality
-  - Provenance: [Chat log](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/summary.md)
-
-- **Creating Instruction Files from Prompts** ([`Slides/individual-slides/creating-instruction-files-from-prompts.md`](Slides/individual-slides/creating-instruction-files-from-prompts.md))
-  - 7-slide Marp deck covering prompt execution, generated instruction review, inference as a drafting accelerator, and prompt-first refinement strategy
-  - Emphasizes regenerating from the prompt to preserve source control history, reproducibility, and provenance quality
-  - Provenance: [Chat log](ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/conversation.md) | [Summary](ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/summary.md)
+- **Exercise: Addressing Technical Debt** ([`Slides/individual-slides/exercise-addressing-technical-debt.md`](Slides/individual-slides/exercise-addressing-technical-debt.md))
+  - Three-slide exercise deck covering prompt authoring, issue assignment, and multi-step delegation for technical debt remediation with Copilot
+  - Template-aligned structure with facilitator notes for classroom delivery and review checkpoints
+  - Provenance: [Chat log](ai-logs/2026/03/20/exercise-addressing-technical-debt-20260320/conversation.md) | [Summary](ai-logs/2026/03/20/exercise-addressing-technical-debt-20260320/summary.md)
 
 - **Organizational vs. Repository Instruction Files Deck** ([`Slides/individual-slides/organizational-vs-repository-instruction-files.md`](Slides/individual-slides/organizational-vs-repository-instruction-files.md))
   - 7-slide Marp deck covering enterprise-tier capabilities, path-scoped instruction files, and folder-level technology-specific rules

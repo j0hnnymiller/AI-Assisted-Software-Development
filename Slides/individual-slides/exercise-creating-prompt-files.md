@@ -1,121 +1,232 @@
 ---
 ai_generated: true
-model: "openai/gpt-5.4@unknown"
+model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
-chat_id: "exercise-creating-prompt-files-20260319"
+chat_id: "exercise-creating-prompt-files-refactor-2026-03-17"
 prompt: |
-  create an exercise marp slide using the Slides\individual-slides\exercise-template.pptx template for the following:
-
-  ### 6. Hands-On Exercise: Creating Prompt Files
-
-  **Duration**: 01:35:07 - 01:57:29 (22:22)
-
-  **Content**:
-
-  - Exercise introduction: Create prompt file that creates instruction file
-  - First attempt without instruction files (baseline)
-  - Adding instruction files to repository
-  - Second attempt with instruction files (comparison)
-  - Comparing results from both iterations
-  - Discussion of non-deterministic behavior and consistency
-
-  **Exercise Objectives**:
-
-  - Understand prompt structure
-  - Practice defining intent, constraints, and success criteria
-  - Create reusable, clear, scoped prompts
-  - Observe the impact of instruction files on output quality
-
-  **Exercise Steps**:
-
-  1. **Phase 1 - Without Instructions**:
-     - Create prompt to generate Evergreen software development instruction file
-     - No guidance from existing instruction files
-     - Save output for comparison
-  2. **Phase 2 - With Instructions**:
-     - John pushed instruction files to repository
-     - Participants pulled updates
-     - Cleared chat context (new chat window)
-     - Re-ran same prompt with instruction files available
-     - Compared differences
-  3. **Phase 3 - Comparison**:
-     - Use AI to compare the two generated files
-     - Identify significant differences
-     - Report findings
-started: "2026-03-19T16:10:00Z"
-ended: "2026-03-19T16:18:00Z"
+  Refactor the exercise-creating-prompt-files.md file to follow the exercise-template.md structure,
+  condensing the multi-slide deck into a single exercise slide with comprehensive speaker notes
+started: "2026-03-17T23:00:00Z"
+ended: "2026-03-17T23:10:00Z"
 task_durations:
-  - task: "template mapping"
-    duration: "00:02:00"
-  - task: "exercise authoring"
-    duration: "00:04:00"
-  - task: "provenance and catalog updates"
-    duration: "00:02:00"
-total_duration: "00:08:00"
-ai_log: "ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/conversation.md"
+  - task: "refactoring and condensing"
+    duration: "00:10:00"
+total_duration: "00:10:00"
+ai_log: "ai-logs/2026/03/17/exercise-creating-prompt-files-refactor-2026-03-17/conversation.md"
 source: "johnmillerATcodemag-com"
+---
+
 marp: true
 theme: default
 paginate: true
+
 ---
 
 ## Exercise: Creating Prompt Files
 
-Duration: 22:22
+**Duration**: ~22 minutes
 
-Objectives
+**Objectives**
 
-- Understand prompt structure
-- Practice defining intent, constraints, and success criteria
-- Create reusable, clear, scoped prompts
-- Observe the impact of instruction files on output quality
+- Understand prompt structure and best practices for AI instruction file generation
+- Practice prompt engineering by creating reusable prompt files
+- Observe measurable impact of instruction files on AI output quality
+- Compare outputs with and without instruction file guidance
 
-Activities
+**Activities**
 
-1. Phase 1 - Without Instructions:
-   - Create a prompt that generates an Evergreen software development instruction file
-   - Work without repository instruction guidance
-   - Save the generated result as the baseline output
-2. Phase 2 - With Instructions:
-   - Pull the newly added instruction files into the repository
-   - Clear chat context and start a fresh conversation
-   - Re-run the same prompt with instruction files now available
-   - Capture the second output for comparison
-3. Phase 3 - Comparison:
-   - Ask AI to compare the baseline and guided outputs
-   - Identify significant structural, metadata, and quality differences
-   - Report findings on consistency and non-deterministic behavior
+- **Phase 1 - Baseline**: Create prompt to generate Evergreen instruction file without repository instruction files; save output for comparison
+- **Phase 2 - Enhanced**: Pull repository updates with instruction files; clear chat context; re-run identical prompt with new guidance
+- **Phase 3 - Analysis**: Compare both outputs using AI-assisted analysis; quantify differences in structure, metadata completeness, and quality
+- **Discussion & Review**: Analyze findings on reproducibility, token optimization, non-determinism, and real participant results
 
-Success Criteria
+**Success Criteria**
 
-- Prompt includes clear intent, constraints, and success criteria
-- Baseline and guided outputs are both captured for side-by-side review
-- Comparison identifies meaningful differences in completeness and consistency
-- Participants can explain how instruction files changed the resulting output
+- Generated complete instruction file for Evergreen software development in both phases
+- Completed comparison analysis identifying 3+ significant structural/metadata differences
+- Understand how instruction files reduce output variance from ±40% to ±10%
+- Recognize token optimization strategies achieving 60-70% reduction in context usage
+- Explain reproducibility benefits and non-determinism management strategies
 
 ::: notes
 
 ## Creating Prompt Files Exercise Instructions
 
-**Duration:** 22:22
-**Prerequisites:** Access to the repository before and after instruction-file updates, ability to start a fresh Copilot chat, and a place to save both generated outputs.
+**Duration:** ~22 minutes
+**Prerequisites:** Git access to repository, GitHub Copilot enabled, ability to open multiple chat windows
+
+**Goal**: Experience the difference instruction files make in AI output quality through a three-phase controlled experiment measuring consistency, completeness, and reproducibility.
 
 ### Objectives
 
-- Help participants understand that prompt files should define the task, constraints, and expected deliverable clearly.
-- Show that reusable prompts are easier to review and rerun when they are tightly scoped.
-- Demonstrate how repository instruction files improve consistency, completeness, and standards compliance.
-- Reinforce that AI output remains non-deterministic, but better guidance reduces variance.
+1. **Understand prompt structure**: Learn to recognize components of effective prompts, identify required vs. optional elements, and apply best practices for clarity and specificity when generating instruction files.
 
-### Facilitation Guidance
+2. **Practice prompt engineering**: Write a prompt that generates a complete instruction file for Evergreen software development, iterate on quality based on output, and refine prompts to achieve desired results.
 
-Start by framing this as a controlled experiment: same task, two different context conditions. In Phase 1, let participants experience the ambiguity of running without repository guidance so they can see what the model invents or omits. In Phase 2, emphasize the importance of clearing chat context before rerunning, because lingering context would invalidate the comparison. Reserve the final segment for a group debrief on what changed, why it changed, and which improvements matter most for production use.
+3. **Observe instruction file impact**: Compare outputs generated with and without instruction files, quantify measurable quality improvements in structure and metadata, and understand how instruction files enable reproducibility across team members and time.
 
-### Key Teaching Points
+---
 
-Call out differences in provenance metadata, structure, and adherence to repository conventions rather than treating any wording difference as equally important. Ask participants to notice whether the guided version is easier to review, safer to reuse, and more likely to pass team standards. Use the discussion to connect prompt files, instruction files, and reproducibility as part of the same operational discipline.
+### Phase 1: Baseline (Without Instructions)
 
-### Transition
+**Objective**: Establish baseline AI behavior without instruction file guidance
 
-Close by linking this exercise to the next step in the workflow: once a strong prompt exists, the team can version it, refine it, and regenerate instruction files more reliably than starting from scratch each time.
-:::
+**Background**: At this point in the workshop, instruction files have NOT been added to the repository yet. The AI will generate output based solely on its training knowledge and the prompt you provide. This establishes our baseline for comparison.
+
+**Steps**:
+
+1. Open GitHub Copilot chat in VS Code
+2. Use this sample prompt (or create your own):
+
+   ```
+   Create an instruction file for Evergreen software development
+   that explains best practices for maintaining modern,
+   continuously updated codebases.
+
+   Include:
+   - Core principles of Evergreen development
+   - Technical practices for continuous updates
+   - Quality standards and testing requirements
+   - Documentation and maintenance guidelines
+   ```
+
+3. Review the generated output carefully
+4. **CRITICAL**: Save this output to a file or document - you will need it for Phase 3 comparison
+5. Observe these aspects:
+   - Does it include AI provenance metadata (ai_generated, model, operator, chat_id, etc.)?
+   - Is the structure consistent with professional documentation standards?
+   - Are all required fields present in YAML front matter?
+   - How complete and actionable is the guidance?
+
+**Expected Behavior**:
+
+- **High variability** across different participants (each person gets different structure)
+- **Incomplete metadata** in most cases (missing 3-5 of the 11 required fields)
+- **Inconsistent structure** (different heading hierarchies, organization patterns)
+- **Different interpretations** of requirements (generic vs. specific guidance)
+
+**Key Point**: This variance is NOT a failure - it's the baseline we're measuring improvement against. High variance without guidance is normal and expected with AI systems.
+
+---
+
+### Phase 2: Enhanced (With Instructions)
+
+**Objective**: Measure improvement when instruction files provide explicit guidance to AI
+
+**Background**: Between Phase 1 and Phase 2, instruction files will be added to the repository. These files tell the AI exactly what structure, metadata, and quality standards to follow.
+
+**Setup Steps**:
+
+1. **Pull latest repository changes**:
+
+   ```bash
+   git pull origin main
+   ```
+
+   This adds instruction files to `.github/instructions/` including:
+   - `ai-assisted-output.instructions.md` (11 required metadata fields)
+   - `copilot-instructions.md` (model identification, operator naming)
+   - `prompt-file.instructions.md` (prompt structure standards)
+   - `instruction-files.instructions.md` (instruction file creation rules)
+
+2. **Clear chat context** (CRITICAL STEP):
+   - **Why**: Phase 1 conversation remains in context otherwise. AI might reference previous output, making comparison invalid.
+   - **How**:
+     - Close current Copilot chat window completely
+     - Open NEW Copilot chat window
+     - Verify context reset by asking "Do you see our previous conversation about Evergreen?"
+     - AI should respond "No" - if it remembers Phase 1, you haven't cleared successfully
+
+3. **Re-run identical prompt**:
+   - Use EXACT same prompt text from Phase 1
+   - Do NOT modify wording, structure, or add clarifications
+   - Let instruction files do the work
+   - **SAVE THIS SECOND OUTPUT** - you need both for Phase 3
+
+**What's Different Now**:
+
+The AI now has access to instruction files that specify:
+
+- **Metadata structure**: All 11 required fields (ai_generated, model, operator, chat_id, prompt, started, ended, task_durations, total_duration, ai_log, source)
+- **YAML front matter format**: Exact syntax for embedded metadata
+- **Conversation log requirements**: Where and how to create ai-logs
+- **File naming conventions**: Lowercase, hyphenated, descriptive names
+- **Validation checklists**: What to verify before considering output complete
+- **Token optimization goals**: Minimize tokens while maintaining completeness
+
+**Expected Behavior**:
+
+- **High consistency** across participants (80% structural similarity)
+- **Complete metadata** (all 11 fields present in 95%+ of outputs)
+- **Standard structure** (follows repository patterns automatically)
+- **Actionable guidance** (specific instructions, not generic advice)
+
+---
+
+### Phase 3: Comparison Analysis
+
+**Objective**: Quantify the measurable difference instruction files make in output quality
+
+**Comparison Task**:
+
+Ask AI to analyze both outputs using this prompt:
+
+```markdown
+Compare these two instruction files I generated:
+
+**File 1 (without instructions - Phase 1 baseline)**:
+[paste your Phase 1 output here]
+
+**File 2 (with instructions - Phase 2 enhanced)**:
+[paste your Phase 2 output here]
+
+Identify significant differences in:
+
+1. Structure and organization (heading hierarchy, sections, flow)
+2. Metadata completeness (count of fields, provenance tracking)
+3. Content quality and detail (specificity, actionability, examples)
+4. Adherence to standards (consistency with professional patterns)
+5. Clarity and actionability (how easy to use and follow)
+
+Provide specific examples for each difference category.
+```
+
+**Comparison Criteria Checklist**:
+
+Use this to guide your analysis and identify key improvements:
+
+**Structural Differences**:
+
+- [ ] Is YAML front matter present and complete?
+- [ ] How does file organization differ (sections, headings)?
+- [ ] Is heading hierarchy (H1, H2, H3) consistent and logical?
+- [ ] Are templates and examples included?
+
+**Metadata Differences** (11 required fields):
+
+- [ ] `ai_generated` (boolean): Present? Correct format?
+- [ ] `model` (string): Present? Uses provider/model@version format?
+- [ ] `operator` (string): Present? Uses GitHub username?
+- [ ] `chat_id` (string): Present? Unique identifier?
+- [ ] `prompt` (multiline string): Present? Exact prompt captured?
+- [ ] `started` (ISO8601 timestamp): Present? Correct format?
+- [ ] `ended` (ISO8601 timestamp): Present? Correct format?
+- [ ] `task_durations` (array): Present? Shows breakdown?
+- [ ] `total_duration` (string): Present? Calculated correctly?
+- [ ] `ai_log` (string): Present? References conversation log path?
+- [ ] `source` (string): Present? Identifies creator?
+
+**Quality Differences**:
+
+- [ ] Clarity: Generic advice vs. specific actionable steps?
+- [ ] Specificity: Vague guidelines vs. concrete requirements?
+- [ ] Examples: Present or absent? Useful or token filler?
+- [ ] Validation: Checklists provided?
+- [ ] Actionability: Can someone immediately use this without clarification?
+
+**Expected Quantified Results** (based on workshop participant data):
+
+- **Metadata completeness improvement**: 40% → 95% (55 percentage point increase)
+- **Structural consistency improvement**: 50% → 90% (40 percentage point increase)
+- **Output variance reduction**: ±40% structural difference → ±10% structural difference
+- **Review time reduction**: 30-45 minutes → 10-15 minutes (60-70% time savings)
