@@ -93,6 +93,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Notable Artifacts
 
+- **AIASD Weekly Slide Pipeline Prompt** ([`.github/prompts/run-aiasd-weekly-slide-pipeline.prompt.md`](.github/prompts/run-aiasd-weekly-slide-pipeline.prompt.md))
+  - Agent-mode prompt that fans out the Monday-Friday AIASD manifest builds to parallel subagents
+  - Reuses the existing single-manifest merge prompt so merged decks and PPTX exports are generated with the standard pipeline rules
+  - Provenance: [Chat log](ai-logs/2026/03/21/run-aiasd-weekly-slide-pipeline-prompt-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/run-aiasd-weekly-slide-pipeline-prompt-20260321/summary.md)
+
 - **Managing Instruction Files & Context Windows** ([`Slides/individual-slides/managing-instruction-files-context-windows.md`](Slides/individual-slides/managing-instruction-files-context-windows.md))
   - 7-slide Marp deck covering instruction sharing strategy, scoped application patterns, context monitoring, and token tracking
   - Includes an operational workflow blueprint and implementation checklist
@@ -122,6 +127,26 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - 7-slide Marp deck covering slice-specific implementation prompts, verification-first guidance, and stakeholder-focused showcase instructions
   - Explains how teams turn implementation plans into versioned prompt files with concrete HTML, CSS, JavaScript, testing, and demo expectations
   - Provenance: [Chat log](ai-logs/2026/03/21/implementation-prompts-verification-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/implementation-prompts-verification-20260321/summary.md)
+
+- **Dependency Analysis and Planning** ([`Slides/individual-slides/dependency-analysis-planning.md`](Slides/individual-slides/dependency-analysis-planning.md))
+  - 6-slide Marp deck covering dependency graphs, critical path identification, sequencing decisions, and foundational versus dependent features
+  - Explains how teams decide what must happen first, what can run in parallel, and how to turn a slice list into a realistic implementation roadmap
+  - Provenance: [Chat log](ai-logs/2026/03/21/dependency-analysis-planning-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/dependency-analysis-planning-20260321/summary.md)
+
+- **GitHub Code Review with Copilot** ([`Slides/individual-slides/github-code-review-with-copilot.md`](Slides/individual-slides/github-code-review-with-copilot.md))
+  - 7-slide Marp deck covering Copilot pull request review flow, PR `#4` findings, manual resolution, and instruction-file improvement opportunities
+  - Explains how review comments surfaced correctness issues, compliance gaps, dead code, and test coverage needs in one pass
+  - Provenance: [Chat log](ai-logs/2026/03/21/github-code-review-with-copilot-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/github-code-review-with-copilot-20260321/summary.md)
+
+- **Pull Request and Code Review** ([`Slides/individual-slides/pull-request-code-review.md`](Slides/individual-slides/pull-request-code-review.md))
+  - 7-slide Marp deck covering PR creation, issue linkage, parallel human and AI review, and practical comment-resolution workflow
+  - Explains how teams open slice-focused PRs, wait for Copilot review, evaluate feedback, and decide what to fix immediately or defer
+  - Provenance: [Chat log](ai-logs/2026/03/21/pull-request-code-review-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/pull-request-code-review-20260321/summary.md)
+
+- **GitHub CLI and PR Management** ([`Slides/individual-slides/github-cli-pr-management.md`](Slides/individual-slides/github-cli-pr-management.md))
+  - 7-slide Marp deck covering merge strategy choices, PR tooling in VS Code, CLI-assisted comment workflows, and token permission constraints
+  - Explains how repository settings, Copilot review requests, IDE workflows, and `gh` command usage fit together in practical PR management
+  - Provenance: [Chat log](ai-logs/2026/03/21/github-cli-pr-management-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/github-cli-pr-management-20260321/summary.md)
 
 - **Organizational vs. Repository Instruction Files Deck** ([`Slides/individual-slides/organizational-vs-repository-instruction-files.md`](Slides/individual-slides/organizational-vs-repository-instruction-files.md))
   - 7-slide Marp deck covering enterprise-tier capabilities, path-scoped instruction files, and folder-level technology-specific rules

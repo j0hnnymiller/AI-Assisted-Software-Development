@@ -26,56 +26,24 @@ sections:
 
   - name: Implementation Specification
     slides:
+      - Slides\individual-slides\vertical-slicing-architecture-introduction.md
       - Slides\individual-slides\implementation-with-vertical-slices.md
 
   - name: Implementation Planning
     slides:
-      - Creating Vertical Slice Implementation Plans
-
-  - name: Dependency Analysis and Planning
-    slides:
-      - Dependency Analysis and Planning
-
-  - name: Vertical Slice Review
-    slides:
-      - Slides\individual-slides\tbd.md
-
-  - name: Issue Identification & Diagram Corrections
-    slides:
-      - Slides\individual-slides\tbd.md
-
-  - name: Break
-    slides:
-      - Slides\individual-slides\tbd.md
+      - Slides\individual-slides\vertical-slice-implementation-plans.md
+      - Slides\individual-slides\dependency-analysis-planning.md
 
   - name: Implementation Prompts and Verification
     slides:
-      - Slides\individual-slides\Generating Implementation Prompts & Verification.md
+      - Slides\individual-slides\implementation-prompts-verification.md
 
   - name: Vertical Slice Implementation
     slides:
       - Slides\individual-slides\implementing-vertical-slices.md
 
-  - name: Pull Request and Code Review
+  - name: Code Review with GitHub Copilot
     slides:
-      - Slides\individual-slides\tbd.md
-
-  - name: Slice 4 Showcase - Order of Operations
-    slides:
-      - Slides\individual-slides\tbd.md
-
-  - name: GitHub Code Review with Copilot
-    slides:
-      - Slides\individual-slides\tbd.md
-
-  - name: Slice 3 Showcase - Clear Button
-    slides:
-      - Slides\individual-slides\tbd.md
-
-  - name: GitHub CLI & PR Management
-    slides:
-      - Slides\individual-slides\tbd.md
-
-  - name: Adoption Strategy
-    slides:
-      - Slides\individual-slides\tbd.md
+      - Slides\individual-slides\pull-request-code-review.md
+      - Slides\individual-slides\github-code-review-with-copilot.md
+      - Slides\individual-slides\github-cli-pr-management.md
