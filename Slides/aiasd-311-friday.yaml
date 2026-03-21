@@ -8,39 +8,33 @@ sections:
   - name: AI-First Development Methodology
     slides:
       - Slides\individual-slides\tbd.md
+      - Slides\individual-slides\greenfield-development-workflow.md
+      - Slides\individual-slides\getting-started.md
 
-  - name: Greenfield Development Workflow
+  - name: Specification Driven Software Development
     slides:
-      - Slides\individual-slides\tbd.md
+      - Slides\individual-slides\starting-with-requirements.md
+      - Slides\individual-slides\exercise-business-requirements-generation.md
 
-  - name: AI-Assisted Workflow Pattern
-    slides:
-      - Slides\individual-slides\Getting Started Checklist.md
-
-  - name: Starting with Project Requirements
-    slides:
-      - Slides\individual-slides\Starting with Project Requirements.md
-      - Slides\individual-slides\Business Requirements Generation Exercise.md
-
-  - name: cqrs architecture
+  - name: Architecture Specification
     slides:
       - Slides\individual-slides\cqrs-architecture.md
 
-  - name: Technology Stack Instruction Files
+  - name: Technology Specification
     slides:
-      - Slides\individual-slides\tbd.md
+      - Slides\individual-slides\technology-stack-instruction-files.md
 
-  - name: Vertical Slicing Architecture Introduction
+  - name: Implementation Specification
     slides:
-      - Slides\individual-slides\What Are Vertical Slices.md
+      - Slides\individual-slides\implementation-with-vertical-slices.md
 
-  - name: Creating Vertical Slice Implementation Plans
+  - name: Implementation Planning
     slides:
-      - Slides\individual-slides\tbd.md
+      - Creating Vertical Slice Implementation Plans
 
   - name: Dependency Analysis and Planning
     slides:
-      - Slides\individual-slides\tbd.md
+      - Dependency Analysis and Planning
 
   - name: Vertical Slice Review
     slides:
