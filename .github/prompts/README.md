@@ -40,6 +40,13 @@ This directory contains standardized AI prompts for various development and anal
 | ------------------------------------------------------------------------ | ------------------------ | ------------------------------------------ |
 | [`update-application-c4-diagrams.md`](update-application-c4-diagrams.md) | C4 Architecture Diagrams | Updated C4 model diagrams for applications |
 
+### Slides & Presentation Pipeline
+
+| File                                                                                     | Purpose                              | Output                                         |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------- |
+| [`merge-marp-decks.prompt.md`](merge-marp-decks.prompt.md)                               | Single Manifest Slide Merge Pipeline | One merged Marp deck and one PPTX per manifest |
+| [`run-aiasd-weekly-slide-pipeline.prompt.md`](run-aiasd-weekly-slide-pipeline.prompt.md) | Weekly AIASD Batch Slide Pipeline    | Monday-Friday merged decks and PPTX outputs    |
+
 ## Meta Prompts
 
 The [`meta/`](meta/) subdirectory contains prompts that generate other prompts or instruction files. See [meta/README.md](meta/README.md) for details.
