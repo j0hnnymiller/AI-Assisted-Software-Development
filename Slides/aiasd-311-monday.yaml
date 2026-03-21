@@ -12,21 +12,18 @@ sections:
       - Slides\individual-slides\about-code.md
       - Slides\individual-slides\daily-themes.md
 
-  - name: Module 1 - AIASD
+  - name: AI Assisted Software Development
     slides:
-      # Add your Module 1 slide files here
       - Slides\individual-slides\whats-the-big-deal.md
       - Slides\individual-slides\the-ai-revolution.md
 
-  - name: Module 2 - Intro to Copilot
+  - name: Intro to Copilot
     slides:
-      # Add your Module 2 slide files here
       - Slides\individual-slides\repository-and-tool-setup.md
       - Slides\individual-slides\hands-on-with-github-copilot-vs-code.md
 
-  - name: Module 3 - Vibbing
+  - name: AI Assistance in Action
     slides:
-      # Add your Module 3 slide files here
       - Slides\individual-slides\vibe-coding.md
       - Slides\individual-slides\exercise-calculator-project.md
       - Slides\individual-slides\exercise-test-coverage-improvement.md
@@ -36,9 +33,8 @@ sections:
       - Slides\individual-slides\multi-model-implementation-comparison.md
       - Slides\individual-slides\evergreen-software-core-principles.md
 
-  - name: Module 4 - Adding AI Guardrails
+  - name: Adding AI Guardrails
     slides:
-      # Add your Module 4 slide files here
       - Slides\individual-slides\adding-ai-guardrails.md
       - Slides\individual-slides\instruction-files.md
       - Slides\individual-slides\instruction-file-applyto-patterns.md
@@ -46,8 +42,7 @@ sections:
       - Slides\individual-slides\organizational-vs-repository-instruction-files.md
       - Slides\individual-slides\exercise-technology-inventory-instructions.md
 
-  - name: Module 5 - Managing Context
+  - name: Managing Context
     slides:
-      # Add your Module 5 slide files here
       - Slides\individual-slides\managing-github-copilot-effectively.md
       - Slides\individual-slides\managing-instruction-files-context-windows.md

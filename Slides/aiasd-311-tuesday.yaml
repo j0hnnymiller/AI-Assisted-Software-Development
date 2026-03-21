@@ -7,38 +7,37 @@ sections:
       - Slides\individual-slides\copilot-pricing-licensing.md
       - Slides\individual-slides\vscode-configuration-tips.md
 
-  - name: Module 1 - LLM
+  - name: LLM
     slides:
       - Slides\individual-slides\large-language-models.md
-      -
 
-  - name: Module 2 - Copilot for Teams
+  - name: Copilot for Teams
     slides:
       - Slides\individual-slides\github-copilot-for-teams.md
       -
 
-  - name: Module 3 - Safety Measures and Best Practices
+  - name: Safety Measures and Best Practices
     slides:
       - Slides\individual-slides\safety-measures-best-practices.md
 
-  - name: Module 4 - Models and Context
+  - name: Models and Context
     slides:
       - Slides\individual-slides\model-selection-and-comparison.md
       - Slides\individual-slides\advanced-context-techniques.md
 
-  - name: Module 5 - Guardrails and Prompt Files
+  - name: Guardrails and Prompt Files
     slides:
       - Slides\individual-slides\prompt-files.md
       - Slides\individual-slides\exercise-creating-prompt-files.md
       - Slides\individual-slides\creating-instruction-files-from-prompts.md
 
-  - name: Module 6 - AI Assisted Documentation
+  - name: AI Assisted Documentation
     slides:
       - Slides\individual-slides\documentation-generation-code-analysis.md
       - Slides\individual-slides\exercise-c4-diagrams-from-code.md
       - Slides\individual-slides\code-explanation-and-analysis.md
 
-  - name: Module 7 - Test Automation and Code Quality
+  - name: Test Automation and Code Quality
     slides:
       - Slides\individual-slides\test-automation-and-code-quality.md
       - Slides\individual-slides\exercise-test-automation-quality.md

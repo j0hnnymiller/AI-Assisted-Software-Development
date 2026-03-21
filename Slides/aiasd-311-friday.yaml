@@ -5,3 +5,83 @@ sections:
     slides:
       - Slides\individual-slides\welcome-back.md
 
+  - name: AI-First Development Methodology
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Greenfield Development Workflow
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: AI-Assisted Workflow Pattern
+    slides:
+      - Slides\individual-slides\Getting Started Checklist.md
+
+  - name: Starting with Project Requirements
+    slides:
+      - Slides\individual-slides\Starting with Project Requirements.md
+      - Slides\individual-slides\Business Requirements Generation Exercise.md
+
+  - name: cqrs architecture
+    slides:
+      - Slides\individual-slides\cqrs-architecture.md
+
+  - name: Technology Stack Instruction Files
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Vertical Slicing Architecture Introduction
+    slides:
+      - Slides\individual-slides\What Are Vertical Slices.md
+
+  - name: Creating Vertical Slice Implementation Plans
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Dependency Analysis and Planning
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Vertical Slice Review
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Issue Identification & Diagram Corrections
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Break
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Implementation Prompts and Verification
+    slides:
+      - Slides\individual-slides\Generating Implementation Prompts & Verification.md
+
+  - name: Vertical Slice Implementation
+    slides:
+      - Slides\individual-slides\implementing-vertical-slices.md
+
+  - name: Pull Request and Code Review
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Slice 4 Showcase - Order of Operations
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: GitHub Code Review with Copilot
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Slice 3 Showcase - Clear Button
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: GitHub CLI & PR Management
+    slides:
+      - Slides\individual-slides\tbd.md
+
+  - name: Adoption Strategy
+    slides:
+      - Slides\individual-slides\tbd.md

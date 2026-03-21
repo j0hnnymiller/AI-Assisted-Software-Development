@@ -5,13 +5,13 @@ sections:
     slides:
       - Slides\individual-slides\welcome-back.md
 
-  - name: Module 1 - Instructions vs Prompts vs Custom Chat Modes
+  - name: Instructions vs Prompts vs Custom Chat Modes
     slides:
       - Instructions vs Prompts vs Custom Chat Modes; copilot-instruction-files-vs-prompt-files-vs-chatmodes.pptx;
       - copilot-instruction-control.pptx;
       - AI-Development-Approaches-Comparison.pptx
 
-  - name: Module 2 - Custom Agents
+  - name: Custom Agents
     slides:
       - Custom Agents.pptx
       - github-copilot-chat-mode-personas.md
@@ -20,11 +20,11 @@ sections:
       - Exercise: Defining Skills
       - Agent Best Practices
 
-  - name: Module 3 - Skills
+  - name: Skills
     slides:
       - skills.md
 
-  - name: Module 4 - MCP
+  - name: MCP
     slides:
       - MCP Overview.pptx
       - Exercise: Building an MCP
