@@ -7,7 +7,7 @@ prompt_metadata:
   id: run-aiasd-weekly-slide-pipeline
   title: Run AIASD Weekly Slide Pipeline
   owner: johnmillerATcodemag-com
-  version: 1.0.0
+  version: 1.1.0
   created: 2026-03-21
   updated: 2026-03-21
   output_path: Slides/output/aiasd-311-<day>-draft.pptx
@@ -26,6 +26,11 @@ manifest to its own writable subagent.
 Use `.github/prompts/merge-marp-decks.prompt.md` as the execution contract for each
 manifest-specific run. Do not reimplement the merge logic in this prompt. The subagent must
 follow that prompt's validation, merge, overwrite, slide-count, and PPTX-generation rules.
+
+The weekly pipeline is **output-only**. Subagents may create or overwrite the derived merged
+deck and PPTX outputs, but they must treat manifest YAML files and source Marp slides as
+**read-only inputs**. If they find malformed manifest entries, missing slide files, or source
+validation problems, they must report them instead of editing those inputs.
 
 ## Fixed Manifest Set
 
@@ -49,16 +54,18 @@ Run the pipeline for exactly these manifests:
    ```
 
 4. Each subagent must run the full workflow for its assigned manifest:
-   - manifest validation
-   - Phase 0 source-file validation
-   - Phase 1 merged deck generation
-   - Phase 2 PPTX generation via `scripts/generate_pptx.py`
+    - manifest validation
+    - Phase 0 source-file validation
+    - Phase 1 merged deck generation
+    - Phase 2 PPTX generation via `scripts/generate_pptx.py`
 5. Do not serialize PPTX generation. Because each manifest runs in its own subagent, PPTX
-   creation must proceed in parallel with the other manifest runs.
+    creation must proceed in parallel with the other manifest runs.
 6. Do not edit `.github/prompts/merge-marp-decks.prompt.md`.
 7. Do not substitute a read-only explorer agent for the execution subagents.
 8. If one manifest fails, continue collecting results from the remaining subagents and report
    the failure alongside the successful runs.
+9. Do not modify any `Slides/*.yaml` manifest or any file under `Slides/individual-slides/`.
+10. Report manifest issues and source-slide issues exactly as found; do not auto-correct them.
 
 ## Subagent Prompt Template
 
@@ -70,10 +77,15 @@ Execute `.github/prompts/merge-marp-decks.prompt.md` for this exact invocation:
 Manifest: Slides/aiasd-311-<day>.yaml
 
 Follow that prompt end-to-end. Create or overwrite the derived merged deck and PPTX outputs.
+Treat the manifest YAML file and all source slide files as read-only. Do not repair or rewrite
+manifest entries, rename slide paths, replace `.pptx` references with guessed `.md` files, or
+edit the source Marp slides. If you find input issues, report them.
+
 Return a concise status report with:
 - manifest path
 - merged deck path
 - PPTX output path
+- manifest issues, if any
 - validation warnings, if any
 - final status: success or failure
 ```
@@ -93,7 +105,7 @@ Return a concise status report with:
 After all subagents finish, provide:
 
 1. A compact per-manifest status table with `Success` or `Failed`
-2. Any validation warnings reported by the subagents
+2. Any manifest issues and source-slide validation warnings reported by the subagents
 3. A short failure section listing the manifest and blocking error for any unsuccessful run
 4. A final summary stating how many manifests completed successfully out of five
 
@@ -103,4 +115,5 @@ After all subagents finish, provide:
 - The dispatch is concurrent, not sequential
 - PPTX generation overlaps across manifest runs
 - Output files use the standard derived names from `merge-marp-decks.prompt.md`
-- The final report clearly identifies successes, warnings, and failures
+- No manifest YAML or source Marp slide file is modified by the pipeline run
+- The final report clearly identifies successes, manifest issues, source warnings, and failures

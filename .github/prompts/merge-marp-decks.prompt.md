@@ -7,9 +7,9 @@ prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 2.8.0
+  version: 2.9.0
   created: 2026-03-12
-  updated: 2026-03-19
+  updated: 2026-03-21
   output_path: Slides/<manifest-stem>-draft.md
   output_format: markdown
   category: slides
@@ -74,8 +74,12 @@ Front matter note:
 - Example: `Manifest: Slides/aiasd-311-tuesday.yaml` produces `Slides/aiasd-311-tuesday-draft.md`.
 
 > **⚠️ IMPORTANT**: The merged deck path is a **generated artifact**. Do not manually edit it.
-> All changes must be made to individual source slide files in `Slides/individual-slides/`
-> or to the manifest YAML structure. Re-run this prompt to regenerate the merged deck.
+> This pipeline is **output-only**: it may create or overwrite the derived merged deck path
+> and PPTX output path, but it must **never modify** source Marp slides in
+> `Slides/individual-slides/` or the manifest YAML file. If the manifest or any source slide
+> is invalid, missing, malformed, or inconsistent with this prompt, report the issue and
+> continue where the prompt allows. Do not auto-fix, normalize, rewrite, rename, or replace
+> manifest entries or source slide files as part of this run.
 
 ## Manifest Requirement
 
@@ -101,6 +105,8 @@ Slides/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest
 - Perform **Phase 0** and **Phase 1** directly in this agent run using the prompt logic.
 - Do **not** call or rely on any script for Phase 0/1.
 - Read source files, validate them, build merged markdown in memory, and write the merged deck path.
+- Treat the manifest YAML and all source slide files as **read-only inputs**.
+- Only the derived merged deck path and derived PPTX output path are writable outputs.
 
 ## File Write Strategy
 
@@ -134,6 +140,16 @@ sections:
 Each section has a `name` and an optional `slides` list. Sections with no slide files
 (null, empty, or comment-only) are still present in the final PPTX as **empty sections**.
 
+### Manifest entry constraints
+
+- Every `sections[].slides[]` entry must resolve to a repo-relative Markdown source file.
+- Supported source slide extensions are `.md` and `.markdown` only.
+- Any slide entry that is missing, malformed, uses a non-Markdown extension, contains a
+  label instead of a path, or cannot be resolved exactly as written is a **manifest issue**.
+- Manifest issues must be reported with the exact raw entry and section name.
+- Do **not** rewrite manifest entries to alternative filenames, `.pptx` files, inferred
+  Markdown files, or guessed paths.
+
 ---
 
 ## Phase 0 — Validate Source Files
@@ -163,6 +179,9 @@ For each source file, invoke a subagent with a prompt that instructs it to:
 > **Why return content?** Phase 1 needs every source file's content for merging.
 > By capturing it here, each file is read exactly once across the entire pipeline.
 
+> **Read-only rule**: Validation subagents must not edit the manifest or any source slide file.
+> They may only read, validate, and report issues.
+
 ### Validation rules
 
 | #   | Rule                      | Check                                                                 |
@@ -185,6 +204,10 @@ before writing the merged deck path:
 ```
 Validation complete: N file(s) checked, M warning(s) found.
 ```
+
+Also report any **manifest issues** discovered before subagent dispatch or while resolving
+slide paths. Manifest issues are input problems, not output-generation tasks. Report them;
+do not repair them in-place.
 
 > **Agent verification (Issue 1)**: After running Phase 0, confirm the validation summary
 > is printed. For a file known to violate a rule (e.g. ends with `---`), verify the warning
@@ -372,6 +395,7 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 1. Merged deck path — merged Marp markdown deck (with injected module list slides only)
 2. PPTX output path — generated PPTX with named sections
+3. Issue report — validation warnings and manifest/source issues found during the run
 
 ## Section Handling Rules
 
