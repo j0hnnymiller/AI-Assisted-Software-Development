@@ -118,6 +118,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Explains how teams draft standards quickly, critique them systematically, and use multiple models to improve quality during the foundation phase
   - Provenance: [Chat log](ai-logs/2026/03/21/technology-stack-instruction-files-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/technology-stack-instruction-files-20260321/summary.md)
 
+- **Implementation Prompts and Verification** ([`Slides/individual-slides/implementation-prompts-verification.md`](Slides/individual-slides/implementation-prompts-verification.md))
+  - 7-slide Marp deck covering slice-specific implementation prompts, verification-first guidance, and stakeholder-focused showcase instructions
+  - Explains how teams turn implementation plans into versioned prompt files with concrete HTML, CSS, JavaScript, testing, and demo expectations
+  - Provenance: [Chat log](ai-logs/2026/03/21/implementation-prompts-verification-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/implementation-prompts-verification-20260321/summary.md)
+
 - **Organizational vs. Repository Instruction Files Deck** ([`Slides/individual-slides/organizational-vs-repository-instruction-files.md`](Slides/individual-slides/organizational-vs-repository-instruction-files.md))
   - 7-slide Marp deck covering enterprise-tier capabilities, path-scoped instruction files, and folder-level technology-specific rules
   - Includes layering and precedence guidance for multi-level instruction governance
@@ -156,6 +161,12 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Covers when to use CQRS, core principles, implementation examples, and migration strategies
   - Includes detailed speaker notes for effective delivery
   - Provenance: [Chat log](ai-logs/2026/02/07/cqrs-architecture-slides-20260207/conversation.md)
+
+- **Vertical Slicing Architecture Introduction** ([`Slides/individual-slides/vertical-slicing-architecture-introduction.md`](Slides/individual-slides/vertical-slicing-architecture-introduction.md))
+  - 7-slide Marp deck introducing feature-based architecture, layered versus slice-oriented structure, and the maintainability benefits of localized change
+  - Covers developer experience improvements, team collaboration, testing strategy, and the introductory CQRS relationship
+  - Includes Mermaid visuals and detailed speaker notes for classroom delivery
+  - Provenance: [Chat log](ai-logs/2026/03/21/vertical-slicing-architecture-introduction-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/vertical-slicing-architecture-introduction-20260321/summary.md)
 
 - **Instruction File ApplyTo Patterns Slides** ([`Slides/individual-slides/instruction-file-applyto-patterns.md`](Slides/individual-slides/instruction-file-applyto-patterns.md))
   - 13-slide Marp presentation explaining glob pattern matching for instruction file applyTo fields
