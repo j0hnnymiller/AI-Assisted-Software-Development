@@ -48,12 +48,12 @@ Create a Marp deck that explains the course content for Section 5 on technology 
 
 ## Artifacts Produced
 
-| Artifact                                                                         | Type            | Purpose                                                     |
-| -------------------------------------------------------------------------------- | --------------- | ----------------------------------------------------------- |
-| `Slides/individual-slides/technology-stack-instruction-files.md`                 | Marp deck       | Teach generation and review of technology instruction files |
-| `ai-logs/2026/03/21/technology-stack-instruction-files-20260321/conversation.md` | Provenance log  | Record the originating chat context                         |
-| `ai-logs/2026/03/21/technology-stack-instruction-files-20260321/summary.md`      | Session summary | Support resumability and auditability                       |
-| `README.md`                                                                      | Catalog update  | Make the deck discoverable from the repository root         |
+| Artifact | Type | Purpose |
+| --- | --- | --- |
+| `Slides/individual-slides/technology-stack-instruction-files.md` | Marp deck | Teach generation and review of technology instruction files |
+| `ai-logs/2026/03/21/technology-stack-instruction-files-20260321/conversation.md` | Provenance log | Record the originating chat context |
+| `ai-logs/2026/03/21/technology-stack-instruction-files-20260321/summary.md` | Session summary | Support resumability and auditability |
+| `README.md` | Catalog update | Make the deck discoverable from the repository root |
 
 ## Lessons Learned
 

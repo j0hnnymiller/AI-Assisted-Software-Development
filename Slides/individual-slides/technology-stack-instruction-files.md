@@ -169,10 +169,10 @@ Explain that review is what turns an acceptable draft into a dependable working 
 - Pull strengths from more than one model into the final file
 - Use differences to reveal gaps, ambiguity, or weak examples
 
-| Model tendency                    | Practical takeaway                          |
-| --------------------------------- | ------------------------------------------- |
-| Claude Sonnet: more comprehensive | Good for broad first drafts                 |
-| GPT-4: more variable              | Good candidate for challenge and comparison |
+| Model tendency | Practical takeaway |
+| --- | --- |
+| Claude Sonnet: more comprehensive | Good for broad first drafts |
+| GPT-4: more variable | Good candidate for challenge and comparison |
 
 ::: notes
 Position multi-model review as a quality-control tactic rather than a competition. Different models expose different blind spots, so having one model critique another often surfaces missing examples, incomplete checklists, or weakly stated rules. Spend about two minutes here and point out that the goal is synthesis, not loyalty to one output. Transition by tying this evaluation loop back to the broader foundation phase of a new project.
