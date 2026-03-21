@@ -7,25 +7,24 @@ sections:
 
   - name: Instructions vs Prompts vs Custom Chat Modes
     slides:
-      - Instructions vs Prompts vs Custom Chat Modes; copilot-instruction-files-vs-prompt-files-vs-chatmodes.pptx;
-      - copilot-instruction-control.pptx;
-      - AI-Development-Approaches-Comparison.pptx
+      - Slides\individual-slides\copilot-instruction-files-vs-prompt-files-vs-chatmodes.md
+      - Slides\individual-slides\copilot-instruction-control.md
+      - Slides\individual-slides\ai-development-approaches-comparison.md
 
   - name: Custom Agents
     slides:
-      - Custom Agents.pptx
-      - github-copilot-chat-mode-personas.md
+      - Slides\individual-slides\custom-agents.md
+      - Slides\individual-slides\github-copilot-chat-mode-personas.md
       - vscode-copilot-agents-overview
-      - Exercise: Building Custom Agents
-      - Exercise: Defining Skills
-      - Agent Best Practices
+      - Slides\individual-slides\exercise-create-and-use-custom-agent.md
+      - Slides\individual-slides\custom-agent-best-practices.md
 
   - name: Skills
     slides:
-      - skills.md
+      - Slides\individual-slides\github-copilot-skills-practical-introduction.md
+      - Exercise: Defining Skills
 
   - name: MCP
     slides:
-      - MCP Overview.pptx
-      - Exercise: Building an MCP
-      - MCP Best Practices
+      - Slides\individual-slides\mcp-model-context-protocol-servers.md
+      - Slides\individual-slides\exercise-mcp-server-create-test-use.md

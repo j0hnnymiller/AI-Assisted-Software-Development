@@ -93,11 +93,6 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Notable Artifacts
 
-- **AIASD Weekly Slide Pipeline Prompt** ([`.github/prompts/run-aiasd-weekly-slide-pipeline.prompt.md`](.github/prompts/run-aiasd-weekly-slide-pipeline.prompt.md))
-  - Agent-mode prompt that fans out the Monday-Friday AIASD manifest builds to parallel subagents
-  - Reuses the existing single-manifest merge prompt so merged decks and PPTX exports are generated with the standard pipeline rules
-  - Provenance: [Chat log](ai-logs/2026/03/21/run-aiasd-weekly-slide-pipeline-prompt-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/run-aiasd-weekly-slide-pipeline-prompt-20260321/summary.md)
-
 - **Managing Instruction Files & Context Windows** ([`Slides/individual-slides/managing-instruction-files-context-windows.md`](Slides/individual-slides/managing-instruction-files-context-windows.md))
   - 7-slide Marp deck covering instruction sharing strategy, scoped application patterns, context monitoring, and token tracking
   - Includes an operational workflow blueprint and implementation checklist
@@ -113,6 +108,16 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Emphasizes prompt structure, context isolation, reproducibility, and the impact of instruction files on output quality
   - Provenance: [Chat log](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/summary.md)
 
+- **Exercise: Create and Use a Custom Agent** ([`Slides/individual-slides/exercise-create-and-use-custom-agent.md`](Slides/individual-slides/exercise-create-and-use-custom-agent.md))
+  - Hands-on exercise slide guiding students through creating a repository-scoped custom agent, refining role boundaries, and running it in Copilot Chat
+  - Covers agent file structure, tool-scope decisions, and practical output validation through a targeted prompt
+  - Provenance: [Chat log](ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/summary.md)
+
+- **Exercise: Create, Test, and Use a Local MCP Server** ([`Slides/individual-slides/exercise-mcp-server-create-test-use.md`](Slides/individual-slides/exercise-mcp-server-create-test-use.md))
+  - Hands-on exercise slide guiding students through building a PowerShell MCP server, validating it with an end-to-end test script, and invoking it through Copilot
+  - Covers MCP JSON-RPC method flow (`initialize`, `tools/list`, `tools/call`), smoke-test validation, and local `.mcp.json` integration
+  - Provenance: [Chat log](ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/summary.md)
+
 - **Creating Instruction Files from Prompts** ([`Slides/individual-slides/creating-instruction-files-from-prompts.md`](Slides/individual-slides/creating-instruction-files-from-prompts.md))
   - 7-slide Marp deck covering prompt execution, generated instruction review, inference as a drafting accelerator, and prompt-first refinement strategy
   - Emphasizes regenerating from the prompt to preserve source control history, reproducibility, and provenance quality
@@ -122,31 +127,6 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - 7-slide Marp deck covering requirements-based instruction generation, review checklists, and multi-model evaluation for HTML5, CSS3, and JavaScript guidance
   - Explains how teams draft standards quickly, critique them systematically, and use multiple models to improve quality during the foundation phase
   - Provenance: [Chat log](ai-logs/2026/03/21/technology-stack-instruction-files-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/technology-stack-instruction-files-20260321/summary.md)
-
-- **Implementation Prompts and Verification** ([`Slides/individual-slides/implementation-prompts-verification.md`](Slides/individual-slides/implementation-prompts-verification.md))
-  - 7-slide Marp deck covering slice-specific implementation prompts, verification-first guidance, and stakeholder-focused showcase instructions
-  - Explains how teams turn implementation plans into versioned prompt files with concrete HTML, CSS, JavaScript, testing, and demo expectations
-  - Provenance: [Chat log](ai-logs/2026/03/21/implementation-prompts-verification-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/implementation-prompts-verification-20260321/summary.md)
-
-- **Dependency Analysis and Planning** ([`Slides/individual-slides/dependency-analysis-planning.md`](Slides/individual-slides/dependency-analysis-planning.md))
-  - 6-slide Marp deck covering dependency graphs, critical path identification, sequencing decisions, and foundational versus dependent features
-  - Explains how teams decide what must happen first, what can run in parallel, and how to turn a slice list into a realistic implementation roadmap
-  - Provenance: [Chat log](ai-logs/2026/03/21/dependency-analysis-planning-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/dependency-analysis-planning-20260321/summary.md)
-
-- **GitHub Code Review with Copilot** ([`Slides/individual-slides/github-code-review-with-copilot.md`](Slides/individual-slides/github-code-review-with-copilot.md))
-  - 7-slide Marp deck covering Copilot pull request review flow, PR `#4` findings, manual resolution, and instruction-file improvement opportunities
-  - Explains how review comments surfaced correctness issues, compliance gaps, dead code, and test coverage needs in one pass
-  - Provenance: [Chat log](ai-logs/2026/03/21/github-code-review-with-copilot-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/github-code-review-with-copilot-20260321/summary.md)
-
-- **Pull Request and Code Review** ([`Slides/individual-slides/pull-request-code-review.md`](Slides/individual-slides/pull-request-code-review.md))
-  - 7-slide Marp deck covering PR creation, issue linkage, parallel human and AI review, and practical comment-resolution workflow
-  - Explains how teams open slice-focused PRs, wait for Copilot review, evaluate feedback, and decide what to fix immediately or defer
-  - Provenance: [Chat log](ai-logs/2026/03/21/pull-request-code-review-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/pull-request-code-review-20260321/summary.md)
-
-- **GitHub CLI and PR Management** ([`Slides/individual-slides/github-cli-pr-management.md`](Slides/individual-slides/github-cli-pr-management.md))
-  - 7-slide Marp deck covering merge strategy choices, PR tooling in VS Code, CLI-assisted comment workflows, and token permission constraints
-  - Explains how repository settings, Copilot review requests, IDE workflows, and `gh` command usage fit together in practical PR management
-  - Provenance: [Chat log](ai-logs/2026/03/21/github-cli-pr-management-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/github-cli-pr-management-20260321/summary.md)
 
 - **Organizational vs. Repository Instruction Files Deck** ([`Slides/individual-slides/organizational-vs-repository-instruction-files.md`](Slides/individual-slides/organizational-vs-repository-instruction-files.md))
   - 7-slide Marp deck covering enterprise-tier capabilities, path-scoped instruction files, and folder-level technology-specific rules
@@ -167,6 +147,21 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Two exercise slides covering evergreen core principles and common failure modes
   - Template-aligned structure with duration, objectives, activities, success criteria, and speaker notes
   - Provenance: [Chat log](ai-logs/2026/03/16/evergreen-exercise-deck-20260316/conversation.md) | [Summary](ai-logs/2026/03/16/evergreen-exercise-deck-20260316/summary.md)
+
+- **GitHub Copilot Skills: A Practical Introduction** ([`Slides/individual-slides/github-copilot-skills-practical-introduction.md`](Slides/individual-slides/github-copilot-skills-practical-introduction.md))
+  - 12-slide Marp deck covering skill structure, `SKILL.md` anatomy, loading behavior, authoring practices, and common enterprise use cases
+  - Explains how Copilot Skills differ from promptfiles, custom instructions, and chat modes while positioning them as procedural workflow modules
+  - Provenance: [Chat log](ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/summary.md)
+
+- **Best Practices and Q&A: Custom Agents** ([`Slides/individual-slides/custom-agent-best-practices.md`](Slides/individual-slides/custom-agent-best-practices.md))
+  - 7-slide Marp deck covering agent design best practices, least-privilege tool strategy, team sharing, examples, and rollout validation
+  - Explains how to keep agents narrowly scoped, iteratively improved, and safe to share across teams or organizations
+  - Provenance: [Chat log](ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/summary.md)
+
+- **MCP: Model Context Protocol Servers** ([`Slides/individual-slides/mcp-model-context-protocol-servers.md`](Slides/individual-slides/mcp-model-context-protocol-servers.md))
+  - 8-slide Marp deck covering MCP architecture, use cases, available pre-built servers, discovery paths, installation, and token budget management
+  - Explains the five MCP components (client, server, protocol, resources, tools) and practical guidance for enabling servers selectively
+  - Provenance: [Chat log](ai-logs/2026/03/21/mcp-model-context-protocol-servers-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/mcp-model-context-protocol-servers-20260321/summary.md)
 
 - **Prompt Authoring Instructions** ([`.github/instructions/create-prompt.instructions.md`](.github/instructions/create-prompt.instructions.md))
   - Comprehensive guidelines for creating effective, well-structured repository prompts
@@ -232,3 +227,11 @@ Scripts for managing GitHub security issues:
 - `close_new_security_issues.ps1` - Close new security issues
 - `close_resolved_security_issues.ps1` - Close resolved security issues
 - `emergency_security_cleanup.ps1` - Emergency security cleanup
+
+### Local MCP Server (PowerShell)
+
+- `scripts/mcp/simple-mcp-server.ps1` - Simple local MCP server exposing an `echo` tool over stdio
+- `scripts/mcp/test-simple-mcp-server.ps1` - End-to-end test script that validates initialize, tools/list, and tools/call
+- `.mcp.json` - Workspace MCP configuration that launches the PowerShell MCP server
+
+For run and test commands, see [`scripts/README.md`](scripts/README.md).
