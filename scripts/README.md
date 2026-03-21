@@ -4,6 +4,56 @@ This directory contains scripts to help identify branches with changes that have
 
 ## Available Scripts
 
+### MCP Utilities
+
+**Files:** `mcp/simple-mcp-server.ps1`, `mcp/test-simple-mcp-server.ps1`
+
+**Purpose:** Provide a minimal local Model Context Protocol (MCP) server in PowerShell with an `echo` tool, plus an end-to-end test harness.
+
+**Quick Start:**
+
+```powershell
+# Run the server (stdio transport)
+pwsh -NoLogo -NoProfile -File .\scripts\mcp\simple-mcp-server.ps1
+
+# Run the end-to-end test harness
+pwsh -NoLogo -NoProfile -File .\scripts\mcp\test-simple-mcp-server.ps1
+```
+
+**VS Code MCP config:**
+
+The repository includes a workspace-level `.mcp.json` configured to launch this server:
+
+```json
+{
+  "mcpServers": {
+    "powershell-mcp": {
+      "command": "pwsh",
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-File",
+        "scripts/mcp/simple-mcp-server.ps1"
+      ]
+    }
+  }
+}
+```
+
+**Protocol support:**
+
+- `initialize`
+- `tools/list`
+- `tools/call` (tool: `echo`)
+
+**Manual JSON-RPC smoke test:**
+
+Send framed messages over stdio using `Content-Length` headers. The bundled test script already validates:
+
+1. `initialize` succeeds
+2. `tools/list` returns `echo`
+3. `tools/call` returns the same text payload
+
 ### Slide Pipeline Utilities
 
 **Files:** `generate_pptx.py`, `phase1_merge_marp_decks.py`, `finalize_pptx_local.ps1`, `validation-results.json`
@@ -158,6 +208,8 @@ This directory also contains other utility scripts:
 - `close_new_security_issues.ps1` - Close new security issues
 - `close_resolved_security_issues.ps1` - Close resolved security issues
 - `emergency_security_cleanup.ps1` - Emergency security cleanup
+- `mcp/simple-mcp-server.ps1` - Simple local MCP server (PowerShell)
+- `mcp/test-simple-mcp-server.ps1` - End-to-end MCP server test
 
 ## Contributing
 
