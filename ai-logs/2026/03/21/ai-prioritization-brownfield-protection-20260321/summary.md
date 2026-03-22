@@ -37,13 +37,13 @@ Create a Marp deck covering prioritization and issue-management guidance for bro
 
 ## Artifacts Produced
 
-| Artifact | Type | Purpose |
-| --- | --- | --- |
-| `Slides/individual-slides/implementation-plan-prioritization.md` | Marp slide | Prioritization guidance for brownfield planning |
-| `Slides/aiasd-311-thursday.yaml` | Manifest update | Place the slide in the Thursday curriculum |
-| `README.md` | Documentation update | Register the artifact and provenance links |
-| `ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/conversation.md` | Chat log | Full provenance record |
-| `ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/summary.md` | Chat summary | Resumable context |
+| Artifact                                                                              | Type                 | Purpose                                         |
+| ------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------- |
+| `Slides/individual-slides/implementation-plan-prioritization.md`                      | Marp slide           | Prioritization guidance for brownfield planning |
+| `Slides/aiasd-311-thursday.yaml`                                                      | Manifest update      | Place the slide in the Thursday curriculum      |
+| `README.md`                                                                           | Documentation update | Register the artifact and provenance links      |
+| `ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/conversation.md` | Chat log             | Full provenance record                          |
+| `ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/summary.md`      | Chat summary         | Resumable context                               |
 
 ## Compliance Status
 
