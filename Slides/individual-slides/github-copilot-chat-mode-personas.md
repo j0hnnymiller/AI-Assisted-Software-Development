@@ -15,7 +15,7 @@ Skills & Responsibilities by Persona
 Optimizing AI-assisted workflows for different roles
 
 ::: notes
-Welcome to this comprehensive guide on GitHub Copilot Chat Mode. Today we’ll explore how different roles can maximize AI assistance. Focus is on practical skills and clear responsibilities. Each persona has unique needs and challenges with AI tools. Goal is actionable guidance for immediate implementation. This presentation bridges the gap between AI capabilities and role-specific needs.
+Welcome to this comprehensive guide on GitHub Copilot Chat Mode. Today we'll explore how different roles can maximize AI assistance. Focus is on practical skills and clear responsibilities. Each persona has unique needs and challenges with AI tools. Goal is actionable guidance for immediate implementation. This presentation bridges the gap between AI capabilities and role-specific needs.
 :::
 
 ---
@@ -34,7 +34,7 @@ SRE (Site Reliability Engineer)
 Each persona: Skills + Responsibilities (side-by-side)
 
 ::: notes
-This presentation covers 8 critical roles in modern software development. Each persona has unique needs when working with GitHub Copilot Chat. We’ll explore both the skills needed and responsibilities required. Focus on practical, actionable guidance for each role. Tables format allows easy comparison between skills and responsibilities.
+This presentation covers 8 critical roles in modern software development. Each persona has unique needs when working with GitHub Copilot Chat. We'll explore both the skills needed and responsibilities required. Focus on practical, actionable guidance for each role. Tables format allows easy comparison between skills and responsibilities.
 :::
 
 ---
@@ -108,13 +108,13 @@ Technical Writers can leverage AI for content creation and organization. Content
 Skills | Responsibilities
 --- | ---
 Threat Modeling - Use AI to identify potential security vulnerabilities and attack vectors | Vulnerability Assessment - Validate AI-identified security issues and remediation strategies
-Compliance Analysis - Leverage AI for regulatory and standards compliance checking | Code Security Review - Ensure AI-suggested code changes don’t introduce security risks
+Compliance Analysis - Leverage AI for regulatory and standards compliance checking | Code Security Review - Ensure AI-suggested code changes don't introduce security risks
 Risk Assessment - Guide AI through security impact analysis and risk prioritization | Policy Enforcement - Verify AI recommendations align with organizational security policies
 Security Testing - Generate security test cases and penetration testing scenarios | Audit Trail Maintenance - Document security decisions and rationale for AI-assisted reviews
 Incident Response - Use AI for security event analysis and response planning | Threat Intelligence - Stay current on security trends that may affect AI recommendation quality
 
 ::: notes
-Security Reviewers must validate all AI security recommendations. Threat modeling with AI can identify vulnerabilities humans might miss. Compliance analysis leverages AI’s knowledge of regulatory requirements. Risk assessment requires balancing AI suggestions with security expertise. Security testing scenarios can be comprehensive with AI assistance. Policy enforcement ensures AI recommendations align with org standards. Audit trail maintenance is critical for security accountability.
+Security Reviewers must validate all AI security recommendations. Threat modeling with AI can identify vulnerabilities humans might miss. Compliance analysis leverages AI's knowledge of regulatory requirements. Risk assessment requires balancing AI suggestions with security expertise. Security testing scenarios can be comprehensive with AI assistance. Policy enforcement ensures AI recommendations align with org standards. Audit trail maintenance is critical for security accountability.
 :::
 
 ---
@@ -162,7 +162,7 @@ Post-mortem Analysis - Create thorough incident reviews with AI assistance | Cha
 Reliability Engineering - Design fault-tolerant systems with AI recommendations | On-call Excellence - Optimize on-call procedures and reduce MTTR with AI support
 
 ::: notes
-SREs can leverage AI for faster incident response and resolution. Incident response benefits from AI’s rapid analysis and diagnosis capabilities. SLA/SLO monitoring becomes more comprehensive with AI-generated metrics. Capacity planning leverages AI for accurate resource forecasting. Post-mortem analysis creates thorough incident reviews with AI assistance. System reliability requires validating AI-driven monitoring recommendations. Performance optimization is continuous with AI insights into system behavior.
+SREs can leverage AI for faster incident response and resolution. Incident response benefits from AI's rapid analysis and diagnosis capabilities. SLA/SLO monitoring becomes more comprehensive with AI-generated metrics. Capacity planning leverages AI for accurate resource forecasting. Post-mortem analysis creates thorough incident reviews with AI assistance. System reliability requires validating AI-driven monitoring recommendations. Performance optimization is continuous with AI insights into system behavior.
 :::
 
 ---
@@ -185,7 +185,7 @@ Which skills resonate most with your current experience?
 How might these responsibilities evolve as AI capabilities advance?
 
 ::: notes
-Encourage audience to share specific examples from their experience. Ask for concrete challenges they’ve encountered with AI assistance. Discuss which personas and skills most closely match their current roles. Explore how AI capabilities might change these responsibilities over time. Consider emerging roles and evolving skill requirements. Gather feedback on what additional guidance would be helpful.
+Encourage audience to share specific examples from their experience. Ask for concrete challenges they've encountered with AI assistance. Discuss which personas and skills most closely match their current roles. Explore how AI capabilities might change these responsibilities over time. Consider emerging roles and evolving skill requirements. Gather feedback on what additional guidance would be helpful.
 :::
 
 ---

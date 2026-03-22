@@ -12,13 +12,13 @@ paginate: true
 ## 📂 What Are They?
 
 Instruction Files
-  - External configuration files that guide Copilot’s behavior
+  - External configuration files that guide Copilot's behavior
   - Define reusable rules, context, or workflows
 Prompt Files
   - Contain pre-written prompts or templates
   - Provide structured input for consistent outputs
 Custom Chatmodes
-  - Runtime modes that alter Copilot’s conversational style
+  - Runtime modes that alter Copilot's conversational style
   - Adapt tone, reasoning depth, or interaction model
 
 ---

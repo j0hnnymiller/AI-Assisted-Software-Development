@@ -28,7 +28,7 @@ Even though “chat modes” are being renamed to “agents,” the folder name 
 
 ---
 
-## What’s Changing and What Isn’t
+## What's Changing and What Isn't
 
 Changing:
 Terminology in UI and documentation
@@ -42,17 +42,17 @@ Promptfile behavior
 Instruction stack mechanics
 
 ::: notes
-Teams can safely start using the term “agent” in training and inside the file’s name: field, but must keep the existing folder structure.
+Teams can safely start using the term “agent” in training and inside the file's name: field, but must keep the existing folder structure.
 :::
 
 ---
 
 ## Order of Precedence
 
-Organization‑level instruction files
+Organization-level instruction files
 Chat mode file
-Repository‑level instruction files
-Workspace‑level instruction files
+Repository-level instruction files
+Workspace-level instruction files
 Prompt file (only when invoked)
 User message
 
@@ -72,11 +72,11 @@ Timing: 2-3 minutes
 
 Key Points to Emphasize:
 
-Custom agents are NOT separate AI models - they’re specialized configurations of GitHub Copilot
+Custom agents are NOT separate AI models - they're specialized configurations of GitHub Copilot
 
 Think of them as “personas” or “roles” for your AI assistant
 
-They’re defined in simple markdown files with YAML frontmatter
+They're defined in simple markdown files with YAML frontmatter
 
 Examples to Share:
 
@@ -90,7 +90,7 @@ Security reviewer that checks for vulnerabilities
 
 Audience Interaction: “Has anyone worked with AI assistants that seemed too generic or gave responses outside their intended scope? Custom agents solve this problem.”
 
-Transition: “Now let’s see where and how you can create these custom agents.”
+Transition: “Now let's see where and how you can create these custom agents.”
 :::
 
 ---
@@ -136,7 +136,7 @@ IDE user profile agents are local to that machine
 
 Common Question: “Can I use the same agent in both GitHub and my IDE?” Answer: Yes! Agents created on GitHub are automatically available in supported IDEs.
 
-Transition: “Let’s walk through creating an agent on GitHub, which is the most common workflow.”
+Transition: “Let's walk through creating an agent on GitHub, which is the most common workflow.”
 :::
 
 ---
@@ -167,7 +167,7 @@ Organization repo = for entire org
 
 Step 3-4: The template is your starting point
 
-Don’t skip past it - it contains all required sections
+Don't skip past it - it contains all required sections
 
 Template includes helpful comments
 
@@ -181,17 +181,17 @@ Filename becomes the default agent name
 
 Examples: test-specialist.agent.md, security-reviewer.agent.md, doc-writer.agent.md
 
-Step 6: We’ll cover configuration in detail on next slides
+Step 6: We'll cover configuration in detail on next slides
 
 Step 7-8: No build process or waiting
 
 Immediate availability after merge
 
-Refresh the page if you don’t see it
+Refresh the page if you don't see it
 
 Common Pitfalls:
 
-Forgetting to merge to default branch (agent won’t appear)
+Forgetting to merge to default branch (agent won't appear)
 
 Using spaces or special characters in filename
 
@@ -199,7 +199,7 @@ Not providing a description in the YAML
 
 Demo Tip: If showing live, create a simple agent like “hello-world.agent.md” to demonstrate the process.
 
-Transition: “Now that we know how to create the file, let’s understand what goes inside it.”
+Transition: “Now that we know how to create the file, let's understand what goes inside it.”
 :::
 
 ---
@@ -278,7 +278,7 @@ Common Questions:
 
 “Can I edit the YAML directly?” - Yes, the UI is just a helper
 
-Transition: “The process is similar in JetBrains, Eclipse, and Xcode with slight UI variations. Now let’s focus on what matters most: the agent configuration itself.”
+Transition: “The process is similar in JetBrains, Eclipse, and Xcode with slight UI variations. Now let's focus on what matters most: the agent configuration itself.”
 :::
 
 ---
@@ -343,7 +343,7 @@ Omit = works everywhere
 
 mcp-servers (org/enterprise only): Configure MCP servers for this agent
 
-Markdown Content (The Agent’s “Brain”):
+Markdown Content (The Agent's “Brain”):
 
 Define personality and expertise
 
@@ -357,7 +357,7 @@ Maximum 30,000 characters (plenty of space!)
 
 Best Practices:
 
-Be specific about what the agent should AND shouldn’t do
+Be specific about what the agent should AND shouldn't do
 
 Include examples of desired behavior
 
@@ -365,7 +365,7 @@ Mention file patterns or naming conventions
 
 Specify testing/validation requirements
 
-Transition: “Let’s see what these instructions look like in real agent examples.”
+Transition: “Let's see what these instructions look like in real agent examples.”
 :::
 
 ---
@@ -383,7 +383,7 @@ Clear Scope Definition:
 
 “Focuses on test coverage” - tells user what it does
 
-“Without modifying production code” - tells user what it WON’T do
+“Without modifying production code” - tells user what it WON'T do
 
 Sets clear boundaries to prevent scope creep
 
@@ -441,7 +441,7 @@ Add mutation testing requirements
 
 Common Question: “Why not enable all tools?” Answer: Not specified here, so all tools are available. But you might restrict to [“read”, “edit”] to prevent running or deploying.
 
-Transition: “Here’s another example that shows a different use case - planning instead of coding.”
+Transition: “Here's another example that shows a different use case - planning instead of coding.”
 :::
 
 ---
@@ -459,9 +459,9 @@ Tools Restriction:
 
 Only ["read", "search", "edit"] enabled
 
-NOT “run” or “debug” - this agent doesn’t execute code
+NOT “run” or “debug” - this agent doesn't execute code
 
-NOT “shell” - doesn’t deploy or build
+NOT “shell” - doesn't deploy or build
 
 Enforces its role as a planner, not implementer
 
@@ -489,7 +489,7 @@ Non-Code Focus:
 
 “Focus on thorough documentation rather than implementing code”
 
-Critical boundary: this agent designs but doesn’t build
+Critical boundary: this agent designs but doesn't build
 
 Prevents mixing planning and implementation concerns
 
@@ -545,7 +545,7 @@ Test Specialist: All tools, focused on test files
 
 Implementation Planner: Limited tools, focused on documentation
 
-Transition: “These examples show two very different agent types. Now let’s learn how to actually use custom agents once they’re created.”
+Transition: “These examples show two very different agent types. Now let's learn how to actually use custom agents once they're created.”
 :::
 
 ---
@@ -658,7 +658,7 @@ Choose the Right Agent:
 
 Match agent expertise to task
 
-Don’t use generic agent when specialized one exists
+Don't use generic agent when specialized one exists
 
 Provide Context:
 
@@ -690,7 +690,7 @@ Security Audit: Use security agent on entire codebase
 
 Test Coverage Drive: Use test agent to fill coverage gaps
 
-Transition: “Let’s wrap up with some best practices and resources to help you get started.”
+Transition: “Let's wrap up with some best practices and resources to help you get started.”
 :::
 
 ---
@@ -712,9 +712,9 @@ Detailed Best Practices:
 
 1. Start Simple:
 
-Don’t try to create every agent at once
+Don't try to create every agent at once
 
-Identify ONE repetitive task that’s painful
+Identify ONE repetitive task that's painful
 
 Create an agent for that specific task
 
@@ -742,9 +742,9 @@ More tools ≠ better agent
 
 Restrict to enforce boundaries
 
-Planning agent doesn’t need “run” tool
+Planning agent doesn't need “run” tool
 
-Doc agent doesn’t need “debug” tool
+Doc agent doesn't need “debug” tool
 
 Security agent might only need “read” and “search”
 
@@ -752,13 +752,13 @@ Benefits:
 
 Faster execution (fewer options to consider)
 
-Clear scope (can’t do things outside role)
+Clear scope (can't do things outside role)
 
-Safer (can’t accidentally deploy or delete)
+Safer (can't accidentally deploy or delete)
 
 4. Iterate:
 
-Agents aren’t “write once and forget”
+Agents aren't “write once and forget”
 
 Monitor what they produce
 
@@ -778,7 +778,7 @@ V4: Add specific Jest matchers to prefer
 
 5. Share:
 
-Don’t create duplicate agents across repos
+Don't create duplicate agents across repos
 
 Use organization-level agents for standards
 
@@ -873,7 +873,7 @@ DevTest Engineer
 SRE (Site Reliability Engineer)
 
 ::: notes
-This presentation covers 8 critical roles in modern software development. Each persona has unique needs when working with GitHub Copilot Chat. We’ll explore both the skills needed and responsibilities required. Focus on practical, actionable guidance for each role. Tables format allows easy comparison between skills and responsibilities.
+This presentation covers 8 critical roles in modern software development. Each persona has unique needs when working with GitHub Copilot Chat. We'll explore both the skills needed and responsibilities required. Focus on practical, actionable guidance for each role. Tables format allows easy comparison between skills and responsibilities.
 :::
 
 ---
@@ -947,13 +947,13 @@ Technical Writers can leverage AI for content creation and organization. Content
 Skills | Responsibilities
 --- | ---
 Threat Modeling - Use AI to identify potential security vulnerabilities and attack vectors | Vulnerability Assessment - Validate AI-identified security issues and remediation strategies
-Compliance Analysis - Leverage AI for regulatory and standards compliance checking | Code Security Review - Ensure AI-suggested code changes don’t introduce security risks
+Compliance Analysis - Leverage AI for regulatory and standards compliance checking | Code Security Review - Ensure AI-suggested code changes don't introduce security risks
 Risk Assessment - Guide AI through security impact analysis and risk prioritization | Policy Enforcement - Verify AI recommendations align with organizational security policies
 Security Testing - Generate security test cases and penetration testing scenarios | Audit Trail Maintenance - Document security decisions and rationale for AI-assisted reviews
 Incident Response - Use AI for security event analysis and response planning | Threat Intelligence - Stay current on security trends that may affect AI recommendation quality
 
 ::: notes
-Security Reviewers must validate all AI security recommendations. Threat modeling with AI can identify vulnerabilities humans might miss. Compliance analysis leverages AI’s knowledge of regulatory requirements. Risk assessment requires balancing AI suggestions with security expertise. Security testing scenarios can be comprehensive with AI assistance. Policy enforcement ensures AI recommendations align with org standards. Audit trail maintenance is critical for security accountability.
+Security Reviewers must validate all AI security recommendations. Threat modeling with AI can identify vulnerabilities humans might miss. Compliance analysis leverages AI's knowledge of regulatory requirements. Risk assessment requires balancing AI suggestions with security expertise. Security testing scenarios can be comprehensive with AI assistance. Policy enforcement ensures AI recommendations align with org standards. Audit trail maintenance is critical for security accountability.
 :::
 
 ---
@@ -1001,7 +1001,7 @@ Post-mortem Analysis - Create thorough incident reviews with AI assistance | Cha
 Reliability Engineering - Design fault-tolerant systems with AI recommendations | On-call Excellence - Optimize on-call procedures and reduce MTTR with AI support
 
 ::: notes
-SREs can leverage AI for faster incident response and resolution. Incident response benefits from AI’s rapid analysis and diagnosis capabilities. SLA/SLO monitoring becomes more comprehensive with AI-generated metrics. Capacity planning leverages AI for accurate resource forecasting. Post-mortem analysis creates thorough incident reviews with AI assistance. System reliability requires validating AI-driven monitoring recommendations. Performance optimization is continuous with AI insights into system behavior.
+SREs can leverage AI for faster incident response and resolution. Incident response benefits from AI's rapid analysis and diagnosis capabilities. SLA/SLO monitoring becomes more comprehensive with AI-generated metrics. Capacity planning leverages AI for accurate resource forecasting. Post-mortem analysis creates thorough incident reviews with AI assistance. System reliability requires validating AI-driven monitoring recommendations. Performance optimization is continuous with AI insights into system behavior.
 :::
 
 ---

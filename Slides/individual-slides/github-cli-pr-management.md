@@ -78,7 +78,7 @@ flowchart LR
 ```
 
 ::: notes
-Explain that merge strategy is a governance decision, not just a button choice at the end of a pull request. Squash merges can make the main branch easier to read, while merge commits retain more detail about how work evolved, so teams should choose based on their review and history preferences. Spend about two minutes here and point out that the default behavior should be deliberate because it shapes the whole repository’s history. Transition by moving from repository settings into the tools people use to work with PRs day to day.
+Explain that merge strategy is a governance decision, not just a button choice at the end of a pull request. Squash merges can make the main branch easier to read, while merge commits retain more detail about how work evolved, so teams should choose based on their review and history preferences. Spend about two minutes here and point out that the default behavior should be deliberate because it shapes the whole repository's history. Transition by moving from repository settings into the tools people use to work with PRs day to day.
 :::
 
 ---

@@ -10,7 +10,7 @@ Comparing implementations against instruction files
 Automated issue generation from conformance gaps
 Prioritizing technical debt remediation
 Creating actionable remediation plans
-Exercises for hands‑on practice
+Exercises for hands-on practice
 
 ::: notes
 Introduce this module as the bridge between architectural intent and real code. Conformance analysis ensures that AI-assisted and human-written code stays aligned with the rules defined in instruction files. This is how teams maintain evergreen quality in brownfield systems.
@@ -71,7 +71,7 @@ Risk scoring
 Dependency analysis
 
 ::: notes
-Not all technical debt is equal. Prioritization ensures that teams focus on the highest‑value remediation work first, rather than chasing low‑impact issues.
+Not all technical debt is equal. Prioritization ensures that teams focus on the highest-value remediation work first, rather than chasing low-impact issues.
 :::
 
 ---
@@ -82,7 +82,7 @@ A strong remediation plan includes:
 Clear problem definition
 Root cause analysis
 Proposed solution
-Step‑by‑step implementation plan
+Step-by-step implementation plan
 Rollback strategy
 Test updates
 Provenance metadata
@@ -104,7 +104,7 @@ Apply consistent structure and provenance
 Prioritize issues based on risk and impact
 Activities
 Select a brownfield module or file.
-Compare it against the project’s instruction file.
+Compare it against the project's instruction file.
 Ask AI to identify conformance gaps.
 Convert each gap into a GitHub issue with:
   - Title
@@ -121,7 +121,7 @@ Prioritization reflects real risk and effort
 Backlog is ready for team review
 
 ::: notes
-Encourage participants to treat this as a real backlog‑building session. The goal is clarity and actionability, not volume.
+Encourage participants to treat this as a real backlog-building session. The goal is clarity and actionability, not volume.
 :::
 
 ---
@@ -141,7 +141,7 @@ For each issue, create a remediation plan including:
   - Problem definition
   - Root cause
   - Proposed solution
-  - Step‑by‑step implementation
+  - Step-by-step implementation
   - Rollback plan
   - Required test updates
   - Documentation updates
