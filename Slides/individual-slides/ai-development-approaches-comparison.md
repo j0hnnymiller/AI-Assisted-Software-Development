@@ -52,7 +52,21 @@ Purpose: Act as specialized “AI expert” for conversations
 ## Custom Chat Mode Examples
 
 DevOps Engineer Mode
-role: "Senior DevOps Engineer"expertise:  - CI/CD pipelines  - Infrastructure as Code  - Container orchestration  - Monitoring and observabilitybehavior:  - Focus on scalability and reliability  - Recommend industry best practices  - Consider security implications  - Suggest automation opportunities
+
+```yaml
+role: "Senior DevOps Engineer"
+expertise:
+  - CI/CD pipelines
+  - Infrastructure as Code
+  - Container orchestration
+  - Monitoring and observability
+
+behavior:
+  - Focus on scalability and reliability
+  - Recommend industry best practices
+  - Consider security implications
+  - Suggest automation opportunities
+```
 
 ---
 
@@ -235,5 +249,3 @@ What specific instruction files would benefit your team?
 What repetitive tasks could be converted to prompt files?
 What domain expertise would be valuable as chat modes?
 Next Steps: Choose one approach to pilot in your next project
-
----

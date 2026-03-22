@@ -11,5 +11,3 @@ AI Practitioner Resources
 Prompt review
 Implementing Slices
 Wrap up
-
----

@@ -62,5 +62,3 @@ Custom Chatmodes adjust interaction dynamics
 Use Instruction Files for consistency and governance
 Use Prompt Files for efficiency and repeatability
 Use Custom Chatmodes for flexibility and user experience
-
----

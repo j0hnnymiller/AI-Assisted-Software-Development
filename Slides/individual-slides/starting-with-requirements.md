@@ -132,5 +132,3 @@ add a diagram that shows the phases -> slices -> use cases
 
 which of the slices can be implemented in parallel and which have a dependancy on another slice
 :::
-
----

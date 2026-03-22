@@ -86,5 +86,3 @@ Backlog is ready for implementation
 ::: notes
 Encourage participants to treat this as a real backlog-building session. The goal is not volume — it's clarity and actionability. Reinforce that a well-structured backlog is the foundation for safe, incremental modernization.
 :::
-
----

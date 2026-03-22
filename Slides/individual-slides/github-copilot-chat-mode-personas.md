@@ -200,5 +200,3 @@ Role-specific AI Integration Guides
 ::: notes
 Thank the audience for their attention and participation. Encourage them to explore the provided resources for deeper learning. GitHub Copilot Documentation provides official guidance and updates. AI-Assisted Development Best Practices cover broader implementation strategies. Role-specific guides offer detailed guidance for each persona covered today. Suggest they start with their own persona and gradually explore others. Remind them that AI assistance is a skill that improves with practice.
 :::
-
----

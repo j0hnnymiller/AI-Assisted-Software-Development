@@ -157,5 +157,3 @@ Provenance metadata is present
 ::: notes
 This exercise helps participants move from analysis to execution. The goal is to build modernization plans that are safe, thoughtful, and aligned with evergreen principles.
 :::
-
----

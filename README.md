@@ -148,10 +148,20 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes speaker notes for delivery and operational guidance for CI pipeline separation
   - Provenance: [Chat log](ai-logs/2026/03/19/feature-flags-test-suites-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/feature-flags-test-suites-20260319/summary.md)
 
+- **Safety Measures & Best Practices** ([`Slides/individual-slides/safety-measures-best-practices.md`](Slides/individual-slides/safety-measures-best-practices.md))
+  - 7-slide Marp deck covering safety nets, review discipline for AI-generated code, signal-vs-coverage testing guidance, safe feature-flag removal, small change sets, and Azure DevOps MCP-assisted PR review support
+  - Frames AI as an eager knowledgeable junior developer and closes with an actionable safety checklist for teams
+  - Provenance: [Chat log](ai-logs/2026/03/22/safety-measures-best-practices-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/safety-measures-best-practices-20260322/summary.md)
+
 - **Effective Prompts for Technical Debt** ([`Slides/individual-slides/effective-prompts-for-technical-debt.md`](Slides/individual-slides/effective-prompts-for-technical-debt.md))
   - Marp deck covering structured technical debt prompts, GitHub issue workflow, Copilot-assisted issue handling, and prompt components for safe remediation
   - Includes speaker notes and a reusable prompt template covering constraints, tests, docs, and provenance expectations
-  - Provenance: [Chat log](ai-logs/2026/03/20/effective-prompts-technical-debt-20260320/conversation.md) | [Summary](ai-logs/2026/03/20/effective-prompts-technical-debt-20260320/summary.md)
+  - Provenance: [Chat log](ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/summary.md)
+
+- **Technical Debt Copilot Exercise Sequence** ([`Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md`](Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md))
+  - Three-slide exercise set covering prompt authoring, GitHub issue assignment, and multi-step delegation for technical debt remediation with Copilot
+  - Uses the exercise template structure with duration, objectives, activities, success criteria, and facilitator notes on every slide
+  - Provenance: [Chat log](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/summary.md)
 
 - **Evergreen Software Development Exercise Deck** ([`Slides/individual-slides/evergreen-software-development-exercise-deck.md`](Slides/individual-slides/evergreen-software-development-exercise-deck.md))
   - Two exercise slides covering evergreen core principles and common failure modes
@@ -172,6 +182,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Marp deck covering security audit findings, impact/effort prioritization, visible technical-debt tracking, and Phase Zero security planning
   - Frames prioritization as the bridge between backlog generation and safe implementation sequencing for brownfield work
   - Provenance: [Chat log](ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/summary.md)
+
+- **Vertical Slice Implementation** ([`Slides/individual-slides/vertical-slice-implementation-webcat.md`](Slides/individual-slides/vertical-slice-implementation-webcat.md))
+  - Marp deck covering first-slice setup, prompt-versus-issue scope checks, Copilot-assisted live coding, and verification strategy for the "Implement Foundational WebCat" slice
+  - Highlights `webcat-frontend` organization decisions and the shift from manual verification toward automated testing
+  - Provenance: [Chat log](ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/summary.md)
 
 - **Prompt Authoring Instructions** ([`.github/instructions/create-prompt.instructions.md`](.github/instructions/create-prompt.instructions.md))
   - Comprehensive guidelines for creating effective, well-structured repository prompts

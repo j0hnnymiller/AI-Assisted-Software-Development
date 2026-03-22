@@ -396,5 +396,3 @@ Strengthen the safety nets by:
 ::: notes
 Encourage participants to treat this as a real modernization planning session. The goal is not to fix everything — it's to identify gaps and build a roadmap for safer development.
 :::
-
----

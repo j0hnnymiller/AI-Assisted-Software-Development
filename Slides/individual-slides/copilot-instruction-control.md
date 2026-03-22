@@ -23,7 +23,16 @@ Estimated time: 15-20 minutes including Q&A.
 ## The Core Concept
 
 Every Copilot prompt includes relevant instruction files automatically
-# .github/instructions/security.instructions.md---applyTo: "**/*.{ts,js,py}"---# Security Best Practices...
+
+```markdown
+# .github/instructions/security.instructions.md
+---
+applyTo: "**/*.{ts,js,py}"
+---
+# Security Best Practices
+...
+```
+
 When you work on src/api.ts → Security instructions automatically included
 
 ::: notes
@@ -51,7 +60,18 @@ Think of it like having domain experts looking over your shoulder, but only when
 ## The applyTo Field: Pattern Matching
 
 Three Levels of Scope Control
-# Global - EverythingapplyTo: "**/*"# Directory-Specific - Slides onlyapplyTo: "Slides/individual-slides/**"# Type-Specific - Code files onlyapplyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+
+```yaml
+# Global - Everything
+applyTo: "**/*"
+
+# Directory-Specific - Slides only
+applyTo: "Slides/individual-slides/**"
+
+# Type-Specific - Code files only
+applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+```
+
 Result: Only matching instruction files are included in context
 
 ::: notes
@@ -81,7 +101,14 @@ One important caveat: If an instruction file has NO applyTo field, it won't be a
 ## Prompt Files: Reference, Don't Control
 
 Prompt files execute tasks, they don't control instruction inclusion
-<!-- .github/prompts/create-api.prompt.md -->**CRITICAL**: All AI-generated artifacts MUST comply with`.github/instructions/ai-assisted-output.instructions.md`
+
+```markdown
+<!-- .github/prompts/create-api.prompt.md -->
+
+**CRITICAL**: All AI-generated artifacts MUST comply with
+`.github/instructions/ai-assisted-output.instructions.md`
+```
+
 Key Distinction:
 ✅ Can reference instruction requirements in content
 ❌ Don't control which instructions auto-include
@@ -120,7 +147,12 @@ The prompt metadata can specify output paths, which helps the system know what f
 ## Chat Modes: Persona, Not Pattern Control
 
 Chat modes create specialized contexts, not instruction filters
-# .github/chatmodes/security-analyzer.chatmode.md# Focus: Code security, vulnerability detection
+
+```markdown
+# .github/chatmodes/security-analyzer.chatmode.md
+# Focus: Code security, vulnerability detection
+```
+
 Interaction Model:
 graph LR
     A[File Being Edited] --> B{applyTo Match?}
@@ -260,7 +292,24 @@ Remember: You can see which instructions are active by checking the Copilot cont
 ## Real-World Examples
 
 From your current workspace
-# ai-assisted-output.instructions.mdapplyTo: "**/*"# ✅ Applies everywhere - fundamental provenance requirements# vertical-slice-implementation.instructions.mdapplyTo: "**/*.{cs,ts,js,py,java,go,rb}"# ✅ Code files only - architectural guidance# marp-slides.instructions.mdapplyTo: "Slides/individual-slides/**"# ✅ Specific directory - presentation formatting# chatmode-file.instructions.mdapplyTo: "**/*.chatmode.md"# ✅ Specific file type - chat mode creation rules
+
+```markdown
+# ai-assisted-output.instructions.md
+applyTo: "**/*"
+# ✅ Applies everywhere - fundamental provenance requirements
+
+# vertical-slice-implementation.instructions.md
+applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+# ✅ Code files only - architectural guidance
+
+# marp-slides.instructions.md
+applyTo: "Slides/individual-slides/**"
+# ✅ Specific directory - presentation formatting
+
+# chatmode-file.instructions.md
+applyTo: "**/*.chatmode.md"
+# ✅ Specific file type - chat mode creation rules
+```
 
 ::: notes
 Let's look at real examples from your actual workspace to see these strategies in action. These are live instruction files that demonstrate the patterns we've discussed.
@@ -410,5 +459,3 @@ Building tools to visualize instruction coverage across your codebase
 
 Thank you all for participating. I'll stick around for individual questions after we adjourn.
 :::
-
----

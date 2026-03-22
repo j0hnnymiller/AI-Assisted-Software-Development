@@ -155,5 +155,3 @@ Human review identifies any gaps
 ::: notes
 This exercise builds confidence in delegating larger tasks while maintaining safety and architectural alignment. Emphasize that humans remain the final reviewers.
 :::
-
----

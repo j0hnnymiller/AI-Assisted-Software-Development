@@ -244,7 +244,7 @@ paginate: true
 
 <!-- _class: lead -->
 
-# GitHub Copilot Skills
+## GitHub Copilot Skills
 
 ## What They Are, How to Define Them, and How They Change Copilot's Behavior
 
@@ -254,7 +254,7 @@ Introduce this deck as a practical orientation to Copilot Skills rather than a d
 
 ---
 
-# What Are Copilot Skills?
+## What Are Copilot Skills?
 
 - Self-contained capability modules for specialized tasks
 - Stored as folders with instructions, scripts, examples, and resources
@@ -275,7 +275,7 @@ Explain that skills are best thought of as capability bundles rather than plain 
 
 ---
 
-# Why Skills Exist
+## Why Skills Exist
 
 - Reduce repeated explanation of domain workflows
 - Store procedural knowledge in portable, version-controlled form
@@ -289,7 +289,7 @@ Frame this as a response to the institutional knowledge problem. Teams often rep
 
 ---
 
-# Skill Structure
+## Skill Structure
 
 A typical skill folder:
 
@@ -311,7 +311,7 @@ Explain that the structure is intentionally simple so teams can add skills witho
 
 ---
 
-# Anatomy of `SKILL.md`
+## Anatomy of `SKILL.md`
 
 Minimal example:
 
@@ -337,7 +337,7 @@ Walk through the two main parts of the file: metadata and procedure. The metadat
 
 ---
 
-# How Copilot Loads Skills
+## How Copilot Loads Skills
 
 Copilot loads a skill when:
 
@@ -357,7 +357,7 @@ Clarify that skill loading is semantic rather than manual. If a prompt asks for 
 
 ---
 
-# How Skills Change Copilot's Behavior
+## How Skills Change Copilot's Behavior
 
 ### 1. Procedural behavior
 
@@ -382,7 +382,7 @@ Make the point that skills are operational playbooks, not style guides. They pus
 
 ---
 
-# Skills vs. Other Copilot Instruction Mechanisms
+## Skills vs. Other Copilot Instruction Mechanisms
 
 | Mechanism | Purpose | Scope | When to use |
 | --- | --- | --- | --- |
@@ -397,7 +397,7 @@ Explain that skills complement the other instruction layers rather than replacin
 
 ---
 
-# Creating Your First Skill
+## Creating Your First Skill
 
 ### 1. Create the folder
 
@@ -424,7 +424,7 @@ Present this as a low-friction authoring path. A team does not need a special se
 
 ---
 
-# Best Practices for Skill Authoring
+## Best Practices for Skill Authoring
 
 - Use clear, imperative steps
 - Keep procedures short and deterministic
@@ -439,7 +439,7 @@ Frame these as reliability practices rather than stylistic preferences. A good s
 
 ---
 
-# Real-World Use Cases
+## Real-World Use Cases
 
 - Test generation and automation
 - Code migrations
@@ -456,7 +456,7 @@ Explain that skills are most valuable when a task is procedural, repeatable, and
 
 ---
 
-# Summary
+## Summary
 
 - Skills are modular, procedural knowledge bundles for Copilot
 - Defined in `.github/skills/<name>/SKILL.md`
