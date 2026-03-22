@@ -7,7 +7,7 @@ sections:
 
   - name: AI-First Development Methodology
     slides:
-      - Slides\individual-slides\tbd.md
+      - Slides\individual-slides\ai-first-vs-prompt-first.md
       - Slides\individual-slides\greenfield-development-workflow.md
       - Slides\individual-slides\getting-started.md
 
@@ -34,7 +34,7 @@ sections:
       - Slides\individual-slides\vertical-slice-implementation-plans.md
       - Slides\individual-slides\dependency-analysis-planning.md
 
-  - name: Implementation Prompts and Verification
+  - name: Implementation Prompts
     slides:
       - Slides\individual-slides\implementation-prompts-verification.md
 

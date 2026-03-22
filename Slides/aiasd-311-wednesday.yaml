@@ -15,14 +15,14 @@ sections:
     slides:
       - Slides\individual-slides\custom-agents.md
       - Slides\individual-slides\github-copilot-chat-mode-personas.md
-      - vscode-copilot-agents-overview
+      - Slides\individual-slides\_vscode-copilot-agents-overview.md
       - Slides\individual-slides\exercise-create-and-use-custom-agent.md
       - Slides\individual-slides\custom-agent-best-practices.md
 
   - name: Skills
     slides:
       - Slides\individual-slides\github-copilot-skills-practical-introduction.md
-      - Exercise: Defining Skills
+      - Slides\individual-slides\exercise-create-and-use-custom-skill.md
 
   - name: MCP
     slides:

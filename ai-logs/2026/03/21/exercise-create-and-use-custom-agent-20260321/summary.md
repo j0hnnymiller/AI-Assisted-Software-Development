@@ -1,4 +1,39 @@
-# Session Summary: Create and Use a Custom Agent Exercise
+# Session Summary: Custom Agent Exercise Deck
+
+**Session ID**: exercise-create-and-use-custom-agent-20260321
+**Date**: 2026-03-21
+**Operator**: johnmillerATcodemag-com
+**Model**: openai/gpt-5.3-codex@2026-03-21
+**Duration**: 00:15:00
+
+## Objective
+
+Create a Marp exercise deck that guides students through creating and using a repository-scoped custom GitHub Copilot agent.
+
+## Work Completed
+
+✅ Summary file created in ai-logs structure
+✅ README updated with artifact and provenance links
+✅ Wednesday manifest updated with the new exercise path
+
+## Chat Metadata
+
+```yaml
+chat_id: exercise-create-and-use-custom-agent-20260321
+started: 2026-03-21T23:35:00Z
+ended: 2026-03-21T23:50:00Z
+total_duration: 00:15:00
+operator: johnmillerATcodemag-com
+model: openai/gpt-5.3-codex@2026-03-21
+artifacts_count: 3
+files_modified: 5
+```
+
+---
+
+**Summary Version**: 1.0.0
+**Created**: 2026-03-21T23:50:00Z
+**Format**: Markdown# Session Summary: Create and Use a Custom Agent Exercise
 
 **Session ID**: exercise-create-and-use-custom-agent-20260321
 **Date**: 2026-03-21
