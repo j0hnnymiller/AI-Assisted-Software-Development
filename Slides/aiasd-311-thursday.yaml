@@ -11,7 +11,7 @@ sections:
 
   - name: Brownfield Software Development
     slides:
-      - Slides\individual-slides\what-is-brownfield-software.md
+      - Slides\individual-slides\understanding-legacy-code.md
       - Slides\individual-slides\safe-brownfield-coding.md
 
   - name: AI Implementation Workflow
@@ -27,7 +27,7 @@ sections:
 
   - name: Addressing Technical Debt
     slides:
-      - Slides\individual-slides\addressing-technical-debt.md
+      - Slides\individual-slides\exercise-addressing-technical-debt-with-copilot.md
       - Slides\individual-slides\exercise-addressing-technical-debt.md
 
   - name: Multi-Implementation Comparison

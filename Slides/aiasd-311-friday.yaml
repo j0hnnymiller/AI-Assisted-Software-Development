@@ -27,7 +27,7 @@ sections:
   - name: Implementation Specification
     slides:
       - Slides\individual-slides\vertical-slicing-architecture-introduction.md
-      - Slides\individual-slides\implementation-with-vertical-slices.md
+      - Slides\individual-slides\implementation-with-vertical-slices.md <------------- Missing from course modules xlsx
 
   - name: Implementation Planning
     slides:

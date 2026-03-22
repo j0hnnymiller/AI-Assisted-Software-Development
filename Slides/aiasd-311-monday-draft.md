@@ -64,6 +64,8 @@ style: |
 From Code to Copilot
 
 ::: notes
+Duration ~00:02
+
 Welcome participants to the AI Assisted Software Development course. This is your opening slide, so set a positive and engaging tone. Introduce the course name and tagline "From Code to Copilot" which emphasizes the journey from traditional software development to AI-augmented practices.
 
 Key talking points:
@@ -73,7 +75,6 @@ Key talking points:
 - Set expectations that this will be hands-on and practical
 - Encourage questions and participation throughout
 
-Timing: Spend about 1-2 minutes on this welcome slide.
 Transition: "Let's start by introducing ourselves..."
 :::
 
@@ -91,9 +92,8 @@ AI/ML Enthusiast and advocate for effectively using AI to write code
 
 ::: notes
 John Michael Miller is a Principal Software Engineer at CODE with over 15 years of experience in software development. He has held various roles including developer, architect, DevOps engineer, platform engineer, test architect, and release manager. John is an AI/ML enthusiast and advocates for effectively using AI to write code. You can connect with him on LinkedIn, reach out via email, or read his blog posts on AI-assisted software development.
-
 - [AI Practitioner Resources](codemag.com/aipractitioner)
-  :::
+:::
 
 ---
 
@@ -132,6 +132,8 @@ CODE is a custom software company, a staff augmentation company, CODE Magazine f
 | Friday    | AI Assisted Greenfield Software Development |
 
 ::: notes
+Duration ~00:03
+
 Present the week-long course structure. This overview helps participants understand the progression and big-picture organization of the training.
 
 Key talking points:
@@ -144,7 +146,6 @@ Key talking points:
 
 Emphasize that guardrails come first because they're essential for safe, effective AI-assisted development. The brownfield/greenfield split acknowledges that these scenarios have different challenges and considerations.
 
-Timing: Spend 2-3 minutes walking through this roadmap.
 Transition: "Today we'll start with the foundation..."
 :::
 
@@ -155,11 +156,24 @@ Transition: "Today we'll start with the foundation..."
 ## Course Modules
 
 - Intro
-- **▶ Module 1 - AIASD**
-- Module 2 - Intro to Copilot
-- Module 3 - Vibbing
-- Module 4 - Adding AI Guardrails
-- Module 5 - Managing Context
+- **▶ AI Assisted Software Development**
+- Intro to Copilot
+- AI Assistance in Action
+- Adding AI Guardrails
+- Managing Context
+
+---
+
+<!-- _class: lead -->
+
+# AI Assisted Software Development
+
+---
+
+## AI Assisted Software Development
+
+- WTBD - The Core Thesis
+- The AI Revolution?
 
 ---
 
@@ -694,11 +708,24 @@ It's the cleanest way to remember the relationship.
 ## Course Modules
 
 - Intro
-- Module 1 - AIASD
-- **▶ Module 2 - Intro to Copilot**
-- Module 3 - Vibbing
-- Module 4 - Adding AI Guardrails
-- Module 5 - Managing Context
+- AI Assisted Software Development
+- **▶ Intro to Copilot**
+- AI Assistance in Action
+- Adding AI Guardrails
+- Managing Context
+
+---
+
+<!-- _class: lead -->
+
+# Intro to Copilot
+
+---
+
+## Intro to Copilot
+
+- Repository and Tool Setup
+- Hands-On with GitHub Copilot
 
 ---
 
@@ -711,7 +738,6 @@ GitHub authentication
 
 ## Lab: Clone the AI-Assisted-Software-Development Repository
 
-Duration: 10 minutes
 Prerequisites: Git, GitHub account
 Objectives
 Fork the AI-Assisted-Software-Development repo
@@ -722,6 +748,8 @@ Success Criteria
 Cloned repository exists locally
 
 ::: notes
+Duration ~00:10
+
 Objective: Fork the course repos Tasks
 Search GitHub for
 AI-Assisted-Software-Development
@@ -731,6 +759,7 @@ You can make changes without affecting the original repo
 :::
 
 ---
+
 
 ## Exercise: Fork the AIASD-20260209-BF Repo
 
@@ -746,14 +775,14 @@ Repo is available locally
 
 ---
 
+
 ## Exercise: Fork the repos
 
 Objective: Fork the course repos
 Search GitHub for
-
 - AI-Assisted-Software-Development
 - zeus.academia.3b
-  Fork the repos
+Fork the repos
 - This will create a personal copy under your GitHub account
 - You can make changes without affecting the original repo
 
@@ -775,6 +804,7 @@ Walk through installation, auth, and a quick coding session; encourage participa
 :::
 
 ---
+
 
 ## Lab: Getting Started with GitHub Copilot
 
@@ -839,6 +869,7 @@ Locate and explore:
 
 ---
 
+
 ## Prompt Specificity
 
 Add error handling to my code
@@ -877,7 +908,6 @@ This slide demonstrates the progression from terrible to excellent prompts—wal
 
 ## Lab: Understanding Context Management
 
-Duration: Follow along
 Objectives
 Learn to add context using @ symbols
 Understand context window limitations
@@ -903,7 +933,7 @@ Activities
    Notice quality difference between vague and specific prompts
 
 ::: notes
-**Timing:** 15-20 minutes hands-on lab with instructor guidance
+Duration ~00:20
 
 **Lab Introduction:**
 "This is your first real hands-on practice with context management. Open VS Code and follow along—we'll work through this together."
@@ -949,7 +979,6 @@ Walk around (if in person) or ask participants to confirm:
 
 ## Lab: Chat Management & Workflow
 
-Duration: Follow along
 Objectives
 
 - Organize chat sessions effectively
@@ -992,7 +1021,7 @@ Objectives
   - When Copilot "forgets" earlier context, it's time for a new session
 
 ::: notes
-**Timing:** 15-20 minutes hands-on lab
+Duration ~00:20
 
 **Lab Introduction:**
 "Chat management might sound boring, but it's the difference between constantly fighting Copilot and having smooth, productive conversations. Let's build good habits now."
@@ -1043,6 +1072,7 @@ Ask participants:
 
 ---
 
+
 ## Using Copilot in different modes
 
 Ask Mode
@@ -1063,7 +1093,6 @@ Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and 
 
 ## Lab: Exploring Copilot Modes
 
-Duration: Follow along
 Objectives
 Understand differences between Ask, Edit, and Agent modes
 Know when to use each mode
@@ -1091,7 +1120,7 @@ Activities
    Successfully use agent mode for multi-file operations
 
 ::: notes
-**Timing:** 15-20 minutes hands-on lab
+Duration ~00:20
 
 **Lab Introduction:**
 "This lab is about understanding the differences between Copilot modes and—critically—when each mode consumes your premium tokens. Let's dive in."
@@ -1157,6 +1186,7 @@ Activities
 
 ---
 
+
 ## IDE Support for AI Assistance
 
 | IDE / Editor                     | Built-In AI Features                                                    | Supported AI Assistants                                              | Strengths                                                                                   | Limitations                                                                       |
@@ -1177,11 +1207,27 @@ Activities
 ## Course Modules
 
 - Intro
-- Module 1 - AIASD
-- Module 2 - Intro to Copilot
-- **▶ Module 3 - Vibbing**
-- Module 4 - Adding AI Guardrails
-- Module 5 - Managing Context
+- AI Assisted Software Development
+- Intro to Copilot
+- **▶ AI Assistance in Action**
+- Adding AI Guardrails
+- Managing Context
+
+---
+
+<!-- _class: lead -->
+
+# AI Assistance in Action
+
+---
+
+## AI Assistance in Action
+
+- Collaborating on a Solution
+- AI-Assisted CI/CD Pipelines
+- AI-Assisted GitHub Pull Requests
+- Multi-Model Implementation Comparison
+- Evergreen Software Development - Core Principles
 
 ---
 
@@ -2136,49 +2182,35 @@ Success Criteria
 
 ## Exercise: Test Coverage Improvement
 
-Duration: 30-45 minutes
-
 Objectives
-
 - Analyze code coverage reports
 - Use Copilot to intelligently add tests
 - Achieve target coverage percentage
 - Balance quantity vs. quality of tests
 
 Activities
-
 1. Review Current Coverage:
-
-- Run tests with coverage reporting
-- Identify uncovered code paths
-- Analyze coverage percentage by file/class
-
+  - Run tests with coverage reporting
+  - Identify uncovered code paths
+  - Analyze coverage percentage by file/class
 2. Targeted Test Generation:
-
-- Prompt: "Add tests to increase code coverage to [X]%"
-- Observe how Copilot identifies gaps
-- Review generated tests for quality
-
+  - Prompt: "Add tests to increase code coverage to [X]%"
+  - Observe how Copilot identifies gaps
+  - Review generated tests for quality
 3. Strategic Coverage Improvement:
-
-- Prompt: "Add tests for edge cases in division operation"
-- Prompt: "Add tests for corner cases like divide by zero"
-- Prompt: "Add integration tests for evaluate arithmetic method"
-
+  - Prompt: "Add tests for edge cases in division operation"
+  - Prompt: "Add tests for corner cases like divide by zero"
+  - Prompt: "Add integration tests for evaluate arithmetic method"
 4. Verify Test Quality:
-
-- Confirm tests call real implementation code
-- Confirm tests verify expected behavior, not just execution
-- Confirm edge cases are properly handled
-
+  - Confirm tests call real implementation code
+  - Confirm tests verify expected behavior, not just execution
+  - Confirm edge cases are properly handled
 5. Re-run Coverage:
-
-- Execute test suite with coverage
-- Compare before/after percentages
-- Identify remaining gaps
+  - Execute test suite with coverage
+  - Compare before/after percentages
+  - Identify remaining gaps
 
 Success Criteria
-
 - Code coverage increased by at least 20 percentage points
 - All new tests are meaningful and test actual implementation
 - Tests include edge cases and error conditions
@@ -2186,10 +2218,10 @@ Success Criteria
 - Understanding of test quality vs. quantity trade-offs
 
 ::: notes
+Duration ~00:45
 
 ## Test Coverage Improvement Exercise Instructions
 
-**Duration:** 30-45 minutes
 **Prerequisites:** Lab 1 completed, existing test suite
 
 ### Objectives
@@ -2224,51 +2256,37 @@ As discovered in the session, asking Copilot to "increase coverage to 50%" can w
 
 ## Exercise: Lab 3 - Test-Driven Development (TDD) with Copilot
 
-Duration: 45-60 minutes
-
 Objectives
-
 - Practice TDD workflow with AI assistance
 - Write failing tests before implementation
 - Use tests to drive design decisions
 - Understand red-green-refactor cycle
 
 Activities
-
 1. Define New Feature:
-
-- Choose a feature (for example, memory operations for calculator)
-- Store current result (ANS/answer functionality)
-- Recall previous result
-- Handle "ANS + 5" style operations
-
+  - Choose a feature (for example, memory operations for calculator)
+  - Store current result (ANS/answer functionality)
+  - Recall previous result
+  - Handle "ANS + 5" style operations
 2. Write Failing Tests First:
-
-- Prompt: "Using TDD, create tests for a memory/answer feature in the calculator. DO NOT implement the feature yet."
-- Review generated tests
-- Verify tests reference methods that do not exist yet
-
+  - Prompt: "Using TDD, create tests for a memory/answer feature in the calculator. DO NOT implement the feature yet."
+  - Review generated tests
+  - Verify tests reference methods that do not exist yet
 3. Run Tests (Expect Failures):
-
-- Execute test suite
-- Observe compilation errors or test failures
-- Document what is missing
-
+  - Execute test suite
+  - Observe compilation errors or test failures
+  - Document what is missing
 4. Implement Feature to Pass Tests:
-
-- Prompt: "Implement the memory/answer feature to make the tests pass"
-- Review generated implementation
-- Run tests again
-- Verify all tests now pass
-
+  - Prompt: "Implement the memory/answer feature to make the tests pass"
+  - Review generated implementation
+  - Run tests again
+  - Verify all tests now pass
 5. Refactor:
-
-- With tests passing, ask for improvements
-- Prompt: "Refactor the answer implementation for better readability"
-- Verify tests still pass after refactoring
+  - With tests passing, ask for improvements
+  - Prompt: "Refactor the answer implementation for better readability"
+  - Verify tests still pass after refactoring
 
 Success Criteria
-
 - Tests written before implementation
 - Initial test run shows failures (red phase)
 - Implementation makes all tests pass (green phase)
@@ -2276,10 +2294,10 @@ Success Criteria
 - Understanding of TDD benefits and workflow
 
 ::: notes
+Duration ~00:60
 
 ## Lab 3 - Test-Driven Development (TDD) with Copilot Exercise Instructions
 
-**Duration:** 45-60 minutes
 **Prerequisites:** Understanding of TDD principles
 
 ### Objectives
@@ -2310,7 +2328,7 @@ Success Criteria
 1. **Red:** Write a failing test.
 2. **Green:** Write minimal code to make it pass.
 3. **Refactor:** Improve code while keeping tests green.
-   :::
+:::
 
 ---
 
@@ -2328,6 +2346,7 @@ Introduce this module as a practical guide to using AI — specifically GitHub C
 
 ---
 
+
 ## Why Pipelines Are Hard
 
 YAML syntax is unforgiving
@@ -2341,6 +2360,7 @@ Open with empathy. Most developers have lost an afternoon to a mis-indented YAML
 :::
 
 ---
+
 
 ## What AI Brings to CI/CD
 
@@ -2361,6 +2381,7 @@ Walk through the mental model: the developer provides intent, the AI provides sy
 :::
 
 ---
+
 
 ## GitHub Actions YAML Generation
 
@@ -2385,6 +2406,7 @@ Live demo opportunity: open a blank `.github/workflows/ci.yml` and type the prom
 :::
 
 ---
+
 
 ## Anatomy of an AI-Generated Workflow
 
@@ -2415,6 +2437,7 @@ Walk through each section: triggers, runner, checkout, SDK setup, restore, build
 
 ---
 
+
 ## Coverage Thresholds
 
 Coverage gates enforce quality — AI helps configure them correctly
@@ -2440,6 +2463,7 @@ Coverage thresholds are one of the most common sources of confusion: where does 
 :::
 
 ---
+
 
 ## Build Automation Patterns
 
@@ -2470,6 +2494,7 @@ Matrix builds and caching are two patterns that dramatically improve pipeline pe
 
 ---
 
+
 ## Maintaining Pipelines with AI
 
 Pipelines rot — actions deprecate, runners change, dependencies drift
@@ -2488,6 +2513,7 @@ Maintenance is where AI pays long-term dividends. Demo: paste a failing workflow
 :::
 
 ---
+
 
 ## Reusable Workflows
 
@@ -2518,6 +2544,7 @@ Reusable workflows (`workflow_call`) are a powerful but often underused GitHub A
 
 ---
 
+
 ## Secrets, Permissions, and Security
 
 AI assists but YOU own security decisions
@@ -2541,6 +2568,7 @@ Stress that AI can suggest correct permission scopes but cannot see your reposit
 :::
 
 ---
+
 
 ## From Zero to Pipeline: Live Workflow
 
@@ -2581,10 +2609,13 @@ Walk through this five-step workflow live or in a recorded demo. The goal is to 
 _Sample repo link provided by instructor_
 
 ::: notes
-Allow 15–20 minutes. Circulate and watch for students who try to use Copilot as a black box without reading the output. Prompt them: "Can you explain line 12 to me?" That question forces engagement. Common issues: students forget to create the `.github/workflows/` directory, or they use the wrong indentation. AI usually catches these if students paste the file back and ask "is this correct YAML?" Debrief: what surprised you? What did the AI get wrong?
+Duration ~00:20
+
+ Circulate and watch for students who try to use Copilot as a black box without reading the output. Prompt them: "Can you explain line 12 to me?" That question forces engagement. Common issues: students forget to create the `.github/workflows/` directory, or they use the wrong indentation. AI usually catches these if students paste the file back and ask "is this correct YAML?" Debrief: what surprised you? What did the AI get wrong?
 :::
 
 ---
+
 
 ## Key Takeaways
 
@@ -2606,9 +2637,9 @@ Close by reinforcing ownership. Students may be tempted to treat AI-generated pi
 ## Faster, Better PRs with GitHub Copilot
 
 ::: notes
-Welcome to this session on using AI to improve the pull request workflow. GitHub Copilot and related AI tools can dramatically reduce the friction of creating, reviewing, and merging pull requests.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to this session on using AI to improve the pull request workflow. GitHub Copilot and related AI tools can dramatically reduce the friction of creating, reviewing, and merging pull requests.
 
 **Key Points**:
 
@@ -2640,7 +2671,7 @@ AI can assist at **every stage**:
 | Final merge         | Automated checks               |
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -2672,7 +2703,7 @@ GitHub Copilot can **draft your PR description** based on your diff:
 > 💡 Use `gh pr create` with Copilot in the CLI, or the **GitHub web editor** with AI suggestions
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -2696,6 +2727,7 @@ GitHub Copilot can **draft your PR description** based on your diff:
 Getting great AI output starts with **good context**:
 
 ```markdown
+
 ## What changed
 
 - Brief bullet list of changes
@@ -2712,7 +2744,7 @@ Getting great AI output starts with **good context**:
 Ask Copilot: _"Generate a PR description for these changes that explains the business impact"_
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -2743,7 +2775,7 @@ GitHub Copilot assists reviewers with:
 > Use `@workspace` in Copilot Chat to ask questions across the entire PR diff
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -2777,7 +2809,7 @@ GitHub.com → Pull Request → Copilot Summary button
 ```
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -2806,7 +2838,7 @@ AI accelerates **addressing reviewer comments**:
 > 🔁 The feedback loop closes faster when AI drafts the fix and the human approves it
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -2845,7 +2877,7 @@ Integrate AI into your **CI/CD pipeline**:
 - Post AI summary as a **PR comment**
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -2876,7 +2908,7 @@ Integrate AI into your **CI/CD pipeline**:
 > Source: GitHub internal data, 2024–2025 Copilot usage studies
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -2907,7 +2939,7 @@ Integrate AI into your **CI/CD pipeline**:
 - Over-automating to the point of alert fatigue
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -2944,7 +2976,7 @@ Integrate AI into your **CI/CD pipeline**:
 > - [gh CLI](https://cli.github.com)
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -2976,7 +3008,7 @@ Integrate AI into your **CI/CD pipeline**:
 **Pull requests become a collaboration between humans and AI**
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -3007,6 +3039,7 @@ Introduce this module as a way to help teams understand how different AI models 
 
 ---
 
+
 ## Implementing Changes With Different AI Models
 
 Why use multiple models?
@@ -3024,6 +3057,7 @@ Explain that no single model is perfect. Using multiple models gives teams a bro
 :::
 
 ---
+
 
 ## Comparing Approaches & Outcomes
 
@@ -3044,6 +3078,7 @@ Encourage participants to treat model outputs like multiple drafts from differen
 
 ---
 
+
 ## Risk Assessment & Quality Evaluation
 
 Risk indicators
@@ -3062,6 +3097,7 @@ Reinforce that risk assessment is essential in brownfield systems. Even if a mod
 :::
 
 ---
+
 
 ## Best Practice Synthesis
 
@@ -3083,8 +3119,6 @@ Explain that synthesis is the real power of multi-model workflows. Teams can bui
 
 ## Exercise: Prompt Multiple Models to Address Technical Debt
 
-Duration
-15 minutes
 Objectives
 Compare outputs from different models
 Identify strengths and weaknesses
@@ -3106,6 +3140,8 @@ Compare outputs for:
   Provenance metadata is included
 
 ::: notes
+Duration ~00:15
+
 Encourage participants to think like reviewers comparing multiple PRs. The goal is to understand model behavior, not to pick a favorite.
 :::
 
@@ -3113,8 +3149,6 @@ Encourage participants to think like reviewers comparing multiple PRs. The goal 
 
 ## Exercise: Assigning an Issue to Multiple Models
 
-Duration
-10 minutes
 Objectives
 Practice delegating the same issue to different models
 Evaluate how each model interprets constraints
@@ -3131,6 +3165,8 @@ Missing context is identified and documented
 A preferred plan is selected based on safety and clarity
 
 ::: notes
+Duration ~00:10
+
 This exercise helps participants see how different models interpret the same instructions — a key skill for multi-model workflows.
 :::
 
@@ -3138,8 +3174,6 @@ This exercise helps participants see how different models interpret the same ins
 
 ## Exercise: Delegating Work to Multiple Models
 
-Duration
-20 minutes
 Objectives
 Practice multi-model delegation
 Evaluate multi-step reasoning
@@ -3161,6 +3195,8 @@ Ask multiple models to:
   Risks are identified and mitigated
 
 ::: notes
+Duration ~00:20
+
 This exercise builds confidence in orchestrating multiple models as collaborators. The goal is synthesis, not competition.
 :::
 
@@ -3237,11 +3273,27 @@ Transition: "Let's see how to avoid these pitfalls..."
 ## Course Modules
 
 - Intro
-- Module 1 - AIASD
-- Module 2 - Intro to Copilot
-- Module 3 - Vibbing
-- **▶ Module 4 - Adding AI Guardrails**
-- Module 5 - Managing Context
+- AI Assisted Software Development
+- Intro to Copilot
+- AI Assistance in Action
+- **▶ Adding AI Guardrails**
+- Managing Context
+
+---
+
+<!-- _class: lead -->
+
+# Adding AI Guardrails
+
+---
+
+## Adding AI Guardrails
+
+- Adding AI Guardrails
+- Instruction Files
+- 🎯 Instruction File `applyTo` Patterns
+- Core Instructions
+- Organizational vs. Repository Instruction Files
 
 ---
 
@@ -3263,6 +3315,7 @@ These practices turn AI from a novelty into a disciplined engineering tool.
 
 ---
 
+
 ## Instructions, Prompts & Agents
 
 Definitions
@@ -3277,6 +3330,7 @@ Together, they form a layered control system that shapes AI behavior and reduces
 :::
 
 ---
+
 
 ## Creating Instruction, Prompt & Agent Files
 
@@ -3298,6 +3352,7 @@ This is essential for brownfield modernization, where consistency and traceabili
 
 ---
 
+
 ## Meta Prompts
 
 Meta prompts guide:
@@ -3316,6 +3371,7 @@ This reduces manual effort and ensures that all artifacts follow a consistent pa
 
 ---
 
+
 ## Instructions for Generating Artifacts
 
 Best practices
@@ -3332,6 +3388,7 @@ This prevents drift and ensures the output is usable without heavy editing.
 :::
 
 ---
+
 
 ## Enforcing Provenance for AI Artifacts
 
@@ -3355,7 +3412,6 @@ It ensures teams know which artifacts were AI-generated, which were human-genera
 
 ## Exercise: Copy the Core Instructions
 
-Duration: 10 minutes
 Objectives:
 Understand file organization for AI-assisted output policies
 Practice copying files between repositories
@@ -3377,10 +3433,13 @@ Activities:
    No metadata or formatting is lost
 
 ::: notes
+Duration ~00:10
+
 This exercise reinforces the importance of maintaining consistent AI-assisted output policies across repositories. By copying the instructions file, participants learn to manage compliance and provenance requirements for AI-generated artifacts. Ensure the copied file is identical and properly placed to support future AI work.
 :::
 
 ---
+
 
 ## Instructions for AI Generated Artifacts
 
@@ -3394,6 +3453,7 @@ It ensures teams know which artifacts were AI-generated, which were human-genera
 
 ---
 
+
 ## AI-Assisted Output Instructions
 
 Ensures provenance and logging for all AI-assisted outputs
@@ -3405,6 +3465,7 @@ This slide introduces the purpose of the AI-Assisted Output Instructions file: t
 :::
 
 ---
+
 
 ## Required Provenance Metadata
 
@@ -3428,6 +3489,7 @@ These fields ensure each artifact can be traced back to its origin, model, and o
 
 ---
 
+
 ## Metadata Placement Policy
 
 Use YAML front matter for Markdown and similar formats
@@ -3443,6 +3505,7 @@ Note: Instructions files have limited support for metadata and must use sidecar 
 :::
 
 ---
+
 
 ## AI Chat Logging Workflow
 
@@ -3462,6 +3525,7 @@ Each session gets its own folder, transcript, and summary, ensuring clear separa
 
 ---
 
+
 ## Quality & PR Checklist
 
 Metadata complete and correct
@@ -3478,6 +3542,7 @@ Artifacts must be fully documented, logs must exist, and sensitive data must be 
 
 ---
 
+
 ## Copilot Integration Requirements
 
 Copilot must auto-manage chat IDs and logs
@@ -3492,6 +3557,7 @@ Copilot should automate chat management, metadata injection, and enforce complia
 :::
 
 ---
+
 
 ## Enforcement & Remediation
 
@@ -3509,6 +3575,7 @@ Any missing provenance must be remediated before merging.
 
 ---
 
+
 ## Summary: Why This Matters
 
 Enables auditability and trust in AI outputs
@@ -3520,6 +3587,7 @@ This slide reinforces the value of these instructions: they ensure every AI-assi
 :::
 
 ---
+
 
 ## Core Instruction files
 
@@ -3537,8 +3605,6 @@ chatmode-file.instructions.md
 
 ## Exercise: Create a Prompt File
 
-Duration
-10 minutes
 Objectives
 Understand prompt structure
 Practice defining task intent
@@ -3552,6 +3618,8 @@ Includes constraints and success criteria
 Avoids unnecessary context
 
 ::: notes
+Duration ~00:10
+
 This exercise builds foundational prompt-writing skills. Encourage participants to choose a real task to make the exercise concrete.
 
 Prompt: Create a prompt file that creates an instruction file for evergreen software development
@@ -3561,8 +3629,6 @@ Prompt: Create a prompt file that creates an instruction file for evergreen soft
 
 ## Exercise: Create an Instruction File for Evergreen Development
 
-Duration
-15 minutes
 Objectives
 Capture evergreen principles
 Define architectural boundaries
@@ -3576,6 +3642,8 @@ Reflects evergreen development values
 Provides clear guardrails
 
 ::: notes
+Duration ~00:15
+
 This reinforces the evergreen mindset and produces a reusable artifact for future AI-assisted work.
 
 Prompt: Submit the prompt #file:create-evergreen-software-instructions.prompt.md
@@ -3585,8 +3653,6 @@ Prompt: Submit the prompt #file:create-evergreen-software-instructions.prompt.md
 
 ## Exercise: Create an Agent
 
-Duration
-10 minutes
 Objectives
 Define a persona optimized for brownfield work
 Emphasize safety and incrementalism
@@ -3606,6 +3672,8 @@ Draft a Agent that:
   Includes clear behavioral rules
 
 ::: notes
+Duration ~00:10
+
 This helps participants shape AI behavior to match brownfield realities.
 :::
 
@@ -3613,8 +3681,6 @@ This helps participants shape AI behavior to match brownfield realities.
 
 ## Exercise: Generate Instruction Files
 
-Duration
-20 minutes
 Objectives
 Use meta prompts to scale instruction-file creation
 Capture module-specific rules
@@ -3628,6 +3694,8 @@ Meta prompts produce consistent structure
 Files are ready for team use
 
 ::: notes
+Duration ~00:20
+
 Participants experience the leverage of meta prompts and see how AI can accelerate documentation.
 
 Prompts:
@@ -3643,8 +3711,6 @@ Create instruction files for the front-end technologies
 
 ## Exercise: Context-Related Issues
 
-Duration
-10 minutes
 Objectives
 Identify missing context
 Detect token overflow risks
@@ -3658,6 +3724,8 @@ Success Criteria
 Correctly identified context gaps
 
 ::: notes
+Duration ~00:10
+
 This exercise builds intuition for context management—one of the most important AI-era engineering skills.
 :::
 
@@ -3767,14 +3835,16 @@ Hardcoded values instead of parameters
 Controlling When Instructions Apply to Your Code
 
 ::: notes
+Duration ~00:01
+
 Welcome to this presentation on instruction file applyTo patterns. This is a critical concept for managing GitHub Copilot's behavior across your codebase. By the end of this session, you'll understand how to precisely control which files your instruction files apply to using glob patterns.
 
-**Timing**: 30 seconds for title slide
 **Key Point**: This is about precision - getting Copilot to apply the right rules to the right files
 **Transition**: "Let's start by understanding what the applyTo field actually does"
 :::
 
 ---
+
 
 ## Where `appliesTo` Fits
 
@@ -3796,6 +3866,7 @@ rule. It prevents irrelevant instructions from polluting the stack and
 keeps the assistant focused.
 
 ---
+
 
 ## How `appliesTo` Interacts with the Stack
 
@@ -3829,13 +3900,14 @@ applyTo: "**/*.md" # Applies to all Markdown files
 - ✅ Improve Copilot performance by reducing context
 
 ::: notes
+Duration ~00:02
+
 The applyTo field is part of the YAML front matter in instruction files. It uses glob patterns to match file paths. When you open a file in VS Code, Copilot checks all instruction files and loads only those whose applyTo pattern matches the current file.
 
 **Why this matters**: Without proper applyTo patterns, you might have documentation standards trying to apply to code files, or architecture patterns trying to apply to configuration files. This creates confusion and can lead to poor AI suggestions.
 
 **Example to share**: "Imagine having CQRS architecture instructions applying to your README files - that would be nonsensical. The applyTo field prevents this."
 
-**Timing**: 1-1.5 minutes
 **Transition**: "Now let's look at the most common pattern types you'll use"
 :::
 
@@ -3860,6 +3932,8 @@ applyTo: "**/*"      # All files (explicit)
 **⚠️ Caution:** Use sparingly - can create conflicts with more specific instructions
 
 ::: notes
+Duration ~00:02
+
 The double asterisk wildcard is the universal matcher. Use this for repository-wide policies that should apply everywhere - things like your AI-assisted output instructions, general quality standards, or compliance requirements.
 
 **Important warning**: Overusing universal patterns is a common mistake. Every universal instruction adds to the context Copilot needs to process for every file. If you have 10 instruction files all using "\*\*", Copilot has to load all 10 for every single file you open.
@@ -3868,7 +3942,6 @@ The double asterisk wildcard is the universal matcher. Use this for repository-w
 
 **Real example from the repo**: The ai-assisted-output.instructions.md uses "\*_/_" because AI provenance metadata requirements apply to all AI-generated content regardless of file type.
 
-**Timing**: 1.5 minutes
 **Ask audience**: "How many instruction files do you think should realistically use universal patterns? Usually no more than 2-3."
 :::
 
@@ -3897,6 +3970,8 @@ applyTo: "**/*.instructions.md"
 - `**/*.instructions.md` - Instruction files
 
 ::: notes
+Duration ~00:02
+
 File extension matching is probably the most common pattern you'll use. The key syntax here is the brace expansion - that's the curly braces with comma-separated extensions.
 
 **Walking through the examples**:
@@ -3911,7 +3986,6 @@ File extension matching is probably the most common pattern you'll use. The key 
 **Correct**: "**/_.md" matches all markdown files recursively
 **Incorrect**: "_.md" only matches markdown files in root directory
 
-**Timing**: 2 minutes
 **Demonstrate**: Show how the pattern breaks down visually
 :::
 
@@ -3939,6 +4013,8 @@ applyTo: ".github/instructions/**/*.md"
 - Clearer instruction purpose
 
 ::: notes
+Duration ~00:02
+
 Directory-specific patterns are crucial for organizing large codebases. They let you say "these architecture rules only apply to source code" or "these formatting rules only apply to slides."
 
 **Breaking down the syntax**:
@@ -3951,7 +4027,6 @@ Directory-specific patterns are crucial for organizing large codebases. They let
 
 **Another example**: You might have vertical-slice.instructions.md with "src/Features/\*_/_.cs" so those architectural patterns only apply to feature code, not to infrastructure or configuration code.
 
-**Timing**: 2 minutes
 **Visual aid**: If possible, show the repository structure and how the pattern matches
 **Transition**: "Let's dive deeper into the glob syntax itself"
 :::
@@ -3972,6 +4047,8 @@ Understanding the building blocks:
 | `{a,b}` | Alternatives             | `*.{js,ts}` → `app.ts`      |
 
 ::: notes
+Duration ~00:03
+
 This slide is your reference guide for glob pattern syntax. Let's walk through each one with careful attention to the distinctions:
 
 **Single asterisk (\*)**:
@@ -4007,7 +4084,6 @@ This slide is your reference guide for glob pattern syntax. Let's walk through e
 - "\*.{js,ts,jsx,tsx}" matches all JavaScript/TypeScript files
 - Each alternative can itself be a pattern
 
-**Timing**: 3 minutes - this is detailed, go slow
 **Demonstrate**: Show 2-3 concrete examples with actual files
 **Transition**: "Now let's see these patterns in action with real examples from this repository"
 :::
@@ -4036,6 +4112,8 @@ applyTo: "**/*.prompt.md"
 ```
 
 ::: notes
+Duration ~00:03
+
 These are actual examples from the AI-Assisted-Software-Development-Course repository. Let's analyze why each pattern was chosen:
 
 **Example 1 - AI Output Standards**:
@@ -4071,7 +4149,6 @@ These are actual examples from the AI-Assisted-Software-Development-Course repos
 
 **Key lesson**: Notice how each pattern precisely targets its intended scope. There's no overlap or ambiguity.
 
-**Timing**: 2-3 minutes
 **Ask**: "Can anyone think of what would happen if example 4 used '\*_/_.md' instead? Right - slide formatting rules would apply to all markdown, including README files, causing conflicts."
 :::
 
@@ -4104,6 +4181,8 @@ applyTo: "Slides/individual-slides/**"
 ```
 
 ::: notes
+Duration ~00:03
+
 Let's establish three core best practices that will guide your applyTo pattern decisions:
 
 **Best Practice 1: Be Specific When Possible**
@@ -4142,7 +4221,6 @@ The pattern should make the instruction's purpose obvious at a glance.
 
 **Example of good scope**: Having security scanning with "src/\*_/_.{cs,js,py}" - clearly applies to source code only.
 
-**Timing**: 2.5 minutes
 **Emphasize**: "Specificity is not just a performance optimization - it's about clarity and maintainability"
 :::
 
@@ -4177,6 +4255,8 @@ applyTo: "src/**/*.cs"  # C# files in src
 ```
 
 ::: notes
+Duration ~00:03
+
 Let's look at three common mistakes and how to avoid them:
 
 **Pitfall 1: Too Broad**
@@ -4218,7 +4298,6 @@ This is the trickiest pitfall. When multiple instruction files match the same fi
 2. Use more specific file naming patterns (one targets "_.Commands.cs", the other "_.Queries.cs")
 3. If overlap is intentional, ensure instructions are complementary, not contradictory
 
-**Timing**: 3 minutes - this is important, take time for questions
 **Interactive element**: "Has anyone experienced unexpected Copilot behavior? It might be due to overlapping instructions."
 :::
 
@@ -4250,6 +4329,8 @@ find . -name "*.md"
 - Check for unexpected behavior (might indicate wrong pattern)
 
 ::: notes
+Duration ~00:02
+
 Testing your applyTo patterns before committing is crucial. Here are three methods, in order of sophistication:
 
 **Method 1: File System Commands**
@@ -4297,7 +4378,6 @@ Steps:
 
 **Example**: After adding a vertical-slice.instructions.md with "src/\*_/_.cs", open a C# file in src/ and ask Copilot to create a new feature. It should use vertical slice architecture. Then open a C# file in tests/ and verify it doesn't try to apply feature architecture to test code.
 
-**Timing**: 2 minutes
 **Practical tip**: "I recommend testing every new instruction file pattern with method 1 or 2 before pushing to your team"
 **Transition**: "Let's wrap up with key takeaways"
 :::
@@ -4321,6 +4401,8 @@ Steps:
 3. Apply rules during code generation
 
 ::: notes
+Duration ~00:03
+
 Let's consolidate the technical details about how pattern matching actually works in practice:
 
 **Evaluation Timing**:
@@ -4359,7 +4441,6 @@ Critical detail - this depends on the underlying file system:
 
 Best practice: Always use lowercase in patterns and standardize file naming to lowercase to avoid cross-platform issues.
 
-**Timing**: 2-3 minutes
 **Important**: "The dynamic evaluation means you can test instruction changes immediately - just close and reopen a file"
 :::
 
@@ -4389,6 +4470,8 @@ Best practice: Always use lowercase in patterns and standardize file naming to l
 - ✅ Review patterns when instructions aren't working
 
 ::: notes
+Duration ~00:03
+
 Let's wrap up with a practical decision-making framework:
 
 **The Four Essential Pattern Categories**:
@@ -4396,29 +4479,29 @@ Let's wrap up with a practical decision-making framework:
 These four patterns cover 95% of real-world use cases. Let me give you concrete examples of when to use each:
 
 1. **Universal `**/\*`\*\*:
-   - AI provenance policies
-   - Security compliance requirements
-   - Legal/licensing standards
-   - Organization-wide conventions
-   - Should be max 2-3 instruction files in your entire repo
+- AI provenance policies
+- Security compliance requirements
+- Legal/licensing standards
+- Organization-wide conventions
+- Should be max 2-3 instruction files in your entire repo
 
 2. **Multi-extension `**/\*.{ext1,ext2}`\*\*:
-   - Language-agnostic code quality patterns
-   - Cross-language architecture styles
-   - Multi-language testing strategies
-   - Example: Vertical slice could apply to C#, TypeScript, Python features
+- Language-agnostic code quality patterns
+- Cross-language architecture styles
+- Multi-language testing strategies
+- Example: Vertical slice could apply to C#, TypeScript, Python features
 
 3. **Directory scope `directory/**`\*\*:
-   - Slide formatting (Slides/\*)
-   - API documentation (docs/api/\*\*)
-   - Feature isolation (src/Features/\*\*)
-   - Test organization (tests/\*\*)
+- Slide formatting (Slides/\*)
+- API documentation (docs/api/\*\*)
+- Feature isolation (src/Features/\*\*)
+- Test organization (tests/\*\*)
 
 4. **Specialized naming `**/\*.pattern.ext`\*\*:
-   - Instruction files themselves (\*.instructions.md)
-   - Prompt files (\*.prompt.md)
-   - Test files (_.test.js, _.spec.ts)
-   - Generated files (\*.generated.cs)
+- Instruction files themselves (\*.instructions.md)
+- Prompt files (\*.prompt.md)
+- Test files (_.test.js, _.spec.ts)
+- Generated files (\*.generated.cs)
 
 **Using the Decision Tree**:
 
@@ -4456,11 +4539,11 @@ Then review and update your patterns. This is normal maintenance.
 
 **Final thought**: "Good applyTo patterns make Copilot predictable and reliable. Take the time to get them right."
 
-**Timing**: 3 minutes for comprehensive wrap-up
 **End with**: "Questions about applyTo patterns or glob syntax?"
 :::
 
 ---
+
 
 ## 💡 Resources & Next Steps
 
@@ -4539,6 +4622,8 @@ Connect with the AI-Assisted Software Development team
 GitHub: [johnmillerATcodemag-com/AI-Assisted-Software-Development](https://github.com/johnmillerATcodemag-com/AI-Assisted-Software-Development-Course)
 
 ::: notes
+Duration ~00:01
+
 **Closing Remarks**:
 
 Thank you all for your attention. The applyTo pattern system might seem simple on the surface, but as we've seen, there's real depth to using it effectively.
@@ -4566,7 +4651,6 @@ Thank you all for your attention. The applyTo pattern system might seem simple o
 **Call to Action**:
 "I'd encourage everyone to audit one of your existing projects this week - look at your instruction files and their applyTo patterns. Are they as specific as they could be? Are there conflicts? Use the testing methods we discussed to verify them."
 
-**Timing**: 1 minute
 **Tone**: Encouraging and supportive - this is about continuous improvement
 :::
 
@@ -4583,6 +4667,8 @@ Thank you all for your attention. The applyTo pattern system might seem simple o
 | instruction-prompt-files.instructions.md | Guidance for generating prompts that generate instruction files |
 
 ::: notes
+Duration ~00:03
+
 Present the core instruction files that govern AI-assisted development in this repository. These files are the foundation of the guardrails system.
 
 Explain each file's purpose:
@@ -4595,7 +4681,6 @@ Explain each file's purpose:
 
 Emphasize the hierarchical nature: ai-assisted-output is the root policy that all others reference.
 
-Timing: 2-3 minutes.
 Transition: "Let's dive into how to use these..."
 :::
 
@@ -4729,8 +4814,6 @@ End with action items. Suggest teams pilot this in one repo before scaling. Enco
 
 ## Exercise: Technology Inventory & Instruction Generation
 
-Duration: 25-30 minutes
-
 Objectives
 
 - Create a clear inventory of project technologies across the repository
@@ -4772,10 +4855,10 @@ Success Criteria
 - Session management process is repeatable for future multi-stream work
 
 ::: notes
+Duration ~00:30
 
 ## Technology Inventory & Instruction Generation Exercise Instructions
 
-**Duration:** 25-30 minutes
 **Prerequisites:** Access to repository tree, instruction conventions, and team roles for parallel work
 
 ### Objectives
@@ -4811,11 +4894,24 @@ Use a visible board (status: active, blocked, complete) for each session stream 
 ## Course Modules
 
 - Intro
-- Module 1 - AIASD
-- Module 2 - Intro to Copilot
-- Module 3 - Vibbing
-- Module 4 - Adding AI Guardrails
-- **▶ Module 5 - Managing Context**
+- AI Assisted Software Development
+- Intro to Copilot
+- AI Assistance in Action
+- Adding AI Guardrails
+- **▶ Managing Context**
+
+---
+
+<!-- _class: lead -->
+
+# Managing Context
+
+---
+
+## Managing Context
+
+- Managing GitHub Copilot Effectively
+- Managing Instruction Files & Context Windows
 
 ---
 

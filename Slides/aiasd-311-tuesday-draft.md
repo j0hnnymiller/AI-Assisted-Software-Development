@@ -18,12 +18,12 @@ theme: default
 paginate: true
 ---
 
-## AI-Assisted Software Development
+## Welcome Back to AI-Assisted Software Development
 
-- 🎯 Ready to continue where we left off
-- 💡 Today's session builds on what we've covered
-- 🤝 We're all in this together — participation welcome
-- ❓ **Questions are always welcome — ask anytime!**
+- Ready to continue where we left off
+- Today's session builds on what we've covered
+- We're all in this together — participation welcome
+- **Questions are always welcome — ask anytime!**
 
 ::: notes
 Welcome everyone back to the session. Take a moment to let people settle in before diving into content. Acknowledge that it's great to see everyone back and express enthusiasm for the session ahead.
@@ -233,17 +233,6 @@ For questions, be ready to address:
 - GitHub Enterprise Server (on-prem) compatibility
 
 Timing: Spend remaining session time on Q&A. Don't rush this slide.
-:::
-
----
-
-### Custom Keyboard Shortcuts & the Multi-command Extension
-
-::: notes
-Welcome the audience and frame the session. VS Code is infinitely configurable, but most developers use only default settings. Today we'll look at two high-leverage customizations: custom keyboard shortcuts and the Multi-command extension—especially useful for Marp slide authors.
-
-Timing: ~30 seconds on the title slide.
-Transition: "Let's start with why keyboard shortcuts matter."
 :::
 
 ---
@@ -591,26 +580,25 @@ Timing: ~1 minute.
 ## Course Modules
 
 - Intro
-- **▶ Module 1 - LLM**
-- Module 2 - Copilot for Teams
-- Module 3 - Safety Measures and Best Practices
-- Module 4 - Models and Context
-- Module 5 - Guardrails and Prompt Files
-- Module 6 - AI Assisted Documentation
-- Module 7 - Test Automation and Code Quality
+- **▶ LLM**
+- Copilot for Teams
+- Safety Measures and Best Practices
+- Models and Context
+- Guardrails and Prompt Files
+- AI Assisted Documentation
+- Test Automation and Code Quality
 
 ---
 
-### How they work — and why developers should care
+<!-- _class: lead -->
 
-::: notes
-Set the stage: LLMs are the engine behind GitHub Copilot, ChatGPT, Claude, and every other AI coding tool. Understanding how they work helps developers use them more effectively and set realistic expectations.
+# LLM
 
-No deep math required — focus on intuition and mental models. This is a conceptual overview, not a research lecture.
+---
 
-Timing: ~30 seconds on title slide.
-Transition: "Let's start with the big picture of what an LLM actually is."
-:::
+## LLM
+
+- What Is a Large Language Model?
 
 ---
 
@@ -950,13 +938,25 @@ Timing: Spend remaining session time on Q&A.
 ## Course Modules
 
 - Intro
-- Module 1 - LLM
-- **▶ Module 2 - Copilot for Teams**
-- Module 3 - Safety Measures and Best Practices
-- Module 4 - Models and Context
-- Module 5 - Guardrails and Prompt Files
-- Module 6 - AI Assisted Documentation
-- Module 7 - Test Automation and Code Quality
+- LLM
+- **▶ Copilot for Teams**
+- Safety Measures and Best Practices
+- Models and Context
+- Guardrails and Prompt Files
+- AI Assisted Documentation
+- Test Automation and Code Quality
+
+---
+
+<!-- _class: lead -->
+
+# Copilot for Teams
+
+---
+
+## Copilot for Teams
+
+- GitHub Copilot for Teams
 
 ---
 
@@ -964,7 +964,6 @@ Timing: Spend remaining session time on Q&A.
 marp: true
 theme: default
 paginate: true
-
 ---
 
 ## GitHub Copilot for Teams
@@ -975,16 +974,6 @@ Empowering developers with AI while protecting your codebase
 
 ::: notes
 Outline governance, admin controls, and adoption factors (training, policy, developer onboarding).
-:::
-
----
-
-## What Prompted This Deck?
-
-I want to know how GitHub Copilot protects the intellectual property in the code and documentation submitted to the model. Is this information isolated from other users? Is it incorporated into the model and leaked to other users? How can I protect my IP while using GitHub Copilot?
-
-::: notes
-Explain the motivating questions about IP, privacy, and safe use that led to this presentation.
 :::
 
 ---
@@ -1119,1014 +1108,19 @@ Point attendees to official docs and FAQs; recommend follow-up reading links on 
 ## Course Modules
 
 - Intro
-- Module 1 - LLM
-- Module 2 - Copilot for Teams
-- **▶ Module 3 - Safety Measures and Best Practices**
-- Module 4 - Models and Context
-- Module 5 - Guardrails and Prompt Files
-- Module 6 - AI Assisted Documentation
-- Module 7 - Test Automation and Code Quality
-
----
-
-marp: true
-theme: default
-paginate: true
-backgroundColor: #ffffff
+- LLM
+- Copilot for Teams
+- **▶ Safety Measures and Best Practices**
+- Models and Context
+- Guardrails and Prompt Files
+- AI Assisted Documentation
+- Test Automation and Code Quality
 
 ---
 
 <!-- _class: lead -->
 
-## Safety Measures & Best Practices
-
-**Safety measures are critical when using AI assistance**
-
-Topics covered:
-
-- **Feature Flag Management** - Safe deployment strategies
-- **Testing Philosophy** - Coverage vs. signal quality
-- **Code Review Approach** - Working with AI outputs
-- **Change Review Workflows** - Systematic validation
-- **Change Set Size** - Why smaller is better
-
-::: notes
-Introduce the safety measures module. Emphasize that AI assistance amplifies both productivity AND risk—guardrails are essential.
-
-Key message: Safety measures aren't optional when using AI. They're the difference between velocity with confidence and velocity toward disaster.
-
-Topics overview:
-
-1. Feature flags: Deploy safely, remove deliberately
-2. Testing philosophy: Quality over quantity
-3. Code review: Treat AI as junior dev (trust but verify)
-4. Change workflows: Systematic validation
-5. Change set size: Small batches reduce risk
-
-Set expectations: This module is practical, not theoretical. We'll cover specific strategies you can use immediately.
-
-Timing: 2 minutes.
-Transition: "Let's start with feature flags..."
-:::
-
----
-
-<!-- _class: lead -->
-
-## Why Feature Flags Matter
-
-**Feature flags enable safe AI-assisted development**
-
-### Benefits
-
-- Deploy incomplete features safely
-- Test in production with limited exposure
-- Quick rollback without code changes
-- A/B testing and gradual rollouts
-
-### The Problem
-
-- **Feature flags become technical debt**
-- Complexity increases with flag count
-- Dead code paths accumulate
-- Testing burden multiplies
-
----
-
-## Feature Flag Lifecycle
-
-**Every flag should have a retirement plan**
-
-### Phase 1: Introduction
-
-- Flag added with new feature code
-- Default to OFF in production
-- ON in development/staging
-
-### Phase 2: Validation
-
-- Gradual rollout to users
-- Monitor metrics and errors
-- Collect feedback
-
-### Phase 3: Stabilization
-
-- Feature proven stable
-- Flag set to ON for all users
-- **Retirement scheduled**
-
----
-
-## Removal Strategy: The Right Way
-
-**AI can help automate flag removal**
-
-### Step 1: Audit
-
-```bash
-grep -r "FEATURE_NEW_CHECKOUT" .
-```
-
-### Step 2: As-Is Tests
-
-- Capture current behavior with flag ON
-- Ensure tests pass before removal
-
-### Step 3: Remove Flag
-
-- AI prompt: "Remove FEATURE_NEW_CHECKOUT flag and dead code"
-- Delete flag-OFF code paths
-- Simplify logic
-
-### Step 4: Validate
-
-- Run full test suite
-- Deploy to staging
-- Monitor production rollout
-
----
-
-## Common Pitfalls
-
-**Avoid these feature flag anti-patterns**
-
-❌ **Never Remove Flags Without Tests**
-
-- Risk: Unknown behavior changes
-- Solution: Capture as-is behavior first
-
-❌ **Don't Let Flags Live Forever**
-
-- Risk: Exponential complexity (2^n code paths)
-- Solution: Set expiration dates
-
-❌ **Avoid Nested Flags**
-
-- Risk: Combinatorial explosion
-- Solution: Linear dependencies only
-
-✅ **Best Practice**: Flags last weeks, not months
-
----
-
-<!-- _class: lead -->
-
-## Testing: Coverage vs. Signal Quality
-
-**High coverage ≠ Good tests**
-
-### Common Misconception
-
-```
-80% code coverage = 80% quality ❌
-```
-
-### Reality
-
-- **Coverage measures lines executed, not quality**
-- Tests can run code without asserting behavior
-- False sense of security
-
-### Example: Bad High-Coverage Test
-
-```javascript
-it("calculates total", () => {
-  calculator.add(2, 2);
-  // No assertion! ❌
-});
-```
-
-**Coverage: 100% | Value: 0%**
-
----
-
-## Signal Quality: What to Look For
-
-**Good tests catch real problems**
-
-### High Signal Tests
-
-✅ **Assert Expected Behavior**
-
-```javascript
-expect(calculator.add(2, 2)).toBe(4);
-```
-
-✅ **Test Edge Cases**
-
-```javascript
-expect(calculator.divide(10, 0)).toThrow("Division by zero");
-```
-
-✅ **Validate Business Rules**
-
-```javascript
-expect(order.total()).toBe(subtotal + tax - discounts);
-```
-
----
-
-## AI-Generated Test Quality
-
-**Treat AI tests with appropriate skepticism**
-
-### The Problem
-
-- AI generates tests that look right
-- May not test actual requirements
-- Can miss critical edge cases
-- **Coverage looks great, signal is weak**
-
-### Solution: Review for Intent
-
-1. **Does it test the requirement?**
-2. **Does it assert the right behavior?**
-3. **Does it cover edge cases?**
-4. **Would it catch real bugs?**
-
-**AI Tip**: Use different models to review each other's tests
-
----
-
-## Building Signal-Rich Test Suites
-
-**Focus on meaningful validation**
-
-### Strategy 1: Test Behaviors, Not Implementation
-
-```javascript
-// Bad: Tests implementation ❌
-expect(user.passwordHash).toBeDefined();
-
-// Good: Tests behavior ✅
-expect(user.authenticate("password123")).toBe(true);
-```
-
-### Strategy 2: Prune Redundant Tests
-
-- Remove tests that don't add signal
-- Consolidate overlapping tests
-- AI can help identify redundancy
-
-### Strategy 3: Test Critical Paths First
-
-- Security: Authentication, authorization
-- Money: Payments, calculations
-- Data integrity: Persistence, validation
-
----
-
-## The 80/20 Rule for Tests
-
-**Strategic test distribution**
-
-### Focus Areas
-
-- **20% of code causes 80% of bugs**
-- Identify critical paths with AI analysis
-- Concentrate test effort there
-
-### Test Categories
-
-1. **Critical**: Security, money, data loss (100% coverage + signal)
-2. **Important**: Core features (high signal tests)
-3. **Nice to Have**: Edge features (smoke tests)
-4. **Low Value**: Simple getters/setters (skip or minimal)
-
-✅ **Better**: 60% coverage with high signal
-❌ **Worse**: 90% coverage with low signal
-
----
-
-<!-- _class: lead -->
-
-## The Right Mental Model
-
-**Treat AI like an eager, knowledgeable junior developer**
-
-### Characteristics
-
-✅ **Eager**: Produces code quickly and confidently
-✅ **Knowledgeable**: Knows syntax, patterns, APIs
-✅ **Consistent**: Follows patterns it's seen
-
-⚠️ **But Also**:
-
-- Doesn't understand business context deeply
-- Can't judge if code solves the right problem
-- Misses subtle edge cases
-- Makes confident mistakes
-
-**Your role: Senior developer reviewing junior's work**
-
----
-
-## What to Review Carefully
-
-**AI-generated code review checklist**
-
-### 1. Business Logic Correctness
-
-- Does it solve the actual requirement?
-- Are business rules implemented correctly?
-- Edge cases handled appropriately?
-
-### 2. Security Implications
-
-- Input validation present?
-- Authentication/authorization correct?
-- Secrets exposed? SQL injection risks?
-
-### 3. Error Handling
-
-- All error paths covered?
-- User-friendly error messages?
-- Logging for diagnostics?
-
----
-
-## Common AI Code Mistakes
-
-**Patterns to watch for**
-
-### Over-Confidence in Edge Cases
-
-```typescript
-// AI might generate:
-function divide(a: number, b: number) {
-  return a / b; // ❌ No zero check!
-}
-
-// You should add:
-function divide(a: number, b: number) {
-  if (b === 0) throw new Error("Division by zero");
-  return a / b;
-}
-```
-
-### Missing Business Context
-
-```typescript
-// AI generates:
-user.balance -= amount;
-
-// But business rule requires:
-if (user.balance < amount) {
-  throw new InsufficientFundsError();
-}
-user.balance -= amount;
-```
-
----
-
-## The Review Process
-
-**Systematic approach to AI code review**
-
-### Step 1: Understand the Intent (30 seconds)
-
-- What was the prompt?
-- What problem is this solving?
-
-### Step 2: Quick Scan (1-2 minutes)
-
-- Does structure make sense?
-- Are patterns appropriate?
-- Any obvious red flags?
-
-### Step 3: Deep Review (5-10 minutes)
-
-- Test coverage adequate?
-- Security implications?
-- Edge cases handled?
-- Business logic correct?
-
-### Step 4: Run and Verify (2-5 minutes)
-
-- Does it actually work?
-- Manual testing of key paths
-
----
-
-## Trust, But Verify
-
-**Building appropriate trust levels**
-
-### Low Trust (Always Review)
-
-- Security-sensitive code
-- Financial calculations
-- Data persistence logic
-- Authentication/authorization
-
-### Medium Trust (Spot Check)
-
-- Standard CRUD operations
-- UI components
-- Utility functions
-
-### Higher Trust (Quick Scan)
-
-- Boilerplate code
-- Test stubs
-- Documentation
-- Configuration files
-
-**Remember**: Even simple code can hide critical bugs
-
----
-
-<!-- _class: lead -->
-
-## The Three-Level Review
-
-**Progressive validation strategy**
-
-### Level 1: Immediate Review (AI Output)
-
-- Review prompt and AI response
-- Check if it understood the request
-- Identify obvious gaps
-- **Decision point**: Accept, refine prompt, or reject
-
-### Level 2: Implementation Review (Code)
-
-- Standard code review process
-- Check correctness, quality, tests
-- Validate against requirements
-- **Decision point**: Merge, request changes, or reject
-
-### Level 3: Post-Deployment Review (Production)
-
-- Monitor metrics and errors
-- User feedback
-- Performance impact
-- **Decision point**: Keep, iterate, or rollback
-
----
-
-## The "Keep/Undo" Decision
-
-**GitHub Copilot's three acceptance levels**
-
-### Level 1: Keep Character by Character
-
-- Accept each character/token as typed
-- Highest control, slowest
-
-### Level 2: Keep Line by Line
-
-- Accept each line individually
-- Balance of control and speed
-
-### Level 3: Accept Entire Suggestion
-
-- Full block acceptance
-- Fastest, but highest risk
-
-**Best Practice for Safety**:
-
-- **Critical code**: Line-by-line or character review
-- **Boilerplate**: Full block acceptance OK
-- **When uncertain**: Reject and refine prompt
-
----
-
-## Change Approval Workflow
-
-**Formalized review process**
-
-### For Individual Changes
-
-```mermaid
-graph LR
-    A[AI Generates] --> B[Developer Reviews]
-    B --> C{Quality OK?}
-    C -->|Yes| D[Commit]
-    C -->|No| E[Refine Prompt]
-    E --> A
-    D --> F[PR Review]
-    F --> G{Approved?}
-    G -->|Yes| H[Merge]
-    G -->|No| E
-```
-
-### For Team Changes
-
-- **Peer review required** for all AI code
-- **Senior review** for security/critical paths
-- **Architecture review** for design changes
-
----
-
-## Automated Quality Gates
-
-**Let CI/CD catch issues**
-
-### Pre-Merge Checks
-
-- ✅ All tests pass
-- ✅ Linting passes
-- ✅ Security scan clean
-- ✅ Coverage maintained or improved
-- ✅ AI provenance metadata present
-
-### AI-Specific Checks
-
-```yaml
-- name: Validate AI Metadata
-  run: python scripts/validate-ai-metadata.py
-
-- name: Check Test Coverage
-  run: npm run test:coverage
-
-- name: Security Scan
-  run: npm audit
-```
-
-**Benefit**: Automated safety net for AI code
-
----
-
-## The Safety Net Pyramid
-
-**Layered validation approach**
-
-```
-       ┌─────────────┐
-       │  Manual     │  Human intuition
-       │  Review     │  Business context
-       └─────────────┘
-      ┌───────────────┐
-      │   Peer        │  Code quality
-      │   Review      │  Best practices
-      └───────────────┘
-    ┌─────────────────┐
-    │   Automated     │  Tests, linting
-    │   Testing       │  Security scans
-    └─────────────────┘
-  ┌───────────────────────┐
-  │  Static Analysis      │  Type checking
-  │  & Linting           │  Style rules
-  └───────────────────────┘
-```
-
-**Each layer catches different types of issues**
-
----
-
-<!-- _class: lead -->
-
-## Why Size Matters
-
-**Smaller changes = Safer changes**
-
-### Cognitive Load
-
-- **Large changes**: Hard to review thoroughly
-- **Small changes**: Easy to understand completely
-
-### Risk Profile
-
-- **Large changes**: Many potential failure points
-- **Small changes**: Isolated impact
-
-### Debugging
-
-- **Large changes**: Hard to identify problem
-- **Small changes**: Obvious what broke
-
-### Rollback
-
-- **Large changes**: May need to keep some parts
-- **Small changes**: Clean rollback
-
----
-
-## The Data
-
-**Research supports small changes**
-
-### Industry Statistics
-
-- **Changes <50 lines**: 5% failure rate
-- **Changes 50-200 lines**: 15% failure rate
-- **Changes >200 lines**: 35% failure rate
-
-### Review Effectiveness
-
-- **<100 lines**: Reviewers catch ~80% of bugs
-- **100-400 lines**: Reviewers catch ~50% of bugs
-- **>400 lines**: Reviewers catch ~30% of bugs
-
-**Source: Google Engineering Practices, Microsoft Research**
-
-✅ **Optimal PR size: 50-150 lines of meaningful change**
-
----
-
-## How Small is Small Enough?
-
-**Practical guidelines**
-
-### Ideal Change Sizes
-
-**For Bug Fixes**:
-
-- Single issue fix: **10-50 lines**
-- Complex bug: **50-150 lines**
-
-**For Features**:
-
-- Vertical slice: **100-200 lines**
-- Component: **50-150 lines**
-- Refactoring: **<200 lines per PR**
-
-**For AI-Generated Code**:
-
-- Start with **one file or function**
-- Add tests in **same PR** (preferred) or **immediate follow-up**
-- Split large features into **multiple PRs**
-
----
-
-## Breaking Down Large Changes
-
-**Strategies for splitting AI work**
-
-### Strategy 1: Vertical Slicing
-
-```
-Feature: User Registration
-
-❌ One Large PR (500 lines):
-- Database model
-- API endpoint
-- Validation
-- Tests
-- UI form
-
-✅ Four Small PRs:
-1. Database model + migration (50 lines)
-2. API endpoint + basic tests (100 lines)
-3. Validation rules + tests (80 lines)
-4. UI form + integration tests (120 lines)
-```
-
----
-
-## Prompting for Small Changes
-
-**Guide AI to produce smaller outputs**
-
-### Effective Prompts
-
-❌ **Too Broad**:
-
-> "Implement the user registration feature"
-
-✅ **Appropriately Scoped**:
-
-> "Create the User model with email, password fields. Include validation for email format and password minimum length."
-
-✅ **Even Better - Specify Scope**:
-
-> "Create the User model class only. Include: email (string), passwordHash (string), createdAt (datetime). Add methods: validateEmail(), hashPassword(). Maximum 50 lines."
-
-**AI Tip**: Request implementations one vertical slice at a time
-
----
-
-## The "One Thing" Rule
-
-**Each PR should do exactly one thing**
-
-### Good Examples ✅
-
-- "Add email validation to User model"
-- "Implement password hashing"
-- "Create registration API endpoint"
-- "Add user registration form"
-
-### Bad Examples ❌
-
-- "Implement authentication" (too broad)
-- "Fix bugs and add features" (multiple purposes)
-- "Update user system" (vague scope)
-
-### AI Workflow
-
-```
-Large Feature Request
-      ↓
-AI: Generate Implementation Plan
-      ↓
-Break into Small Tasks
-      ↓
-AI: Implement One Task at a Time
-      ↓
-Review & Merge Each Separately
-```
-
----
-
-## Handling Large AI Outputs
-
-**What to do when AI generates too much**
-
-### Option 1: Cherry-Pick
-
-- Review AI output
-- Accept only one logical piece
-- Save rest for separate PRs
-
-### Option 2: Split Retroactively
-
-```bash
-git checkout -b feature/user-registration
-
-git add models/User.cs
-git commit -m "Add User model"
-
-git add controllers/UserController.cs
-git commit -m "Add registration endpoint"
-
-```
-
-### Option 3: Re-prompt
-
-> "That's too much. Just implement the User model first, without the controller or UI."
-
----
-
-## Benefits of Small Changes
-
-**Cumulative advantages**
-
-### Faster Reviews
-
-- **Large PR**: Days to review
-- **Small PR**: Minutes to review
-- **Result**: Faster feedback cycle
-
-### Higher Quality
-
-- **More thorough review** = catch more bugs upfront
-- **Clearer intent** = better feedback
-- **Easier testing** = better validation
-
-### Better Collaboration
-
-- **Lower merge conflicts** with small, frequent PRs
-- **Parallel work** easier
-- **Continuous integration** = always shippable
-
-### Psychological Benefits
-
-- **Sense of progress** from frequent merges
-- **Lower stress** from manageable reviews
-- **Better focus** on one thing at a time
-
----
-
-## The Small Change Workflow
-
-**Putting it all together**
-
-### Daily Routine
-
-```
-08:00 - Pick one small task
-08:05 - Prompt AI for focused implementation
-08:15 - Review AI output
-08:30 - Create PR (50-150 lines)
-08:45 - Respond to review feedback
-09:00 - Merge
-09:15 - Next small task
-```
-
-**vs.**
-
-```
-08:00 - Pick large feature
-08:05 - Prompt AI for everything
-10:00 - Review massive output
-12:00 - Create huge PR (800 lines)
-13:00 - Wait days for review
-Days later - Address review comments
-Days later - Finally merge (maybe)
-```
-
-**Which would you prefer?**
-
----
-
-<!-- _class: lead -->
-
-## The Safety Checklist
-
-**Before merging any AI-generated code**
-
-### ✅ Feature Flags
-
-- [ ] Incomplete features behind flags?
-- [ ] Retirement plan documented?
-- [ ] As-Is tests for flag removal?
-
-### ✅ Testing
-
-- [ ] Tests assert real behavior?
-- [ ] Edge cases covered?
-- [ ] Signal quality > Coverage metrics?
-
-### ✅ Code Review
-
-- [ ] Treated AI as "junior developer"?
-- [ ] Business logic validated?
-- [ ] Security implications checked?
-
----
-
-## The Safety Checklist (Continued)
-
-### ✅ Change Review
-
-- [ ] Three-level review completed?
-- [ ] Prompt and output verified?
-- [ ] Quality gates passed?
-
-### ✅ Change Size
-
-- [ ] PR under 200 lines?
-- [ ] One logical change only?
-- [ ] Can be reviewed thoroughly?
-
-### ✅ Provenance
-
-- [ ] AI metadata present?
-- [ ] Conversation logged?
-- [ ] Source documented?
-
----
-
-## Safety Culture
-
-**Building team practices around AI safety**
-
-### Team Agreements
-
-- **Maximum PR size**: 200 lines for features
-- **Review response time**: 24 hours for small PRs
-- **Test requirements**: Signal > Coverage
-- **Security checklist**: For all auth/payment changes
-
-### Education
-
-- **Onboarding**: Cover AI safety in new hire training
-- **Training**: Regular sessions on prompt engineering
-- **Retrospectives**: Learn from AI-related incidents
-
-### Continuous Improvement
-
-- **Metrics**: Track PR size, defect rates, review time
-- **Iterate**: Refine practices based on data
-- **Share**: Document learnings in instruction files
-
----
-
-## Common Failure Patterns
-
-**Learn from these mistakes**
-
-### 🚨 **Blind Trust**
-
-- Merging AI code without review
-- **Result**: Security vulnerabilities, bugs in production
-- **Solution**: Always review, especially security/critical paths
-
-### 🚨 **Too Much, Too Fast**
-
-- Accepting large AI-generated changes wholesale
-- **Result**: Technical debt, hard-to-debug issues
-- **Solution**: Break into small, reviewable pieces
-
-### 🚨 **Coverage Theater**
-
-- Focusing on coverage numbers, not test quality
-- **Result**: False confidence, bugs slip through
-- **Solution**: Review every test for signal quality
-
----
-
-## Success Patterns
-
-**What works in practice**
-
-### ✨ **Incremental Adoption**
-
-- Start with small, non-critical features
-- Build confidence gradually
-- **Result**: Team learns AI strengths/weaknesses safely
-
-### ✨ **Prompt Refinement**
-
-- Invest time in better prompts
-- Version control prompt files
-- **Result**: Consistent, higher quality AI outputs
-
-### ✨ **Pairing Review**
-
-- Pair program during AI code review
-- **Result**: Knowledge sharing, better catch rate
-
-### ✨ **Fast Feedback Loops**
-
-- Small PRs → Fast reviews → Rapid merges
-- **Result**: High velocity, high quality
-
----
-
-## Measuring Safety
-
-**Key metrics to track**
-
-### Lead Indicators (Prevention)
-
-- **Average PR size**: Target <150 lines
-- **Review time**: Target <24 hours
-- **Test signal quality**: Manual assessment
-- **Feature flag count**: Trend downward
-
-### Lag Indicators (Detection)
-
-- **Production incidents**: From AI code
-- **Bug escape rate**: Defects found in production
-- **Rollback frequency**: How often do we revert?
-- **Time to resolution**: How fast do we fix?
-
-### Process Metrics
-
-- **Review thoroughness**: % PRs with comments
-- **Coverage trends**: Is signal improving?
-- **AI acceptance rate**: % AI suggestions accepted
-
----
-
-## Tools and Automation
-
-**Leverage tooling for consistent safety**
-
-### Static Analysis
-
-```yaml
-- name: Check PR Size
-  run: |
-    if [ $(git diff --stat | tail -1 | awk '{print $4}') -gt 200 ]; then
-      echo "PR too large! Please split into smaller changes."
-      exit 1
-    fi
-```
-
-### Custom Linting
-
-- AI metadata validation
-- Test quality checks
-- Security pattern detection
-
-### Dashboard
-
-- PR size trends
-- Review time metrics
-- Defect rates
-- Coverage vs. signal ratio
-
----
-
-<!-- _class: lead -->
-
-## The Five Safety Pillars
-
-### 1. 🚩 **Feature Flags**
-
-Retire flags quickly, test before removal
-
-### 2. 🎯 **Test Signal**
-
-Quality over coverage, assert behavior
-
-### 3. 👥 **Code Review**
-
-Treat AI as eager junior dev, verify thoroughly
-
-### 4. ✅ **Change Review**
-
-Three-level validation, automated gates
-
-### 5. 📏 **Small Changes**
-
-<200 lines per PR, one logical change
-
-**Master these, and AI becomes a force multiplier**
+# Safety Measures and Best Practices
 
 ---
 
@@ -2135,13 +1129,26 @@ Three-level validation, automated gates
 ## Course Modules
 
 - Intro
-- Module 1 - LLM
-- Module 2 - Copilot for Teams
-- Module 3 - Safety Measures and Best Practices
-- **▶ Module 4 - Models and Context**
-- Module 5 - Guardrails and Prompt Files
-- Module 6 - AI Assisted Documentation
-- Module 7 - Test Automation and Code Quality
+- LLM
+- Copilot for Teams
+- Safety Measures and Best Practices
+- **▶ Models and Context**
+- Guardrails and Prompt Files
+- AI Assisted Documentation
+- Test Automation and Code Quality
+
+---
+
+<!-- _class: lead -->
+
+# Models and Context
+
+---
+
+## Models and Context
+
+- Model Selection & Comparison
+- Advanced Context Techniques
 
 ---
 
@@ -2473,13 +1480,26 @@ This frees up space for task-specific context and keeps the model aligned with y
 ## Course Modules
 
 - Intro
-- Module 1 - LLM
-- Module 2 - Copilot for Teams
-- Module 3 - Safety Measures and Best Practices
-- Module 4 - Models and Context
-- **▶ Module 5 - Guardrails and Prompt Files**
-- Module 6 - AI Assisted Documentation
-- Module 7 - Test Automation and Code Quality
+- LLM
+- Copilot for Teams
+- Safety Measures and Best Practices
+- Models and Context
+- **▶ Guardrails and Prompt Files**
+- AI Assisted Documentation
+- Test Automation and Code Quality
+
+---
+
+<!-- _class: lead -->
+
+# Guardrails and Prompt Files
+
+---
+
+## Guardrails and Prompt Files
+
+- Prompt Files
+- Creating Instruction Files from Prompts
 
 ---
 
@@ -2593,65 +1613,332 @@ Overly complex single prompts (break them down)
 
 ---
 
+marp: true
+theme: default
+paginate: true
+
+---
+
 ## Exercise: Creating Prompt Files
 
-Duration: 22:22
+**Duration**: ~22 minutes
 
-Objectives
+**Objectives**
 
-- Understand prompt structure
-- Practice defining intent, constraints, and success criteria
-- Create reusable, clear, scoped prompts
-- Observe the impact of instruction files on output quality
+- Understand prompt structure and best practices for AI instruction file generation
+- Practice prompt engineering by creating reusable prompt files
+- Observe measurable impact of instruction files on AI output quality
+- Compare outputs with and without instruction file guidance
 
-Activities
+**Activities**
 
-1. Phase 1 - Without Instructions:
-   - Create a prompt that generates an Evergreen software development instruction file
-   - Work without repository instruction guidance
-   - Save the generated result as the baseline output
-2. Phase 2 - With Instructions:
-   - Pull the newly added instruction files into the repository
-   - Clear chat context and start a fresh conversation
-   - Re-run the same prompt with instruction files now available
-   - Capture the second output for comparison
-3. Phase 3 - Comparison:
-   - Ask AI to compare the baseline and guided outputs
-   - Identify significant structural, metadata, and quality differences
-   - Report findings on consistency and non-deterministic behavior
+- **Phase 1 - Baseline**: Create prompt to generate Evergreen instruction file without repository instruction files; save output for comparison
+- **Phase 2 - Enhanced**: Pull repository updates with instruction files; clear chat context; re-run identical prompt with new guidance
+- **Phase 3 - Analysis**: Compare both outputs using AI-assisted analysis; quantify differences in structure, metadata completeness, and quality
+- **Discussion & Review**: Analyze findings on reproducibility, token optimization, non-determinism, and real participant results
 
-Success Criteria
+**Success Criteria**
 
-- Prompt includes clear intent, constraints, and success criteria
-- Baseline and guided outputs are both captured for side-by-side review
-- Comparison identifies meaningful differences in completeness and consistency
-- Participants can explain how instruction files changed the resulting output
+- Generated complete instruction file for Evergreen software development in both phases
+- Completed comparison analysis identifying 3+ significant structural/metadata differences
+- Understand how instruction files reduce output variance from ±40% to ±10%
+- Recognize token optimization strategies achieving 60-70% reduction in context usage
+- Explain reproducibility benefits and non-determinism management strategies
 
 ::: notes
 
 ## Creating Prompt Files Exercise Instructions
 
-**Duration:** 22:22
-**Prerequisites:** Access to the repository before and after instruction-file updates, ability to start a fresh Copilot chat, and a place to save both generated outputs.
+**Duration:** ~22 minutes
+**Prerequisites:** Git access to repository, GitHub Copilot enabled, ability to open multiple chat windows
+
+**Goal**: Experience the difference instruction files make in AI output quality through a three-phase controlled experiment measuring consistency, completeness, and reproducibility.
 
 ### Objectives
 
-- Help participants understand that prompt files should define the task, constraints, and expected deliverable clearly.
-- Show that reusable prompts are easier to review and rerun when they are tightly scoped.
-- Demonstrate how repository instruction files improve consistency, completeness, and standards compliance.
-- Reinforce that AI output remains non-deterministic, but better guidance reduces variance.
+1. **Understand prompt structure**: Learn to recognize components of effective prompts, identify required vs. optional elements, and apply best practices for clarity and specificity when generating instruction files.
 
-### Facilitation Guidance
+2. **Practice prompt engineering**: Write a prompt that generates a complete instruction file for Evergreen software development, iterate on quality based on output, and refine prompts to achieve desired results.
 
-Start by framing this as a controlled experiment: same task, two different context conditions. In Phase 1, let participants experience the ambiguity of running without repository guidance so they can see what the model invents or omits. In Phase 2, emphasize the importance of clearing chat context before rerunning, because lingering context would invalidate the comparison. Reserve the final segment for a group debrief on what changed, why it changed, and which improvements matter most for production use.
+3. **Observe instruction file impact**: Compare outputs generated with and without instruction files, quantify measurable quality improvements in structure and metadata, and understand how instruction files enable reproducibility across team members and time.
 
-### Key Teaching Points
+---
 
-Call out differences in provenance metadata, structure, and adherence to repository conventions rather than treating any wording difference as equally important. Ask participants to notice whether the guided version is easier to review, safer to reuse, and more likely to pass team standards. Use the discussion to connect prompt files, instruction files, and reproducibility as part of the same operational discipline.
+### Phase 1: Baseline (Without Instructions)
 
-### Transition
+**Objective**: Establish baseline AI behavior without instruction file guidance
 
-Close by linking this exercise to the next step in the workflow: once a strong prompt exists, the team can version it, refine it, and regenerate instruction files more reliably than starting from scratch each time.
+**Background**: At this point in the workshop, instruction files have NOT been added to the repository yet. The AI will generate output based solely on its training knowledge and the prompt you provide. This establishes our baseline for comparison.
+
+**Steps**:
+
+1. Open GitHub Copilot chat in VS Code
+2. Use this sample prompt (or create your own):
+
+   ```
+   Create an instruction file for Evergreen software development
+   that explains best practices for maintaining modern,
+   continuously updated codebases.
+
+   Include:
+   - Core principles of Evergreen development
+   - Technical practices for continuous updates
+   - Quality standards and testing requirements
+   - Documentation and maintenance guidelines
+   ```
+
+3. Review the generated output carefully
+4. **CRITICAL**: Save this output to a file or document - you will need it for Phase 3 comparison
+5. Observe these aspects:
+   - Does it include AI provenance metadata (ai_generated, model, operator, chat_id, etc.)?
+   - Is the structure consistent with professional documentation standards?
+   - Are all required fields present in YAML front matter?
+   - How complete and actionable is the guidance?
+
+**Expected Behavior**:
+
+- **High variability** across different participants (each person gets different structure)
+- **Incomplete metadata** in most cases (missing 3-5 of the 11 required fields)
+- **Inconsistent structure** (different heading hierarchies, organization patterns)
+- **Different interpretations** of requirements (generic vs. specific guidance)
+
+**Key Point**: This variance is NOT a failure - it's the baseline we're measuring improvement against. High variance without guidance is normal and expected with AI systems.
+
+---
+
+### Phase 2: Enhanced (With Instructions)
+
+**Objective**: Measure improvement when instruction files provide explicit guidance to AI
+
+**Background**: Between Phase 1 and Phase 2, instruction files will be added to the repository. These files tell the AI exactly what structure, metadata, and quality standards to follow.
+
+**Setup Steps**:
+
+1. **Pull latest repository changes**:
+
+   ```bash
+   git pull origin main
+   ```
+
+   This adds instruction files to `.github/instructions/` including:
+   - `ai-assisted-output.instructions.md` (11 required metadata fields)
+   - `copilot-instructions.md` (model identification, operator naming)
+   - `prompt-file.instructions.md` (prompt structure standards)
+   - `instruction-files.instructions.md` (instruction file creation rules)
+
+2. **Clear chat context** (CRITICAL STEP):
+   - **Why**: Phase 1 conversation remains in context otherwise. AI might reference previous output, making comparison invalid.
+   - **How**:
+     - Close current Copilot chat window completely
+     - Open NEW Copilot chat window
+     - Verify context reset by asking "Do you see our previous conversation about Evergreen?"
+     - AI should respond "No" - if it remembers Phase 1, you haven't cleared successfully
+
+3. **Re-run identical prompt**:
+   - Use EXACT same prompt text from Phase 1
+   - Do NOT modify wording, structure, or add clarifications
+   - Let instruction files do the work
+   - **SAVE THIS SECOND OUTPUT** - you need both for Phase 3
+
+**What's Different Now**:
+
+The AI now has access to instruction files that specify:
+
+- **Metadata structure**: All 11 required fields (ai_generated, model, operator, chat_id, prompt, started, ended, task_durations, total_duration, ai_log, source)
+- **YAML front matter format**: Exact syntax for embedded metadata
+- **Conversation log requirements**: Where and how to create ai-logs
+- **File naming conventions**: Lowercase, hyphenated, descriptive names
+- **Validation checklists**: What to verify before considering output complete
+- **Token optimization goals**: Minimize tokens while maintaining completeness
+
+**Expected Behavior**:
+
+- **High consistency** across participants (80% structural similarity)
+- **Complete metadata** (all 11 fields present in 95%+ of outputs)
+- **Standard structure** (follows repository patterns automatically)
+- **Actionable guidance** (specific instructions, not generic advice)
+
+---
+
+### Phase 3: Comparison Analysis
+
+**Objective**: Quantify the measurable difference instruction files make in output quality
+
+**Comparison Task**:
+
+Ask AI to analyze both outputs using this prompt:
+
+```markdown
+Compare these two instruction files I generated:
+
+**File 1 (without instructions - Phase 1 baseline)**:
+[paste your Phase 1 output here]
+
+**File 2 (with instructions - Phase 2 enhanced)**:
+[paste your Phase 2 output here]
+
+Identify significant differences in:
+
+1. Structure and organization (heading hierarchy, sections, flow)
+2. Metadata completeness (count of fields, provenance tracking)
+3. Content quality and detail (specificity, actionability, examples)
+4. Adherence to standards (consistency with professional patterns)
+5. Clarity and actionability (how easy to use and follow)
+
+Provide specific examples for each difference category.
+```
+
+**Comparison Criteria Checklist**:
+
+Use this to guide your analysis and identify key improvements:
+
+**Structural Differences**:
+
+- [ ] Is YAML front matter present and complete?
+- [ ] How does file organization differ (sections, headings)?
+- [ ] Is heading hierarchy (H1, H2, H3) consistent and logical?
+- [ ] Are templates and examples included?
+
+**Metadata Differences** (11 required fields):
+
+- [ ] `ai_generated` (boolean): Present? Correct format?
+- [ ] `model` (string): Present? Uses provider/model@version format?
+- [ ] `operator` (string): Present? Uses GitHub username?
+- [ ] `chat_id` (string): Present? Unique identifier?
+- [ ] `prompt` (multiline string): Present? Exact prompt captured?
+- [ ] `started` (ISO8601 timestamp): Present? Correct format?
+- [ ] `ended` (ISO8601 timestamp): Present? Correct format?
+- [ ] `task_durations` (array): Present? Shows breakdown?
+- [ ] `total_duration` (string): Present? Calculated correctly?
+- [ ] `ai_log` (string): Present? References conversation log path?
+- [ ] `source` (string): Present? Identifies creator?
+
+**Quality Differences**:
+
+- [ ] Clarity: Generic advice vs. specific actionable steps?
+- [ ] Specificity: Vague guidelines vs. concrete requirements?
+- [ ] Examples: Present or absent? Useful or token filler?
+- [ ] Validation: Checklists provided?
+- [ ] Actionability: Can someone immediately use this without clarification?
+
+**Expected Quantified Results** (based on workshop participant data):
+
+- **Metadata completeness improvement**: 40% → 95% (55 percentage point increase)
+- **Structural consistency improvement**: 50% → 90% (40 percentage point increase)
+- **Output variance reduction**: ±40% structural difference → ±10% structural difference
+- **Review time reduction**: 30-45 minutes → 10-15 minutes (60-70% time savings)
+
+---
+
+## Creating Instruction Files from Prompts
+
+- Run the prompt files from the prior exercise
+- Generate instruction files from those prompts
+- Review what the model inferred and why it matters
+- Decide how to refine the result for long-term reuse
+
+::: notes
+Frame this as the payoff to the earlier prompt-authoring exercise. The class is no longer discussing prompts in the abstract; they are now executing them and examining the generated instruction files as real artifacts. Emphasize that the goal is not just to get output, but to understand why the output is surprisingly rich and how to improve it without losing reproducibility. Spend about 45 to 60 seconds orienting the audience and then move into the workflow.
+:::
+
+---
+
+## Prompt to Instruction Workflow
+
+```mermaid
+flowchart LR
+    A[Prompt file created earlier] --> B[Run the prompt]
+    B --> C[Generate instruction file]
+    C --> D[Review generated content]
+    D --> E{Need changes?}
+    E -- Yes --> F[Update prompt and regenerate]
+    E -- No --> G[Keep or lightly edit artifact]
+```
+
+- The prompt is the reusable source
+- The instruction file is the generated artifact
+- Review happens after generation, not instead of it
+
+::: notes
+Walk through the workflow from left to right and make the source-versus-artifact distinction explicit. The prompt file captures intent, structure, and constraints in a reusable form, while the generated instruction file is the output that gets inspected and possibly refined. Highlight that review still matters because inference is powerful but not infallible. Use about one minute here and transition by asking what exactly the model is contributing beyond the literal text of the prompt.
+:::
+
+---
+
+## Inference Is Your Friend
+
+- AI fills in architectural context, expected sections, and familiar conventions
+- Minimal guidance can still produce surprisingly detailed instruction files
+- Rich output is useful when the model understands the domain patterns already
+- Review trims, sharpens, and aligns the inferred detail to your actual standards
+
+> "Amazed at what it created. Architectural context. It's crazy."
+>
+> Peter Goostree
+
+::: notes
+This slide is about using the model's built-in knowledge deliberately instead of fighting it. Explain that a strong prompt does not need to spell out every sentence if the model already knows common structures like metadata blocks, validation sections, architecture guidance, and examples. The opportunity is speed: the model drafts broadly, and the human constrains the result to the team's true requirements. Spend about one minute on the quote and the broader lesson that inference is an accelerator when paired with review.
+:::
+
+---
+
+## Why Start with a Prompt-First Approach?
+
+- Easier to delete surplus detail than author every section from scratch
+- Start with comprehensive AI-generated content, then edit down
+- Reduces blank-page friction and initial authoring burden
+- Encourages a repeatable workflow instead of one-off handcrafted artifacts
+
+**Core idea**: generate broadly first, then narrow precisely.
+
+::: notes
+Explain why this approach feels faster in practice. Many teams stall at the beginning because writing a complete instruction file from zero requires structure, terminology, examples, and compliance details all at once. The prompt-first approach shifts the hard part from creation to refinement, which is usually easier and faster. Spend around a minute here and tie it back to the real classroom experience: participants saw more content than they expected, and that lowered the cost of getting started.
+:::
+
+---
+
+## Two Ways to Refine the Result
+
+1. **Edit the generated instruction file directly**
+2. **Modify the prompt file and regenerate**
+
+**Preferred for version control**: update the prompt, then rerun it.
+
+Why the second path usually wins:
+
+- Prompt evolution is preserved in source control
+- Future regeneration stays aligned with the revised intent
+- Teams can reproduce the artifact instead of reverse-engineering it
+
+::: notes
+Make the tradeoff concrete. Direct edits are sometimes fine for quick cleanup, but they create drift between the reusable source and the artifact. Updating the prompt file keeps the real logic of the artifact in version control, which matters for auditability, reuse, and future regeneration. Use about one minute here and emphasize that this is the operational discipline behind reproducible AI-assisted work.
+:::
+
+---
+
+## Why Prompt Files Beat Simple Directives
+
+Simple directive:
+
+- "Create instruction file for Evergreen development"
+
+Prompt-file approach:
+
+- Objective
+- Structure
+- Requirements
+- Constraints
+- Expected deliverable
+
+Benefits:
+
+- Changes preserved in source control
+- Prompt evolution tracked over time
+- Reproducible instruction-file generation
+- Better provenance than a short, vague command
+
+::: notes
+Contrast a one-line directive with a prompt file that captures the real contract for the work. A simple request may work once, but it does not explain what sections are required, what metadata must exist, or which constraints the model must honor. A detailed prompt becomes documentation of intent as well as an execution mechanism. Spend about 75 seconds here and reinforce that better provenance starts with a better source artifact.
 :::
 
 ---
@@ -2661,13 +1948,26 @@ Close by linking this exercise to the next step in the workflow: once a strong p
 ## Course Modules
 
 - Intro
-- Module 1 - LLM
-- Module 2 - Copilot for Teams
-- Module 3 - Safety Measures and Best Practices
-- Module 4 - Models and Context
-- Module 5 - Guardrails and Prompt Files
-- **▶ Module 6 - AI Assisted Documentation**
-- Module 7 - Test Automation and Code Quality
+- LLM
+- Copilot for Teams
+- Safety Measures and Best Practices
+- Models and Context
+- Guardrails and Prompt Files
+- **▶ AI Assisted Documentation**
+- Test Automation and Code Quality
+
+---
+
+<!-- _class: lead -->
+
+# AI Assisted Documentation
+
+---
+
+## AI Assisted Documentation
+
+- Documentation Generation & Code Analysis
+- Understanding Unfamiliar Code with GitHub Copilot
 
 ---
 
@@ -3109,10 +2409,10 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 
 ### Duration
 
-| Subsection | Topic                 | Time                |
-| ---------- | --------------------- | ------------------- |
-| 10.1       | Code Explanation      | 01:28:20 – 01:30:05 |
-| 10.2       | Coverage Gap Analysis | 01:30:05 – 01:36:00 |
+| Subsection | Topic | Time |
+|---|---|---|
+| 10.1 | Code Explanation | 01:28:20 – 01:30:05 |
+| 10.2 | Coverage Gap Analysis | 01:30:05 – 01:36:00 |
 
 ::: notes
 **Timing**: 1-2 minutes
@@ -3164,7 +2464,6 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 2. **Right-Click Explain**: Opens the Chat panel with a full explanation. Better for complex code that needs a longer response.
 
 **When to Use Each**:
-
 - Use Ctrl+I for quick, targeted questions ("What does this regex do?")
 - Use Right-click Explain for comprehensive understanding ("What is this entire function doing?")
 
@@ -3207,7 +2506,6 @@ and what edge cases it covers"
 **Real-World Scenario**: "Imagine you're asked to add a feature. The first thing you should do is read the existing tests to understand what behavior is expected. Copilot can explain those tests in plain English."
 
 **Live Demo Suggestion**:
-
 - Open a test file with mocking/stubbing
 - Select a complex test setup and use Ctrl+I
 - Ask: "What is this test verifying? What would cause it to fail?"
@@ -3245,14 +2543,13 @@ What scenarios are covered? What's missing?"
 ::: notes
 **Timing**: 2 minutes (this is the setup for the next slides)
 
-**Why This Matters**: Code coverage tools tell you _what percentage_ is covered, but they don't tell you _whether the right things_ are covered. A line can be executed by a test without that test actually verifying the behavior.
+**Why This Matters**: Code coverage tools tell you *what percentage* is covered, but they don't tell you *whether the right things* are covered. A line can be executed by a test without that test actually verifying the behavior.
 
 **Two Types of Coverage Gaps**:
-
 1. **Quantity gaps**: Code paths not reached by any test
 2. **Quality gaps**: Code paths reached but not meaningfully verified
 
-**Copilot's Advantage**: It understands the _intent_ of the code and can identify gaps that line-coverage metrics would miss.
+**Copilot's Advantage**: It understands the *intent* of the code and can identify gaps that line-coverage metrics would miss.
 
 **Example**: "You might have 95% line coverage but still be missing all error-path tests, all boundary conditions, and all integration scenarios."
 
@@ -3284,14 +2581,12 @@ report showing what's tested vs. what's missing."
 **Timing**: 3 minutes
 
 **Live Demo Instructions**:
-
 1. Open a calculator service with its test file
 2. Select the entire test file
 3. Run the prompt shown on slide
 4. Walk through the generated report
 
 **Expected Output to Highlight**:
-
 - Copilot will categorize tests by operation/feature
 - Will note if error conditions are tested (e.g., division by zero)
 - Will identify if edge cases like floating point, negative numbers, or overflow are tested
@@ -3310,13 +2605,13 @@ report showing what's tested vs. what's missing."
 
 ### Common Coverage Gaps Copilot Finds
 
-| Category              | Examples                                   |
-| --------------------- | ------------------------------------------ |
-| **Error conditions**  | Division by zero, null inputs, overflow    |
-| **Boundary values**   | Min/max values, empty collections          |
-| **Integration paths** | Multi-step operations, state transitions   |
-| **Edge cases**        | Floating point precision, negative numbers |
-| **Concurrency**       | Race conditions, async operations          |
+| Category | Examples |
+|---|---|
+| **Error conditions** | Division by zero, null inputs, overflow |
+| **Boundary values** | Min/max values, empty collections |
+| **Integration paths** | Multi-step operations, state transitions |
+| **Edge cases** | Floating point precision, negative numbers |
+| **Concurrency** | Race conditions, async operations |
 
 ### Copilot Output Example
 
@@ -3342,7 +2637,7 @@ report showing what's tested vs. what's missing."
 
 **Common Excuse**: "We have 90%+ coverage!" Counter: "Code coverage measures whether code was executed, not whether it was verified. Copilot goes deeper."
 
-**Important Nuance**: Copilot identifies _semantic_ gaps, not just syntactic ones. It knows that a `divide` function without a zero-divisor test is semantically incomplete.
+**Important Nuance**: Copilot identifies *semantic* gaps, not just syntactic ones. It knows that a `divide` function without a zero-divisor test is semantically incomplete.
 
 **Transition**: "Identifying gaps is only half the job. Copilot can also help you close them."
 :::
@@ -3372,20 +2667,18 @@ Prioritize by risk and provide implementation order."
 **Timing**: 2-3 minutes
 
 **Why Prioritization Matters**: Teams can't add all missing tests at once. Copilot helps prioritize by:
-
 - Risk: What's most likely to cause a production incident?
 - Value: What behavior is most critical to the business?
 - Effort: What tests are quickest to write and maintain?
 
 **How to Read the Priority Levels**:
-
 - 🔴 Red: Production risk — these should be done in the current sprint
 - 🟡 Yellow: Technical debt — schedule for next sprint
 - 🟢 Green: Nice to have — add when time permits
 
 **Audience Engagement**: "How does your team currently prioritize which tests to write? Do you have a systematic approach?" — This positions Copilot as an improvement over gut-feeling prioritization.
 
-**Key Differentiator**: "This isn't just a list of things to do. Copilot explains _why_ each test is important, giving you the context to defend the work to stakeholders."
+**Key Differentiator**: "This isn't just a list of things to do. Copilot explains *why* each test is important, giving you the context to defend the work to stakeholders."
 
 **Transition**: "And here's where it gets really powerful — Copilot doesn't just plan, it can implement the tests for you."
 :::
@@ -3420,7 +2713,6 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 **Timing**: 3 minutes
 
 **Live Demo Instructions**:
-
 1. With the coverage plan from the previous step visible
 2. Ask Copilot to implement the top 2-3 high-priority tests
 3. Show how it picks up on the existing test style (naming, assertion patterns, setup/teardown)
@@ -3429,7 +2721,6 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 **Important Teaching Point**: "Copilot doesn't create tests in a vacuum — it learns from your existing test patterns. If you use `describe`/`it` blocks, it will too. If you use `[Test]` attributes, it matches that."
 
 **Quality Review**: Emphasize that AI-generated tests should always be reviewed:
-
 - Does the assertion actually verify the behavior?
 - Is the test isolated (no shared state)?
 - Will the test fail for the right reason if the code breaks?
@@ -3469,7 +2760,6 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 **Consolidation Message**: These two capabilities — explanation and coverage analysis — work together. Explanation builds the understanding needed to evaluate whether your tests are actually verifying the right things.
 
 **Key Habits to Reinforce**:
-
 1. When you encounter unfamiliar code: immediately use Ctrl+I
 2. When starting work on a feature: analyze existing test coverage first
 3. Before submitting a PR: ask Copilot to review test completeness
@@ -3514,26 +2804,22 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 **Facilitation Tips**:
 
 **Exercise Setup**:
-
 - Have participants open their own projects or provide a sample project
 - Suggest using the calculator service example if available
 - Encourage participants to use code they actually work with — real context produces better results
 
 **During the Exercise**:
-
 - Walk the room (or virtual breakout rooms) to observe responses
 - Note interesting findings to share with the group
 - Help participants who get generic or unhelpful responses rephrase their prompts
 
 **After the Exercise — Discussion Points**:
-
 1. "What was the most surprising gap Copilot identified?"
 2. "Did Copilot's explanation match your understanding of the code?"
 3. "How long would this analysis have taken manually?"
 4. "What would you do differently in your next PR based on this?"
 
 **Common Findings**:
-
 - Most projects are missing error-path tests
 - Test naming is often inconsistent (Copilot will note this)
 - Many tests verify behavior but not error messages
@@ -3548,13 +2834,27 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 ## Course Modules
 
 - Intro
-- Module 1 - LLM
-- Module 2 - Copilot for Teams
-- Module 3 - Safety Measures and Best Practices
-- Module 4 - Models and Context
-- Module 5 - Guardrails and Prompt Files
-- Module 6 - AI Assisted Documentation
-- **▶ Module 7 - Test Automation and Code Quality**
+- LLM
+- Copilot for Teams
+- Safety Measures and Best Practices
+- Models and Context
+- Guardrails and Prompt Files
+- AI Assisted Documentation
+- **▶ Test Automation and Code Quality**
+
+---
+
+<!-- _class: lead -->
+
+# Test Automation and Code Quality
+
+---
+
+## Test Automation and Code Quality
+
+- Test Automation & Code Quality
+- Creating Robust Testing Frameworks
+- Testing in Production
 
 ---
 
@@ -3840,350 +3140,6 @@ Review existing tests for:
 
 ::: notes
 Encourage participants to treat this as a real modernization task. The goal is not to generate as many tests as possible — it's to improve the safety and clarity of the testing framework in a targeted, maintainable way.
-:::
-
----
-
-marp: true
-theme: default
-paginate: true
-backgroundColor: #ffffff
-
----
-
-## Safe Delivery for Work in Progress
-
-Section 4 · 00:45:12 - 00:52:12
-
-::: notes
-Open by framing this section as a practical deployment safety pattern for brownfield work.
-
-Key message: feature flags are not only a release mechanism. They are also a testing and change-management boundary.
-
-Emphasize the three ideas that tie the section together:
-
-- protect current production behavior with As-Is tests
-- validate future behavior with To-Be tests
-- use flags to keep work-in-progress isolated until ready
-
-Suggested timing: 45 seconds.
-Transition: move from the title into why these patterns matter operationally.
-:::
-
----
-
-## Section Overview
-
-### Key Topics
-
-- **Feature flags** for managing work-in-progress safely
-- **As-Is test suites** for protecting current production behavior
-- **To-Be test suites** for validating future behavior under flags
-- **Deployment discipline** that keeps incomplete work out of production
-- **Feature flag retirement** once the new path is proven
-
-### Working Principle
-
-**Production readiness = compiled code + production-aligned flags + passing As-Is tests**
-
-::: notes
-Use this slide to establish vocabulary early.
-
-Define As-Is as the current production contract. Define To-Be as the desired future contract. Explain that flags let both contracts coexist temporarily without confusing deployment readiness.
-
-Call out that the deck is about safe modernization, not just feature toggles.
-
-Suggested timing: 45 seconds.
-Transition: explain why feature flags are the enabling mechanism.
-:::
-
----
-
-## Feature Flags for Managing Work in Progress
-
-### Why They Matter
-
-- Hide incomplete implementations from production traffic
-- Let teams merge incrementally without exposing unfinished behavior
-- Support safe rollout, rollback, and staged validation
-- Create a clean switch between current and future paths
-
-### The Discipline Requirement
-
-- **Every changed path must be wrapped** when the new behavior is not ready
-- **Any unwrapped code can bleed into production**
-- Flags are only safe when the test strategy matches the flag strategy
-
-::: notes
-Stress that flags are not magic. The safety comes from disciplined usage.
-
-Good phrasing for delivery: “A feature flag is a boundary. If you leave holes in the boundary, production traffic finds them.”
-
-This is the setup for why As-Is tests are the deployment gate.
-
-Suggested timing: 45 seconds.
-Transition: shift into As-Is suites as the primary production gate.
-:::
-
----
-
-## As-Is Test Suites
-
-### Purpose
-
-- Capture **current behavior** in executable tests
-- Protect against regressions while modernization is underway
-- Document what production is expected to do today
-
-### Core Strategy
-
-- Go to production anytime **As-Is tests pass**
-- Keep new implementations hidden behind feature flags
-- Build confidence from **compiling code + passing As-Is tests**
-
-::: notes
-This is one of the most important slides in the deck.
-
-Frame As-Is tests as the answer to: “Can I ship right now without harming current users?” If the answer is yes, the current production contract is intact.
-
-Clarify that As-Is does not mean ideal or modern. It means the current supported behavior.
-
-Suggested timing: 1 minute.
-Transition: explain how the As-Is suite grows over time instead of being complete on day one.
-:::
-
----
-
-## Growing the As-Is Suite Incrementally
-
-### Practical Expansion Pattern
-
-1. Identify code you need to change
-2. Add tests that capture existing behavior first
-3. Confirm those tests pass before modifying code
-4. Use the tests as the baseline safety net for future edits
-
-### Why This Works
-
-- Coverage grows where change risk is highest
-- Trust in the test suite builds incrementally
-- The suite becomes more valuable with each change
-
-::: notes
-Make the point that teams do not need perfect coverage before they start. They need strategic coverage around the change surface.
-
-This is a useful brownfield message: add tests where you are about to operate, not everywhere at once.
-
-Suggested timing: 45 seconds.
-Transition: reinforce the critical rule that keeps this safe.
-:::
-
----
-
-## Critical Rule: As-Is Tests Define Production Readiness
-
-### Non-Negotiables
-
-- **Feature flag discipline**: wrap all new behavior that is not production-ready
-- **Watch for bleed**: unwrapped code paths can reach production users
-- **As-Is tests are the gate**: they define whether the app is safe to ship now
-
-### Operational Meaning
-
-If production flags are set to current behavior and As-Is tests pass, the build is deployable.
-
-::: notes
-Deliver this as the governing rule of the section.
-
-This is where you tie testing, flags, and deployment together. The audience should leave with the idea that production readiness is evaluated against the current contract, not the aspirational one.
-
-Suggested timing: 40 seconds.
-Transition: now introduce To-Be suites as the way to validate future behavior without weakening the As-Is gate.
-:::
-
----
-
-## To-Be Test Suites
-
-### Purpose
-
-- Define the **future behavior** of the system
-- Validate work-in-progress features safely
-- Measure implementation progress against the target state
-
-### Core Workflow
-
-1. Implement a feature flag around the code being changed
-2. When the flag is **ON**, execute the new behavior
-3. Write tests that only run when the flag is **ON**
-4. Execute these tests separately from the As-Is deployment gate
-
-::: notes
-Explain that To-Be tests are forward-looking. They are not the production gate while the feature is still in progress.
-
-Useful phrasing: “As-Is tells us whether we can ship now. To-Be tells us whether we're getting closer to what we want to ship later.”
-
-Suggested timing: 1 minute.
-Transition: show how the pipeline should execute both suites without mixing their purpose.
-:::
-
----
-
-## Two-Phase Pipeline Strategy
-
-### Phase 1: As-Is Tests
-
-- Set flags to match **production state**
-- Run tests for current behavior
-- Look for regressions and deployment blockers
-
-### Phase 2: To-Be Tests
-
-- Turn on the appropriate feature flags
-- Run tests for new behavior only
-- Assess progress toward the completed implementation
-
-### Result
-
-One pipeline answers two different questions without confusing them.
-
-::: notes
-This slide is about automation clarity.
-
-Explain that mixing current-state and future-state expectations in one suite creates noise. Separating them makes check-ins cleaner and makes release decisions more defensible.
-
-If helpful, mention that teams may run As-Is on every merge and To-Be on branches, PRs, or targeted CI jobs depending on maturity.
-
-Suggested timing: 50 seconds.
-Transition: summarize the delivery and modernization advantages of this pattern.
-:::
-
----
-
-## Benefits of the Split-Suite Model
-
-### Delivery Benefits
-
-- Safe check-ins even when a feature is incomplete
-- Smaller, more focused To-Be suites for in-progress work
-- Faster regression confidence from a stable As-Is gate
-
-### Modernization Benefits
-
-- Guides refactoring and architectural change deliberately
-- Validates new practices before full cutover
-- Makes progress visible without exposing partial work
-
-::: notes
-Frame this as a way to increase both safety and velocity.
-
-This is not additional ceremony for its own sake. It reduces ambiguity in team workflows and gives engineering leaders clearer answers about what is safe to deploy versus what is still being built.
-
-Suggested timing: 40 seconds.
-Transition: next, explain the maintenance obligation once the feature goes live.
-:::
-
----
-
-## After Release: Move To-Be into As-Is
-
-### Maintenance Requirement
-
-Once the new behavior becomes production behavior:
-
-- Move the relevant **To-Be tests** into the **As-Is suite**
-- Let them become part of the main regression safety net
-- Keep the test suite aligned with actual production state
-
-### Why It Matters
-
-- Prevents obsolete expectations from lingering
-- Keeps the deployment gate honest
-- Avoids maintaining two competing truths indefinitely
-
-::: notes
-This is the cleanup step teams often skip.
-
-Explain that the split-suites model is temporary by design. If the new path is now the real path, the regression suite must reflect that reality. Otherwise the safety model drifts.
-
-Suggested timing: 40 seconds.
-Transition: use that cleanup idea to introduce feature flag retirement itself.
-:::
-
----
-
-## Feature Flag Retirement
-
-### Traditional Pattern
-
-- Create PR to add the flag
-- Merge and ship safely behind the flag
-- Return later to remove the flag manually
-
-### AI-Assisted Pattern
-
-- Ask AI to **identify changes needed to remove this feature flag**
-- Use the response to remove obsolete branches, conditions, and tests
-- Simplify the codebase after the rollout is complete
-
-### Goal
-
-Treat flag retirement as a planned cleanup task, not optional future work.
-
-::: notes
-Emphasize that flags are useful only when temporary. Permanent flags accumulate complexity, duplicate branches, and test overhead.
-
-AI is especially strong here because flag cleanup is often mechanical: find conditionals, collapse branches, remove dead tests, and simplify configuration.
-
-Suggested timing: 45 seconds.
-Transition: show the full end-to-end flow as one lifecycle.
-:::
-
----
-
-## End-to-End Workflow
-
-### Recommended Sequence
-
-1. Add As-Is tests around the code you will change
-2. Introduce the feature flag around the new implementation
-3. Keep the As-Is suite aligned with production behavior
-4. Build To-Be tests for the new path under the flag
-5. Run both phases in CI for different decisions
-6. Release the feature to production when ready
-7. Promote To-Be tests into As-Is
-8. Retire the feature flag and dead code
-
-::: notes
-This slide ties the whole system together into one repeatable pattern.
-
-Encourage the audience to think of this as a modernization playbook. It works especially well in brownfield systems where big-bang rewrites are too risky.
-
-Suggested timing: 45 seconds.
-Transition: finish with the concise operational takeaways.
-:::
-
----
-
-## Key Takeaways
-
-- **As-Is tests** protect what production does today
-- **To-Be tests** validate what production should do tomorrow
-- **Feature flags** isolate unfinished behavior safely
-- **Separate pipeline phases** prevent deployment confusion
-- **Retirement matters**: after release, move tests and remove the flag
-
-### Final Principle
-
-**Use feature flags to manage change, and use test suites to define when that change is safe.**
-
-::: notes
-Close with the operating model, not the mechanics.
-
-If there is time, ask the audience which part their current workflow is missing: As-Is coverage, To-Be validation, pipeline separation, or flag retirement discipline.
-
-Suggested timing: 30 seconds.
-Transition: hand off to the next section or open for questions.
 :::
 
 ---

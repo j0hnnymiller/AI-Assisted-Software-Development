@@ -107,6 +107,28 @@ def count_slides(text: str) -> int:
     return count
 
 
+def iter_lines_outside_fences(text: str):
+    """Yield lines outside fenced code blocks so validation ignores examples."""
+    in_fence = False
+    fence_marker = None
+
+    for line in text.splitlines():
+        s = line.strip()
+        if not in_fence:
+            m = re.match(r"^(`{3,}|~{3,})", s)
+            if m:
+                in_fence = True
+                fence_marker = m.group(1)
+                continue
+            yield line
+            continue
+
+        tail = s[len(fence_marker) :] if s.startswith(fence_marker) else None
+        if tail is not None and not tail.strip():
+            in_fence = False
+            fence_marker = None
+
+
 # ---------------------------------------------------------------------------
 # Validation  (Phase 0)
 # ---------------------------------------------------------------------------
@@ -114,21 +136,44 @@ def count_slides(text: str) -> int:
 def validate(path: Path, content: str) -> list:
     warnings = []
     fm, body = strip_front_matter(content)
+    body_lines = list(iter_lines_outside_fences(body))
 
     # Rule 1 – valid front matter
     if not content.startswith("---") or not fm:
         warnings.append(f"  WARNING [{path.name}] Rule 1: Missing/invalid front matter")
 
     # Rule 2 – no H1 in body
-    for line in body.splitlines():
+    seen_slide_separator = False
+    seen_first_slide_content = False
+    allowed_title_h1_consumed = False
+    for line in body_lines:
+        stripped = line.strip()
+
+        if stripped == "---":
+            seen_slide_separator = True
+            continue
+
+        if not stripped:
+            continue
+
+        if not seen_slide_separator and stripped.startswith("<!--") and stripped.endswith("-->"):
+            continue
+
         if re.match(r"^# (?!#)", line):
+            if not seen_slide_separator and not seen_first_slide_content and not allowed_title_h1_consumed:
+                allowed_title_h1_consumed = True
+                seen_first_slide_content = True
+                continue
+
             warnings.append(
                 f"  WARNING [{path.name}] Rule 2: H1 heading in body: {line.strip()[:60]}"
             )
             break
 
+        seen_first_slide_content = True
+
     # Rule 3 – at least one H2
-    if not any(re.match(r"^## ", l) for l in body.splitlines()):
+    if not any(re.match(r"^## ", l) for l in body_lines):
         warnings.append(f"  WARNING [{path.name}] Rule 3: No ## H2 heading found")
 
     # Rule 4 – no ../images/ refs
