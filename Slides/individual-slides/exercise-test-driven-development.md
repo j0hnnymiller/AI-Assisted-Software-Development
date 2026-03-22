@@ -19,10 +19,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Lab 3 - Test-Driven Development (TDD) with Copilot
-
-Duration: 45-60 minutes
 
 Objectives
 - Practice TDD workflow with AI assistance
@@ -62,9 +59,10 @@ Success Criteria
 - Understanding of TDD benefits and workflow
 
 ::: notes
+Duration ~00:60
+
 ## Lab 3 - Test-Driven Development (TDD) with Copilot Exercise Instructions
 
-**Duration:** 45-60 minutes
 **Prerequisites:** Understanding of TDD principles
 
 ### Objectives

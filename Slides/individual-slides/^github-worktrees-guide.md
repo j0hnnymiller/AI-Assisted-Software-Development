@@ -60,6 +60,8 @@ git worktree add ../feature-branch feature-branch
 ```
 
 ::: notes
+Duration ~00:05
+
 Git worktrees allow you to have multiple working directories attached to the same repository. This means you can have different branches checked out in different folders simultaneously.
 
 **Key teaching points:**
@@ -73,8 +75,6 @@ Git worktrees allow you to have multiple working directories attached to the sam
 - Working on a feature while keeping main ready for hotfixes
 - Comparing implementations across branches
 - Running tests on one branch while developing on another
-
-**Timing:** 4-5 minutes
 
 **Transition:** "Let's explore why this is so powerful for development workflows..."
 :::
@@ -104,6 +104,8 @@ Git worktrees allow you to have multiple working directories attached to the sam
 - Branch comparison and validation
 
 ::: notes
+Duration ~00:04
+
 This slide addresses the fundamental "why" that will resonate with your audience's daily frustrations.
 
 **Real-world scenarios to emphasize:**
@@ -114,8 +116,6 @@ This slide addresses the fundamental "why" that will resonate with your audience
 4. **Code Review:** Check out PR locally while keeping your work intact
 
 **Interactive element:** Ask the audience, "Which of these scenarios happens to you most often?"
-
-**Timing:** 3-4 minutes
 
 **Personal anecdotes work well here** - share a specific situation where worktrees would have saved time.
 
@@ -155,6 +155,8 @@ git worktree prune
 ```
 
 ::: notes
+Duration ~00:06
+
 These are the commands your audience will use 90% of the time. Focus on practical usage patterns.
 
 **Demo approach:**
@@ -173,8 +175,6 @@ These are the commands your audience will use 90% of the time. Focus on practica
 
 - Don't create worktrees inside the main repository directory
 - Use absolute or relative paths consistently
-
-**Timing:** 5-6 minutes with live demonstration
 
 **Transition:** "Let's see these commands in action with a real workflow example..."
 :::
@@ -208,6 +208,8 @@ cd ../my-project/
 **Result:** Two active development streams, zero context loss
 
 ::: notes
+Duration ~00:07
+
 This is the "aha moment" slide where the value becomes crystal clear through a concrete example.
 
 **Storytelling approach:**
@@ -229,8 +231,6 @@ This is the "aha moment" slide where the value becomes crystal clear through a c
 - Full Git functionality in each worktree
 
 **Audience interaction:** "How would you typically handle this situation without worktrees?"
-
-**Timing:** 6-7 minutes
 
 **Transition:** "This workflow can be optimized even further with some best practices..."
 :::
@@ -264,6 +264,8 @@ my-projects/
 - Set up IDE workspace configurations per worktree
 
 ::: notes
+Duration ~00:05
+
 Best practices prevent common pitfalls and make worktrees a smooth part of daily workflow.
 
 **Directory organization rationale:**
@@ -291,8 +293,6 @@ alias gwr='git worktree remove'
 - Most IDEs can have different project configurations per directory
 - VS Code workspaces work great with worktrees
 - Each worktree can have its own extensions/settings
-
-**Timing:** 4-5 minutes
 
 **Transition:** "Let's explore some specific use cases where worktrees really shine..."
 :::
@@ -334,6 +334,8 @@ git worktree add ../v3-dev develop
 ```
 
 ::: notes
+Duration ~00:06
+
 This slide provides specific, actionable use cases that developers can immediately apply.
 
 **Use case deep-dive:**
@@ -363,8 +365,6 @@ This slide provides specific, actionable use cases that developers can immediate
 - Different deployment pipelines per version
 
 **Audience engagement:** "Which of these scenarios would be most valuable in your current projects?"
-
-**Timing:** 5-6 minutes
 
 **Transition:** "Let's do a quick hands-on exercise to cement these concepts..."
 :::
@@ -405,6 +405,8 @@ git worktree list
 ```
 
 ::: notes
+Duration ~00:07
+
 Hands-on practice is crucial for retention. This exercise covers the basic workflow.
 
 **Facilitation approach:**
@@ -430,8 +432,6 @@ Hands-on practice is crucial for retention. This exercise covers the basic workf
 - "What surprised you about this exercise?"
 - "How do you think this will change your workflow?"
 - "What challenges or questions came up?"
-
-**Timing:** 5-7 minutes (including debrief)
 
 **Transition:** "Now let's troubleshoot some common issues you might encounter..."
 :::
@@ -469,6 +469,8 @@ git worktree prune
 - Use `git worktree prune` in maintenance scripts
 
 ::: notes
+Duration ~00:05
+
 Troubleshooting information helps prevent frustration and builds confidence.
 
 **Key troubleshooting mindset:**
@@ -496,8 +498,6 @@ Troubleshooting information helps prevent frustration and builds confidence.
 - Each worktree uses disk space (working directory)
 - Too many can slow down some Git operations
 - Regular cleanup is good practice
-
-**Timing:** 4-5 minutes
 
 **Transition:** "Let's wrap up with key takeaways and next steps..."
 :::
@@ -528,6 +528,8 @@ Troubleshooting information helps prevent frustration and builds confidence.
 - Configure your IDE for multi-worktree workflows
 
 ::: notes
+Duration ~00:04
+
 This concluding slide reinforces key benefits and provides clear next steps for immediate action.
 
 **Delivery approach:**
@@ -553,8 +555,6 @@ This concluding slide reinforces key benefits and provides clear next steps for 
 - Provide links to documentation
 - Share your contact info for questions
 - Suggest internal team adoption strategies
-
-**Timing:** 3-4 minutes
 
 **Questions and discussion:** Reserve 5-10 minutes for Q&A and sharing experiences.
 
@@ -583,6 +583,8 @@ This concluding slide reinforces key benefits and provides clear next steps for 
 **Contact:** [Your contact information]
 
 ::: notes
+Duration ~00:10
+
 Final slide for resources and Q&A session.
 
 **Resource explanations:**
@@ -603,8 +605,6 @@ Final slide for resources and Q&A session.
 - "What about large repositories?"
 - "Can this work with Git LFS?"
 - "How does this affect CI/CD?"
-
-**Timing:** 5-10 minutes
 
 **Follow-up actions:**
 

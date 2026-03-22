@@ -12,11 +12,17 @@ Shift to greenfield best practices: requirements, prompts, and verification work
 
 ---
 
+
+
+
 ## Business Rules as Requirements
 
 ![Slide 2 image](images/_Starting_with_Project_Requirements_slide02_4.png)
 
 ---
+
+
+
 
 ## Conceptual Models
 
@@ -29,6 +35,9 @@ Conceptual Models are not a requirement
 
 ---
 
+
+
+
 ## Object Role Models
 
 A type of conceptual model
@@ -39,6 +48,9 @@ Object Role Models are textual and visual
 Textual representation is in a formal natural language that can be validated by subject matter experts
 
 ---
+
+
+
 
 ## Zeus.Academia.3b
 
@@ -51,6 +63,9 @@ Why 3b?
   - If something is hard, do it often
 
 ---
+
+
+
 
 ## Use Cases
 
@@ -65,7 +80,6 @@ Use cases are specific scenarios that guide data capture and processing in the a
 
 ## Exercise: Generate Business Requirements
 
-Duration: 20 minutes
 Objectives:
 Use the Product Manager chat mode to create a requirements document for a calculator
 Activities:
@@ -79,12 +93,17 @@ Success Criteria
 The requirements document exists and passes review
 
 ::: notes
+Duration ~00:20
+
 Author requirement docs, then use Copilot to generate scaffolding and validate alignment.
 
 Prompt: create a requirements document for a simple calculator application
 :::
 
 ---
+
+
+
 
 ## Exercise: Create Project Requirement
 
@@ -108,7 +127,6 @@ Author requirement docs, then use Copilot to generate scaffolding and validate a
 
 ## Exercise: Generate Business Requirements
 
-Duration: 20 minutes
 Objectives:
 Use the Product Manager chat mode to update the requirements document to implement using vertical slices
 Activities:
@@ -120,6 +138,8 @@ Success Criteria
 The implementation plan passes review
 
 ::: notes
+Duration ~00:20
+
 Prompts:
 
 using #file:business-rules-to-slices.instructions.md update the #file:calculator-app-requirements.md implementation plan to implement using vertical slices

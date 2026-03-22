@@ -33,6 +33,9 @@ Welcome to this combined module on safe AI-assisted coding in brownfield codebas
 
 ---
 
+
+
+
 <!-- Part 1 -->
 
 ## Safe Brownfield Coding
@@ -48,6 +51,9 @@ Part 1 focuses on the mechanics of introducing change safely into a living codeb
 :::
 
 ---
+
+
+
 
 ## Using Feature Flags
 
@@ -71,6 +77,9 @@ Feature flags are the safest mechanism for introducing AI-generated changes into
 
 ---
 
+
+
+
 ## Retiring Feature Flags
 
 **Why retirement matters**
@@ -93,6 +102,9 @@ Feature flags that are never retired become permanent complexity. This is especi
 
 ---
 
+
+
+
 ## As-Is and To-Be Test Suites
 
 **As-Is tests**
@@ -112,6 +124,9 @@ The As-Is / To-Be pairing is a foundational technique for brownfield modernizati
 :::
 
 ---
+
+
+
 
 ## Testing in Production
 
@@ -137,8 +152,6 @@ No test suite in development can fully replicate production conditions. Shadow t
 
 ## Exercise: Implementing a Feature Flag
 
-**Duration**: 20 minutes
-
 **Objectives**
 
 - Learn how to introduce a safe, reversible change
@@ -157,10 +170,15 @@ No test suite in development can fully replicate production conditions. Shadow t
 **Success Criteria**: flag is scoped, rollout/rollback plans are explicit, tests are correct, retirement criteria are documented
 
 ::: notes
+Duration ~00:20
+
 Give students 20 minutes. Encourage them to select something real from their own codebases if possible — the exercise is more meaningful with familiar code. The feature flag design is more important than the implementation: students should be able to articulate why the flag exists, who can see the new behavior, and what evidence will trigger retirement. Circulate and ask teams to describe their rollback plan. Debrief: what made the boundary hard to define? What surprised you about writing As-Is tests?
 :::
 
 ---
+
+
+
 
 <!-- Part 2 -->
 
@@ -176,6 +194,9 @@ Part 2 elevates from individual techniques to organizational practices. The open
 
 ---
 
+
+
+
 ## Backup & Rollback Strategies
 
 - Use branching strategies that isolate AI-generated changes
@@ -189,6 +210,9 @@ Branching strategy is the first line of defense. AI-generated changes should liv
 :::
 
 ---
+
+
+
 
 ## Confidence Frameworks
 
@@ -204,6 +228,9 @@ The closing question is the most important slide on this topic. A high coverage 
 
 ---
 
+
+
+
 ## Change Review Processes
 
 - Treat AI as a junior developer: everything gets reviewed
@@ -218,6 +245,9 @@ The "junior developer" framing is intentional and useful: junior developers prod
 
 ---
 
+
+
+
 ## Incremental Change Methodology
 
 - Break modernization into small, safe, reversible steps
@@ -230,6 +260,9 @@ Big-bang refactors are the most common failure mode in brownfield modernization.
 :::
 
 ---
+
+
+
 
 ## Keeping Change Sets Small
 
@@ -245,6 +278,9 @@ The final bullet is the warning: AI's ability to generate large volumes of code 
 
 ---
 
+
+
+
 ## Respecting Brownfield Code
 
 - Brownfield systems are valuable — they run the business
@@ -257,6 +293,9 @@ Close Part 2 with a values statement. Brownfield codebases have history — deci
 :::
 
 ---
+
+
+
 
 <!-- Part 3 -->
 
@@ -273,6 +312,9 @@ Part 3 synthesizes the previous sections into a practical framework for building
 :::
 
 ---
+
+
+
 
 ## Protecting Brownfield Codebases
 
@@ -296,6 +338,9 @@ Behavioral preservation is the prime directive: every change must be intentional
 
 ---
 
+
+
+
 ## Leveraging AI Code Reviews
 
 **AI can assist by:**
@@ -318,6 +363,9 @@ AI code review is most valuable as a pre-screen before human review. It catches 
 
 ---
 
+
+
+
 ## Effective Human Code Reviews
 
 **Human reviewers focus on:**
@@ -339,6 +387,9 @@ Human reviewers bring judgment that AI cannot: they know the business domain, th
 :::
 
 ---
+
+
+
 
 ## The Role of Test Automation
 
@@ -364,8 +415,6 @@ Snapshot and contract tests deserve emphasis in brownfield contexts: snapshot te
 
 ## Exercise: Building the Safety Nets
 
-**Duration**: 20 minutes
-
 **Objectives**
 
 - Identify missing safety nets in a brownfield system
@@ -384,5 +433,7 @@ Snapshot and contract tests deserve emphasis in brownfield contexts: snapshot te
 **Success Criteria**: missing nets identified, improvements are safe and incremental, coverage or clarity improved, review and documentation guardrails are strengthened
 
 ::: notes
+Duration ~00:20
+
 This exercise is the capstone of the combined module. Students apply all three sections simultaneously: they audit a real codebase, use AI to find gaps, and produce a concrete list of improvements. The partner validation step is important — it simulates the human-in-the-loop review process and often surfaces things one person missed. Debrief questions: what was missing that surprised you? How did AI's assessment of the safety nets compare to your own? What would you prioritize first? Encourage students to bring their findings back to their teams.
 :::

@@ -12,6 +12,9 @@ Session covers vertical slice implementation review, test coverage, architecture
 
 ---
 
+
+
+
 # Session Topics
 
 - Review of vertical slice implementation (Slice 1)
@@ -27,6 +30,9 @@ Session covers vertical slice implementation review, test coverage, architecture
 :::
 
 ---
+
+
+
 
 # Vertical Slice Implementation Review
 
@@ -44,6 +50,9 @@ Session covers vertical slice implementation review, test coverage, architecture
 
 ---
 
+
+
+
 # Architecture Overview
 
 - Business/Object layer: core features, shared domain models, state management
@@ -59,6 +68,9 @@ Session covers vertical slice implementation review, test coverage, architecture
 
 ---
 
+
+
+
 # Test Coverage & Validation
 
 - 100% test coverage: 30 handler tests, 6 end-to-end workflows
@@ -71,6 +83,9 @@ Session covers vertical slice implementation review, test coverage, architecture
 :::
 
 ---
+
+
+
 
 # Performance & Best Practices
 
@@ -86,6 +101,9 @@ Session covers vertical slice implementation review, test coverage, architecture
 
 ---
 
+
+
+
 # Troubleshooting Build & Run Issues
 
 - Pathing issues with terminal and VS Code settings
@@ -99,6 +117,9 @@ Session covers vertical slice implementation review, test coverage, architecture
 :::
 
 ---
+
+
+
 
 # Lessons Learned & Next Steps
 
@@ -115,8 +136,6 @@ Session covers vertical slice implementation review, test coverage, architecture
 ---
 
 # Exercise: Architecture Review
-
-**Duration:** 20 minutes
 
 **Objectives:**
 
@@ -137,14 +156,14 @@ Session covers vertical slice implementation review, test coverage, architecture
 - Patterns mapped to requirements
 
 ::: notes
+Duration ~00:20
+
 Prompt: Review and analyze the vertical slice architecture and design patterns.
 :::
 
 ---
 
 # Exercise: Troubleshooting Build/Run Issues
-
-**Duration:** 15 minutes
 
 **Objectives:**
 
@@ -165,10 +184,15 @@ Prompt: Review and analyze the vertical slice architecture and design patterns.
 - Lessons learned shared
 
 ::: notes
+Duration ~00:15
+
 Prompt: Troubleshoot and resolve build/run issues in the project environment.
 :::
 
 ---
+
+
+
 
 # Q&A and Wrap-Up
 

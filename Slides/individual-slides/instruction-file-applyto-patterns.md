@@ -21,7 +21,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## 🎯 Instruction File `applyTo` Patterns
 
 **Understanding Glob Pattern Matching**
@@ -29,14 +28,18 @@ paginate: true
 Controlling When Instructions Apply to Your Code
 
 ::: notes
+Duration ~00:01
+
 Welcome to this presentation on instruction file applyTo patterns. This is a critical concept for managing GitHub Copilot's behavior across your codebase. By the end of this session, you'll understand how to precisely control which files your instruction files apply to using glob patterns.
 
-**Timing**: 30 seconds for title slide
 **Key Point**: This is about precision - getting Copilot to apply the right rules to the right files
 **Transition**: "Let's start by understanding what the applyTo field actually does"
 :::
 
 ---
+
+
+
 
 ## Where `appliesTo` Fits
 
@@ -58,6 +61,9 @@ rule. It prevents irrelevant instructions from polluting the stack and
 keeps the assistant focused.
 
 ---
+
+
+
 
 ## How `appliesTo` Interacts with the Stack
 
@@ -91,13 +97,14 @@ applyTo: "**/*.md" # Applies to all Markdown files
 - ✅ Improve Copilot performance by reducing context
 
 ::: notes
+Duration ~00:02
+
 The applyTo field is part of the YAML front matter in instruction files. It uses glob patterns to match file paths. When you open a file in VS Code, Copilot checks all instruction files and loads only those whose applyTo pattern matches the current file.
 
 **Why this matters**: Without proper applyTo patterns, you might have documentation standards trying to apply to code files, or architecture patterns trying to apply to configuration files. This creates confusion and can lead to poor AI suggestions.
 
 **Example to share**: "Imagine having CQRS architecture instructions applying to your README files - that would be nonsensical. The applyTo field prevents this."
 
-**Timing**: 1-1.5 minutes
 **Transition**: "Now let's look at the most common pattern types you'll use"
 :::
 
@@ -122,6 +129,8 @@ applyTo: "**/*"      # All files (explicit)
 **⚠️ Caution:** Use sparingly - can create conflicts with more specific instructions
 
 ::: notes
+Duration ~00:02
+
 The double asterisk wildcard is the universal matcher. Use this for repository-wide policies that should apply everywhere - things like your AI-assisted output instructions, general quality standards, or compliance requirements.
 
 **Important warning**: Overusing universal patterns is a common mistake. Every universal instruction adds to the context Copilot needs to process for every file. If you have 10 instruction files all using "\*\*", Copilot has to load all 10 for every single file you open.
@@ -130,7 +139,6 @@ The double asterisk wildcard is the universal matcher. Use this for repository-w
 
 **Real example from the repo**: The ai-assisted-output.instructions.md uses "\*_/_" because AI provenance metadata requirements apply to all AI-generated content regardless of file type.
 
-**Timing**: 1.5 minutes
 **Ask audience**: "How many instruction files do you think should realistically use universal patterns? Usually no more than 2-3."
 :::
 
@@ -159,6 +167,8 @@ applyTo: "**/*.instructions.md"
 - `**/*.instructions.md` - Instruction files
 
 ::: notes
+Duration ~00:02
+
 File extension matching is probably the most common pattern you'll use. The key syntax here is the brace expansion - that's the curly braces with comma-separated extensions.
 
 **Walking through the examples**:
@@ -173,7 +183,6 @@ File extension matching is probably the most common pattern you'll use. The key 
 **Correct**: "**/_.md" matches all markdown files recursively
 **Incorrect**: "_.md" only matches markdown files in root directory
 
-**Timing**: 2 minutes
 **Demonstrate**: Show how the pattern breaks down visually
 :::
 
@@ -201,6 +210,8 @@ applyTo: ".github/instructions/**/*.md"
 - Clearer instruction purpose
 
 ::: notes
+Duration ~00:02
+
 Directory-specific patterns are crucial for organizing large codebases. They let you say "these architecture rules only apply to source code" or "these formatting rules only apply to slides."
 
 **Breaking down the syntax**:
@@ -213,7 +224,6 @@ Directory-specific patterns are crucial for organizing large codebases. They let
 
 **Another example**: You might have vertical-slice.instructions.md with "src/Features/\*_/_.cs" so those architectural patterns only apply to feature code, not to infrastructure or configuration code.
 
-**Timing**: 2 minutes
 **Visual aid**: If possible, show the repository structure and how the pattern matches
 **Transition**: "Let's dive deeper into the glob syntax itself"
 :::
@@ -234,6 +244,8 @@ Understanding the building blocks:
 | `{a,b}` | Alternatives             | `*.{js,ts}` → `app.ts`      |
 
 ::: notes
+Duration ~00:03
+
 This slide is your reference guide for glob pattern syntax. Let's walk through each one with careful attention to the distinctions:
 
 **Single asterisk (\*)**:
@@ -269,7 +281,6 @@ This slide is your reference guide for glob pattern syntax. Let's walk through e
 - "\*.{js,ts,jsx,tsx}" matches all JavaScript/TypeScript files
 - Each alternative can itself be a pattern
 
-**Timing**: 3 minutes - this is detailed, go slow
 **Demonstrate**: Show 2-3 concrete examples with actual files
 **Transition**: "Now let's see these patterns in action with real examples from this repository"
 :::
@@ -298,6 +309,8 @@ applyTo: "**/*.prompt.md"
 ```
 
 ::: notes
+Duration ~00:03
+
 These are actual examples from the AI-Assisted-Software-Development-Course repository. Let's analyze why each pattern was chosen:
 
 **Example 1 - AI Output Standards**:
@@ -333,7 +346,6 @@ These are actual examples from the AI-Assisted-Software-Development-Course repos
 
 **Key lesson**: Notice how each pattern precisely targets its intended scope. There's no overlap or ambiguity.
 
-**Timing**: 2-3 minutes
 **Ask**: "Can anyone think of what would happen if example 4 used '\*_/_.md' instead? Right - slide formatting rules would apply to all markdown, including README files, causing conflicts."
 :::
 
@@ -366,6 +378,8 @@ applyTo: "Slides/individual-slides/**"
 ```
 
 ::: notes
+Duration ~00:03
+
 Let's establish three core best practices that will guide your applyTo pattern decisions:
 
 **Best Practice 1: Be Specific When Possible**
@@ -404,7 +418,6 @@ The pattern should make the instruction's purpose obvious at a glance.
 
 **Example of good scope**: Having security scanning with "src/\*_/_.{cs,js,py}" - clearly applies to source code only.
 
-**Timing**: 2.5 minutes
 **Emphasize**: "Specificity is not just a performance optimization - it's about clarity and maintainability"
 :::
 
@@ -439,6 +452,8 @@ applyTo: "src/**/*.cs"  # C# files in src
 ```
 
 ::: notes
+Duration ~00:03
+
 Let's look at three common mistakes and how to avoid them:
 
 **Pitfall 1: Too Broad**
@@ -480,7 +495,6 @@ This is the trickiest pitfall. When multiple instruction files match the same fi
 2. Use more specific file naming patterns (one targets "_.Commands.cs", the other "_.Queries.cs")
 3. If overlap is intentional, ensure instructions are complementary, not contradictory
 
-**Timing**: 3 minutes - this is important, take time for questions
 **Interactive element**: "Has anyone experienced unexpected Copilot behavior? It might be due to overlapping instructions."
 :::
 
@@ -512,6 +526,8 @@ find . -name "*.md"
 - Check for unexpected behavior (might indicate wrong pattern)
 
 ::: notes
+Duration ~00:02
+
 Testing your applyTo patterns before committing is crucial. Here are three methods, in order of sophistication:
 
 **Method 1: File System Commands**
@@ -559,7 +575,6 @@ Steps:
 
 **Example**: After adding a vertical-slice.instructions.md with "src/\*_/_.cs", open a C# file in src/ and ask Copilot to create a new feature. It should use vertical slice architecture. Then open a C# file in tests/ and verify it doesn't try to apply feature architecture to test code.
 
-**Timing**: 2 minutes
 **Practical tip**: "I recommend testing every new instruction file pattern with method 1 or 2 before pushing to your team"
 **Transition**: "Let's wrap up with key takeaways"
 :::
@@ -583,6 +598,8 @@ Steps:
 3. Apply rules during code generation
 
 ::: notes
+Duration ~00:03
+
 Let's consolidate the technical details about how pattern matching actually works in practice:
 
 **Evaluation Timing**:
@@ -621,7 +638,6 @@ Critical detail - this depends on the underlying file system:
 
 Best practice: Always use lowercase in patterns and standardize file naming to lowercase to avoid cross-platform issues.
 
-**Timing**: 2-3 minutes
 **Important**: "The dynamic evaluation means you can test instruction changes immediately - just close and reopen a file"
 :::
 
@@ -651,6 +667,8 @@ Best practice: Always use lowercase in patterns and standardize file naming to l
 - ✅ Review patterns when instructions aren't working
 
 ::: notes
+Duration ~00:03
+
 Let's wrap up with a practical decision-making framework:
 
 **The Four Essential Pattern Categories**:
@@ -658,29 +676,29 @@ Let's wrap up with a practical decision-making framework:
 These four patterns cover 95% of real-world use cases. Let me give you concrete examples of when to use each:
 
 1. **Universal `**/\*`\*\*:
-   - AI provenance policies
-   - Security compliance requirements
-   - Legal/licensing standards
-   - Organization-wide conventions
-   - Should be max 2-3 instruction files in your entire repo
+- AI provenance policies
+- Security compliance requirements
+- Legal/licensing standards
+- Organization-wide conventions
+- Should be max 2-3 instruction files in your entire repo
 
 2. **Multi-extension `**/\*.{ext1,ext2}`\*\*:
-   - Language-agnostic code quality patterns
-   - Cross-language architecture styles
-   - Multi-language testing strategies
-   - Example: Vertical slice could apply to C#, TypeScript, Python features
+- Language-agnostic code quality patterns
+- Cross-language architecture styles
+- Multi-language testing strategies
+- Example: Vertical slice could apply to C#, TypeScript, Python features
 
 3. **Directory scope `directory/**`\*\*:
-   - Slide formatting (Slides/\*)
-   - API documentation (docs/api/\*\*)
-   - Feature isolation (src/Features/\*\*)
-   - Test organization (tests/\*\*)
+- Slide formatting (Slides/\*)
+- API documentation (docs/api/\*\*)
+- Feature isolation (src/Features/\*\*)
+- Test organization (tests/\*\*)
 
 4. **Specialized naming `**/\*.pattern.ext`\*\*:
-   - Instruction files themselves (\*.instructions.md)
-   - Prompt files (\*.prompt.md)
-   - Test files (_.test.js, _.spec.ts)
-   - Generated files (\*.generated.cs)
+- Instruction files themselves (\*.instructions.md)
+- Prompt files (\*.prompt.md)
+- Test files (_.test.js, _.spec.ts)
+- Generated files (\*.generated.cs)
 
 **Using the Decision Tree**:
 
@@ -718,11 +736,13 @@ Then review and update your patterns. This is normal maintenance.
 
 **Final thought**: "Good applyTo patterns make Copilot predictable and reliable. Take the time to get them right."
 
-**Timing**: 3 minutes for comprehensive wrap-up
 **End with**: "Questions about applyTo patterns or glob syntax?"
 :::
 
 ---
+
+
+
 
 ## 💡 Resources & Next Steps
 
@@ -801,6 +821,8 @@ Connect with the AI-Assisted Software Development team
 GitHub: [johnmillerATcodemag-com/AI-Assisted-Software-Development](https://github.com/johnmillerATcodemag-com/AI-Assisted-Software-Development-Course)
 
 ::: notes
+Duration ~00:01
+
 **Closing Remarks**:
 
 Thank you all for your attention. The applyTo pattern system might seem simple on the surface, but as we've seen, there's real depth to using it effectively.
@@ -828,6 +850,5 @@ Thank you all for your attention. The applyTo pattern system might seem simple o
 **Call to Action**:
 "I'd encourage everyone to audit one of your existing projects this week - look at your instruction files and their applyTo patterns. Are they as specific as they could be? Are there conflicts? Use the testing methods we discussed to verify them."
 
-**Timing**: 1 minute
 **Tone**: Encouraging and supportive - this is about continuous improvement
 :::

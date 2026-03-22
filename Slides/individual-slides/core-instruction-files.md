@@ -3,7 +3,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Core Instructions
 
 | Instruction File                         | Purpose                                                         |
@@ -15,6 +14,8 @@ paginate: true
 | instruction-prompt-files.instructions.md | Guidance for generating prompts that generate instruction files |
 
 ::: notes
+Duration ~00:03
+
 Present the core instruction files that govern AI-assisted development in this repository. These files are the foundation of the guardrails system.
 
 Explain each file's purpose:
@@ -27,6 +28,5 @@ Explain each file's purpose:
 
 Emphasize the hierarchical nature: ai-assisted-output is the root policy that all others reference.
 
-Timing: 2-3 minutes.
 Transition: "Let's dive into how to use these..."
 :::

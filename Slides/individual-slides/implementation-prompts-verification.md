@@ -70,17 +70,17 @@ marp: true
 theme: default
 paginate: true
 ---
-
 <!-- _class: lead -->
 
 ## Implementation Prompts and Verification
 
 - Section focus: turning slice plans into actionable build prompts
-- Duration target: 22 minutes
 - Outcome: show how to generate slice-specific prompts, verify behavior, and prepare stakeholder demos
 
 ::: notes
-Introduce this section as the bridge between planning and actual implementation. The audience should understand that a slice plan becomes much more useful when it is converted into a precise prompt that tells the AI what to build, how to verify it, and how to demonstrate it. Spend about one minute here setting the expectation that the workflow is prompt, implement, verify, and showcase. Transition by asking what information a good implementation prompt must capture before any code is generated.
+Duration ~00:22
+
+Introduce this section as the bridge between planning and actual implementation. The audience should understand that a slice plan becomes much more useful when it is converted into a precise prompt that tells the AI what to build, how to verify it, and how to demonstrate it.  Transition by asking what information a good implementation prompt must capture before any code is generated.
 :::
 
 ---
@@ -100,7 +100,9 @@ flowchart LR
 ```
 
 ::: notes
-Explain that the best implementation prompts are intentionally narrow. Rather than asking for an entire application, the team picks one slice from the plan and turns that into a focused request that can be reviewed and tested independently. Spend about two minutes here emphasizing that one-prompt-per-slice keeps scope manageable, reduces ambiguity, and supports incremental delivery. Transition by showing what the actual prompt needs to contain once the slice is chosen.
+Duration ~00:02
+
+Explain that the best implementation prompts are intentionally narrow. Rather than asking for an entire application, the team picks one slice from the plan and turns that into a focused request that can be reviewed and tested independently.  Transition by showing what the actual prompt needs to contain once the slice is chosen.
 :::
 
 ---
@@ -117,7 +119,9 @@ Explain that the best implementation prompts are intentionally narrow. Rather th
 > Using slice X instructions and implementation plan, create a prompt file that implements slice 1. Include verification steps and showcase instructions that demonstrate the functionality to stakeholders.
 
 ::: notes
-Frame this slide around prompt construction, not just prompt wording. The important move is that the request names the slice, points to the governing instructions, and asks for more than code generation by explicitly requiring verification and demonstration guidance. Spend about three minutes here and make the point that this turns the prompt into a mini delivery package rather than a coding command. Transition by breaking down the expected deliverables inside the generated prompt file.
+Duration ~00:03
+
+Frame this slide around prompt construction, not just prompt wording. The important move is that the request names the slice, points to the governing instructions, and asks for more than code generation by explicitly requiring verification and demonstration guidance.  Transition by breaking down the expected deliverables inside the generated prompt file.
 :::
 
 ---
@@ -138,7 +142,9 @@ Frame this slide around prompt construction, not just prompt wording. The import
 - File structure and component organization
 
 ::: notes
-Walk through the prompt output as if you are reviewing a generated file with the class. The goal is not merely to list filenames, but to show that the prompt should describe what each file is responsible for and how the pieces fit together. Spend about three minutes here emphasizing that precise HTML, CSS, and JavaScript expectations reduce drift and make reviews faster. Transition by moving from implementation detail to the checks that prove the slice actually works.
+Duration ~00:03
+
+Walk through the prompt output as if you are reviewing a generated file with the class. The goal is not merely to list filenames, but to show that the prompt should describe what each file is responsible for and how the pieces fit together.  Transition by moving from implementation detail to the checks that prove the slice actually works.
 :::
 
 ---
@@ -161,7 +167,9 @@ flowchart TB
 ```
 
 ::: notes
-Explain that verification should be authored before or alongside implementation, not after the fact. The checks on this slide are strong examples because they cover default state, observable behavior, and accessibility requirements in a way that reviewers and demonstrators can both understand. Spend about four minutes here and note that verification guidance should tell the team what to test automatically and what to inspect manually. Transition by showing how showcase instructions differ from verification even though the two are related.
+Duration ~00:04
+
+Explain that verification should be authored before or alongside implementation, not after the fact. The checks on this slide are strong examples because they cover default state, observable behavior, and accessibility requirements in a way that reviewers and demonstrators can both understand.  Transition by showing how showcase instructions differ from verification even though the two are related.
 :::
 
 ---
@@ -181,7 +189,9 @@ Explain that verification should be authored before or alongside implementation,
 4. why it matters to the audience
 
 ::: notes
-Make the distinction between proving correctness and presenting value. Verification asks whether the slice works; showcase guidance tells a human demonstrator how to walk stakeholders through what appears on screen, what changes, and why they should care. Spend about three minutes here encouraging the audience to replace code-centric demo notes with behavior-centric instructions that support live explanation. Transition by expanding from one slice to the broader roadmap of multiple prompts.
+Duration ~00:03
+
+Make the distinction between proving correctness and presenting value. Verification asks whether the slice works; showcase guidance tells a human demonstrator how to walk stakeholders through what appears on screen, what changes, and why they should care.  Transition by expanding from one slice to the broader roadmap of multiple prompts.
 :::
 
 ---
@@ -197,5 +207,7 @@ Make the distinction between proving correctness and presenting value. Verificat
 **Bottom line**: slice-specific prompts create a repeatable path from plan to implementation to review.
 
 ::: notes
-Close by connecting the single-slice example to the full delivery workflow. Each prompt becomes a reusable unit of work that can be re-run, refined, and audited over time, which is especially useful when implementation spans multiple sessions or contributors. Spend about three minutes here reinforcing that sequential execution and review reduce risk while building confidence one slice at a time. End by encouraging the audience to treat prompt files as versioned implementation assets, not disposable chat text.
+Duration ~00:03
+
+Close by connecting the single-slice example to the full delivery workflow. Each prompt becomes a reusable unit of work that can be re-run, refined, and audited over time, which is especially useful when implementation spans multiple sessions or contributors.  End by encouraging the audience to treat prompt files as versioned implementation assets, not disposable chat text.
 :::

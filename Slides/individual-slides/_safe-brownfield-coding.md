@@ -18,6 +18,9 @@ Introduce this module as a practical guide to modifying brownfield systems safel
 
 ---
 
+
+
+
 ## Using Feature Flags
 
 Why feature flags matter
@@ -36,6 +39,9 @@ Feature flags are one of the most powerful tools for brownfield modernization. T
 :::
 
 ---
+
+
+
 
 ## Retiring Feature Flags
 
@@ -56,6 +62,9 @@ Feature flags are temporary scaffolding. If not retired, they become technical d
 
 ---
 
+
+
+
 ## As-Is and To-Be Test Suites
 
 As-Is tests
@@ -72,6 +81,9 @@ Explain that As-Is tests freeze the current system's behavior, while To-Be tests
 :::
 
 ---
+
+
+
 
 ## Testing in Production
 
@@ -94,8 +106,6 @@ Testing in production is not reckless when done correctly. With feature flags, o
 
 ## Exercise: Implementing a Feature Flag
 
-Duration
-20 minutes
 Objectives
 Learn how to introduce a safe, reversible change
 Practice designing a feature flag workflow
@@ -120,7 +130,11 @@ Design a feature flag with:
   Retirement criteria are documented
 
 ::: notes
+Duration ~00:20
+
 Encourage participants to choose a real module from their brownfield system. The goal is to practice safe, reversible change — not to implement a large feature. Reinforce that feature flags are scaffolding, not permanent architecture.
 :::
 
 ---
+
+

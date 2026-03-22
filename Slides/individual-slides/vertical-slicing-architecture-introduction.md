@@ -82,7 +82,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 # Vertical Slicing Architecture Introduction
 
 ## Organizing software around features instead of layers
@@ -90,9 +89,11 @@ paginate: true
 *AI-Assisted Software Development*
 
 ::: notes
+Duration ~00:01
+
 Welcome to the vertical slicing architecture introduction. This section explains why organizing code by feature can make complex systems easier to understand, extend, and maintain.
 
-Spend about one minute on this slide. Open by asking how many people have had to change a feature by touching controllers, services, repositories, and models in four different folders.
+Open by asking how many people have had to change a feature by touching controllers, services, repositories, and models in four different folders.
 
 Emphasize that vertical slicing is not just a folder rename. It changes how teams think about boundaries, ownership, and end-to-end feature delivery.
 
@@ -100,6 +101,9 @@ Transition with: "Let's define the pattern first, then compare it to the layered
 :::
 
 ---
+
+
+
 
 ## What is a vertical slice?
 
@@ -147,6 +151,8 @@ flowchart LR
 **Vertical slices:** all code for a feature is kept in one place.
 
 ::: notes
+Duration ~00:03
+
 Use about three minutes here and walk the audience through the diagram from left to right. In the layered view, explain that user registration logic is split across multiple folders, which creates navigation overhead and makes changes feel scattered.
 
 Then move to the vertical slice view and show how each feature becomes a mini-application. The `Features/UserRegistration` folder contains the command, handler, validator, and any related response or data access pieces in one place.
@@ -174,7 +180,9 @@ Transition with: "Once the structure changes, the day-to-day developer experienc
 - Refactoring happens inside the feature more often than across the whole app
 
 ::: notes
-Spend about three minutes here and make it practical. Describe the common experience of implementing a new feature in a layered system, where developers bounce between folders just to follow one request from start to finish.
+Duration ~00:03
+
+ Describe the common experience of implementing a new feature in a layered system, where developers bounce between folders just to follow one request from start to finish.
 
 Contrast that with a vertical slice where the work stays mostly inside one feature folder. That reduces cognitive load and makes it easier for a developer to reason about the full behavior before they edit anything.
 
@@ -184,6 +192,9 @@ Transition with: "Those same boundaries also help teams collaborate and test mor
 :::
 
 ---
+
+
+
 
 ## Collaboration and testing benefits
 
@@ -231,7 +242,9 @@ flowchart LR
 - A feature slice can implement both read and write concerns together
 
 ::: notes
-Spend about three minutes here and keep CQRS at an introductory level. Explain that Command Query Responsibility Segregation separates the write path from the read path because those two concerns often want different models and optimizations.
+Duration ~00:03
+
+ Explain that Command Query Responsibility Segregation separates the write path from the read path because those two concerns often want different models and optimizations.
 
 On the read side, teams may denormalize data, cache aggressively, or build projections for fast display. On the write side, the focus is enforcing rules, validating intent, and updating authoritative data correctly.
 
@@ -253,6 +266,8 @@ Transition with: "Let's close with the main ideas you want people to remember af
 **Bottom line:** vertical slicing improves focus, flow, and long-term maintainability.
 
 ::: notes
+Duration ~00:01
+
 Use about one minute to close. Recap that vertical slicing is primarily about improving feature ownership and reducing the cost of change.
 
 Reinforce that the architecture helps both individuals and teams: developers move faster, changes are easier to contain, and the codebase better reflects how the business thinks about work.

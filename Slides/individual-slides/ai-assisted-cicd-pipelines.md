@@ -33,6 +33,9 @@ Introduce this module as a practical guide to using AI — specifically GitHub C
 
 ---
 
+
+
+
 ## Why Pipelines Are Hard
 
 YAML syntax is unforgiving
@@ -46,6 +49,9 @@ Open with empathy. Most developers have lost an afternoon to a mis-indented YAML
 :::
 
 ---
+
+
+
 
 ## What AI Brings to CI/CD
 
@@ -66,6 +72,9 @@ Walk through the mental model: the developer provides intent, the AI provides sy
 :::
 
 ---
+
+
+
 
 ## GitHub Actions YAML Generation
 
@@ -90,6 +99,9 @@ Live demo opportunity: open a blank `.github/workflows/ci.yml` and type the prom
 :::
 
 ---
+
+
+
 
 ## Anatomy of an AI-Generated Workflow
 
@@ -120,6 +132,9 @@ Walk through each section: triggers, runner, checkout, SDK setup, restore, build
 
 ---
 
+
+
+
 ## Coverage Thresholds
 
 Coverage gates enforce quality — AI helps configure them correctly
@@ -145,6 +160,9 @@ Coverage thresholds are one of the most common sources of confusion: where does 
 :::
 
 ---
+
+
+
 
 ## Build Automation Patterns
 
@@ -175,6 +193,9 @@ Matrix builds and caching are two patterns that dramatically improve pipeline pe
 
 ---
 
+
+
+
 ## Maintaining Pipelines with AI
 
 Pipelines rot — actions deprecate, runners change, dependencies drift
@@ -193,6 +214,9 @@ Maintenance is where AI pays long-term dividends. Demo: paste a failing workflow
 :::
 
 ---
+
+
+
 
 ## Reusable Workflows
 
@@ -224,6 +248,9 @@ Reusable workflows (`workflow_call`) are a powerful but often underused GitHub A
 
 ---
 
+
+
+
 ## Secrets, Permissions, and Security
 
 AI assists but YOU own security decisions
@@ -247,6 +274,9 @@ Stress that AI can suggest correct permission scopes but cannot see your reposit
 :::
 
 ---
+
+
+
 
 ## From Zero to Pipeline: Live Workflow
 
@@ -287,10 +317,15 @@ Walk through this five-step workflow live or in a recorded demo. The goal is to 
 _Sample repo link provided by instructor_
 
 ::: notes
-Allow 15–20 minutes. Circulate and watch for students who try to use Copilot as a black box without reading the output. Prompt them: "Can you explain line 12 to me?" That question forces engagement. Common issues: students forget to create the `.github/workflows/` directory, or they use the wrong indentation. AI usually catches these if students paste the file back and ask "is this correct YAML?" Debrief: what surprised you? What did the AI get wrong?
+Duration ~00:20
+
+ Circulate and watch for students who try to use Copilot as a black box without reading the output. Prompt them: "Can you explain line 12 to me?" That question forces engagement. Common issues: students forget to create the `.github/workflows/` directory, or they use the wrong indentation. AI usually catches these if students paste the file back and ask "is this correct YAML?" Debrief: what surprised you? What did the AI get wrong?
 :::
 
 ---
+
+
+
 
 ## Key Takeaways
 

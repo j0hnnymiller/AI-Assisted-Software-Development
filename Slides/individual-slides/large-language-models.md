@@ -33,6 +33,8 @@ paginate: true
 **LLMs don't "know" things — they learn what text tends to follow other text.**
 
 ::: notes
+Duration ~00:02
+
 This is the most important conceptual slide. Many developers expect LLMs to behave like search engines or databases — they don't.
 
 Key talking points:
@@ -43,8 +45,6 @@ Key talking points:
 - Analogy: autocomplete on your phone, but trained on all of human writing
 
 Common misconception to address: "Does Copilot look up my code in a database?" — No. It generates completions based on learned patterns.
-
-Timing: ~2 minutes.
 :::
 
 ---
@@ -70,6 +70,8 @@ Tokens: ["def", " calculate", "_tax", "(", "income", "):"]
 - Rare words split into multiple tokens → less efficient
 
 ::: notes
+Duration ~00:03
+
 Tokenization is often overlooked but explains many "weird" LLM behaviors.
 
 Key talking points:
@@ -86,8 +88,6 @@ Practical implication for developers:
 - Understanding tokens helps estimate cost when using API
 
 Interactive moment: Ask "How many tokens do you think this slide is?" — good engagement exercise.
-
-Timing: ~2-3 minutes.
 :::
 
 ---
@@ -113,6 +113,8 @@ Input Tokens
 - Stacked in **layers** — deeper = richer understanding
 
 ::: notes
+Duration ~00:03
+
 You don't need to explain the math — focus on the intuition of attention.
 
 Key talking points:
@@ -125,8 +127,6 @@ Key talking points:
 Analogy for attention: Imagine reading a legal contract. When you hit a pronoun like "the aforementioned party," your brain jumps back to find who that is. That's attention.
 
 Why this matters for developers: Larger context windows (more tokens processed at once) = Copilot can see more of your codebase at once = better suggestions.
-
-Timing: ~3 minutes. This is the most technical slide — keep it high-level.
 :::
 
 ---
@@ -151,6 +151,8 @@ Timing: ~3 minutes. This is the most technical slide — keep it high-level.
 ```
 
 ::: notes
+Duration ~00:03
+
 Use the trophy/suitcase example — it's a classic from the research literature and immediately intuitive.
 
 Key talking points:
@@ -161,8 +163,6 @@ Key talking points:
 - Attention is also why very long prompts can "distract" the model — it has finite attention capacity
 
 Practical tip: When using Copilot, relevant context near your cursor gets higher attention weight. Keep related code nearby when you want better completions.
-
-Timing: ~2-3 minutes.
 :::
 
 ---
@@ -189,6 +189,8 @@ Raw text (internet, books, code, papers)
 - Produces a **base model** that completes text — but isn't yet "helpful"
 
 ::: notes
+Duration ~00:03
+
 Pre-training is where the model learns language, code, and world knowledge.
 
 Key talking points:
@@ -201,8 +203,6 @@ Key talking points:
 Scale reference: GPT-3 used 45TB of text data. Training ran on ~10,000 A100 GPUs.
 
 Why developers care: The pre-training corpus determines what languages, frameworks, and patterns the model knows well. Copilot knows React better than a niche internal framework.
-
-Timing: ~2-3 minutes.
 :::
 
 ---
@@ -230,6 +230,8 @@ Aligned model: "The capital of France is Paris."  ← stops when done
 ```
 
 ::: notes
+Duration ~00:03
+
 This phase is what separates "a model that generates text" from "an assistant you can actually use."
 
 Key talking points:
@@ -242,8 +244,6 @@ Key talking points:
 Why alignment matters for developers: It's why Copilot suggests reasonable code instead of technically-valid-but-insane solutions. It's also why it refuses to help with malicious code.
 
 Common question: "Can I fine-tune Copilot on my codebase?" — GitHub Enterprise Copilot offers custom fine-tuning on private repos.
-
-Timing: ~2-3 minutes.
 :::
 
 ---
@@ -263,6 +263,8 @@ Timing: ~2-3 minutes.
 - Larger context = can see more code, but also slower & more expensive
 
 ::: notes
+Duration ~00:02
+
 Context window is one of the most practically important LLM concepts for developers using Copilot.
 
 Key talking points:
@@ -273,8 +275,6 @@ Key talking points:
 - Instruction files (`.github/instructions/`) consume some of the context window — keep them concise
 
 Practical tip: If Copilot seems to "forget" something you told it, it likely scrolled out of the context window. Repeat the key constraints.
-
-Timing: ~2 minutes.
 :::
 
 ---
@@ -300,6 +300,8 @@ Token probabilities after "def calculate_":
 | > 1.0       | Random / incoherent              | Rarely useful      |
 
 ::: notes
+Duration ~00:02
+
 Temperature demystifies why LLMs give different answers to the same question.
 
 Key talking points:
@@ -310,8 +312,6 @@ Key talking points:
 - When Copilot gives you alternates (Alt+] to cycle), it's sampling different tokens
 
 Developer implication: If you're using the Copilot API or OpenAI API directly, lower temperature for code generation tasks, higher for creative tasks like writing test descriptions.
-
-Timing: ~2 minutes.
 :::
 
 ---
@@ -345,5 +345,5 @@ For Q&A, be prepared for:
 - "Why does it make things up?" — Hallucination: the model is optimized to produce plausible-sounding text, not verified facts
 - "What's the difference between Copilot and ChatGPT?" — Same underlying technology; different fine-tuning, context, and integration
 
-Timing: Spend remaining session time on Q&A.
+Use the remaining session time for Q&A.
 :::

@@ -3,22 +3,24 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Controlling GitHub Copilot Instruction Files
 
 Understanding Context Submission in AI-Assisted Development
 
 ::: notes
+Duration ~00:20
+
 Welcome to this session on controlling GitHub Copilot instruction files. This is a critical topic for teams implementing AI-assisted development workflows, as understanding how instructions are submitted with every prompt is essential for maintaining consistency, reducing token costs, and ensuring the right context reaches your AI assistant.
 
 Today we'll cover four key areas: how the automatic inclusion system works through the applyTo field, how prompt files interact with instructions, how chat modes affect instruction submission, and practical strategies for controlling your context.
 
 This session assumes you're familiar with basic GitHub Copilot usage and have worked with instruction files before. If you haven't, we recommend reviewing the “Creating Instruction Files” session first.
-
-Estimated time: 15-20 minutes including Q&A.
 :::
 
 ---
+
+
+
 
 ## The Core Concept
 
@@ -56,6 +58,9 @@ Think of it like having domain experts looking over your shoulder, but only when
 :::
 
 ---
+
+
+
 
 ## The applyTo Field: Pattern Matching
 
@@ -97,6 +102,9 @@ One important caveat: If an instruction file has NO applyTo field, it won't be a
 :::
 
 ---
+
+
+
 
 ## Prompt Files: Reference, Don't Control
 
@@ -143,6 +151,9 @@ The prompt metadata can specify output paths, which helps the system know what f
 :::
 
 ---
+
+
+
 
 ## Chat Modes: Persona, Not Pattern Control
 
@@ -200,6 +211,9 @@ One important note: If your chat mode references specific instruction files in i
 
 ---
 
+
+
+
 ## The Control Hierarchy
 
 Understanding the complete context assembly
@@ -240,6 +254,9 @@ Pro tip: Use levels 1-2 for 90% of your work (file-driven automatic inclusion), 
 :::
 
 ---
+
+
+
 
 ## Practical Control Strategies
 
@@ -289,6 +306,9 @@ Remember: You can see which instructions are active by checking the Copilot cont
 
 ---
 
+
+
+
 ## Real-World Examples
 
 From your current workspace
@@ -328,6 +348,9 @@ You can examine your own instruction files and ask: “Is this applyTo pattern o
 :::
 
 ---
+
+
+
 
 ## Key Takeaways
 
@@ -385,6 +408,9 @@ Thank you for your attention. Let's open it up for questions.
 :::
 
 ---
+
+
+
 
 ## Questions & Discussion
 

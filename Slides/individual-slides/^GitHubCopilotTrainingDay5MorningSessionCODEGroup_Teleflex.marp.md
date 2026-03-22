@@ -12,6 +12,9 @@ Session focuses on custom chat modes, comparison with instruction and prompt fil
 
 ---
 
+
+
+
 # Session Topics
 
 - Overview of instruction files, prompt files, and custom chat modes
@@ -27,6 +30,9 @@ Session focuses on custom chat modes, comparison with instruction and prompt fil
 :::
 
 ---
+
+
+
 
 # Instruction Files
 
@@ -44,6 +50,9 @@ Session focuses on custom chat modes, comparison with instruction and prompt fil
 
 ---
 
+
+
+
 # Prompt Files
 
 - Structured templates for repeatable, specific tasks
@@ -58,6 +67,9 @@ Session focuses on custom chat modes, comparison with instruction and prompt fil
 :::
 
 ---
+
+
+
 
 # Custom Chat Modes
 
@@ -75,6 +87,9 @@ Session focuses on custom chat modes, comparison with instruction and prompt fil
 
 ---
 
+
+
+
 # Comparison Matrix & Decision Framework
 
 - Instruction files: persistent, repo-wide, simple rules
@@ -89,6 +104,9 @@ Session focuses on custom chat modes, comparison with instruction and prompt fil
 :::
 
 ---
+
+
+
 
 # Real-World Integration Example
 
@@ -106,8 +124,6 @@ Session focuses on custom chat modes, comparison with instruction and prompt fil
 ---
 
 # Exercise: Create a Custom Chat Mode
-
-**Duration:** 20 minutes
 
 **Objectives:**
 
@@ -128,14 +144,14 @@ Session focuses on custom chat modes, comparison with instruction and prompt fil
 - Ready to use in an AI-assisted workflow
 
 ::: notes
+Duration ~00:20
+
 Prompt: Create a custom chat mode for a specific domain or role with defined expertise and constraints.
 :::
 
 ---
 
 # Exercise: Integration Analysis
-
-**Duration:** 15 minutes
 
 **Objectives:**
 
@@ -156,10 +172,15 @@ Prompt: Create a custom chat mode for a specific domain or role with defined exp
 - Actionable suggestions for improvement
 
 ::: notes
+Duration ~00:15
+
 Prompt: Analyze the integration of instruction files, prompt files, and custom chat modes in an AI-assisted project.
 :::
 
 ---
+
+
+
 
 # Q&A and Wrap-Up
 

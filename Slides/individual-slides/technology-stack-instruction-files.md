@@ -58,17 +58,17 @@ marp: true
 theme: default
 paginate: true
 ---
-
 <!-- _class: lead -->
 
 ## Technology Stack Instruction Files
 
 - Section focus: turning requirements into tech-specific guidance
-- Duration target: 17 minutes
 - Outcome: show how teams generate, review, and improve instruction files for HTML5, CSS3, and JavaScript work
 
 ::: notes
-Frame this section as part of the greenfield foundation work rather than a documentation side quest. Explain that instruction files help the AI and the team align on standards before implementation begins, which reduces drift and rework later. Spend about one minute here setting expectations that the flow is generate, review, compare, and refine. Transition by asking what should exist before anyone prompts for technology-specific instructions.
+Duration ~00:17
+
+Frame this section as part of the greenfield foundation work rather than a documentation side quest. Explain that instruction files help the AI and the team align on standards before implementation begins, which reduces drift and rework later.  Transition by asking what should exist before anyone prompts for technology-specific instructions.
 :::
 
 ---
@@ -88,7 +88,9 @@ flowchart LR
 ```
 
 ::: notes
-Explain that instruction files are most valuable when they reflect the actual technology choices and constraints of the project. If the requirements are vague, the generated guidance will also be vague, so the stack definition has to come first. Spend about two minutes here and emphasize that this step prevents generic output that misses accessibility, security, or performance needs. Transition by showing the simple prompting pattern used to produce the first draft.
+Duration ~00:02
+
+Explain that instruction files are most valuable when they reflect the actual technology choices and constraints of the project. If the requirements are vague, the generated guidance will also be vague, so the stack definition has to come first.  Transition by showing the simple prompting pattern used to produce the first draft.
 :::
 
 ---
@@ -106,7 +108,9 @@ Explain that instruction files are most valuable when they reflect the actual te
 - Treat the first output as a draft, not as final policy
 
 ::: notes
-Make the point that the initial prompt does not need to be elaborate to be useful. What matters is that it clearly names the technologies and asks for standards that map to real development concerns like semantics, accessibility, and runtime performance. Spend about two minutes here and reinforce that the first draft is a starting point for review, not a blind copy-paste artifact. Transition by moving from prompt generation to what a good instruction file should contain.
+Duration ~00:02
+
+Make the point that the initial prompt does not need to be elaborate to be useful. What matters is that it clearly names the technologies and asks for standards that map to real development concerns like semantics, accessibility, and runtime performance.  Transition by moving from prompt generation to what a good instruction file should contain.
 :::
 
 ---
@@ -135,7 +139,9 @@ Make the point that the initial prompt does not need to be elaborate to be usefu
 - links to related repository guidance
 
 ::: notes
-Walk through the content categories rather than reading the bullets verbatim. The core idea is that each technology file should move beyond syntax tips and instead define operational expectations for how code should be written in this repository. Spend about two to three minutes here and note that related documentation references help connect one instruction file to broader standards. Transition by describing how the team reviews the generated file before relying on it.
+Duration ~00:03
+
+Walk through the content categories rather than reading the bullets verbatim. The core idea is that each technology file should move beyond syntax tips and instead define operational expectations for how code should be written in this repository.  Transition by describing how the team reviews the generated file before relying on it.
 :::
 
 ---
@@ -157,7 +163,9 @@ flowchart TB
 ```
 
 ::: notes
-Explain that review is what turns an acceptable draft into a dependable working standard. Teams should inspect whether the file is actionable for the AI, readable for humans, and explicit enough to guide consistent output across sessions. Spend about two minutes here and call out validation checklists as especially important because they turn abstract standards into something reviewers can enforce. Transition by introducing the role of multiple models in improving quality.
+Duration ~00:02
+
+Explain that review is what turns an acceptable draft into a dependable working standard. Teams should inspect whether the file is actionable for the AI, readable for humans, and explicit enough to guide consistent output across sessions.  Transition by introducing the role of multiple models in improving quality.
 :::
 
 ---
@@ -175,7 +183,9 @@ Explain that review is what turns an acceptable draft into a dependable working 
 | GPT-4: more variable | Good candidate for challenge and comparison |
 
 ::: notes
-Position multi-model review as a quality-control tactic rather than a competition. Different models expose different blind spots, so having one model critique another often surfaces missing examples, incomplete checklists, or weakly stated rules. Spend about two minutes here and point out that the goal is synthesis, not loyalty to one output. Transition by tying this evaluation loop back to the broader foundation phase of a new project.
+Duration ~00:02
+
+Position multi-model review as a quality-control tactic rather than a competition. Different models expose different blind spots, so having one model critique another often surfaces missing examples, incomplete checklists, or weakly stated rules.  Transition by tying this evaluation loop back to the broader foundation phase of a new project.
 :::
 
 ---
@@ -191,5 +201,7 @@ Position multi-model review as a quality-control tactic rather than a competitio
 **Bottom line**: better instruction files lead to more reliable implementation output.
 
 ::: notes
-Close by connecting technology instruction files to the larger greenfield workflow. These files are foundational because they shape the quality of later prompts, implementation plans, and generated code, especially when multiple people and multiple models are involved. Spend about two minutes here and encourage the audience to think of instruction files as living standards that improve over time. End by suggesting that every new stack choice should trigger the question, what instruction file do we need before we start building?
+Duration ~00:02
+
+Close by connecting technology instruction files to the larger greenfield workflow. These files are foundational because they shape the quality of later prompts, implementation plans, and generated code, especially when multiple people and multiple models are involved.  End by suggesting that every new stack choice should trigger the question, what instruction file do we need before we start building?
 :::

@@ -23,7 +23,6 @@ Walk through installation, auth, and a quick coding session; encourage participa
 
 ## Lab: Getting Started with GitHub Copilot
 
-Duration: Follow along
 Objectives
 Install and configure GitHub Copilot
 Verify authentication with GitHub account
@@ -47,10 +46,10 @@ Locate and explore:
 - Know where to find chat history
 
 ::: notes
+Duration ~00:30
 
 ## **Lab 1: Getting Started with GitHub Copilot**
 
-**Duration:** 20-30 minutes
 **Prerequisites:** VS Code installed
 
 ### Objectives
@@ -80,7 +79,7 @@ Locate and explore:
 - Can open/close chat windows
 - Understand difference between main chat and quick chat
 - Know where to find chat history
-  :::
+:::
 
 ---
 
@@ -93,8 +92,9 @@ Add error handling to my code
 - Result: Better, but still generic without seeing actual code structure
   @file:api-client.js Add comprehensive error handling to the fetchUserData function. Handle network timeouts (>5s), HTTP errors (404, 500, etc.), and JSON parsing failures.   Return user-friendly error messages that match our existing error format in @file:error-types.js
 - Result: Specific implementation that matches existing code patterns\*
-  ::: notes
-  **Timing:** 3-4 minutes
+
+::: notes
+Duration ~00:04
 
 **Delivery Instructions:**
 This slide demonstrates the progression from terrible to excellent prompts—walk through each example deliberately.
@@ -122,7 +122,6 @@ This slide demonstrates the progression from terrible to excellent prompts—wal
 
 ## Lab: Understanding Context Management
 
-Duration: Follow along
 Objectives
 Learn to add context using @ symbols
 Understand context window limitations
@@ -148,7 +147,7 @@ Activities
    Notice quality difference between vague and specific prompts
 
 ::: notes
-**Timing:** 15-20 minutes hands-on lab with instructor guidance
+Duration ~00:20
 
 **Lab Introduction:**
 "This is your first real hands-on practice with context management. Open VS Code and follow along—we'll work through this together."
@@ -194,7 +193,6 @@ Walk around (if in person) or ask participants to confirm:
 
 ## Lab: Chat Management & Workflow
 
-Duration: Follow along
 Objectives
 
 - Organize chat sessions effectively
@@ -237,7 +235,7 @@ Objectives
   - When Copilot "forgets" earlier context, it's time for a new session
 
 ::: notes
-**Timing:** 15-20 minutes hands-on lab
+Duration ~00:20
 
 **Lab Introduction:**
 "Chat management might sound boring, but it's the difference between constantly fighting Copilot and having smooth, productive conversations. Let's build good habits now."
@@ -288,6 +286,9 @@ Ask participants:
 
 ---
 
+
+
+
 ## Using Copilot in different modes
 
 Ask Mode
@@ -308,7 +309,6 @@ Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and 
 
 ## Lab: Exploring Copilot Modes
 
-Duration: Follow along
 Objectives
 Understand differences between Ask, Edit, and Agent modes
 Know when to use each mode
@@ -336,7 +336,7 @@ Activities
    Successfully use agent mode for multi-file operations
 
 ::: notes
-**Timing:** 15-20 minutes hands-on lab
+Duration ~00:20
 
 **Lab Introduction:**
 "This lab is about understanding the differences between Copilot modes and—critically—when each mode consumes your premium tokens. Let's dive in."
@@ -401,6 +401,9 @@ Activities
 :::
 
 ---
+
+
+
 
 ## IDE Support for AI Assistance
 

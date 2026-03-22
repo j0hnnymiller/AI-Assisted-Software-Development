@@ -17,7 +17,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Welcome Back to AI-Assisted Software Development
 
 - Ready to continue where we left off
@@ -26,6 +25,8 @@ paginate: true
 - **Questions are always welcome — ask anytime!**
 
 ::: notes
+Duration ~00:02
+
 Welcome everyone back to the session. Take a moment to let people settle in before diving into content. Acknowledge that it's great to see everyone back and express enthusiasm for the session ahead.
 
 Key talking points:
@@ -35,6 +36,5 @@ Key talking points:
 - Set a positive, inclusive tone for the session
 - If this is after a break, give people 30 seconds to get re-focused
 
-Timing: Spend about 1-2 minutes on this slide before moving on.
 Transition: "Let's pick up right where we left off..."
 :::

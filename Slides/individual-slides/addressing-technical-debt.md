@@ -17,6 +17,9 @@ Introduce this module as the moment where AI becomes an active contributor to mo
 
 ---
 
+
+
+
 ## Prompting Copilot to Address Technical Debt
 
 Effective prompts include:
@@ -36,6 +39,9 @@ Explain that Copilot responds best to structured, high-signal prompts. The more 
 
 ---
 
+
+
+
 ## Assigning Issues to Copilot
 
 How assignment works
@@ -54,6 +60,9 @@ Assigning issues to Copilot formalizes the workflow. It treats Copilot like a ju
 
 ---
 
+
+
+
 ## What Copilot Does With Assigned Issues
 
 Copilot reads the issue description and linked context
@@ -71,8 +80,6 @@ Maintains traceability between issue → PR → commits
 
 ## Exercise: Prompt Copilot to Address Technical Debt
 
-Duration
-10 minutes
 Objectives
 Practice writing high-signal prompts
 Apply architectural constraints
@@ -93,6 +100,8 @@ Output aligns with architectural rules
 Provenance metadata is included
 
 ::: notes
+Duration ~00:10
+
 Encourage participants to choose a real example from their brownfield system. The goal is clarity and safety, not complexity.
 :::
 
@@ -100,8 +109,6 @@ Encourage participants to choose a real example from their brownfield system. Th
 
 ## Exercise: Assigning an Issue to Copilot
 
-Duration
-10 minutes
 Objectives
 Convert technical debt into a structured issue
 Provide Copilot with actionable context
@@ -123,6 +130,8 @@ Copilot produces a relevant draft
 Provenance metadata is present
 
 ::: notes
+Duration ~00:10
+
 This exercise reinforces the workflow of treating Copilot as a junior developer who receives tasks and produces drafts.
 :::
 
@@ -130,8 +139,6 @@ This exercise reinforces the workflow of treating Copilot as a junior developer 
 
 ## Exercise: Delegating Work to Copilot
 
-Duration
-15 minutes
 Objectives
 Practice delegating multi-step tasks
 Ensure Copilot follows architectural rules
@@ -153,5 +160,7 @@ Output is safe, incremental, and reversible
 Human review identifies any gaps
 
 ::: notes
+Duration ~00:15
+
 This exercise builds confidence in delegating larger tasks while maintaining safety and architectural alignment. Emphasize that humans remain the final reviewers.
 :::

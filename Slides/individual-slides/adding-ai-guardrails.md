@@ -22,6 +22,9 @@ These practices turn AI from a novelty into a disciplined engineering tool.
 
 ---
 
+
+
+
 ## Instructions, Prompts & Agents
 
 Definitions
@@ -36,6 +39,9 @@ Together, they form a layered control system that shapes AI behavior and reduces
 :::
 
 ---
+
+
+
 
 ## Creating Instruction, Prompt & Agent Files
 
@@ -57,6 +63,9 @@ This is essential for brownfield modernization, where consistency and traceabili
 
 ---
 
+
+
+
 ## Meta Prompts
 
 Meta prompts guide:
@@ -75,6 +84,9 @@ This reduces manual effort and ensures that all artifacts follow a consistent pa
 
 ---
 
+
+
+
 ## Instructions for Generating Artifacts
 
 Best practices
@@ -91,6 +103,9 @@ This prevents drift and ensures the output is usable without heavy editing.
 :::
 
 ---
+
+
+
 
 ## Enforcing Provenance for AI Artifacts
 
@@ -114,7 +129,6 @@ It ensures teams know which artifacts were AI-generated, which were human-genera
 
 ## Exercise: Copy the Core Instructions
 
-Duration: 10 minutes
 Objectives:
 Understand file organization for AI-assisted output policies
 Practice copying files between repositories
@@ -136,10 +150,15 @@ Activities:
    No metadata or formatting is lost
 
 ::: notes
+Duration ~00:10
+
 This exercise reinforces the importance of maintaining consistent AI-assisted output policies across repositories. By copying the instructions file, participants learn to manage compliance and provenance requirements for AI-generated artifacts. Ensure the copied file is identical and properly placed to support future AI work.
 :::
 
 ---
+
+
+
 
 ## Instructions for AI Generated Artifacts
 
@@ -153,6 +172,9 @@ It ensures teams know which artifacts were AI-generated, which were human-genera
 
 ---
 
+
+
+
 ## AI-Assisted Output Instructions
 
 Ensures provenance and logging for all AI-assisted outputs
@@ -164,6 +186,9 @@ This slide introduces the purpose of the AI-Assisted Output Instructions file: t
 :::
 
 ---
+
+
+
 
 ## Required Provenance Metadata
 
@@ -187,6 +212,9 @@ These fields ensure each artifact can be traced back to its origin, model, and o
 
 ---
 
+
+
+
 ## Metadata Placement Policy
 
 Use YAML front matter for Markdown and similar formats
@@ -202,6 +230,9 @@ Note: Instructions files have limited support for metadata and must use sidecar 
 :::
 
 ---
+
+
+
 
 ## AI Chat Logging Workflow
 
@@ -221,6 +252,9 @@ Each session gets its own folder, transcript, and summary, ensuring clear separa
 
 ---
 
+
+
+
 ## Quality & PR Checklist
 
 Metadata complete and correct
@@ -237,6 +271,9 @@ Artifacts must be fully documented, logs must exist, and sensitive data must be 
 
 ---
 
+
+
+
 ## Copilot Integration Requirements
 
 Copilot must auto-manage chat IDs and logs
@@ -251,6 +288,9 @@ Copilot should automate chat management, metadata injection, and enforce complia
 :::
 
 ---
+
+
+
 
 ## Enforcement & Remediation
 
@@ -268,6 +308,9 @@ Any missing provenance must be remediated before merging.
 
 ---
 
+
+
+
 ## Summary: Why This Matters
 
 Enables auditability and trust in AI outputs
@@ -279,6 +322,9 @@ This slide reinforces the value of these instructions: they ensure every AI-assi
 :::
 
 ---
+
+
+
 
 ## Core Instruction files
 
@@ -296,8 +342,6 @@ chatmode-file.instructions.md
 
 ## Exercise: Create a Prompt File
 
-Duration
-10 minutes
 Objectives
 Understand prompt structure
 Practice defining task intent
@@ -311,6 +355,8 @@ Includes constraints and success criteria
 Avoids unnecessary context
 
 ::: notes
+Duration ~00:10
+
 This exercise builds foundational prompt-writing skills. Encourage participants to choose a real task to make the exercise concrete.
 
 Prompt: Create a prompt file that creates an instruction file for evergreen software development
@@ -320,8 +366,6 @@ Prompt: Create a prompt file that creates an instruction file for evergreen soft
 
 ## Exercise: Create an Instruction File for Evergreen Development
 
-Duration
-15 minutes
 Objectives
 Capture evergreen principles
 Define architectural boundaries
@@ -335,6 +379,8 @@ Reflects evergreen development values
 Provides clear guardrails
 
 ::: notes
+Duration ~00:15
+
 This reinforces the evergreen mindset and produces a reusable artifact for future AI-assisted work.
 
 Prompt: Submit the prompt #file:create-evergreen-software-instructions.prompt.md
@@ -344,8 +390,6 @@ Prompt: Submit the prompt #file:create-evergreen-software-instructions.prompt.md
 
 ## Exercise: Create an Agent
 
-Duration
-10 minutes
 Objectives
 Define a persona optimized for brownfield work
 Emphasize safety and incrementalism
@@ -365,6 +409,8 @@ Draft a Agent that:
   Includes clear behavioral rules
 
 ::: notes
+Duration ~00:10
+
 This helps participants shape AI behavior to match brownfield realities.
 :::
 
@@ -372,8 +418,6 @@ This helps participants shape AI behavior to match brownfield realities.
 
 ## Exercise: Generate Instruction Files
 
-Duration
-20 minutes
 Objectives
 Use meta prompts to scale instruction-file creation
 Capture module-specific rules
@@ -387,6 +431,8 @@ Meta prompts produce consistent structure
 Files are ready for team use
 
 ::: notes
+Duration ~00:20
+
 Participants experience the leverage of meta prompts and see how AI can accelerate documentation.
 
 Prompts:
@@ -402,8 +448,6 @@ Create instruction files for the front-end technologies
 
 ## Exercise: Context-Related Issues
 
-Duration
-10 minutes
 Objectives
 Identify missing context
 Detect token overflow risks
@@ -417,5 +461,7 @@ Success Criteria
 Correctly identified context gaps
 
 ::: notes
+Duration ~00:10
+
 This exercise builds intuition for context management—one of the most important AI-era engineering skills.
 :::

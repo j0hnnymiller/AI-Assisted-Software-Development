@@ -43,15 +43,14 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Understanding Unfamiliar Code with GitHub Copilot
 
 Section 10 · AI-Assisted Software Development
 
 ::: notes
-Welcome to Section 10: Code Explanation and Analysis. This section covers approximately 9 minutes of content from the AI-Assisted Software Development course.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to Section 10: Code Explanation and Analysis. This section covers approximately 9 minutes of content from the AI-Assisted Software Development course.
 
 **Key Points**:
 
@@ -75,15 +74,13 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 - 🔒 **Identifying hidden coupling** between components
 - 📊 **Analyzing test coverage** to find gaps
 
-### Duration
-
 | Subsection | Topic | Time |
 |---|---|---|
 | 10.1 | Code Explanation | 01:28:20 – 01:30:05 |
 | 10.2 | Coverage Gap Analysis | 01:30:05 – 01:36:00 |
 
 ::: notes
-**Timing**: 1-2 minutes
+Duration ~00:02
 
 **Key Points to Emphasize**:
 
@@ -92,8 +89,6 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 3. Coverage gap analysis is a systematic approach, not guesswork
 
 **Audience Context**: Ask "How many of you regularly work with code you didn't write?" — most hands should go up. This establishes immediate relevance.
-
-**Timing Note**: The full section runs about 9 minutes in the course recording. This slide deck expands on those concepts.
 
 **Transition**: "Let's start with the most immediate need — understanding code you've never seen before."
 :::
@@ -118,7 +113,7 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 3. Explanation appears in the Chat panel
 
 ::: notes
-**Timing**: 3-4 minutes (include live demo)
+Duration ~00:04
 
 **Demo Instructions**:
 
@@ -167,7 +162,7 @@ and what edge cases it covers"
 - ✅ Where the gaps might be
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Core Insight to Deliver**: Test code is often more complex than production code. Developers new to a codebase frequently skip reading tests because they're hard to understand — but tests are the best documentation of intended behavior.
 
@@ -209,7 +204,7 @@ What scenarios are covered? What's missing?"
 ```
 
 ::: notes
-**Timing**: 2 minutes (this is the setup for the next slides)
+Duration ~00:02
 
 **Why This Matters**: Code coverage tools tell you *what percentage* is covered, but they don't tell you *whether the right things* are covered. A line can be executed by a test without that test actually verifying the behavior.
 
@@ -246,7 +241,7 @@ report showing what's tested vs. what's missing."
 - ❌ Missing coverage areas
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Live Demo Instructions**:
 1. Open a calculator service with its test file
@@ -292,7 +287,7 @@ report showing what's tested vs. what's missing."
 ```
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Why These Categories Matter**:
 
@@ -332,7 +327,7 @@ Prioritize by risk and provide implementation order."
 5. 🟢 **Low Priority**: Add chained operation integration tests
 
 ::: notes
-**Timing**: 2-3 minutes
+Duration ~00:03
 
 **Why Prioritization Matters**: Teams can't add all missing tests at once. Copilot helps prioritize by:
 - Risk: What's most likely to cause a production incident?
@@ -378,7 +373,7 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 ```
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Live Demo Instructions**:
 1. With the coverage plan from the previous step visible
@@ -423,7 +418,7 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 > GitHub Copilot transforms code understanding from a time-consuming manual process into a fast, systematic workflow.
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Consolidation Message**: These two capabilities — explanation and coverage analysis — work together. Explanation builds the understanding needed to evaluate whether your tests are actually verifying the right things.
 
@@ -467,7 +462,7 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 > What surprised you about Copilot's analysis? Did it find gaps you knew about? Any you didn't?
 
 ::: notes
-**Timing**: This slide supports a hands-on exercise period of 10-15 minutes
+Duration ~00:15
 
 **Facilitation Tips**:
 
@@ -492,5 +487,5 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 - Test naming is often inconsistent (Copilot will note this)
 - Many tests verify behavior but not error messages
 
-**Instructor Note**: Save 5 minutes for debrief. The discussion often surfaces insights that stick better than the lecture content.
+**Instructor Note**:  The discussion often surfaces insights that stick better than the lecture content.
 :::

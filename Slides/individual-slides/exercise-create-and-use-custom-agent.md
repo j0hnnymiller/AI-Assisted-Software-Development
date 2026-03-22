@@ -21,10 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Create and Use a Custom Agent
-
-**Duration**: ~25 minutes
 
 **Objectives**
 
@@ -45,6 +42,8 @@ paginate: true
 - Student receives a usable, structured output aligned to the prompt goal
 
 ::: notes
+Duration ~00:25
+
 Facilitate this as a role-scoping lab, not just a file-authoring task. Start by showing students that a custom agent is essentially a reusable behavioral contract: it combines role intent, tool limits, and execution style.
 
 In Phase 1, have learners create `.github/agents/test-specialist.agent.md` with a concise description and explicit tools list. Encourage strong verbs and constraints, for example "analyze tests, propose coverage improvements, avoid production-code refactors unless asked".

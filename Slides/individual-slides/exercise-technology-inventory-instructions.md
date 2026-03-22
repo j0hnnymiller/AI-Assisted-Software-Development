@@ -23,10 +23,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Technology Inventory & Instruction Generation
-
-Duration: 25-30 minutes
 
 Objectives
 
@@ -69,10 +66,10 @@ Success Criteria
 - Session management process is repeatable for future multi-stream work
 
 ::: notes
+Duration ~00:30
 
 ## Technology Inventory & Instruction Generation Exercise Instructions
 
-**Duration:** 25-30 minutes
 **Prerequisites:** Access to repository tree, instruction conventions, and team roles for parallel work
 
 ### Objectives

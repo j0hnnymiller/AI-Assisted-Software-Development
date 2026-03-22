@@ -24,8 +24,6 @@ paginate: true
 
 ## Exercise: Generating C4 Diagrams from Code
 
-Duration: 20-25 minutes
-
 Objectives
 
 - Generate System Context, Container, and Component C4 diagrams using AI from existing code
@@ -75,7 +73,8 @@ Success Criteria
 
 ## Generating C4 Diagrams from Code Exercise Instructions
 
-**Duration:** 20-25 minutes
+Duration ~00:25
+
 **Prerequisites:** Access to a codebase (calculator project or any brownfield system), GitHub Copilot or equivalent AI assistant, Mermaid preview capability in VS Code or GitHub markdown
 
 **Goal**: Use AI to generate accurate, renderable C4 architecture diagrams at multiple levels of detail, plus supplementary diagram types, directly from an existing codebase.

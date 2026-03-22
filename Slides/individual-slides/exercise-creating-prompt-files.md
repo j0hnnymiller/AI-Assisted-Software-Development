@@ -24,8 +24,6 @@ paginate: true
 
 ## Exercise: Creating Prompt Files
 
-**Duration**: ~22 minutes
-
 **Objectives**
 
 - Understand prompt structure and best practices for AI instruction file generation
@@ -52,7 +50,8 @@ paginate: true
 
 ## Creating Prompt Files Exercise Instructions
 
-**Duration:** ~22 minutes
+Duration ~00:22
+
 **Prerequisites:** Git access to repository, GitHub Copilot enabled, ability to open multiple chat windows
 
 **Goal**: Experience the difference instruction files make in AI output quality through a three-phase controlled experiment measuring consistency, completeness, and reproducibility.

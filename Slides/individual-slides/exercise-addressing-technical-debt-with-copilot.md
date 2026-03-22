@@ -42,10 +42,7 @@ prompt: |
   :::
 
   ---
-
   # **Exercise: Assigning an Issue to Copilot**
-
-  ### Duration
 
   10 minutes
 
@@ -74,15 +71,14 @@ prompt: |
   - Copilot produces a relevant draft
   - Provenance metadata is present
 
-  ::: notes
+::: notes
+Duration ~00:10
+
   This exercise reinforces the workflow of treating Copilot as a junior developer who receives tasks and produces drafts.
-  :::
+:::
 
-  ---
-
+---
   # **Exercise: Delegating Work to Copilot**
-
-  ### Duration
 
   15 minutes
 
@@ -111,9 +107,12 @@ prompt: |
   - Output is safe, incremental, and reversible
   - Human review identifies any gaps
 
-  ::: notes
+::: notes
+Duration ~00:15
+
   This exercise builds confidence in delegating larger tasks while maintaining safety and architectural alignment. Emphasize that humans remain the final reviewers.
-  :::
+:::
+
 started: "2026-03-22T12:35:12.0096510-07:00"
 ended: "2026-03-22T12:38:26.6899826-07:00"
 task_durations:
@@ -129,11 +128,10 @@ source: "johnmillerATcodemag-com"
 marp: true
 theme: default
 paginate: true
+
 ---
 
 ## Exercise: Prompt Copilot to Address Technical Debt
-
-Duration: 10 minutes
 
 Objectives
 
@@ -160,10 +158,10 @@ Success Criteria
 - Provenance metadata is included
 
 ::: notes
+Duration ~00:10
 
 ## Prompt Copilot to Address Technical Debt Exercise Instructions
 
-**Duration:** 10 minutes
 **Prerequisites:** Access to a brownfield example, the relevant repository guardrails or instruction files, and GitHub Copilot Chat
 
 Use this first exercise to make participants slow down and specify the work before they ask for code. Encourage them to choose a small but real technical debt item from their own system, because realistic context exposes whether the prompt includes enough architecture, testing, and documentation guidance to keep the change safe. During the review step, ask them to inspect whether Copilot stayed incremental, respected the stated constraints, and requested or updated tests instead of only proposing a code edit. Transition to the next slide by explaining that a strong prompt is useful, but durable team workflows usually need the same clarity captured in a structured issue.
@@ -172,8 +170,6 @@ Use this first exercise to make participants slow down and specify the work befo
 ---
 
 ## Exercise: Assigning an Issue to Copilot
-
-Duration: 10 minutes
 
 Objectives
 
@@ -201,10 +197,10 @@ Success Criteria
 - Provenance metadata is present
 
 ::: notes
+Duration ~00:10
 
 ## Assigning an Issue to Copilot Exercise Instructions
 
-**Duration:** 10 minutes
 **Prerequisites:** Access to a repository with GitHub issue workflows or a comparable issue template, plus enough project context to describe impact and acceptance criteria
 
 Frame this exercise as the handoff from ad hoc prompting to a repeatable engineering process. Participants should write the issue as if they were briefing a junior developer: the title should be specific, the problem statement should identify impact and risk, and the acceptance criteria should make review straightforward and testable. When they evaluate Copilot's draft, focus on whether the output follows the issue rather than whether it merely looks polished, because a clean-looking response can still drift from the requested scope. Transition by noting that once the issue is strong, teams can delegate larger units of work with more confidence, as long as they keep the plan reviewable and reversible.
@@ -213,8 +209,6 @@ Frame this exercise as the handoff from ad hoc prompting to a repeatable enginee
 ---
 
 ## Exercise: Delegating Work to Copilot
-
-Duration: 15 minutes
 
 Objectives
 
@@ -242,10 +236,10 @@ Success Criteria
 - Human review identifies any gaps
 
 ::: notes
+Duration ~00:15
 
 ## Delegating Work to Copilot Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** A technical debt item with enough scope to require planning, code changes, tests, and documentation updates
 
 This final exercise is about controlled delegation, not blind trust. Ask participants to evaluate the output in layers: first the analysis, then the proposed sequence of changes, then whether the generated edits remain small enough to review and roll back safely. If Copilot skips tests, documentation, or architecture rules, treat that as a signal that the delegation prompt still needs sharper boundaries or missing context. Close by reinforcing that Copilot can accelerate larger remediation efforts, but humans remain responsible for approving the plan, spotting risk, and deciding whether the generated work is actually ready to merge.

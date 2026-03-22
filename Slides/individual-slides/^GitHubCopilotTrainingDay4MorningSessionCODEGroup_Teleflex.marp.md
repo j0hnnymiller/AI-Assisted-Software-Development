@@ -8,6 +8,9 @@ paginate: true
 
 ---
 
+
+
+
 # Greenfield Development Overview
 
 - Introduction to Greenfield development
@@ -21,6 +24,9 @@ Key points:
 :::
 
 ---
+
+
+
 
 # PR Hook Prompt Execution
 
@@ -38,6 +44,9 @@ Key points:
 
 ---
 
+
+
+
 # Debugging Workflow Issues
 
 - Local evaluation of files against instruction files
@@ -52,6 +61,9 @@ Key points:
 :::
 
 ---
+
+
+
 
 # Prompt Example & Workflow Modification
 
@@ -70,6 +82,9 @@ Key points:
 
 ---
 
+
+
+
 # Troubleshooting and Iteration
 
 - Errors with CLI extensions and API keys
@@ -85,6 +100,9 @@ Key points:
 
 ---
 
+
+
+
 # Azure DevOps Integration Discussion
 
 - Equivalent use of OpenAI keys in Azure DevOps
@@ -99,6 +117,9 @@ Key points:
 :::
 
 ---
+
+
+
 
 # Effort and Debugging Reflection
 
@@ -117,8 +138,6 @@ Key points:
 ---
 
 # Exercise: Implement PR Hook Prompt Evaluation
-
-**Duration:** 15 minutes
 
 **Objectives:**
 
@@ -141,6 +160,8 @@ Key points:
 - Troubleshooting steps are documented
 
 ::: notes
+Duration ~00:15
+
 Prompt: Set up a PR hook to run a prompt for code review.
 Prompt: Modify the workflow to use OpenAI or Copilot CLI.
 Prompt: Manage API keys and secrets for workflow execution.
@@ -150,8 +171,6 @@ Prompt: Debug and resolve any issues encountered.
 ---
 
 # Exercise: Integrate AI Review in Azure DevOps
-
-**Duration:** 15 minutes
 
 **Objectives:**
 
@@ -174,6 +193,8 @@ Prompt: Debug and resolve any issues encountered.
 - Integration is tested and validated
 
 ::: notes
+Duration ~00:15
+
 Prompt: Set up Azure DevOps project for AI-powered code review.
 Prompt: Integrate OpenAI or Azure OpenAI using tokens.
 Prompt: Configure workflow to update PR comments with AI findings.
@@ -181,6 +202,9 @@ Prompt: Test and validate the integration.
 :::
 
 ---
+
+
+
 
 # Q&A and Wrap-up
 

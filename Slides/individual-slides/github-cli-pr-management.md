@@ -48,17 +48,17 @@ marp: true
 theme: default
 paginate: true
 ---
-
 <!-- _class: lead -->
 
 ## GitHub CLI and PR Management
 
 - Section focus: managing pull requests with GitHub settings, IDE tooling, and the `gh` CLI
-- Duration target: about 11 minutes
 - Outcome: show how merge policy, review tools, and token permissions shape the day-to-day PR workflow
 
 ::: notes
-Introduce this section as the operational layer around pull requests rather than a pure coding topic. Explain that teams need to understand not only how to create and review PRs, but also how repository settings, IDE integrations, and CLI permissions determine what they can do efficiently. Spend about one minute here setting up the theme of workflow control and tooling friction. Transition by starting with the merge strategy decision that affects every PR.
+Duration ~00:11
+
+Introduce this section as the operational layer around pull requests rather than a pure coding topic. Explain that teams need to understand not only how to create and review PRs, but also how repository settings, IDE integrations, and CLI permissions determine what they can do efficiently.  Transition by starting with the merge strategy decision that affects every PR.
 :::
 
 ---
@@ -78,7 +78,9 @@ flowchart LR
 ```
 
 ::: notes
-Explain that merge strategy is a governance decision, not just a button choice at the end of a pull request. Squash merges can make the main branch easier to read, while merge commits retain more detail about how work evolved, so teams should choose based on their review and history preferences. Spend about two minutes here and point out that the default behavior should be deliberate because it shapes the whole repository's history. Transition by moving from repository settings into the tools people use to work with PRs day to day.
+Duration ~00:02
+
+Explain that merge strategy is a governance decision, not just a button choice at the end of a pull request. Squash merges can make the main branch easier to read, while merge commits retain more detail about how work evolved, so teams should choose based on their review and history preferences.  Transition by moving from repository settings into the tools people use to work with PRs day to day.
 :::
 
 ---
@@ -99,7 +101,9 @@ flowchart TB
 ```
 
 ::: notes
-Make the point that tooling choice affects reviewer efficiency. When developers can see the PR, the code, and their local workspace in one environment, they spend less time reconstructing context and more time evaluating the actual change. Spend about two minutes here and mention that the IDE becomes particularly useful when review comments refer to specific lines or patterns that need local verification. Transition by showing how the CLI fits into that same workflow.
+Duration ~00:02
+
+Make the point that tooling choice affects reviewer efficiency. When developers can see the PR, the code, and their local workspace in one environment, they spend less time reconstructing context and more time evaluating the actual change.  Transition by showing how the CLI fits into that same workflow.
 :::
 
 ---
@@ -118,7 +122,9 @@ Make the point that tooling choice affects reviewer efficiency. When developers 
 - help coordinate comment resolution
 
 ::: notes
-Frame this slide around exploration and experimentation rather than a promise that every review action is frictionless. The CLI is powerful because it lets developers stay in terminal-first workflows and script repeated actions, but there are still limits depending on permissions, command support, and token setup. Spend about two minutes here and connect the examples to the hands-on investigation of `gh pr comment`. Transition by showing that Copilot review itself still often starts in the GitHub web interface.
+Duration ~00:02
+
+Frame this slide around exploration and experimentation rather than a promise that every review action is frictionless. The CLI is powerful because it lets developers stay in terminal-first workflows and script repeated actions, but there are still limits depending on permissions, command support, and token setup.  Transition by showing that Copilot review itself still often starts in the GitHub web interface.
 :::
 
 ---
@@ -140,7 +146,9 @@ flowchart LR
 ```
 
 ::: notes
-Explain that PR management is often multi-surface by nature. A team may request the Copilot review in the web UI, inspect the comments in the IDE for better context, and then use the CLI for quick status checks or scripted follow-up actions, so the workflow is hybrid rather than exclusive. Spend about two minutes here and emphasize that effective teams choose the least-friction path per step. Transition by focusing on why permissions often become the limiting factor.
+Duration ~00:02
+
+Explain that PR management is often multi-surface by nature. A team may request the Copilot review in the web UI, inspect the comments in the IDE for better context, and then use the CLI for quick status checks or scripted follow-up actions, so the workflow is hybrid rather than exclusive.  Transition by focusing on why permissions often become the limiting factor.
 :::
 
 ---
@@ -159,7 +167,9 @@ Explain that PR management is often multi-surface by nature. A team may request 
 3. workflow changes depending on auth model
 
 ::: notes
-Stress that many workflow frustrations are really authentication problems in disguise. Developers may assume a CLI command is broken when the actual issue is that the token does not have permission to read, comment on, or manage the review workflow the way they expect. Spend about two minutes here and call out the classic-versus-fine-grained token discussion as a practical trade-off between convenience and tighter security. Transition by ending with the operational lessons teams should carry forward.
+Duration ~00:02
+
+Stress that many workflow frustrations are really authentication problems in disguise. Developers may assume a CLI command is broken when the actual issue is that the token does not have permission to read, comment on, or manage the review workflow the way they expect.  Transition by ending with the operational lessons teams should carry forward.
 :::
 
 ---
@@ -175,5 +185,7 @@ Stress that many workflow frustrations are really authentication problems in dis
 **Bottom line**: strong PR management is a combination of repository settings, tool selection, and the right access model.
 
 ::: notes
-Close by summarizing that effective PR management is never just about knowing commands. Teams need a clear merge policy, the right interface for the task at hand, and authentication that supports the workflow they want to use, or else the process becomes slower and more confusing than it needs to be. Spend about one to two minutes here reinforcing that the best workflow is the one that keeps context high and friction low. End by encouraging the audience to audit both their tools and their permissions before they need them under pressure.
+Duration ~00:02
+
+Close by summarizing that effective PR management is never just about knowing commands. Teams need a clear merge policy, the right interface for the task at hand, and authentication that supports the workflow they want to use, or else the process becomes slower and more confusing than it needs to be.  End by encouraging the audience to audit both their tools and their permissions before they need them under pressure.
 :::

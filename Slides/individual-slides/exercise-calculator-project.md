@@ -19,10 +19,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Calculator Project - Setup and Basic Implementation
-
-Duration: 45-60 minutes
 
 Objectives
 
@@ -59,10 +56,10 @@ Success Criteria
 - Generated code is critically reviewed
 
 ::: notes
+Duration ~01:00
 
 ## Setup and Basic Implementation Exercise Instructions
 
-**Duration:** 45-60 minutes
 **Prerequisites:** Calculator project context available
 
 ### Objectives
@@ -81,13 +78,11 @@ Success Criteria
 - Four operations work end-to-end.
 - Build is green.
 - Team can explain logic and edge-case handling.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Clear / Reset
-
-Duration: 15 minutes
 
 Objectives
 
@@ -108,10 +103,10 @@ Success Criteria
 - C resets the entire calculator state
 
 ::: notes
+Duration ~00:15
 
 ## Clear / Reset Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** Basic calculator state model
 
 ### Objectives
@@ -126,13 +121,11 @@ Success Criteria
 ### Success Criteria
 
 - CE and C behaviors are consistent and explainable.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Decimal Input
-
-Duration: 12 minutes
 
 Objectives
 
@@ -154,10 +147,10 @@ Success Criteria
 - Validation logic is explainable
 
 ::: notes
+Duration ~00:12
 
 ## Decimal Input Exercise Instructions
 
-**Duration:** 12 minutes
 **Prerequisites:** Input parser in place
 
 ### Objectives
@@ -172,13 +165,11 @@ Success Criteria
 
 - No duplicate decimal points accepted.
 - Decimal math behaves correctly.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Sign Toggle (+/-)
-
-Duration: 8 minutes
 
 Objectives
 
@@ -197,10 +188,10 @@ Success Criteria
 - Learner can explain stored vs active value impact
 
 ::: notes
+Duration ~00:08
 
 ## Sign Toggle Exercise Instructions
 
-**Duration:** 8 minutes
 **Prerequisites:** Numeric input flow functioning
 
 ### Objectives
@@ -214,13 +205,11 @@ Success Criteria
 ### Success Criteria
 
 - Toggle is stable across value states.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Percentage
-
-Duration: 15 minutes
 
 Objectives
 
@@ -245,10 +234,10 @@ Success Criteria
 - Learner can articulate percentage interpretation rules
 
 ::: notes
+Duration ~00:15
 
 ## Percentage Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** Core arithmetic implemented
 
 ### Objectives
@@ -262,13 +251,11 @@ Success Criteria
 ### Success Criteria
 
 - Three key percentage patterns operate correctly.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Memory Functions (M+, M-, MR, MC)
-
-Duration: 18 minutes
 
 Objectives
 
@@ -289,10 +276,10 @@ Success Criteria
 - Learner can explain memory state updates
 
 ::: notes
+Duration ~00:18
 
 ## Memory Functions Exercise Instructions
 
-**Duration:** 18 minutes
 **Prerequisites:** Calculator state architecture defined
 
 ### Objectives
@@ -306,13 +293,11 @@ Success Criteria
 ### Success Criteria
 
 - Memory operations are consistent and validated.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Error Handling
-
-Duration: 10 minutes
 
 Objectives
 
@@ -334,10 +319,10 @@ Success Criteria
 - Learner can explain error-handling flow
 
 ::: notes
+Duration ~00:10
 
 ## Error Handling Exercise Instructions
 
-**Duration:** 10 minutes
 **Prerequisites:** Core operations implemented
 
 ### Objectives
@@ -351,13 +336,11 @@ Success Criteria
 ### Success Criteria
 
 - Error handling is visible, predictable, and recoverable.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Add Trigonometric Functions
-
-Duration: 15 minutes
 
 Objectives
 
@@ -380,10 +363,10 @@ Success Criteria
 - Learner can explain validation and refinement steps
 
 ::: notes
+Duration ~00:15
 
 ## Trigonometric Functions Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** Advanced operation framework available
 
 ### Objectives
@@ -397,13 +380,11 @@ Success Criteria
 ### Success Criteria
 
 - Trig pipeline works end-to-end with tested expectations.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - UI
-
-Duration: 15 minutes
 
 Objectives
 
@@ -429,10 +410,10 @@ Success Criteria
 - Learner can explain UI-to-logic mapping
 
 ::: notes
+Duration ~00:15
 
 ## UI Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** Core logic stable and testable
 
 ### Objectives
@@ -446,13 +427,11 @@ Success Criteria
 ### Success Criteria
 
 - Workflow passes from input to output with no breaks.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Testing
-
-Duration: 45-60 minutes
 
 Objectives
 
@@ -493,10 +472,10 @@ Success Criteria
 - All tests pass
 
 ::: notes
+Duration ~01:00
 
 ## Testing Exercise Instructions
 
-**Duration:** 45-60 minutes
 **Prerequisites:** Calculator logic implemented
 
 ### Objectives
@@ -510,13 +489,11 @@ Success Criteria
 ### Success Criteria
 
 - Test suite is meaningful, comprehensive, and green.
-  :::
+:::
 
 ---
 
 ## Exercise: Code Coverage
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -552,10 +529,10 @@ Success Criteria
 - Learner understands what coverage metrics mean
 
 ::: notes
+Duration ~00:40
 
 ## Code Coverage Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Stable test suite
 
 ### Objectives
@@ -569,13 +546,11 @@ Success Criteria
 ### Success Criteria
 
 - Coverage setup works and leads to actionable improvements.
-  :::
+:::
 
 ---
 
 ## Exercise: Dependency Management and Troubleshooting
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -615,10 +590,10 @@ Success Criteria
 - Iterative problem-solving pattern demonstrated
 
 ::: notes
+Duration ~00:40
 
 ## Dependency Troubleshooting Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Build/test environment configured
 
 ### Objectives
@@ -632,13 +607,11 @@ Success Criteria
 ### Success Criteria
 
 - Issue resolution is repeatable and well-documented.
-  :::
+:::
 
 ---
 
 ## Exercise: Best Practices Review and Code Quality
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -660,10 +633,10 @@ Success Criteria
 - AI suggestions are critically evaluated before adoption
 
 ::: notes
+Duration ~00:40
 
 ## Best Practices Review Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Working project baseline
 
 ### Objectives
@@ -677,13 +650,11 @@ Success Criteria
 ### Success Criteria
 
 - Improvements are justified and validated.
-  :::
+:::
 
 ---
 
 ## Exercise: Model Comparisons
-
-Duration: 20-30 minutes
 
 Objectives
 
@@ -721,10 +692,10 @@ Success Criteria
 - Learner can choose model by task type
 
 ::: notes
+Duration ~00:30
 
 ## Model Comparisons Exercise Instructions
 
-**Duration:** 20-30 minutes
 **Prerequisites:** Access to multiple model options
 
 ### Objectives
@@ -738,13 +709,11 @@ Success Criteria
 ### Success Criteria
 
 - Team can explain when premium models are worth it.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Encapsulate Core Logic
-
-Duration: 15 minutes
 
 Objectives
 
@@ -771,10 +740,10 @@ Success Criteria
 - Learner can explain modularity and reuse benefits
 
 ::: notes
+Duration ~00:15
 
 ## Encapsulate Core Logic Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** UI and logic currently coupled
 
 ### Objectives
@@ -788,13 +757,11 @@ Success Criteria
 ### Success Criteria
 
 - Core logic is isolated and reusable.
-  :::
+:::
 
 ---
 
 ## Exercise: Security Review
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -816,10 +783,10 @@ Success Criteria
 - AI recommendations are critically evaluated and validated
 
 ::: notes
+Duration ~00:40
 
 ## Security Review Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Functional calculator project
 
 ### Objectives
@@ -833,13 +800,11 @@ Success Criteria
 ### Success Criteria
 
 - Security posture improves with documented rationale.
-  :::
+:::
 
 ---
 
 ## Exercise: Documentation
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -861,10 +826,10 @@ Success Criteria
 - AI-generated content is critically reviewed before acceptance
 
 ::: notes
+Duration ~00:40
 
 ## Documentation Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Stable code to document
 
 ### Objectives
@@ -878,13 +843,11 @@ Success Criteria
 ### Success Criteria
 
 - Docs are complete, correct, and actionable.
-  :::
+:::
 
 ---
 
 ## Exercise: Refactoring
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -907,10 +870,10 @@ Success Criteria
 - AI suggestions critically evaluated
 
 ::: notes
+Duration ~00:40
 
 ## Refactoring Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Existing implementation with improvement opportunities
 
 ### Objectives
@@ -924,4 +887,4 @@ Success Criteria
 ### Success Criteria
 
 - Selected refactor improves clarity without regressions.
-  :::
+:::

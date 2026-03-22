@@ -19,10 +19,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Test Coverage Improvement
-
-Duration: 30-45 minutes
 
 Objectives
 - Analyze code coverage reports
@@ -60,9 +57,10 @@ Success Criteria
 - Understanding of test quality vs. quantity trade-offs
 
 ::: notes
+Duration ~00:45
+
 ## Test Coverage Improvement Exercise Instructions
 
-**Duration:** 30-45 minutes
 **Prerequisites:** Lab 1 completed, existing test suite
 
 ### Objectives

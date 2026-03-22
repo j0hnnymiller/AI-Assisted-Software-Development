@@ -49,10 +49,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Strengthening Test Automation & Code Quality
-
-Duration: 20 minutes
 
 Objectives
 
@@ -82,10 +79,10 @@ Success Criteria
 - Provenance metadata is included
 
 ::: notes
+Duration ~00:20
 
 ## Strengthening Test Automation & Code Quality Exercise Instructions
 
-**Duration:** 20 minutes
 **Prerequisites:** Access to a brownfield codebase with existing tests
 
 ### Objectives

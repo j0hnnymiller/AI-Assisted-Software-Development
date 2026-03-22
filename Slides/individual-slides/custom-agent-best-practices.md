@@ -42,7 +42,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Start Simple
 
 - Create one agent for one specific pain point
@@ -58,7 +57,9 @@ flowchart LR
 ```
 
 ::: notes
-Explain that simplicity is a force multiplier in agent design. When an agent has one clear job, users know when to use it, reviewers know how to evaluate it, and the team can improve it without destabilizing unrelated workflows. Spend about 45 seconds here and make the point that over-ambitious agents often become confusing because they try to mix planning, coding, testing, and documentation into one vague persona. Transition by showing how explicit boundaries reinforce that simplicity.
+Duration ~00:01
+
+Explain that simplicity is a force multiplier in agent design. When an agent has one clear job, users know when to use it, reviewers know how to evaluate it, and the team can improve it without destabilizing unrelated workflows.  Transition by showing how explicit boundaries reinforce that simplicity.
 :::
 
 ---
@@ -75,7 +76,9 @@ Explain that simplicity is a force multiplier in agent design. When an agent has
 - "What should this agent refuse or defer?"
 
 ::: notes
-Frame this slide around predictability. An agent with clear responsibilities is easier for humans to trust because they know what kind of help it is supposed to give and what it should not attempt, which reduces accidental overreach and context drift. Spend about 45 seconds here and encourage the audience to think in terms of scope contracts rather than vague personality descriptions. Transition by moving to the related issue of tool access, because boundaries are not just instructional but operational.
+Duration ~00:01
+
+Frame this slide around predictability. An agent with clear responsibilities is easier for humans to trust because they know what kind of help it is supposed to give and what it should not attempt, which reduces accidental overreach and context drift.  Transition by moving to the related issue of tool access, because boundaries are not just instructional but operational.
 :::
 
 ---
@@ -95,7 +98,9 @@ flowchart TB
 ```
 
 ::: notes
-Explain that tool design is one of the strongest control surfaces available when building agents. If an agent only needs to read files and analyze code, then it should not also be able to perform broad write operations or run unrelated commands, because excess capability creates unnecessary risk. Spend about one minute here and tie this to the principle of least privilege that teams already use in security and infrastructure design. Transition by showing that even good initial designs need improvement over time.
+Duration ~00:01
+
+Explain that tool design is one of the strongest control surfaces available when building agents. If an agent only needs to read files and analyze code, then it should not also be able to perform broad write operations or run unrelated commands, because excess capability creates unnecessary risk.  Transition by showing that even good initial designs need improvement over time.
 :::
 
 ---
@@ -108,7 +113,9 @@ Explain that tool design is one of the strongest control surfaces available when
 - Treat the first version as a starting point, not a final product
 
 ::: notes
-Make the point that real-world usage will reveal gaps that design-time reasoning will miss. Teams learn a lot from where users hesitate, where the agent responds too broadly, or where people keep asking for the same clarification, and those signals should drive iteration. Spend about 45 seconds here reinforcing that successful agents are maintained assets, not one-time experiments. Transition by broadening from personal agents to team and organization sharing.
+Duration ~00:01
+
+Make the point that real-world usage will reveal gaps that design-time reasoning will miss. Teams learn a lot from where users hesitate, where the agent responds too broadly, or where people keep asking for the same clarification, and those signals should drive iteration.  Transition by broadening from personal agents to team and organization sharing.
 :::
 
 ---
@@ -128,7 +135,9 @@ Make the point that real-world usage will reveal gaps that design-time reasoning
 - implementation planning
 
 ::: notes
-Explain that some workflows are too common to reinvent team by team. When an organization sees repeated needs such as security review or testing guidance, a shared agent can provide a standardized starting point and reduce duplicated authoring effort across repositories. Spend about 45 seconds here and point out that shared agents need better ownership and clearer governance because more people will depend on them. Transition by showing how examples improve agent usability once an agent exists.
+Duration ~00:01
+
+Explain that some workflows are too common to reinvent team by team. When an organization sees repeated needs such as security review or testing guidance, a shared agent can provide a standardized starting point and reduce duplicated authoring effort across repositories.  Transition by showing how examples improve agent usability once an agent exists.
 :::
 
 ---
@@ -148,5 +157,7 @@ Explain that some workflows are too common to reinvent team by team. When an org
 4. failure cases are acceptable
 
 ::: notes
-Close with the two practices that make rollout much safer: examples and validation. Examples help users invoke the agent correctly, while validation ensures the agent behaves well under realistic conditions, including edge cases and boundary conditions, before it is trusted more broadly. Spend about one minute here and end on the idea that good agent design is iterative, scoped, and tested rather than purely aspirational. Encourage the audience to treat agents like any other product capability that needs ownership, feedback, and quality checks.
+Duration ~00:01
+
+Close with the two practices that make rollout much safer: examples and validation. Examples help users invoke the agent correctly, while validation ensures the agent behaves well under realistic conditions, including edge cases and boundary conditions, before it is trusted more broadly.  Encourage the audience to treat agents like any other product capability that needs ownership, feedback, and quality checks.
 :::

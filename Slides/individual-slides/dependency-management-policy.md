@@ -22,7 +22,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 # Dependency Management Policy
 
 ## Secure, Compliant, and Maintainable Dependencies
@@ -30,9 +29,9 @@ paginate: true
 *AI-Assisted Software Development*
 
 ::: notes
-Welcome to the Dependency Management Policy module. This session covers how to select, approve, monitor, and maintain software dependencies in a secure and compliant way.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to the Dependency Management Policy module. This session covers how to select, approve, monitor, and maintain software dependencies in a secure and compliant way.
 
 **Key Points**:
 - Dependencies are a major attack surface — supply chain attacks are increasing
@@ -62,9 +61,9 @@ Welcome to the Dependency Management Policy module. This session covers how to s
 - **Low** → Automated approval with post-review
 
 ::: notes
-Not all dependencies are equal — risk-based classification drives the right level of review.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Not all dependencies are equal — risk-based classification drives the right level of review.
 
 **Key Points**:
 - Production dependencies have the highest impact if compromised
@@ -95,9 +94,9 @@ Not all dependencies are equal — risk-based classification drives the right le
 - Backward compatibility guarantees (weight: 1)
 
 ::: notes
-Selection criteria create a consistent, objective evaluation process for new dependencies.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Selection criteria create a consistent, objective evaluation process for new dependencies.
 
 **Key Points**:
 - All "must" requirements are binary gates — failing any one disqualifies the package
@@ -142,9 +141,9 @@ New Dependency Request
 ```
 
 ::: notes
-The approval workflow scales review effort to the risk level of the dependency.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The approval workflow scales review effort to the risk level of the dependency.
 
 **Walk Through the Flow**:
 1. Developer submits a dependency request (via PR or ticket)
@@ -179,9 +178,9 @@ ai_ml: "minor-locked"      # tensorflow: ~2.13.0
 ```
 
 ::: notes
-Version management policy defines when updates happen automatically vs. when they require review.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Version management policy defines when updates happen automatically vs. when they require review.
 
 **Key Points**:
 - Security patches should auto-deploy after testing — the risk of not patching exceeds the risk of the update
@@ -215,9 +214,9 @@ Version management policy defines when updates happen automatically vs. when the
 | Low | 0.1–3.9 | 1 week | Next release |
 
 ::: notes
-Proactive monitoring with defined SLAs ensures vulnerabilities are addressed before they become incidents.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Proactive monitoring with defined SLAs ensures vulnerabilities are addressed before they become incidents.
 
 **Key Points**:
 - Multiple monitoring tools provide defense in depth — no single tool catches everything
@@ -253,9 +252,9 @@ Proactive monitoring with defined SLAs ensures vulnerabilities are addressed bef
 | GPL 3.0 | ❌ No | Would require GPL |
 
 ::: notes
-License compliance protects the organization from legal liability.
+Duration ~00:02
 
-**Timing**: 2 minutes
+License compliance protects the organization from legal liability.
 
 **Key Points**:
 - Copyleft licenses (GPL, AGPL) require derivative works to be released under the same license — a problem for proprietary software
@@ -291,9 +290,9 @@ Level 4: Two-party review, hermetic build
 **Internal Registry**: Scan all packages before ingestion, quarantine suspicious packages
 
 ::: notes
-Supply chain attacks are now one of the top threat vectors — SolarWinds, XZ Utils, and dozens of npm package attacks have shown this is real.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Supply chain attacks are now one of the top threat vectors — SolarWinds, XZ Utils, and dozens of npm package attacks have shown this is real.
 
 **Key Points**:
 - Never install packages from unofficial registries or direct git URLs
@@ -335,9 +334,9 @@ updates:
 - No new license violations
 
 ::: notes
-Automation removes the burden of manually tracking dependency updates.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Automation removes the burden of manually tracking dependency updates.
 
 **Key Points**:
 - Dependabot creates PRs automatically — your CI pipeline validates them
@@ -367,9 +366,9 @@ Automation removes the burden of manually tracking dependency updates.
 - High (CVSS 7.0–8.9): Security Lead + Engineering Manager
 
 ::: notes
-Emergency patching bypasses normal approval gates — but must be documented.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Emergency patching bypasses normal approval gates — but must be documented.
 
 **Key Points**:
 - Speed matters in critical vulnerabilities — reduce approval friction without eliminating oversight
@@ -399,9 +398,9 @@ Emergency patching bypasses normal approval gates — but must be documented.
 3. Run FOSSA or similar for license scanning
 
 ::: notes
-Close with actionable steps the audience can take immediately.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Close with actionable steps the audience can take immediately.
 
 **Summary**:
 - Risk-based classification prevents over-engineering low-risk decisions

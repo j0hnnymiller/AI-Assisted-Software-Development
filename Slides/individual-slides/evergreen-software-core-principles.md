@@ -3,7 +3,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Evergreen Software Development - Core Principles
 
 Intent-First Design
@@ -17,7 +16,10 @@ Intent-First Design
 - Structure the system so any part can be regenerated, swapped, or upgraded without cascading breakage.
   Lifecycle Governance
 - Maintain quality through automated tests, versioning discipline, and human-in-the-loop validation.
-  ::: notes
+
+::: notes
+Duration ~00:05
+
   Introduce Evergreen Software Development as a philosophy for building systems that can evolve indefinitely without degrading. This is crucial for AI-assisted development.
 
 Explain each principle:
@@ -30,7 +32,6 @@ Explain each principle:
 
 Key insight: Traditional software rots over time. Evergreen software is designed to be continuously regenerated and improved.
 
-Timing: 4-5 minutes.
 Transition: "Let's see why software fails to be evergreen..."
 :::
 
@@ -49,7 +50,10 @@ Intent Rot
 - Missing tests, specs, or validation layers mean AI-assisted regeneration can't be trusted to preserve behavior.
   One-Off Patches and Drift
 - Ad-hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
-  ::: notes
+
+::: notes
+Duration ~00:05
+
   Explain the common anti-patterns that prevent software from being evergreen. These are the enemies of long-term maintainability.
 
 1. Intent Rot: Documentation becomes outdated or nonexistent. AI can't regenerate code when it doesn't know the purpose.
@@ -64,6 +68,5 @@ Real-world examples:
 - Microservices with frequently changing APIs (unstable interfaces)
 - Monolith with circular dependencies (tight coupling)
 
-Timing: 4-5 minutes.
 Transition: "Let's see how to avoid these pitfalls..."
 :::

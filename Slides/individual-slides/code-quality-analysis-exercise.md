@@ -20,10 +20,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Code Quality Analysis
-
-Duration: 20 minutes
 
 Objectives
 
@@ -54,10 +51,10 @@ Success Criteria
 - Team can explain why each proposed change improves long-term maintainability.
 
 ::: notes
+Duration ~00:20
 
 ## Code Quality Analysis Exercise Instructions
 
-**Duration:** 20 minutes
 **Prerequisites:** Access to the full workspace, AI chat enabled, and search tools available.
 
 ### Objectives
@@ -88,6 +85,8 @@ Analyze the workspace for code or content that is not evergreen. Focus on date-c
 - At least 8 validated findings.
 - At least 3 high-impact evergreen refactors proposed.
 - Clear justification connecting each fix to maintainability and future reuse.
-  :::
+:::
 
 ---
+
+

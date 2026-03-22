@@ -38,17 +38,17 @@ marp: true
 theme: default
 paginate: true
 ---
-
 <!-- _class: lead -->
 
 ## Dependency Analysis and Planning
 
 - Section focus: using dependency graphs to sequence vertical slice implementation
-- Duration target: about 3.5 minutes
 - Outcome: show how teams identify prerequisites, parallel work, and the critical path
 
 ::: notes
-Introduce this section as the point where planning becomes executable rather than aspirational. Explain that dependency analysis helps the team decide what must be built first, what can safely wait, and what can happen in parallel without creating blockers. Spend about 30 to 40 seconds here framing the conversation around implementation flow instead of feature desirability alone. Transition by showing a simple dependency graph and explaining how to read it.
+Duration ~00:04
+
+Introduce this section as the point where planning becomes executable rather than aspirational. Explain that dependency analysis helps the team decide what must be built first, what can safely wait, and what can happen in parallel without creating blockers.  Transition by showing a simple dependency graph and explaining how to read it.
 :::
 
 ---
@@ -71,7 +71,9 @@ flowchart LR
 ```
 
 ::: notes
-Explain that a dependency graph is a visual map of implementation order, not just a picture of the system. Root nodes such as foundation setup are important because they unlock other work, while downstream nodes cannot start safely until their prerequisites exist. Spend about 40 seconds here walking through the arrows so the audience sees how to identify required sequencing quickly. Transition by asking which path through the graph will determine overall progress.
+Duration ~00:01
+
+Explain that a dependency graph is a visual map of implementation order, not just a picture of the system. Root nodes such as foundation setup are important because they unlock other work, while downstream nodes cannot start safely until their prerequisites exist.  Transition by asking which path through the graph will determine overall progress.
 :::
 
 ---
@@ -92,7 +94,9 @@ flowchart TD
 ```
 
 ::: notes
-Make the point that not every task has the same scheduling weight. The chain from foundation through Slice 1 and Slice 2 to release readiness is the critical path because a delay anywhere in that line affects the final delivery date. Spend about 40 seconds here helping the audience distinguish between essential dependency chains and helpful side work. Transition by showing that some branches can still be parallelized once the right prerequisites are in place.
+Duration ~00:01
+
+Make the point that not every task has the same scheduling weight. The chain from foundation through Slice 1 and Slice 2 to release readiness is the critical path because a delay anywhere in that line affects the final delivery date.  Transition by showing that some branches can still be parallelized once the right prerequisites are in place.
 :::
 
 ---
@@ -113,7 +117,9 @@ flowchart TB
 ```
 
 ::: notes
-Explain that parallelization is useful, but only after the common enabling work is complete. In this example, Slice 1 and Slice 2 can move at the same time, yet the integration slice must wait until both are finished, so sequencing still matters. Spend about 40 seconds here emphasizing that dependency graphs prevent false starts and wasted effort. Transition by separating foundational work from dependent features so the audience can see how to prioritize the backlog.
+Duration ~00:01
+
+Explain that parallelization is useful, but only after the common enabling work is complete. In this example, Slice 1 and Slice 2 can move at the same time, yet the integration slice must wait until both are finished, so sequencing still matters.  Transition by separating foundational work from dependent features so the audience can see how to prioritize the backlog.
 :::
 
 ---
@@ -133,7 +139,9 @@ Explain that parallelization is useful, but only after the common enabling work 
 - finish enabling work first when many later slices depend on it
 
 ::: notes
-Clarify that foundational work is valuable because it unlocks many downstream slices, not because it is glamorous. Dependent features usually deliver visible business value, but they become risky or inefficient if the core infrastructure they need is missing or unstable. Spend about 40 seconds here reinforcing the idea that the first work is not always the most visible work. Transition by summarizing a lightweight planning process the team can repeat for every implementation plan.
+Duration ~00:01
+
+Clarify that foundational work is valuable because it unlocks many downstream slices, not because it is glamorous. Dependent features usually deliver visible business value, but they become risky or inefficient if the core infrastructure they need is missing or unstable.  Transition by summarizing a lightweight planning process the team can repeat for every implementation plan.
 :::
 
 ---
@@ -149,5 +157,7 @@ Clarify that foundational work is valuable because it unlocks many downstream sl
 **Bottom line**: dependency graphs turn a feature list into a realistic implementation sequence.
 
 ::: notes
-Close by turning the concept into a repeatable planning workflow. The audience should leave with the idea that dependency analysis is a small upfront investment that prevents scheduling confusion, blocked development, and unrealistic sequencing later. Spend about 30 to 40 seconds here summarizing that the graph reveals order, parallelism, and risk in one view. End by connecting this back to vertical slices, where smart sequencing makes incremental delivery much easier.
+Duration ~00:01
+
+Close by turning the concept into a repeatable planning workflow. The audience should leave with the idea that dependency analysis is a small upfront investment that prevents scheduling confusion, blocked development, and unrealistic sequencing later.  End by connecting this back to vertical slices, where smart sequencing makes incremental delivery much easier.
 :::

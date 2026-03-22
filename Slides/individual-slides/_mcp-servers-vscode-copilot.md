@@ -20,15 +20,14 @@ total_duration: "00:45:00"
 ai_log: "ai-logs/2026/02/10/mcp-vscode-copilot-20260210/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
-
 # Using MCP Servers with VS Code & Copilot
 
 Leverage existing MCP servers to supercharge your AI development workflow
 
 ::: notes
-**Delivery**: Start with enthusiasm - focus on immediate productivity gains by using existing tools.
+Duration ~00:01
 
-**Timing**: 1 minute - brief introduction
+**Delivery**: Start with enthusiasm - focus on immediate productivity gains by using existing tools.
 
 **Key Points**:
 
@@ -52,9 +51,9 @@ Leverage existing MCP servers to supercharge your AI development workflow
 - Community servers available for common tasks
 
 ::: notes
-**Delivery**: Emphasize "consume not create" - developers use existing servers.
+Duration ~00:03
 
-**Timing**: 2-3 minutes
+**Delivery**: Emphasize "consume not create" - developers use existing servers.
 
 **Key Points**:
 
@@ -94,9 +93,9 @@ graph LR
 - **Resources**: Data the server accesses (you configure permissions)
 
 ::: notes
-**Delivery**: Focus on what the developer controls - configuration, not code.
+Duration ~00:04
 
-**Timing**: 3-4 minutes
+**Delivery**: Focus on what the developer controls - configuration, not code.
 
 **Key Points**:
 
@@ -143,9 +142,9 @@ graph LR
 3. Reload VS Code - MCP server starts automatically
 
 ::: notes
-**Delivery**: Walk through real example - emphasize it's just package installation.
+Duration ~00:05
 
-**Timing**: 4-5 minutes (show live demo if possible)
+**Delivery**: Walk through real example - emphasize it's just package installation.
 
 **Key Points**:
 
@@ -199,9 +198,9 @@ sequenceDiagram
 ```
 
 ::: notes
-**Delivery**: Emphasize the "before and after" - how completions improve with MCP context.
+Duration ~00:05
 
-**Timing**: 4-5 minutes
+**Delivery**: Emphasize the "before and after" - how completions improve with MCP context.
 
 **Key Points**:
 
@@ -254,9 +253,9 @@ graph TD
 - **Web/APIs**: Integrate with REST and GraphQL services
 
 ::: notes
-**Delivery**: This is a "shopping list" - show what's available to install.
+Duration ~00:05
 
-**Timing**: 4-5 minutes
+**Delivery**: This is a "shopping list" - show what's available to install.
 
 **Key Points**:
 
@@ -308,9 +307,9 @@ graph TD
 - Keep servers updated
 
 ::: notes
-**Delivery**: Security from consumer perspective - what you control in config.
+Duration ~00:04
 
-**Timing**: 3-4 minutes
+**Delivery**: Security from consumer perspective - what you control in config.
 
 **Key Points**:
 
@@ -368,9 +367,9 @@ graph TD
 - Community: Discord, GitHub Discussions
 
 ::: notes
-**Delivery**: Make it feel achievable - "you can do this today."
+Duration ~00:03
 
-**Timing**: 2-3 minutes
+**Delivery**: Make it feel achievable - "you can do this today."
 
 **Key Points**:
 
@@ -393,12 +392,12 @@ npm install -g @modelcontextprotocol/server-filesystem
 
 # 2. Configure VS Code settings.json
 {
-  "mcp.servers": {
-    "filesystem": {
-      "command": "mcp-server-filesystem",
-      "args": ["${workspaceFolder}"]
-    }
-  }
+"mcp.servers": {
+"filesystem": {
+"command": "mcp-server-filesystem",
+"args": ["${workspaceFolder}"]
+}
+}
 }
 
 # 3. Reload VS Code
@@ -429,9 +428,9 @@ npm install -g @modelcontextprotocol/server-filesystem
 **Questions?**
 
 ::: notes
-**Delivery**: Pause for questions. Emphasize the "install and configure" message.
+Duration ~00:10
 
-**Timing**: 5-10 minutes for Q&A
+**Delivery**: Pause for questions. Emphasize the "install and configure" message.
 
 **Key Points to Reinforce**:
 

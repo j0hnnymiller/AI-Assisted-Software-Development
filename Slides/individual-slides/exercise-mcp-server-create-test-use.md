@@ -21,10 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Create, Test, and Use a Local MCP Server
-
-**Duration**: ~30 minutes
 
 **Objectives**
 
@@ -45,6 +42,8 @@ paginate: true
 - Copilot can discover the `echo` tool and return the expected echoed text
 
 ::: notes
+Duration ~00:30
+
 Facilitate this as a lab where students progress from implementation to verification to real usage. Start by framing MCP as a local integration pattern: the server reads JSON-RPC over stdio, advertises tools, and returns structured results.
 
 For Phase 1, have students create `scripts/mcp/simple-mcp-server.ps1` with helper functions for `Content-Length` framing, plus handlers for `initialize`, `tools/list`, and `tools/call`. Emphasize that `tools/list` should return the `echo` tool schema and `tools/call` should validate `name == "echo"` and required `arguments.text`.

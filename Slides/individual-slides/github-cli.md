@@ -22,7 +22,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 # GitHub CLI
 
 ## Supercharge Your GitHub Workflow from the Terminal
@@ -30,9 +29,9 @@ paginate: true
 *AI-Assisted Software Development*
 
 ::: notes
-Welcome to the GitHub CLI module. This session covers the `gh` command-line tool and how it can dramatically speed up your GitHub workflows without ever leaving the terminal.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to the GitHub CLI module. This session covers the `gh` command-line tool and how it can dramatically speed up your GitHub workflows without ever leaving the terminal.
 
 **Key Points**:
 - The GitHub CLI (`gh`) lets you manage issues, PRs, workflows, and more from the terminal
@@ -74,9 +73,9 @@ gh issue edit 123 --add-label "enhancement"
 ```
 
 ::: notes
-Issue management is often the first thing developers do with the GitHub CLI.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Issue management is often the first thing developers do with the GitHub CLI.
 
 **Key Points**:
 - `gh issue create` without flags launches an interactive editor — great for complex issues
@@ -120,9 +119,9 @@ gh pr merge 456 --auto --squash  # Auto-merge when checks pass
 ```
 
 ::: notes
-Pull request management is arguably where the GitHub CLI saves the most time.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Pull request management is arguably where the GitHub CLI saves the most time.
 
 **Key Points**:
 - `gh pr create` uses the current branch and detects the base branch automatically
@@ -163,9 +162,9 @@ gh run download 123456 --name artifact-name
 ```
 
 ::: notes
-Managing GitHub Actions from the CLI is invaluable during debugging and deployment workflows.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Managing GitHub Actions from the CLI is invaluable during debugging and deployment workflows.
 
 **Key Points**:
 - `gh run list --status=failure` is the fastest way to identify broken builds
@@ -207,9 +206,9 @@ gh pr comment 456 \
 ```
 
 ::: notes
-The review workflow in `gh` keeps you in the terminal while managing the full review cycle.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The review workflow in `gh` keeps you in the terminal while managing the full review cycle.
 
 **Key Points**:
 - `gh pr edit --add-reviewer` triggers the review request notification automatically
@@ -256,9 +255,9 @@ eval "$(gh completion -s zsh)"    # zsh
 ```
 
 ::: notes
-The GitHub CLI integrates cleanly with IDEs, CI pipelines, and shell environments.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The GitHub CLI integrates cleanly with IDEs, CI pipelines, and shell environments.
 
 **Key Points**:
 - In GitHub Actions, `gh` is available by default — just set GITHUB_TOKEN
@@ -291,9 +290,9 @@ The GitHub CLI integrates cleanly with IDEs, CI pipelines, and shell environment
 | Auto-merge | `gh pr merge 456 --auto` |
 
 ::: notes
-This quick reference slide covers the commands developers use daily.
+Duration ~00:02
 
-**Timing**: 2 minutes
+This quick reference slide covers the commands developers use daily.
 
 **Key Points**:
 - These 10 commands cover 90% of daily GitHub workflows
@@ -301,7 +300,7 @@ This quick reference slide covers the commands developers use daily.
 - `gh pr checkout` is the most underused but most time-saving command
 - All commands support `--help` for full option reference
 
-**Installation Reminder**: 
+**Installation Reminder**:
 - macOS: `brew install gh`
 - Windows: `winget install GitHub.cli`
 - Linux: See `cli.github.com` for package manager instructions
@@ -316,7 +315,7 @@ Then authenticate: `gh auth login`
 ## Key Takeaways
 
 - **Replace browser workflows** with terminal commands for issues, PRs, and Actions
-- **`gh pr checkout`** — check out any PR locally in seconds  
+- **`gh pr checkout`** — check out any PR locally in seconds
 - **`gh run watch`** — follow live CI output during deployments
 - **`gh pr merge --auto`** — queue auto-merge once checks pass
 - **Automate** GitHub operations in CI scripts with `GITHUB_TOKEN`
@@ -328,9 +327,9 @@ Then authenticate: `gh auth login`
 4. Try: `gh issue list --assignee @me`
 
 ::: notes
-Close with the minimal set of things to remember and immediate next steps.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Close with the minimal set of things to remember and immediate next steps.
 
 **Summary**:
 - The GitHub CLI eliminates most browser-based GitHub workflows

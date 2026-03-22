@@ -21,15 +21,14 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## AI-Assisted GitHub Pull Requests
 
 ## Faster, Better PRs with GitHub Copilot
 
 ::: notes
-Welcome to this session on using AI to improve the pull request workflow. GitHub Copilot and related AI tools can dramatically reduce the friction of creating, reviewing, and merging pull requests.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to this session on using AI to improve the pull request workflow. GitHub Copilot and related AI tools can dramatically reduce the friction of creating, reviewing, and merging pull requests.
 
 **Key Points**:
 
@@ -61,7 +60,7 @@ AI can assist at **every stage**:
 | Final merge         | Automated checks               |
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -93,7 +92,7 @@ GitHub Copilot can **draft your PR description** based on your diff:
 > 💡 Use `gh pr create` with Copilot in the CLI, or the **GitHub web editor** with AI suggestions
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -135,7 +134,7 @@ Getting great AI output starts with **good context**:
 Ask Copilot: _"Generate a PR description for these changes that explains the business impact"_
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -166,7 +165,7 @@ GitHub Copilot assists reviewers with:
 > Use `@workspace` in Copilot Chat to ask questions across the entire PR diff
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -200,7 +199,7 @@ GitHub.com → Pull Request → Copilot Summary button
 ```
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -229,7 +228,7 @@ AI accelerates **addressing reviewer comments**:
 > 🔁 The feedback loop closes faster when AI drafts the fix and the human approves it
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -269,7 +268,7 @@ Integrate AI into your **CI/CD pipeline**:
 - Post AI summary as a **PR comment**
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -300,7 +299,7 @@ Integrate AI into your **CI/CD pipeline**:
 > Source: GitHub internal data, 2024–2025 Copilot usage studies
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -331,7 +330,7 @@ Integrate AI into your **CI/CD pipeline**:
 - Over-automating to the point of alert fatigue
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Key Points**:
 
@@ -368,7 +367,7 @@ Integrate AI into your **CI/CD pipeline**:
 > - [gh CLI](https://cli.github.com)
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 
@@ -400,7 +399,7 @@ Integrate AI into your **CI/CD pipeline**:
 **Pull requests become a collaboration between humans and AI**
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Key Points**:
 

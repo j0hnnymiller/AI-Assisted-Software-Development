@@ -111,20 +111,23 @@ total_duration: "00:12:00"
 ai_log: "ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
-
 ## Effective Prompts for Technical Debt
 
 Section 9 overview
 
-- Duration: ~8.5 minutes
 - Focus: prompts, issues, and Copilot workflow
 - Goal: turn vague cleanup into executable work
 
 ::: notes
+Duration ~00:09
+
 Open by explaining that technical debt work often fails because requests are too vague. This section shows how to convert cleanup ideas into structured prompts that can be executed, tracked, and reviewed. Emphasize that the topic is not just prompt wording; it is also about how prompts connect to GitHub issues and Copilot workflows. Set expectations that the audience will leave with a repeatable pattern they can apply immediately. (~1 minute)
 :::
 
 ---
+
+
+
 
 ## What a Strong Technical Debt Prompt Includes
 
@@ -143,6 +146,9 @@ Walk through each component as part of a checklist, not as optional advice. The 
 
 ---
 
+
+
+
 ## Why Structured Prompts Matter
 
 Better prompts create better remediation workflows
@@ -159,6 +165,9 @@ This is the business-value slide. Explain that structured prompts reduce rework 
 :::
 
 ---
+
+
+
 
 ## GitHub Integration - Direct Issue Creation
 
@@ -180,6 +189,9 @@ Present this as the first automation step after prompt authoring. The audience s
 
 ---
 
+
+
+
 ## Resolving Repository Targeting Problems
 
 Use explicit repository context to avoid failed issue creation
@@ -198,6 +210,9 @@ This slide turns the earlier problem into an operational rule. Show the contrast
 :::
 
 ---
+
+
+
 
 ## Assigning an Issue to @copilot
 
@@ -221,6 +236,9 @@ Describe this as the jump from assisted drafting to autonomous execution. The va
 
 ---
 
+
+
+
 ## Live Demo Workflow
 
 What happened in the demonstration
@@ -240,6 +258,9 @@ Use the flowchart to retell the demo as a sequence of decisions and corrections.
 :::
 
 ---
+
+
+
 
 ## Operational Observations from the Demo
 
@@ -261,6 +282,9 @@ This slide helps the audience move from feature awareness to workflow intuition.
 
 ---
 
+
+
+
 ## Reusable Prompt Template for Technical Debt
 
 Use a structure like this for repeatable results
@@ -281,6 +305,9 @@ Give the audience a concrete artifact they can copy into their own workflow. Exp
 :::
 
 ---
+
+
+
 
 ## Key Takeaways
 

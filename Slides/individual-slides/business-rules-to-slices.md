@@ -22,7 +22,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 # Business Rules to Vertical Slices
 
 ## From Requirements to Implementable Features
@@ -30,9 +29,9 @@ paginate: true
 *AI-Assisted Software Development*
 
 ::: notes
-Welcome to this module on converting business rules into vertical slices. This session covers how AI assistants should analyze business requirements, extract rules, identify use cases, and design features as vertical slices ready for implementation.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to this module on converting business rules into vertical slices. This session covers how AI assistants should analyze business requirements, extract rules, identify use cases, and design features as vertical slices ready for implementation.
 
 **Key Points**:
 - Business rules must be extracted before vertical slices can be designed
@@ -65,9 +64,9 @@ Welcome to this module on converting business rules into vertical slices. This s
 - User asks about existing code without new requirements
 
 ::: notes
-The key trigger is the presence of natural-language business requirements — not technical specifications.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The key trigger is the presence of natural-language business requirements — not technical specifications.
 
 **Key Points**:
 - This analysis is for requirements, not code
@@ -95,13 +94,13 @@ The key trigger is the presence of natural-language business requirements — no
 5. **Design Vertical Slices** — break features into complete slices
 6. **Present Analysis** — structured output with IDs and links
 
-> Every rule, use case, feature, and slice gets a unique ID  
+> Every rule, use case, feature, and slice gets a unique ID
 > (BR-###, UC-###, F-###, S-###-###)
 
 ::: notes
-The workflow is sequential and builds on each step. Do not skip steps.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The workflow is sequential and builds on each step. Do not skip steps.
 
 **Key Points**:
 - Step 1 is critical — ambiguous requirements produce bad slices
@@ -129,9 +128,9 @@ The workflow is sequential and builds on each step. Do not skip steps.
 **Extraction signals**: must, should, cannot, shall, when, automatically, calculated as
 
 ::: notes
-The four rule types map to different implementation concerns.
+Duration ~00:03
 
-**Timing**: 3 minutes
+The four rule types map to different implementation concerns.
 
 **Key Points**:
 - Structural rules become data model constraints
@@ -176,9 +175,9 @@ UC-001: Request Password Reset
 ```
 
 ::: notes
-Use cases describe what users want to accomplish — not how the system implements it.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Use cases describe what users want to accomplish — not how the system implements it.
 
 **Key Points**:
 - Actor is always a person or external system — not "the database"
@@ -208,9 +207,9 @@ A good feature boundary passes all four tests:
 | **Size** | Can it be done in 1-5 days? | "Basic Search" | "Full E-Commerce Platform" |
 
 ::: notes
-Feature boundaries prevent both over-engineering and under-delivering.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Feature boundaries prevent both over-engineering and under-delivering.
 
 **Key Points**:
 - Cohesion failure → feature is too broad, split it
@@ -247,9 +246,9 @@ F-001: User Registration
 3. **Core + Extensions** — essential functionality first, enhancements later
 
 ::: notes
-Vertical slices are the key to delivering incremental value without big-bang releases.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Vertical slices are the key to delivering incremental value without big-bang releases.
 
 **Key Points**:
 - "Spans all layers" means DB schema, handler, validator, API endpoint, AND tests
@@ -293,9 +292,9 @@ API: POST /api/users/register
 ```
 
 ::: notes
-The slice specification is the bridge between requirements and implementation.
+Duration ~00:03
 
-**Timing**: 3 minutes
+The slice specification is the bridge between requirements and implementation.
 
 **Key Points**:
 - Acceptance criteria are binary — pass or fail, not partial credit
@@ -334,9 +333,9 @@ The slice specification is the bridge between requirements and implementation.
 - [ ] Ambiguities flagged and clarification requested
 
 ::: notes
-The output structure creates traceability from business rule to implementation task.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The output structure creates traceability from business rule to implementation task.
 
 **Key Points**:
 - Every slice should trace back to at least one use case, which traces to at least one business rule

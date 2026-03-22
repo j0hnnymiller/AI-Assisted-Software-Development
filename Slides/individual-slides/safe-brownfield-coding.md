@@ -18,6 +18,9 @@ Introduce this module as a practical guide to modifying brownfield systems safel
 
 ---
 
+
+
+
 ## Using Feature Flags
 
 Why feature flags matter
@@ -36,6 +39,9 @@ Feature flags are one of the most powerful tools for brownfield modernization. T
 :::
 
 ---
+
+
+
 
 ## Retiring Feature Flags
 
@@ -56,6 +62,9 @@ Feature flags are temporary scaffolding. If not retired, they become technical d
 
 ---
 
+
+
+
 ## As-Is and To-Be Test Suites
 
 As-Is tests
@@ -72,6 +81,9 @@ Explain that As-Is tests freeze the current system's behavior, while To-Be tests
 :::
 
 ---
+
+
+
 
 ## Testing in Production
 
@@ -94,8 +106,6 @@ Testing in production is not reckless when done correctly. With feature flags, o
 
 ## Exercise: Implementing a Feature Flag
 
-Duration
-20 minutes
 Objectives
 Learn how to introduce a safe, reversible change
 Practice designing a feature flag workflow
@@ -120,10 +130,15 @@ Design a feature flag with:
   Retirement criteria are documented
 
 ::: notes
+Duration ~00:20
+
 Encourage participants to choose a real module from their brownfield system. The goal is to practice safe, reversible change — not to implement a large feature. Reinforce that feature flags are scaffolding, not permanent architecture.
 :::
 
 ---
+
+
+
 
 ## Essential Safety Measures
 
@@ -142,6 +157,9 @@ Think of them as the foundation that keeps modernization from turning into accid
 :::
 
 ---
+
+
+
 
 ## Backup & Rollback Strategies
 
@@ -165,6 +183,9 @@ Rollback confidence is what enables experimentation
 
 ---
 
+
+
+
 ## Confidence Frameworks
 
 Strong tests are the backbone of safe AI-assisted refactoring
@@ -187,6 +208,9 @@ This is what makes modernization safe instead of risky
 
 ---
 
+
+
+
 ## Change Review Processes
 
 Treat AI as a junior developer: everything gets reviewed
@@ -208,6 +232,9 @@ Together, they create a multi-layered review process that keeps quality high.
 :::
 
 ---
+
+
+
 
 ## Incremental Change Methodology
 
@@ -235,6 +262,9 @@ This is how evergreen systems emerge.
 
 ---
 
+
+
+
 ## Keeping Change Sets Small
 
 Small diffs are easier to review and validate
@@ -257,6 +287,9 @@ This is how you maintain control while still benefiting from AI's speed
 
 ---
 
+
+
+
 ## Respecting Brownfield Code
 
 Brownfield systems are valuable – they run the business
@@ -278,6 +311,9 @@ The goal is not to erase the past – it's to evolve it safely.
 
 ---
 
+
+
+
 ## Building Safety Nets
 
 Protecting brownfield codebases
@@ -291,6 +327,9 @@ Introduce this module as the backbone of safe AI-assisted development. Safety ne
 :::
 
 ---
+
+
+
 
 ## Protecting Brownfield Codebases
 
@@ -311,6 +350,9 @@ Reinforce that brownfield systems are valuable assets, not liabilities. Protecti
 
 ---
 
+
+
+
 ## Leveraging AI Code Reviews
 
 AI can assist by:
@@ -330,6 +372,9 @@ AI code reviews are not replacements for human reviews — they are accelerators
 
 ---
 
+
+
+
 ## Effective Human Code Reviews
 
 Human reviewers focus on:
@@ -348,6 +393,9 @@ Humans bring judgment, domain knowledge, and intuition — things AI cannot repl
 :::
 
 ---
+
+
+
 
 ## The Role of Test Automation
 
@@ -370,8 +418,6 @@ Test automation is the ultimate safety net. Without tests, AI-assisted developme
 
 ## Exercise: Building the Safety Nets
 
-Duration
-20 minutes
 Objectives
 Identify missing safety nets in a brownfield system
 Strengthen protection using AI and human review practices
@@ -394,5 +440,7 @@ Strengthen the safety nets by:
   Review and documentation guardrails are strengthened
 
 ::: notes
+Duration ~00:20
+
 Encourage participants to treat this as a real modernization planning session. The goal is not to fix everything — it's to identify gaps and build a roadmap for safer development.
 :::

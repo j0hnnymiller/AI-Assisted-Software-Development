@@ -21,10 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Create and Use a Custom Skill
-
-**Duration**: ~25 minutes
 
 **Objectives**
 
@@ -45,6 +42,8 @@ paginate: true
 - Student receives a structured review that checks metadata, notes coverage, and suggested fixes
 
 ::: notes
+Duration ~00:25
+
 Facilitate this as a procedural-workflow lab, not just a markdown-file exercise. Start by explaining that a skill is different from a custom agent: the agent shapes role behavior, while the skill packages a repeatable method Copilot can load when the prompt matches the description.
 
 In Phase 1, have learners create `.github/skills/slide-quality-check/SKILL.md` with a simple but concrete purpose. Encourage them to write a description that contains likely trigger phrases and a procedure with explicit steps such as inspect front matter, verify every slide has `::: notes`, and report missing or weak sections.

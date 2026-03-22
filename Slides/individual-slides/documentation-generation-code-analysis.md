@@ -18,6 +18,9 @@ Introduce this module as a practical demonstration of how AI can accelerate docu
 
 ---
 
+
+
+
 ## Automated README & Documentation Updates
 
 Capabilities
@@ -46,6 +49,9 @@ Create a prompt file that creates an instruction file for documenting the projec
 
 ---
 
+
+
+
 ## Architecture Diagram Generation
 
 What AI can generate
@@ -66,6 +72,9 @@ Create mermaid C4 diagrams for the project
 
 ---
 
+
+
+
 ## Complex Code Explanation & Mapping
 
 AI can help with:
@@ -81,6 +90,9 @@ It reduces onboarding time and helps engineers understand risky areas before mak
 :::
 
 ---
+
+
+
 
 ## Identifying Technical Debt Hotspots
 
@@ -101,8 +113,6 @@ This helps teams prioritize modernization work and avoid guesswork.
 
 ## Exercise: Brownfield Code Documentation
 
-Duration
-15 minutes
 Objectives
 Practice generating documentation for legacy code
 Identify missing or unclear areas
@@ -123,10 +133,15 @@ Ask AI to generate:
   Provenance is included
 
 ::: notes
+Duration ~00:15
+
 This exercise helps participants build confidence in using AI to document unfamiliar code safely and quickly.
 :::
 
 ---
+
+
+
 
 ## Generate Development & Deployment Guides
 
@@ -144,6 +159,9 @@ They also help prevent tribal knowledge loss.
 
 ---
 
+
+
+
 ## Create Architecture Diagrams
 
 AI-generated diagrams include:
@@ -157,6 +175,9 @@ Encourage participants to treat diagrams as drafts – AI can generate the struc
 :::
 
 ---
+
+
+
 
 ## Update Project Documentation
 
@@ -173,6 +194,9 @@ This reduces drift and improves maintainability.
 :::
 
 ---
+
+
+
 
 ## Cross-Validate With Multiple AI Models
 
@@ -192,8 +216,6 @@ Cross-validation is a powerful guardrail for correctness, especially in brownfie
 
 ## Exercise: Identifying Code Outside the Guardrails
 
-Duration
-10 minutes
 Objectives
 Detect code that violates architectural rules
 Identify patterns that contradict instruction files
@@ -211,5 +233,7 @@ Remediation steps are safe and incremental
 Documentation includes provenance
 
 ::: notes
+Duration ~00:10
+
 This exercise reinforces the importance of guardrails and helps participants practice applying them to real code.
 :::

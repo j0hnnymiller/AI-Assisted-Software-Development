@@ -18,6 +18,9 @@ Introduce this module as the bridge between architectural intent and real code. 
 
 ---
 
+
+
+
 ## Comparing Implementations Against Instruction Files
 
 What to compare
@@ -36,6 +39,9 @@ Instruction files define the “north star” for your codebase. Conformance che
 :::
 
 ---
+
+
+
 
 ## Automated Issue Generation From Conformance Gaps
 
@@ -57,6 +63,9 @@ Automation accelerates the conformance workflow. Instead of manually writing iss
 
 ---
 
+
+
+
 ## Prioritizing Technical Debt Remediation
 
 Prioritization factors
@@ -75,6 +84,9 @@ Not all technical debt is equal. Prioritization ensures that teams focus on the 
 :::
 
 ---
+
+
+
 
 ## Creating Actionable Remediation Plans
 
@@ -95,8 +107,6 @@ Remediation plans turn issues into action. They provide clarity, reduce risk, an
 
 ## Exercise: Generate Issues to Make the Codebase Evergreen
 
-Duration
-15 minutes
 Objectives
 Identify conformance gaps
 Convert gaps into actionable issues
@@ -121,6 +131,8 @@ Prioritization reflects real risk and effort
 Backlog is ready for team review
 
 ::: notes
+Duration ~00:15
+
 Encourage participants to treat this as a real backlog-building session. The goal is clarity and actionability, not volume.
 :::
 
@@ -128,8 +140,6 @@ Encourage participants to treat this as a real backlog-building session. The goa
 
 ## Exercise: Create an Implementation Plan
 
-Duration
-20 minutes
 Objectives
 Translate issues into a structured remediation plan
 Ensure changes are incremental and reversible
@@ -155,5 +165,7 @@ Include test and documentation updates
 Provenance metadata is present
 
 ::: notes
+Duration ~00:20
+
 This exercise helps participants move from analysis to execution. The goal is to build modernization plans that are safe, thoughtful, and aligned with evergreen principles.
 :::

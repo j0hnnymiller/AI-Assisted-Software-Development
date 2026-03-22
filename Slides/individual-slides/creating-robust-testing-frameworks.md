@@ -18,6 +18,9 @@ Introduce this module as the backbone of safe AI-assisted development. Testing f
 
 ---
 
+
+
+
 ## Generating Comprehensive Test Suites
 
 AI can help generate:
@@ -37,6 +40,9 @@ Explain that AI accelerates test creation dramatically, but humans still validat
 
 ---
 
+
+
+
 ## Managing Test Suites Over Time
 
 Key Practices
@@ -51,6 +57,9 @@ Test suites age just like code. Without maintenance, they become brittle, noisy,
 :::
 
 ---
+
+
+
 
 ## Test Review & Validation Strategies
 
@@ -70,6 +79,9 @@ AI is excellent at pattern detection and coverage suggestions, but humans valida
 
 ---
 
+
+
+
 ## Balancing Test Coverage with Maintainability
 
 Principles
@@ -86,8 +98,6 @@ High coverage numbers can be deceptive. The goal is not 100% coverage — it's m
 
 ## Exercise: Strengthening Your Testing Framework
 
-Duration
-20 minutes
 Objectives
 Identify gaps in an existing test suite
 Use AI to generate missing tests
@@ -111,5 +121,7 @@ Review existing tests for:
   Provenance metadata is included
 
 ::: notes
+Duration ~00:20
+
 Encourage participants to treat this as a real modernization task. The goal is not to generate as many tests as possible — it's to improve the safety and clarity of the testing framework in a targeted, maintainable way.
 :::

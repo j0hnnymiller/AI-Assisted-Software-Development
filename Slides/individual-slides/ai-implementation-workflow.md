@@ -69,7 +69,6 @@ total_duration: "00:04:43"
 ai_log: "ai-logs/2026/03/22/ai-implementation-workflow-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
-
 ## AI Implementation Workflow
 
 - Getting AI implementation proposals
@@ -78,7 +77,9 @@ source: "johnmillerATcodemag-com"
 - Implementation monitoring
 
 ::: notes
-Use this slide to orient the audience to the flow of the segment. Explain that the process starts before any code is written, because the first step is to see what the AI thinks the problem is and how it plans to solve it. Emphasize that the four topics form a natural sequence and that skipping the early review steps usually creates rework later. Spend about one minute here, then transition into the detailed implementation request process.
+Duration ~00:01
+
+Use this slide to orient the audience to the flow of the segment. Explain that the process starts before any code is written, because the first step is to see what the AI thinks the problem is and how it plans to solve it. Emphasize that the four topics form a natural sequence and that skipping the early review steps usually creates rework later.
 :::
 
 ---
@@ -96,7 +97,9 @@ Use this slide to orient the audience to the flow of the segment. Explain that t
    - Human reviews for completeness
 
 ::: notes
-Explain that the best first prompt is not "implement this now" but "propose implementation to address the issue." That gives you a chance to inspect the AI's understanding before it starts changing files, which is especially useful on brownfield systems. Point out that the human role here is not passive approval; it is active review for scope, assumptions, and missing details. Spend about two minutes here and tell the audience this is often the difference between one clean run and several correction cycles.
+Duration ~00:02
+
+Explain that the best first prompt is not "implement this now" but "propose implementation to address the issue." That gives you a chance to inspect the AI's understanding before it starts changing files, which is especially useful on brownfield systems. Point out that the human role here is not passive approval; it is active review for scope, assumptions, and missing details.
 :::
 
 ---
@@ -114,7 +117,9 @@ Explain that the best first prompt is not "implement this now" but "propose impl
    - Save implementation plan as reference
 
 ::: notes
-Walk through the idea that a proposal can be directionally right and still incomplete. Use the JWT example to show how an AI may understand the main bug but miss adjacent work, such as removing a related GitHub integration or updating dependent configuration. Once the proposal is complete, you can explicitly authorize execution with something like "go ahead with the implementation" and preserve that plan for later reference, even from another machine. Spend about two minutes here and reinforce that requirement clarification before coding is cheaper than cleanup after coding.
+Duration ~00:02
+
+Walk through the idea that a proposal can be directionally right and still incomplete. Use the JWT example to show how an AI may understand the main bug but miss adjacent work, such as removing a related GitHub integration or updating dependent configuration. Once the proposal is complete, you can explicitly authorize execution with something like "go ahead with the implementation" and preserve that plan for later reference, even from another machine.
 :::
 
 ---
@@ -129,7 +134,9 @@ Walk through the idea that a proposal can be directionally right and still incom
 - AI works autonomously once started
 
 ::: notes
-Describe this as one of the most practical productivity benefits of modern AI tooling. Once the implementation task is well-scoped and approved, you can let the AI work while you continue with documentation, reviews, or another investigation. Emphasize that autonomy is not the same as abandonment; the human still monitors progress, watches notifications, and steps in if the task drifts or new information appears. Spend about ninety seconds here and connect it to how engineers naturally juggle multiple parallel activities during a workday.
+Duration ~00:02
+
+Describe this as one of the most practical productivity benefits of modern AI tooling. Once the implementation task is well-scoped and approved, you can let the AI work while you continue with documentation, reviews, or another investigation. Emphasize that autonomy is not the same as abandonment; the human still monitors progress, watches notifications, and steps in if the task drifts or new information appears.
 :::
 
 ---
@@ -143,5 +150,7 @@ Describe this as one of the most practical productivity benefits of modern AI to
 - Find and assess alternatives before choosing
 
 ::: notes
-Close by previewing the next teaching move: comparing multiple implementations instead of accepting the first reasonable answer. Explain that once students know how to get and approve one implementation, the next maturity step is evaluating alternatives for trade-offs like simplicity, safety, and maintainability. This sets up a useful bridge to the next topic while reinforcing that AI can generate options, but humans still choose among them. Spend about one minute here and then hand off to the demo or next section.
+Duration ~00:01
+
+Close by previewing the next teaching move: comparing multiple implementations instead of accepting the first reasonable answer. Explain that once students know how to get and approve one implementation, the next maturity step is evaluating alternatives for trade-offs like simplicity, safety, and maintainability. This sets up a useful bridge to the next topic while reinforcing that AI can generate options, but humans still choose among them.
 :::

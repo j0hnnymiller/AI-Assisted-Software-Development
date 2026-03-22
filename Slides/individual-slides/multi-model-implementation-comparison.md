@@ -18,6 +18,9 @@ Introduce this module as a way to help teams understand how different AI models 
 
 ---
 
+
+
+
 ## Implementing Changes With Different AI Models
 
 Why use multiple models?
@@ -35,6 +38,9 @@ Explain that no single model is perfect. Using multiple models gives teams a bro
 :::
 
 ---
+
+
+
 
 ## Comparing Approaches & Outcomes
 
@@ -55,6 +61,9 @@ Encourage participants to treat model outputs like multiple drafts from differen
 
 ---
 
+
+
+
 ## Risk Assessment & Quality Evaluation
 
 Risk indicators
@@ -73,6 +82,9 @@ Reinforce that risk assessment is essential in brownfield systems. Even if a mod
 :::
 
 ---
+
+
+
 
 ## Best Practice Synthesis
 
@@ -94,8 +106,6 @@ Explain that synthesis is the real power of multi-model workflows. Teams can bui
 
 ## Exercise: Prompt Multiple Models to Address Technical Debt
 
-Duration
-15 minutes
 Objectives
 Compare outputs from different models
 Identify strengths and weaknesses
@@ -117,6 +127,8 @@ Compare outputs for:
   Provenance metadata is included
 
 ::: notes
+Duration ~00:15
+
 Encourage participants to think like reviewers comparing multiple PRs. The goal is to understand model behavior, not to pick a favorite.
 :::
 
@@ -124,8 +136,6 @@ Encourage participants to think like reviewers comparing multiple PRs. The goal 
 
 ## Exercise: Assigning an Issue to Multiple Models
 
-Duration
-10 minutes
 Objectives
 Practice delegating the same issue to different models
 Evaluate how each model interprets constraints
@@ -142,6 +152,8 @@ Missing context is identified and documented
 A preferred plan is selected based on safety and clarity
 
 ::: notes
+Duration ~00:10
+
 This exercise helps participants see how different models interpret the same instructions — a key skill for multi-model workflows.
 :::
 
@@ -149,8 +161,6 @@ This exercise helps participants see how different models interpret the same ins
 
 ## Exercise: Delegating Work to Multiple Models
 
-Duration
-20 minutes
 Objectives
 Practice multi-model delegation
 Evaluate multi-step reasoning
@@ -172,5 +182,7 @@ Ask multiple models to:
   Risks are identified and mitigated
 
 ::: notes
+Duration ~00:20
+
 This exercise builds confidence in orchestrating multiple models as collaborators. The goal is synthesis, not competition.
 :::

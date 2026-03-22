@@ -49,6 +49,8 @@ Welcome to this presentation on VS Code Copilot Agents. This session will introd
 - 🎯 **Self-correct** when errors occur
 
 ::: notes
+Duration ~00:04
+
 This slide establishes the fundamental difference between agents and traditional AI assistance.
 
 **Key talking points:**
@@ -59,8 +61,6 @@ This slide establishes the fundamental difference between agents and traditional
 - They use various tools autonomously to achieve objectives
 
 **Audience engagement:** Ask "What's the most time-consuming coding task you do repeatedly?" to connect with real pain points.
-
-**Timing:** 3-4 minutes with examples
 
 **Transition:** "Now let's look at the different types of agents available..."
 :::
@@ -77,6 +77,8 @@ This slide establishes the fundamental difference between agents and traditional
 | **Third-party** | Local or Cloud        | Varies      | Depends       |
 
 ::: notes
+Duration ~00:05
+
 This comparison table helps audience understand when to use each agent type.
 
 **Key decision factors to explain:**
@@ -88,7 +90,6 @@ This comparison table helps audience understand when to use each agent type.
 
 **Visual aid reference:** Mention that VS Code documentation includes a helpful diagram showing these relationships.
 
-**Timing:** 4-5 minutes
 **Transition:** "Let's dive deeper into each type, starting with local agents..."
 :::
 
@@ -113,6 +114,8 @@ This comparison table helps audience understand when to use each agent type.
 - Requires active interaction
 
 ::: notes
+Duration ~00:04
+
 Local agents are perfect for brainstorming and tasks requiring immediate feedback.
 
 **Use case examples to share:**
@@ -134,8 +137,6 @@ Local agents are perfect for brainstorming and tasks requiring immediate feedbac
 - Use for tasks that are not fully defined
 - Great for learning and exploration
 - Ideal when you need VS Code context (linting errors, test results)
-
-**Timing:** 3-4 minutes
 :::
 
 ---
@@ -159,6 +160,8 @@ Local agents are perfect for brainstorming and tasks requiring immediate feedbac
 - No team collaboration
 
 ::: notes
+Duration ~00:04
+
 Background agents excel at implementing well-defined plans without interrupting your workflow.
 
 **Ideal scenarios:**
@@ -182,8 +185,6 @@ Background agents excel at implementing well-defined plans without interrupting 
 - Use isolation to experiment safely
 
 **Common pitfall:** Don't use for tasks requiring VS Code runtime context unless manually provided.
-
-**Timing:** 3-4 minutes
 :::
 
 ---
@@ -207,6 +208,8 @@ Background agents excel at implementing well-defined plans without interrupting 
 - Asynchronous only
 
 ::: notes
+Duration ~00:05
+
 Cloud agents bridge the gap between AI assistance and team collaboration workflows.
 
 **Key collaboration features:**
@@ -230,7 +233,6 @@ Cloud agents bridge the gap between AI assistance and team collaboration workflo
 3. Cloud agent implements final version in PR
 4. Team reviews and collaborates on the PR
 
-**Timing:** 4-5 minutes
 **Transition:** "Let's see how these agents work together in practice..."
 :::
 
@@ -247,6 +249,8 @@ Cloud agents bridge the gap between AI assistance and team collaboration workflo
 - 🗂️ **Archive/Delete:** Keep workspace organized
 
 ::: notes
+Duration ~00:04
+
 The sessions management is what makes the multi-agent workflow practical and organized.
 
 **Key management features:**
@@ -274,8 +278,6 @@ The sessions management is what makes the multi-agent workflow practical and org
 - Compact: Embedded in Chat view
 - Side-by-side: Dedicated sessions panel
 - Automatically adapts based on Chat view width
-
-**Timing:** 4 minutes
 :::
 
 ---
@@ -293,6 +295,8 @@ The sessions management is what makes the multi-agent workflow practical and org
 **Pro Tip:** Multiple sessions can run in parallel! 🚀
 
 ::: notes
+Duration ~00:04
+
 This slide covers the practical aspects of getting started with agents.
 
 **Step-by-step flow:**
@@ -321,8 +325,6 @@ This slide covers the practical aspects of getting started with agents.
 - Previous sessions remain active
 - Switch between tasks via sessions list
 - Great for multitasking developers
-
-**Timing:** 3-4 minutes
 :::
 
 ---
@@ -338,6 +340,8 @@ This slide covers the practical aspects of getting started with agents.
 - 🌿 **Branch Checkout** for cloud agents
 
 ::: notes
+Duration ~00:04
+
 This slide addresses a critical concern: how to safely review and integrate agent changes.
 
 **Safety and control emphasis:**
@@ -367,8 +371,6 @@ This slide addresses a critical concern: how to safely review and integrate agen
 - Test changes in isolation first
 - Use PR workflow for team visibility
 - Document significant changes
-
-**Timing:** 3-4 minutes
 :::
 
 ---
@@ -388,24 +390,26 @@ This slide addresses a critical concern: how to safely review and integrate agen
 **Example:** Planning → Proof of Concept → Production Implementation
 
 ::: notes
+Duration ~00:05
+
 This slide demonstrates the power of agent collaboration and specialization.
 
 **Complete workflow example:**
 
 1. **Local agent:** Interactive brainstorming and planning
-   - Define requirements
-   - Explore architecture options
-   - Create detailed implementation plan
+- Define requirements
+- Explore architecture options
+- Create detailed implementation plan
 
 2. **Background agent:** Autonomous implementation
-   - Create multiple proof-of-concept variants
-   - Test different approaches
-   - Implement core functionality
+- Create multiple proof-of-concept variants
+- Test different approaches
+- Implement core functionality
 
 3. **Cloud agent:** Team collaboration
-   - Create production-ready implementation
-   - Submit pull request
-   - Enable team review and feedback
+- Create production-ready implementation
+- Submit pull request
+- Enable team review and feedback
 
 **Hand-off mechanics:**
 
@@ -421,7 +425,6 @@ This slide demonstrates the power of agent collaboration and specialization.
 - Include team collaboration when needed
 - Scale complexity appropriately
 
-**Timing:** 4-5 minutes
 **Transition:** "Let's wrap up with key takeaways and next steps..."
 :::
 
@@ -443,6 +446,8 @@ This slide demonstrates the power of agent collaboration and specialization.
 - [Background Agents Guide](https://code.visualstudio.com/docs/copilot/agents/background-agents)
 
 ::: notes
+Duration ~00:04
+
 This closing slide provides clear next steps and resources for continued learning.
 
 **Immediate action items:**
@@ -478,8 +483,6 @@ This closing slide provides clear next steps and resources for continued learnin
 - Share documentation links via chat/email
 - Schedule follow-up sessions for advanced topics
 - Create team guidelines for agent usage
-
-**Timing:** 3-4 minutes for takeaways, 5-10 minutes for Q&A
 :::
 
 ---
@@ -491,33 +494,35 @@ This closing slide provides clear next steps and resources for continued learnin
 Want to explore specific agent workflows for your team?
 
 ::: notes
+Duration ~00:15
+
 **Q&A Session Management:**
 
 **Anticipated questions and responses:**
 
 1. **"How do agents compare to traditional Copilot?"**
-   - Traditional Copilot: Suggestions and completions
-   - Agents: Complete task execution and multi-step workflows
+- Traditional Copilot: Suggestions and completions
+- Agents: Complete task execution and multi-step workflows
 
 2. **"What about data privacy and security?"**
-   - Local agents: Data stays on your machine
-   - Cloud agents: Follow GitHub's privacy policies
-   - Enterprise controls available
+- Local agents: Data stays on your machine
+- Cloud agents: Follow GitHub's privacy policies
+- Enterprise controls available
 
 3. **"Can agents make mistakes?"**
-   - Yes, always review agent changes
-   - Use diff editors before applying
-   - Start with non-critical tasks
+- Yes, always review agent changes
+- Use diff editors before applying
+- Start with non-critical tasks
 
 4. **"How do I know which agent type to use?"**
-   - Refer back to the decision matrix slide
-   - Interactive vs autonomous needs
-   - Team collaboration requirements
+- Refer back to the decision matrix slide
+- Interactive vs autonomous needs
+- Team collaboration requirements
 
 5. **"What if my organization disabled agents?"**
-   - Contact your admin
-   - May be policy-based restriction
-   - Can often be enabled with proper governance
+- Contact your admin
+- May be policy-based restriction
+- Can often be enabled with proper governance
 
 **Session wrap-up:**
 
@@ -526,5 +531,5 @@ Want to explore specific agent workflows for your team?
 - Suggest pilot projects for interested teams
 - Schedule follow-up sessions if requested
 
-**Time management:** Allow 10-15 minutes for Q&A depending on audience size and engagement.
+**Time management:**
 :::

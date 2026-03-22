@@ -16,6 +16,9 @@ Introduce this module as the bridge between analysis and action. Once AI identif
 
 ---
 
+
+
+
 ## Identifying Technical Debt
 
 AI can surface:
@@ -35,6 +38,9 @@ Explain that AI excels at scanning large brownfield systems and surfacing hotspo
 :::
 
 ---
+
+
+
 
 ## Automating the Creation of GitHub Issues
 
@@ -58,8 +64,6 @@ Highlight that automation doesn't replace human judgment — it accelerates it. 
 
 ## Exercise: Building the Backlog
 
-Duration
-20 minutes
 Objectives
 Practice identifying technical debt
 Convert findings into actionable GitHub issues
@@ -84,5 +88,7 @@ Prioritization reflects real risk and effort
 Backlog is ready for implementation
 
 ::: notes
+Duration ~00:20
+
 Encourage participants to treat this as a real backlog-building session. The goal is not volume — it's clarity and actionability. Reinforce that a well-structured backlog is the foundation for safe, incremental modernization.
 :::

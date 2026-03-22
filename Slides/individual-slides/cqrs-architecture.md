@@ -22,7 +22,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 # CQRS Architecture
 
 ## Command Query Responsibility Segregation
@@ -30,9 +29,9 @@ paginate: true
 *AI-Assisted Software Development*
 
 ::: notes
-Welcome to the CQRS Architecture module. This session covers Command Query Responsibility Segregation — a pattern that separates read and write operations into distinct models to improve scalability and maintainability.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to the CQRS Architecture module. This session covers Command Query Responsibility Segregation — a pattern that separates read and write operations into distinct models to improve scalability and maintainability.
 
 **Key Points**:
 - CQRS separates write (command) operations from read (query) operations
@@ -61,9 +60,9 @@ Welcome to the CQRS Architecture module. This session covers Command Query Respo
 - Operational overhead is not justified
 
 ::: notes
-CQRS is a powerful pattern but it adds operational complexity. Use it only when the benefits outweigh the costs.
+Duration ~00:03
 
-**Timing**: 3 minutes
+CQRS is a powerful pattern but it adds operational complexity. Use it only when the benefits outweigh the costs.
 
 **Key Points**:
 - The classic CRUD pattern couples reads and writes to the same model — fine for simple domains
@@ -93,9 +92,9 @@ CQRS is a powerful pattern but it adds operational complexity. Use it only when 
 > Commands can fail. Queries should not.
 
 ::: notes
-These five principles guide every CQRS implementation decision.
+Duration ~00:02
 
-**Timing**: 2 minutes
+These five principles guide every CQRS implementation decision.
 
 **Key Points**:
 - The read/write separation is absolute — queries must be side-effect free
@@ -130,9 +129,9 @@ These five principles guide every CQRS implementation decision.
 ```
 
 ::: notes
-This diagram shows the minimum components for a CQRS implementation.
+Duration ~00:03
 
-**Timing**: 3 minutes
+This diagram shows the minimum components for a CQRS implementation.
 
 **Walk Through the Diagram**:
 1. Command API receives write requests and routes to handlers
@@ -169,9 +168,9 @@ This diagram shows the minimum components for a CQRS implementation.
 5. One command targets one aggregate root
 
 ::: notes
-Good command design is the foundation of a maintainable CQRS system.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Good command design is the foundation of a maintainable CQRS system.
 
 **Key Points**:
 - Task-based command names reveal business intent — much better than `UpdateOrder`
@@ -186,13 +185,13 @@ public record ApproveOrderCommand(Guid OrderId, string ApprovedBy);
 
 public class ApproveOrderHandler : ICommandHandler<ApproveOrderCommand>
 {
-    public async Task Handle(ApproveOrderCommand cmd)
-    {
-        var order = await _repo.GetAsync(cmd.OrderId);
-        order.Approve(cmd.ApprovedBy);  // Aggregate enforces rules
-        await _repo.SaveAsync(order);
-        await _publisher.PublishAsync(new OrderApprovedEvent(order.Id));
-    }
+public async Task Handle(ApproveOrderCommand cmd)
+{
+var order = await _repo.GetAsync(cmd.OrderId);
+order.Approve(cmd.ApprovedBy);  // Aggregate enforces rules
+await _repo.SaveAsync(order);
+await _publisher.PublishAsync(new OrderApprovedEvent(order.Id));
+}
 }
 ```
 
@@ -217,9 +216,9 @@ public class ApproveOrderHandler : ICommandHandler<ApproveOrderCommand>
 | Analytics | Revenue dashboards | OLAP / Data Warehouse |
 
 ::: notes
-The query model is designed entirely around how data will be consumed.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The query model is designed entirely around how data will be consumed.
 
 **Key Points**:
 - Query models are "read-only databases" shaped for specific views
@@ -252,9 +251,9 @@ The query model is designed entirely around how data will be consumed.
 > Write event to database table atomically with domain change → background process publishes → idempotent consumers
 
 ::: notes
-Consistency is often the most debated aspect of CQRS implementations.
+Duration ~00:03
 
-**Timing**: 3 minutes
+Consistency is often the most debated aspect of CQRS implementations.
 
 **Key Points**:
 - Not all data requires strong consistency — choosing the right model reduces complexity
@@ -283,9 +282,9 @@ Consistency is often the most debated aspect of CQRS implementations.
 | Dual writes without outbox | Risk of lost events | Implement outbox pattern |
 
 ::: notes
-These anti-patterns are the most common mistakes in CQRS implementations.
+Duration ~00:02
 
-**Timing**: 2 minutes
+These anti-patterns are the most common mistakes in CQRS implementations.
 
 **Key Points**:
 - The most common mistake is reading from the write store in a query context
@@ -306,7 +305,7 @@ These anti-patterns are the most common mistakes in CQRS implementations.
 
 1. **Identify** one bounded context or high-value feature
 2. **Split read model** first — keep write model intact
-3. **Add projections** and read store incrementally  
+3. **Add projections** and read store incrementally
 4. **Introduce event publishing** after stable write flow
 5. **Expand** to additional contexts over time
 
@@ -317,9 +316,9 @@ These anti-patterns are the most common mistakes in CQRS implementations.
 - [ ] Projection updates are idempotent and monitored
 
 ::: notes
-Incremental migration reduces risk and allows the team to learn the pattern gradually.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Incremental migration reduces risk and allows the team to learn the pattern gradually.
 
 **Key Points**:
 - Big-bang migrations almost always fail — start with one context
@@ -350,9 +349,9 @@ Incremental migration reduces risk and allows the team to learn the pattern grad
 4. Response includes `lastUpdatedUtc` for freshness indicator
 
 ::: notes
-Tying the concepts together with a concrete example makes the pattern tangible.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Tying the concepts together with a concrete example makes the pattern tangible.
 
 **Key Points**:
 - The command and query flows are completely independent paths
@@ -372,7 +371,7 @@ Tying the concepts together with a concrete example makes the pattern tangible.
 - **Separate** commands (writes) from queries (reads) at the architectural level
 - **Use CQRS** when read/write workloads differ significantly
 - **Outbox pattern** ensures reliable event publication
-- **Eventual consistency** is the default — design for it intentionally  
+- **Eventual consistency** is the default — design for it intentionally
 - **Start small** — migrate one context at a time
 
 ### Further Reading
@@ -381,9 +380,9 @@ Tying the concepts together with a concrete example makes the pattern tangible.
 - Greg Young's CQRS Documents
 
 ::: notes
-Summarize the key points and provide resources for deeper learning.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Summarize the key points and provide resources for deeper learning.
 
 **Summary**:
 - CQRS separates write models (commands) from read models (queries)

@@ -12,6 +12,9 @@ Session covers requirements-driven development, calculator app requirements, and
 
 ---
 
+
+
+
 # Session Topics
 
 - Importance of starting with clear requirements
@@ -27,6 +30,9 @@ Session covers requirements-driven development, calculator app requirements, and
 
 ---
 
+
+
+
 # Creating Requirements Documents
 
 - Begin with a well-known domain for easier requirements gathering
@@ -41,6 +47,9 @@ Session covers requirements-driven development, calculator app requirements, and
 :::
 
 ---
+
+
+
 
 # Calculator Application Requirements (Key Points)
 
@@ -60,6 +69,9 @@ Session covers requirements-driven development, calculator app requirements, and
 
 ---
 
+
+
+
 # Repo Management Strategies
 
 - Use branches to isolate new work
@@ -76,8 +88,6 @@ Session covers requirements-driven development, calculator app requirements, and
 ---
 
 # Exercise: Requirements Analysis
-
-**Duration:** 20 minutes
 
 **Objectives:**
 
@@ -98,14 +108,14 @@ Session covers requirements-driven development, calculator app requirements, and
 - Documented rationale for changes
 
 ::: notes
+Duration ~00:20
+
 Prompt: Create a requirements document for a new calculator desktop application and then I added don't use any of the existing implementation format.
 :::
 
 ---
 
 # Exercise: Repo Reset Workflow
-
-**Duration:** 15 minutes
 
 **Objectives:**
 
@@ -126,10 +136,15 @@ Prompt: Create a requirements document for a new calculator desktop application 
 - Project history is maintained appropriately
 
 ::: notes
+Duration ~00:15
+
 Prompt: Reset the repo.
 :::
 
 ---
+
+
+
 
 # Q&A and Discussion
 

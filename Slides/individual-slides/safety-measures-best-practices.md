@@ -56,8 +56,6 @@ paginate: true
 
 ## Safety Measures & Best Practices
 
-**Segment length:** 22 minutes
-
 - Safety nets make AI acceleration safer
 - Test quality matters more than raw coverage
 - AI output must be reviewed like junior developer work
@@ -65,7 +63,9 @@ paginate: true
 - Automation helps reviewers scale
 
 ::: notes
-Open this module by framing safety as the price of speed in AI-assisted development. The point is not to slow teams down, but to make sure faster code generation does not also mean faster mistakes reaching production. Spend about one minute emphasizing that this section ties together testing, reviews, feature-flag cleanup, and automation into one operating model. Transition by introducing the mindset shift: AI is helpful, but it is never self-approving.
+Duration ~00:01
+
+Open this module by framing safety as the price of speed in AI-assisted development. The point is not to slow teams down, but to make sure faster code generation does not also mean faster mistakes reaching production. Transition by introducing the mindset shift: AI is helpful, but it is never self-approving.
 :::
 
 ---
@@ -87,7 +87,9 @@ flowchart LR
 ```
 
 ::: notes
-Use the "eager knowledgeable junior developer" analogy because it is memorable and accurate. AI often produces plausible work at high speed, but plausibility is not the same thing as correctness, so every change still needs human review for domain fit, architectural consistency, and unintended side effects. Spend about three minutes here and give a simple example such as a correct-looking refactor that silently changes business behavior. Transition by explaining that tests are one of the main ways we convert suspicion into confidence.
+Duration ~00:03
+
+Use the "eager knowledgeable junior developer" analogy because it is memorable and accurate. AI often produces plausible work at high speed, but plausibility is not the same thing as correctness, so every change still needs human review for domain fit, architectural consistency, and unintended side effects. Transition by explaining that tests are one of the main ways we convert suspicion into confidence.
 :::
 
 ---
@@ -107,7 +109,9 @@ Use the "eager knowledgeable junior developer" analogy because it is memorable a
 - integration boundaries and contracts
 
 ::: notes
-Make it clear that code coverage is useful, but incomplete. A suite can report high coverage while still missing the exact regression that users will experience, especially if tests only exercise happy paths or assert implementation details instead of behavior. Spend about four minutes here and ask the audience a reflective question: if everything passed right now, how confident would you be deploying to production? Transition by showing that one concrete place where high-signal validation matters is feature-flag retirement.
+Duration ~00:04
+
+Make it clear that code coverage is useful, but incomplete. A suite can report high coverage while still missing the exact regression that users will experience, especially if tests only exercise happy paths or assert implementation details instead of behavior. Transition by showing that one concrete place where high-signal validation matters is feature-flag retirement.
 :::
 
 ---
@@ -130,7 +134,9 @@ flowchart TB
 ```
 
 ::: notes
-Explain that feature flags are valuable only if teams are disciplined about retiring them. AI is especially helpful here because it can search for scattered references, conditional branches, test toggles, and documentation mentions faster than a human can, but the human reviewer must still confirm that nothing still depends on the old path. Spend about three minutes walking through the workflow from validation to deletion to documentation cleanup. Transition by noting that this workflow is safest when the diff is narrow enough for someone to reason about quickly.
+Duration ~00:03
+
+Explain that feature flags are valuable only if teams are disciplined about retiring them. AI is especially helpful here because it can search for scattered references, conditional branches, test toggles, and documentation mentions faster than a human can, but the human reviewer must still confirm that nothing still depends on the old path. Transition by noting that this workflow is safest when the diff is narrow enough for someone to reason about quickly.
 :::
 
 ---
@@ -150,7 +156,9 @@ Explain that feature flags are valuable only if teams are disciplined about reti
 3. keep cleanup close to the related feature
 
 ::: notes
-Position small change sets as a safety mechanism, not just a style preference. When AI can generate large amounts of code quickly, the danger is not only bad code but unreviewable code, because reviewers cannot build enough understanding to catch mistakes hidden inside a massive diff. Spend about three minutes here and contrast a 40-line focused cleanup with a 1,000-line mixed refactor, test rewrite, and behavior change. Transition by showing how automation can support review without replacing human judgment.
+Duration ~00:03
+
+Position small change sets as a safety mechanism, not just a style preference. When AI can generate large amounts of code quickly, the danger is not only bad code but unreviewable code, because reviewers cannot build enough understanding to catch mistakes hidden inside a massive diff. Transition by showing how automation can support review without replacing human judgment.
 :::
 
 ---
@@ -169,7 +177,9 @@ Position small change sets as a safety mechanism, not just a style preference. W
 - **Human reviewers**: architecture, behavior, domain correctness
 
 ::: notes
-Explain that automation is most valuable when it reduces reviewer fatigue and helps humans spend attention where judgment matters most. Mention Azure DevOps MCP here as an example of tooling that can support pull-request workflows by pulling context, surfacing work-item links, and assisting review automation around the PR, while still leaving final approval to accountable humans. Spend about four minutes reinforcing that automation should amplify reviewers, not bypass them. Transition to a closing checklist that teams can apply immediately.
+Duration ~00:04
+
+Explain that automation is most valuable when it reduces reviewer fatigue and helps humans spend attention where judgment matters most. Mention Azure DevOps MCP here as an example of tooling that can support pull-request workflows by pulling context, surfacing work-item links, and assisting review automation around the PR, while still leaving final approval to accountable humans. Transition to a closing checklist that teams can apply immediately.
 :::
 
 ---
@@ -186,5 +196,7 @@ Explain that automation is most valuable when it reduces reviewer fatigue and he
 **Bottom line:** fast AI-assisted delivery still needs disciplined engineering.
 
 ::: notes
-Close with an operational checklist the audience can adopt the same day. Reiterate that the most important habits are review discipline, meaningful tests, small diffs, and intentional use of automation to make humans more effective rather than less necessary. Spend about two to three minutes here, and invite the audience to identify which one of these practices is currently weakest in their team. End by connecting this section back to the larger course theme: safe acceleration beats reckless acceleration every time.
+Duration ~00:03
+
+Close with an operational checklist the audience can adopt the same day. Reiterate that the most important habits are review discipline, meaningful tests, small diffs, and intentional use of automation to make humans more effective rather than less necessary. End by connecting this section back to the larger course theme: safe acceleration beats reckless acceleration every time.
 :::

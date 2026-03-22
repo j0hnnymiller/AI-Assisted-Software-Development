@@ -43,7 +43,9 @@ prompt: |
   Explain greenfield characteristics and why "not legacy" is rare at scale.
   :::
 
-  ---
+---
+
+
 
   ## Codebases degrade over time
 
@@ -60,7 +62,10 @@ prompt: |
   Discuss drivers of decay (tech, people, rules) and give a brief example.
   :::
 
-  ---
+---
+
+
+
 
   ## What is Evergreen Code
 
@@ -73,7 +78,10 @@ prompt: |
   Describe evergreen goals: maintainability, minimal debt, and consistent patterns.
   :::
 
-  ---
+---
+
+
+
 
   ## Legacy code needs respect not fear
 
@@ -93,6 +101,7 @@ task_durations:
 total_duration: "00:04:39"
 ai_log: "ai-logs/2026/03/22/legacy-code-evergreen-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
+
 ---
 
 <!-- _class: lead -->
@@ -102,7 +111,9 @@ source: "johnmillerATcodemag-com"
 ## Understanding how code ages and how teams respond
 
 ::: notes
-Open by telling the audience this section is about mindset as much as mechanics. Explain that "legacy code" is often treated like a criticism, but in practice it is a normal state that most long-lived systems eventually reach. Set the expectation that the goal is not to shame existing systems, but to understand how they evolve and how to improve them safely. Spend about one minute here, then transition into the challenge of defining legacy code at all.
+Duration ~00:01
+
+Open by telling the audience this section is about mindset as much as mechanics. Explain that "legacy code" is often treated like a criticism, but in practice it is a normal state that most long-lived systems eventually reach. Set the expectation that the goal is not to shame existing systems, but to understand how they evolve and how to improve them safely.
 :::
 
 ---
@@ -113,7 +124,9 @@ Open by telling the audience this section is about mindset as much as mechanics.
 - Easier to define what is _not_ legacy code
 
 ::: notes
-Start by acknowledging that legacy code means different things to different teams, authors, and organizations. Try this in quick chat: "what are three definitions of legacy code?", then "what are 10 definitions of legacy code?", and finally "what are 25 definitions of legacy code?" to show how many valid viewpoints exist. Ask the audience, "Who recognizes these definitions in their work?" and encourage a short discussion about their own experiences. The key takeaway is that legacy code is a fuzzy label, which is why defining the opposite can sometimes be more useful. Spend about two minutes on this slide, then move into what code is not legacy.
+Duration ~00:02
+
+Start by acknowledging that legacy code means different things to different teams, authors, and organizations. Try this in quick chat: "what are three definitions of legacy code?", then "what are 10 definitions of legacy code?", and finally "what are 25 definitions of legacy code?" to show how many valid viewpoints exist. Ask the audience, "Who recognizes these definitions in their work?" and encourage a short discussion about their own experiences. The key takeaway is that legacy code is a fuzzy label, which is why defining the opposite can sometimes be more useful.
 :::
 
 ---
@@ -124,7 +137,9 @@ Start by acknowledging that legacy code means different things to different team
 - Few codebases are evergreen
 
 ::: notes
-Explain that every codebase begins as greenfield because, at the beginning, there is no accumulated history, constraint, or drift. Then contrast that with evergreen code, which is code that has been intentionally maintained so well that it still feels current and appropriate. If you want an audience prompt, ask quick chat for "three definitions of code that is not legacy" and compare the results to the previous slide. Emphasize that truly non-legacy code is rare at scale because most systems accumulate compromises over time. Spend about ninety seconds here and use it to set up the idea that aging is natural.
+Duration ~00:02
+
+Explain that every codebase begins as greenfield because, at the beginning, there is no accumulated history, constraint, or drift. Then contrast that with evergreen code, which is code that has been intentionally maintained so well that it still feels current and appropriate. If you want an audience prompt, ask quick chat for "three definitions of code that is not legacy" and compare the results to the previous slide. Emphasize that truly non-legacy code is rare at scale because most systems accumulate compromises over time.
 :::
 
 ---
@@ -141,10 +156,15 @@ Due to changes in:
 - Architecture
 
 ::: notes
-Walk down the list and connect each item to a real-world example. Technology changes when a framework, platform, or dependency becomes outdated; practices change when teams adopt new standards; people change when context leaves with staff turnover. Business rules and workflows evolve because organizations evolve, and architecture changes because systems are restructured around new priorities. Reinforce that code decay is often less about bad developers and more about a changing environment around otherwise useful software. Spend about two minutes here, then pivot to the aspirational state: evergreen code.
+Duration ~00:02
+
+Walk down the list and connect each item to a real-world example. Technology changes when a framework, platform, or dependency becomes outdated; practices change when teams adopt new standards; people change when context leaves with staff turnover. Business rules and workflows evolve because organizations evolve, and architecture changes because systems are restructured around new priorities. Reinforce that code decay is often less about bad developers and more about a changing environment around otherwise useful software.
 :::
 
 ---
+
+
+
 
 ## What is Evergreen Code
 
@@ -167,5 +187,7 @@ Describe evergreen code as intentionally maintained, consistently refactored, an
   - "You get what you get and you don't throw a fit"
 
 ::: notes
-Close by reframing legacy code as something that has already proven it can deliver value. Explain that production use is a form of testing, even if that testing is informal and hard-won, so careless rewrites are risky. Emphasize a safety-first approach: back up the code, add characterization tests where possible, make small changes, and validate behavior before expanding the scope of refactoring. End with the reminder that respect leads to careful improvement, while fear often leads to avoidance or reckless rewrites. Spend about two minutes here and then open the floor for questions or examples from the audience.
+Duration ~00:02
+
+Close by reframing legacy code as something that has already proven it can deliver value. Explain that production use is a form of testing, even if that testing is informal and hard-won, so careless rewrites are risky. Emphasize a safety-first approach: back up the code, add characterization tests where possible, make small changes, and validate behavior before expanding the scope of refactoring. End with the reminder that respect leads to careful improvement, while fear often leads to avoidance or reckless rewrites.
 :::

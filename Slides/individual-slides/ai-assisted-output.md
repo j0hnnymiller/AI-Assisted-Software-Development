@@ -22,7 +22,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 # AI-Assisted Output
 
 ## Provenance, Logging & Quality Standards
@@ -30,9 +29,9 @@ paginate: true
 *AI-Assisted Software Development*
 
 ::: notes
-Welcome to this module on AI-Assisted Output standards. This session covers the policies and practices for ensuring all AI-generated artifacts in a development repository include proper provenance metadata, audit logs, and quality checks.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to this module on AI-Assisted Output standards. This session covers the policies and practices for ensuring all AI-generated artifacts in a development repository include proper provenance metadata, audit logs, and quality checks.
 
 **Key Points**:
 - All AI-assisted artifacts must carry metadata documenting how they were produced
@@ -55,9 +54,9 @@ Welcome to this module on AI-Assisted Output standards. This session covers the 
 - **Quality gates** — block non-compliant artifacts in CI
 
 ::: notes
-AI provenance is the practice of recording the origin of AI-generated artifacts — who requested them, which model produced them, and from which conversation.
+Duration ~00:02
 
-**Timing**: 2 minutes
+AI provenance is the practice of recording the origin of AI-generated artifacts — who requested them, which model produced them, and from which conversation.
 
 **Key Points**:
 - Without provenance, AI contributions become a black box
@@ -89,16 +88,15 @@ started: "ISO8601-timestamp"
 ended: "ISO8601-timestamp"
 task_durations:
   - task: "task name"
-    duration: "HH:MM:SS"
 total_duration: "HH:MM:SS"
 ai_log: "ai-logs/yyyy/mm/dd/chat-id/conversation.md"
 source: "creator-identifier"
 ```
 
 ::: notes
-These 10 fields form the canonical provenance block for every AI-generated file.
+Duration ~00:03
 
-**Timing**: 3 minutes
+These 10 fields form the canonical provenance block for every AI-generated file.
 
 **Key Points**:
 - `model` must use the `provider/model@version` format — not "github/copilot" or "Auto"
@@ -129,9 +127,9 @@ These 10 fields form the canonical provenance block for every AI-generated file.
 > **Rule**: Sidecar files are prohibited for Markdown — always embed.
 
 ::: notes
-The placement policy ensures metadata is co-located with the artifact it describes.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The placement policy ensures metadata is co-located with the artifact it describes.
 
 **Key Points**:
 - Markdown files use YAML front matter — the `---` delimited block at the top
@@ -158,14 +156,14 @@ ai-logs/
                 └── summary.md       ← Resumability context
 ```
 
-**Before starting**: Create log directory and files  
-**During work**: Record each exchange  
+**Before starting**: Create log directory and files
+**During work**: Record each exchange
 **After completion**: Write summary with next steps
 
 ::: notes
-The ai-logs folder is the audit trail for all AI-assisted work. It must be created before generating any artifacts.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The ai-logs folder is the audit trail for all AI-assisted work. It must be created before generating any artifacts.
 
 **Key Points**:
 - Chat ID must be unique — use descriptive names like `create-user-auth-20260318`
@@ -212,9 +210,9 @@ The ai-logs folder is the audit trail for all AI-assisted work. It must be creat
 ```
 
 ::: notes
-The conversation.md template ensures all key information is captured consistently.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The conversation.md template ensures all key information is captured consistently.
 
 **Key Points**:
 - The header captures who, what model, and when
@@ -245,9 +243,9 @@ Answer: Exact prompts allow reproduction of the output and help identify prompt 
 - Block merge if required fields are missing
 
 ::: notes
-CI enforcement turns the policy into hard requirements — not suggestions.
+Duration ~00:02
 
-**Timing**: 2 minutes
+CI enforcement turns the policy into hard requirements — not suggestions.
 
 **Key Points**:
 - The PR checklist should be in the PR template so it's visible during review
@@ -267,7 +265,7 @@ CI enforcement turns the policy into hard requirements — not suggestions.
 After every AI-assisted artifact:
 
 1. ✅ **Conversation log** — `ai-logs/.../conversation.md` created
-2. ✅ **Summary** — `ai-logs/.../summary.md` with resumability context  
+2. ✅ **Summary** — `ai-logs/.../summary.md` with resumability context
 3. ✅ **README update** — entry with description and log link
 4. ✅ **Metadata verified** — all required provenance fields present
 5. ✅ **Links validated** — all internal references work
@@ -275,9 +273,9 @@ After every AI-assisted artifact:
 > These steps are **canonical** — referenced by all other instruction files.
 
 ::: notes
-The post-creation checklist is the final gate before committing AI-generated work.
+Duration ~00:02
 
-**Timing**: 2 minutes
+The post-creation checklist is the final gate before committing AI-generated work.
 
 **Key Points**:
 - All 5 steps must be completed — they are not optional
@@ -307,9 +305,9 @@ The post-creation checklist is the final gate before committing AI-generated wor
 3. Set up CI lint check for provenance metadata
 
 ::: notes
-Wrap up with the essential points and clear next steps.
+Duration ~00:02
 
-**Timing**: 2 minutes
+Wrap up with the essential points and clear next steps.
 
 **Summary**:
 - Provenance metadata is mandatory for every AI-generated file

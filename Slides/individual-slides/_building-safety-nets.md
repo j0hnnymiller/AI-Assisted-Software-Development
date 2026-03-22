@@ -18,6 +18,9 @@ Introduce this module as the backbone of safe AI-assisted development. Safety ne
 
 ---
 
+
+
+
 ## Protecting Brownfield Codebases
 
 Key Practices
@@ -36,6 +39,9 @@ Reinforce that brownfield systems are valuable assets, not liabilities. Protecti
 :::
 
 ---
+
+
+
 
 ## Leveraging AI Code Reviews
 
@@ -56,6 +62,9 @@ AI code reviews are not replacements for human reviews — they are accelerators
 
 ---
 
+
+
+
 ## Effective Human Code Reviews
 
 Human reviewers focus on:
@@ -74,6 +83,9 @@ Humans bring judgment, domain knowledge, and intuition — things AI cannot repl
 :::
 
 ---
+
+
+
 
 ## The Role of Test Automation
 
@@ -96,8 +108,6 @@ Test automation is the ultimate safety net. Without tests, AI-assisted developme
 
 ## Exercise: Building the Safety Nets
 
-Duration
-20 minutes
 Objectives
 Identify missing safety nets in a brownfield system
 Strengthen protection using AI and human review practices
@@ -120,7 +130,11 @@ Strengthen the safety nets by:
   Review and documentation guardrails are strengthened
 
 ::: notes
+Duration ~00:20
+
 Encourage participants to treat this as a real modernization planning session. The goal is not to fix everything — it's to identify gaps and build a roadmap for safer development.
 :::
 
 ---
+
+

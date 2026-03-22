@@ -54,10 +54,7 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Exercise: Business Requirements Generation
-
-Duration: 17 minutes
 
 Objectives
 
@@ -82,10 +79,10 @@ Success Criteria
 - Participants can explain what changed after clarifications and independent refinement
 
 ::: notes
+Duration ~00:17
 
 ## Business Requirements Generation Exercise Instructions
 
-**Duration:** 17 minutes
 **Prerequisites:** Access to the Greenfield branch, ability to create a personal branch, and access to the Product Manager agent plus the repository instruction files
 
 Use this exercise to establish the Greenfield workflow discipline early. Start by making participants branch from Greenfield before they do any prompting so the requirements artifact has a clean ownership path and can be reviewed independently later. In the first few minutes, emphasize that the goal is not to produce a perfect PRD in one pass, but to create a usable calculator requirements document using the Product Manager agent together with repository guidance. During the clarification window, call out the common confusion points explicitly: correct repository, personal branch strategy, what to do with any existing PRD material, and that tooling differences between Visual Studio and VS Code are secondary to getting the requirements quality right. For the working block, let students operate independently, but use periodic check-ins to see whether instruction files improved the output and whether anyone is stuck on scope, branching, or prompt quality. Transition from this exercise by connecting the completed requirements document to the next Greenfield planning steps, especially technology instructions, slice planning, and implementation prompts.

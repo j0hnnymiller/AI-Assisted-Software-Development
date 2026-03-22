@@ -3,7 +3,6 @@ marp: true
 theme: default
 paginate: false
 ---
-
 ## Daily Themes
 
 | Day       | Theme                                       |
@@ -15,6 +14,8 @@ paginate: false
 | Friday    | AI Assisted Greenfield Software Development |
 
 ::: notes
+Duration ~00:03
+
 Present the week-long course structure. This overview helps participants understand the progression and big-picture organization of the training.
 
 Key talking points:
@@ -27,6 +28,5 @@ Key talking points:
 
 Emphasize that guardrails come first because they're essential for safe, effective AI-assisted development. The brownfield/greenfield split acknowledges that these scenarios have different challenges and considerations.
 
-Timing: Spend 2-3 minutes walking through this roadmap.
 Transition: "Today we'll start with the foundation..."
 :::

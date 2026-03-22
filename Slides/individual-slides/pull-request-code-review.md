@@ -63,17 +63,17 @@ marp: true
 theme: default
 paginate: true
 ---
-
 <!-- _class: lead -->
 
 ## Pull Request and Code Review
 
 - Section focus: moving from implementation into PR creation, review, and comment resolution
-- Duration target: about 11.5 minutes
 - Outcome: show how teams combine human and AI review to improve a slice before merge
 
 ::: notes
-Introduce this section as the quality gate that turns implementation work into team-reviewed delivery. Explain that the goal is not only to open a pull request, but to create a workflow where human reviewers and AI reviewers can both contribute useful feedback before the slice is merged. Spend about one minute here framing the section around submission, review, and response. Transition by starting with the mechanics of creating the pull request itself.
+Duration ~00:12
+
+Introduce this section as the quality gate that turns implementation work into team-reviewed delivery. Explain that the goal is not only to open a pull request, but to create a workflow where human reviewers and AI reviewers can both contribute useful feedback before the slice is merged.  Transition by starting with the mechanics of creating the pull request itself.
 :::
 
 ---
@@ -94,7 +94,9 @@ flowchart LR
 ```
 
 ::: notes
-Explain that a clean review starts with a clean pull request. Branch naming, a narrow slice-focused scope, and issue linkage all make it easier for both humans and AI to understand what the change is supposed to accomplish and what context it belongs to. Spend about two minutes here and reinforce that smaller, well-labeled PRs are easier to review thoroughly. Transition by showing what happens once the PR is open and reviewers are assigned.
+Duration ~00:02
+
+Explain that a clean review starts with a clean pull request. Branch naming, a narrow slice-focused scope, and issue linkage all make it easier for both humans and AI to understand what the change is supposed to accomplish and what context it belongs to.  Transition by showing what happens once the PR is open and reviewers are assigned.
 :::
 
 ---
@@ -118,7 +120,9 @@ flowchart TB
 ```
 
 ::: notes
-Make the point that human review and AI review are complementary rather than competitive. The human reviewer brings context, intent, and domain judgment, while Copilot can scan for policy violations, code smells, and other issues that might be easy to miss in a first pass. Spend about two minutes here and emphasize that both feedback streams can happen at the same time, which improves review speed. Transition by looking at the kinds of issues the AI reviewer surfaced.
+Duration ~00:02
+
+Make the point that human review and AI review are complementary rather than competitive. The human reviewer brings context, intent, and domain judgment, while Copilot can scan for policy violations, code smells, and other issues that might be easy to miss in a first pass.  Transition by looking at the kinds of issues the AI reviewer surfaced.
 :::
 
 ---
@@ -136,7 +140,9 @@ Make the point that human review and AI review are complementary rather than com
 3. mixed quality issues show the value of automated review breadth
 
 ::: notes
-Use this slide to summarize the review findings before going into comment-handling mechanics. The key takeaway is that the AI review did not focus on one narrow category of defects; it found documentation compliance issues, implementation-pattern concerns, and general quality problems in the same run. Spend about two minutes here and explain that this breadth is what makes AI review a valuable companion to human inspection. Transition by focusing on how the team should interpret and respond to the comments.
+Duration ~00:02
+
+Use this slide to summarize the review findings before going into comment-handling mechanics. The key takeaway is that the AI review did not focus on one narrow category of defects; it found documentation compliance issues, implementation-pattern concerns, and general quality problems in the same run.  Transition by focusing on how the team should interpret and respond to the comments.
 :::
 
 ---
@@ -155,7 +161,9 @@ Use this slide to summarize the review findings before going into comment-handli
 - Is the proposed fix worth the churn right now?
 
 ::: notes
-Stress that AI review produces input, not orders. Review comments can be helpful, but the team still has to evaluate whether a suggestion is accurate, relevant to the slice, and worth making before merge, especially when recommendations touch patterns or style rather than outright defects. Spend about two minutes here reminding the audience that judgment is the real bottleneck in good review, not comment volume. Transition by showing practical ways to handle comments once the team decides to act.
+Duration ~00:02
+
+Stress that AI review produces input, not orders. Review comments can be helpful, but the team still has to evaluate whether a suggestion is accurate, relevant to the slice, and worth making before merge, especially when recommendations touch patterns or style rather than outright defects.  Transition by showing practical ways to handle comments once the team decides to act.
 :::
 
 ---
@@ -178,7 +186,9 @@ flowchart LR
 ```
 
 ::: notes
-Explain that comment resolution is partly a coordination problem. If comments are unrelated, it is safer to handle them one at a time so the reasoning stays clear, but if several comments all stem from the same root cause, batching them can reduce churn and speed up the next review pass. Spend about two minutes here and connect the examples back to the actual issues in this section, such as metadata fixes and DOM access improvements. Transition by ending with the broader workflow lessons the team should keep using.
+Duration ~00:02
+
+Explain that comment resolution is partly a coordination problem. If comments are unrelated, it is safer to handle them one at a time so the reasoning stays clear, but if several comments all stem from the same root cause, batching them can reduce churn and speed up the next review pass.  Transition by ending with the broader workflow lessons the team should keep using.
 :::
 
 ---
@@ -194,5 +204,7 @@ Explain that comment resolution is partly a coordination problem. If comments ar
 **Bottom line**: strong PR workflow is not just about opening the review, but about turning feedback into better code and better guidance.
 
 ::: notes
-Close by tying the mechanics back to team process. The audience should leave with the idea that a pull request is a collaborative checkpoint where both human judgment and AI-assisted review improve quality, and where recurring feedback should eventually drive updates to instructions, prompts, and testing standards. Spend about one to two minutes here summarizing the workflow and reinforcing that good review habits make later slices easier to deliver. End by suggesting that every repeated review comment is a candidate for strengthening the guidance upstream.
+Duration ~00:02
+
+Close by tying the mechanics back to team process. The audience should leave with the idea that a pull request is a collaborative checkpoint where both human judgment and AI-assisted review improve quality, and where recurring feedback should eventually drive updates to instructions, prompts, and testing standards.  End by suggesting that every repeated review comment is a candidate for strengthening the guidance upstream.
 :::

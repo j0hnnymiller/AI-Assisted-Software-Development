@@ -18,7 +18,6 @@ marp: true
 theme: default
 paginate: true
 ---
-
 ## Why Customize VS Code?
 
 - Default shortcuts cover **common tasks** — not YOUR workflow
@@ -27,17 +26,18 @@ paginate: true
 - Marp authors especially benefit: build, preview, export all from the keyboard
 
 ::: notes
+Duration ~00:01
+
 Set the "why" before diving into the "how." Emphasize that configuration investment pays dividends every single day.
 
 Key talking points:
 
 - Most developers use VS Code for years without ever opening keybindings.json
-- Even one well-chosen shortcut can save minutes per hour
+- Even one well-chosen shortcut can
 - For Marp workflows specifically, running pandoc or opening side-by-side preview are prime candidates
 
 Ask the audience: "How many of you have a custom keyboard shortcut right now?" — gauge the room.
 
-Timing: ~1 minute.
 Transition: "Let's look at how VS Code's shortcut system actually works."
 :::
 
@@ -62,11 +62,12 @@ Transition: "Let's look at how VS Code's shortcut system actually works."
 ```
 
 ::: notes
+Duration ~00:02
+
 Walk through the three-field structure of a keybinding entry. The `when` clause is the most powerful and least-used feature — it scopes shortcuts to contexts like "only when a Markdown file is open."
 
 Demo tip: Open the Keyboard Shortcuts editor live, search for a command, and show how clicking the pencil icon edits keybindings.json directly.
 
-Timing: ~2 minutes.
 Transition: "Now let's see how to discover command IDs — the key to writing your own shortcuts."
 :::
 
@@ -87,11 +88,12 @@ markdown.showPreviewToSide
 ```
 
 ::: notes
+Duration ~00:02
+
 This is the practical "lookup" step developers skip, then wonder why they can't write shortcuts. Stress that every command in the palette has an ID — including extension commands.
 
 Demo: Open the command palette, type "Marp", right-click "Open Preview", and copy its ID. Then show adding it to keybindings.json.
 
-Timing: ~1.5 minutes.
 Transition: "Let's look at some concrete shortcut recipes for Marp authors."
 :::
 
@@ -108,6 +110,8 @@ Transition: "Let's look at some concrete shortcut recipes for Marp authors."
 | Custom         | `tasks.runTask` → `Export PDF`                | One-key PDF export        |
 
 ::: notes
+Duration ~00:02
+
 Go through each shortcut and explain the Marp use case:
 
 - Side-by-side preview is essential when authoring slides — you want to see layout changes immediately
@@ -116,7 +120,6 @@ Go through each shortcut and explain the Marp use case:
 - Copy path is handy when referencing images or linking between files
 - The custom task shortcut is a preview of what we'll build with Multi-command
 
-Timing: ~2 minutes.
 Transition: "Now let's explore the Multi-command extension, which lets us chain commands together."
 :::
 
@@ -134,11 +137,12 @@ Transition: "Now let's explore the Multi-command extension, which lets us chain 
   - Delays between steps
 
 ::: notes
+Duration ~00:02
+
 Introduce the extension and explain the core problem it solves: VS Code shortcuts fire exactly one command. Multi-command lets you chain many into a single keystroke — like a macro system.
 
 Install tip: Show `Ctrl+Shift+X`, search "multi-command", install ryuta46.multi-command.
 
-Timing: ~1.5 minutes.
 Transition: "Let's see what the configuration looks like."
 :::
 
@@ -175,6 +179,8 @@ Then bind it in `keybindings.json`:
 ```
 
 ::: notes
+Duration ~00:03
+
 Walk through the structure carefully:
 
 1. `command` — a unique ID you choose; must start with `multiCommand.`
@@ -185,7 +191,6 @@ Point out the "save first" pattern — always save before building so the export
 
 Demo: Paste this into settings.json and fire the shortcut live.
 
-Timing: ~2.5 minutes.
 Transition: "Let's look at a complete Marp workflow using Multi-command."
 :::
 
@@ -210,6 +215,8 @@ Transition: "Let's look at a complete Marp workflow using Multi-command."
 ```
 
 ::: notes
+Duration ~00:02
+
 Paint the before/after picture:
 
 - BEFORE: Save manually → open terminal → type marp command → switch to Finder/Explorer → open PDF
@@ -217,7 +224,6 @@ Paint the before/after picture:
 
 This is the kind of workflow automation that pays for the time you spent configuring it within the first session.
 
-Timing: ~2 minutes.
 Transition: "Let's also set up the VS Code task that runs Marp CLI."
 :::
 
@@ -249,6 +255,8 @@ Transition: "Let's also set up the VS Code task that runs Marp CLI."
 ```
 
 ::: notes
+Duration ~00:02
+
 Walk through the task definition:
 
 - `${file}` — the currently open file (your active .md slide deck)
@@ -258,7 +266,6 @@ Walk through the task definition:
 
 Prerequisite: Marp CLI must be installed (`npm install -g @marp-team/marp-cli`).
 
-Timing: ~2 minutes.
 Transition: "Before we wrap up, let me share a few more power-user tips."
 :::
 
@@ -284,13 +291,14 @@ Transition: "Before we wrap up, let me share a few more power-user tips."
 - Keybindings and settings sync automatically across machines
 
 ::: notes
+Duration ~00:02
+
 These are the tips that separate power users from casual users. Call out the `when` clause again — it's underused but prevents shortcut conflicts across file types.
 
 The delay tip is important for Multi-command: if a task launches a process, subsequent commands may fire before it finishes. A small delay solves this.
 
 Settings Sync is a quality-of-life tip that resonates well — many developers maintain multiple machines or reinstall VS Code periodically.
 
-Timing: ~2 minutes.
 Transition: "Let's look at where to find these settings in your own VS Code."
 :::
 
@@ -308,6 +316,8 @@ Transition: "Let's look at where to find these settings in your own VS Code."
 > 💡 Workspace `.vscode/` settings are **version-controllable** — commit them with your slides repo!
 
 ::: notes
+Duration ~00:02
+
 Clarify the difference between user-level and workspace-level settings:
 
 - User settings apply globally across all projects
@@ -317,7 +327,6 @@ For slide authors, storing tasks.json and workspace settings.json in the slides 
 
 Windows paths: `%APPDATA%\Code\User\` instead of the Linux/Mac paths shown.
 
-Timing: ~1.5 minutes.
 Transition: "Let's wrap up with a quick summary."
 :::
 
@@ -342,6 +351,8 @@ Transition: "Let's wrap up with a quick summary."
 > Start with **one shortcut** you use every day. Build from there.
 
 ::: notes
+Duration ~00:01
+
 Reinforce the three takeaways clearly. The closing advice — "start with one shortcut" — combats the paralysis of trying to configure everything at once.
 
 Call to action ideas:
@@ -351,6 +362,4 @@ Call to action ideas:
 - "Commit your .vscode/ folder to your next slide repo"
 
 Thank the audience and open for questions.
-
-Timing: ~1 minute.
 :::

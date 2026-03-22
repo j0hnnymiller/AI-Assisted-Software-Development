@@ -58,12 +58,13 @@ style: |
     letter-spacing: 8px;
   }
 ---
-
 ## Welcome to AI Assisted Software Development
 
 From Code to Copilot
 
 ::: notes
+Duration ~00:02
+
 Welcome participants to the AI Assisted Software Development course. This is your opening slide, so set a positive and engaging tone. Introduce the course name and tagline "From Code to Copilot" which emphasizes the journey from traditional software development to AI-augmented practices.
 
 Key talking points:
@@ -73,6 +74,5 @@ Key talking points:
 - Set expectations that this will be hands-on and practical
 - Encourage questions and participation throughout
 
-Timing: Spend about 1-2 minutes on this welcome slide.
 Transition: "Let's start by introducing ourselves..."
 :::

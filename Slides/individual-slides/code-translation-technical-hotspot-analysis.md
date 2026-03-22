@@ -18,7 +18,6 @@ total_duration: "00:15:00"
 ai_log: "ai-logs/2026/03/17/code-translation-hotspot-20260317/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
-
 ## Code Translation and Technical Hotspot Analysis
 
 - **Code Translation** between programming languages
@@ -27,6 +26,8 @@ source: "johnmillerATcodemag-com"
 - **GitHub Issues** automated creation from findings
 
 ::: notes
+Duration ~00:02
+
 Introduce this module as covering advanced AI-assisted code analysis techniques. Emphasize that AI can help translate code between languages, verify instruction compliance, analyze specific code sections for technical debt, and automatically create GitHub issues from findings.
 
 Key points:
@@ -36,7 +37,6 @@ Key points:
 - Scoped analysis targets specific problem areas
 - Automated issue creation streamlines workflow
 
-Timing: 1-2 minutes on this overview slide.
 Transition: "Let's start with code translation..."
 :::
 
@@ -60,6 +60,8 @@ Transition: "Let's start with code translation..."
 - Identifies idiom mismatches
 
 ::: notes
+Duration ~00:04
+
 Explain the common scenarios where code translation is necessary. Emphasize that AI goes beyond simple syntax conversion—it understands semantic intent and can identify when direct translation would lose meaning.
 
 Real-world examples:
@@ -70,11 +72,13 @@ Real-world examples:
 
 Key point: AI can preserve business logic that would be lost in simple syntax translation. For example, converting Python's dynamic typing to TypeScript's static typing requires understanding the intended types.
 
-Timing: 3-4 minutes.
 Transition: "Let's look at the translation process..."
 :::
 
 ---
+
+
+
 
 ## Translation Process
 
@@ -100,6 +104,9 @@ Propose a translation strategy for migrating this
 
 ---
 
+
+
+
 ## Translation Best Practices
 
 **Request Incremental Translation**:
@@ -123,6 +130,9 @@ Flag any semantic differences requiring manual review
 
 ---
 
+
+
+
 ## Example: Python to TypeScript
 
 **Source (Python)**:
@@ -144,6 +154,9 @@ Translate this Python function to TypeScript with:
 ```
 
 ---
+
+
+
 
 ## Example: Python to TypeScript (Result)
 
@@ -167,6 +180,9 @@ export function calculateDiscount(price: number, tier: CustomerTier): number {
 
 ---
 
+
+
+
 ## Instruction Compliance Review
 
 **Purpose**: Ensure codebase adheres to project standards
@@ -182,6 +198,9 @@ export function calculateDiscount(price: number, tier: CustomerTier): number {
 **AI Role**: Automated compliance auditing
 
 ---
+
+
+
 
 ## Setting Up Compliance Review
 
@@ -205,6 +224,9 @@ Focus on: [specific module/feature/service]
 ```
 
 ---
+
+
+
 
 ## Compliance Review Prompts
 
@@ -233,6 +255,9 @@ Review [codebase] for security policy violations:
 
 ---
 
+
+
+
 ## Interpreting Compliance Results
 
 **AI Output Structure**:
@@ -254,6 +279,9 @@ Review [codebase] for security policy violations:
 
 ---
 
+
+
+
 ## Scoped Analysis for Specific Files/Projects
 
 **Why Scope Analysis?**
@@ -271,6 +299,9 @@ Review [codebase] for security policy violations:
 - **Issue-level**: Files related to specific GitHub issue
 
 ---
+
+
+
 
 ## Scoped Analysis Techniques
 
@@ -294,6 +325,9 @@ Check for:
 ```
 
 ---
+
+
+
 
 ## Scoped Analysis Techniques (cont.)
 
@@ -324,6 +358,9 @@ Identify technical hotspots in [folder/service]:
 
 ---
 
+
+
+
 ## Advanced Scoping: Git-Based Analysis
 
 **Review Recent Changes**:
@@ -351,6 +388,9 @@ Assess risk and required documentation updates.
 
 ---
 
+
+
+
 ## Creating GitHub Issues from Findings
 
 **Automated Issue Creation Workflow**:
@@ -368,6 +408,9 @@ Assess risk and required documentation updates.
 - Actionable remediation steps
 
 ---
+
+
+
 
 ## Issue Template Structure
 
@@ -400,6 +443,9 @@ Assess risk and required documentation updates.
 
 ---
 
+
+
+
 ## Example: Creating Issues from Compliance Review
 
 **Step 1: Generate Issue Content**
@@ -418,6 +464,9 @@ Include labels: 'technical-debt', 'security', 'architecture'
 ```
 
 ---
+
+
+
 
 ## Example Issue: Security Violation
 
@@ -455,6 +504,9 @@ at line 34, violating the dependency management policy
 
 ---
 
+
+
+
 ## Posting Issues to GitHub via Copilot
 
 **Method 1: Direct Creation**
@@ -480,6 +532,9 @@ Use appropriate labels and severity markers.
 
 ---
 
+
+
+
 ## Assigning Issues to @copilot
 
 **Automated Resolution Workflow**:
@@ -498,6 +553,9 @@ Use appropriate labels and severity markers.
 - Copilot enabled for repository
 
 ---
+
+
+
 
 ## Best Practices: Issue Management
 
@@ -521,6 +579,9 @@ Use appropriate labels and severity markers.
 - Link related issues together
 
 ---
+
+
+
 
 ## Workflow Integration
 
@@ -550,6 +611,9 @@ jobs:
 
 ---
 
+
+
+
 ## Real-World Example: Technical Debt Sprint
 
 **Scenario**: Legacy codebase modernization
@@ -577,6 +641,9 @@ Analyze Features/Legacy/ folder for:
 
 ---
 
+
+
+
 ## Measuring Success
 
 **Key Metrics**:
@@ -598,6 +665,9 @@ Generate a technical debt dashboard summarizing:
 ```
 
 ---
+
+
+
 
 ## Common Pitfalls and Solutions
 
@@ -622,6 +692,9 @@ Generate a technical debt dashboard summarizing:
 - **Solution**: Centralize instructions in `.github/instructions/`
 
 ---
+
+
+
 
 ## Advanced Techniques
 

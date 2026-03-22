@@ -12,6 +12,9 @@ Core Instruction Files
 
 ---
 
+
+
+
 ## What Copilot Looks For
 
 Artifact Type | Required Location | Required Format | Notes
@@ -27,6 +30,9 @@ Even though “chat modes” are being renamed to “agents,” the folder name 
 :::
 
 ---
+
+
+
 
 ## What's Changing and What Isn't
 
@@ -46,6 +52,9 @@ Teams can safely start using the term “agent” in training and inside the fil
 :::
 
 ---
+
+
+
 
 ## Order of Precedence
 
@@ -68,7 +77,7 @@ Reusable profiles across projects
 Available in multiple environments (GitHub.com, VS Code, JetBrains, Eclipse, Xcode)
 
 ::: notes
-Timing: 2-3 minutes
+Duration ~00:03
 
 Key Points to Emphasize:
 
@@ -108,7 +117,7 @@ Eclipse: Add custom agents dialog
 Xcode: Create agent from dropdown
 
 ::: notes
-Timing: 3 minutes
+Duration ~00:03
 
 Delivery Instructions:
 
@@ -153,7 +162,7 @@ Commit to default branch
 Agent appears in dropdown immediately
 
 ::: notes
-Timing: 4-5 minutes (include live demo if possible)
+Duration ~00:05
 
 Step-by-Step Walkthrough:
 
@@ -218,7 +227,7 @@ Use Configure Tools… button for tool selection
 Set model: property for AI model preference
 
 ::: notes
-Timing: 3-4 minutes
+Duration ~00:04
 
 VS Code Advantages:
 
@@ -303,7 +312,7 @@ YAML frontmatter: Metadata and configuration
 Markdown content: Instructions and behavior (max 30,000 chars)
 
 ::: notes
-Timing: 4-5 minutes
+Duration ~00:05
 
 Anatomy of an Agent Profile:
 
@@ -405,7 +414,7 @@ testing patterns for the language and framework.
 ```
 
 ::: notes
-Timing: 3-4 minutes
+Duration ~00:04
 
 Why This Example Works:
 
@@ -501,7 +510,7 @@ rather than implementing code.
 ```
 
 ::: notes
-Timing: 3-4 minutes
+Duration ~00:04
 
 Strategic Difference from Test Specialist:
 
@@ -616,7 +625,7 @@ Reference agent in prompts
 Command-line argument support
 
 ::: notes
-Timing: 4-5 minutes
+Duration ~00:05
 
 GitHub.com Usage:
 
@@ -756,7 +765,7 @@ Document: Include usage examples in agent description
 Test: Validate agent behavior before team rollout
 
 ::: notes
-Timing: 4 minutes
+Duration ~00:04
 
 Detailed Best Practices:
 
@@ -911,6 +920,9 @@ Transition: “You now have everything you need to create your first custom agen
 
 ---
 
+
+
+
 ## Greenfield Chat Modes
 
 Product Manager
@@ -928,6 +940,9 @@ This presentation covers 8 critical roles in modern software development. Each p
 
 ---
 
+
+
+
 ## Product Manager
 
 Skills | Responsibilities
@@ -943,6 +958,9 @@ Product Managers are the bridge between business and technical teams. Their succ
 :::
 
 ---
+
+
+
 
 ## Solution Architect
 
@@ -960,6 +978,9 @@ Solution Architects work at the highest technical abstraction level. Pattern rec
 
 ---
 
+
+
+
 ## Senior Developer
 
 Skills | Responsibilities
@@ -975,6 +996,9 @@ Senior Developers are power users of AI coding assistance. Code generation promp
 :::
 
 ---
+
+
+
 
 ## Technical Writer
 
@@ -992,6 +1016,9 @@ Technical Writers can leverage AI for content creation and organization. Content
 
 ---
 
+
+
+
 ## Security Reviewer
 
 Skills | Responsibilities
@@ -1007,6 +1034,9 @@ Security Reviewers must validate all AI security recommendations. Threat modelin
 :::
 
 ---
+
+
+
 
 ## DevOps Engineer
 
@@ -1024,6 +1054,9 @@ DevOps Engineers can accelerate infrastructure automation with AI. Infrastructur
 
 ---
 
+
+
+
 ## DevTest Engineer
 
 Skills | Responsibilities
@@ -1040,6 +1073,9 @@ DevTest Engineers can dramatically improve test coverage with AI. Test case gene
 
 ---
 
+
+
+
 ## SRE (Site Reliability Engineer)
 
 Skills | Responsibilities
@@ -1055,6 +1091,9 @@ SREs can leverage AI for faster incident response and resolution. Incident respo
 :::
 
 ---
+
+
+
 
 ## Solution Architect Prompts
 
@@ -1089,6 +1128,9 @@ created:
 :::
 
 ---
+
+
+
 
 ## If you said: "Design an architecture for a Windows desktop application that manages real-time inventory for a warehouse"
 

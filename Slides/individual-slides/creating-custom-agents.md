@@ -23,7 +23,6 @@ paginate: true
 title: "Creating Custom Agents"
 subtitle: "Specialized AI Assistants for Your Workflow"
 ---
-
 # Creating Custom Agents
 
 ## Specialized AI Assistants for Your Workflow
@@ -31,9 +30,9 @@ subtitle: "Specialized AI Assistants for Your Workflow"
 GitHub Copilot Custom Agents
 
 ::: notes
-Welcome to this presentation on creating custom agents for GitHub Copilot. This session will teach you how to create specialized AI assistants tailored to specific development tasks and workflows.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to this presentation on creating custom agents for GitHub Copilot. This session will teach you how to create specialized AI assistants tailored to specific development tasks and workflows.
 
 **Key Points**:
 
@@ -59,7 +58,7 @@ Custom agents are specialized AI assistants with:
 - **Available in multiple environments** (GitHub.com, VS Code, JetBrains, Eclipse, Xcode)
 
 ::: notes
-**Timing**: 2-3 minutes
+Duration ~00:03
 
 **Key Points to Emphasize**:
 
@@ -97,7 +96,7 @@ Custom agents are specialized AI assistants with:
 - **Xcode**: Create agent from dropdown
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Delivery Instructions**:
 
@@ -137,7 +136,7 @@ Custom agents are specialized AI assistants with:
 8. Agent appears in dropdown immediately
 
 ::: notes
-**Timing**: 4-5 minutes (include live demo if possible)
+Duration ~00:05
 
 **Step-by-Step Walkthrough**:
 
@@ -193,7 +192,7 @@ Custom agents are specialized AI assistants with:
 8. Set `model:` property for AI model preference
 
 ::: notes
-**Timing**: 3-4 minutes
+Duration ~00:04
 
 **VS Code Advantages**:
 
@@ -264,38 +263,38 @@ You are a testing specialist...
 - **Markdown content**: Instructions and behavior (max 30,000 chars)
 
 ::: notes
-**Timing**: 4-5 minutes
+Duration ~00:05
 
 **Anatomy of an Agent Profile**:
 
 **YAML Frontmatter** (Required):
 
 1. **name** (optional): Display name in dropdown
-   - Defaults to filename without extension
-   - Keep concise (2-4 words)
-   - Examples: "Test Specialist", "Security Reviewer"
+- Defaults to filename without extension
+- Keep concise (2-4 words)
+- Examples: "Test Specialist", "Security Reviewer"
 
 2. **description** (REQUIRED): What the agent does
-   - Must be clear and specific
-   - Explains capabilities and domain
-   - Appears in agent selection UI
-   - 1-2 sentence summary
+- Must be clear and specific
+- Explains capabilities and domain
+- Appears in agent selection UI
+- 1-2 sentence summary
 
 3. **tools** (optional): Which tools agent can use
-   - Omit to enable ALL tools
-   - List specific tools to restrict access
-   - Format: `["tool1", "tool2", "mcp-server/tool3"]`
-   - Common tools: read, edit, search, run, debug
+- Omit to enable ALL tools
+- List specific tools to restrict access
+- Format: `["tool1", "tool2", "mcp-server/tool3"]`
+- Common tools: read, edit, search, run, debug
 
 4. **model** (IDE only): Which AI model to use
-   - Only works in VS Code, JetBrains, Eclipse, Xcode
-   - Examples: "gpt-4", "gpt-3.5-turbo", "claude-3-opus"
-   - Ignored on GitHub.com
+- Only works in VS Code, JetBrains, Eclipse, Xcode
+- Examples: "gpt-4", "gpt-3.5-turbo", "claude-3-opus"
+- Ignored on GitHub.com
 
 5. **target** (optional): Environment restriction
-   - "vscode" = only in IDEs
-   - "github-copilot" = only on GitHub.com
-   - Omit = works everywhere
+- "vscode" = only in IDEs
+- "github-copilot" = only on GitHub.com
+- Omit = works everywhere
 
 6. **mcp-servers** (org/enterprise only): Configure MCP servers for this agent
 
@@ -342,7 +341,7 @@ testing patterns for the language and framework.
 ```
 
 ::: notes
-**Timing**: 3-4 minutes
+Duration ~00:04
 
 **Why This Example Works**:
 
@@ -423,7 +422,7 @@ rather than implementing code.
 ```
 
 ::: notes
-**Timing**: 3-4 minutes
+Duration ~00:04
 
 **Strategic Difference from Test Specialist**:
 
@@ -516,7 +515,7 @@ rather than implementing code.
 - Command-line argument support
 
 ::: notes
-**Timing**: 4-5 minutes
+Duration ~00:05
 
 **GitHub.com Usage**:
 
@@ -597,20 +596,20 @@ gh copilot --agent=doc-writer "document the API endpoints"
 **Best Practices**:
 
 1. **Choose the Right Agent**:
-   - Match agent expertise to task
-   - Don't use generic agent when specialized one exists
+- Match agent expertise to task
+- Don't use generic agent when specialized one exists
 
 2. **Provide Context**:
-   - Custom agents still need context
-   - Reference files, requirements, constraints
+- Custom agents still need context
+- Reference files, requirements, constraints
 
 3. **Iterate**:
-   - Refine agent instructions based on results
-   - Agents improve as you tune them
+- Refine agent instructions based on results
+- Agents improve as you tune them
 
 4. **Document Usage**:
-   - Tell team which agents to use for which tasks
-   - Include in CONTRIBUTING.md or team wiki
+- Tell team which agents to use for which tasks
+- Include in CONTRIBUTING.md or team wiki
 
 **Common Scenarios**:
 
@@ -636,7 +635,7 @@ gh copilot --agent=doc-writer "document the API endpoints"
 7. **Test**: Validate agent behavior before team rollout
 
 ::: notes
-**Timing**: 4 minutes
+Duration ~00:04
 
 **Detailed Best Practices**:
 
@@ -665,9 +664,9 @@ gh copilot --agent=doc-writer "document the API endpoints"
 - Doc agent doesn't need "debug" tool
 - Security agent might only need "read" and "search"
 - Benefits:
-  - Faster execution (fewer options to consider)
-  - Clear scope (can't do things outside role)
-  - Safer (can't accidentally deploy or delete)
+- Faster execution (fewer options to consider)
+- Clear scope (can't do things outside role)
+- Safer (can't accidentally deploy or delete)
 
 **4. Iterate**:
 
@@ -676,23 +675,23 @@ gh copilot --agent=doc-writer "document the API endpoints"
 - Collect feedback from team
 - Refine instructions based on real usage
 - Example iteration:
-  - V1: "Write tests"
-  - V2: "Write tests with descriptive names"
-  - V3: "Write tests with descriptive names following pattern: describe-context-behavior"
-  - V4: Add specific Jest matchers to prefer
+- V1: "Write tests"
+- V2: "Write tests with descriptive names"
+- V3: "Write tests with descriptive names following pattern: describe-context-behavior"
+- V4: Add specific Jest matchers to prefer
 
 **5. Share**:
 
 - Don't create duplicate agents across repos
 - Use organization-level agents for standards
 - Examples:
-  - Code style checker (enforces org conventions)
-  - Security reviewer (org security policies)
-  - Doc generator (org documentation standards)
+- Code style checker (enforces org conventions)
+- Security reviewer (org security policies)
+- Doc generator (org documentation standards)
 - Benefits:
-  - Consistency across projects
-  - Single place to maintain
-  - Easier onboarding
+- Consistency across projects
+- Single place to maintain
+- Easier onboarding
 
 **6. Document**:
 
@@ -701,15 +700,15 @@ gh copilot --agent=doc-writer "document the API endpoints"
 - Add usage instructions
 - Example:
 
-  ```markdown
-  ## Usage Examples
+```markdown
+## Usage Examples
 
-  ❌ Bad: "Fix the tests"
-  ✅ Good: "Add unit tests for the UserService class covering success and error cases"
+❌ Bad: "Fix the tests"
+✅ Good: "Add unit tests for the UserService class covering success and error cases"
 
-  ❌ Bad: "Make it better"
-  ✅ Good: "Increase test coverage for auth module to 80%"
-  ```
+❌ Bad: "Make it better"
+✅ Good: "Increase test coverage for auth module to 80%"
+```
 
 **7. Test**:
 
@@ -759,7 +758,7 @@ gh copilot --agent=doc-writer "document the API endpoints"
 4. Iterate based on feedback
 
 ::: notes
-**Timing**: 2-3 minutes for closing
+Duration ~00:30
 
 **Resource Walkthrough**:
 
@@ -768,7 +767,7 @@ gh copilot --agent=doc-writer "document the API endpoints"
 - Step-by-step hands-on guide
 - Creates a working agent from scratch
 - Best starting point for beginners
-- Estimated time: 15-30 minutes
+-
 
 **Custom Agents Configuration Reference**:
 
@@ -861,9 +860,12 @@ Common Questions to Expect:
 - Link to your custom agents repo
 - Office hours or follow-up session details
 - Feedback form or survey
-  :::
+:::
 
 ---
+
+
+
 
 ## Thank You
 
@@ -877,9 +879,9 @@ Common Questions to Expect:
 **Start creating your custom agents today!**
 
 ::: notes
-**Final Slide Notes**:
+Duration ~00:10
 
-**Timing**: 5-10 minutes for Q&A
+**Final Slide Notes**:
 
 **Q&A Facilitation Tips**:
 

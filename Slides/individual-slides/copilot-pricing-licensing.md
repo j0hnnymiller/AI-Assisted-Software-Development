@@ -22,9 +22,10 @@ paginate: true
 ### What you need to know for your organization
 
 ::: notes
+Duration ~00:01
+
 Introduce the topic by framing it as a decision teams need to make. Most developers have heard of Copilot, but licensing details are often misunderstood. This session clarifies the tiers and what each unlocks.
 
-Timing: ~30 seconds on this title slide.
 Transition: "Let's start with an overview of what's available."
 :::
 
@@ -42,6 +43,8 @@ Transition: "Let's start with an overview of what's available."
 | Enterprise features   | ❌             | ❌              | ✅             |
 
 ::: notes
+Duration ~00:02
+
 Walk through the table column by column, not row by row — it helps the audience track each tier's value proposition.
 
 Key talking points:
@@ -52,8 +55,6 @@ Key talking points:
 - All paid plans include unlimited completions and chat
 
 Emphasize: Business tier is where most organizations should start. Enterprise is for large orgs with compliance or custom knowledge needs.
-
-Timing: ~2 minutes. Be prepared for questions on what "policy management" means.
 :::
 
 ---
@@ -68,6 +69,8 @@ Timing: ~2 minutes. Be prepared for questions on what "policy management" means.
 - ✅ No seat minimum — pay only for active users
 
 ::: notes
+Duration ~00:02
+
 This is the most common license tier for companies. Focus on the operational benefits for managers and security teams, not just developers.
 
 Key talking points:
@@ -79,7 +82,6 @@ Key talking points:
 
 Common question: "What counts as an active user?" — A user who has Copilot enabled in their IDE at least once in the billing cycle.
 
-Timing: ~2 minutes.
 Transition: "Now let's look at what Business adds that Individual doesn't..."
 :::
 
@@ -103,6 +105,8 @@ Transition: "Now let's look at what Business adds that Individual doesn't..."
 - 🔐 Enhanced compliance & data residency options
 
 ::: notes
+Duration ~00:03
+
 Frame this as "Business is the foundation; Enterprise is the multiplier."
 
 Key talking points:
@@ -113,8 +117,6 @@ Key talking points:
 - Data residency matters for EU/regulated industries
 
 Help the audience self-select: "If you have a team under 500 and no compliance requirements, Business is probably right for you today."
-
-Timing: ~2-3 minutes. This slide often generates the most discussion.
 :::
 
 ---
@@ -138,6 +140,8 @@ your-org/
 - 🔄 Changes propagate instantly — no developer action needed
 
 ::: notes
+Duration ~00:03
+
 This feature is one of the biggest unlocks of the Business tier and often underappreciated.
 
 Key talking points:
@@ -149,7 +153,6 @@ Key talking points:
 
 Demo opportunity: Show a `.github/instructions/` file with a coding standard rule, then show Copilot following it in the IDE.
 
-Timing: ~2-3 minutes.
 Transition: "Let's talk about how to get started..."
 :::
 
@@ -167,6 +170,8 @@ Transition: "Let's talk about how to get started..."
 > 💡 **Tip**: Start with a pilot group, gather feedback, then roll out broadly.
 
 ::: notes
+Duration ~00:02
+
 Give attendees a concrete action plan to leave with.
 
 Key talking points:
@@ -178,7 +183,6 @@ Key talking points:
 
 Common concern: "What about IP and training data?" — Reassure that Business/Enterprise plans opt out of using your code to train GitHub's models by default.
 
-Timing: ~2 minutes.
 Transition: "Any questions on licensing, pricing, or rollout?"
 :::
 
@@ -210,5 +214,5 @@ For questions, be ready to address:
 - Data privacy and training opt-out policies
 - GitHub Enterprise Server (on-prem) compatibility
 
-Timing: Spend remaining session time on Q&A. Don't rush this slide.
+Use the remaining session time for Q&A. Don't rush this slide.
 :::

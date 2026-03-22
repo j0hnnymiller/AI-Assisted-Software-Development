@@ -22,7 +22,6 @@ paginate: true
 
 ## Evergreen Software Development - Core Principles Exercise Instructions
 
-**Duration:** 20-25 minutes
 **Prerequisites:** Basic familiarity with architecture and automated testing
 
 ### Objectives
@@ -45,11 +44,12 @@ paginate: true
 - Team can explain how this supports evergreen outcomes.
 
 ::: notes
+Duration ~00:25
+
 Introduce the Evergreen Software Development exercise. This exercise teaches participants to design software that can evolve indefinitely.
 
 Key talking points:
 
-- Duration: 20-25 minutes for exploration and discussion
 - Prerequisites: Participants should understand basic architecture and testing concepts
 - Objectives focus on three core practices: intent-first design, stable interfaces, and AI guardrails
 
@@ -61,7 +61,6 @@ Activities breakdown:
 
 Success criteria are specific and measurable. Teams should be able to demonstrate each criterion.
 
-Timing: 2-3 minutes to introduce exercise.
 Transition: "Let's start by capturing intent..."
 :::
 
