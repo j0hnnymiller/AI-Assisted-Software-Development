@@ -240,7 +240,6 @@ source: "johnmillerATcodemag-com"
 marp: true
 theme: default
 paginate: true
-
 ---
 
 <!-- _class: lead -->
