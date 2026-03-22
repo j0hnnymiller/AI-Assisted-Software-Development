@@ -240,6 +240,7 @@ source: "johnmillerATcodemag-com"
 marp: true
 theme: default
 paginate: true
+
 ---
 
 <!-- _class: lead -->
@@ -326,6 +327,7 @@ description: >
 
 ```markdown
 ## Procedure
+
 1. Analyze the target code and determine testing strategy
 2. Create test files following the AAA pattern
 3. Run tests and verify results
@@ -384,15 +386,15 @@ Make the point that skills are operational playbooks, not style guides. They pus
 
 ## Skills vs. Other Copilot Instruction Mechanisms
 
-| Mechanism | Purpose | Scope | When to use |
-| --- | --- | --- | --- |
-| Custom Instructions | General behavior and preferences | Global | Style, tone, conventions |
-| Promptfiles | Task-specific instructions | Repo or folder | Reusable prompts for common tasks |
-| Chat Modes | Custom agents | Repo | Role-based behavior |
-| Skills | Procedural, domain-specific workflows | Repo | Repeatable tasks with steps, scripts, or examples |
+| Mechanism               | Purpose                               | Scope          | When to Use                                            |
+| ----------------------- | ------------------------------------- | -------------- | ------------------------------------------------------ |
+| **Custom Instructions** | General behavior & preferences        | Global         | Coding style, tone, conventions                        |
+| **Promptfiles**         | Task-specific instructions            | Repo or folder | Reusable prompts for common tasks                      |
+| **Chat Modes**          | Custom agents                         | Repo           | Role-based behavior (e.g., "Security Reviewer")        |
+| **Skills**              | Procedural, domain-specific workflows | Repo           | Repeatable tasks requiring steps, scripts, or examples |
 
 ::: notes
-Explain that skills complement the other instruction layers rather than replacing them. Custom instructions shape broad behavior, promptfiles package reusable requests, and chat modes define role-oriented interaction, while skills are the mechanism specifically designed for procedural workflows that need steps and attached resources. Spend about one minute here and highlight that choosing the right mechanism depends on the kind of control you need. Transition by making the jump from concept to actual creation.
+Explain that skills complement the other instruction layers rather than replacing them. Custom instructions shape broad behavior, promptfiles package reusable requests, and chat modes define role-oriented interaction, while skills are the mechanism specifically designed for procedural workflows that need steps and attached resources. Spend about one minute here and transition by making the jump from concept to actual creation.
 :::
 
 ---
@@ -410,31 +412,31 @@ mkdir -p .github/skills/my-skill
 Include:
 
 - YAML metadata
-- description
-- procedure steps
-- optional examples or scripts
+- Description
+- Procedure steps
+- Optional examples or scripts
 
-### 3. Commit it
+### 3. Commit to your repository
 
-Copilot can then detect and load it when relevant.
+Copilot will automatically detect and load it when relevant.
 
 ::: notes
-Present this as a low-friction authoring path. A team does not need a special service or registry to begin; it just adds a skill folder to the repository, writes a `SKILL.md`, and versions it like any other artifact so it can be reviewed, improved, and audited over time. Spend about one minute here and point out that this makes skills fit naturally into existing Git workflows. Transition by showing what separates a good skill from a weak one.
+Skills are version-controlled like any other code artifact. This makes them auditable and reviewable-critical for team workflows and compliance. Spend about one minute here and present this as a low-friction authoring path: add a folder, write the skill, and let repository review processes improve it over time. Transition by showing what separates a good skill from a weak one.
 :::
 
 ---
 
 ## Best Practices for Skill Authoring
 
-- Use clear, imperative steps
-- Keep procedures short and deterministic
-- Include examples for complex tasks
-- Use scripts for repeatable automation
-- Add keywords to improve relevance matching
-- Test likely triggers by prompting Copilot directly
+- Use **clear, imperative steps** ("Do X, then Y")
+- Keep procedures **short and deterministic**
+- Include **examples** for complex tasks
+- Use **scripts** for repeatable automation
+- Add **keywords** in the description for better relevance matching
+- Test skills by prompting Copilot with expected triggers
 
 ::: notes
-Frame these as reliability practices rather than stylistic preferences. A good skill reads like an operational recipe: specific, testable, and explicit enough that Copilot can execute it with minimal ambiguity, while examples and scripts anchor the procedure in concrete artifacts. Spend about one minute here and encourage the audience to validate skills using likely trigger phrases so they can see whether loading behavior matches expectations. Transition by grounding the idea in real-world categories of work.
+Think of skills as operational recipes. The more deterministic and unambiguous the steps, the more reliable Copilot becomes. Spend about one minute here and frame these as reliability practices rather than stylistic preferences so the audience understands that skill quality directly affects execution quality. Transition by grounding the idea in real-world categories of work.
 :::
 
 ---
@@ -451,20 +453,20 @@ Frame these as reliability practices rather than stylistic preferences. A good s
 - Onboarding workflows
 
 ::: notes
-Explain that skills are most valuable when a task is procedural, repeatable, and specific to a team's domain. These examples all share the property that there is a known workflow, supporting material, and a need for consistent execution, which is exactly where skills outperform generic chat guidance. Spend about one minute here and mention that enterprise teams benefit especially because they can encode institutional process directly in the repository. Transition by closing with the main takeaways the audience should remember.
+Explain that skills are most valuable when a task is procedural, repeatable, and specific to a team's domain. These examples all share the property that there is a known workflow, supporting material, and a need for consistent execution, which is exactly where skills outperform generic chat guidance. Spend about one minute here and transition by closing with the main takeaways the audience should remember.
 :::
 
 ---
 
 ## Summary
 
-- Skills are modular, procedural knowledge bundles for Copilot
-- Defined in `.github/skills/<name>/SKILL.md`
-- Loaded automatically when relevant
-- Enable repeatable, auditable, domain-specific workflows
+- Skills are **modular, procedural knowledge bundles** for Copilot
+- Defined via `.github/skills/<name>/SKILL.md`
+- Loaded **automatically** when relevant
+- Enable **repeatable**, **auditable**, **domain-specific** workflows
 - Work across Copilot agents and environments
-- Add a powerful extensibility layer beyond basic prompting
+- Provide a powerful new layer of extensibility
 
 ::: notes
-Close by reinforcing that skills represent a shift from one-off prompting toward reusable operational knowledge. The big idea is that teams can package their best workflows into repository assets that Copilot can discover and apply at the right time, producing more consistent results with less repeated explanation. Spend about one minute here and end on the idea that skills help turn institutional knowledge into something executable, reviewable, and maintainable.
+Skills represent a major evolution in Copilot's architecture-moving from reactive assistance to structured, agentic execution. They allow teams to encode institutional knowledge directly into the repository. Spend the final minute reinforcing that the practical value is repeatability: repository-scoped workflows that Copilot can discover and apply with less repeated prompting.
 :::
