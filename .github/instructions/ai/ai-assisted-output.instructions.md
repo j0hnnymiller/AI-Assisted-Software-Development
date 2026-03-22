@@ -75,6 +75,8 @@ Contributors generating or curating AI-assisted content (code, docs, diagrams, t
 - Use `chat_id` in embedded metadata/front matter.
 - Do not use “session” or “session-id” in paths or labels.
 - Standardize placeholder paths on `<chat-id>`.
+- Do not output `U+2011`; use `-` instead.
+- Do not output `U+2019`; use `'` instead.
 
 ## Metadata placement policy
 
@@ -457,6 +459,7 @@ Before committing AI-assisted content, verify:
 - [ ] README.md updated for new notable artifacts
 - [ ] Chat scaffolding in place before artifact creation
 - [ ] Embedded metadata used for Markdown (no sidecar files; see “Metadata placement policy”)
+- [ ] Output does not contain `U+2011` or `U+2019`; use `-` and `'` instead
 
 ## PR and Commit Checklist (Mandatory)
 

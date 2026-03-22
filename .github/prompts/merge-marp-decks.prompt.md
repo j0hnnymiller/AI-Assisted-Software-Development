@@ -2,12 +2,12 @@
 mode: agent
 model: "anthropic/claude-sonnet-4-5@2025-02-19"
 tools: ["read", "create", "edit", "search", "run_command"]
-description: Merges Marp slide decks listed in a YAML file into a single Marp deck and generates a PPTX with named sections using python-pptx.
+description: Merges Marp slide decks listed in a YAML file into a single Marp deck and generates a PPTX with named sections using python-pptx, or runs a validate-only pass on the manifest and source slides.
 prompt_metadata:
   id: merge-marp-decks
-  title: Merge Marp Slide Decks and Generate PPTX
+  title: Merge Marp Slide Decks, Validate Sources, and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 2.9.0
+  version: 3.0.0
   created: 2026-03-12
   updated: 2026-03-21
   output_path: Slides/<manifest-stem>-draft.md
@@ -16,10 +16,13 @@ prompt_metadata:
   tags: [marp, slides, merge, presentation, markdown, pptx, python-pptx]
 ---
 
-# Merge Marp Slide Decks and Generate PPTX
+# Merge Marp Slide Decks, Validate Sources, and Generate PPTX
 
 Merge the Marp slide decks defined in the runtime manifest path into a single Marp slide
 deck, then generate a PPTX with named sections using `python-pptx`.
+
+This prompt also supports a **validate-only** mode that validates the manifest and source
+slides without generating or overwriting any output files.
 
 ## Runtime Inputs
 
@@ -32,10 +35,22 @@ Preferred invocation format:
 Manifest: Slides/aiasd-311-<day>.yaml
 ```
 
+Optional mode line:
+
+```text
+Mode: validate-only
+```
+
 Also accepted:
 
 ```text
 Use manifest Slides/aiasd-311-tuesday.yaml
+```
+
+Also accepted for validation:
+
+```text
+Validate only using manifest Slides/aiasd-311-tuesday.yaml
 ```
 
 The manifest path is mandatory for every run. The agent must not assume a default manifest,
@@ -50,6 +65,21 @@ Resolve the manifest path from the invocation text using this order:
 3. A single unambiguous repo-relative YAML path under `Slides/`
 
 If none of the above yields exactly one manifest path, abort immediately.
+
+### Mode Resolution
+
+Resolve the execution mode from the invocation text using this order:
+
+1. A line starting with `Mode:`
+2. A plain-language instruction containing `validate only`
+3. Default to `full`
+
+Supported modes:
+
+- `full` — validate, merge, and generate PPTX
+- `validate-only` — validate the manifest and source slides only
+
+If an explicit mode is provided but is not one of the supported values, abort immediately.
 
 ### Derived Runtime Paths
 
@@ -66,6 +96,9 @@ Fixed path:
 
 This prompt must be reusable across manifests. Do not modify the prompt file, front matter,
 or `prompt_metadata.output_path` when the caller wants a different manifest.
+
+In `validate-only` mode, these derived output paths remain informational only and must not be
+created, edited, overwritten, or otherwise touched.
 
 Front matter note:
 
@@ -102,11 +135,26 @@ Slides/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest
 ## Execution Rule
 
 - Resolve the manifest path first. Abort on any manifest error before reading slide files.
-- Perform **Phase 0** and **Phase 1** directly in this agent run using the prompt logic.
+- Resolve the execution mode before starting Phase 0.
+- Perform **Phase 0** directly in this agent run using the prompt logic in all modes.
+- Perform **Phase 1** and **Phase 2** only in `full` mode.
 - Do **not** call or rely on any script for Phase 0/1.
-- Read source files, validate them, build merged markdown in memory, and write the merged deck path.
+- In `full` mode, read source files, validate them, build merged markdown in memory, and write the merged deck path.
+- In `validate-only` mode, stop after Phase 0 and report validation results only.
 - Treat the manifest YAML and all source slide files as **read-only inputs**.
-- Only the derived merged deck path and derived PPTX output path are writable outputs.
+- Only the derived merged deck path and derived PPTX output path are writable outputs, and only in `full` mode.
+
+### Validate-Only Mode Contract
+
+When mode is `validate-only`:
+
+- Validate the manifest path, YAML structure, and manifest slide entries
+- Run Phase 0 for every resolvable source slide
+- Report manifest issues, source warnings, and the validation summary
+- Do **not** run Phase 1 or Phase 2
+- Do **not** create, edit, or overwrite the merged deck path
+- Do **not** create, edit, or overwrite the PPTX output path
+- Do **not** modify the manifest or any source file
 
 ## File Write Strategy
 
@@ -118,6 +166,9 @@ Slides/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest
 > - If the file **already exists**: replace its entire content using the `edit` tool
 >   (full-file replacement), **not** the `create` tool. The `create` tool must never be
 >   used on a file that already exists.
+
+In `validate-only` mode, this entire file write strategy is disabled because no output files
+may be written.
 
 > **Agent verification (Issue 3)**: After computing the merged deck path, confirm its filename
 > matches the pattern `<course>-<format>-<day>-draft.md` derived from the manifest stem.
@@ -152,7 +203,7 @@ Each section has a `name` and an optional `slides` list. Sections with no slide 
 
 ---
 
-## Phase 0 — Validate Source Files
+## Phase 0 — Validate Manifest and Source Files
 
 Collect the complete list of unique source file paths from the manifest, then **validate
 each source file using a subagent**. Launch one subagent per source file — all subagents
@@ -209,6 +260,9 @@ Also report any **manifest issues** discovered before subagent dispatch or while
 slide paths. Manifest issues are input problems, not output-generation tasks. Report them;
 do not repair them in-place.
 
+If mode is `validate-only`, stop here after printing the validation summary and issue report.
+Do not continue to merge or PPTX generation.
+
 > **Agent verification (Issue 1)**: After running Phase 0, confirm the validation summary
 > is printed. For a file known to violate a rule (e.g. ends with `---`), verify the warning
 > appears and the merge still completes successfully.
@@ -216,6 +270,8 @@ do not repair them in-place.
 ---
 
 ## Phase 1 — Merge Markdown
+
+Run Phase 1 only in `full` mode. Skip it entirely in `validate-only` mode.
 
 ### Steps
 
@@ -349,6 +405,8 @@ Report the count in the form: `Merged deck: N slide(s) across M section(s).`
 
 ## Phase 2 — Generate PPTX with Sections
 
+Run Phase 2 only in `full` mode. Skip it entirely in `validate-only` mode.
+
 Run the PPTX script path (`scripts/generate_pptx.py`) to produce the PPTX output path.
 
 ### Markdown formatting support
@@ -393,9 +451,19 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 ## Deliverables
 
+### Full mode
+
 1. Merged deck path — merged Marp markdown deck (with injected module list slides only)
 2. PPTX output path — generated PPTX with named sections
 3. Issue report — validation warnings and manifest/source issues found during the run
+
+### Validate-only mode
+
+1. Validation summary — number of files checked and warnings found
+2. Manifest issue report — malformed, missing, or unresolved manifest entries
+3. Source issue report — rule violations found in the source slide files
+
+Validate-only mode must not emit merged markdown or PPTX artifacts.
 
 ## Section Handling Rules
 
@@ -418,12 +486,13 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 Run all checks below after the pipeline completes to confirm spec conformance.
 
-| #   | Issue                       | Check                                                                    | Pass condition                                                                           |
-| --- | --------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| V1  | Source validation           | Phase 0 summary printed before the merged deck path is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output          |
-| V2  | Code-fence `---` preserved  | Merge a source file that contains `---` inside a fenced code block       | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path  |
-| V3  | Output file named correctly | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem       |
-| V4  | PPTX generated              | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                 |
-| V5  | `Title Only` layout used    | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
-| V6  | Empty section logged        | YAML section with no `slides:` entries                                   | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase  |
-| V7  | Slide count reported        | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                           |
+| #   | Issue                         | Check                                                                    | Pass condition                                                                           |
+| --- | ----------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| V1  | Source validation             | Phase 0 summary printed before the merged deck path is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output          |
+| V2  | Code-fence `---` preserved    | Merge a source file that contains `---` inside a fenced code block       | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path  |
+| V3  | Output file named correctly   | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem       |
+| V4  | PPTX generated                | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                 |
+| V5  | `Title Only` layout used      | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
+| V6  | Empty section logged          | YAML section with no `slides:` entries                                   | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase  |
+| V7  | Slide count reported          | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                           |
+| V8  | Validate-only stays read-only | Run with `Mode: validate-only`                                           | Validation summary and issues are reported, and no merged deck or PPTX file is written   |
