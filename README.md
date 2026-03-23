@@ -163,6 +163,16 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Uses the exercise template structure with duration, objectives, activities, success criteria, and facilitator notes on every slide
   - Provenance: [Chat log](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/summary.md)
 
+- **Repository Fork and Clone Exercise Deck** ([`Slides/individual-slides/exercise-fork-and-clone-repositories.md`](Slides/individual-slides/exercise-fork-and-clone-repositories.md))
+  - Three-slide exercise deck covering course repository forking, brownfield branch setup, PAT configuration, and multi-repo fork validation
+  - Uses the exercise template structure with objectives, activities, success criteria, command examples, and facilitator notes for each exercise
+  - Provenance: [Chat log](ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/summary.md)
+
+- **GitHub Copilot VS Code Workflows Exercise Deck** ([`Slides/individual-slides/exercise-github-copilot-vscode-workflows.md`](Slides/individual-slides/exercise-github-copilot-vscode-workflows.md))
+  - Four-slide exercise deck covering Copilot onboarding, context management, chat workflow organization, and Ask/Edit/Agent mode selection
+  - Uses the exercise template structure with objectives, activities, success criteria, and facilitator notes for each lab sequence
+  - Provenance: [Chat log](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/summary.md)
+
 - **Evergreen Software Development Exercise Deck** ([`Slides/individual-slides/evergreen-software-development-exercise-deck.md`](Slides/individual-slides/evergreen-software-development-exercise-deck.md))
   - Two exercise slides covering evergreen core principles and common failure modes
   - Template-aligned structure with duration, objectives, activities, success criteria, and speaker notes
