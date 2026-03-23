@@ -27,8 +27,8 @@ sections:
 
   - name: Addressing Technical Debt
     slides:
+      - Slides\individual-slides\addressing-technical-debt.md
       - Slides\individual-slides\exercise-addressing-technical-debt-with-copilot.md
-      - Slides\individual-slides\exercise-addressing-technical-debt.md
 
   - name: Multi-Implementation Comparison
     slides:

@@ -14,7 +14,6 @@ sections:
   - name: Copilot for Teams
     slides:
       - Slides\individual-slides\github-copilot-for-teams.md
-      -
 
   - name: Safety Measures and Best Practices
     slides:
