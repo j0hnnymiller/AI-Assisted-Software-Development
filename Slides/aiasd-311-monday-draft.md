@@ -189,7 +189,7 @@ Transition: "Today we'll start with the foundation..."
 - The essence remains: bridging the gap between what we want and what machines can do
 
 ::: notes
-**Opening**: Start with the provocative quote to capture attention. Pause for effect after reading it aloud. **Key Message**: Emphasize that we're not witnessing a revolution but an evolution—AI tools are the latest step in a continuous chain of improvements. **Delivery**: Speak slowly and deliberately on the core thesis. Ask audience: "How many of you thought AI was going to replace programmers?" Acknowledge concerns but pivot to optimism. **Timing**: 2-3 minutes. **Transition**: "To understand why this is evolutionary, let's look at where we've been..."
+**Opening**: Start with the provocative quote to capture attention. Pause for effect after reading it aloud. **Key Message**: Emphasize that we're not witnessing a revolution but an evolution—AI tools are the latest step in a continuous chain of improvements. **Delivery**: Speak slowly and deliberately on the core thesis. Ask audience: "How many of you thought AI was going to replace programmers?" Acknowledge concerns but pivot to optimism. **Transition**: "To understand why this is evolutionary, let's look at where we've been..."
 :::
 
 ---
@@ -209,7 +209,7 @@ Transition: "Today we'll start with the foundation..."
 - Still mainstream today in embedded systems and OS kernels
 
 ::: notes
-**Historical Context**: Paint a vivid picture of early programming—physically laborious and error-prone. Mention famous anecdote about Grace Hopper debugging a literal bug (moth) from hardware. **Key Point**: Assembly was the first major abstraction—replacing binary with human-readable mnemonics. **Example**: "MOV AX, BX" is much easier than "10001001 11011000". **Modern Relevance**: Note that assembly is still used today in systems programming, making this history relevant not ancient. **Timing**: 2 minutes. **Transition**: "Assembly was a huge leap, but we were still thinking in machine terms. The next step was thinking in human terms..."
+**Historical Context**: Paint a vivid picture of early programming—physically laborious and error-prone. Mention famous anecdote about Grace Hopper debugging a literal bug (moth) from hardware. **Key Point**: Assembly was the first major abstraction—replacing binary with human-readable mnemonics. **Example**: "MOV AX, BX" is much easier than "10001001 11011000". **Modern Relevance**: Note that assembly is still used today in systems programming, making this history relevant not ancient. **Transition**: "Assembly was a huge leap, but we were still thinking in machine terms. The next step was thinking in human terms..."
 :::
 
 ---
@@ -230,7 +230,7 @@ Transition: "Today we'll start with the foundation..."
 **Sensory Shift**: From mechanical card punches to typewriter-style terminals
 
 ::: notes
-**Big Picture**: This era marked the shift from "speaking machine" to "speaking math" or "speaking business logic". **FORTRAN Example**: Scientists could write formulas directly rather than translating them into assembly. **COBOL Context**: COBOL's English-like syntax ("ADD SALES TO TOTAL") made programming accessible to business professionals, not just engineers. **C's Significance**: Portability revolution—write once, compile for different hardware. **Sensory Evolution**: Note the shift in human interface—from physical cards to keyboards. Ask audience if anyone has used punch cards. **Timing**: 3 minutes. **Transition**: "But even high-level languages required thinking like a computer. The next step was thinking in terms of real-world objects and structures..."
+**Big Picture**: This era marked the shift from "speaking machine" to "speaking math" or "speaking business logic". **FORTRAN Example**: Scientists could write formulas directly rather than translating them into assembly. **COBOL Context**: COBOL's English-like syntax ("ADD SALES TO TOTAL") made programming accessible to business professionals, not just engineers. **C's Significance**: Portability revolution—write once, compile for different hardware. **Sensory Evolution**: Note the shift in human interface—from physical cards to keyboards. Ask audience if anyone has used punch cards. **Transition**: "But even high-level languages required thinking like a computer. The next step was thinking in terms of real-world objects and structures..."
 :::
 
 ---
@@ -252,7 +252,7 @@ Transition: "Today we'll start with the foundation..."
 **Era Experience**: CRT monitors with green text, floppy disks
 
 ::: notes
-**Conceptual Shift**: This era introduced thinking in terms of real-world objects and relationships. **Pascal**: Emphasized structured programming—breaking code into procedures and functions with clear flow control. **OOP Revolution**: C++ enabled modeling real-world entities as objects with properties and behaviors. **Example**: "Instead of separate functions for customer data, you have a Customer object that knows how to save itself, validate itself, etc." **Memory Lane**: If your audience includes older developers, ask about their experience with green-screen terminals and 5.25" floppy disks. **Timing**: 2-3 minutes. **Transition**: "Objects were powerful, but developers still spent too much time on plumbing. The 90s brought integration..."
+**Conceptual Shift**: This era introduced thinking in terms of real-world objects and relationships. **Pascal**: Emphasized structured programming—breaking code into procedures and functions with clear flow control. **OOP Revolution**: C++ enabled modeling real-world entities as objects with properties and behaviors. **Example**: "Instead of separate functions for customer data, you have a Customer object that knows how to save itself, validate itself, etc." **Memory Lane**: If your audience includes older developers, ask about their experience with green-screen terminals and 5.25" floppy disks. **Transition**: "Objects were powerful, but developers still spent too much time on plumbing. The 90s brought integration..."
 :::
 
 ---
@@ -274,7 +274,7 @@ Transition: "Today we'll start with the foundation..."
 **Experience**: Mouse clicks, drag-and-drop, desktop computing
 
 ::: notes
-**Integration Theme**: This era wasn't about new languages but about bringing tools together. **IDE Impact**: No more switching between separate compiler, debugger, and editor windows—everything integrated. **Visual Studio Example**: Drag-and-drop form design, IntelliSense autocomplete—made programming more visual and immediate. **Java's Promise**: "Write once, run anywhere" was revolutionary—JVM abstracted away hardware differences. **Libraries Evolution**: Don't write your own database connector, HTTP client, or encryption—use proven libraries. **Interactive Element**: Ask audience to raise hands if they remember life before IntelliSense. **Timing**: 2-3 minutes. **Transition**: "While desktops became powerful, the internet was about to change everything..."
+**Integration Theme**: This era wasn't about new languages but about bringing tools together. **IDE Impact**: No more switching between separate compiler, debugger, and editor windows—everything integrated. **Visual Studio Example**: Drag-and-drop form design, IntelliSense autocomplete—made programming more visual and immediate. **Java's Promise**: "Write once, run anywhere" was revolutionary—JVM abstracted away hardware differences. **Libraries Evolution**: Don't write your own database connector, HTTP client, or encryption—use proven libraries. **Interactive Element**: Ask audience to raise hands if they remember life before IntelliSense. **Transition**: "While desktops became powerful, the internet was about to change everything..."
 :::
 
 ---
@@ -295,7 +295,7 @@ Transition: "Today we'll start with the foundation..."
 **Experience**: Portable coding on laptops, coffee shop programming
 
 ::: notes
-**Web Revolution**: Internet shifted computing from desktop applications to browser-based services. **JavaScript Ubiquity**: Initially a toy language, became essential when V8 made it fast enough for serious applications. **Python's Versatility**: Started in web development, evolved into the dominant language for data science and AI/ML. **Rails Magic**: "Convention over configuration"—Rails showed that frameworks could make common tasks trivial. **Portability Shift**: Note the lifestyle change—developers could work from anywhere with WiFi. **Modern Context**: These languages and frameworks still dominate today. **Timing**: 2 minutes. **Transition**: "But web apps still ran on physical servers in data centers. Cloud computing changed that..."
+**Web Revolution**: Internet shifted computing from desktop applications to browser-based services. **JavaScript Ubiquity**: Initially a toy language, became essential when V8 made it fast enough for serious applications. **Python's Versatility**: Started in web development, evolved into the dominant language for data science and AI/ML. **Rails Magic**: "Convention over configuration"—Rails showed that frameworks could make common tasks trivial. **Portability Shift**: Note the lifestyle change—developers could work from anywhere with WiFi. **Modern Context**: These languages and frameworks still dominate today. **Transition**: "But web apps still ran on physical servers in data centers. Cloud computing changed that..."
 :::
 
 ---
@@ -313,7 +313,7 @@ Transition: "Today we'll start with the foundation..."
 **Experience**: Browser dashboards, swiping, clicking, dragging
 
 ::: notes
-**Orchestration Concept**: Developers became conductors—composing systems from managed services rather than building everything from scratch. **Cloud Impact**: "Need a database? Click button, get database. Need 100 servers? Auto-scale." Infrastructure became code. **API Economy**: Modern apps are mashups—Stripe for payments, Twilio for SMS, Auth0 for authentication. You orchestrate services, not write everything. **Low-Code**: Controversial topic—some see it as dumbing down, others as appropriate tool for business apps. Acknowledge both views. **Key Insight**: This is when programming truly shifted from "making hardware do things" to "composing services and logic". **Timing**: 3 minutes. **Transition**: "Cloud and APIs raised the abstraction level. AI assistance raises it even higher..."
+**Orchestration Concept**: Developers became conductors—composing systems from managed services rather than building everything from scratch. **Cloud Impact**: "Need a database? Click button, get database. Need 100 servers? Auto-scale." Infrastructure became code. **API Economy**: Modern apps are mashups—Stripe for payments, Twilio for SMS, Auth0 for authentication. You orchestrate services, not write everything. **Low-Code**: Controversial topic—some see it as dumbing down, others as appropriate tool for business apps. Acknowledge both views. **Key Insight**: This is when programming truly shifted from "making hardware do things" to "composing services and logic". **Transition**: "Cloud and APIs raised the abstraction level. AI assistance raises it even higher..."
 :::
 
 ---
@@ -330,7 +330,7 @@ Transition: "Today we'll start with the foundation..."
 **The Core**: Bridging human goals with machine execution through layers of abstraction
 
 ::: notes
-**Synthesis Point**: This slide ties together the history—every era raised the abstraction level. **Visual Metaphor**: "Think of programming as a ladder—each rung takes you higher above the hardware, making it easier to see the big picture but relying on more layers below." **Modern Developer Reality**: Today's developers rarely think about memory management, CPU registers, or even which physical server runs their code. They think in terms of business logic and user experiences. **Key Question for Audience**: "How many of you have ever written assembly or C code?" Then: "How many wrote Java or Python today?" Shows the abstraction trajectory. **Timing**: 2 minutes. **Transition**: "Now here comes AI. It's not a different ladder—it's another rung on the same ladder we've been climbing."
+**Synthesis Point**: This slide ties together the history—every era raised the abstraction level. **Visual Metaphor**: "Think of programming as a ladder—each rung takes you higher above the hardware, making it easier to see the big picture but relying on more layers below." **Modern Developer Reality**: Today's developers rarely think about memory management, CPU registers, or even which physical server runs their code. They think in terms of business logic and user experiences. **Key Question for Audience**: "How many of you have ever written assembly or C code?" Then: "How many wrote Java or Python today?" Shows the abstraction trajectory. **Transition**: "Now here comes AI. It's not a different ladder—it's another rung on the same ladder we've been climbing."
 :::
 
 ---
@@ -352,7 +352,7 @@ Transition: "Today we'll start with the foundation..."
 - Example: "Create a function that validates email addresses" → Complete implementation
 
 ::: notes
-**Paradigm Shift**: This is the key slide—AI enables expressing intent in natural language, not just formal syntax. **LLM Training**: Models trained on billions of lines of public code (GitHub, Stack Overflow, etc.) learn patterns and best practices. **IDE Integration**: Copilot, Cursor, Tabnine—AI is embedded in our daily tools, not separate applications. **Dialogue Metaphor**: "Programming becomes conversation. You say what you want, AI suggests how to do it, you refine through iteration." **Live Demo Opportunity**: If appropriate, show quick Copilot example here. **Audience Engagement**: "How many of you have tried GitHub Copilot or ChatGPT for coding?" **Timing**: 3-4 minutes. **Transition**: "This natural language interaction is the crucial breakthrough. Let's explore what that means..."
+**Paradigm Shift**: This is the key slide—AI enables expressing intent in natural language, not just formal syntax. **LLM Training**: Models trained on billions of lines of public code (GitHub, Stack Overflow, etc.) learn patterns and best practices. **IDE Integration**: Copilot, Cursor, Tabnine—AI is embedded in our daily tools, not separate applications. **Dialogue Metaphor**: "Programming becomes conversation. You say what you want, AI suggests how to do it, you refine through iteration." **Live Demo Opportunity**: If appropriate, show quick Copilot example here. **Audience Engagement**: "How many of you have tried GitHub Copilot or ChatGPT for coding?" **Transition**: "This natural language interaction is the crucial breakthrough. Let's explore what that means..."
 :::
 
 ---
@@ -373,7 +373,7 @@ Transition: "Today we'll start with the foundation..."
 **Boundary Movement**: Between domain expertise and implementation
 
 ::: notes
-**Role Evolution**: This is about identity—developers worry "Am I being replaced?" Address this directly. **Curator of Context**: You provide requirements, constraints, examples, test cases. The better the context, the better the AI output. **Validator Role**: AI generates fast, but you must verify it's correct, secure, performant, maintainable. Critical thinking is MORE important, not less. **Steward of Alignment**: Ensuring the code does what users need, not just what you asked for. **Example**: "AI can generate a sorting algorithm, but you decide if sorting is even the right solution." **Reassurance**: "Your expertise shifts from syntax to strategy, from typing to thinking." **Timing**: 3 minutes. **Transition**: "Let's look at specific examples of how AI understands intent..."
+**Role Evolution**: This is about identity—developers worry "Am I being replaced?" Address this directly. **Curator of Context**: You provide requirements, constraints, examples, test cases. The better the context, the better the AI output. **Validator Role**: AI generates fast, but you must verify it's correct, secure, performant, maintainable. Critical thinking is MORE important, not less. **Steward of Alignment**: Ensuring the code does what users need, not just what you asked for. **Example**: "AI can generate a sorting algorithm, but you decide if sorting is even the right solution." **Reassurance**: "Your expertise shifts from syntax to strategy, from typing to thinking." **Transition**: "Let's look at specific examples of how AI understands intent..."
 :::
 
 ---
@@ -393,7 +393,7 @@ Transition: "Today we'll start with the foundation..."
 - Conversational iteration like human collaboration
 
 ::: notes
-**Intent Understanding**: This is what makes AI different from traditional autocomplete or code snippets. **Examples Walkthrough**: Go through each example slowly. "Make this faster" could mean caching, algorithm optimization, database indexing—AI considers context to choose. **Test-Driven Development**: "You can write tests first, AI generates implementation that passes tests. TDD on steroids!" **Bug Reports as Input**: Show how AI can read a bug report ("Users getting 500 error when submitting form") and suggest fixes. **Conversational Iteration**: "Too much like code that..." "Actually, make it more like..." — Natural back-and-forth refinement. **Live Example Opportunity**: If time permits, demonstrate a conversational refinement with AI. **Timing**: 3 minutes. **Transition**: "This sounds revolutionary, but remember—it's just another tool in a long line of tools..."
+**Intent Understanding**: This is what makes AI different from traditional autocomplete or code snippets. **Examples Walkthrough**: Go through each example slowly. "Make this faster" could mean caching, algorithm optimization, database indexing—AI considers context to choose. **Test-Driven Development**: "You can write tests first, AI generates implementation that passes tests. TDD on steroids!" **Bug Reports as Input**: Show how AI can read a bug report ("Users getting 500 error when submitting form") and suggest fixes. **Conversational Iteration**: "Too much like code that..." "Actually, make it more like..." — Natural back-and-forth refinement. **Live Example Opportunity**: If time permits, demonstrate a conversational refinement with AI. **Transition**: "This sounds revolutionary, but remember—it's just another tool in a long line of tools..."
 :::
 
 ---
@@ -413,7 +413,7 @@ Transition: "Today we'll start with the foundation..."
 - Following the same pattern as previous innovations
 
 ::: notes
-**Reassurance Slide**: This slide is the antidote to hype and fear. Speak with calm authority. **Historical Pattern**: Every new tool was feared—"High-level languages will make us lazy!" "IDEs will dumb down programmers!" Didn't happen. **Tool, Not Replacement**: Hammer didn't replace carpenters. Calculator didn't replace mathematicians. AI won't replace developers. **Speed and Scale**: "AI lets you work faster, tackle bigger problems, spend more time on creative and strategic work rather than boilerplate." **Personal Testimony**: If you have personal experience where AI helped you—share it. Humanizes the technology. **Address Anxiety**: Acknowledge that change is uncomfortable but emphasize continuity. **Timing**: 2-3 minutes. **Transition**: "But this doesn't mean we can skip the hard parts..."
+**Reassurance Slide**: This slide is the antidote to hype and fear. Speak with calm authority. **Historical Pattern**: Every new tool was feared—"High-level languages will make us lazy!" "IDEs will dumb down programmers!" Didn't happen. **Tool, Not Replacement**: Hammer didn't replace carpenters. Calculator didn't replace mathematicians. AI won't replace developers. **Speed and Scale**: "AI lets you work faster, tackle bigger problems, spend more time on creative and strategic work rather than boilerplate." **Personal Testimony**: If you have personal experience where AI helped you—share it. Humanizes the technology. **Address Anxiety**: Acknowledge that change is uncomfortable but emphasize continuity. **Transition**: "But this doesn't mean we can skip the hard parts..."
 :::
 
 ---
@@ -430,7 +430,7 @@ Transition: "Today we'll start with the foundation..."
 **What Didn't Change**: Whether we need to think critically
 
 ::: notes
-**Critical Reality Check**: This slide balances the optimism. AI is powerful but not infallible. **Testing Remains Essential**: AI-generated code needs the same rigorous testing as human-written code. Maybe more, since you didn't write it. **Security Responsibility**: AI doesn't understand your threat model, compliance requirements, or security policies. You do. **Ethics and Bias**: AI trained on public code may reproduce problematic patterns (hardcoded credentials, insecure practices, biased algorithms). You're the filter. **Architecture Decisions**: AI can implement patterns, but you choose which patterns fit your system's needs. **Analogy**: "GPS tells you the route, but you still drive the car. You watch for hazards, make judgment calls, take responsibility." **Timing**: 2-3 minutes. **Transition**: "So what does the future actually look like?"
+**Critical Reality Check**: This slide balances the optimism. AI is powerful but not infallible. **Testing Remains Essential**: AI-generated code needs the same rigorous testing as human-written code. Maybe more, since you didn't write it. **Security Responsibility**: AI doesn't understand your threat model, compliance requirements, or security policies. You do. **Ethics and Bias**: AI trained on public code may reproduce problematic patterns (hardcoded credentials, insecure practices, biased algorithms). You're the filter. **Architecture Decisions**: AI can implement patterns, but you choose which patterns fit your system's needs. **Analogy**: "GPS tells you the route, but you still drive the car. You watch for hazards, make judgment calls, take responsibility." **Transition**: "So what does the future actually look like?"
 :::
 
 ---
@@ -446,7 +446,7 @@ Transition: "Today we'll start with the foundation..."
 **Essential Truth**: AI assistance is just another improvement in the long line of programming evolution
 
 ::: notes
-**Future Vision**: This slide looks forward while maintaining historical perspective. **Intent-Driven Continuity**: From assembly to C to Python to AI prompts—each step made intent clearer, implementation more abstracted. **Skills Evolution**: "Learning Python took time. Learning prompt engineering will take time. But it's the same kind of skill acquisition we've always done." **Learning Curve Reality**: Don't sugarcoat—there will be frustration, mistakes, and learning. But also breakthroughs and productivity gains. **Continuity Message**: "You're not starting over. You're building on everything you know. Your domain knowledge, debugging skills, design sense—all still essential." **Encouragement**: "This is an exciting time to be a developer. AI removes drudgery, letting us focus on the interesting problems." **Timing**: 2 minutes. **Transition**: "Let me wrap up with the key takeaways..."
+**Future Vision**: This slide looks forward while maintaining historical perspective. **Intent-Driven Continuity**: From assembly to C to Python to AI prompts—each step made intent clearer, implementation more abstracted. **Skills Evolution**: "Learning Python took time. Learning prompt engineering will take time. But it's the same kind of skill acquisition we've always done." **Learning Curve Reality**: Don't sugarcoat—there will be frustration, mistakes, and learning. But also breakthroughs and productivity gains. **Continuity Message**: "You're not starting over. You're building on everything you know. Your domain knowledge, debugging skills, design sense—all still essential." **Encouragement**: "This is an exciting time to be a developer. AI removes drudgery, letting us focus on the interesting problems." **Transition**: "Let me wrap up with the key takeaways..."
 :::
 
 ---
@@ -468,7 +468,7 @@ Transition: "Today we'll start with the foundation..."
 **The Future**: Not abandoning programming, but refining it—making it more accessible and efficient while keeping human creativity and judgment at the center.
 
 ::: notes
-**Closing Message**: This is your mic-drop moment. Speak with conviction and optimism. **Core Thesis Callback**: Circle back to opening quote—"Programming hasn't changed, but how we go about it has changed, again." **Fundamental Continuity**: Emphasize that this entire journey (70+ years) has been about expressing intent with increasing ease. AI is the latest, not the last, step. **Human Centrality**: "AI is a tool we wield, not a replacement for our judgment. We remain at the center—designers, validators, ethical stewards." **Accessibility Point**: AI will bring more people into programming by lowering barriers. That's a good thing. **Call to Action**: "The future belongs to developers who embrace these tools while maintaining the critical thinking and expertise that makes great software." **Ending Note**: Pause briefly after final sentence, let it land, then invite questions. **Timing**: 3 minutes including pause for questions. **Optional**: If time, ask "What questions do you have?" and address 2-3 before moving on.
+**Closing Message**: This is your mic-drop moment. Speak with conviction and optimism. **Core Thesis Callback**: Circle back to opening quote—"Programming hasn't changed, but how we go about it has changed, again." **Fundamental Continuity**: Emphasize that this entire journey (70+ years) has been about expressing intent with increasing ease. AI is the latest, not the last, step. **Human Centrality**: "AI is a tool we wield, not a replacement for our judgment. We remain at the center—designers, validators, ethical stewards." **Accessibility Point**: AI will bring more people into programming by lowering barriers. That's a good thing. **Call to Action**: "The future belongs to developers who embrace these tools while maintaining the critical thinking and expertise that makes great software." **Ending Note**: Pause briefly after final sentence, let it land, then invite questions. **Optional**: If time, ask "What questions do you have?" and address 2-3 before moving on.
 :::
 
 ---
@@ -726,6 +726,7 @@ It's the cleanest way to remember the relationship.
 
 - Repository and Tool Setup
 - Hands-On with GitHub Copilot
+- Lab: Getting Started with GitHub Copilot
 
 ---
 
@@ -736,55 +737,109 @@ GitHub authentication
 
 ---
 
-## Lab: Clone the AI-Assisted-Software-Development Repository
+## Exercise: Clone the AI-Assisted-Software-Development Repository
 
-Prerequisites: Git, GitHub account
+Prerequisites
+
+- Git
+- GitHub account
+
 Objectives
-Fork the AI-Assisted-Software-Development repo
+
+- Fork the AI-Assisted-Software-Development repository
+- Clone your fork to your local machine
+- Switch to the brownfield branch to confirm branch navigation
+
 Activities
-Clone the git@github.com:johnmillerATcodemag-com/AI-Assisted-Software-Development.gitrepository
-Switch to the brownfield branch
+
+1. Search GitHub for AI-Assisted-Software-Development.
+2. Fork the repository into your GitHub account.
+3. Clone your fork locally with SSH or HTTPS.
+4. Open a terminal in the cloned repository.
+5. Switch to the brownfield branch.
+
+```bash
+git clone git@github.com:<your-username>/AI-Assisted-Software-Development.git
+cd AI-Assisted-Software-Development
+git checkout brownfield
+```
+
 Success Criteria
-Cloned repository exists locally
+
+- Repository is forked under your GitHub account
+- Cloned repository exists locally
+- Brownfield branch is checked out successfully
 
 ::: notes
 Duration ~00:10
 
-Objective: Fork the course repos Tasks
-Search GitHub for
-AI-Assisted-Software-Development
-Fork this repo
-This will create a personal copy under your GitHub account
-You can make changes without affecting the original repo
+Set the context by explaining that this is foundational setup for all later course tasks. Guide participants to fork first, then clone their own fork, so they have push access and can safely make changes without affecting the original repository. If students hit authentication issues, pause briefly to confirm whether they are using SSH keys or HTTPS credentials and help them choose one method consistently. Close by asking everyone to run `git branch --show-current` so they can verify they are on the brownfield branch before moving forward.
 :::
 
 ---
 
-
 ## Exercise: Fork the AIASD-20260209-BF Repo
 
-Duration: 20 minutes
-Objectives: Explore an unfamiliar codebase
+Objectives
+
+- Explore an unfamiliar codebase with a safe personal fork
+- Clone and validate local access to the brownfield exercise repository
+- Configure PAT-based authentication for GitHub operations
+
 Activities
-Fork this repo https://github.com/j0hnnymiller/AIASD-20260209-BF.git
-Clone the forked repo
-Create a GitHub PAT https://github.com/settings/tokens
-Store the PAT in the GITHUB_TOKEN environment variable
+
+1. Open https://github.com/j0hnnymiller/AIASD-20260209-BF.git.
+2. Fork the repository to your personal GitHub account.
+3. Clone the forked repository locally.
+4. Create a GitHub PAT at https://github.com/settings/tokens.
+5. Store the token in the `GITHUB_TOKEN` environment variable.
+
+```bash
+$env:GITHUB_TOKEN = "<your-pat>"
+
+export GITHUB_TOKEN="<your-pat>"
+```
+
 Success Criteria
-Repo is available locally
+
+- Forked repository exists in your GitHub account
+- Repository is available locally and can be opened in VS Code
+- `GITHUB_TOKEN` is set in the current shell session
+
+::: notes
+Duration ~00:20
+
+Frame this as brownfield readiness work and explain that a clean setup now prevents workflow friction later. Walk students through forking and cloning first, then move to PAT creation with a reminder to use least-privilege token scopes and never commit tokens to source control. During the hands-on period, check that everyone can authenticate successfully before they continue into subsequent labs. Transition by emphasizing that local clone plus PAT setup is the baseline for future repository analysis and change workflows.
+:::
 
 ---
 
+## Exercise: Fork the Repos
 
-## Exercise: Fork the repos
+Objective
 
-Objective: Fork the course repos
-Search GitHub for
-- AI-Assisted-Software-Development
-- zeus.academia.3b
-Fork the repos
-- This will create a personal copy under your GitHub account
-- You can make changes without affecting the original repo
+- Fork the course repositories needed for independent practice
+
+Activities
+
+1. Search GitHub for the following repositories:
+   - AI-Assisted-Software-Development
+   - zeus.academia.3b
+2. Fork both repositories into your GitHub account.
+3. Confirm each fork appears under your account.
+4. Optional: clone each fork locally for offline work.
+
+Success Criteria
+
+- Both repositories are forked to your GitHub account
+- You can identify the original upstream repositories
+- You can explain why forking protects the source repositories
+
+::: notes
+Duration ~00:10
+
+Use this slide as a consolidation exercise to reinforce the fork-first workflow pattern across multiple repositories. Encourage participants to describe the difference between upstream and origin in their own words, because that understanding reduces merge and push mistakes later in the course. If time permits, have learners quickly clone one of the forks and verify remotes using `git remote -v` as a confidence check. End with a short recap that forking gives each participant a safe workspace while preserving the integrity of the course-owned repositories.
+:::
 
 ---
 
@@ -805,71 +860,6 @@ Walk through installation, auth, and a quick coding session; encourage participa
 
 ---
 
-
-## Lab: Getting Started with GitHub Copilot
-
-Duration: Follow along
-Objectives
-Install and configure GitHub Copilot
-Verify authentication with GitHub account
-Explore the Copilot UI components
-Activities
-Install GitHub Copilot extension from VS Code marketplace
-Sign in with your GitHub account (verify Copilot subscription)
-Locate and explore:
-
-- Chat window and chat history
-- New chat button
-- Quick chat feature (keyboard shortcut)
-- Settings menu
-- Model selection dropdown
-  Check your premium token usage bar
-  Create a new chat and experiment with the interface
-  Success Criteria
-- Copilot extension installed and authenticated
-- Can open/close chat windows
-- Understand difference between main chat and quick chat
-- Know where to find chat history
-
-::: notes
-
-## **Lab 1: Getting Started with GitHub Copilot**
-
-**Duration:** 20-30 minutes
-**Prerequisites:** VS Code installed
-
-### Objectives
-
-- Install and configure GitHub Copilot
-- Verify authentication with GitHub account
-- Explore the Copilot UI components
-
-### Activities
-
-1. Install GitHub Copilot extension from VS Code marketplace
-2. Sign in with your GitHub account (verify Copilot subscription)
-3. Locate and explore:
-
-- Chat window and chat history
-- New chat button
-- Quick chat feature (keyboard shortcut)
-- Settings menu
-- Model selection dropdown
-
-4. Check your premium token usage bar
-5. Create a new chat and experiment with the interface
-
-### Success Criteria
-
-- Copilot extension installed and authenticated
-- Can open/close chat windows
-- Understand difference between main chat and quick chat
-- Know where to find chat history
-  :::
-
----
-
-
 ## Prompt Specificity
 
 Add error handling to my code
@@ -879,8 +869,9 @@ Add error handling to my code
 - Result: Better, but still generic without seeing actual code structure
   @file:api-client.js Add comprehensive error handling to the fetchUserData function. Handle network timeouts (>5s), HTTP errors (404, 500, etc.), and JSON parsing failures.   Return user-friendly error messages that match our existing error format in @file:error-types.js
 - Result: Specific implementation that matches existing code patterns\*
-  ::: notes
-  **Timing:** 3-4 minutes
+
+::: notes
+Duration ~00:04
 
 **Delivery Instructions:**
 This slide demonstrates the progression from terrible to excellent prompts—walk through each example deliberately.
@@ -906,173 +897,6 @@ This slide demonstrates the progression from terrible to excellent prompts—wal
 
 ---
 
-## Lab: Understanding Context Management
-
-Objectives
-Learn to add context using @ symbols
-Understand context window limitations
-Practice writing effective prompts
-Activities
-
-1. Basic Context Addition:
-   Use `@workspace` to search across your codebase
-   Use `@file` to reference specific files
-   Use `@terminal` to include terminal output in chat
-   Use `@vscode` to ask VS Code-specific questions
-2. Prompt Practice:
-   Write a vague prompt, observe results
-   Rewrite with specific context, compare results
-   Add file references to improve accuracy
-3. Context Window Experiment:
-   Start a long conversation in one chat
-   Notice when Copilot starts "forgetting" earlier context
-   Practice starting new chats for new topics
-   Success Criteria
-   Can use all @ context types
-   Understand when to start fresh chat sessions
-   Notice quality difference between vague and specific prompts
-
-::: notes
-Duration ~00:20
-
-**Lab Introduction:**
-"This is your first real hands-on practice with context management. Open VS Code and follow along—we'll work through this together."
-
-**Activity 1: Basic Context Addition (5-7 minutes)**
-Walk through each @ symbol type:
-
-- **@workspace**: "Try typing @workspace and searching for a class or function name. Copilot will search your entire codebase."
-- **@file**: "Type @file and start typing a filename. This gives Copilot the full content of that file—like handing someone a document before asking a question about it."
-- **@terminal**: "If you've just run a command that failed, use @terminal to include the error output. Copilot can see the actual error messages and stack traces."
-- **@vscode**: "Ask questions like '@vscode how do I change the theme?' or '@vscode what's the keyboard shortcut for...?' This tells Copilot you're asking about VS Code itself, not your code."
-
-**Activity 2: Prompt Practice (5-7 minutes)**
-
-- Have participants write a vague prompt first (like "optimize this function" without context)
-- Show the generic result
-- Then rewrite: "@file:myfile.js optimize the calculateTotal function for large datasets (1000+ items)"
-- Compare the quality difference side-by-side
-- Emphasize: "Same question, dramatically different results—just by adding context."
-
-**Activity 3: Context Window Experiment (5 minutes)**
-
-- "Start a chat and keep asking follow-up questions. After 10-15 exchanges, ask Copilot to reference something you said at the beginning."
-- "Notice how Copilot might struggle or forget? That's context window limitations—the AI can only 'remember' a limited amount of conversation."
-- **Key Teaching Moment:** "When you notice this happening, start a fresh chat. Don't try to fight a shrinking context window—just open a new session for the new topic."
-
-**Common Pitfalls to Mention:**
-
-- Forgetting to use @ symbols and then being disappointed with vague results
-- Overloading one chat with too many unrelated questions
-- Not realizing the context window is full (Copilot gets "forgetful")
-
-**Success Check:**
-Walk around (if in person) or ask participants to confirm:
-
-- "Can everyone use @file to reference a specific file?" (Show of hands or chat confirmation)
-- "Can everyone see the difference between a vague prompt and one with context?"
-
-**Transition:** "Great work! Now that you understand context, let's talk about organizing your chat sessions for maximum efficiency..."
-:::
-
----
-
-## Lab: Chat Management & Workflow
-
-Objectives
-
-- Organize chat sessions effectively
-- Use chat history for reference
-- Develop efficient workflow patterns
-  Activities
-
-1. Chat Organization:
-
-- Review your chat history
-- Identify chats that should have been separate sessions
-- Practice starting new chats at appropriate times
-
-2. Context Preservation:
-
-- Start a focused chat for one feature
-- Add relevant context systematically
-- Complete task without context overflow
-
-3. Quick Chat Practice:
-
-- Use main chat for primary task
-- Use quick chat for side questions
-- Return to main chat without losing context
-
-4. Chat History Review:
-
-- Find and reference previous solutions
-- Learn from past prompts that worked well
-- Identify patterns in effective conversations
-  Success Criteria
-- Chat history is organized and meaningful
-- Can find and reference previous solutions
-- Efficient workflow developed for using multiple chat windows
-  Context Window Management
-- Remember from the session:
-  - Context is a **limited resource**
-  - Start new chat when changing focus areas
-  - Keep conversations targeted and specific
-  - When Copilot "forgets" earlier context, it's time for a new session
-
-::: notes
-Duration ~00:20
-
-**Lab Introduction:**
-"Chat management might sound boring, but it's the difference between constantly fighting Copilot and having smooth, productive conversations. Let's build good habits now."
-
-**Activity 1: Chat Organization (5 minutes)**
-
-- **Review Chat History:** "Open your chat history panel. Look at the chats you've created so far today."
-- **Identify Mistakes:** "Find a chat where you started asking about one thing (e.g., error handling) and then pivoted to something completely unrelated (e.g., database queries). That's a sign you should have started a new chat."
-- **Practice New Chats:** "Rule of thumb: If you're changing topics, start a new chat. If it's a follow-up or refinement of the current topic, continue the same chat."
-- **Example:** "Bad: One chat for 'implement login, fix CSS, add tests, refactor database layer.' Good: Four separate chats—each focused on one task."
-
-**Activity 2: Context Preservation (5 minutes)**
-
-- **Start Focused Chat:** "Pick ONE small feature to implement—something specific like 'add validation to the email field.'"
-- **Add Context Systematically:** "Start with @file references for the relevant files. Don't dump the entire codebase—just the files you know are involved."
-- **Track Progress:** "As you work through the task, keep the chat focused. If you finish and want to start something else, open a new chat."
-- **Success Indicator:** "You'll know you're doing this right when you complete a task without Copilot forgetting earlier parts of the conversation."
-
-**Activity 3: Quick Chat Practice (3-5 minutes)**
-
-- **Main Chat = Primary Work:** "Open your main chat. Start working on a feature implementation."
-- **Side Question = Quick Chat:** "While working, you might wonder: 'What's the VS Code shortcut for...?' or 'How does Array.prototype.reduce work?' Use Quick Chat (keyboard shortcut: show it on screen) for these side questions."
-- **Return to Main:** "After getting your answer, close Quick Chat and continue in your main chat. Your main context is preserved."
-- **Why This Matters:** "Quick Chat prevents your main chat from getting derailed by unrelated questions. Keeps your work chat focused and your question answered."
-
-**Activity 4: Chat History Review (3-5 minutes)**
-
-- **Find Previous Solutions:** "Go back to your chat history. Find a chat where Copilot gave you a good solution to a problem."
-- **Learn from Past Prompts:** "Look at what YOU asked. What made that prompt work? Was it specific? Did you use @file references? Did you provide examples?"
-- **Pattern Recognition:** "Over time, you'll notice: 'When I ask questions this way, I get better results.' That's your effective prompt pattern—document it, reuse it."
-
-**Key Reminders (bottom of slide):**
-
-- Point to "Context Window Management" bullets at the bottom
-- **Context is Limited:** "Think of context like RAM—you have a fixed amount. Use it wisely."
-- **New Chat = Fresh Start:** "When Copilot forgets earlier conversation, it's not broken—you've just hit the limit. Start fresh."
-- **Targeted Conversations:** "One chat, one topic. Multi-tasking doesn't work in AI chats any better than it works for humans."
-
-**Success Check:**
-Ask participants:
-
-- "Can everyone find their chat history panel?"
-- "Did everyone successfully use Quick Chat without losing main chat context?"
-- "Can you think of a time today where you should have started a new chat but didn't?"
-
-**Transition:** "Now that you know how to manage conversations, let's look at the different MODES Copilot offers—Ask, Edit, and Agent modes..."
-:::
-
----
-
-
 ## Using Copilot in different modes
 
 Ask Mode
@@ -1091,102 +915,6 @@ Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and 
 
 ---
 
-## Lab: Exploring Copilot Modes
-
-Objectives
-Understand differences between Ask, Edit, and Agent modes
-Know when to use each mode
-Understand premium token implications
-Activities
-
-1. Ask Mode:
-   Ask Copilot to explain a code snippet (no changes made)
-   Request multiple implementation approaches
-   Try different models and observe response quality
-   Note: This doesn't consume premium tokens for advanced models
-2. Edit Mode:
-   Select code in a file
-   Ask Copilot to refactor it
-   Observe inline suggestions and changes
-   Accept or reject proposed changes
-3. Agent Mode:
-   Ask Copilot to create a new file and add content
-   Request changes across multiple files
-   Have Copilot run terminal commands
-   Check premium token usage after agent actions
-   Success Criteria
-   Can distinguish when to use each mode
-   Understand token consumption differences
-   Successfully use agent mode for multi-file operations
-
-::: notes
-Duration ~00:20
-
-**Lab Introduction:**
-"This lab is about understanding the differences between Copilot modes and—critically—when each mode consumes your premium tokens. Let's dive in."
-
-**Activity 1: Ask Mode (5-7 minutes)**
-
-- **Explain a Code Snippet:** "Open a file in your project. Select a function. Ask Copilot: 'Explain what this function does.' Copilot will analyze and explain—no code changes."
-- **Request Multiple Approaches:** "Ask: 'Show me three different ways to implement this logic.' Copilot will provide alternatives in the chat without touching your files."
-- **Model Selection:** "Try asking the same question with different models (e.g., GPT-4o vs Claude). Notice how responses differ in style, depth, and tone."
-- **KEY POINT:** "Ask mode is read-only. No code changes = no risk. And here's the bonus: **Ask mode doesn't consume premium tokens** even when using advanced models. You can ask questions all day without worrying about token limits."
-
-**Why Ask Mode is Powerful:**
-
-- Safe exploration (no accidental code changes)
-- Great for learning ("Explain this regex pattern")
-- Perfect for brainstorming ("What are different ways to handle authentication?")
-- Free premium model access for questions
-
-**Activity 2: Edit Mode (5-7 minutes)**
-
-- **Select and Refactor:** "Highlight a block of code. Ask Copilot: 'Refactor this to use async/await' or 'Extract this into a separate function.'"
-- **Observe Inline Suggestions:** "Copilot will show proposed changes directly in your editor—highlighted text, additions, deletions."
-- **Accept or Reject:** "You can accept the entire change, accept parts of it, or reject and try again. This is interactive editing."
-- **Use Case:** "Edit mode is perfect for improving existing code: refactoring, renaming, restructuring, adding error handling, improving readability."
-
-**When to Use Edit Mode:**
-
-- You know exactly where the change needs to happen
-- You're refining or improving existing code
-- You want to see diffs before accepting changes
-
-**Activity 3: Agent Mode (5-7 minutes)**
-
-- **Create New File:** "Ask Copilot: 'Create a new file utils/validation.js and add email validation logic.' Copilot will create the file AND add content."
-- **Multi-File Changes:** "Request: 'Update all my test files to use the new mocking library.' Copilot will scan your project, identify test files, and modify them."
-- **Run Terminal Commands:** "Ask: 'Install the lodash package and add it to my imports.' Copilot can run `npm install lodash` for you."
-- **Check Premium Tokens:** "After these actions, check your token usage bar (top of chat window). **Agent mode DOES consume premium tokens** because Copilot is taking actions on your behalf—creating files, running commands, making decisions."
-
-**Agent Mode Power and Cost:**
-
-- Can handle complex multi-step tasks autonomously
-- Saves enormous time (one prompt → entire feature scaffolded)
-- But: Uses premium tokens because it's doing real work
-- Best for: scaffolding new features, bulk refactors, project setup
-
-**Token Strategy Discussion:**
-
-- "Think of Ask mode for learning and exploring (free premium)."
-- "Use Edit mode for targeted changes (moderate token use)."
-- "Save Agent mode for high-value complex tasks (premium tokens, totally worth it)."
-
-**Success Check:**
-
-- "Can everyone explain the difference between Ask and Agent mode?" (Ask: read-only, no tokens; Agent: takes action, uses tokens)
-- "Did everyone successfully use Agent mode to create a file?"
-- "Anyone hit token limits? Let's talk about managing usage."
-
-**Common Question:** "Why does Agent mode use tokens but Ask mode doesn't?"
-**Answer:** "Agent mode is actively doing work: analyzing your entire codebase, making decisions, creating files, running commands. That's expensive computation. Ask mode just answers questions based on what you show it—much simpler."
-
-**Transition:** "Now that you understand the modes, let's look at the broader IDE landscape—what other tools offer AI assistance, and how does Copilot compare..."
-:::
-
----
-
-
 ## IDE Support for AI Assistance
 
 | IDE / Editor                     | Built-In AI Features                                                    | Supported AI Assistants                                              | Strengths                                                                                   | Limitations                                                                       |
@@ -1199,6 +927,167 @@ Duration ~00:20
 | Builder.io / Builder Code Editor | AI-enhanced coding environment with integrated assistants               | Multiple AI integrations depending on setup                          | Strong web-dev focus; modern AI-native UX                                                   | Not a general-purpose IDE                                                         |
 | Code-B Editors                   | Predictive code generation, debugging, and review                       | Multiple AI models depending on configuration                        | Strong AI-centric workflows; optimized for speed                                            | Less mainstream; smaller ecosystem                                                |
 | Claude Code                      | Terminal-first AI coding assistant; autonomous repo-wide reasoning      | Latest models from Anthropic and other via configuration             | Exceptional multi-file context handling; ideal for agentic workflows and automated patching | Not a GUI IDE; best suited for terminal-centric development and large codebases   |
+
+---
+
+## Lab: Getting Started with GitHub Copilot
+
+Objectives
+
+- Install and configure GitHub Copilot
+- Verify authentication with your GitHub account
+- Explore core Copilot UI components in VS Code
+
+Activities
+
+1. Install the GitHub Copilot extension from the VS Code marketplace.
+2. Sign in with your GitHub account and verify Copilot access.
+3. Locate and explore:
+   - Chat window and chat history
+   - New chat button
+   - Quick chat feature and keyboard shortcut
+   - Settings menu
+   - Model selection dropdown
+4. Check your premium token usage bar.
+5. Create a new chat and experiment with the interface.
+
+Success Criteria
+
+- Copilot extension is installed and authenticated
+- You can open and close chat windows
+- You can explain main chat versus quick chat
+- You can find and use chat history
+
+::: notes
+Duration ~00:30
+
+Use this lab as the onboarding checkpoint for all remaining Copilot exercises. Start by confirming everyone has VS Code open and can reach the extension marketplace, then walk the room while participants sign in and complete authentication. Pause after each interface element so learners can find it before moving forward, especially quick chat and model selection since these are easy to miss for first-time users. Close by asking each participant to start one test chat so you can confirm readiness before transitioning to context management.
+:::
+
+---
+
+## Lab: Understanding Context Management
+
+Objectives
+
+- Learn to add context using @ symbols
+- Understand context window limitations
+- Practice writing effective prompts
+
+Activities
+
+1. Basic context addition:
+   - Use `@workspace` to search your codebase
+   - Use `@file` to reference specific files
+   - Use `@terminal` to include command output
+   - Use `@vscode` for VS Code product questions
+2. Prompt practice:
+   - Write a vague prompt and observe the result
+   - Rewrite with specific context and compare quality
+   - Add file references to improve accuracy
+3. Context window experiment:
+   - Run a longer single conversation
+   - Observe when early context gets dropped
+   - Start a new chat when topic focus changes
+
+Success Criteria
+
+- You can use all four @ context types
+- You can identify when to start a fresh chat
+- You can show quality improvements from specific prompts
+
+::: notes
+Duration ~00:20
+
+Frame this as the first skill that directly improves Copilot output quality without changing tools or models. During the @ symbol walkthrough, have participants perform each step live and explain what new information Copilot gains from each context type. For the prompt comparison, ask learners to keep the same goal and only change context quality so the difference is obvious and measurable. End by normalizing context window limits as expected behavior, then reinforce the habit that new topic equals new chat.
+:::
+
+---
+
+## Lab: Chat Management and Workflow
+
+Objectives
+
+- Organize chat sessions effectively
+- Use chat history as a working reference
+- Develop efficient workflow patterns with main and quick chat
+
+Activities
+
+1. Chat organization:
+   - Review current chat history
+   - Identify conversations that should have been separate
+   - Practice starting new chats at natural topic boundaries
+2. Context preservation:
+   - Run one focused feature chat
+   - Add only relevant context files
+   - Complete work without context overflow
+3. Quick chat practice:
+   - Keep main chat for primary task flow
+   - Use quick chat for side questions
+   - Return to main chat with context preserved
+4. Chat history review:
+   - Locate previous high-quality solutions
+   - Identify prompts that worked well
+   - Capture repeatable prompt patterns
+
+Success Criteria
+
+- Chat history is organized and meaningful
+- You can quickly find and reuse previous solutions
+- You can use multiple chat windows without losing primary context
+
+Context Window Management
+
+- Context is a limited resource
+- Start a new chat when focus changes
+- Keep conversations targeted and specific
+- If Copilot forgets early details, reset with a fresh chat
+
+::: notes
+Duration ~00:20
+
+Introduce this lab as productivity hygiene that prevents context fatigue and low-quality responses later in the day. Coach participants to separate work streams by topic, and use quick chat for interruptions so their main conversation remains coherent and reusable. During the history review, have each learner identify one prompt that worked well and explain why it worked, which helps them build a personal prompting playbook. Finish with the context window management bullets as operational rules they can apply in every future session.
+:::
+
+---
+
+## Lab: Exploring Copilot Modes
+
+Objectives
+
+- Understand differences between Ask, Edit, and Agent modes
+- Know when to use each mode
+- Understand premium token usage implications
+
+Activities
+
+1. Ask mode:
+   - Ask Copilot to explain a selected code snippet
+   - Request multiple implementation approaches
+   - Try different models and compare response style
+   - Note that Ask mode is best for exploration
+2. Edit mode:
+   - Select existing code and request a refactor
+   - Review inline proposed changes
+   - Accept or reject updates intentionally
+3. Agent mode:
+   - Create a new file and add starter content
+   - Request coordinated changes across multiple files
+   - Ask Copilot to run terminal commands
+   - Recheck premium token usage after actions
+
+Success Criteria
+
+- You can choose the right mode for the task
+- You can explain relative token usage tradeoffs
+- You can complete a multi-file action using Agent mode
+
+::: notes
+Duration ~00:20
+
+Position this lab as decision-making practice so participants learn to match the mode to the work, not just default to one interface. In Ask mode, emphasize low-risk exploration and comparative learning with different models before making any code changes. In Edit mode, slow down and review diffs so learners build trust through verification rather than blind acceptance. In Agent mode, demonstrate value on a task that justifies automation, then connect the result to token usage so participants can balance cost and productivity in real workflows.
+:::
 
 ---
 
@@ -1274,8 +1163,6 @@ The project should be ready to build and run from the command line.
 
 ## Exercise: Calculator Project - Setup and Basic Implementation
 
-Duration: 45-60 minutes
-
 Objectives
 
 - Use AI to generate starter code for arithmetic operations
@@ -1311,10 +1198,10 @@ Success Criteria
 - Generated code is critically reviewed
 
 ::: notes
+Duration ~01:00
 
 ## Setup and Basic Implementation Exercise Instructions
 
-**Duration:** 45-60 minutes
 **Prerequisites:** Calculator project context available
 
 ### Objectives
@@ -1333,13 +1220,11 @@ Success Criteria
 - Four operations work end-to-end.
 - Build is green.
 - Team can explain logic and edge-case handling.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Clear / Reset
-
-Duration: 15 minutes
 
 Objectives
 
@@ -1360,10 +1245,10 @@ Success Criteria
 - C resets the entire calculator state
 
 ::: notes
+Duration ~00:15
 
 ## Clear / Reset Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** Basic calculator state model
 
 ### Objectives
@@ -1378,13 +1263,11 @@ Success Criteria
 ### Success Criteria
 
 - CE and C behaviors are consistent and explainable.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Decimal Input
-
-Duration: 12 minutes
 
 Objectives
 
@@ -1406,10 +1289,10 @@ Success Criteria
 - Validation logic is explainable
 
 ::: notes
+Duration ~00:12
 
 ## Decimal Input Exercise Instructions
 
-**Duration:** 12 minutes
 **Prerequisites:** Input parser in place
 
 ### Objectives
@@ -1424,13 +1307,11 @@ Success Criteria
 
 - No duplicate decimal points accepted.
 - Decimal math behaves correctly.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Sign Toggle (+/-)
-
-Duration: 8 minutes
 
 Objectives
 
@@ -1449,10 +1330,10 @@ Success Criteria
 - Learner can explain stored vs active value impact
 
 ::: notes
+Duration ~00:08
 
 ## Sign Toggle Exercise Instructions
 
-**Duration:** 8 minutes
 **Prerequisites:** Numeric input flow functioning
 
 ### Objectives
@@ -1466,13 +1347,11 @@ Success Criteria
 ### Success Criteria
 
 - Toggle is stable across value states.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Percentage
-
-Duration: 15 minutes
 
 Objectives
 
@@ -1497,10 +1376,10 @@ Success Criteria
 - Learner can articulate percentage interpretation rules
 
 ::: notes
+Duration ~00:15
 
 ## Percentage Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** Core arithmetic implemented
 
 ### Objectives
@@ -1514,13 +1393,11 @@ Success Criteria
 ### Success Criteria
 
 - Three key percentage patterns operate correctly.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Memory Functions (M+, M-, MR, MC)
-
-Duration: 18 minutes
 
 Objectives
 
@@ -1541,10 +1418,10 @@ Success Criteria
 - Learner can explain memory state updates
 
 ::: notes
+Duration ~00:18
 
 ## Memory Functions Exercise Instructions
 
-**Duration:** 18 minutes
 **Prerequisites:** Calculator state architecture defined
 
 ### Objectives
@@ -1558,13 +1435,11 @@ Success Criteria
 ### Success Criteria
 
 - Memory operations are consistent and validated.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Error Handling
-
-Duration: 10 minutes
 
 Objectives
 
@@ -1586,10 +1461,10 @@ Success Criteria
 - Learner can explain error-handling flow
 
 ::: notes
+Duration ~00:10
 
 ## Error Handling Exercise Instructions
 
-**Duration:** 10 minutes
 **Prerequisites:** Core operations implemented
 
 ### Objectives
@@ -1603,13 +1478,11 @@ Success Criteria
 ### Success Criteria
 
 - Error handling is visible, predictable, and recoverable.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Add Trigonometric Functions
-
-Duration: 15 minutes
 
 Objectives
 
@@ -1632,10 +1505,10 @@ Success Criteria
 - Learner can explain validation and refinement steps
 
 ::: notes
+Duration ~00:15
 
 ## Trigonometric Functions Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** Advanced operation framework available
 
 ### Objectives
@@ -1649,13 +1522,11 @@ Success Criteria
 ### Success Criteria
 
 - Trig pipeline works end-to-end with tested expectations.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - UI
-
-Duration: 15 minutes
 
 Objectives
 
@@ -1681,10 +1552,10 @@ Success Criteria
 - Learner can explain UI-to-logic mapping
 
 ::: notes
+Duration ~00:15
 
 ## UI Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** Core logic stable and testable
 
 ### Objectives
@@ -1698,13 +1569,11 @@ Success Criteria
 ### Success Criteria
 
 - Workflow passes from input to output with no breaks.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Testing
-
-Duration: 45-60 minutes
 
 Objectives
 
@@ -1745,10 +1614,10 @@ Success Criteria
 - All tests pass
 
 ::: notes
+Duration ~01:00
 
 ## Testing Exercise Instructions
 
-**Duration:** 45-60 minutes
 **Prerequisites:** Calculator logic implemented
 
 ### Objectives
@@ -1762,13 +1631,11 @@ Success Criteria
 ### Success Criteria
 
 - Test suite is meaningful, comprehensive, and green.
-  :::
+:::
 
 ---
 
 ## Exercise: Code Coverage
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -1804,10 +1671,10 @@ Success Criteria
 - Learner understands what coverage metrics mean
 
 ::: notes
+Duration ~00:40
 
 ## Code Coverage Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Stable test suite
 
 ### Objectives
@@ -1821,13 +1688,11 @@ Success Criteria
 ### Success Criteria
 
 - Coverage setup works and leads to actionable improvements.
-  :::
+:::
 
 ---
 
 ## Exercise: Dependency Management and Troubleshooting
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -1867,10 +1732,10 @@ Success Criteria
 - Iterative problem-solving pattern demonstrated
 
 ::: notes
+Duration ~00:40
 
 ## Dependency Troubleshooting Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Build/test environment configured
 
 ### Objectives
@@ -1884,13 +1749,11 @@ Success Criteria
 ### Success Criteria
 
 - Issue resolution is repeatable and well-documented.
-  :::
+:::
 
 ---
 
 ## Exercise: Best Practices Review and Code Quality
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -1912,10 +1775,10 @@ Success Criteria
 - AI suggestions are critically evaluated before adoption
 
 ::: notes
+Duration ~00:40
 
 ## Best Practices Review Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Working project baseline
 
 ### Objectives
@@ -1929,13 +1792,11 @@ Success Criteria
 ### Success Criteria
 
 - Improvements are justified and validated.
-  :::
+:::
 
 ---
 
 ## Exercise: Model Comparisons
-
-Duration: 20-30 minutes
 
 Objectives
 
@@ -1973,10 +1834,10 @@ Success Criteria
 - Learner can choose model by task type
 
 ::: notes
+Duration ~00:30
 
 ## Model Comparisons Exercise Instructions
 
-**Duration:** 20-30 minutes
 **Prerequisites:** Access to multiple model options
 
 ### Objectives
@@ -1990,13 +1851,11 @@ Success Criteria
 ### Success Criteria
 
 - Team can explain when premium models are worth it.
-  :::
+:::
 
 ---
 
 ## Exercise: Calculator Project - Encapsulate Core Logic
-
-Duration: 15 minutes
 
 Objectives
 
@@ -2023,10 +1882,10 @@ Success Criteria
 - Learner can explain modularity and reuse benefits
 
 ::: notes
+Duration ~00:15
 
 ## Encapsulate Core Logic Exercise Instructions
 
-**Duration:** 15 minutes
 **Prerequisites:** UI and logic currently coupled
 
 ### Objectives
@@ -2040,13 +1899,11 @@ Success Criteria
 ### Success Criteria
 
 - Core logic is isolated and reusable.
-  :::
+:::
 
 ---
 
 ## Exercise: Security Review
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -2068,10 +1925,10 @@ Success Criteria
 - AI recommendations are critically evaluated and validated
 
 ::: notes
+Duration ~00:40
 
 ## Security Review Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Functional calculator project
 
 ### Objectives
@@ -2085,13 +1942,11 @@ Success Criteria
 ### Success Criteria
 
 - Security posture improves with documented rationale.
-  :::
+:::
 
 ---
 
 ## Exercise: Documentation
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -2113,10 +1968,10 @@ Success Criteria
 - AI-generated content is critically reviewed before acceptance
 
 ::: notes
+Duration ~00:40
 
 ## Documentation Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Stable code to document
 
 ### Objectives
@@ -2130,13 +1985,11 @@ Success Criteria
 ### Success Criteria
 
 - Docs are complete, correct, and actionable.
-  :::
+:::
 
 ---
 
 ## Exercise: Refactoring
-
-Duration: 30-40 minutes
 
 Objectives
 
@@ -2159,10 +2012,10 @@ Success Criteria
 - AI suggestions critically evaluated
 
 ::: notes
+Duration ~00:40
 
 ## Refactoring Exercise Instructions
 
-**Duration:** 30-40 minutes
 **Prerequisites:** Existing implementation with improvement opportunities
 
 ### Objectives
@@ -2176,7 +2029,7 @@ Success Criteria
 ### Success Criteria
 
 - Selected refactor improves clarity without regressions.
-  :::
+:::
 
 ---
 
@@ -2347,6 +2200,8 @@ Introduce this module as a practical guide to using AI — specifically GitHub C
 ---
 
 
+
+
 ## Why Pipelines Are Hard
 
 YAML syntax is unforgiving
@@ -2360,6 +2215,8 @@ Open with empathy. Most developers have lost an afternoon to a mis-indented YAML
 :::
 
 ---
+
+
 
 
 ## What AI Brings to CI/CD
@@ -2381,6 +2238,8 @@ Walk through the mental model: the developer provides intent, the AI provides sy
 :::
 
 ---
+
+
 
 
 ## GitHub Actions YAML Generation
@@ -2406,6 +2265,8 @@ Live demo opportunity: open a blank `.github/workflows/ci.yml` and type the prom
 :::
 
 ---
+
+
 
 
 ## Anatomy of an AI-Generated Workflow
@@ -2438,6 +2299,8 @@ Walk through each section: triggers, runner, checkout, SDK setup, restore, build
 ---
 
 
+
+
 ## Coverage Thresholds
 
 Coverage gates enforce quality — AI helps configure them correctly
@@ -2463,6 +2326,8 @@ Coverage thresholds are one of the most common sources of confusion: where does 
 :::
 
 ---
+
+
 
 
 ## Build Automation Patterns
@@ -2495,6 +2360,8 @@ Matrix builds and caching are two patterns that dramatically improve pipeline pe
 ---
 
 
+
+
 ## Maintaining Pipelines with AI
 
 Pipelines rot — actions deprecate, runners change, dependencies drift
@@ -2513,6 +2380,8 @@ Maintenance is where AI pays long-term dividends. Demo: paste a failing workflow
 :::
 
 ---
+
+
 
 
 ## Reusable Workflows
@@ -2545,6 +2414,8 @@ Reusable workflows (`workflow_call`) are a powerful but often underused GitHub A
 ---
 
 
+
+
 ## Secrets, Permissions, and Security
 
 AI assists but YOU own security decisions
@@ -2568,6 +2439,8 @@ Stress that AI can suggest correct permission scopes but cannot see your reposit
 :::
 
 ---
+
+
 
 
 ## From Zero to Pipeline: Live Workflow
@@ -2615,6 +2488,8 @@ Duration ~00:20
 :::
 
 ---
+
+
 
 
 ## Key Takeaways
@@ -3040,6 +2915,8 @@ Introduce this module as a way to help teams understand how different AI models 
 ---
 
 
+
+
 ## Implementing Changes With Different AI Models
 
 Why use multiple models?
@@ -3057,6 +2934,8 @@ Explain that no single model is perfect. Using multiple models gives teams a bro
 :::
 
 ---
+
+
 
 
 ## Comparing Approaches & Outcomes
@@ -3079,6 +2958,8 @@ Encourage participants to treat model outputs like multiple drafts from differen
 ---
 
 
+
+
 ## Risk Assessment & Quality Evaluation
 
 Risk indicators
@@ -3097,6 +2978,8 @@ Reinforce that risk assessment is essential in brownfield systems. Even if a mod
 :::
 
 ---
+
+
 
 
 ## Best Practice Synthesis
@@ -3215,7 +3098,10 @@ Intent-First Design
 - Structure the system so any part can be regenerated, swapped, or upgraded without cascading breakage.
   Lifecycle Governance
 - Maintain quality through automated tests, versioning discipline, and human-in-the-loop validation.
-  ::: notes
+
+::: notes
+Duration ~00:05
+
   Introduce Evergreen Software Development as a philosophy for building systems that can evolve indefinitely without degrading. This is crucial for AI-assisted development.
 
 Explain each principle:
@@ -3228,7 +3114,6 @@ Explain each principle:
 
 Key insight: Traditional software rots over time. Evergreen software is designed to be continuously regenerated and improved.
 
-Timing: 4-5 minutes.
 Transition: "Let's see why software fails to be evergreen..."
 :::
 
@@ -3247,7 +3132,10 @@ Intent Rot
 - Missing tests, specs, or validation layers mean AI-assisted regeneration can't be trusted to preserve behavior.
   One-Off Patches and Drift
 - Ad-hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
-  ::: notes
+
+::: notes
+Duration ~00:05
+
   Explain the common anti-patterns that prevent software from being evergreen. These are the enemies of long-term maintainability.
 
 1. Intent Rot: Documentation becomes outdated or nonexistent. AI can't regenerate code when it doesn't know the purpose.
@@ -3262,7 +3150,6 @@ Real-world examples:
 - Microservices with frequently changing APIs (unstable interfaces)
 - Monolith with circular dependencies (tight coupling)
 
-Timing: 4-5 minutes.
 Transition: "Let's see how to avoid these pitfalls..."
 :::
 
@@ -3316,6 +3203,8 @@ These practices turn AI from a novelty into a disciplined engineering tool.
 ---
 
 
+
+
 ## Instructions, Prompts & Agents
 
 Definitions
@@ -3330,6 +3219,8 @@ Together, they form a layered control system that shapes AI behavior and reduces
 :::
 
 ---
+
+
 
 
 ## Creating Instruction, Prompt & Agent Files
@@ -3353,6 +3244,8 @@ This is essential for brownfield modernization, where consistency and traceabili
 ---
 
 
+
+
 ## Meta Prompts
 
 Meta prompts guide:
@@ -3372,6 +3265,8 @@ This reduces manual effort and ensures that all artifacts follow a consistent pa
 ---
 
 
+
+
 ## Instructions for Generating Artifacts
 
 Best practices
@@ -3388,6 +3283,8 @@ This prevents drift and ensures the output is usable without heavy editing.
 :::
 
 ---
+
+
 
 
 ## Enforcing Provenance for AI Artifacts
@@ -3441,6 +3338,8 @@ This exercise reinforces the importance of maintaining consistent AI-assisted ou
 ---
 
 
+
+
 ## Instructions for AI Generated Artifacts
 
 The one instruction file that rules them all
@@ -3454,6 +3353,8 @@ It ensures teams know which artifacts were AI-generated, which were human-genera
 ---
 
 
+
+
 ## AI-Assisted Output Instructions
 
 Ensures provenance and logging for all AI-assisted outputs
@@ -3465,6 +3366,8 @@ This slide introduces the purpose of the AI-Assisted Output Instructions file: t
 :::
 
 ---
+
+
 
 
 ## Required Provenance Metadata
@@ -3490,6 +3393,8 @@ These fields ensure each artifact can be traced back to its origin, model, and o
 ---
 
 
+
+
 ## Metadata Placement Policy
 
 Use YAML front matter for Markdown and similar formats
@@ -3505,6 +3410,8 @@ Note: Instructions files have limited support for metadata and must use sidecar 
 :::
 
 ---
+
+
 
 
 ## AI Chat Logging Workflow
@@ -3526,6 +3433,8 @@ Each session gets its own folder, transcript, and summary, ensuring clear separa
 ---
 
 
+
+
 ## Quality & PR Checklist
 
 Metadata complete and correct
@@ -3543,6 +3452,8 @@ Artifacts must be fully documented, logs must exist, and sensitive data must be 
 ---
 
 
+
+
 ## Copilot Integration Requirements
 
 Copilot must auto-manage chat IDs and logs
@@ -3557,6 +3468,8 @@ Copilot should automate chat management, metadata injection, and enforce complia
 :::
 
 ---
+
+
 
 
 ## Enforcement & Remediation
@@ -3576,6 +3489,8 @@ Any missing provenance must be remediated before merging.
 ---
 
 
+
+
 ## Summary: Why This Matters
 
 Enables auditability and trust in AI outputs
@@ -3587,6 +3502,8 @@ This slide reinforces the value of these instructions: they ensure every AI-assi
 :::
 
 ---
+
+
 
 
 ## Core Instruction files
@@ -3734,7 +3651,7 @@ This exercise builds intuition for context management—one of the most importan
 ## Instruction Files
 
 ::: notes
-**Opening**: This is the title slide introducing the concept of instruction files. **Keep It Brief**: Simply say "Let's talk about instruction files—a powerful way to guide AI behavior persistently across your projects." **Visual Cue**: Let the title appear, pause for 2-3 seconds. **No Content Yet**: Don't explain what they are—that's the next slide's job. **Timing**: 10-15 seconds. **Transition**: "First, let me frame what we mean by 'persistent AI behavioral guidelines'..."
+**Opening**: This is the title slide introducing the concept of instruction files. **Keep It Brief**: Simply say "Let's talk about instruction files—a powerful way to guide AI behavior persistently across your projects." **Visual Cue**: Let the title appear, pause for 2-3 seconds. **No Content Yet**: Don't explain what they are—that's the next slide's job. **Transition**: "First, let me frame what we mean by 'persistent AI behavioral guidelines'..."
 :::
 
 ---
@@ -3742,7 +3659,7 @@ This exercise builds intuition for context management—one of the most importan
 ## Persistent AI Behavioral Guidelines
 
 ::: notes
-**Frame the Concept**: This subtitle slide sets up the key mental model. **Persistent**: Emphasize that unlike one-time prompts, these rules stay active across multiple interactions. **Behavioral**: These files tell AI _how_ to work, not _what_ to build. **Guidelines vs Commands**: "Think of instruction files as automated code review rules that apply every time AI generates code." **Analogy**: "Like .editorconfig or .eslintrc files, but for AI behavior instead of code formatting." **Timing**: 30 seconds. **Transition**: "So what exactly are instruction files? Let's define them..."
+**Frame the Concept**: This subtitle slide sets up the key mental model. **Persistent**: Emphasize that unlike one-time prompts, these rules stay active across multiple interactions. **Behavioral**: These files tell AI _how_ to work, not _what_ to build. **Guidelines vs Commands**: "Think of instruction files as automated code review rules that apply every time AI generates code." **Analogy**: "Like .editorconfig or .eslintrc files, but for AI behavior instead of code formatting." **Transition**: "So what exactly are instruction files? Let's define them..."
 :::
 
 ---
@@ -3758,7 +3675,7 @@ Scope: Repository-wide or context-specific
 Persistence: Active across all relevant AI interactions
 Purpose: Define “how” AI should work, not “what” to do
 ::: notes
-**Definition Emphasis**: Read the definition slowly—this is foundational. **Configuration Metaphor**: "Just like you configure your IDE or linter, you configure your AI assistant with instruction files." **Automatic Application**: Key point: once created, they're automatically applied. No need to paste instructions repeatedly. **Standards Example**: "Example: All Azure code must use managed identities, no hardcoded keys. Put that in azure-dev.instructions.md, and AI will follow it automatically." **Scope Explanation**: Can apply broadly (`applyTo: "**"`) or narrowly (`applyTo: "*.cs"`). **How vs What**: Clarify: Instructions define _style_ ("use dependency injection") not _tasks_ ("build a login system"). **Audience Check**: "Does this distinction make sense—how versus what?" **Timing**: 2 minutes. **Transition**: "Let me show you what one looks like..."
+**Definition Emphasis**: Read the definition slowly—this is foundational. **Configuration Metaphor**: "Just like you configure your IDE or linter, you configure your AI assistant with instruction files." **Automatic Application**: Key point: once created, they're automatically applied. No need to paste instructions repeatedly. **Standards Example**: "Example: All Azure code must use managed identities, no hardcoded keys. Put that in azure-dev.instructions.md, and AI will follow it automatically." **Scope Explanation**: Can apply broadly (`applyTo: "**"`) or narrowly (`applyTo: "*.cs"`). **How vs What**: Clarify: Instructions define _style_ ("use dependency injection") not _tasks_ ("build a login system"). **Audience Check**: "Does this distinction make sense—how versus what?" **Transition**: "Let me show you what one looks like..."
 :::
 
 ---
@@ -3787,7 +3704,7 @@ applyTo: "**" # File pattern scope
 ```
 
 ::: notes
-**Walk Through Example**: Go section by section, don't rush. **YAML Front Matter**: "Every instruction file starts with metadata. Description explains purpose, applyTo defines scope." **ApplyTo Pattern**: Explain glob patterns—`"**"` means all files, `"*.py"` means Python only, `"src/**/*.ts"` means TypeScript in src folder. **Core Instructions**: "This section defines high-level principles—use Azure-specific tools, enforce security, proper error handling." **Code Generation Rules**: "This section gets tactical—TDD approach, dependency injection, naming standards, logging requirements." **Live Demo Opportunity**: If time permits, show a real instruction file from the repo. **Practical Point**: "AI reads this file automatically when working in your repo—no copy-paste needed." **Timing**: 3 minutes. **Transition**: "When should you use instruction files? Let's look at common use cases..."
+**Walk Through Example**: Go section by section, don't rush. **YAML Front Matter**: "Every instruction file starts with metadata. Description explains purpose, applyTo defines scope." **ApplyTo Pattern**: Explain glob patterns—`"**"` means all files, `"*.py"` means Python only, `"src/**/*.ts"` means TypeScript in src folder. **Core Instructions**: "This section defines high-level principles—use Azure-specific tools, enforce security, proper error handling." **Code Generation Rules**: "This section gets tactical—TDD approach, dependency injection, naming standards, logging requirements." **Live Demo Opportunity**: If time permits, show a real instruction file from the repo. **Practical Point**: "AI reads this file automatically when working in your repo—no copy-paste needed." **Transition**: "When should you use instruction files? Let's look at common use cases..."
 :::
 
 ---
@@ -3805,7 +3722,7 @@ testing-standards.instructions.md
 security-requirements.instructions.md
 
 ::: notes
-**Use Cases Overview**: These are the "why" behind instruction files. **Coding Standards**: "Every team has style preferences—indentation, naming, file organization. Instruction files codify this for AI." **Security Example**: "You can mandate: 'Never log passwords', 'Always sanitize user input', 'Use parameterized queries'. AI will follow these rules automatically." **Quality Gates**: "Require test coverage thresholds, code review checklists, documentation standards." **Technology Constraints**: "Enterprise scenario: only approved libraries/frameworks allowed. Instruction file enforces this." **Real Examples**: Point to each example filename and briefly explain: azure-development covers cloud-specific patterns, testing-standards defines test structure, security-requirements enforces security policies. **Team Benefit**: "This is especially powerful for teams—everyone's AI assistant follows the same rules, producing consistent output." **Timing**: 2-3 minutes. **Transition**: "Before we move on, let me share some best practices..."
+**Use Cases Overview**: These are the "why" behind instruction files. **Coding Standards**: "Every team has style preferences—indentation, naming, file organization. Instruction files codify this for AI." **Security Example**: "You can mandate: 'Never log passwords', 'Always sanitize user input', 'Use parameterized queries'. AI will follow these rules automatically." **Quality Gates**: "Require test coverage thresholds, code review checklists, documentation standards." **Technology Constraints**: "Enterprise scenario: only approved libraries/frameworks allowed. Instruction file enforces this." **Real Examples**: Point to each example filename and briefly explain: azure-development covers cloud-specific patterns, testing-standards defines test structure, security-requirements enforces security policies. **Team Benefit**: "This is especially powerful for teams—everyone's AI assistant follows the same rules, producing consistent output." **Transition**: "Before we move on, let me share some best practices..."
 :::
 
 ---
@@ -3823,7 +3740,7 @@ Too many instructions (cognitive overload)
 Instructions that conflict with prompt files
 Hardcoded values instead of parameters
 ::: notes
-**Best Practices Summary**: This slide prevents common mistakes. **Clear and Actionable**: Bad: "Code should be good." Good: "Use async/await for I/O operations." Be specific. **File Patterns**: Explain `applyTo` strategy—broad patterns for general rules, narrow patterns for specific contexts. **Version Control**: "Instruction files are code. Commit them, review changes, track evolution." **Test Effectiveness**: "After creating an instruction file, test it—ask AI to generate code and verify it follows the rules." **Avoid Complexity**: "If AI can't understand your instructions, they won't work. Keep language simple, rules unambiguous." **Cognitive Overload**: "Don't create 50 instruction files. AI (like humans) can only track so much. Consolidate related rules." **Conflicts**: "Instruction files apply automatically, prompts are one-time. Make sure they don't contradict each other." **No Hardcoding**: "Use parameters and environment variables, not hardcoded URLs or credentials." **Practical Advice**: "Start small—one or two instruction files. Expand based on team needs." **Timing**: 3 minutes. **Transition**: Depending on agenda, either "Let's see this in action with a hands-on demo..." or "Questions about instruction files before we move on?"
+**Best Practices Summary**: This slide prevents common mistakes. **Clear and Actionable**: Bad: "Code should be good." Good: "Use async/await for I/O operations." Be specific. **File Patterns**: Explain `applyTo` strategy—broad patterns for general rules, narrow patterns for specific contexts. **Version Control**: "Instruction files are code. Commit them, review changes, track evolution." **Test Effectiveness**: "After creating an instruction file, test it—ask AI to generate code and verify it follows the rules." **Avoid Complexity**: "If AI can't understand your instructions, they won't work. Keep language simple, rules unambiguous." **Cognitive Overload**: "Don't create 50 instruction files. AI (like humans) can only track so much. Consolidate related rules." **Conflicts**: "Instruction files apply automatically, prompts are one-time. Make sure they don't contradict each other." **No Hardcoding**: "Use parameters and environment variables, not hardcoded URLs or credentials." **Practical Advice**: "Start small—one or two instruction files. Expand based on team needs." **Transition**: Depending on agenda, either "Let's see this in action with a hands-on demo..." or "Questions about instruction files before we move on?"
 :::
 
 ---
@@ -3846,6 +3763,8 @@ Welcome to this presentation on instruction file applyTo patterns. This is a cri
 ---
 
 
+
+
 ## Where `appliesTo` Fits
 
 The filtering mechanism for instruction files
@@ -3866,6 +3785,8 @@ rule. It prevents irrelevant instructions from polluting the stack and
 keeps the assistant focused.
 
 ---
+
+
 
 
 ## How `appliesTo` Interacts with the Stack
@@ -4543,6 +4464,8 @@ Then review and update your patterns. This is normal maintenance.
 :::
 
 ---
+
+
 
 
 ## 💡 Resources & Next Steps

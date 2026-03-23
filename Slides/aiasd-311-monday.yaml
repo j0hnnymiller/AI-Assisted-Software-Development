@@ -20,7 +20,9 @@ sections:
   - name: Intro to Copilot
     slides:
       - Slides\individual-slides\repository-and-tool-setup.md
+      - Slides\individual-slides\exercise-fork-and-clone-repositories.md
       - Slides\individual-slides\hands-on-with-github-copilot-vs-code.md
+      - Slides\individual-slides\exercise-github-copilot-vscode-workflows.md
 
   - name: AI Assistance in Action
     slides:
