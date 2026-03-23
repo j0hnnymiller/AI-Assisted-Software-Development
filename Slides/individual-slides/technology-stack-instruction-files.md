@@ -58,6 +58,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 <!-- _class: lead -->
 
 ## Technology Stack Instruction Files
@@ -68,7 +69,7 @@ paginate: true
 ::: notes
 Duration ~00:17
 
-Frame this section as part of the greenfield foundation work rather than a documentation side quest. Explain that instruction files help the AI and the team align on standards before implementation begins, which reduces drift and rework later.  Transition by asking what should exist before anyone prompts for technology-specific instructions.
+Frame this section as part of the greenfield foundation work rather than a documentation side quest. Explain that instruction files help the AI and the team align on standards before implementation begins, which reduces drift and rework later. Transition by asking what should exist before anyone prompts for technology-specific instructions.
 :::
 
 ---
@@ -90,7 +91,7 @@ flowchart LR
 ::: notes
 Duration ~00:02
 
-Explain that instruction files are most valuable when they reflect the actual technology choices and constraints of the project. If the requirements are vague, the generated guidance will also be vague, so the stack definition has to come first.  Transition by showing the simple prompting pattern used to produce the first draft.
+Explain that instruction files are most valuable when they reflect the actual technology choices and constraints of the project. If the requirements are vague, the generated guidance will also be vague, so the stack definition has to come first. Transition by showing the simple prompting pattern used to produce the first draft.
 :::
 
 ---
@@ -110,7 +111,7 @@ Explain that instruction files are most valuable when they reflect the actual te
 ::: notes
 Duration ~00:02
 
-Make the point that the initial prompt does not need to be elaborate to be useful. What matters is that it clearly names the technologies and asks for standards that map to real development concerns like semantics, accessibility, and runtime performance.  Transition by moving from prompt generation to what a good instruction file should contain.
+Make the point that the initial prompt does not need to be elaborate to be useful. What matters is that it clearly names the technologies and asks for standards that map to real development concerns like semantics, accessibility, and runtime performance. Transition by moving from prompt generation to what a good instruction file should contain.
 :::
 
 ---
@@ -141,7 +142,7 @@ Make the point that the initial prompt does not need to be elaborate to be usefu
 ::: notes
 Duration ~00:03
 
-Walk through the content categories rather than reading the bullets verbatim. The core idea is that each technology file should move beyond syntax tips and instead define operational expectations for how code should be written in this repository.  Transition by describing how the team reviews the generated file before relying on it.
+Walk through the content categories rather than reading the bullets verbatim. The core idea is that each technology file should move beyond syntax tips and instead define operational expectations for how code should be written in this repository. Transition by describing how the team reviews the generated file before relying on it.
 :::
 
 ---
@@ -165,7 +166,7 @@ flowchart TB
 ::: notes
 Duration ~00:02
 
-Explain that review is what turns an acceptable draft into a dependable working standard. Teams should inspect whether the file is actionable for the AI, readable for humans, and explicit enough to guide consistent output across sessions.  Transition by introducing the role of multiple models in improving quality.
+Explain that review is what turns an acceptable draft into a dependable working standard. Teams should inspect whether the file is actionable for the AI, readable for humans, and explicit enough to guide consistent output across sessions. Transition by introducing the role of multiple models in improving quality.
 :::
 
 ---
@@ -177,15 +178,15 @@ Explain that review is what turns an acceptable draft into a dependable working 
 - Pull strengths from more than one model into the final file
 - Use differences to reveal gaps, ambiguity, or weak examples
 
-| Model tendency | Practical takeaway |
-| --- | --- |
-| Claude Sonnet: more comprehensive | Good for broad first drafts |
-| GPT-4: more variable | Good candidate for challenge and comparison |
+| Model tendency                    | Practical takeaway                          |
+| --------------------------------- | ------------------------------------------- |
+| Claude Sonnet: more comprehensive | Good for broad first drafts                 |
+| GPT-4: more variable              | Good candidate for challenge and comparison |
 
 ::: notes
 Duration ~00:02
 
-Position multi-model review as a quality-control tactic rather than a competition. Different models expose different blind spots, so having one model critique another often surfaces missing examples, incomplete checklists, or weakly stated rules.  Transition by tying this evaluation loop back to the broader foundation phase of a new project.
+Position multi-model review as a quality-control tactic rather than a competition. Different models expose different blind spots, so having one model critique another often surfaces missing examples, incomplete checklists, or weakly stated rules. Transition by tying this evaluation loop back to the broader foundation phase of a new project.
 :::
 
 ---
@@ -203,5 +204,5 @@ Position multi-model review as a quality-control tactic rather than a competitio
 ::: notes
 Duration ~00:02
 
-Close by connecting technology instruction files to the larger greenfield workflow. These files are foundational because they shape the quality of later prompts, implementation plans, and generated code, especially when multiple people and multiple models are involved.  End by suggesting that every new stack choice should trigger the question, what instruction file do we need before we start building?
+Close by connecting technology instruction files to the larger greenfield workflow. These files are foundational because they shape the quality of later prompts, implementation plans, and generated code, especially when multiple people and multiple models are involved. End by suggesting that every new stack choice should trigger the question, what instruction file do we need before we start building?
 :::
