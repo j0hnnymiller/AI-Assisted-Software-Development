@@ -58,7 +58,7 @@ To avoid warnings, ensure your template includes these exact layout names:
 - **"Title Slide"** - Main title slide
 - **"Title and Content"** - Standard bullet point slides
 - **"Section Header"** - Section divider slides
-- **"Comparison"** - Two-column comparison content
+- **"Two Content"** (or custom **"Two Column"**) - Two-column content
 - **"Content with Caption"** - Image with caption layout
 - **"Blank"** - Empty slide for custom content
 
@@ -67,7 +67,7 @@ To avoid warnings, ensure your template includes these exact layout names:
 1. **In Slide Master view**
 2. **Right-click master slide → Insert Layout**
 3. **Rename layouts to match exact names above**
-4. **For Comparison layout:**
+4. **For Two Content / Two Column layout:**
    - Add two content placeholders side by side
    - Include title placeholder at top
 5. **For Content with Caption layout:**

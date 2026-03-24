@@ -19,6 +19,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 YAML_FILE  = REPO_ROOT / "Slides" / "aiasd-311-monday.yaml"
 OUTPUT_FILE = REPO_ROOT / "Slides" / "aiasd-311-monday-draft.md"
 SEP = "\n\n---\n\n"
+MERGE_CHAR_REPLACEMENTS = {
+    "`": "'",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -73,11 +76,19 @@ def rewrite_images(text: str) -> str:
     return text.replace("../images/", "images/")
 
 
+def normalize_merge_characters(text: str) -> str:
+    """Replace characters that routinely merge poorly in generated decks."""
+    for source, target in MERGE_CHAR_REPLACEMENTS.items():
+        text = text.replace(source, target)
+    return text
+
+
 def process_body(content: str) -> str:
     """Strip front matter, strip H1 headings, rewrite image paths, trim whitespace."""
     _, body = strip_front_matter(content)
     body = strip_h1(body)
     body = rewrite_images(body)
+    body = normalize_merge_characters(body)
     return body.strip()
 
 

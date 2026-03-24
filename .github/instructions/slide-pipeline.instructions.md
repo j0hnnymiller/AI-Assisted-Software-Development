@@ -99,7 +99,8 @@ Slides/<course>-<format>-<day>.yaml      e.g.  Slides/aiasd-311-monday.yaml
 sections:
   - name: "Intro"
     slides:
-      - Slides\individual-slides\welcome-to-aiasd.md
+      - file: Slides\individual-slides\welcome-to-aiasd.md
+        layout: title slide
       - Slides\individual-slides\john-michael-miller-intro.md
 
   - name: "Module 1 - AIASD"
@@ -116,6 +117,10 @@ sections:
 
 - `name` is required and non-empty for every section.
 - `slides` is an ordered list of repo-root-relative paths (Windows or POSIX separators accepted).
+- A slide entry may also be a mapping with `file`/`path` and optional `layout`.
+- Supported explicit `layout` values:
+  - `title slide`
+  - `two column`
 - Sections are processed in declaration order.
 - A `slides:` list may be empty or absent; the section still produces a module list slide
   and an empty section grouping in the PPTX.
@@ -298,10 +303,17 @@ scripts/generate_pptx.py            (existing script invoked by the agent)
 
 | Marp source                            | python-pptx layout used  |
 | -------------------------------------- | ------------------------ |
+| Manifest `layout: title slide`         | Title Slide layout       |
+| Manifest `layout: two column`          | Two Column / Two Content layout |
 | `<!-- _class: lead -->` + `## heading` | Section Header layout    |
 | `<!-- _class: lead -->` + `# heading`  | Section Header layout    |
 | `## heading` + body bullets            | Title and Content layout |
 | `## heading` (no body)                 | Title Only layout        |
+
+For explicit `two column` slides, the body is split into left/right placeholders using one of these formats:
+
+- A separator line containing exactly `::: column`
+- Two `###` subsections, where the first subsection becomes the left column and the second becomes the right column
 
 ### 7.4 First Section Exception (🔒 CRITICAL)
 

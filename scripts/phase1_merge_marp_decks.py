@@ -11,6 +11,10 @@ from typing import Dict, List, Optional, Tuple
 
 import yaml
 
+MERGE_CHAR_REPLACEMENTS = {
+    "`": "'",
+}
+
 
 def load_manifest(manifest_path: str) -> Dict:
     """Load and parse the YAML manifest."""
@@ -74,6 +78,7 @@ def clean_file_body(body: str) -> str:
     Clean a file body according to merge rules:
     - Remove H1 headings
     - Replace ../images/ with images/
+    - Normalize merge-time character substitutions
     - Strip leading and trailing slide separators
     """
     # Remove H1 headings
@@ -81,6 +86,10 @@ def clean_file_body(body: str) -> str:
 
     # Fix image paths
     body = body.replace('../images/', 'images/')
+
+    # Normalize characters that render poorly or inconsistently after merge
+    for source, target in MERGE_CHAR_REPLACEMENTS.items():
+        body = body.replace(source, target)
 
     # Strip leading and trailing --- separators (with surrounding whitespace)
     body = body.strip()

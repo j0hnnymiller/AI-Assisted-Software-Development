@@ -76,6 +76,7 @@ from pptx.util import Inches
 LAYOUT_TITLE_SLIDE = 0  # Title Slide layout
 LAYOUT_TITLE_CONTENT = 1  # adjust index if template differs
 LAYOUT_SECTION_HEADER = 2  # adjust index if template differs
+LAYOUT_TWO_COLUMN = 3  # adjust index if template differs
 LAYOUT_TITLE_ONLY = 5  # adjust index if template differs
 
 ALLOWED_SLIDE_EXTENSIONS = {".md", ".markdown"}
@@ -122,6 +123,21 @@ def resolve_repo_path(repo_root: Path, candidate: str | Path) -> Path:
     return repo_root / path
 
 
+def get_slide_layout(prs: Presentation, preferred_names: list[str], fallback_index: int):
+    """Return the first layout whose name matches, else fall back to an index."""
+    normalized_names = {name.strip().casefold() for name in preferred_names if name.strip()}
+
+    for layout in prs.slide_layouts:
+        layout_name = getattr(layout, "name", "").strip().casefold()
+        if layout_name in normalized_names:
+            return layout
+
+    try:
+        return prs.slide_layouts[fallback_index]
+    except IndexError:
+        return prs.slide_layouts[0]
+
+
 def build_section_id(section_name: str, slide_start_idx: int) -> str:
     """Return a deterministic section id for the PPTX XML."""
     digest = hashlib.sha1(f"{section_name}:{slide_start_idx}".encode("utf-8")).hexdigest()
@@ -131,20 +147,27 @@ def build_section_id(section_name: str, slide_start_idx: int) -> str:
 def split_marp_slides(md_content: str) -> list[str]:
     """Split a Marp markdown file into individual slide blocks.
 
-    Strips the YAML front matter (first --- ... --- block), then splits the
-    remaining content on bare `---` lines that are NOT inside fenced code blocks.
+    Strips the YAML front matter, then splits the remaining content on bare
+    `---` lines that are NOT inside fenced code blocks.
     Returns a list of slide content strings (one per slide).
     """
     lines = md_content.splitlines()
 
-    # Strip YAML front matter
+    # Strip YAML front matter. We can't just take the first closing `---`
+    # because AI provenance `prompt: |` blocks may legitimately contain `---`
+    # lines as plain scalar content.
     if lines and lines[0].strip() == "---":
-        end = next(
-            (i for i, line in enumerate(lines[1:], 1) if line.strip() == "---"),
-            None,
-        )
-        if end is not None:
-            lines = lines[end + 1:]
+        for end in range(1, len(lines)):
+            if lines[end] != "---":
+                continue
+            front_matter = "\n".join(lines[1:end])
+            try:
+                parsed = yaml.safe_load(front_matter)
+            except yaml.YAMLError:
+                continue
+            if isinstance(parsed, dict):
+                lines = lines[end + 1:]
+                break
 
     # Split on bare --- separators outside fenced code blocks
     slides: list[list[str]] = []
@@ -155,7 +178,7 @@ def split_marp_slides(md_content: str) -> list[str]:
     for line in lines:
         if fence_pat.match(line):
             in_fence = not in_fence
-        if line.strip() == "---" and not in_fence:
+        if line == "---" and not in_fence:
             slides.append(current)
             current = []
         else:
@@ -365,29 +388,98 @@ def set_slide_notes(slide, note_text: str) -> None:
     tf.text = note_text
 
 
+def populate_text_placeholder(shape, body: str) -> None:
+    """Populate a text placeholder using the existing markdown formatting rules."""
+    tf = shape.text_frame
+    tf.clear()
+    for line in body.splitlines():
+        apply_markdown_formatting(tf, line)
+    tf.margin_top = Inches(0.05)
+    tf.margin_bottom = Inches(0.05)
+    tf.margin_left = Inches(0.1)
+    tf.margin_right = Inches(0.1)
+    tf.word_wrap = True
+    tf.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+
+
+def split_two_column_body(body: str) -> tuple[str, str]:
+    """Split slide body into left/right column text.
+
+    Supported formats:
+    - Explicit separator line: `::: column`
+    - Two or more `###` subsections, where the first two become left/right columns
+    """
+    separator_pattern = re.compile(r"^\s*:::\s*column\s*$", re.IGNORECASE | re.MULTILINE)
+    if separator_pattern.search(body):
+        left, right = separator_pattern.split(body, maxsplit=1)
+        return left.strip(), right.strip()
+
+    sections: list[tuple[str | None, list[str]]] = []
+    current_heading: str | None = None
+    current_lines: list[str] = []
+
+    for line in body.splitlines():
+        if line.startswith("### "):
+            if current_heading is not None or current_lines:
+                sections.append((current_heading, current_lines))
+            current_heading = line[4:].strip()
+            current_lines = []
+        else:
+            current_lines.append(line)
+
+    if current_heading is not None or current_lines:
+        sections.append((current_heading, current_lines))
+
+    if len(sections) >= 2:
+        def render_section(section_heading: str | None, section_lines: list[str]) -> str:
+            rendered_lines: list[str] = []
+            if section_heading:
+                rendered_lines.append(f"**{section_heading}**")
+            rendered_lines.extend(section_lines)
+            return "\n".join(rendered_lines).strip()
+
+        left_heading, left_lines = sections[0]
+        right_heading, right_lines = sections[1]
+        return render_section(left_heading, left_lines), render_section(right_heading, right_lines)
+
+    return body.strip(), ""
+
+
 def add_title_content_slide(prs: Presentation, title: str, body: str, note: str = "") -> None:
     """Add a Title and Content layout slide with markdown bold formatting support."""
-    layout = prs.slide_layouts[LAYOUT_TITLE_CONTENT]
+    layout = get_slide_layout(prs, ["Title and Content"], LAYOUT_TITLE_CONTENT)
     slide = prs.slides.add_slide(layout)
     if slide.shapes.title:
         slide.shapes.title.text = title
 
     for shape in slide.placeholders:
         if shape.placeholder_format.idx == 1:
-            tf = shape.text_frame
-            tf.clear()
-            # Add all content with markdown formatting
-            for line in body.splitlines():
-                apply_markdown_formatting(tf, line)
-            # Reduce margins to give more space for content
-            tf.margin_top = Inches(0.05)
-            tf.margin_bottom = Inches(0.05)
-            tf.margin_left = Inches(0.1)
-            tf.margin_right = Inches(0.1)
-            # Then set autofit properties after content is added
-            tf.word_wrap = True
-            tf.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+            populate_text_placeholder(shape, body)
             break
+
+    if note:
+        set_slide_notes(slide, note)
+
+
+def add_two_column_slide(
+    prs: Presentation,
+    title: str,
+    left_body: str,
+    right_body: str,
+    note: str = "",
+) -> None:
+    """Add a two-column slide using the template's two-column layout."""
+    layout = get_slide_layout(prs, ["Two Column", "Two Columns", "Two Content"], LAYOUT_TWO_COLUMN)
+    slide = prs.slides.add_slide(layout)
+    if slide.shapes.title:
+        slide.shapes.title.text = title
+
+    for shape in slide.placeholders:
+        idx = shape.placeholder_format.idx
+        if idx == 1 and left_body:
+            populate_text_placeholder(shape, left_body)
+        elif idx == 2 and right_body:
+            populate_text_placeholder(shape, right_body)
 
     if note:
         set_slide_notes(slide, note)
@@ -441,9 +533,9 @@ def add_table_slide(prs: Presentation, title: str, table_data: list[list[str]], 
 def add_title_only_slide(prs: Presentation, title: str, bg_image: str | None = None, note: str = "") -> None:
     """Add a Title Only layout slide (no body content), optionally with a background image."""
     try:
-        layout = prs.slide_layouts[LAYOUT_TITLE_ONLY]
+        layout = get_slide_layout(prs, ["Title Only"], LAYOUT_TITLE_ONLY)
     except IndexError:
-        layout = prs.slide_layouts[LAYOUT_TITLE_CONTENT]
+        layout = get_slide_layout(prs, ["Title and Content"], LAYOUT_TITLE_CONTENT)
 
     slide = prs.slides.add_slide(layout)
 
@@ -475,7 +567,7 @@ def add_title_only_slide(prs: Presentation, title: str, bg_image: str | None = N
 def add_section_header_slide(prs: Presentation, section_name: str, note: str = "") -> None:
     """Add a section header slide (# Section Name, lead layout)."""
     try:
-        layout = prs.slide_layouts[LAYOUT_SECTION_HEADER]
+        layout = get_slide_layout(prs, ["Section Header"], LAYOUT_SECTION_HEADER)
     except IndexError:
         layout = prs.slide_layouts[0]
 
@@ -490,7 +582,7 @@ def add_section_header_slide(prs: Presentation, section_name: str, note: str = "
 def add_title_slide(prs: Presentation, title: str, subtitle: str = "", note: str = "") -> None:
     """Add a Title Slide layout (typically used for presentation opening)."""
     try:
-        layout = prs.slide_layouts[LAYOUT_TITLE_SLIDE]
+        layout = get_slide_layout(prs, ["Title Slide"], LAYOUT_TITLE_SLIDE)
     except IndexError:
         layout = prs.slide_layouts[0]
 
@@ -510,7 +602,7 @@ def add_title_slide(prs: Presentation, title: str, subtitle: str = "", note: str
 
 def add_module_list_slide(prs: Presentation, all_sections: list[str], current: str, note: str = "") -> None:
     """Add a Course Modules navigation slide; current section is bold + arrow."""
-    layout = prs.slide_layouts[LAYOUT_TITLE_CONTENT]
+    layout = get_slide_layout(prs, ["Title and Content"], LAYOUT_TITLE_CONTENT)
     slide = prs.slides.add_slide(layout)
     if slide.shapes.title:
         slide.shapes.title.text = "Course Modules"
@@ -653,7 +745,7 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
             # Support both simple string paths and dict with layout specification
             if isinstance(slide_entry, dict):
                 slide_path = slide_entry.get("file") or slide_entry.get("path")
-                layout_type = slide_entry.get("layout", "").lower()
+                layout_type = slide_entry.get("layout", "").strip().lower()
             else:
                 slide_path = slide_entry
                 layout_type = ""
@@ -696,6 +788,15 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                     # Extract subtitle from body (first line)
                     subtitle = body.split("\n")[0] if body else ""
                     add_title_slide(prs, title or slide_file.stem, subtitle, note=combined_note)
+                elif layout_type in {"two column", "two columns", "two content"}:
+                    left_body, right_body = split_two_column_body(body)
+                    add_two_column_slide(
+                        prs,
+                        title or slide_file.stem,
+                        left_body,
+                        right_body,
+                        note=combined_note,
+                    )
                 elif contains_markdown_table(body):
                     # Parse and create table slide
                     table_data = parse_markdown_table(body)
