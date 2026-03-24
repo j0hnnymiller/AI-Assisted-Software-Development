@@ -5,11 +5,25 @@ sections:
     slides:
       - Slides\individual-slides\welcome-back.md
 
+  - name: Test Automation and Code Quality
+    slides:
+      - Slides\individual-slides\test-automation-and-code-quality.md
+      - file: Slides\individual-slides\exercise-test-automation-quality.md
+        layout: two column
+      - Slides\individual-slides\creating-robust-testing-frameworks.md
+      - Slides\individual-slides\feature-flags-and-test-suites.md
+      - Slides\individual-slides\testing-in-production.md
+
   - name: Instructions vs Prompts vs Custom Chat Modes
     slides:
       - Slides\individual-slides\copilot-instruction-files-vs-prompt-files-vs-chatmodes.md
       - Slides\individual-slides\copilot-instruction-control.md
       - Slides\individual-slides\ai-development-approaches-comparison.md
+
+  - name: Managing Context
+    slides:
+      - Slides\individual-slides\managing-github-copilot-effectively.md
+      - Slides\individual-slides\managing-instruction-files-context-windows.md
 
   - name: Custom Agents
     slides:

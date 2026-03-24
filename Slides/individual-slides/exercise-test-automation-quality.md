@@ -58,6 +58,8 @@ Objectives
 - Apply intelligent linting and quality gates
 - Validate test adequacy and architectural alignment
 
+::: column
+
 Activities
 
 1. Select a brownfield module or function

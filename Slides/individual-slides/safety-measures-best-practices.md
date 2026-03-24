@@ -79,7 +79,7 @@ Open this module by framing safety as the price of speed in AI-assisted developm
 - Use AI for acceleration, not delegated judgment
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Prompt and context] --> B[AI-generated change]
     B --> C[Human review]
     C --> D[Test and validate]

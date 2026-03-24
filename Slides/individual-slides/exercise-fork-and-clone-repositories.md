@@ -79,6 +79,8 @@ paginate: true
 
 ## Exercise: Clone the AI-Assisted-Software-Development Repository
 
+**Setup and Objectives**
+
 Prerequisites
 
 - Git
@@ -89,6 +91,10 @@ Objectives
 - Fork the AI-Assisted-Software-Development repository
 - Clone your fork to your local machine
 - Switch to the brownfield branch to confirm branch navigation
+
+::: column
+
+**Activities and Success Criteria**
 
 Activities
 
@@ -120,11 +126,15 @@ Set the context by explaining that this is foundational setup for all later cour
 
 ## Exercise: Fork the AIASD-20260209-BF Repo
 
-Objectives
+**Objectives**
 
 - Explore an unfamiliar codebase with a safe personal fork
 - Clone and validate local access to the brownfield exercise repository
 - Configure PAT-based authentication for GitHub operations
+
+::: column
+
+**Activities and Success Criteria**
 
 Activities
 
@@ -158,9 +168,13 @@ Frame this as brownfield readiness work and explain that a clean setup now preve
 
 ## Exercise: Fork the Repos
 
-Objective
+**Objective**
 
 - Fork the course repositories needed for independent practice
+
+::: column
+
+**Activities and Success Criteria**
 
 Activities
 

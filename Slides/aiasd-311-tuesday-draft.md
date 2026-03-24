@@ -26,6 +26,8 @@ paginate: true
 - **Questions are always welcome — ask anytime!**
 
 ::: notes
+Duration ~00:02
+
 Welcome everyone back to the session. Take a moment to let people settle in before diving into content. Acknowledge that it's great to see everyone back and express enthusiasm for the session ahead.
 
 Key talking points:
@@ -35,7 +37,6 @@ Key talking points:
 - Set a positive, inclusive tone for the session
 - If this is after a break, give people 30 seconds to get re-focused
 
-Timing: Spend about 1-2 minutes on this slide before moving on.
 Transition: "Let's pick up right where we left off..."
 :::
 
@@ -44,9 +45,10 @@ Transition: "Let's pick up right where we left off..."
 ### What you need to know for your organization
 
 ::: notes
+Duration ~00:01
+
 Introduce the topic by framing it as a decision teams need to make. Most developers have heard of Copilot, but licensing details are often misunderstood. This session clarifies the tiers and what each unlocks.
 
-Timing: ~30 seconds on this title slide.
 Transition: "Let's start with an overview of what's available."
 :::
 
@@ -64,6 +66,8 @@ Transition: "Let's start with an overview of what's available."
 | Enterprise features   | ❌             | ❌              | ✅             |
 
 ::: notes
+Duration ~00:02
+
 Walk through the table column by column, not row by row — it helps the audience track each tier's value proposition.
 
 Key talking points:
@@ -74,8 +78,6 @@ Key talking points:
 - All paid plans include unlimited completions and chat
 
 Emphasize: Business tier is where most organizations should start. Enterprise is for large orgs with compliance or custom knowledge needs.
-
-Timing: ~2 minutes. Be prepared for questions on what "policy management" means.
 :::
 
 ---
@@ -90,6 +92,8 @@ Timing: ~2 minutes. Be prepared for questions on what "policy management" means.
 - ✅ No seat minimum — pay only for active users
 
 ::: notes
+Duration ~00:02
+
 This is the most common license tier for companies. Focus on the operational benefits for managers and security teams, not just developers.
 
 Key talking points:
@@ -101,7 +105,6 @@ Key talking points:
 
 Common question: "What counts as an active user?" — A user who has Copilot enabled in their IDE at least once in the billing cycle.
 
-Timing: ~2 minutes.
 Transition: "Now let's look at what Business adds that Individual doesn't..."
 :::
 
@@ -125,6 +128,8 @@ Transition: "Now let's look at what Business adds that Individual doesn't..."
 - 🔐 Enhanced compliance & data residency options
 
 ::: notes
+Duration ~00:03
+
 Frame this as "Business is the foundation; Enterprise is the multiplier."
 
 Key talking points:
@@ -135,8 +140,6 @@ Key talking points:
 - Data residency matters for EU/regulated industries
 
 Help the audience self-select: "If you have a team under 500 and no compliance requirements, Business is probably right for you today."
-
-Timing: ~2-3 minutes. This slide often generates the most discussion.
 :::
 
 ---
@@ -160,6 +163,8 @@ your-org/
 - 🔄 Changes propagate instantly — no developer action needed
 
 ::: notes
+Duration ~00:03
+
 This feature is one of the biggest unlocks of the Business tier and often underappreciated.
 
 Key talking points:
@@ -171,7 +176,6 @@ Key talking points:
 
 Demo opportunity: Show a `.github/instructions/` file with a coding standard rule, then show Copilot following it in the IDE.
 
-Timing: ~2-3 minutes.
 Transition: "Let's talk about how to get started..."
 :::
 
@@ -189,6 +193,8 @@ Transition: "Let's talk about how to get started..."
 > 💡 **Tip**: Start with a pilot group, gather feedback, then roll out broadly.
 
 ::: notes
+Duration ~00:02
+
 Give attendees a concrete action plan to leave with.
 
 Key talking points:
@@ -200,7 +206,6 @@ Key talking points:
 
 Common concern: "What about IP and training data?" — Reassure that Business/Enterprise plans opt out of using your code to train GitHub's models by default.
 
-Timing: ~2 minutes.
 Transition: "Any questions on licensing, pricing, or rollout?"
 :::
 
@@ -232,7 +237,7 @@ For questions, be ready to address:
 - Data privacy and training opt-out policies
 - GitHub Enterprise Server (on-prem) compatibility
 
-Timing: Spend remaining session time on Q&A. Don't rush this slide.
+Use the remaining session time for Q&A. Don't rush this slide.
 :::
 
 ---
@@ -245,17 +250,18 @@ Timing: Spend remaining session time on Q&A. Don't rush this slide.
 - Marp authors especially benefit: build, preview, export all from the keyboard
 
 ::: notes
+Duration ~00:01
+
 Set the "why" before diving into the "how." Emphasize that configuration investment pays dividends every single day.
 
 Key talking points:
 
 - Most developers use VS Code for years without ever opening keybindings.json
-- Even one well-chosen shortcut can save minutes per hour
+- Even one well-chosen shortcut can
 - For Marp workflows specifically, running pandoc or opening side-by-side preview are prime candidates
 
 Ask the audience: "How many of you have a custom keyboard shortcut right now?" — gauge the room.
 
-Timing: ~1 minute.
 Transition: "Let's look at how VS Code's shortcut system actually works."
 :::
 
@@ -280,11 +286,12 @@ Transition: "Let's look at how VS Code's shortcut system actually works."
 ```
 
 ::: notes
+Duration ~00:02
+
 Walk through the three-field structure of a keybinding entry. The `when` clause is the most powerful and least-used feature — it scopes shortcuts to contexts like "only when a Markdown file is open."
 
 Demo tip: Open the Keyboard Shortcuts editor live, search for a command, and show how clicking the pencil icon edits keybindings.json directly.
 
-Timing: ~2 minutes.
 Transition: "Now let's see how to discover command IDs — the key to writing your own shortcuts."
 :::
 
@@ -305,11 +312,12 @@ markdown.showPreviewToSide
 ```
 
 ::: notes
+Duration ~00:02
+
 This is the practical "lookup" step developers skip, then wonder why they can't write shortcuts. Stress that every command in the palette has an ID — including extension commands.
 
 Demo: Open the command palette, type "Marp", right-click "Open Preview", and copy its ID. Then show adding it to keybindings.json.
 
-Timing: ~1.5 minutes.
 Transition: "Let's look at some concrete shortcut recipes for Marp authors."
 :::
 
@@ -326,6 +334,8 @@ Transition: "Let's look at some concrete shortcut recipes for Marp authors."
 | Custom         | `tasks.runTask` → `Export PDF`                | One-key PDF export        |
 
 ::: notes
+Duration ~00:02
+
 Go through each shortcut and explain the Marp use case:
 
 - Side-by-side preview is essential when authoring slides — you want to see layout changes immediately
@@ -334,7 +344,6 @@ Go through each shortcut and explain the Marp use case:
 - Copy path is handy when referencing images or linking between files
 - The custom task shortcut is a preview of what we'll build with Multi-command
 
-Timing: ~2 minutes.
 Transition: "Now let's explore the Multi-command extension, which lets us chain commands together."
 :::
 
@@ -352,11 +361,12 @@ Transition: "Now let's explore the Multi-command extension, which lets us chain 
   - Delays between steps
 
 ::: notes
+Duration ~00:02
+
 Introduce the extension and explain the core problem it solves: VS Code shortcuts fire exactly one command. Multi-command lets you chain many into a single keystroke — like a macro system.
 
 Install tip: Show `Ctrl+Shift+X`, search "multi-command", install ryuta46.multi-command.
 
-Timing: ~1.5 minutes.
 Transition: "Let's see what the configuration looks like."
 :::
 
@@ -393,6 +403,8 @@ Then bind it in `keybindings.json`:
 ```
 
 ::: notes
+Duration ~00:03
+
 Walk through the structure carefully:
 
 1. `command` — a unique ID you choose; must start with `multiCommand.`
@@ -403,7 +415,6 @@ Point out the "save first" pattern — always save before building so the export
 
 Demo: Paste this into settings.json and fire the shortcut live.
 
-Timing: ~2.5 minutes.
 Transition: "Let's look at a complete Marp workflow using Multi-command."
 :::
 
@@ -428,6 +439,8 @@ Transition: "Let's look at a complete Marp workflow using Multi-command."
 ```
 
 ::: notes
+Duration ~00:02
+
 Paint the before/after picture:
 
 - BEFORE: Save manually → open terminal → type marp command → switch to Finder/Explorer → open PDF
@@ -435,7 +448,6 @@ Paint the before/after picture:
 
 This is the kind of workflow automation that pays for the time you spent configuring it within the first session.
 
-Timing: ~2 minutes.
 Transition: "Let's also set up the VS Code task that runs Marp CLI."
 :::
 
@@ -467,6 +479,8 @@ Transition: "Let's also set up the VS Code task that runs Marp CLI."
 ```
 
 ::: notes
+Duration ~00:02
+
 Walk through the task definition:
 
 - `${file}` — the currently open file (your active .md slide deck)
@@ -476,7 +490,6 @@ Walk through the task definition:
 
 Prerequisite: Marp CLI must be installed (`npm install -g @marp-team/marp-cli`).
 
-Timing: ~2 minutes.
 Transition: "Before we wrap up, let me share a few more power-user tips."
 :::
 
@@ -502,13 +515,14 @@ Transition: "Before we wrap up, let me share a few more power-user tips."
 - Keybindings and settings sync automatically across machines
 
 ::: notes
+Duration ~00:02
+
 These are the tips that separate power users from casual users. Call out the `when` clause again — it's underused but prevents shortcut conflicts across file types.
 
 The delay tip is important for Multi-command: if a task launches a process, subsequent commands may fire before it finishes. A small delay solves this.
 
 Settings Sync is a quality-of-life tip that resonates well — many developers maintain multiple machines or reinstall VS Code periodically.
 
-Timing: ~2 minutes.
 Transition: "Let's look at where to find these settings in your own VS Code."
 :::
 
@@ -526,6 +540,8 @@ Transition: "Let's look at where to find these settings in your own VS Code."
 > 💡 Workspace `.vscode/` settings are **version-controllable** — commit them with your slides repo!
 
 ::: notes
+Duration ~00:02
+
 Clarify the difference between user-level and workspace-level settings:
 
 - User settings apply globally across all projects
@@ -535,7 +551,6 @@ For slide authors, storing tasks.json and workspace settings.json in the slides 
 
 Windows paths: `%APPDATA%\Code\User\` instead of the Linux/Mac paths shown.
 
-Timing: ~1.5 minutes.
 Transition: "Let's wrap up with a quick summary."
 :::
 
@@ -560,6 +575,8 @@ Transition: "Let's wrap up with a quick summary."
 > Start with **one shortcut** you use every day. Build from there.
 
 ::: notes
+Duration ~00:01
+
 Reinforce the three takeaways clearly. The closing advice — "start with one shortcut" — combats the paralysis of trying to configure everything at once.
 
 Call to action ideas:
@@ -569,8 +586,6 @@ Call to action ideas:
 - "Commit your .vscode/ folder to your next slide repo"
 
 Thank the audience and open for questions.
-
-Timing: ~1 minute.
 :::
 
 ---
@@ -590,18 +605,6 @@ Timing: ~1 minute.
 
 ---
 
-<!-- _class: lead -->
-
-# LLM
-
----
-
-## LLM
-
-- What Is a Large Language Model?
-
----
-
 ## What Is a Large Language Model?
 
 > A statistical model trained to **predict the next token** given all preceding tokens.
@@ -616,6 +619,8 @@ Timing: ~1 minute.
 **LLMs don't "know" things — they learn what text tends to follow other text.**
 
 ::: notes
+Duration ~00:02
+
 This is the most important conceptual slide. Many developers expect LLMs to behave like search engines or databases — they don't.
 
 Key talking points:
@@ -626,8 +631,6 @@ Key talking points:
 - Analogy: autocomplete on your phone, but trained on all of human writing
 
 Common misconception to address: "Does Copilot look up my code in a database?" — No. It generates completions based on learned patterns.
-
-Timing: ~2 minutes.
 :::
 
 ---
@@ -653,6 +656,8 @@ Tokens: ["def", " calculate", "_tax", "(", "income", "):"]
 - Rare words split into multiple tokens → less efficient
 
 ::: notes
+Duration ~00:03
+
 Tokenization is often overlooked but explains many "weird" LLM behaviors.
 
 Key talking points:
@@ -669,8 +674,6 @@ Practical implication for developers:
 - Understanding tokens helps estimate cost when using API
 
 Interactive moment: Ask "How many tokens do you think this slide is?" — good engagement exercise.
-
-Timing: ~2-3 minutes.
 :::
 
 ---
@@ -696,6 +699,8 @@ Input Tokens
 - Stacked in **layers** — deeper = richer understanding
 
 ::: notes
+Duration ~00:03
+
 You don't need to explain the math — focus on the intuition of attention.
 
 Key talking points:
@@ -708,8 +713,6 @@ Key talking points:
 Analogy for attention: Imagine reading a legal contract. When you hit a pronoun like "the aforementioned party," your brain jumps back to find who that is. That's attention.
 
 Why this matters for developers: Larger context windows (more tokens processed at once) = Copilot can see more of your codebase at once = better suggestions.
-
-Timing: ~3 minutes. This is the most technical slide — keep it high-level.
 :::
 
 ---
@@ -734,6 +737,8 @@ Timing: ~3 minutes. This is the most technical slide — keep it high-level.
 ```
 
 ::: notes
+Duration ~00:03
+
 Use the trophy/suitcase example — it's a classic from the research literature and immediately intuitive.
 
 Key talking points:
@@ -744,8 +749,6 @@ Key talking points:
 - Attention is also why very long prompts can "distract" the model — it has finite attention capacity
 
 Practical tip: When using Copilot, relevant context near your cursor gets higher attention weight. Keep related code nearby when you want better completions.
-
-Timing: ~2-3 minutes.
 :::
 
 ---
@@ -772,6 +775,8 @@ Raw text (internet, books, code, papers)
 - Produces a **base model** that completes text — but isn't yet "helpful"
 
 ::: notes
+Duration ~00:03
+
 Pre-training is where the model learns language, code, and world knowledge.
 
 Key talking points:
@@ -784,8 +789,6 @@ Key talking points:
 Scale reference: GPT-3 used 45TB of text data. Training ran on ~10,000 A100 GPUs.
 
 Why developers care: The pre-training corpus determines what languages, frameworks, and patterns the model knows well. Copilot knows React better than a niche internal framework.
-
-Timing: ~2-3 minutes.
 :::
 
 ---
@@ -813,6 +816,8 @@ Aligned model: "The capital of France is Paris."  ← stops when done
 ```
 
 ::: notes
+Duration ~00:03
+
 This phase is what separates "a model that generates text" from "an assistant you can actually use."
 
 Key talking points:
@@ -825,8 +830,6 @@ Key talking points:
 Why alignment matters for developers: It's why Copilot suggests reasonable code instead of technically-valid-but-insane solutions. It's also why it refuses to help with malicious code.
 
 Common question: "Can I fine-tune Copilot on my codebase?" — GitHub Enterprise Copilot offers custom fine-tuning on private repos.
-
-Timing: ~2-3 minutes.
 :::
 
 ---
@@ -846,6 +849,8 @@ Timing: ~2-3 minutes.
 - Larger context = can see more code, but also slower & more expensive
 
 ::: notes
+Duration ~00:02
+
 Context window is one of the most practically important LLM concepts for developers using Copilot.
 
 Key talking points:
@@ -856,8 +861,6 @@ Key talking points:
 - Instruction files (`.github/instructions/`) consume some of the context window — keep them concise
 
 Practical tip: If Copilot seems to "forget" something you told it, it likely scrolled out of the context window. Repeat the key constraints.
-
-Timing: ~2 minutes.
 :::
 
 ---
@@ -883,6 +886,8 @@ Token probabilities after "def calculate_":
 | > 1.0       | Random / incoherent              | Rarely useful      |
 
 ::: notes
+Duration ~00:02
+
 Temperature demystifies why LLMs give different answers to the same question.
 
 Key talking points:
@@ -893,8 +898,6 @@ Key talking points:
 - When Copilot gives you alternates (Alt+] to cycle), it's sampling different tokens
 
 Developer implication: If you're using the Copilot API or OpenAI API directly, lower temperature for code generation tasks, higher for creative tasks like writing test descriptions.
-
-Timing: ~2 minutes.
 :::
 
 ---
@@ -928,7 +931,7 @@ For Q&A, be prepared for:
 - "Why does it make things up?" — Hallucination: the model is optimized to produce plausible-sounding text, not verified facts
 - "What's the difference between Copilot and ChatGPT?" — Same underlying technology; different fine-tuning, context, and integration
 
-Timing: Spend remaining session time on Q&A.
+Use the remaining session time for Q&A.
 :::
 
 ---
@@ -946,24 +949,6 @@ Timing: Spend remaining session time on Q&A.
 - AI Assisted Documentation
 - Test Automation and Code Quality
 
----
-
-<!-- _class: lead -->
-
-# Copilot for Teams
-
----
-
-## Copilot for Teams
-
-- GitHub Copilot for Teams
-
----
-
-﻿---
-marp: true
-theme: default
-paginate: true
 ---
 
 ## GitHub Copilot for Teams
@@ -1118,9 +1103,152 @@ Point attendees to official docs and FAQs; recommend follow-up reading links on 
 
 ---
 
-<!-- _class: lead -->
+## Safety Measures & Best Practices
 
-# Safety Measures and Best Practices
+- Safety nets make AI acceleration safer
+- Test quality matters more than raw coverage
+- AI output must be reviewed like junior developer work
+- Small, focused diffs are easier to trust
+- Automation helps reviewers scale
+
+::: notes
+Duration ~00:01
+
+Open this module by framing safety as the price of speed in AI-assisted development. The point is not to slow teams down, but to make sure faster code generation does not also mean faster mistakes reaching production. Transition by introducing the mindset shift: AI is helpful, but it is never self-approving.
+:::
+
+---
+
+## Treat AI Like an Eager Knowledgeable Junior Developer
+
+- AI can produce useful first drafts quickly
+- It can also misunderstand requirements or context
+- Humans remain accountable for correctness and intent
+- Review every generated change before commit or merge
+- Use AI for acceleration, not delegated judgment
+
+```mermaid
+flowchart LR
+    A[Prompt and context] --> B[AI-generated change]
+    B --> C[Human review]
+    C --> D[Test and validate]
+    D --> E[Merge only when trusted]
+```
+
+::: notes
+Duration ~00:03
+
+Use the "eager knowledgeable junior developer" analogy because it is memorable and accurate. AI often produces plausible work at high speed, but plausibility is not the same thing as correctness, so every change still needs human review for domain fit, architectural consistency, and unintended side effects. Transition by explaining that tests are one of the main ways we convert suspicion into confidence.
+:::
+
+---
+
+## Coverage Is a Floor, Not the Goal
+
+- Coverage tells you **how much** code was executed
+- Signal quality tells you **whether failures would matter**
+- Prefer tests that detect regressions in behavior
+- Include edge cases, negative paths, and business rules
+- Do not confuse green dashboards with real confidence
+
+**High-signal tests usually check**
+
+- outcomes users care about
+- meaningful failure conditions
+- integration boundaries and contracts
+
+::: notes
+Duration ~00:04
+
+Make it clear that code coverage is useful, but incomplete. A suite can report high coverage while still missing the exact regression that users will experience, especially if tests only exercise happy paths or assert implementation details instead of behavior. Transition by showing that one concrete place where high-signal validation matters is feature-flag retirement.
+:::
+
+---
+
+## Safe Feature Flag Removal
+
+- Confirm the new path is stable before cleanup
+- Ask AI to locate all flag references and stale branches
+- Review generated deletions carefully for hidden dependencies
+- Update tests to match the post-flag reality
+- Remove dead code, config, and documentation together
+
+```mermaid
+flowchart TB
+    A[Flag enabled and stable] --> B[Find references]
+    B --> C[Review removal diff]
+    C --> D[Run focused tests]
+    D --> E[Delete obsolete paths]
+    E --> F[Update docs and rollout notes]
+```
+
+::: notes
+Duration ~00:03
+
+Explain that feature flags are valuable only if teams are disciplined about retiring them. AI is especially helpful here because it can search for scattered references, conditional branches, test toggles, and documentation mentions faster than a human can, but the human reviewer must still confirm that nothing still depends on the old path. Transition by noting that this workflow is safest when the diff is narrow enough for someone to reason about quickly.
+:::
+
+---
+
+## Keep Change Sets Small and Reviewable
+
+- Smaller diffs are easier to understand
+- Reviewers spot risk faster in focused changes
+- Rollback is simpler when scope is narrow
+- Incremental delivery reduces blast radius
+- Large AI-generated diffs hide subtle mistakes
+
+**Good small-change patterns**
+
+1. separate refactor from behavior change
+2. ship one concern per pull request
+3. keep cleanup close to the related feature
+
+::: notes
+Duration ~00:03
+
+Position small change sets as a safety mechanism, not just a style preference. When AI can generate large amounts of code quickly, the danger is not only bad code but unreviewable code, because reviewers cannot build enough understanding to catch mistakes hidden inside a massive diff. Transition by showing how automation can support review without replacing human judgment.
+:::
+
+---
+
+## Human Review + Automated Review Workflow
+
+- Use automation to surface risky files, missing tests, and policy gaps
+- Use humans to judge correctness, intent, and business impact
+- Azure DevOps MCP tools can help automate PR review workflows
+- Automated comments are triage aids, not merge authority
+- The best workflow combines speed, consistency, and accountability
+
+**Suggested review split**
+
+- **Automation**: lint, tests, policy checks, review hints
+- **Human reviewers**: architecture, behavior, domain correctness
+
+::: notes
+Duration ~00:04
+
+Explain that automation is most valuable when it reduces reviewer fatigue and helps humans spend attention where judgment matters most. Mention Azure DevOps MCP here as an example of tooling that can support pull-request workflows by pulling context, surfacing work-item links, and assisting review automation around the PR, while still leaving final approval to accountable humans. Transition to a closing checklist that teams can apply immediately.
+:::
+
+---
+
+## Practical Safety Checklist for AI-Assisted Changes
+
+- Review every AI-generated diff before commit
+- Require tests, but evaluate their **signal**, not just count
+- Keep pull requests focused and incremental
+- Use automation to pre-screen issues for reviewers
+- Clean up obsolete flags and dead paths intentionally
+- Merge only when humans understand the change
+
+**Bottom line:** fast AI-assisted delivery still needs disciplined engineering.
+
+::: notes
+Duration ~00:03
+
+Close with an operational checklist the audience can adopt the same day. Reiterate that the most important habits are review discipline, meaningful tests, small diffs, and intentional use of automation to make humans more effective rather than less necessary. End by connecting this section back to the larger course theme: safe acceleration beats reckless acceleration every time.
+:::
 
 ---
 
@@ -1136,19 +1264,6 @@ Point attendees to official docs and FAQs; recommend follow-up reading links on 
 - Guardrails and Prompt Files
 - AI Assisted Documentation
 - Test Automation and Code Quality
-
----
-
-<!-- _class: lead -->
-
-# Models and Context
-
----
-
-## Models and Context
-
-- Model Selection & Comparison
-- Advanced Context Techniques
 
 ---
 
@@ -1490,22 +1605,11 @@ This frees up space for task-specific context and keeps the model aligned with y
 
 ---
 
-<!-- _class: lead -->
-
-# Guardrails and Prompt Files
-
----
-
-## Guardrails and Prompt Files
-
-- Prompt Files
-- Creating Instruction Files from Prompts
-
----
-
 ## Prompt Files
 
 ::: notes
+Duration ~00:01
+
 Introduce prompt files as a key guardrail mechanism for AI-assisted development. This slide sets the stage for understanding how prompt files differ from instruction files and chat modes.
 
 Key points:
@@ -1515,7 +1619,6 @@ Key points:
 - Different from instruction files (which provide continuous guidance)
 - Part of the "prompt-first" development approach
 
-Timing: 1 minute brief intro.
 Transition: "Let's define what we mean by executable task templates..."
 :::
 
@@ -1524,6 +1627,8 @@ Transition: "Let's define what we mean by executable task templates..."
 ## Executable Task Templates
 
 ::: notes
+Duration ~00:02
+
 Define prompt files as "executable task templates." This framing helps participants understand their purpose and usage.
 
 Key concept: Prompt files are like functions—they take inputs (context, requirements) and produce outputs (code, docs, artifacts).
@@ -1536,7 +1641,6 @@ Draw parallels to:
 
 Prompt files bring the same benefits: repeatability, standardization, knowledge capture.
 
-Timing: 1-2 minutes.
 Transition: "So what exactly makes a prompt file?"
 :::
 
@@ -1552,7 +1656,10 @@ Key Characteristics
 Scope: Single, focused task or workflow
 Execution: Run on-demand when needed
 Purpose: Define “what” to accomplish with specific steps
+
 ::: notes
+Duration ~00:03
+
 Provide a formal definition and key characteristics of prompt files.
 
 Definition breakdown:
@@ -1572,17 +1679,22 @@ Contrast with instruction files:
 - Instruction files: Continuous guidance (always active)
 - Prompt files: One-time execution (run and done)
 
-Timing: 2-3 minutes.
 Transition: "Let's look at the structure..."
 :::
 
 ---
+
+
+
 
 ## Prompt File Structure
 
 - -- mode: agent model: "anthropic/claude-3.5-sonnet@2024-10-22" tools: ["create", "edit", "read"] description: Generate comprehensive API documentation prompt_metadata: id: generate-api-docs title: API Documentation Generator category: documentation output_format: markdown --- # Generate API Documentation ## Context Create comprehensive API documentation from code analysis... ## Requirements 1. Analyze existing API endpoints 2. Generate OpenAPI specifications 3. Create developer-friendly guides 4. Include example requests/responses ## Deliverable Generate `docs/api/` folder with complete documentation...
 
 ---
+
+
+
 
 ## Prompt Files: Use Cases
 
@@ -1597,6 +1709,9 @@ generate-test-suite.prompt.md
 create-deployment-pipeline.prompt.md
 
 ---
+
+
+
 
 ## Prompt Files Best Practices
 
@@ -1620,8 +1735,6 @@ paginate: true
 ---
 
 ## Exercise: Creating Prompt Files
-
-**Duration**: ~22 minutes
 
 **Objectives**
 
@@ -1649,7 +1762,8 @@ paginate: true
 
 ## Creating Prompt Files Exercise Instructions
 
-**Duration:** ~22 minutes
+Duration ~00:22
+
 **Prerequisites:** Git access to repository, GitHub Copilot enabled, ability to open multiple chat windows
 
 **Goal**: Experience the difference instruction files make in AI output quality through a three-phase controlled experiment measuring consistency, completeness, and reproducibility.
@@ -1838,7 +1952,9 @@ Use this to guide your analysis and identify key improvements:
 - Decide how to refine the result for long-term reuse
 
 ::: notes
-Frame this as the payoff to the earlier prompt-authoring exercise. The class is no longer discussing prompts in the abstract; they are now executing them and examining the generated instruction files as real artifacts. Emphasize that the goal is not just to get output, but to understand why the output is surprisingly rich and how to improve it without losing reproducibility. Spend about 45 to 60 seconds orienting the audience and then move into the workflow.
+Duration ~00:01
+
+Frame this as the payoff to the earlier prompt-authoring exercise. The class is no longer discussing prompts in the abstract; they are now executing them and examining the generated instruction files as real artifacts. Emphasize that the goal is not just to get output, but to understand why the output is surprisingly rich and how to improve it without losing reproducibility.
 :::
 
 ---
@@ -1860,6 +1976,8 @@ flowchart LR
 - Review happens after generation, not instead of it
 
 ::: notes
+Duration ~00:01
+
 Walk through the workflow from left to right and make the source-versus-artifact distinction explicit. The prompt file captures intent, structure, and constraints in a reusable form, while the generated instruction file is the output that gets inspected and possibly refined. Highlight that review still matters because inference is powerful but not infallible. Use about one minute here and transition by asking what exactly the model is contributing beyond the literal text of the prompt.
 :::
 
@@ -1877,7 +1995,9 @@ Walk through the workflow from left to right and make the source-versus-artifact
 > Peter Goostree
 
 ::: notes
-This slide is about using the model's built-in knowledge deliberately instead of fighting it. Explain that a strong prompt does not need to spell out every sentence if the model already knows common structures like metadata blocks, validation sections, architecture guidance, and examples. The opportunity is speed: the model drafts broadly, and the human constrains the result to the team's true requirements. Spend about one minute on the quote and the broader lesson that inference is an accelerator when paired with review.
+Duration ~00:01
+
+This slide is about using the model's built-in knowledge deliberately instead of fighting it. Explain that a strong prompt does not need to spell out every sentence if the model already knows common structures like metadata blocks, validation sections, architecture guidance, and examples. The opportunity is speed: the model drafts broadly, and the human constrains the result to the team's true requirements.
 :::
 
 ---
@@ -1892,7 +2012,9 @@ This slide is about using the model's built-in knowledge deliberately instead of
 **Core idea**: generate broadly first, then narrow precisely.
 
 ::: notes
-Explain why this approach feels faster in practice. Many teams stall at the beginning because writing a complete instruction file from zero requires structure, terminology, examples, and compliance details all at once. The prompt-first approach shifts the hard part from creation to refinement, which is usually easier and faster. Spend around a minute here and tie it back to the real classroom experience: participants saw more content than they expected, and that lowered the cost of getting started.
+Duration ~00:01
+
+Explain why this approach feels faster in practice. Many teams stall at the beginning because writing a complete instruction file from zero requires structure, terminology, examples, and compliance details all at once. The prompt-first approach shifts the hard part from creation to refinement, which is usually easier and faster.
 :::
 
 ---
@@ -1911,6 +2033,8 @@ Why the second path usually wins:
 - Teams can reproduce the artifact instead of reverse-engineering it
 
 ::: notes
+Duration ~00:01
+
 Make the tradeoff concrete. Direct edits are sometimes fine for quick cleanup, but they create drift between the reusable source and the artifact. Updating the prompt file keeps the real logic of the artifact in version control, which matters for auditability, reuse, and future regeneration. Use about one minute here and emphasize that this is the operational discipline behind reproducible AI-assisted work.
 :::
 
@@ -1938,7 +2062,9 @@ Benefits:
 - Better provenance than a short, vague command
 
 ::: notes
-Contrast a one-line directive with a prompt file that captures the real contract for the work. A simple request may work once, but it does not explain what sections are required, what metadata must exist, or which constraints the model must honor. A detailed prompt becomes documentation of intent as well as an execution mechanism. Spend about 75 seconds here and reinforce that better provenance starts with a better source artifact.
+Duration ~00:02
+
+Contrast a one-line directive with a prompt file that captures the real contract for the work. A simple request may work once, but it does not explain what sections are required, what metadata must exist, or which constraints the model must honor. A detailed prompt becomes documentation of intent as well as an execution mechanism.
 :::
 
 ---
@@ -1958,19 +2084,6 @@ Contrast a one-line directive with a prompt file that captures the real contract
 
 ---
 
-<!-- _class: lead -->
-
-# AI Assisted Documentation
-
----
-
-## AI Assisted Documentation
-
-- Documentation Generation & Code Analysis
-- Understanding Unfamiliar Code with GitHub Copilot
-
----
-
 ## Documentation Generation & Code Analysis
 
 Automated README and documentation updates
@@ -1984,6 +2097,9 @@ Introduce this module as a practical demonstration of how AI can accelerate docu
 :::
 
 ---
+
+
+
 
 ## Automated README & Documentation Updates
 
@@ -2013,6 +2129,9 @@ Create a prompt file that creates an instruction file for documenting the projec
 
 ---
 
+
+
+
 ## Architecture Diagram Generation
 
 What AI can generate
@@ -2033,6 +2152,9 @@ Create mermaid C4 diagrams for the project
 
 ---
 
+
+
+
 ## Complex Code Explanation & Mapping
 
 AI can help with:
@@ -2048,6 +2170,9 @@ It reduces onboarding time and helps engineers understand risky areas before mak
 :::
 
 ---
+
+
+
 
 ## Identifying Technical Debt Hotspots
 
@@ -2068,8 +2193,6 @@ This helps teams prioritize modernization work and avoid guesswork.
 
 ## Exercise: Brownfield Code Documentation
 
-Duration
-15 minutes
 Objectives
 Practice generating documentation for legacy code
 Identify missing or unclear areas
@@ -2090,10 +2213,15 @@ Ask AI to generate:
   Provenance is included
 
 ::: notes
+Duration ~00:15
+
 This exercise helps participants build confidence in using AI to document unfamiliar code safely and quickly.
 :::
 
 ---
+
+
+
 
 ## Generate Development & Deployment Guides
 
@@ -2111,6 +2239,9 @@ They also help prevent tribal knowledge loss.
 
 ---
 
+
+
+
 ## Create Architecture Diagrams
 
 AI-generated diagrams include:
@@ -2124,6 +2255,9 @@ Encourage participants to treat diagrams as drafts – AI can generate the struc
 :::
 
 ---
+
+
+
 
 ## Update Project Documentation
 
@@ -2140,6 +2274,9 @@ This reduces drift and improves maintainability.
 :::
 
 ---
+
+
+
 
 ## Cross-Validate With Multiple AI Models
 
@@ -2159,8 +2296,6 @@ Cross-validation is a powerful guardrail for correctness, especially in brownfie
 
 ## Exercise: Identifying Code Outside the Guardrails
 
-Duration
-10 minutes
 Objectives
 Detect code that violates architectural rules
 Identify patterns that contradict instruction files
@@ -2178,14 +2313,14 @@ Remediation steps are safe and incremental
 Documentation includes provenance
 
 ::: notes
+Duration ~00:10
+
 This exercise reinforces the importance of guardrails and helps participants practice applying them to real code.
 :::
 
 ---
 
 ## Exercise: Generating C4 Diagrams from Code
-
-Duration: 20-25 minutes
 
 Objectives
 
@@ -2236,7 +2371,8 @@ Success Criteria
 
 ## Generating C4 Diagrams from Code Exercise Instructions
 
-**Duration:** 20-25 minutes
+Duration ~00:25
+
 **Prerequisites:** Access to a codebase (calculator project or any brownfield system), GitHub Copilot or equivalent AI assistant, Mermaid preview capability in VS Code or GitHub markdown
 
 **Goal**: Use AI to generate accurate, renderable C4 architecture diagrams at multiple levels of detail, plus supplementary diagram types, directly from an existing codebase.
@@ -2381,9 +2517,9 @@ Validation checklist:
 Section 10 · AI-Assisted Software Development
 
 ::: notes
-Welcome to Section 10: Code Explanation and Analysis. This section covers approximately 9 minutes of content from the AI-Assisted Software Development course.
+Duration ~00:01
 
-**Timing**: 1 minute for title slide
+Welcome to Section 10: Code Explanation and Analysis. This section covers approximately 9 minutes of content from the AI-Assisted Software Development course.
 
 **Key Points**:
 
@@ -2407,15 +2543,13 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 - 🔒 **Identifying hidden coupling** between components
 - 📊 **Analyzing test coverage** to find gaps
 
-### Duration
-
 | Subsection | Topic | Time |
 |---|---|---|
 | 10.1 | Code Explanation | 01:28:20 – 01:30:05 |
 | 10.2 | Coverage Gap Analysis | 01:30:05 – 01:36:00 |
 
 ::: notes
-**Timing**: 1-2 minutes
+Duration ~00:02
 
 **Key Points to Emphasize**:
 
@@ -2424,8 +2558,6 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 3. Coverage gap analysis is a systematic approach, not guesswork
 
 **Audience Context**: Ask "How many of you regularly work with code you didn't write?" — most hands should go up. This establishes immediate relevance.
-
-**Timing Note**: The full section runs about 9 minutes in the course recording. This slide deck expands on those concepts.
 
 **Transition**: "Let's start with the most immediate need — understanding code you've never seen before."
 :::
@@ -2450,7 +2582,7 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 3. Explanation appears in the Chat panel
 
 ::: notes
-**Timing**: 3-4 minutes (include live demo)
+Duration ~00:04
 
 **Demo Instructions**:
 
@@ -2499,7 +2631,7 @@ and what edge cases it covers"
 - ✅ Where the gaps might be
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Core Insight to Deliver**: Test code is often more complex than production code. Developers new to a codebase frequently skip reading tests because they're hard to understand — but tests are the best documentation of intended behavior.
 
@@ -2541,7 +2673,7 @@ What scenarios are covered? What's missing?"
 ```
 
 ::: notes
-**Timing**: 2 minutes (this is the setup for the next slides)
+Duration ~00:02
 
 **Why This Matters**: Code coverage tools tell you *what percentage* is covered, but they don't tell you *whether the right things* are covered. A line can be executed by a test without that test actually verifying the behavior.
 
@@ -2578,7 +2710,7 @@ report showing what's tested vs. what's missing."
 - ❌ Missing coverage areas
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Live Demo Instructions**:
 1. Open a calculator service with its test file
@@ -2624,7 +2756,7 @@ report showing what's tested vs. what's missing."
 ```
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Why These Categories Matter**:
 
@@ -2664,7 +2796,7 @@ Prioritize by risk and provide implementation order."
 5. 🟢 **Low Priority**: Add chained operation integration tests
 
 ::: notes
-**Timing**: 2-3 minutes
+Duration ~00:03
 
 **Why Prioritization Matters**: Teams can't add all missing tests at once. Copilot helps prioritize by:
 - Risk: What's most likely to cause a production incident?
@@ -2710,7 +2842,7 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 ```
 
 ::: notes
-**Timing**: 3 minutes
+Duration ~00:03
 
 **Live Demo Instructions**:
 1. With the coverage plan from the previous step visible
@@ -2755,7 +2887,7 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 > GitHub Copilot transforms code understanding from a time-consuming manual process into a fast, systematic workflow.
 
 ::: notes
-**Timing**: 2 minutes
+Duration ~00:02
 
 **Consolidation Message**: These two capabilities — explanation and coverage analysis — work together. Explanation builds the understanding needed to evaluate whether your tests are actually verifying the right things.
 
@@ -2799,7 +2931,7 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 > What surprised you about Copilot's analysis? Did it find gaps you knew about? Any you didn't?
 
 ::: notes
-**Timing**: This slide supports a hands-on exercise period of 10-15 minutes
+Duration ~00:15
 
 **Facilitation Tips**:
 
@@ -2824,7 +2956,7 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 - Test naming is often inconsistent (Copilot will note this)
 - Many tests verify behavior but not error messages
 
-**Instructor Note**: Save 5 minutes for debrief. The discussion often surfaces insights that stick better than the lecture content.
+**Instructor Note**:  The discussion often surfaces insights that stick better than the lecture content.
 :::
 
 ---
@@ -2841,20 +2973,6 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 - Guardrails and Prompt Files
 - AI Assisted Documentation
 - **▶ Test Automation and Code Quality**
-
----
-
-<!-- _class: lead -->
-
-# Test Automation and Code Quality
-
----
-
-## Test Automation and Code Quality
-
-- Test Automation & Code Quality
-- Creating Robust Testing Frameworks
-- Testing in Production
 
 ---
 
@@ -2961,8 +3079,6 @@ They ensure that every change – human or AI-generated – meets the team's sta
 
 ## Exercise: Strengthening Test Automation & Code Quality
 
-Duration: 20 minutes
-
 Objectives
 
 - Identify gaps in test automation
@@ -2991,10 +3107,10 @@ Success Criteria
 - Provenance metadata is included
 
 ::: notes
+Duration ~00:20
 
 ## Strengthening Test Automation & Code Quality Exercise Instructions
 
-**Duration:** 20 minutes
 **Prerequisites:** Access to a brownfield codebase with existing tests
 
 ### Objectives
@@ -3046,6 +3162,9 @@ Introduce this module as the backbone of safe AI-assisted development. Testing f
 
 ---
 
+
+
+
 ## Generating Comprehensive Test Suites
 
 AI can help generate:
@@ -3065,6 +3184,9 @@ Explain that AI accelerates test creation dramatically, but humans still validat
 
 ---
 
+
+
+
 ## Managing Test Suites Over Time
 
 Key Practices
@@ -3079,6 +3201,9 @@ Test suites age just like code. Without maintenance, they become brittle, noisy,
 :::
 
 ---
+
+
+
 
 ## Test Review & Validation Strategies
 
@@ -3098,6 +3223,9 @@ AI is excellent at pattern detection and coverage suggestions, but humans valida
 
 ---
 
+
+
+
 ## Balancing Test Coverage with Maintainability
 
 Principles
@@ -3114,8 +3242,6 @@ High coverage numbers can be deceptive. The goal is not 100% coverage — it's m
 
 ## Exercise: Strengthening Your Testing Framework
 
-Duration
-20 minutes
 Objectives
 Identify gaps in an existing test suite
 Use AI to generate missing tests
@@ -3139,7 +3265,208 @@ Review existing tests for:
   Provenance metadata is included
 
 ::: notes
+Duration ~00:20
+
 Encourage participants to treat this as a real modernization task. The goal is not to generate as many tests as possible — it's to improve the safety and clarity of the testing framework in a targeted, maintainable way.
+:::
+
+---
+
+## Feature Flags & Test Suites
+
+Safe deployment strategies for brownfield modernization
+
+- Feature flags for managing work-in-progress
+- As-Is vs. To-Be test suites
+- Retiring flags with AI assistance
+
+::: notes
+Introduce this section as a practical framework for deploying changes safely in existing codebases. The three pillars — feature flags, As-Is tests, and To-Be tests — work together to give teams confidence and control. Spend a moment framing the problem: production systems can't afford regressions, yet they must evolve. This is the solution. (~1 minute)
+:::
+
+---
+
+## As-Is Test Suites — Purpose
+
+Capture what your system does _right now_
+
+- **Freeze current behavior** — tests describe production
+- **Protect against regressions** — know when something breaks
+- **Document expectations** — living spec of legacy behavior
+- **Production gate** — go to production anytime As-Is tests pass
+
+::: notes
+As-Is tests are your safety net. Emphasize that their job is NOT to validate the ideal behavior — it's to describe what the system does today. If an As-Is test fails, something that used to work is now broken. That's a regression. The key insight: passing As-Is tests = safe to deploy. This reframes testing from "checking if new code is right" to "confirming nothing regressed." (~1.5 minutes)
+:::
+
+---
+
+## As-Is Test Suites — Building Confidence
+
+Grow coverage incrementally before making changes
+
+- Add tests **before** modifying code
+- Increase coverage as changes are identified
+- Build trust in the suite over time
+- New implementations hidden behind **feature flags**
+- Compiled code + passing As-Is tests = high confidence
+
+::: notes
+The growth strategy matters: don't try to get 100% coverage before you start. Instead, write As-Is tests for the specific areas you're about to change. This creates a targeted safety net exactly where it's needed. Highlight the confidence formula — compiled code plus passing As-Is tests is a strong signal that you haven't broken anything. (~1.5 minutes)
+:::
+
+---
+
+## As-Is Test Suites — Critical Rules
+
+⚠️ These rules determine production safety
+
+| Rule                        | Details                                    |
+| --------------------------- | ------------------------------------------ |
+| **Feature flag discipline** | All new code MUST be wrapped by flags      |
+| **Watch for bleed**         | Unwrapped code goes straight to production |
+| **As-Is tests as gate**     | These tests define production readiness    |
+
+::: notes
+This slide is about risk. The most dangerous mistake is writing new code that runs unconditionally — it bypasses the entire protection strategy. Emphasize the "bleed" concept: any code outside a feature flag is live code. As-Is tests only protect you if the flag discipline is maintained. Make this memorable: "if it's not behind a flag, it's in production." (~1.5 minutes)
+:::
+
+---
+
+## To-Be Test Suites — Purpose
+
+Define and track the future state
+
+- **Define future behavior** — tests describe what you're building
+- **Validate work-in-progress** — confidence during development
+- **Track implementation progress** — know how far you've come
+- Run only when feature flag is **ON**
+
+::: notes
+To-Be tests are forward-looking. They describe the system you're building, not the system you have. The critical difference from As-Is tests: To-Be tests are expected to fail until the feature is complete. They gate the feature flag, not production. Use the analogy of a construction blueprint — it shows what the building will look like, not what it looks like today. (~1.5 minutes)
+:::
+
+---
+
+## To-Be Test Suites — Workflow
+
+Step-by-step implementation pattern
+
+1. Implement feature flag around code to modify
+2. When flag **ON** → execute new behavior
+3. Write tests that only run when flag is **ON**
+4. Separate test execution strategy in CI/CD pipeline
+
+```
+if (featureFlag.IsEnabled("new-checkout")) {
+    // new behavior — covered by To-Be tests
+} else {
+    // old behavior — covered by As-Is tests
+}
+```
+
+::: notes
+Walk through this workflow step by step. The flag is the pivot point: it controls both what code runs AND which tests are relevant. The CI/CD pipeline runs both phases. Stress that To-Be tests must be isolated — they should never interfere with As-Is test results. Show the code snippet and explain that the flag creates a clean separation. (~2 minutes)
+:::
+
+---
+
+## Automation Strategy
+
+Two-phase CI/CD pipeline
+
+**Phase 1 — As-Is Tests**
+
+- Set flags to match **production state**
+- Run regression tests
+- Block merge if failures detected
+
+**Phase 2 — To-Be Tests**
+
+- Turn on appropriate feature flags
+- Execute To-Be test suite
+- Assess progress toward completion
+
+::: notes
+The two-phase pipeline is the operational heart of this strategy. Phase 1 is the gate — it must pass for any merge. Phase 2 is informational during development but becomes a gate before the feature flag is turned on in production. Emphasize that phase 2 doesn't block today — it tracks progress. When all To-Be tests pass and the team is ready, they flip the flag in production. (~2 minutes)
+:::
+
+---
+
+## Benefits of the Dual-Suite Approach
+
+Why this strategy pays off
+
+- ✅ Smaller To-Be suite keeps check-in procedures fast
+- ✅ Guides modernization efforts with clear milestones
+- ✅ Validates new practices and architectures incrementally
+- ✅ Safe continuous deployment throughout the project
+- ✅ Clear signal for when a feature is production-ready
+
+::: notes
+Summarize the business value. The dual-suite approach isn't just a testing pattern — it's a delivery strategy. Teams can keep shipping to production while a large refactor is in progress. Stakeholders can see progress via To-Be test pass rates. Engineers get fast feedback on regressions. And when the feature is done, the flag flip is low-risk because everything has been validated. (~1 minute)
+:::
+
+---
+
+## Maintenance — After Production Release
+
+Completing the lifecycle
+
+**When a feature goes live:**
+
+1. Move To-Be tests → **As-Is suite**
+2. Tests become part of the regression suite
+3. Maintain consistency with production state
+4. **Retire the feature flag** (remove dead code paths)
+
+> The To-Be suite of today becomes the As-Is suite of tomorrow
+
+::: notes
+This is often forgotten but critical. When a feature ships, its To-Be tests must graduate into the As-Is suite — they now describe production behavior. Failing to do this leaves the As-Is suite incomplete. And the feature flag must be retired to avoid dead code accumulation. The quote on the slide is a key takeaway — write it on a whiteboard if you can. (~1.5 minutes)
+:::
+
+---
+
+## Feature Flag Retirement — AI-Assisted
+
+AI dramatically simplifies flag removal
+
+**Before AI:**
+
+1. Create a pull request to implement the flag
+2. Merge the changes
+3. Schedule flag retirement for a later sprint
+4. Manually trace all code paths
+
+**With AI:**
+
+- Prompt: _"Identify all changes needed to remove this feature flag"_
+- AI traces every code path controlled by the flag
+- AI generates the complete removal diff
+- Retirement becomes a routine, low-effort task
+
+::: notes
+This is a great demonstration of AI as a force multiplier for brownfield work. Flag retirement used to be postponed because it was tedious — tracing every conditional, every test, every config reference. AI makes it fast. Encourage the audience to try this: pick an old flag in their codebase and ask Copilot to identify everything that needs to change to remove it. The results are often surprising in their completeness. (~2 minutes)
+:::
+
+---
+
+## Key Takeaways
+
+The production-safe modernization playbook
+
+| Practice                      | Benefit                          |
+| ----------------------------- | -------------------------------- |
+| As-Is tests before changes    | Regression safety net            |
+| Feature flags for new code    | Zero bleed to production         |
+| To-Be tests with flags        | Track progress safely            |
+| Two-phase CI/CD               | Continuous deployment confidence |
+| Retire flags + graduate tests | Clean, maintainable codebase     |
+| AI-assisted flag retirement   | Low-effort, thorough removal     |
+
+::: notes
+Wrap up by connecting all the pieces. This isn't a collection of independent techniques — it's a system. Each element reinforces the others. As-Is tests make flag discipline meaningful. Flags make To-Be tests possible. The two-phase pipeline makes both visible. And AI makes the cleanup at the end practical. Leave the audience with a clear first step: pick one area of your codebase, write As-Is tests for it, and wrap your next change in a feature flag. (~1.5 minutes)
 :::
 
 ---

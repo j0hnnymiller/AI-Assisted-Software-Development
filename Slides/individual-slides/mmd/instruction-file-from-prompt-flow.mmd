@@ -1,0 +1,7 @@
+flowchart TB
+    A[Prompt file created earlier] --> B[Run the prompt]
+    B --> C[Generate instruction file]
+    C --> D[Review generated content]
+    D --> E{Need changes?}
+    E -- Yes --> F[Update prompt and regenerate]
+    E -- No --> G[Keep or lightly edit artifact]

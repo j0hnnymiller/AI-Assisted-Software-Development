@@ -20,7 +20,8 @@ sections:
   - name: Intro to Copilot
     slides:
       - Slides\individual-slides\repository-and-tool-setup.md
-      - Slides\individual-slides\exercise-fork-and-clone-repositories.md
+      - file: Slides\individual-slides\exercise-fork-and-clone-repositories.md
+        layout: two column
       - Slides\individual-slides\hands-on-with-github-copilot-vs-code.md
       - Slides\individual-slides\exercise-github-copilot-vscode-workflows.md
 
@@ -39,12 +40,8 @@ sections:
     slides:
       - Slides\individual-slides\adding-ai-guardrails.md
       - Slides\individual-slides\instruction-files.md
+      - Slides\individual-slides\copilot-instruction-file-types.md
       - Slides\individual-slides\instruction-file-applyto-patterns.md
       - Slides\individual-slides\core-instruction-files.md
       - Slides\individual-slides\organizational-vs-repository-instruction-files.md
       - Slides\individual-slides\exercise-technology-inventory-instructions.md
-
-  - name: Managing Context
-    slides:
-      - Slides\individual-slides\managing-github-copilot-effectively.md
-      - Slides\individual-slides\managing-instruction-files-context-windows.md

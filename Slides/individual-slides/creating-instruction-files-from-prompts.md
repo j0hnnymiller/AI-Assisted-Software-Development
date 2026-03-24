@@ -84,7 +84,7 @@ Frame this as the payoff to the earlier prompt-authoring exercise. The class is 
 ## Prompt to Instruction Workflow
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Prompt file created earlier] --> B[Run the prompt]
     B --> C[Generate instruction file]
     C --> D[Review generated content]

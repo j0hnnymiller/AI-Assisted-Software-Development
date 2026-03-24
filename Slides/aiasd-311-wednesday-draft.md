@@ -26,6 +26,8 @@ paginate: true
 - **Questions are always welcome — ask anytime!**
 
 ::: notes
+Duration ~00:02
+
 Welcome everyone back to the session. Take a moment to let people settle in before diving into content. Acknowledge that it's great to see everyone back and express enthusiasm for the session ahead.
 
 Key talking points:
@@ -35,7 +37,6 @@ Key talking points:
 - Set a positive, inclusive tone for the session
 - If this is after a break, give people 30 seconds to get re-focused
 
-Timing: Spend about 1-2 minutes on this slide before moving on.
 Transition: "Let's pick up right where we left off..."
 :::
 
@@ -46,7 +47,937 @@ Transition: "Let's pick up right where we left off..."
 ## Course Modules
 
 - Intro
+- **▶ Test Automation and Code Quality**
+- Instructions vs Prompts vs Custom Chat Modes
+- Managing Context
+- Custom Agents
+- Skills
+- MCP
+
+---
+
+<!-- _class: lead -->
+
+# Test Automation and Code Quality
+
+---
+
+## Test Automation and Code Quality
+
+- Test Automation & Code Quality
+- Creating Robust Testing Frameworks
+- Feature Flags & Test Suites
+- Testing in Production
+
+---
+
+## Test Automation & Code Quality
+
+AI-assisted test generation (unit, integration, E2E)
+Intelligent linting beyond static analysis
+Coverage analysis and test adequacy assessment
+Automated quality gates
+
+::: notes
+Introduce this module as the foundation for safe, predictable modernization.
+
+Test automation and quality gates are the mechanisms that allow teams to move quickly without breaking brownfield systems.
+
+AI accelerates these workflows but must be guided by strong guardrails.
+:::
+
+---
+
+## AI-Assisted Test Generation
+
+AI can generate:
+Unit tests for functions, classes, and utilities
+Integration tests for module interactions
+End-to-end tests for full workflows
+Edge-case tests and regression scenarios
+Contract tests for APIs and services
+Benefits
+Rapid coverage expansion
+Consistent structure and naming
+Reduced onboarding time
+
+::: notes
+Explain that AI dramatically accelerates test creation, but humans still validate correctness and intent.
+
+Emphasize that tests are only valuable when they reflect real business behavior, not just code structure.
+:::
+
+---
+
+## Intelligent Linting
+
+AI-enhanced linting can detect:
+Architectural violations
+Anti-patterns
+Unsafe refactors
+Missing documentation
+Inconsistent naming or domain terminology
+Why it matters
+Goes beyond syntax
+Enforces architectural guardrails
+Reduces long-term technical debt
+
+::: notes
+Static analysis tools catch syntax and style issues, but AI can reason about architecture, intent, and domain rules.
+
+This creates a deeper layer of quality enforcement.
+:::
+
+---
+
+## Coverage Analysis
+
+AI can help evaluate:
+Coverage gaps
+Missing edge cases
+Over-testing of implementation details
+Under-testing of business logic
+Redundant or brittle tests
+Outcomes
+More meaningful coverage
+Better alignment with real behavior
+Reduced maintenance burden
+
+::: notes
+Coverage numbers alone are misleading.
+
+AI helps teams understand whether tests are adequate, not just numerous. Adequacy is the real measure of safety.
+:::
+
+---
+
+## Automated Quality Gates
+
+Quality gates can enforce:
+Minimum test coverage
+Linting and architectural checks
+Provenance requirements
+PR-level test generation
+Risk scoring for changes
+Benefits
+Prevents regressions
+Ensures consistent quality
+Supports evergreen development
+
+::: notes
+Quality gates turn best practices into automated enforcement.
+
+They ensure that every change – human or AI-generated – meets the team's standards before merging.
+:::
+
+---
+
+## Exercise: Strengthening Test Automation & Code Quality
+
+Objectives
+
+- Identify gaps in test automation
+- Use AI to generate missing tests
+- Apply intelligent linting and quality gates
+- Validate test adequacy and architectural alignment
+
+Activities
+
+1. Select a brownfield module or function
+2. Review existing tests for:
+   - Coverage gaps
+   - Missing edge cases
+   - Redundant or brittle tests
+3. Ask AI to generate missing tests
+4. Run linting and architectural checks
+5. Propose quality gates to enforce improvements
+6. Add provenance metadata to all new artifacts
+
+Success Criteria
+
+- Coverage gaps are identified and addressed
+- AI-generated tests are validated and correct
+- Linting and architectural issues are resolved
+- Proposed quality gates are actionable and safe
+- Provenance metadata is included
+
+::: notes
+Duration ~00:20
+
+## Strengthening Test Automation & Code Quality Exercise Instructions
+
+**Prerequisites:** Access to a brownfield codebase with existing tests
+
+### Objectives
+
+- Identify gaps in test automation
+- Use AI to generate missing tests
+- Apply intelligent linting and quality gates
+- Validate test adequacy and architectural alignment
+
+### Activities
+
+1. **Select a brownfield module or function** - Choose a component with existing but incomplete test coverage.
+2. **Review existing tests** - Analyze for coverage gaps, missing edge cases, and brittle or redundant tests.
+3. **Ask AI to generate missing tests** - Use targeted prompts to fill identified gaps.
+4. **Run linting and architectural checks** - Execute automated quality tools to identify issues.
+5. **Propose quality gates** - Define enforceable quality standards for continuous improvement.
+6. **Add provenance metadata** - Document all AI-assisted artifacts with proper metadata.
+
+### Success Criteria
+
+- Coverage gaps are identified and addressed
+- AI-generated tests are validated and correct
+- Linting and architectural issues are resolved
+- Proposed quality gates are actionable and safe
+- Provenance metadata is included
+
+### Key Teaching Point
+
+Encourage participants to treat this as a real modernization task.
+
+The goal is not to generate as many tests as possible – it's to improve the safety, clarity, and maintainability of the testing framework in a targeted, evergreen-aligned way.
+
+Focus on quality over quantity, and ensure that any proposed quality gates are achievable and won't block legitimate work.
+:::
+
+---
+
+## Creating Robust Testing Frameworks
+
+Generating comprehensive test suites
+Managing test suites over time
+Test review and validation strategies
+Balancing test coverage with maintainability
+Exercise: Strengthening your testing framework
+
+::: notes
+Introduce this module as the backbone of safe AI-assisted development. Testing frameworks are the ultimate guardrail — they allow teams to modernize brownfield systems confidently and incrementally. Emphasize that robust tests are not optional; they are the foundation of evergreen code.
+:::
+
+---
+
+
+
+
+## Generating Comprehensive Test Suites
+
+AI can help generate:
+Unit tests
+Integration tests
+End-to-end tests
+Snapshot and contract tests
+Edge-case and regression tests
+Benefits
+Faster coverage expansion
+Consistent test structure
+Reduced onboarding time
+
+::: notes
+Explain that AI accelerates test creation dramatically, but humans still validate correctness and intent. Comprehensive test suites give teams the confidence to refactor and modernize safely.
+:::
+
+---
+
+
+
+
+## Managing Test Suites Over Time
+
+Key Practices
+Regularly prune obsolete tests
+Update tests alongside code changes
+Maintain clear naming and structure
+Use coverage reports to guide improvements
+Version-control test strategy documents
+
+::: notes
+Test suites age just like code. Without maintenance, they become brittle, noisy, or misleading. Encourage teams to treat test suites as living artifacts that evolve with the system.
+:::
+
+---
+
+
+
+
+## Test Review & Validation Strategies
+
+AI-assisted review can:
+Detect missing assertions
+Identify redundant tests
+Suggest edge cases
+Flag inconsistent patterns
+Human reviewers focus on:
+Intent correctness
+Business logic validation
+Architectural alignment
+
+::: notes
+AI is excellent at pattern detection and coverage suggestions, but humans validate whether tests reflect real business rules. Together, they create a multi-layered validation process.
+:::
+
+---
+
+
+
+
+## Balancing Test Coverage with Maintainability
+
+Principles
+Aim for meaningful coverage, not maximal coverage
+Prioritize high-risk and high-change areas
+Avoid over-testing implementation details
+Keep tests readable and maintainable
+
+::: notes
+High coverage numbers can be deceptive. The goal is not 100% coverage — it's meaningful coverage that protects behavior without creating maintenance burdens. Encourage teams to focus on value, not vanity metrics.
+:::
+
+---
+
+## Exercise: Strengthening Your Testing Framework
+
+Objectives
+Identify gaps in an existing test suite
+Use AI to generate missing tests
+Improve maintainability and structure
+Validate tests for correctness and intent
+Activities
+Select a brownfield module or function.
+Review existing tests for:
+
+- Coverage gaps
+- Redundant or brittle tests
+- Missing edge cases
+  Ask AI to generate missing tests.
+  Validate AI-generated tests for correctness.
+  Refactor or reorganize tests for clarity.
+  Add provenance metadata to all new tests.
+  Success Criteria
+  Coverage gaps are identified and addressed
+  AI-generated tests are validated and correct
+  Test suite readability and structure improve
+  Provenance metadata is included
+
+::: notes
+Duration ~00:20
+
+Encourage participants to treat this as a real modernization task. The goal is not to generate as many tests as possible — it's to improve the safety and clarity of the testing framework in a targeted, maintainable way.
+:::
+
+---
+
+## Feature Flags & Test Suites
+
+Safe deployment strategies for brownfield modernization
+
+- Feature flags for managing work-in-progress
+- As-Is vs. To-Be test suites
+- Retiring flags with AI assistance
+
+::: notes
+Introduce this section as a practical framework for deploying changes safely in existing codebases. The three pillars — feature flags, As-Is tests, and To-Be tests — work together to give teams confidence and control. Spend a moment framing the problem: production systems can't afford regressions, yet they must evolve. This is the solution. (~1 minute)
+:::
+
+---
+
+## As-Is Test Suites — Purpose
+
+Capture what your system does _right now_
+
+- **Freeze current behavior** — tests describe production
+- **Protect against regressions** — know when something breaks
+- **Document expectations** — living spec of legacy behavior
+- **Production gate** — go to production anytime As-Is tests pass
+
+::: notes
+As-Is tests are your safety net. Emphasize that their job is NOT to validate the ideal behavior — it's to describe what the system does today. If an As-Is test fails, something that used to work is now broken. That's a regression. The key insight: passing As-Is tests = safe to deploy. This reframes testing from "checking if new code is right" to "confirming nothing regressed." (~1.5 minutes)
+:::
+
+---
+
+## As-Is Test Suites — Building Confidence
+
+Grow coverage incrementally before making changes
+
+- Add tests **before** modifying code
+- Increase coverage as changes are identified
+- Build trust in the suite over time
+- New implementations hidden behind **feature flags**
+- Compiled code + passing As-Is tests = high confidence
+
+::: notes
+The growth strategy matters: don't try to get 100% coverage before you start. Instead, write As-Is tests for the specific areas you're about to change. This creates a targeted safety net exactly where it's needed. Highlight the confidence formula — compiled code plus passing As-Is tests is a strong signal that you haven't broken anything. (~1.5 minutes)
+:::
+
+---
+
+## As-Is Test Suites — Critical Rules
+
+⚠️ These rules determine production safety
+
+| Rule                        | Details                                    |
+| --------------------------- | ------------------------------------------ |
+| **Feature flag discipline** | All new code MUST be wrapped by flags      |
+| **Watch for bleed**         | Unwrapped code goes straight to production |
+| **As-Is tests as gate**     | These tests define production readiness    |
+
+::: notes
+This slide is about risk. The most dangerous mistake is writing new code that runs unconditionally — it bypasses the entire protection strategy. Emphasize the "bleed" concept: any code outside a feature flag is live code. As-Is tests only protect you if the flag discipline is maintained. Make this memorable: "if it's not behind a flag, it's in production." (~1.5 minutes)
+:::
+
+---
+
+## To-Be Test Suites — Purpose
+
+Define and track the future state
+
+- **Define future behavior** — tests describe what you're building
+- **Validate work-in-progress** — confidence during development
+- **Track implementation progress** — know how far you've come
+- Run only when feature flag is **ON**
+
+::: notes
+To-Be tests are forward-looking. They describe the system you're building, not the system you have. The critical difference from As-Is tests: To-Be tests are expected to fail until the feature is complete. They gate the feature flag, not production. Use the analogy of a construction blueprint — it shows what the building will look like, not what it looks like today. (~1.5 minutes)
+:::
+
+---
+
+## To-Be Test Suites — Workflow
+
+Step-by-step implementation pattern
+
+1. Implement feature flag around code to modify
+2. When flag **ON** → execute new behavior
+3. Write tests that only run when flag is **ON**
+4. Separate test execution strategy in CI/CD pipeline
+
+'''
+if (featureFlag.IsEnabled("new-checkout")) {
+    // new behavior — covered by To-Be tests
+} else {
+    // old behavior — covered by As-Is tests
+}
+'''
+
+::: notes
+Walk through this workflow step by step. The flag is the pivot point: it controls both what code runs AND which tests are relevant. The CI/CD pipeline runs both phases. Stress that To-Be tests must be isolated — they should never interfere with As-Is test results. Show the code snippet and explain that the flag creates a clean separation. (~2 minutes)
+:::
+
+---
+
+## Automation Strategy
+
+Two-phase CI/CD pipeline
+
+**Phase 1 — As-Is Tests**
+
+- Set flags to match **production state**
+- Run regression tests
+- Block merge if failures detected
+
+**Phase 2 — To-Be Tests**
+
+- Turn on appropriate feature flags
+- Execute To-Be test suite
+- Assess progress toward completion
+
+::: notes
+The two-phase pipeline is the operational heart of this strategy. Phase 1 is the gate — it must pass for any merge. Phase 2 is informational during development but becomes a gate before the feature flag is turned on in production. Emphasize that phase 2 doesn't block today — it tracks progress. When all To-Be tests pass and the team is ready, they flip the flag in production. (~2 minutes)
+:::
+
+---
+
+## Benefits of the Dual-Suite Approach
+
+Why this strategy pays off
+
+- ✅ Smaller To-Be suite keeps check-in procedures fast
+- ✅ Guides modernization efforts with clear milestones
+- ✅ Validates new practices and architectures incrementally
+- ✅ Safe continuous deployment throughout the project
+- ✅ Clear signal for when a feature is production-ready
+
+::: notes
+Summarize the business value. The dual-suite approach isn't just a testing pattern — it's a delivery strategy. Teams can keep shipping to production while a large refactor is in progress. Stakeholders can see progress via To-Be test pass rates. Engineers get fast feedback on regressions. And when the feature is done, the flag flip is low-risk because everything has been validated. (~1 minute)
+:::
+
+---
+
+## Maintenance — After Production Release
+
+Completing the lifecycle
+
+**When a feature goes live:**
+
+1. Move To-Be tests → **As-Is suite**
+2. Tests become part of the regression suite
+3. Maintain consistency with production state
+4. **Retire the feature flag** (remove dead code paths)
+
+> The To-Be suite of today becomes the As-Is suite of tomorrow
+
+::: notes
+This is often forgotten but critical. When a feature ships, its To-Be tests must graduate into the As-Is suite — they now describe production behavior. Failing to do this leaves the As-Is suite incomplete. And the feature flag must be retired to avoid dead code accumulation. The quote on the slide is a key takeaway — write it on a whiteboard if you can. (~1.5 minutes)
+:::
+
+---
+
+## Feature Flag Retirement — AI-Assisted
+
+AI dramatically simplifies flag removal
+
+**Before AI:**
+
+1. Create a pull request to implement the flag
+2. Merge the changes
+3. Schedule flag retirement for a later sprint
+4. Manually trace all code paths
+
+**With AI:**
+
+- Prompt: _"Identify all changes needed to remove this feature flag"_
+- AI traces every code path controlled by the flag
+- AI generates the complete removal diff
+- Retirement becomes a routine, low-effort task
+
+::: notes
+This is a great demonstration of AI as a force multiplier for brownfield work. Flag retirement used to be postponed because it was tedious — tracing every conditional, every test, every config reference. AI makes it fast. Encourage the audience to try this: pick an old flag in their codebase and ask Copilot to identify everything that needs to change to remove it. The results are often surprising in their completeness. (~2 minutes)
+:::
+
+---
+
+## Key Takeaways
+
+The production-safe modernization playbook
+
+| Practice                      | Benefit                          |
+| ----------------------------- | -------------------------------- |
+| As-Is tests before changes    | Regression safety net            |
+| Feature flags for new code    | Zero bleed to production         |
+| To-Be tests with flags        | Track progress safely            |
+| Two-phase CI/CD               | Continuous deployment confidence |
+| Retire flags + graduate tests | Clean, maintainable codebase     |
+| AI-assisted flag retirement   | Low-effort, thorough removal     |
+
+::: notes
+Wrap up by connecting all the pieces. This isn't a collection of independent techniques — it's a system. Each element reinforces the others. As-Is tests make flag discipline meaningful. Flags make To-Be tests possible. The two-phase pipeline makes both visible. And AI makes the cleanup at the end practical. Leave the audience with a clear first step: pick one area of your codebase, write As-Is tests for it, and wrap your next change in a feature flag. (~1.5 minutes)
+:::
+
+---
+
+## Testing in Production
+
+Safe production testing strategies
+Shadow traffic and canary releases
+Observability and automated rollback
+Beta testing groups
+
+::: notes
+Testing in production is not reckless—it's engineered risk management. Traditional staging environments can never fully replicate production conditions, traffic patterns, or edge cases. This module teaches you how to validate changes safely in the real environment where they'll ultimately run. We'll cover feature flags, shadow traffic, canary releases, error budgets, and beta testing strategies.
+:::
+
+---
+
+## Why Test in Production?
+
+**The Reality Gap**
+
+- Staging can't replicate production scale
+- Real user behavior is unpredictable
+- Production data reveals edge cases
+- Load patterns differ between environments
+
+**The Risk Without It**
+
+- Mass failures on release day
+- No rollback strategy
+- Customer-facing incidents
+- Extended downtime
+
+::: notes
+The gap between staging and production is inevitable. No matter how sophisticated your pre-production environments are, they lack real users, real data volumes, and real integration complexity. Testing in production bridges this gap—but only if you do it safely. Without production testing, your first exposure to production conditions is a full rollout, when the blast radius is maximum. Ask the class: How many have experienced a "worked fine in staging" failure? What was the cost?
+:::
+
+---
+
+## Subsection 5.1: Engineered Production Testing
+
+Core principles and safe techniques
+
+::: notes
+This section introduces the fundamental techniques for safe production testing. Everything here is built on one core idea: separate deployment from exposure. You can ship code to production without turning it on for users. This decoupling is what makes production testing safe.
+:::
+
+---
+
+## Core Principle
+
+**Hide features behind flags until ready**
+
+- Deploy code without activating behavior
+- Control exposure programmatically
+- Enable instant rollback
+- Test incrementally with real infrastructure
+
+**Test in real environment with real loads**
+
+- Production data and integration points
+- Actual traffic patterns and volumes
+- Real-world latency and failure modes
+- Genuine user behavior
+
+::: notes
+Feature flags are the foundation of safe production testing. They allow you to deploy new code without exposing users to it. This means you can validate functionality in production infrastructure before risking customer impact. Emphasize that "real loads" includes not just volume, but also the complexity of production integrations—third-party APIs, legacy systems, database constraints, and network conditions that staging can't replicate.
+:::
+
+---
+
+## Technique 1: Shadow Traffic
+
+**Concept**
+
+Route a copy of production traffic to new code path
+Original code serves the actual response
+No user impact—shadow results are discarded
+
+**Benefits**
+
+- Zero risk to users
+- Production-scale load testing
+- Compare old vs. new behavior
+- Identify performance regressions
+
+**Implementation**
+
+'''
+Incoming Request
+  ├─> Old Code (serves response)
+  └─> New Code (logged/monitored, discarded)
+'''
+
+::: notes
+Shadow traffic is the safest production testing technique. Every production request is duplicated: one copy goes to the existing code (which serves the user), and one copy goes to the new code (which is monitored but discarded). You get full production validation with zero customer risk. Shadow traffic is ideal for testing performance, correctness, and edge-case handling. It's especially valuable for AI-generated code because you can compare outputs between human-written and AI-generated implementations at production scale.
+:::
+
+---
+
+## Technique 2: Canary Releases
+
+**Concept**
+
+Gradual rollout to increasing percentage of users
+Monitor health metrics at each stage
+Expand exposure only if metrics are healthy
+
+**Rollout Stages**
+
+- **1%**: Internal employees, beta users
+- **5%**: Expand to low-risk segments
+- **25%**: Quarter of production traffic
+- **100%**: Full rollout after validation
+
+**Health Checks**
+
+- Error rate within budget
+- Latency acceptable
+- No spike in support tickets
+
+::: notes
+Canary releases incrementally expand feature exposure. Start with 1% of users—often your internal team or a beta cohort—and monitor error rates, latency, and user reports. If metrics remain healthy, expand to 5%, then 25%, and finally 100%. If any stage shows degradation, halt the rollout and investigate. The key: define "healthy" before you start. What error rate is acceptable? What latency threshold? What volume of support tickets? Canary releases turn deployment into a data-driven decision rather than a leap of faith.
+:::
+
+---
+
+## Technique 3: Observability Dashboards
+
+**Real-Time Monitoring**
+
+- Feature-specific error rates
+- Latency percentiles (p50, p95, p99)
+- Resource utilization (CPU, memory)
+- User impact metrics (conversion, engagement)
+
+**Essential Alerts**
+
+- Threshold violations
+- Anomaly detection
+- Comparison against baseline
+- Correlated metrics (multi-signal alerts)
+
+**Dashboard Example**
+
+'''
+Feature: Payment Processing v2
+├─ Error Rate: 0.8% (baseline: 0.5%) ⚠️
+├─ p95 Latency: 320ms (baseline: 280ms) ⚠️
+├─ Canary Coverage: 5%
+└─ Auto-rollback: ARMED
+'''
+
+::: notes
+Observability is your feedback loop. Without real-time dashboards, production testing is blind guessing. You need visibility into error rates, latency, resource consumption, and business metrics. Crucially, you need these metrics scoped to the feature under test—not just global application health. If your payment processing feature is in canary mode, you need a dashboard that shows error rates specifically for that feature across both the canary and control groups. Modern observability platforms support feature-flag-aware telemetry. This is non-negotiable for safe AI-assisted development.
+:::
+
+---
+
+## Technique 4: Automated Rollback
+
+**Automated Response to Failures**
+
+- Define error budgets per feature
+- Monitor continuously in real-time
+- Auto-disable feature if budget exceeded
+- Alert team for investigation
+
+**Rollback Conditions**
+
+'''yaml
+feature: payment_processing_v2
+error_budget:
+  threshold: 1.0% # max allowed error rate
+  window: 5min # measurement period
+  action: disable # auto-disable if exceeded
+  notify: [oncall-team, slack-alerts]
+'''
+
+**Why Automation?**
+
+- Humans are too slow
+- Consistent response
+- Limits blast radius
+- Reduces MTTR (Mean Time To Recovery)
+
+::: notes
+Automated rollback is the safety net. If error rates or latency exceed predefined thresholds, the system disables the feature automatically—no human in the loop. This is critical because production incidents escalate rapidly. The time between "something's wrong" and "customers are affected" is measured in seconds. Automated rollback limits the blast radius and ensures a consistent response. Define your thresholds ahead of time based on historical baselines and capacity planning. The example shows a YAML config: if payment processing v2 exceeds 1% error rate in any 5-minute window, disable it and alert the team. Ask: What's the cost of a two-minute delay in rollback?
+:::
+
+---
+
+## Subsection 5.2: Error Budget Management
+
+Automatic feature disabling based on thresholds
+
+::: notes
+Error budgets formalize reliability targets. Instead of saying "minimize errors," you say "this feature can tolerate X errors per Y minutes." This makes reliability measurable and enforceable through automation.
+:::
+
+---
+
+## Error Budget Fundamentals
+
+**Defining the Budget**
+
+- **Threshold**: Maximum allowable error rate or count
+- **Window**: Time period for measurement (e.g., 5 min, 1 hour)
+- **Action**: What happens when exceeded (disable, alert, throttle)
+- **Notify**: Who gets alerted and how
+
+**Example**
+
+> "If more than 10 errors occur in 5 minutes for the 'checkout redesign' feature, automatically disable it and alert the on-call engineer."
+
+::: notes
+An error budget is a contract between reliability and velocity. It says: we can afford this many errors before the feature becomes unacceptable. Budgets are set based on historical data, business impact, and user tolerance. A critical payment flow has a tighter budget than an experimental dashboard widget. The example is prescriptive: 10 errors in 5 minutes triggers automatic disabling. This specificity is essential—vague thresholds lead to delayed responses or false positives. Set budgets collaboratively with product, engineering, and SRE.
+:::
+
+---
+
+## Automatic Feature Disabling
+
+**Workflow**
+
+1. **Monitor**: Track errors by feature flag
+2. **Evaluate**: Check against budget every N seconds
+3. **Trigger**: Budget exceeded? Execute action
+4. **Disable**: Turn off feature flag
+5. **Notify**: Alert team via PagerDuty, Slack, email
+6. **Investigate**: Team analyzes root cause
+
+**Implementation Pseudocode**
+
+'''python
+if feature_errors(window=5min) > 10:
+    disable_feature_flag("checkout_redesign")
+    alert(oncall_team, "Error budget exceeded")
+    log_incident(feature="checkout_redesign",
+                 errors=feature_errors(window=5min))
+'''
+
+::: notes
+The workflow is simple: continuous monitoring feeds into a real-time evaluation loop. If the feature's error count exceeds the budget, the system disables the feature and notifies the team. The pseudocode shows the logic: count errors in a rolling window, compare against threshold, disable if exceeded, and log the incident for post-mortem. This automation reduces Mean Time To Detection (MTTD) and Mean Time To Recovery (MTTR). Without it, you rely on humans checking dashboards or responding to customer complaints—both are too slow for modern production systems.
+:::
+
+---
+
+## Setting the Right Budget
+
+**Factors to Consider**
+
+- **Business Criticality**: Payment > Analytics > Cosmetic UI
+- **User Tolerance**: Users tolerate less error in checkout than search
+- **Historical Baseline**: What's your current error rate?
+- **Feature Maturity**: New features get tighter budgets
+
+**Budgeting Table Example**
+
+| Feature               | Criticality | Budget (errors/5min) | Baseline | Justification              |
+| --------------------- | ----------- | -------------------- | -------- | -------------------------- |
+| Payment Processing    | Critical    | 5                    | 2        | Zero tolerance for revenue |
+| Search Results        | High        | 50                   | 30       | Affects UX, not revenue    |
+| Recommendation Widget | Medium      | 200                  | 150      | Non-blocking, experimental |
+
+::: notes
+Not all features deserve the same budget. Payment processing is revenue-critical, so its budget is tight: 5 errors in 5 minutes is the limit. Search is important but not as critical, so it gets a higher budget. Recommendations are experimental and non-blocking, so their budget is loose. The "Baseline" column shows current production error rates; budgets are set relative to baseline with some safety margin. The "Justification" column documents why the budget is what it is—this is crucial for audit trails and future adjustments. Ask the class: What features in your system are truly critical? How would you set their budgets?
+:::
+
+---
+
+## Subsection 5.3: Beta Testing Strategy
+
+Testing in production with real users, limited exposure
+
+::: notes
+Beta testing is production testing with a human feedback loop. You enable features for a curated group of users—internal employees, power users, or external beta testers—and solicit feedback before wider rollout. This combines the realism of production with the safety of controlled exposure.
+:::
+
+---
+
+## Beta Testing Implementation
+
+**Building the Beta Pool**
+
+- **Internal Users**: Employees, QA team, product managers
+- **External Beta Testers**: Volunteers from customer base
+- **Power Users**: High-engagement users willing to tolerate risk
+- **Segmentation**: Group by role, region, or usage pattern
+
+**Enabling Features**
+
+'''python
+if user.in_beta_pool("checkout_redesign"):
+    show_new_checkout()
+else:
+    show_old_checkout()
+'''
+
+**Instrumentation**
+
+- Track feature usage
+- Log errors and edge cases
+- Collect user feedback (surveys, support tickets)
+
+::: notes
+Beta testing requires a curated pool of users who are willing to experience new features before general availability. Internal users are the safest starting point—they understand the risks and can report issues effectively. External beta testers add diversity and real-world use cases. The code snippet shows feature-flag logic: if a user is in the beta pool for "checkout_redesign," they see the new version; otherwise, they see the old version. Instrumentation is critical: log everything that happens in the beta path so you can diagnose issues and understand user behavior.
+:::
+
+---
+
+## Benefits of Beta Testing
+
+**Real-World Validation**
+
+- Actual users, actual data, actual workflows
+- Validates assumptions under production conditions
+- Exposes edge cases missed in testing
+
+**Early Detection of Issues**
+
+- Catch bugs before wide release
+- Identify UX problems from real feedback
+- Discover integration failures at scale
+
+**User Behavior Often Unexpected**
+
+- Users interact in ways you didn't anticipate
+- Workflows span multiple sessions or devices
+- Real usage patterns differ from test scenarios
+
+**Reduces Risk of Full-Scale Failure**
+
+- Limit blast radius to beta pool
+- Iterate and fix before expanding exposure
+- Build confidence incrementally
+
+::: notes
+Beta testing is insurance. You get real-world validation with limited blast radius. Users behave unpredictably—they'll click things you didn't expect, enter data in formats you didn't anticipate, and combine features in novel ways. Beta testing surfaces these edge cases before they affect your entire user base. It's also a feedback mechanism: beta users can tell you if the feature makes sense, if the UX is confusing, or if it solves their problem. This qualitative feedback is as valuable as the quantitative metrics from observability. The goal: by the time you release to 100% of users, the feature is proven in production and you have high confidence it will work.
+:::
+
+---
+
+## Beta Testing Workflow
+
+**Phase 1: Internal Beta (1-3 days)**
+
+- 10-50 internal users
+- High-touch feedback (Slack, stand-ups)
+- Rapid iteration on critical bugs
+
+**Phase 2: External Beta (1-2 weeks)**
+
+- 100-1,000 external testers
+- Survey-based feedback
+- Monitor error rates and support tickets
+
+**Phase 3: Gradual Rollout (2-4 weeks)**
+
+- 5% → 25% → 50% → 100%
+- Each tier validated before expansion
+- Continuous monitoring throughout
+
+::: notes
+The workflow is staged. Start with internal users for rapid feedback and iteration—these are your friendliest critics. Expand to external beta testers for scale and diversity. Finally, roll out incrementally to the full user base using canary releases. Each phase has different goals: internal beta catches critical bugs, external beta validates UX and edge cases, gradual rollout ensures production stability at scale. Specify durations and cohort sizes ahead of time so the team knows what success looks like. Document the criteria for moving between phases (e.g., "proceed to external beta if error rate < 0.5% in internal beta").
+:::
+
+---
+
+## Testing in Production: Key Takeaways
+
+**Core Techniques**
+
+- Shadow traffic: Zero-risk production validation
+- Canary releases: Incremental exposure with health checks
+- Observability: Real-time monitoring and alerting
+- Automated rollback: Fast response to failures
+- Error budgets: Formal reliability contracts
+- Beta testing: Real users, limited blast radius
+
+**Mindset Shift**
+
+- Production is not a danger zone—it's the ultimate test environment
+- Risk is managed, not eliminated
+- Deploy != Release
+- Automation and observability are non-negotiable
+
+::: notes
+Testing in production is a disciplined practice, not a gamble. The techniques we've covered—shadow traffic, canaries, observability, automated rollback, error budgets, and beta testing—work together as a system. Feature flags decouple deployment from release. Observability tells you when something goes wrong. Automated rollback limits damage. Error budgets encode acceptable risk. Beta testing gives you qualitative feedback. The mindset shift: production is not scary if you have the right tools and processes. In fact, production is the only environment that truly matters. Everything else is a rehearsal. AI accelerates development velocity, and these techniques ensure you can accelerate safely.
+:::
+
+---
+
+## Questions & Discussion
+
+**Discussion Prompts**
+
+- What production testing techniques does your organization currently use?
+- What are the biggest barriers to testing in production in your environment?
+- How would automated rollback reduce MTTR in your last production incident?
+- What error budgets would you set for your most critical features?
+
+::: notes
+Open the floor for questions and discussion. Encourage students to share their experiences with production testing (or the lack thereof). Ask about their most painful production incidents and how these techniques could have reduced the impact. The goal is to make production testing feel achievable, not aspirational. If the organization lacks feature flags or observability, that's a conversation starter: What would it take to implement these? What's the ROI? Production testing is a cultural shift as much as a technical one.
+:::
+
+---
+
+<!-- _class: lead -->
+
+## Course Modules
+
+- Intro
+- Test Automation and Code Quality
 - **▶ Instructions vs Prompts vs Custom Chat Modes**
+- Managing Context
 - Custom Agents
 - Skills
 - MCP
@@ -132,20 +1063,31 @@ Use Custom Chatmodes for flexibility and user experience
 Understanding Context Submission in AI-Assisted Development
 
 ::: notes
+Duration ~00:20
+
 Welcome to this session on controlling GitHub Copilot instruction files. This is a critical topic for teams implementing AI-assisted development workflows, as understanding how instructions are submitted with every prompt is essential for maintaining consistency, reducing token costs, and ensuring the right context reaches your AI assistant.
 
 Today we'll cover four key areas: how the automatic inclusion system works through the applyTo field, how prompt files interact with instructions, how chat modes affect instruction submission, and practical strategies for controlling your context.
 
 This session assumes you're familiar with basic GitHub Copilot usage and have worked with instruction files before. If you haven't, we recommend reviewing the “Creating Instruction Files” session first.
-
-Estimated time: 15-20 minutes including Q&A.
 :::
 
 ---
 
+
+
+
 ## The Core Concept
 
 Every Copilot prompt includes relevant instruction files automatically
+
+'''markdown
+---
+applyTo: "**/*.{ts,js,py}"
+---
+...
+'''
+
 When you work on src/api.ts → Security instructions automatically included
 
 ::: notes
@@ -170,9 +1112,21 @@ Think of it like having domain experts looking over your shoulder, but only when
 
 ---
 
+
+
+
 ## The applyTo Field: Pattern Matching
 
 Three Levels of Scope Control
+
+'''yaml
+applyTo: "**/*"
+
+applyTo: "Slides/individual-slides/**"
+
+applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+'''
+
 Result: Only matching instruction files are included in context
 
 ::: notes
@@ -199,10 +1153,20 @@ One important caveat: If an instruction file has NO applyTo field, it won't be a
 
 ---
 
+
+
+
 ## Prompt Files: Reference, Don't Control
 
 Prompt files execute tasks, they don't control instruction inclusion
-<!-- .github/prompts/create-api.prompt.md -->**CRITICAL**: All AI-generated artifacts MUST comply with`.github/instructions/ai-assisted-output.instructions.md`
+
+'''markdown
+<!-- .github/prompts/create-api.prompt.md -->
+
+**CRITICAL**: All AI-generated artifacts MUST comply with
+'.github/instructions/ai-assisted-output.instructions.md'
+'''
+
 Key Distinction:
 ✅ Can reference instruction requirements in content
 ❌ Don't control which instructions auto-include
@@ -238,9 +1202,16 @@ The prompt metadata can specify output paths, which helps the system know what f
 
 ---
 
+
+
+
 ## Chat Modes: Persona, Not Pattern Control
 
 Chat modes create specialized contexts, not instruction filters
+
+'''markdown
+'''
+
 Interaction Model:
 graph LR
     A[File Being Edited] --> B{applyTo Match?}
@@ -288,6 +1259,9 @@ One important note: If your chat mode references specific instruction files in i
 
 ---
 
+
+
+
 ## The Control Hierarchy
 
 Understanding the complete context assembly
@@ -328,6 +1302,9 @@ Pro tip: Use levels 1-2 for 90% of your work (file-driven automatic inclusion), 
 :::
 
 ---
+
+
+
 
 ## Practical Control Strategies
 
@@ -377,9 +1354,22 @@ Remember: You can see which instructions are active by checking the Copilot cont
 
 ---
 
+
+
+
 ## Real-World Examples
 
 From your current workspace
+
+'''markdown
+applyTo: "**/*"
+
+applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+
+applyTo: "Slides/individual-slides/**"
+
+applyTo: "**/*.chatmode.md"
+'''
 
 ::: notes
 Let's look at real examples from your actual workspace to see these strategies in action. These are live instruction files that demonstrate the patterns we've discussed.
@@ -398,6 +1388,9 @@ You can examine your own instruction files and ask: “Is this applyTo pattern o
 :::
 
 ---
+
+
+
 
 ## Key Takeaways
 
@@ -455,6 +1448,9 @@ Thank you for your attention. Let's open it up for questions.
 :::
 
 ---
+
+
+
 
 ## Questions & Discussion
 
@@ -580,7 +1576,21 @@ Purpose: Act as specialized “AI expert” for conversations
 ## Custom Chat Mode Examples
 
 DevOps Engineer Mode
-role: "Senior DevOps Engineer"expertise:  - CI/CD pipelines  - Infrastructure as Code  - Container orchestration  - Monitoring and observabilitybehavior:  - Focus on scalability and reliability  - Recommend industry best practices  - Consider security implications  - Suggest automation opportunities
+
+'''yaml
+role: "Senior DevOps Engineer"
+expertise:
+  - CI/CD pipelines
+  - Infrastructure as Code
+  - Container orchestration
+  - Monitoring and observability
+
+behavior:
+  - Focus on scalability and reliability
+  - Recommend industry best practices
+  - Consider security implications
+  - Suggest automation opportunities
+'''
 
 ---
 
@@ -771,7 +1781,281 @@ Next Steps: Choose one approach to pilot in your next project
 ## Course Modules
 
 - Intro
+- Test Automation and Code Quality
 - Instructions vs Prompts vs Custom Chat Modes
+- **▶ Managing Context**
+- Custom Agents
+- Skills
+- MCP
+
+---
+
+<!-- _class: lead -->
+
+# Managing Context
+
+---
+
+## Managing Context
+
+- Managing GitHub Copilot Effectively
+- Managing Instruction Files & Context Windows
+
+---
+
+## Managing GitHub Copilot Effectively
+
+Copilot is powerful, but not entirely autonomous
+Effective use requires structure, guardrails, and clear intent
+Treat Copilot as a developer whose output improves with guidance
+Your process determines the quality of its contributions
+
+::: notes
+This slide frames Copilot as a tool that amplifies engineering discipline rather than replacing it.
+
+The message is: Copilot is not magic.
+
+It's a reasoning engine that responds to structure, clarity, and context.
+
+When managed well, it becomes a force multiplier.
+
+When unmanaged, it becomes unpredictable.
+:::
+
+---
+
+## A Managed Junior Developer
+
+Copilot is fast, eager, and sometimes confidently wrong
+Provide clear instructions, constraints, and examples
+Review everything – trust its speed, not its judgment
+Use iterative loops: instruct → generate → review → refine
+Give Copilot ownership of tasks, not architecture
+
+::: notes
+This analogy resonates with engineering teams.
+
+Copilot behaves like a junior developer: capable, but lacking context and judgment.
+
+It thrives when you give it structure and feedback.
+
+It struggles when you ask it to “just figure it out.”
+
+The more intentional your guidance, the more reliable its output becomes.
+:::
+
+---
+
+## Understanding Context & Tokens
+
+Copilot can only “see” a limited amount of text at once
+Large files, long conversations, or complex repos can exceed context
+Important details may fall out of the window without you realizing
+Use these techniques to keep context focused:
+
+- Summaries
+- Instruction files
+- Modular prompts
+- Smaller working sets
+
+::: notes
+Context windows are invisible but critical.
+
+When Copilot misses requirements or contradicts earlier decisions, it's often because the relevant information fell outside its context window.
+
+The solution is not to “prompt harder” – it's to structure the environment so the model always has the right information in view.
+:::
+
+---
+
+## Prompt Engineering Best Practices
+
+Be explicit about goals, constraints, and success criteria
+Provide examples of the desired pattern or style
+Break large tasks into smaller, testable steps
+Use instruction files for stable rules and architectural boundaries
+Ask Copilot to explain its reasoning when correctness matters
+
+::: notes
+Prompting is not about clever phrasing – it's about clarity.
+
+Copilot performs best when you define intent, boundaries, and examples.
+
+Instruction files are especially powerful because they give Copilot a persistent “north star” for your codebase.
+
+Think of prompts as design briefs, not commands.
+:::
+
+---
+
+## Model Selection Strategies
+
+Different models excel at different tasks
+High-end models (e.g., GPT-4o, Claude Sonnet) are best for:
+
+- Architecture
+- Refactoring
+- Complex reasoning
+- Multi-file changes
+  Lightweight models are ideal for:
+- Boilerplate
+- Repetitive tasks
+- Quick iterations
+  Match the model to the task, not the other way around
+
+::: notes
+Model selection is a strategic decision.
+
+High-end models are great for deep reasoning but can be slower or more expensive.
+
+Smaller models are fast and efficient but less capable.
+
+The key is to choose based on task complexity.
+
+For example: use a reasoning-heavy model for designing a module, then switch to a lighter model for generating tests or scaffolding
+:::
+
+---
+
+<!-- _class: lead -->
+
+## Managing Instruction Files & Context Windows
+
+- Instruction sharing strategies
+- Instruction file scope and application
+- Context window monitoring tools
+- Token consumption tracking
+
+::: notes
+Set expectations for a practical session focused on repeatable team workflows. Emphasize that instruction quality and context discipline are the two biggest multipliers for reliable AI-assisted development.
+:::
+
+---
+
+## Instruction Sharing Strategies
+
+- Establish a central baseline in organization-level instructions
+- Keep repository-level instructions close to implementation details
+- Use reusable templates for recurring instruction patterns
+- Share proven prompts and instruction snippets through version control
+
+### Team Pattern
+
+Centralize policy, decentralize implementation guidance.
+
+::: notes
+Explain that teams should avoid copy-paste drift by maintaining canonical files and linking to them. Encourage pull-request reviews specifically for instruction changes, not just code changes.
+:::
+
+---
+
+## Instruction File Scope and Application
+
+Use scope to target behavior precisely with 'applyTo' patterns.
+
+'''yaml
+applyTo: "**/*"
+'''
+
+'''yaml
+applyTo: "Slides/individual-slides/**"
+'''
+
+'''yaml
+applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+'''
+
+### Rule of Thumb
+
+The narrower the scope, the lower the risk of unintended instruction collisions.
+
+::: notes
+Walk through broad-to-narrow scoping. Clarify that broad scopes are for policy and compliance, while narrow scopes are for stack-specific implementation rules.
+:::
+
+---
+
+## Context Window Monitoring Tools
+
+- Use chat/session history panels to detect topic drift
+- Track context attachments ('@workspace', '@file', '@terminal') intentionally
+- Start fresh chats when switching goals or bounded contexts
+- Use lightweight check-ins: "What context are we currently using?"
+
+### Signals of Context Saturation
+
+- Repeated clarifying questions
+- Loss of earlier constraints
+- Increasingly generic responses
+
+::: notes
+Teach participants to recognize degradation early rather than trying to salvage overloaded context. A clean new chat is usually cheaper than continued correction loops.
+:::
+
+---
+
+## Token Consumption Tracking
+
+- Monitor token usage indicators in the chat interface
+- Prefer concise prompts with explicit file targets
+- Split large tasks into smaller, well-bounded sessions
+- Archive outcomes in files instead of keeping all context in-chat
+
+### Cost-Control Tactics
+
+- Reduce redundant restatement
+- Reuse instruction files over repeated long prompts
+- Move stable constraints into persistent instruction artifacts
+
+::: notes
+Stress that token efficiency is not only cost control; it improves response quality by reducing noise. Show that structured prompts plus instruction files usually outperform long conversational buildup.
+:::
+
+---
+
+## Workflow Blueprint
+
+'''mermaid
+flowchart LR
+  A[Define Task Goal] --> B[Select Relevant Instruction Files]
+  B --> C[Scope with applyTo Patterns]
+  C --> D[Run Focused Chat Session]
+  D --> E[Monitor Context and Tokens]
+  E --> F[Persist Output and Start Next Session]
+'''
+
+### Outcome
+
+Predictable outputs, lower token waste, and better team-level reuse.
+
+::: notes
+Use this as the operational model teams can adopt immediately. Recommend adding this flow to onboarding docs so new contributors learn instruction and context discipline from day one.
+:::
+
+---
+
+## Practical Checklist
+
+- Define where instructions live: org, repo, folder, or file scope
+- Validate 'applyTo' patterns before broad adoption
+- Monitor context quality every major prompt turn
+- Track token trends for long-running work streams
+- Capture reusable instruction improvements in versioned files
+
+::: notes
+End with execution guidance. Suggest running a short retrospective after one sprint to measure improvements in output quality, rework rate, and token efficiency.
+:::
+
+---
+
+<!-- _class: lead -->
+
+## Course Modules
+
+- Intro
+- Test Automation and Code Quality
+- Instructions vs Prompts vs Custom Chat Modes
+- Managing Context
 - **▶ Custom Agents**
 - Skills
 - MCP
@@ -801,6 +2085,9 @@ Core Instruction Files
 
 ---
 
+
+
+
 ## What Copilot Looks For
 
 Artifact Type | Required Location | Required Format | Notes
@@ -816,6 +2103,9 @@ Even though “chat modes” are being renamed to “agents,” the folder name 
 :::
 
 ---
+
+
+
 
 ## What's Changing and What Isn't
 
@@ -835,6 +2125,9 @@ Teams can safely start using the term “agent” in training and inside the fil
 :::
 
 ---
+
+
+
 
 ## Order of Precedence
 
@@ -857,7 +2150,7 @@ Reusable profiles across projects
 Available in multiple environments (GitHub.com, VS Code, JetBrains, Eclipse, Xcode)
 
 ::: notes
-Timing: 2-3 minutes
+Duration ~00:03
 
 Key Points to Emphasize:
 
@@ -897,7 +2190,7 @@ Eclipse: Add custom agents dialog
 Xcode: Create agent from dropdown
 
 ::: notes
-Timing: 3 minutes
+Duration ~00:03
 
 Delivery Instructions:
 
@@ -942,7 +2235,7 @@ Commit to default branch
 Agent appears in dropdown immediately
 
 ::: notes
-Timing: 4-5 minutes (include live demo if possible)
+Duration ~00:05
 
 Step-by-Step Walkthrough:
 
@@ -1007,7 +2300,7 @@ Use Configure Tools… button for tool selection
 Set model: property for AI model preference
 
 ::: notes
-Timing: 3-4 minutes
+Duration ~00:04
 
 VS Code Advantages:
 
@@ -1074,13 +2367,25 @@ Transition: “The process is similar in JetBrains, Eclipse, and Xcode with slig
 
 ## Agent Profile Structure
 
-- --name: test-specialistdescription: Focuses on test coverage and qualitytools: ["read", "edit", "search"]model: gpt-4target: vscode # optional: vscode or github-copilot---You are a testing specialist...[Detailed instructions and behavior]
+'''markdown
+---
+name: test-specialist
+description: Focuses on test coverage and quality
+tools: ["read", "edit", "search"]
+model: gpt-4
+target: vscode # optional: vscode or github-copilot
+---
+
+You are a testing specialist...
+
+[Detailed instructions and behavior]
+'''
 Key Components:
 YAML frontmatter: Metadata and configuration
 Markdown content: Instructions and behavior (max 30,000 chars)
 
 ::: notes
-Timing: 4-5 minutes
+Duration ~00:05
 
 Anatomy of an Agent Profile:
 
@@ -1161,10 +2466,28 @@ Transition: “Let's see what these instructions look like in real agent example
 
 ## Example 1: Testing Specialist
 
-- --name: test-specialistdescription: Focuses on test coverage, quality, and testing  best practices without modifying production code---You are a testing specialist focused on improving codequality through comprehensive testing. Your responsibilities:- Analyze existing tests and identify coverage gaps- Write unit tests, integration tests, and end-to-end tests- Review test quality and suggest improvements- Ensure tests are isolated, deterministic, and documented- Focus only on test files - avoid modifying production codeAlways include clear test descriptions and use appropriatetesting patterns for the language and framework.
+'''markdown
+---
+name: test-specialist
+description: Focuses on test coverage, quality, and testing
+  best practices without modifying production code
+---
+
+You are a testing specialist focused on improving code
+quality through comprehensive testing. Your responsibilities:
+
+- Analyze existing tests and identify coverage gaps
+- Write unit tests, integration tests, and end-to-end tests
+- Review test quality and suggest improvements
+- Ensure tests are isolated, deterministic, and documented
+- Focus only on test files - avoid modifying production code
+
+Always include clear test descriptions and use appropriate
+testing patterns for the language and framework.
+'''
 
 ::: notes
-Timing: 3-4 minutes
+Duration ~00:04
 
 Why This Example Works:
 
@@ -1237,10 +2560,30 @@ Transition: “Here's another example that shows a different use case - planning
 
 ## Example 2: Implementation Planner
 
-- --name: implementation-plannerdescription: Creates detailed implementation plans and  technical specifications in markdown formattools: ["read", "search", "edit"]---You are a technical planning specialist. Your responsibilities:- Analyze requirements and break them into actionable tasks- Create detailed technical specs and architecture docs- Generate implementation plans with steps and dependencies- Document API designs, data models, and system interactions- Create markdown files that development teams can followAlways structure plans with clear headings, task breakdowns,and acceptance criteria. Include considerations for testing,deployment, and risks. Focus on thorough documentationrather than implementing code.
+'''markdown
+---
+name: implementation-planner
+description: Creates detailed implementation plans and
+  technical specifications in markdown format
+tools: ["read", "search", "edit"]
+---
+
+You are a technical planning specialist. Your responsibilities:
+
+- Analyze requirements and break them into actionable tasks
+- Create detailed technical specs and architecture docs
+- Generate implementation plans with steps and dependencies
+- Document API designs, data models, and system interactions
+- Create markdown files that development teams can follow
+
+Always structure plans with clear headings, task breakdowns,
+and acceptance criteria. Include considerations for testing,
+deployment, and risks. Focus on thorough documentation
+rather than implementing code.
+'''
 
 ::: notes
-Timing: 3-4 minutes
+Duration ~00:04
 
 Strategic Difference from Test Specialist:
 
@@ -1355,7 +2698,7 @@ Reference agent in prompts
 Command-line argument support
 
 ::: notes
-Timing: 4-5 minutes
+Duration ~00:05
 
 GitHub.com Usage:
 
@@ -1495,7 +2838,7 @@ Document: Include usage examples in agent description
 Test: Validate agent behavior before team rollout
 
 ::: notes
-Timing: 4 minutes
+Duration ~00:04
 
 Detailed Best Practices:
 
@@ -1650,6 +2993,9 @@ Transition: “You now have everything you need to create your first custom agen
 
 ---
 
+
+
+
 ## Greenfield Chat Modes
 
 Product Manager
@@ -1667,6 +3013,9 @@ This presentation covers 8 critical roles in modern software development. Each p
 
 ---
 
+
+
+
 ## Product Manager
 
 Skills | Responsibilities
@@ -1682,6 +3031,9 @@ Product Managers are the bridge between business and technical teams. Their succ
 :::
 
 ---
+
+
+
 
 ## Solution Architect
 
@@ -1699,6 +3051,9 @@ Solution Architects work at the highest technical abstraction level. Pattern rec
 
 ---
 
+
+
+
 ## Senior Developer
 
 Skills | Responsibilities
@@ -1714,6 +3069,9 @@ Senior Developers are power users of AI coding assistance. Code generation promp
 :::
 
 ---
+
+
+
 
 ## Technical Writer
 
@@ -1731,6 +3089,9 @@ Technical Writers can leverage AI for content creation and organization. Content
 
 ---
 
+
+
+
 ## Security Reviewer
 
 Skills | Responsibilities
@@ -1746,6 +3107,9 @@ Security Reviewers must validate all AI security recommendations. Threat modelin
 :::
 
 ---
+
+
+
 
 ## DevOps Engineer
 
@@ -1763,6 +3127,9 @@ DevOps Engineers can accelerate infrastructure automation with AI. Infrastructur
 
 ---
 
+
+
+
 ## DevTest Engineer
 
 Skills | Responsibilities
@@ -1779,6 +3146,9 @@ DevTest Engineers can dramatically improve test coverage with AI. Test case gene
 
 ---
 
+
+
+
 ## SRE (Site Reliability Engineer)
 
 Skills | Responsibilities
@@ -1794,6 +3164,9 @@ SREs can leverage AI for faster incident response and resolution. Incident respo
 :::
 
 ---
+
+
+
 
 ## Solution Architect Prompts
 
@@ -1828,6 +3201,9 @@ created:
 :::
 
 ---
+
+
+
 
 ## If you said: "Design an architecture for a Windows desktop application that manages real-time inventory for a warehouse"
 
@@ -2071,6 +3447,8 @@ Welcome to this presentation on VS Code Copilot Agents. This session will introd
 - 🎯 **Self-correct** when errors occur
 
 ::: notes
+Duration ~00:04
+
 This slide establishes the fundamental difference between agents and traditional AI assistance.
 
 **Key talking points:**
@@ -2081,8 +3459,6 @@ This slide establishes the fundamental difference between agents and traditional
 - They use various tools autonomously to achieve objectives
 
 **Audience engagement:** Ask "What's the most time-consuming coding task you do repeatedly?" to connect with real pain points.
-
-**Timing:** 3-4 minutes with examples
 
 **Transition:** "Now let's look at the different types of agents available..."
 :::
@@ -2099,6 +3475,8 @@ This slide establishes the fundamental difference between agents and traditional
 | **Third-party** | Local or Cloud        | Varies      | Depends       |
 
 ::: notes
+Duration ~00:05
+
 This comparison table helps audience understand when to use each agent type.
 
 **Key decision factors to explain:**
@@ -2110,7 +3488,6 @@ This comparison table helps audience understand when to use each agent type.
 
 **Visual aid reference:** Mention that VS Code documentation includes a helpful diagram showing these relationships.
 
-**Timing:** 4-5 minutes
 **Transition:** "Let's dive deeper into each type, starting with local agents..."
 :::
 
@@ -2135,6 +3512,8 @@ This comparison table helps audience understand when to use each agent type.
 - Requires active interaction
 
 ::: notes
+Duration ~00:04
+
 Local agents are perfect for brainstorming and tasks requiring immediate feedback.
 
 **Use case examples to share:**
@@ -2156,8 +3535,6 @@ Local agents are perfect for brainstorming and tasks requiring immediate feedbac
 - Use for tasks that are not fully defined
 - Great for learning and exploration
 - Ideal when you need VS Code context (linting errors, test results)
-
-**Timing:** 3-4 minutes
 :::
 
 ---
@@ -2181,6 +3558,8 @@ Local agents are perfect for brainstorming and tasks requiring immediate feedbac
 - No team collaboration
 
 ::: notes
+Duration ~00:04
+
 Background agents excel at implementing well-defined plans without interrupting your workflow.
 
 **Ideal scenarios:**
@@ -2204,8 +3583,6 @@ Background agents excel at implementing well-defined plans without interrupting 
 - Use isolation to experiment safely
 
 **Common pitfall:** Don't use for tasks requiring VS Code runtime context unless manually provided.
-
-**Timing:** 3-4 minutes
 :::
 
 ---
@@ -2229,6 +3606,8 @@ Background agents excel at implementing well-defined plans without interrupting 
 - Asynchronous only
 
 ::: notes
+Duration ~00:05
+
 Cloud agents bridge the gap between AI assistance and team collaboration workflows.
 
 **Key collaboration features:**
@@ -2252,7 +3631,6 @@ Cloud agents bridge the gap between AI assistance and team collaboration workflo
 3. Cloud agent implements final version in PR
 4. Team reviews and collaborates on the PR
 
-**Timing:** 4-5 minutes
 **Transition:** "Let's see how these agents work together in practice..."
 :::
 
@@ -2269,6 +3647,8 @@ Cloud agents bridge the gap between AI assistance and team collaboration workflo
 - 🗂️ **Archive/Delete:** Keep workspace organized
 
 ::: notes
+Duration ~00:04
+
 The sessions management is what makes the multi-agent workflow practical and organized.
 
 **Key management features:**
@@ -2296,8 +3676,6 @@ The sessions management is what makes the multi-agent workflow practical and org
 - Compact: Embedded in Chat view
 - Side-by-side: Dedicated sessions panel
 - Automatically adapts based on Chat view width
-
-**Timing:** 4 minutes
 :::
 
 ---
@@ -2315,6 +3693,8 @@ The sessions management is what makes the multi-agent workflow practical and org
 **Pro Tip:** Multiple sessions can run in parallel! 🚀
 
 ::: notes
+Duration ~00:04
+
 This slide covers the practical aspects of getting started with agents.
 
 **Step-by-step flow:**
@@ -2343,8 +3723,6 @@ This slide covers the practical aspects of getting started with agents.
 - Previous sessions remain active
 - Switch between tasks via sessions list
 - Great for multitasking developers
-
-**Timing:** 3-4 minutes
 :::
 
 ---
@@ -2360,6 +3738,8 @@ This slide covers the practical aspects of getting started with agents.
 - 🌿 **Branch Checkout** for cloud agents
 
 ::: notes
+Duration ~00:04
+
 This slide addresses a critical concern: how to safely review and integrate agent changes.
 
 **Safety and control emphasis:**
@@ -2389,8 +3769,6 @@ This slide addresses a critical concern: how to safely review and integrate agen
 - Test changes in isolation first
 - Use PR workflow for team visibility
 - Document significant changes
-
-**Timing:** 3-4 minutes
 :::
 
 ---
@@ -2399,35 +3777,37 @@ This slide addresses a critical concern: how to safely review and integrate agen
 
 **Leverage each agent type's strengths**
 
-```
+'''
 📋 Local Agent (Planning)
     ⬇ Hand-off
 🤖 Background Agent (Implementation)
     ⬇ Delegate
 ☁️ Cloud Agent (Team Review)
-```
+'''
 
 **Example:** Planning → Proof of Concept → Production Implementation
 
 ::: notes
+Duration ~00:05
+
 This slide demonstrates the power of agent collaboration and specialization.
 
 **Complete workflow example:**
 
 1. **Local agent:** Interactive brainstorming and planning
-   - Define requirements
-   - Explore architecture options
-   - Create detailed implementation plan
+- Define requirements
+- Explore architecture options
+- Create detailed implementation plan
 
 2. **Background agent:** Autonomous implementation
-   - Create multiple proof-of-concept variants
-   - Test different approaches
-   - Implement core functionality
+- Create multiple proof-of-concept variants
+- Test different approaches
+- Implement core functionality
 
 3. **Cloud agent:** Team collaboration
-   - Create production-ready implementation
-   - Submit pull request
-   - Enable team review and feedback
+- Create production-ready implementation
+- Submit pull request
+- Enable team review and feedback
 
 **Hand-off mechanics:**
 
@@ -2443,7 +3823,6 @@ This slide demonstrates the power of agent collaboration and specialization.
 - Include team collaboration when needed
 - Scale complexity appropriately
 
-**Timing:** 4-5 minutes
 **Transition:** "Let's wrap up with key takeaways and next steps..."
 :::
 
@@ -2453,7 +3832,7 @@ This slide demonstrates the power of agent collaboration and specialization.
 
 **🚀 Getting Started:**
 
-- Enable agents in VS Code settings (`chat.agent.enabled`)
+- Enable agents in VS Code settings ('chat.agent.enabled')
 - Start with local agents for exploration
 - Try background agents for focused tasks
 - Use cloud agents for team collaboration
@@ -2465,6 +3844,8 @@ This slide demonstrates the power of agent collaboration and specialization.
 - [Background Agents Guide](https://code.visualstudio.com/docs/copilot/agents/background-agents)
 
 ::: notes
+Duration ~00:04
+
 This closing slide provides clear next steps and resources for continued learning.
 
 **Immediate action items:**
@@ -2500,8 +3881,6 @@ This closing slide provides clear next steps and resources for continued learnin
 - Share documentation links via chat/email
 - Schedule follow-up sessions for advanced topics
 - Create team guidelines for agent usage
-
-**Timing:** 3-4 minutes for takeaways, 5-10 minutes for Q&A
 :::
 
 ---
@@ -2513,33 +3892,35 @@ This closing slide provides clear next steps and resources for continued learnin
 Want to explore specific agent workflows for your team?
 
 ::: notes
+Duration ~00:15
+
 **Q&A Session Management:**
 
 **Anticipated questions and responses:**
 
 1. **"How do agents compare to traditional Copilot?"**
-   - Traditional Copilot: Suggestions and completions
-   - Agents: Complete task execution and multi-step workflows
+- Traditional Copilot: Suggestions and completions
+- Agents: Complete task execution and multi-step workflows
 
 2. **"What about data privacy and security?"**
-   - Local agents: Data stays on your machine
-   - Cloud agents: Follow GitHub's privacy policies
-   - Enterprise controls available
+- Local agents: Data stays on your machine
+- Cloud agents: Follow GitHub's privacy policies
+- Enterprise controls available
 
 3. **"Can agents make mistakes?"**
-   - Yes, always review agent changes
-   - Use diff editors before applying
-   - Start with non-critical tasks
+- Yes, always review agent changes
+- Use diff editors before applying
+- Start with non-critical tasks
 
 4. **"How do I know which agent type to use?"**
-   - Refer back to the decision matrix slide
-   - Interactive vs autonomous needs
-   - Team collaboration requirements
+- Refer back to the decision matrix slide
+- Interactive vs autonomous needs
+- Team collaboration requirements
 
 5. **"What if my organization disabled agents?"**
-   - Contact your admin
-   - May be policy-based restriction
-   - Can often be enabled with proper governance
+- Contact your admin
+- May be policy-based restriction
+- Can often be enabled with proper governance
 
 **Session wrap-up:**
 
@@ -2548,24 +3929,22 @@ Want to explore specific agent workflows for your team?
 - Suggest pilot projects for interested teams
 - Schedule follow-up sessions if requested
 
-**Time management:** Allow 10-15 minutes for Q&A depending on audience size and engagement.
+**Time management:**
 :::
 
 ---
 
 ## Exercise: Create and Use a Custom Agent
 
-**Duration**: ~25 minutes
-
 **Objectives**
 
-- Create a repository-scoped custom agent file in `.github/agents/`
+- Create a repository-scoped custom agent file in '.github/agents/'
 - Configure a clear agent role, description, and tool scope
 - Use the agent in Copilot Chat to complete a targeted task
 
 **Activities**
 
-- **Phase 1 - Create**: Add `.github/agents/test-specialist.agent.md` with frontmatter (`name`, `description`, `tools`) and focused behavior instructions
+- **Phase 1 - Create**: Add '.github/agents/test-specialist.agent.md' with frontmatter ('name', 'description', 'tools') and focused behavior instructions
 - **Phase 2 - Refine**: Tighten scope by clarifying what the agent should do and refuse, then save and re-open chat
 - **Phase 3 - Use**: Select the new custom agent in Copilot Chat and run a prompt such as “Review this feature and propose a test plan with unit and integration tests”
 
@@ -2576,9 +3955,11 @@ Want to explore specific agent workflows for your team?
 - Student receives a usable, structured output aligned to the prompt goal
 
 ::: notes
+Duration ~00:25
+
 Facilitate this as a role-scoping lab, not just a file-authoring task. Start by showing students that a custom agent is essentially a reusable behavioral contract: it combines role intent, tool limits, and execution style.
 
-In Phase 1, have learners create `.github/agents/test-specialist.agent.md` with a concise description and explicit tools list. Encourage strong verbs and constraints, for example "analyze tests, propose coverage improvements, avoid production-code refactors unless asked".
+In Phase 1, have learners create '.github/agents/test-specialist.agent.md' with a concise description and explicit tools list. Encourage strong verbs and constraints, for example "analyze tests, propose coverage improvements, avoid production-code refactors unless asked".
 
 In Phase 2, ask each student to improve one weak instruction in their agent definition. Typical improvements are adding refusal boundaries, output format requirements, or quality checks such as "include risks and assumptions".
 
@@ -2596,15 +3977,17 @@ Timing guidance: 8 minutes create, 7 minutes refine, 8 minutes run and compare, 
 - Narrow scope makes behavior easier to predict and improve
 - Simpler agents are easier to explain to teammates
 
-```mermaid
+'''mermaid
 flowchart LR
     A[Specific pain point] --> B[Single-purpose agent]
     B --> C[Clear usage]
     C --> D[Easier refinement]
-```
+'''
 
 ::: notes
-Explain that simplicity is a force multiplier in agent design. When an agent has one clear job, users know when to use it, reviewers know how to evaluate it, and the team can improve it without destabilizing unrelated workflows. Spend about 45 seconds here and make the point that over-ambitious agents often become confusing because they try to mix planning, coding, testing, and documentation into one vague persona. Transition by showing how explicit boundaries reinforce that simplicity.
+Duration ~00:01
+
+Explain that simplicity is a force multiplier in agent design. When an agent has one clear job, users know when to use it, reviewers know how to evaluate it, and the team can improve it without destabilizing unrelated workflows.  Transition by showing how explicit boundaries reinforce that simplicity.
 :::
 
 ---
@@ -2621,7 +4004,9 @@ Explain that simplicity is a force multiplier in agent design. When an agent has
 - "What should this agent refuse or defer?"
 
 ::: notes
-Frame this slide around predictability. An agent with clear responsibilities is easier for humans to trust because they know what kind of help it is supposed to give and what it should not attempt, which reduces accidental overreach and context drift. Spend about 45 seconds here and encourage the audience to think in terms of scope contracts rather than vague personality descriptions. Transition by moving to the related issue of tool access, because boundaries are not just instructional but operational.
+Duration ~00:01
+
+Frame this slide around predictability. An agent with clear responsibilities is easier for humans to trust because they know what kind of help it is supposed to give and what it should not attempt, which reduces accidental overreach and context drift.  Transition by moving to the related issue of tool access, because boundaries are not just instructional but operational.
 :::
 
 ---
@@ -2633,15 +4018,17 @@ Frame this slide around predictability. An agent with clear responsibilities is 
 - Tool restrictions reduce accidental misuse and security exposure
 - Least-privilege design keeps behavior aligned with agent intent
 
-```mermaid
+'''mermaid
 flowchart TB
     A[Agent purpose] --> B[Needed actions]
     B --> C[Minimum tool set]
     C --> D[Safer execution]
-```
+'''
 
 ::: notes
-Explain that tool design is one of the strongest control surfaces available when building agents. If an agent only needs to read files and analyze code, then it should not also be able to perform broad write operations or run unrelated commands, because excess capability creates unnecessary risk. Spend about one minute here and tie this to the principle of least privilege that teams already use in security and infrastructure design. Transition by showing that even good initial designs need improvement over time.
+Duration ~00:01
+
+Explain that tool design is one of the strongest control surfaces available when building agents. If an agent only needs to read files and analyze code, then it should not also be able to perform broad write operations or run unrelated commands, because excess capability creates unnecessary risk.  Transition by showing that even good initial designs need improvement over time.
 :::
 
 ---
@@ -2654,7 +4041,9 @@ Explain that tool design is one of the strongest control surfaces available when
 - Treat the first version as a starting point, not a final product
 
 ::: notes
-Make the point that real-world usage will reveal gaps that design-time reasoning will miss. Teams learn a lot from where users hesitate, where the agent responds too broadly, or where people keep asking for the same clarification, and those signals should drive iteration. Spend about 45 seconds here reinforcing that successful agents are maintained assets, not one-time experiments. Transition by broadening from personal agents to team and organization sharing.
+Duration ~00:01
+
+Make the point that real-world usage will reveal gaps that design-time reasoning will miss. Teams learn a lot from where users hesitate, where the agent responds too broadly, or where people keep asking for the same clarification, and those signals should drive iteration.  Transition by broadening from personal agents to team and organization sharing.
 :::
 
 ---
@@ -2674,7 +4063,9 @@ Make the point that real-world usage will reveal gaps that design-time reasoning
 - implementation planning
 
 ::: notes
-Explain that some workflows are too common to reinvent team by team. When an organization sees repeated needs such as security review or testing guidance, a shared agent can provide a standardized starting point and reduce duplicated authoring effort across repositories. Spend about 45 seconds here and point out that shared agents need better ownership and clearer governance because more people will depend on them. Transition by showing how examples improve agent usability once an agent exists.
+Duration ~00:01
+
+Explain that some workflows are too common to reinvent team by team. When an organization sees repeated needs such as security review or testing guidance, a shared agent can provide a standardized starting point and reduce duplicated authoring effort across repositories.  Transition by showing how examples improve agent usability once an agent exists.
 :::
 
 ---
@@ -2694,7 +4085,9 @@ Explain that some workflows are too common to reinvent team by team. When an org
 4. failure cases are acceptable
 
 ::: notes
-Close with the two practices that make rollout much safer: examples and validation. Examples help users invoke the agent correctly, while validation ensures the agent behaves well under realistic conditions, including edge cases and boundary conditions, before it is trusted more broadly. Spend about one minute here and end on the idea that good agent design is iterative, scoped, and tested rather than purely aspirational. Encourage the audience to treat agents like any other product capability that needs ownership, feedback, and quality checks.
+Duration ~00:01
+
+Close with the two practices that make rollout much safer: examples and validation. Examples help users invoke the agent correctly, while validation ensures the agent behaves well under realistic conditions, including edge cases and boundary conditions, before it is trusted more broadly.  Encourage the audience to treat agents like any other product capability that needs ownership, feedback, and quality checks.
 :::
 
 ---
@@ -2704,7 +4097,9 @@ Close with the two practices that make rollout much safer: examples and validati
 ## Course Modules
 
 - Intro
+- Test Automation and Code Quality
 - Instructions vs Prompts vs Custom Chat Modes
+- Managing Context
 - Custom Agents
 - **▶ Skills**
 - MCP
@@ -2719,12 +4114,13 @@ Close with the two practices that make rollout much safer: examples and validati
 
 ## Skills
 
-- What They Are, How to Define Them, and How They Change Copilot's Behavior
+- GitHub Copilot Skills
 
 ---
 
 <!-- _class: lead -->
 
+## GitHub Copilot Skills
 
 ## What They Are, How to Define Them, and How They Change Copilot's Behavior
 
@@ -2734,6 +4130,7 @@ Introduce this deck as a practical orientation to Copilot Skills rather than a d
 
 ---
 
+## What Are Copilot Skills?
 
 - Self-contained capability modules for specialized tasks
 - Stored as folders with instructions, scripts, examples, and resources
@@ -2754,6 +4151,7 @@ Explain that skills are best thought of as capability bundles rather than plain 
 
 ---
 
+## Why Skills Exist
 
 - Reduce repeated explanation of domain workflows
 - Store procedural knowledge in portable, version-controlled form
@@ -2767,10 +4165,11 @@ Frame this as a response to the institutional knowledge problem. Teams often rep
 
 ---
 
+## Skill Structure
 
 A typical skill folder:
 
-```text
+'''text
 .github/
   skills/
     webapp-testing/
@@ -2778,34 +4177,36 @@ A typical skill folder:
       scripts/
       examples/
       resources/
-```
+'''
 
-`SKILL.md` is the required entry point.
+'SKILL.md' is the required entry point.
 
 ::: notes
-Explain that the structure is intentionally simple so teams can add skills without introducing a new toolchain. The folder name becomes the skill name, while `SKILL.md` acts as the main definition file that tells Copilot what the skill is for and how to execute it. Spend about one minute here and mention that the extra folders are optional but powerful because they let teams attach automation, examples, and reusable references. Transition by opening up the contents of `SKILL.md`.
+Explain that the structure is intentionally simple so teams can add skills without introducing a new toolchain. The folder name becomes the skill name, while 'SKILL.md' acts as the main definition file that tells Copilot what the skill is for and how to execute it. Spend about one minute here and mention that the extra folders are optional but powerful because they let teams attach automation, examples, and reusable references. Transition by opening up the contents of 'SKILL.md'.
 :::
 
 ---
 
+## Anatomy of 'SKILL.md'
 
 Minimal example:
 
-```yaml
+'''yaml
 ---
 name: webapp-testing
 description: >
   Assists with web application test strategies and automated test creation.
   Use for topics related to testing, test, E2E.
 ---
-```
+'''
 
-```markdown
+'''markdown
 ## Procedure
+
 1. Analyze the target code and determine testing strategy
 2. Create test files following the AAA pattern
 3. Run tests and verify results
-```
+'''
 
 ::: notes
 Walk through the two main parts of the file: metadata and procedure. The metadata helps Copilot decide when the skill is relevant, while the procedure gives Copilot a step-by-step execution path once the skill has been loaded. Spend about one minute here and reinforce that the more concrete and deterministic the procedure is, the more reliable the resulting behavior becomes. Transition by explaining how Copilot decides to bring the skill into context in the first place.
@@ -2813,6 +4214,7 @@ Walk through the two main parts of the file: metadata and procedure. The metadat
 
 ---
 
+## How Copilot Loads Skills
 
 Copilot loads a skill when:
 
@@ -2832,6 +4234,7 @@ Clarify that skill loading is semantic rather than manual. If a prompt asks for 
 
 ---
 
+## How Skills Change Copilot's Behavior
 
 ### 1. Procedural behavior
 
@@ -2856,60 +4259,64 @@ Make the point that skills are operational playbooks, not style guides. They pus
 
 ---
 
+## Skills vs. Other Copilot Instruction Mechanisms
 
-| Mechanism | Purpose | Scope | When to use |
-| --- | --- | --- | --- |
-| Custom Instructions | General behavior and preferences | Global | Style, tone, conventions |
-| Promptfiles | Task-specific instructions | Repo or folder | Reusable prompts for common tasks |
-| Chat Modes | Custom agents | Repo | Role-based behavior |
-| Skills | Procedural, domain-specific workflows | Repo | Repeatable tasks with steps, scripts, or examples |
+| Mechanism               | Purpose                               | Scope          | When to Use                                            |
+| ----------------------- | ------------------------------------- | -------------- | ------------------------------------------------------ |
+| **Custom Instructions** | General behavior & preferences        | Global         | Coding style, tone, conventions                        |
+| **Promptfiles**         | Task-specific instructions            | Repo or folder | Reusable prompts for common tasks                      |
+| **Chat Modes**          | Custom agents                         | Repo           | Role-based behavior (e.g., "Security Reviewer")        |
+| **Skills**              | Procedural, domain-specific workflows | Repo           | Repeatable tasks requiring steps, scripts, or examples |
 
 ::: notes
-Explain that skills complement the other instruction layers rather than replacing them. Custom instructions shape broad behavior, promptfiles package reusable requests, and chat modes define role-oriented interaction, while skills are the mechanism specifically designed for procedural workflows that need steps and attached resources. Spend about one minute here and highlight that choosing the right mechanism depends on the kind of control you need. Transition by making the jump from concept to actual creation.
+Explain that skills complement the other instruction layers rather than replacing them. Custom instructions shape broad behavior, promptfiles package reusable requests, and chat modes define role-oriented interaction, while skills are the mechanism specifically designed for procedural workflows that need steps and attached resources. Spend about one minute here and transition by making the jump from concept to actual creation.
 :::
 
 ---
 
+## Creating Your First Skill
 
 ### 1. Create the folder
 
-```bash
+'''bash
 mkdir -p .github/skills/my-skill
-```
+'''
 
-### 2. Add `SKILL.md`
+### 2. Add 'SKILL.md'
 
 Include:
 
 - YAML metadata
-- description
-- procedure steps
-- optional examples or scripts
+- Description
+- Procedure steps
+- Optional examples or scripts
 
-### 3. Commit it
+### 3. Commit to your repository
 
-Copilot can then detect and load it when relevant.
+Copilot will automatically detect and load it when relevant.
 
 ::: notes
-Present this as a low-friction authoring path. A team does not need a special service or registry to begin; it just adds a skill folder to the repository, writes a `SKILL.md`, and versions it like any other artifact so it can be reviewed, improved, and audited over time. Spend about one minute here and point out that this makes skills fit naturally into existing Git workflows. Transition by showing what separates a good skill from a weak one.
+Skills are version-controlled like any other code artifact. This makes them auditable and reviewable-critical for team workflows and compliance. Spend about one minute here and present this as a low-friction authoring path: add a folder, write the skill, and let repository review processes improve it over time. Transition by showing what separates a good skill from a weak one.
 :::
 
 ---
 
+## Best Practices for Skill Authoring
 
-- Use clear, imperative steps
-- Keep procedures short and deterministic
-- Include examples for complex tasks
-- Use scripts for repeatable automation
-- Add keywords to improve relevance matching
-- Test likely triggers by prompting Copilot directly
+- Use **clear, imperative steps** ("Do X, then Y")
+- Keep procedures **short and deterministic**
+- Include **examples** for complex tasks
+- Use **scripts** for repeatable automation
+- Add **keywords** in the description for better relevance matching
+- Test skills by prompting Copilot with expected triggers
 
 ::: notes
-Frame these as reliability practices rather than stylistic preferences. A good skill reads like an operational recipe: specific, testable, and explicit enough that Copilot can execute it with minimal ambiguity, while examples and scripts anchor the procedure in concrete artifacts. Spend about one minute here and encourage the audience to validate skills using likely trigger phrases so they can see whether loading behavior matches expectations. Transition by grounding the idea in real-world categories of work.
+Think of skills as operational recipes. The more deterministic and unambiguous the steps, the more reliable Copilot becomes. Spend about one minute here and frame these as reliability practices rather than stylistic preferences so the audience understands that skill quality directly affects execution quality. Transition by grounding the idea in real-world categories of work.
 :::
 
 ---
 
+## Real-World Use Cases
 
 - Test generation and automation
 - Code migrations
@@ -2921,53 +4328,54 @@ Frame these as reliability practices rather than stylistic preferences. A good s
 - Onboarding workflows
 
 ::: notes
-Explain that skills are most valuable when a task is procedural, repeatable, and specific to a team's domain. These examples all share the property that there is a known workflow, supporting material, and a need for consistent execution, which is exactly where skills outperform generic chat guidance. Spend about one minute here and mention that enterprise teams benefit especially because they can encode institutional process directly in the repository. Transition by closing with the main takeaways the audience should remember.
+Explain that skills are most valuable when a task is procedural, repeatable, and specific to a team's domain. These examples all share the property that there is a known workflow, supporting material, and a need for consistent execution, which is exactly where skills outperform generic chat guidance. Spend about one minute here and transition by closing with the main takeaways the audience should remember.
 :::
 
 ---
 
+## Summary
 
-- Skills are modular, procedural knowledge bundles for Copilot
-- Defined in `.github/skills/<name>/SKILL.md`
-- Loaded automatically when relevant
-- Enable repeatable, auditable, domain-specific workflows
+- Skills are **modular, procedural knowledge bundles** for Copilot
+- Defined via '.github/skills/<name>/SKILL.md'
+- Loaded **automatically** when relevant
+- Enable **repeatable**, **auditable**, **domain-specific** workflows
 - Work across Copilot agents and environments
-- Add a powerful extensibility layer beyond basic prompting
+- Provide a powerful new layer of extensibility
 
 ::: notes
-Close by reinforcing that skills represent a shift from one-off prompting toward reusable operational knowledge. The big idea is that teams can package their best workflows into repository assets that Copilot can discover and apply at the right time, producing more consistent results with less repeated explanation. Spend about one minute here and end on the idea that skills help turn institutional knowledge into something executable, reviewable, and maintainable.
+Skills represent a major evolution in Copilot's architecture-moving from reactive assistance to structured, agentic execution. They allow teams to encode institutional knowledge directly into the repository. Spend the final minute reinforcing that the practical value is repeatability: repository-scoped workflows that Copilot can discover and apply with less repeated prompting.
 :::
 
 ---
 
 ## Exercise: Create and Use a Custom Skill
 
-**Duration**: ~25 minutes
-
 **Objectives**
 
-- Create a repository skill folder under `.github/skills/`
-- Author a `SKILL.md` file with a clear description and step-based procedure
+- Create a repository skill folder under '.github/skills/'
+- Author a 'SKILL.md' file with a clear description and step-based procedure
 - Use Copilot with a matching prompt so the new skill can guide a real task
 
 **Activities**
 
-- **Phase 1 - Create**: Add `.github/skills/slide-quality-check/SKILL.md` with metadata (`name`, `description`) and a short procedure for reviewing Marp slides for provenance and speaker notes
-- **Phase 2 - Refine**: Improve the skill by adding strong trigger words such as `Marp`, `slide`, `speaker notes`, and `provenance`, then tighten the procedure so the output is deterministic
-- **Phase 3 - Use**: Prompt Copilot with a task such as `Review Slides/individual-slides/exercise-create-and-use-custom-agent.md for slide metadata and ::: notes compliance` and compare the output to a normal untuned chat response
+- **Phase 1 - Create**: Add '.github/skills/slide-quality-check/SKILL.md' with metadata ('name', 'description') and a short procedure for reviewing Marp slides for provenance and speaker notes
+- **Phase 2 - Refine**: Improve the skill by adding strong trigger words such as 'Marp', 'slide', 'speaker notes', and 'provenance', then tighten the procedure so the output is deterministic
+- **Phase 3 - Use**: Prompt Copilot with a task such as 'Review Slides/individual-slides/exercise-create-and-use-custom-agent.md for slide metadata and ::: notes compliance' and compare the output to a normal untuned chat response
 
 **Success Criteria**
 
-- Skill folder and `SKILL.md` exist in `.github/skills/slide-quality-check/`
+- Skill folder and 'SKILL.md' exist in '.github/skills/slide-quality-check/'
 - Copilot responds with a workflow aligned to the skill procedure instead of a generic answer
 - Student receives a structured review that checks metadata, notes coverage, and suggested fixes
 
 ::: notes
+Duration ~00:25
+
 Facilitate this as a procedural-workflow lab, not just a markdown-file exercise. Start by explaining that a skill is different from a custom agent: the agent shapes role behavior, while the skill packages a repeatable method Copilot can load when the prompt matches the description.
 
-In Phase 1, have learners create `.github/skills/slide-quality-check/SKILL.md` with a simple but concrete purpose. Encourage them to write a description that contains likely trigger phrases and a procedure with explicit steps such as inspect front matter, verify every slide has `::: notes`, and report missing or weak sections.
+In Phase 1, have learners create '.github/skills/slide-quality-check/SKILL.md' with a simple but concrete purpose. Encourage them to write a description that contains likely trigger phrases and a procedure with explicit steps such as inspect front matter, verify every slide has '::: notes', and report missing or weak sections.
 
-In Phase 2, ask students to improve the skill after reading it once as if they were Copilot. Typical improvements are sharper trigger words, more deterministic steps, and output requirements such as `return findings as pass/fail bullets with suggested fixes`.
+In Phase 2, ask students to improve the skill after reading it once as if they were Copilot. Typical improvements are sharper trigger words, more deterministic steps, and output requirements such as 'return findings as pass/fail bullets with suggested fixes'.
 
 In Phase 3, students run a prompt against an existing slide file and see whether Copilot behaves like it has loaded the skill. If the response is too generic, coach them to adjust either the prompt wording or the skill description so the relevance match is stronger.
 
@@ -2981,7 +4389,9 @@ Timing guidance: 8 minutes create, 7 minutes refine, 8 minutes use and compare, 
 ## Course Modules
 
 - Intro
+- Test Automation and Code Quality
 - Instructions vs Prompts vs Custom Chat Modes
+- Managing Context
 - Custom Agents
 - Skills
 - **▶ MCP**
@@ -3007,12 +4417,11 @@ Timing guidance: 8 minutes create, 7 minutes refine, 8 minutes use and compare, 
 
 - Connect Copilot to databases, APIs, infrastructure tools, and custom systems
 - Built on a standardized protocol so any tool can speak to Copilot
-- Duration target: about 15 minutes
 
 ::: notes
-Open by framing MCP as Copilot's extensibility layer beyond the repository. Copilot is already powerful for code in a repo, but many real workflows require reaching outside that boundary: querying a database, checking infrastructure state, or pulling from an internal API. MCP is the standard that makes all of those integrations possible.
+Duration ~00:15
 
-Timing: 1 minute
+Open by framing MCP as Copilot's extensibility layer beyond the repository. Copilot is already powerful for code in a repo, but many real workflows require reaching outside that boundary: querying a database, checking infrastructure state, or pulling from an internal API. MCP is the standard that makes all of those integrations possible.
 
 Transition: "Let's start with what MCP actually is."
 :::
@@ -3027,14 +4436,16 @@ Transition: "Let's start with what MCP actually is."
 - A large and growing library of community-built servers already exists
 - Key mindset: **configure and consume** — not build from scratch
 
-```mermaid
+'''mermaid
 flowchart LR
     A[GitHub Copilot\nClient] -- MCP Protocol --> B[MCP Server]
     B -- Resources --> A
     B -- Tools --> A
-```
+'''
 
 ::: notes
+Duration ~00:02
+
 Explain MCP as an open protocol rather than a proprietary plugin system. The key idea is standardization: any team can build a server that exposes data or capabilities to Copilot using the same protocol, which means the ecosystem grows without waiting for first-party integrations.
 
 MCP servers are like npm packages — install and use. Configuration is simple JSON — no coding required.
@@ -3046,8 +4457,6 @@ Examples:
 - Filesystem MCP Server: Safe file access for Copilot
 - Slack MCP Server: Read channels and messages
 
-Timing: 1-2 minutes
-
 Transition: "Let's look at the architecture in detail."
 :::
 
@@ -3055,14 +4464,14 @@ Transition: "Let's look at the architecture in detail."
 
 ## Architecture: Five Components
 
-```mermaid
+'''mermaid
 graph LR
     A[VS Code<br/>Copilot<br/>Client] <-->|JSON-RPC| B[MCP Server<br/>Transport Layer]
     B <-->|Protocol| C[Resources<br/>Files, APIs,<br/>Databases]
     style A fill:#0078d4,color:#fff
     style B fill:#68217a,color:#fff
     style C fill:#107c10,color:#fff
-```
+'''
 
 | Component     | Role                                                  |
 | ------------- | ----------------------------------------------------- |
@@ -3073,11 +4482,11 @@ graph LR
 | **Tools**     | Functions the server gives Copilot permission to call |
 
 ::: notes
+Duration ~00:03
+
 Walk through each component methodically. The client is already familiar — VS Code with Copilot enabled. The server is what you install. The protocol is what makes them interoperable. Resources are data that can be read into context; tools are actions that Copilot can invoke on behalf of the user.
 
 Consumer focus: think "install and configure" not "build and deploy" — like VS Code extensions from the marketplace.
-
-Timing: 2-3 minutes
 
 Transition: "Let's see why you'd want MCP in your workflow."
 :::
@@ -3102,11 +4511,11 @@ Transition: "Let's see why you'd want MCP in your workflow."
 - Expose institutional data that no public server covers
 
 ::: notes
+Duration ~00:01
+
 Use this slide to show why MCP matters in practice. The most compelling cases are often ones where the developer needs real state that lives outside the repo: the current schema of a production database, the live status of a Kubernetes deployment, or data from an internal system.
 
 Encourage the audience to think about what data sources or tools they access repeatedly that could be connected to Copilot through an MCP server.
-
-Timing: 1 minute
 
 Transition: "Let's look at what servers are available today."
 :::
@@ -3125,6 +4534,8 @@ Transition: "Let's look at what servers are available today."
 > Community-maintained libraries add new servers regularly
 
 ::: notes
+Duration ~00:01
+
 Emphasize that you do not need to build a server to benefit from MCP. Most common integration points already have a server available.
 
 Specific package names to mention:
@@ -3137,8 +4548,6 @@ Specific package names to mention:
 
 The infrastructure-focused servers — Terraform and Kubernetes — tend to generate the most interest in DevOps or platform engineering teams.
 
-Timing: 45-60 seconds
-
 Transition: "Now let's find the right server for your needs."
 :::
 
@@ -3148,23 +4557,23 @@ Transition: "Now let's find the right server for your needs."
 
 **VS Code Extension Gallery**
 
-- Search `MCP` in the extensions panel
+- Search 'MCP' in the extensions panel
 - Read the description to confirm what resources and tools are exposed
 
 **Model Context Protocol Website**
 
-- `modelcontextprotocol.io` — canonical registry and documentation
+- 'modelcontextprotocol.io' — canonical registry and documentation
 
 **GitHub Community Repository**
 
-- `github.com/modelcontextprotocol/servers` — community-maintained collection with usage examples
+- 'github.com/modelcontextprotocol/servers' — community-maintained collection with usage examples
 
 ::: notes
+Duration ~00:01
+
 Make this actionable. The VS Code extension gallery is the fastest entry point because it is already open. The MCP website is the authoritative source for documentation and the full server registry.
 
 Suggest that attendees check the extension gallery for the tool they care most about as a next-step exercise.
-
-Timing: 30-45 seconds
 
 Transition: "Let's install your first MCP server."
 :::
@@ -3177,13 +4586,13 @@ Transition: "Let's install your first MCP server."
 
 1. Install the server package:
 
-```bash
+'''bash
 npm install -g @modelcontextprotocol/server-github
-```
+'''
 
-2. Configure in VS Code `settings.json`:
+2. Configure in VS Code 'settings.json':
 
-```json
+'''json
 {
   "mcp.servers": {
     "github": {
@@ -3192,13 +4601,15 @@ npm install -g @modelcontextprotocol/server-github
     }
   }
 }
-```
+'''
 
 3. Reload VS Code — the MCP server starts automatically
 
 > **Token budget**: each enabled server uses ~128 tokens of context window — enable only what you need
 
 ::: notes
+Duration ~00:05
+
 Walk through the real example — emphasize it's just package installation. Install like any npm/pip package, configure with credentials and options, and servers start automatically with VS Code.
 
 Common issues:
@@ -3210,8 +4621,6 @@ Common issues:
 Available servers to mention: @modelcontextprotocol/server-filesystem, @modelcontextprotocol/server-postgres, @modelcontextprotocol/server-sqlite
 
 Token budget note: This is often overlooked. Each enabled MCP server occupies a slice of Copilot's context window even when not actively used — treat them like browser tabs: useful when open for a reason, wasteful if left open by default.
-
-Timing: 4-5 minutes (show live demo if possible)
 
 Transition: "Now let's see Copilot use this context."
 :::
@@ -3226,7 +4635,7 @@ Transition: "Now let's see Copilot use this context."
 - **Tool Use** — Copilot can invoke server tools on your behalf
 - **Security Boundaries** — controlled, audited access to resources
 
-```mermaid
+'''mermaid
 sequenceDiagram
     participant Dev as Developer
     participant Copilot as GitHub Copilot
@@ -3239,9 +4648,11 @@ sequenceDiagram
     Res-->>MCP: Return context
     MCP-->>Copilot: Structured context
     Copilot-->>Dev: Code matching your patterns
-```
+'''
 
 ::: notes
+Duration ~00:04
+
 Emphasize the "before and after" — without MCP, completions are based only on training data. With MCP, completions match YOUR codebase patterns.
 
 Examples:
@@ -3251,8 +4662,6 @@ Examples:
 - Testing: MCP provides your test framework and fixture patterns
 
 Security note: MCP servers can implement rate limiting. Audit logs track what context was provided. The permission model prevents unauthorized access.
-
-Timing: 3-4 minutes
 
 Transition: "Let's talk about configuring these safely."
 :::
@@ -3272,12 +4681,14 @@ Transition: "Let's talk about configuring these safely."
 **Best practices:**
 
 - Start with read-only servers
-- Use scoped tokens (e.g., `repo:read` only for GitHub)
+- Use scoped tokens (e.g., 'repo:read' only for GitHub)
 - Enable only needed capabilities
 - Test in non-production first
 - Keep servers updated
 
 ::: notes
+Duration ~00:04
+
 Security from the consumer perspective — this is all about what YOU control in configuration.
 
 Good config examples:
@@ -3297,8 +4708,6 @@ Common mistakes:
 - Granting access to the entire filesystem instead of the workspace folder
 - Not checking what data the server actually sends to AI
 
-Timing: 3-4 minutes
-
 Transition: "Let's put this into practice."
 :::
 
@@ -3311,14 +4720,14 @@ Transition: "Let's put this into practice."
 1. Install the MCP extension in VS Code (search "MCP" in marketplace)
 2. Pick **one** server to start: **GitHub** or **Filesystem**
 3. Set credentials in your environment variables
-4. Add server config to `settings.json`
+4. Add server config to 'settings.json'
 5. Reload VS Code and test with Copilot
 
-```bash
+'''bash
 npm install -g @modelcontextprotocol/server-filesystem
-```
+'''
 
-```json
+'''json
 {
   "mcp.servers": {
     "filesystem": {
@@ -3327,13 +4736,15 @@ npm install -g @modelcontextprotocol/server-filesystem
     }
   }
 }
-```
+'''
 
 Ask Copilot: _"What files are in this project?"_
 
-**Resources:** `github.com/modelcontextprotocol/servers` | `modelcontextprotocol.io`
+**Resources:** 'github.com/modelcontextprotocol/servers' | 'modelcontextprotocol.io'
 
 ::: notes
+Duration ~00:03
+
 Make it feel achievable — "you can do this today."
 
 Don't try to install all servers at once. Pick ONE that solves a current pain point. Test thoroughly before adding more.
@@ -3346,8 +4757,6 @@ Recommended first server by use case:
 
 Active community: Discord and GitHub Discussions are helpful for issues.
 
-Timing: 2-3 minutes for intro, 20-30 minutes hands-on
-
 Transition: "Questions about getting started?"
 :::
 
@@ -3358,10 +4767,12 @@ Transition: "Questions about getting started?"
 - MCP gives Copilot a standardized way to reach **external data and tools**
 - Architecture: client ↔ protocol ↔ server exposing **resources** and **tools**
 - Pre-built servers cover most common integrations; custom servers handle the rest
-- Find servers via VS Code gallery, `modelcontextprotocol.io`, or GitHub
+- Find servers via VS Code gallery, 'modelcontextprotocol.io', or GitHub
 - Install as extensions, **enable selectively** to manage token cost (~128 per server)
 
 ::: notes
+Duration ~00:01
+
 Recap the key takeaways. The audience should leave with three things:
 
 1. An understanding of what MCP is and why it exists
@@ -3369,42 +4780,40 @@ Recap the key takeaways. The audience should leave with three things:
 3. Awareness of the token overhead so they configure their environment deliberately
 
 Invite questions or suggest exploring the VS Code gallery as a hands-on follow-up.
-
-Timing: 30 seconds recap + Q&A
 :::
 
 ---
 
 ## Exercise: Create, Test, and Use a Local MCP Server
 
-**Duration**: ~30 minutes
-
 **Objectives**
 
-- Create a minimal PowerShell MCP server that supports `initialize`, `tools/list`, and `tools/call`
+- Create a minimal PowerShell MCP server that supports 'initialize', 'tools/list', and 'tools/call'
 - Validate protocol behavior with an end-to-end smoke test script
-- Connect the server to VS Code and use the `echo` tool from Copilot
+- Connect the server to VS Code and use the 'echo' tool from Copilot
 
 **Activities**
 
-- **Phase 1 - Create**: Build `scripts/mcp/simple-mcp-server.ps1` with JSON-RPC framing and MCP method routing
-- **Phase 2 - Test**: Run `scripts/mcp/test-simple-mcp-server.ps1` and verify initialize/tools/list/tools/call responses
-- **Phase 3 - Use**: Confirm `.mcp.json` points to the local server, then prompt Copilot to call the `echo` tool
+- **Phase 1 - Create**: Build 'scripts/mcp/simple-mcp-server.ps1' with JSON-RPC framing and MCP method routing
+- **Phase 2 - Test**: Run 'scripts/mcp/test-simple-mcp-server.ps1' and verify initialize/tools/list/tools/call responses
+- **Phase 3 - Use**: Confirm '.mcp.json' points to the local server, then prompt Copilot to call the 'echo' tool
 
 **Success Criteria**
 
 - Server starts without errors and responds with valid MCP JSON-RPC envelopes
-- Test output reports `MCP test passed.` and confirms all three checkpoints
-- Copilot can discover the `echo` tool and return the expected echoed text
+- Test output reports 'MCP test passed.' and confirms all three checkpoints
+- Copilot can discover the 'echo' tool and return the expected echoed text
 
 ::: notes
+Duration ~00:30
+
 Facilitate this as a lab where students progress from implementation to verification to real usage. Start by framing MCP as a local integration pattern: the server reads JSON-RPC over stdio, advertises tools, and returns structured results.
 
-For Phase 1, have students create `scripts/mcp/simple-mcp-server.ps1` with helper functions for `Content-Length` framing, plus handlers for `initialize`, `tools/list`, and `tools/call`. Emphasize that `tools/list` should return the `echo` tool schema and `tools/call` should validate `name == "echo"` and required `arguments.text`.
+For Phase 1, have students create 'scripts/mcp/simple-mcp-server.ps1' with helper functions for 'Content-Length' framing, plus handlers for 'initialize', 'tools/list', and 'tools/call'. Emphasize that 'tools/list' should return the 'echo' tool schema and 'tools/call' should validate 'name == "echo"' and required 'arguments.text'.
 
-For Phase 2, run `pwsh -NoLogo -NoProfile -File .\scripts\mcp\test-simple-mcp-server.ps1` from repo root. Students should verify three checks in output: initialize success, echo tool listing, and echo text round-trip. If test fails, inspect malformed headers, missing `id` correlation, or invalid response shape.
+For Phase 2, run 'pwsh -NoLogo -NoProfile -File .\scripts\mcp\test-simple-mcp-server.ps1' from repo root. Students should verify three checks in output: initialize success, echo tool listing, and echo text round-trip. If test fails, inspect malformed headers, missing 'id' correlation, or invalid response shape.
 
-For Phase 3, confirm `.mcp.json` includes command `pwsh` and args `-NoProfile -File scripts/mcp/simple-mcp-server.ps1`. In Copilot Chat, ask for a tool call using text like: "Use the echo MCP tool and send the text 'MCP lab check'." Debrief by asking students where they would replace echo with a real internal API or automation tool.
+For Phase 3, confirm '.mcp.json' includes command 'pwsh' and args '-NoProfile -File scripts/mcp/simple-mcp-server.ps1'. In Copilot Chat, ask for a tool call using text like: "Use the echo MCP tool and send the text 'MCP lab check'." Debrief by asking students where they would replace echo with a real internal API or automation tool.
 
 Timing guidance: 10 minutes create, 10 minutes test/debug, 8 minutes use and discuss, 2 minutes recap. During recap, connect this lab to production hardening topics: auth, input validation, audit logs, and tool least-privilege design.
 :::
