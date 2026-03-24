@@ -4,7 +4,7 @@ model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
 chat_id: "test-automation-quality-exercise-20260319"
 prompt: |
-  create an exercise marp slide using the Slides\individual-slides\exercise-template.pptx template for the following:
+  create an exercise marp slide using the slides\exercise-template.pptx template for the following:
 
   ## Exercise: Strengthening Test Automation & Code Quality
 

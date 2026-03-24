@@ -14,7 +14,7 @@ Create an exercise-focused Marp slide deck using the established exercise templa
 
 ### Primary Deliverables
 
-1. **Exercise Fork and Clone Repositories Deck** (`Slides/individual-slides/exercise-fork-and-clone-repositories.md`)
+1. **Exercise Fork and Clone Repositories Deck** (`slides/marp/exercise-fork-and-clone-repositories.deck.md`)
    - Three exercise slides created from provided content
    - Includes objectives, activities, success criteria, and comprehensive `::: notes` blocks on each slide
    - Aligns with Marp settings and course slide structure
@@ -51,7 +51,7 @@ Create an exercise-focused Marp slide deck using the established exercise templa
 
 | Artifact                                                                          | Type          | Purpose                            |
 | --------------------------------------------------------------------------------- | ------------- | ---------------------------------- |
-| `Slides/individual-slides/exercise-fork-and-clone-repositories.md`                | Marp markdown | Deliver repository setup exercises |
+| `slides/marp/exercise-fork-and-clone-repositories.deck.md`                | Marp markdown | Deliver repository setup exercises |
 | `ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/conversation.md` | Log           | Preserve chat provenance           |
 | `ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/summary.md`      | Summary       | Provide resumable session context  |
 
@@ -77,7 +77,7 @@ Create an exercise-focused Marp slide deck using the established exercise templa
 
 ✅ AI-generated artifact metadata included
 ✅ Conversation log and summary created in `ai-logs`
-✅ Marp exercise deck created in `Slides/individual-slides`
+✅ Marp exercise deck created in `slides/marp`
 ⚠️ PPTX export not executed in this session
 
 ## Chat Metadata

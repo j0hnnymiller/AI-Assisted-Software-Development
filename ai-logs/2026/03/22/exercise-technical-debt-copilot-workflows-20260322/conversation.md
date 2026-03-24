@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: Slides/individual-slides/exercise-template.md, Slides/individual-slides/exercise-template.pptx, Slides/individual-slides/addressing-technical-debt.md, Slides/individual-slides/exercise-test-automation-quality.md, Slides/individual-slides/exercise-business-requirements-generation.md, README.md
-- Targets: Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md, README.md
+- Inputs: slides/marp/exercise-template.deck.md, slides/exercise-template.pptx, slides/marp/addressing-technical-debt.deck.md, slides/marp/exercise-test-automation-quality.deck.md, slides/marp/exercise-business-requirements-generation.deck.md, README.md
+- Targets: slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md, README.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md, .github/instructions/copilot-instructions.md, .github/instructions/create-marp-slides.instructions.md, .github/instructions/marp-slides.instructions.md, .github/instructions/slide-pipeline.instructions.md
 
 ## Exchanges
@@ -20,7 +20,7 @@
 [2026-03-22T12:35:12.0096510-07:00] johnmillerATcodemag-com
 
 ```text
-create an exercise marp slide using the Slides\individual-slides\exercise-template.pptx template for the following:
+create an exercise marp slide using the slides\exercise-template.pptx template for the following:
 
 
 # **Exercise: Prompt Copilot to Address Technical Debt**
@@ -135,7 +135,7 @@ This exercise builds confidence in delegating larger tasks while maintaining saf
 [2026-03-22T12:38:26.6899826-07:00] openai/gpt-5.4@unknown
 
 ```text
-Created a standalone multi-slide Marp exercise artifact at Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md.
+Created a standalone multi-slide Marp exercise artifact at slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md.
 
 The new file turns the three technical-debt exercise segments into template-aligned slides with duration, objectives, activities, success criteria, and comprehensive facilitator notes on every slide. I also added the required ai-log conversation and summary files and cataloged the artifact in README.md for discoverability and provenance.
 ```
@@ -144,7 +144,7 @@ The new file turns the three technical-debt exercise segments into template-alig
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md` - Three-slide Marp exercise artifact for prompting, issue assignment, and delegated remediation workflows
+- `slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md` - Three-slide Marp exercise artifact for prompting, issue assignment, and delegated remediation workflows
 - `ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md` - Conversation log for provenance and traceability
 - `ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/summary.md` - Session summary with resumability context
 - `README.md` - Added a Notable Artifacts entry for the new exercise slide set

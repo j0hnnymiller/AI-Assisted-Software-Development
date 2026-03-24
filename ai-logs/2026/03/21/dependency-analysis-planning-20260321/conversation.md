@@ -14,11 +14,11 @@ Create a Marp deck explaining dependency analysis and planning, including how de
 
 ## Assistant Work Summary
 
-Reviewed the repository Marp slide instructions and recent slide deck examples to match file structure, front matter, note formatting, and teaching style. Authored a new slide deck at `Slides/individual-slides/dependency-analysis-planning.md` with Mermaid diagrams and complete `::: notes` blocks on every slide. Added provenance files and updated the repository `README.md` notable artifacts section so the new deck is discoverable.
+Reviewed the repository Marp slide instructions and recent slide deck examples to match file structure, front matter, note formatting, and teaching style. Authored a new slide deck at `slides/marp/dependency-analysis-planning.deck.md` with Mermaid diagrams and complete `::: notes` blocks on every slide. Added provenance files and updated the repository `README.md` notable artifacts section so the new deck is discoverable.
 
 ## Artifacts Created
 
-- `Slides/individual-slides/dependency-analysis-planning.md`
+- `slides/marp/dependency-analysis-planning.deck.md`
 - `ai-logs/2026/03/21/dependency-analysis-planning-20260321/conversation.md`
 - `ai-logs/2026/03/21/dependency-analysis-planning-20260321/summary.md`
 

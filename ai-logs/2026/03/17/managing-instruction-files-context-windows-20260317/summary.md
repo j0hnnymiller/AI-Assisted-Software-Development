@@ -14,7 +14,7 @@ Create a Marp deck titled "Managing Instruction Files & Context Windows" coverin
 
 ### Primary Deliverables
 
-1. **Deck** (`Slides/individual-slides/managing-instruction-files-context-windows.md`)
+1. **Deck** (`slides/marp/managing-instruction-files-context-windows.deck.md`)
    - Authored a 7-slide Marp deck with requested thematic coverage
    - Added speaker notes for facilitation on every slide
    - Included embedded AI provenance metadata
@@ -46,7 +46,7 @@ Create a Marp deck titled "Managing Instruction Files & Context Windows" coverin
 
 | Artifact                                                                                 | Type      | Purpose                                             |
 | ---------------------------------------------------------------------------------------- | --------- | --------------------------------------------------- |
-| `Slides/individual-slides/managing-instruction-files-context-windows.md`                 | Marp deck | Training content for instruction/context governance |
+| `slides/marp/managing-instruction-files-context-windows.deck.md`                 | Marp deck | Training content for instruction/context governance |
 | `ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/conversation.md` | Log       | Provenance trace                                    |
 | `ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/summary.md`      | Summary   | Resumable context                                   |
 

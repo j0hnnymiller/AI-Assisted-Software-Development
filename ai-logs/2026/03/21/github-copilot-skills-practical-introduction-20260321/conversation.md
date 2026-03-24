@@ -14,11 +14,11 @@ Create a Marp deck explaining GitHub Copilot Skills using the provided synthesiz
 
 ## Assistant Work Summary
 
-Created a Marp deck at `Slides/individual-slides/github-copilot-skills-practical-introduction.md` based on the user-provided Skills content. The deck explains skills as procedural workflow modules, covers folder structure and `SKILL.md` anatomy, compares skills to custom instructions, promptfiles, and chat modes, and ends with authoring guidance and common use cases. Added matching provenance artifacts and updated the `README.md` artifact catalog.
+Created a Marp deck at `slides/marp/github-copilot-skills-practical-introduction.deck.md` based on the user-provided Skills content. The deck explains skills as procedural workflow modules, covers folder structure and `SKILL.md` anatomy, compares skills to custom instructions, promptfiles, and chat modes, and ends with authoring guidance and common use cases. Added matching provenance artifacts and updated the `README.md` artifact catalog.
 
 ## Artifacts Created
 
-- `Slides/individual-slides/github-copilot-skills-practical-introduction.md`
+- `slides/marp/github-copilot-skills-practical-introduction.deck.md`
 - `ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/conversation.md`
 - `ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/summary.md`
 

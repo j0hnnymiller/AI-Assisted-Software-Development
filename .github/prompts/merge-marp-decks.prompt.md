@@ -10,7 +10,7 @@ prompt_metadata:
   version: 3.0.0
   created: 2026-03-12
   updated: 2026-03-21
-  output_path: Slides/<manifest-stem>-draft.md
+  output_path: slides/<manifest-stem>-draft.md
   output_format: markdown
   category: slides
   tags: [marp, slides, merge, presentation, markdown, pptx, python-pptx]
@@ -32,7 +32,7 @@ prompt file to switch manifests.
 Preferred invocation format:
 
 ```
-Manifest: Slides/aiasd-311-<day>.yaml
+Manifest: slides/aiasd-311-<day>.yaml
 ```
 
 Optional mode line:
@@ -44,17 +44,17 @@ Mode: validate-only
 Also accepted:
 
 ```text
-Use manifest Slides/aiasd-311-tuesday.yaml
+Use manifest slides/aiasd-311-tuesday.yaml
 ```
 
 Also accepted for validation:
 
 ```text
-Validate only using manifest Slides/aiasd-311-tuesday.yaml
+Validate only using manifest slides/aiasd-311-tuesday.yaml
 ```
 
 The manifest path is mandatory for every run. The agent must not assume a default manifest,
-infer a manifest from filenames, or build a deck from every file in `Slides/individual-slides/`.
+infer a manifest from filenames, or build a deck from every file in `slides/marp/`.
 
 ### Input Resolution
 
@@ -62,7 +62,7 @@ Resolve the manifest path from the invocation text using this order:
 
 1. A line starting with `Manifest:`
 2. A plain-language instruction of the form `Use manifest <path>`
-3. A single unambiguous repo-relative YAML path under `Slides/`
+3. A single unambiguous repo-relative YAML path under `slides/`
 
 If none of the above yields exactly one manifest path, abort immediately.
 
@@ -86,9 +86,9 @@ If an explicit mode is provided but is not one of the supported values, abort im
 After resolving the manifest path, derive these runtime paths automatically:
 
 - `Merged deck path`: strip `.yaml` and append `-draft.md`
-  (e.g. `Slides/aiasd-311-tuesday.yaml` → `Slides/aiasd-311-tuesday-draft.md`)
-- `PPTX output path`: strip `.yaml`, get basename, prepend `Slides/output/` and append `-draft.pptx`
-  (e.g. `Slides/aiasd-311-tuesday.yaml` → `Slides/output/aiasd-311-tuesday-draft.pptx`)
+  (e.g. `slides/aiasd-311-tuesday.yaml` → `slides/aiasd-311-tuesday-draft.md`)
+- `PPTX output path`: strip `.yaml`, get basename, prepend `slides/output/` and append `-draft.pptx`
+  (e.g. `slides/aiasd-311-tuesday.yaml` → `slides/output/aiasd-311-tuesday-draft.pptx`)
 
 Fixed path:
 
@@ -104,12 +104,12 @@ Front matter note:
 
 - `prompt_metadata.output_path` is a documentation pattern, not a fixed runtime destination.
 - The actual merged deck path must always be derived from the manifest path supplied in the invocation.
-- Example: `Manifest: Slides/aiasd-311-tuesday.yaml` produces `Slides/aiasd-311-tuesday-draft.md`.
+- Example: `Manifest: slides/aiasd-311-tuesday.yaml` produces `slides/aiasd-311-tuesday-draft.md`.
 
 > **⚠️ IMPORTANT**: The merged deck path is a **generated artifact**. Do not manually edit it.
 > This pipeline is **output-only**: it may create or overwrite the derived merged deck path
 > and PPTX output path, but it must **never modify** source Marp slides in
-> `Slides/individual-slides/` or the manifest YAML file. If the manifest or any source slide
+> `slides/marp/` or the manifest YAML file. If the manifest or any source slide
 > is invalid, missing, malformed, or inconsistent with this prompt, report the issue and
 > continue where the prompt allows. Do not auto-fix, normalize, rewrite, rename, or replace
 > manifest entries or source slide files as part of this run.
@@ -122,14 +122,14 @@ Before doing any repository exploration or file generation, resolve and validate
 - If the manifest path does not exist, abort immediately.
 - If the manifest file cannot be parsed as YAML with a top-level `sections:` array, abort immediately.
 - Do not guess the manifest path.
-- Do not fall back to `Slides/aiasd-311-monday.yaml` or any other file.
-- Do not scan `Slides/individual-slides/` to assemble a deck without a manifest.
+- Do not fall back to `slides/aiasd-311-monday.yaml` or any other file.
+- Do not scan `slides/marp/` to assemble a deck without a manifest.
 
 Abort message format:
 
 ```text
 ERROR: Missing or invalid manifest path. Provide an explicit manifest path such as
-Slides/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest.
+slides/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest.
 ```
 
 ## Execution Rule
@@ -181,8 +181,8 @@ The manifest uses a sectioned structure:
 sections:
   - name: <Section Name>
     slides:
-      - Slides\individual-slides\<file>.md
-      - Slides\individual-slides\<file>.md
+      - slides\marp\<file>.md
+      - slides\marp\<file>.md
   - name: <Empty Section>
     slides:
       # no slide files listed — still creates an empty PPTX section
@@ -240,7 +240,7 @@ For each source file, invoke a subagent with a prompt that instructs it to:
 | 1   | **Front matter**          | File begins with a valid Marp YAML front-matter block (`---` … `---`) |
 | 2   | **No H1 in body**         | No `# H1` headings appear after the front-matter block                |
 | 3   | **H2 present**            | At least one `## H2` heading exists in the body                       |
-| 4   | **Image paths**           | No `../images/` references (must use `images/` prefix)                |
+| 4   | **Image paths**           | No `../images/` references (must use the local `images/` prefix)      |
 | 5   | **No trailing separator** | File does not end with a bare `---` line                              |
 | 6   | **Encoding**              | No vertical-tab (`\x0b`) characters                                   |
 
@@ -289,7 +289,7 @@ Run Phase 1 only in `full` mode. Skip it entirely in `validate-only` mode.
 - Never rename or append a suffix to the file. The output path is fixed.
 
 The manifest is the sole source of truth for slide selection and ordering. Never merge
-all files in `Slides/individual-slides/` unless every one of those files is explicitly
+all files in `slides/marp/` unless every one of those files is explicitly
 listed in the manifest.
 
 ### Injected module list slide
@@ -374,8 +374,8 @@ Rules:
 
 #### Image paths
 
-- Source files use `../images/` for their own Marp preview; the merged deck lives in
-  `Slides/`, so rewrite `../images/` → `images/` in all image references
+- Source files use `images/` because `slides/marp/images/` stays beside the source decks
+- The merged deck lives in `slides/`, so rewrite `images/` → `marp/images/` in merged output
 - All other content is preserved verbatim
 
 ### Output format
@@ -429,7 +429,7 @@ Run the PPTX script path (`scripts/generate_pptx.py`) to produce the PPTX output
 | `- **Key Point**: explanation text`        | • **Key Point** (bold): explanation text            |
 | `Experience: **15+ years** in development` | Experience: **15+ years** (bold) in development     |
 
-This ensures that markdown bold syntax in source slides (e.g., `Slides/individual-slides/*.md`) is properly rendered as visual bold formatting when viewed in PowerPoint, improving readability and emphasis.
+This ensures that markdown bold syntax in source slides (e.g., `slides/marp/*.deck.md`) is properly rendered as visual bold formatting when viewed in PowerPoint, improving readability and emphasis.
 
 ### Execution
 

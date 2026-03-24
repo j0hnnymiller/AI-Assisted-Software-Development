@@ -19,7 +19,7 @@ Usage:
 2. SPEAKER NOTES ON ALL SLIDES:
    Every slide (injected and content) MUST have speaker notes:
    - Injected slides: Notes explaining auto-generation and purpose
-   - Content slides: Notes showing source file path (e.g., "Source: Slides\\...")
+   - Content slides: Notes showing source file path (e.g., "Source: slides\\...")
 
    Rationale: Provides context in PowerPoint for instructors and maintainers.
 

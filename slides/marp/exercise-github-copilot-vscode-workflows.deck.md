@@ -4,7 +4,7 @@ model: "openai/gpt-5.3-codex@unknown"
 operator: "johnmillerATcodemag-com"
 chat_id: "exercise-github-copilot-vscode-workflows-20260322"
 prompt: |
-  create an exercise marp slide deck using the Slides\individual-slides\exercise-template.pptx template for the provided GitHub Copilot labs (getting started, context management, chat workflow, and modes)
+  create an exercise marp slide deck using the slides\exercise-template.pptx template for the provided GitHub Copilot labs (getting started, context management, chat workflow, and modes)
 started: "2026-03-22T00:00:00Z"
 ended: "2026-03-22T00:20:00Z"
 task_durations:

@@ -10,7 +10,7 @@
 ## Context
 
 - **Inputs**: User request for Marp deck on AI-assisted CI/CD pipelines
-- **Target**: `Slides/individual-slides/ai-assisted-cicd-pipelines.md`
+- **Target**: `slides/marp/ai-assisted-cicd-pipelines.deck.md`
 - **Constraints/Policies**: `.github/instructions/marp-slides.instructions.md`
 
 ## Exchanges
@@ -55,7 +55,7 @@ Created ai-assisted-cicd-pipelines.md with 13 slides covering:
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/ai-assisted-cicd-pipelines.md` — 13-slide Marp deck on AI-assisted CI/CD pipelines
+- `slides/marp/ai-assisted-cicd-pipelines.deck.md` — 13-slide Marp deck on AI-assisted CI/CD pipelines
 
 **Next Steps**:
 

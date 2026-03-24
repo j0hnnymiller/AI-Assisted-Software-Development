@@ -14,7 +14,7 @@ Create a standalone Marp exercise slide for the Thursday afternoon Business Requ
 
 ### Primary Deliverables
 
-1. **Exercise Slide** (`Slides/individual-slides/exercise-business-requirements-generation.md`)
+1. **Exercise Slide** (`slides/marp/exercise-business-requirements-generation.deck.md`)
    - Single-slide exercise covering branch setup, Product Manager agent usage, instruction files, clarifications, and independent work time
    - Includes duration, objectives, activities, and success criteria aligned to the source summary
    - Adds facilitator notes with timing and delivery guidance
@@ -56,7 +56,7 @@ Create a standalone Marp exercise slide for the Thursday afternoon Business Requ
 
 | Artifact                                                                                | Type       | Purpose                                                        |
 | --------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------- |
-| `Slides/individual-slides/exercise-business-requirements-generation.md`                 | Marp slide | Standalone exercise slide for business requirements generation |
+| `slides/marp/exercise-business-requirements-generation.deck.md`                 | Marp slide | Standalone exercise slide for business requirements generation |
 | `ai-logs/2026/03/21/business-requirements-generation-exercise-20260321/conversation.md` | Markdown   | Conversation transcript for provenance                         |
 | `ai-logs/2026/03/21/business-requirements-generation-exercise-20260321/summary.md`      | Markdown   | Session summary for resumability                               |
 

@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: past-class-recordings/2026-02/AI-Assisted Software Development with GitHub Copilot (Thu Afternoon)-summary.md, Slides/individual-slides/implementation-with-vertical-slices.md, README.md
-- Targets: Slides/individual-slides/technology-stack-instruction-files.md
+- Inputs: past-class-recordings/2026-02/AI-Assisted Software Development with GitHub Copilot (Thu Afternoon)-summary.md, slides/marp/implementation-with-vertical-slices.deck.md, README.md
+- Targets: slides/marp/technology-stack-instruction-files.deck.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md, .github/instructions/marp-slides.instructions.md, .github/instructions/slide-pipeline.instructions.md, .github/instructions/ai-assisted-output.instructions.md, .github/instructions/copilot-instructions.md
 
 ## Exchanges
@@ -70,7 +70,7 @@ Created a new Marp deck for the section, added the required ai-log conversation 
 
 **Artifacts Produced**:
 
-- Slides/individual-slides/technology-stack-instruction-files.md - Marp deck explaining how to generate, review, and improve technology stack instruction files
+- slides/marp/technology-stack-instruction-files.deck.md - Marp deck explaining how to generate, review, and improve technology stack instruction files
 - ai-logs/2026/03/21/technology-stack-instruction-files-20260321/conversation.md - Conversation log for the deck creation chat
 - ai-logs/2026/03/21/technology-stack-instruction-files-20260321/summary.md - Resumable summary for the deck creation chat
 - README.md - Notable Artifacts entry for the new deck

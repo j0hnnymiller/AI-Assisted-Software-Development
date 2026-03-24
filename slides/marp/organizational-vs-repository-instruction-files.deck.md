@@ -77,7 +77,7 @@ Call out that enterprise-tier files should be stable and short. They should defi
 Path-scoped instructions apply behavior only where it is needed.
 
 ```yaml
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 ```
 
 ```yaml
@@ -102,7 +102,7 @@ Explain that path scoping is the precision tool. Show that slide-authoring rules
 
 Use folder-level rules to match local stack and workflow.
 
-- `Slides/` for Marp formatting and speaker-note conventions
+- `slides/` for Marp formatting and speaker-note conventions
 - `Labs/lab1-3-python/` for Python lint/test guidance
 - `Labs/lab1-3-typescript/` for TypeScript build/test patterns
 - `Course/course.github/` for docs automation and publishing rules

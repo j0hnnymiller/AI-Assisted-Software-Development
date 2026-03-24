@@ -10,10 +10,10 @@
 ## Context
 
 - **Inputs**:
-  - `Slides/individual-slides/_Safe Brownfield Coding.pptx`
-  - `Slides/individual-slides/_Essential Safety Measures.pptx`
-  - `Slides/individual-slides/_Building Safety Nets.pptx`
-- **Target**: `Slides/individual-slides/safe-ai-assisted-coding.md`
+  - `slides/marp/_Safe Brownfield Coding.pptx`
+  - `slides/marp/_Essential Safety Measures.pptx`
+  - `slides/marp/_Building Safety Nets.pptx`
+- **Target**: `slides/marp/safe-ai-assisted-coding.deck.md`
 - **Constraints/Policies**: `.github/instructions/marp-slides.instructions.md`
 
 ## Exchanges
@@ -46,7 +46,7 @@ Created safe-ai-assisted-coding.md with 19 slides across 3 sections.
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/safe-ai-assisted-coding.md` — 19-slide merged Marp deck
+- `slides/marp/safe-ai-assisted-coding.deck.md` — 19-slide merged Marp deck
 
 **Next Steps**:
 

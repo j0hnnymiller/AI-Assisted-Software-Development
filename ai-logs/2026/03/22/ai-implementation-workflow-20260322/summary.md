@@ -1,6 +1,6 @@
 # Summary
 
-Created a new Marp deck for the AI implementation workflow topic at `Slides\individual-slides\ai-implementation-workflow.md`.
+Created a new Marp deck for the AI implementation workflow topic at `slides\marp\ai-implementation-workflow.deck.md`.
 
 The deck includes:
 

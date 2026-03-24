@@ -19,7 +19,7 @@ Safety nets for brownfield systems (test suites, automated verification, feature
 
 ## Response Summary
 
-Created `Slides/individual-slides/ai-prioritization-brownfield-protection.md` — a 7-slide Marp deck:
+Created `slides/marp/ai-prioritization-brownfield-protection.deck.md` — a 7-slide Marp deck:
 
 1. **Finding the Gaps** — common brownfield security audit findings
 2. **Impact vs. Effort Matrix** — Mermaid quadrant chart with example findings plotted
@@ -33,6 +33,6 @@ Each slide has comprehensive speaker notes with delivery timing, key points, and
 
 ## Artifacts
 
-- Slide deck: `Slides/individual-slides/ai-prioritization-brownfield-protection.md`
+- Slide deck: `slides/marp/ai-prioritization-brownfield-protection.deck.md`
 - AI log: `ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/conversation.md`
 - README entry added to root `README.md`

@@ -14,7 +14,7 @@ Create an exercise slide from the existing template for Lab 3: Test-Driven Devel
 
 ### Primary Deliverables
 
-1. **Lab 3 Exercise Slide** (Slides/individual-slides/lab3-test-driven-development-exercise.md)
+1. **Lab 3 Exercise Slide** (slides/marp/lab3-test-driven-development-exercise.deck.md)
    - Added Marp and AI provenance front matter.
    - Structured content to match the exercise template pattern.
    - Included speaker notes with TDD-focused facilitation guidance.
@@ -41,7 +41,7 @@ Create an exercise slide from the existing template for Lab 3: Test-Driven Devel
 
 | Artifact                                                                          | Type       | Purpose                           |
 | --------------------------------------------------------------------------------- | ---------- | --------------------------------- |
-| Slides/individual-slides/lab3-test-driven-development-exercise.md                 | Marp slide | Hands-on Lab 3 TDD exercise slide |
+| slides/marp/lab3-test-driven-development-exercise.deck.md                 | Marp slide | Hands-on Lab 3 TDD exercise slide |
 | ai-logs/2026/03/17/lab3-test-driven-development-exercise-20260317/conversation.md | Log        | Prompt/response provenance        |
 | ai-logs/2026/03/17/lab3-test-driven-development-exercise-20260317/summary.md      | Summary    | Session resumability              |
 

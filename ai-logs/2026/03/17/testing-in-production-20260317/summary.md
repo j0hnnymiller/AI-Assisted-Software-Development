@@ -14,7 +14,7 @@ Create a comprehensive Marp presentation deck on "Testing in Production" that ex
 
 ### Primary Deliverables
 
-1. **Testing in Production Marp Deck** (`Slides/individual-slides/testing-in-production.md`)
+1. **Testing in Production Marp Deck** (`slides/marp/testing-in-production.deck.md`)
    - 18-slide comprehensive presentation
    - Covers safe production testing techniques
    - Includes code examples, diagrams, and tables
@@ -63,7 +63,7 @@ Create a comprehensive Marp presentation deck on "Testing in Production" that ex
 
 | Artifact                                                            | Type              | Purpose                                                      |
 | ------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------ |
-| `Slides/individual-slides/testing-in-production.md`                 | Marp Presentation | Educational slide deck on safe production testing strategies |
+| `slides/marp/testing-in-production.deck.md`                 | Marp Presentation | Educational slide deck on safe production testing strategies |
 | `ai-logs/2026/03/17/testing-in-production-20260317/conversation.md` | Conversation Log  | Complete provenance trail for the creation session           |
 | `ai-logs/2026/03/17/testing-in-production-20260317/summary.md`      | Session Summary   | High-level overview for resumability and context             |
 
@@ -93,7 +93,7 @@ Create a comprehensive Marp presentation deck on "Testing in Production" that ex
 ✅ AI provenance metadata included in Marp file frontmatter
 ✅ Conversation log created with complete exchange history
 ✅ Summary file provides resumability context
-✅ File placed in correct directory (`Slides/individual-slides/`)
+✅ File placed in correct directory (`slides/marp/`)
 ✅ Followed Copilot-specific guidance (model identification, operator naming)
 ✅ Used underlying model name (anthropic/claude-3.5-sonnet) not interface name
 ✅ Created new conversation file (not reused existing)

@@ -7,10 +7,10 @@ Create a Marp deck explaining Section 8 of the AI implementation workflow conten
 ## Assistant Actions
 
 1. Reviewed the current slide directory and session plan.
-2. Created a new Marp deck at `Slides\individual-slides\ai-implementation-workflow.md`.
+2. Created a new Marp deck at `slides\marp\ai-implementation-workflow.deck.md`.
 3. Added comprehensive `::: notes` speaker notes to each slide.
 4. Created conversation and summary log files for the generated artifact.
 
 ## Output
 
-- `Slides\individual-slides\ai-implementation-workflow.md`
+- `slides\marp\ai-implementation-workflow.deck.md`

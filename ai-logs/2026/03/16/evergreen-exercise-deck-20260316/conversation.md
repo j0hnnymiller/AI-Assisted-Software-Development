@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: Slides/individual-slides/exercise-template.md, user-provided evergreen principles and failure modes content
-- Targets: Slides/individual-slides/evergreen-software-development-exercise-deck.md
+- Inputs: slides/marp/exercise-template.deck.md, user-provided evergreen principles and failure modes content
+- Targets: slides/marp/evergreen-software-development-exercise-deck.deck.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md, .github/instructions/create-marp-slides.instructions.md
 
 ## Exchanges
@@ -33,7 +33,7 @@ Created a two-slide Marp exercise deck aligned to the template structure, with o
 
 **Artifacts Produced**:
 
-- Slides/individual-slides/evergreen-software-development-exercise-deck.md - Evergreen exercise deck.
+- slides/marp/evergreen-software-development-exercise-deck.deck.md - Evergreen exercise deck.
 - ai-logs/2026/03/16/evergreen-exercise-deck-20260316/conversation.md - Conversation log.
 - ai-logs/2026/03/16/evergreen-exercise-deck-20260316/summary.md - Session summary.
 

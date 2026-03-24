@@ -14,7 +14,7 @@ Create a comprehensive Marp presentation deck explaining the `applyTo` pattern o
 
 ### Primary Deliverables
 
-1. **Marp Presentation Deck** (`Slides/individual-slides/instruction-file-applyto-patterns.md`)
+1. **Marp Presentation Deck** (`slides/marp/instruction-file-applyto-patterns.deck.md`)
    - 13-slide comprehensive presentation
    - Full AI provenance metadata in YAML front matter
    - Marp-compatible formatting with theme and pagination
@@ -69,7 +69,7 @@ Create a comprehensive Marp presentation deck explaining the `applyTo` pattern o
 
 | Artifact                                                        | Type              | Purpose                                      |
 | --------------------------------------------------------------- | ----------------- | -------------------------------------------- |
-| `Slides/individual-slides/instruction-file-applyto-patterns.md` | Marp Presentation | Educational slide deck on applyTo patterns   |
+| `slides/marp/instruction-file-applyto-patterns.deck.md` | Marp Presentation | Educational slide deck on applyTo patterns   |
 | `ai-logs/2026/03/03/.../conversation.md`                        | Conversation Log  | AI chat transcript with provenance           |
 | `ai-logs/2026/03/03/.../summary.md`                             | Session Summary   | High-level overview and resumability context |
 
@@ -105,7 +105,7 @@ Create a comprehensive Marp presentation deck explaining the `applyTo` pattern o
 ✅ Speaker notes in required pandoc format (`::: notes`)
 ✅ Marp formatting follows repository standards
 ✅ File naming follows kebab-case convention
-✅ Proper directory structure under Slides/individual-slides/
+✅ Proper directory structure under slides/marp/
 ✅ AI logs created in date-structured format
 
 ## Chat Metadata

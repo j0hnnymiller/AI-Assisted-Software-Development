@@ -14,7 +14,7 @@ Create a Marp deck that explains Section 8 on implementation prompts and verific
 
 ### Primary Deliverables
 
-1. **Implementation Prompts and Verification Deck** (`Slides/individual-slides/implementation-prompts-verification.md`)
+1. **Implementation Prompts and Verification Deck** (`slides/marp/implementation-prompts-verification.deck.md`)
    - Seven-slide Marp deck focused on converting slice plans into actionable prompt files
    - Covers prompt construction, expected output artifacts, verification criteria, showcase instructions, and multi-slice sequencing
    - Includes comprehensive speaker notes and Mermaid diagrams for live delivery
@@ -28,7 +28,7 @@ Create a Marp deck that explains Section 8 on implementation prompts and verific
 ### Secondary Work
 
 - Updated the repository `README.md` Notable Artifacts section to catalog the new deck
-- Kept the deck aligned with the existing Marp authoring conventions already used in `Slides/individual-slides/`
+- Kept the deck aligned with the existing Marp authoring conventions already used in `slides/marp/`
 
 ## Key Decisions
 
@@ -50,7 +50,7 @@ Create a Marp deck that explains Section 8 on implementation prompts and verific
 
 | Artifact | Type | Purpose |
 | --- | --- | --- |
-| `Slides/individual-slides/implementation-prompts-verification.md` | Marp deck | Teach how slice prompts package implementation, verification, and demos |
+| `slides/marp/implementation-prompts-verification.deck.md` | Marp deck | Teach how slice prompts package implementation, verification, and demos |
 | `ai-logs/2026/03/21/implementation-prompts-verification-20260321/conversation.md` | Provenance log | Record the originating chat context |
 | `ai-logs/2026/03/21/implementation-prompts-verification-20260321/summary.md` | Session summary | Support resumability and auditability |
 | `README.md` | Catalog update | Make the deck discoverable from the repository root |
@@ -75,7 +75,7 @@ Create a Marp deck that explains Section 8 on implementation prompts and verific
 
 ## Compliance Status
 
-✅ Marp deck created under `Slides/individual-slides/`
+✅ Marp deck created under `slides/marp/`
 ✅ Embedded provenance metadata included in the Markdown artifact
 ✅ `conversation.md` and `summary.md` created under the required `ai-logs/` path
 ✅ README updated with artifact and provenance links

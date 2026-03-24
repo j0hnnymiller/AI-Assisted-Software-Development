@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: User request for Testing in Production Marp deck
-- Targets: `Slides/individual-slides/testing-in-production.md`
+- Targets: `slides/marp/testing-in-production.deck.md`
 - Constraints/Policies:
   - `.github/instructions/ai-assisted-output.instructions.md`
   - `.github/instructions/create-marp-slides.instructions.md`
@@ -110,7 +110,7 @@ All slides include comprehensive speaker notes for instructors.
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/testing-in-production.md` - Complete Marp presentation on Testing in Production with 18 slides covering safe production testing strategies, shadow traffic, canary releases, observability, automated rollback, error budgets, and beta testing
+- `slides/marp/testing-in-production.deck.md` - Complete Marp presentation on Testing in Production with 18 slides covering safe production testing strategies, shadow traffic, canary releases, observability, automated rollback, error budgets, and beta testing
 - `ai-logs/2026/03/17/testing-in-production-20260317/conversation.md` - This conversation log
 - `ai-logs/2026/03/17/testing-in-production-20260317/summary.md` - Session summary
 

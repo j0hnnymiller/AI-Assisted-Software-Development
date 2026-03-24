@@ -14,7 +14,7 @@ Create a standalone Marp exercise artifact for the technical-debt module that co
 
 ### Primary Deliverables
 
-1. **Exercise Slide Set** (`Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md`)
+1. **Exercise Slide Set** (`slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md`)
    - Three Marp slides covering prompt-based remediation, GitHub issue assignment, and multi-step delegation to Copilot
    - Uses the repository's standard exercise structure: duration, objectives, activities, and success criteria
    - Includes comprehensive facilitator notes on every slide for delivery guidance and transitions
@@ -56,7 +56,7 @@ Create a standalone Marp exercise artifact for the technical-debt module that co
 
 | Artifact                                                                                | Type       | Purpose                                           |
 | --------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------- |
-| `Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md`           | Marp slide | Standalone technical-debt exercise slide sequence |
+| `slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md`           | Marp slide | Standalone technical-debt exercise slide sequence |
 | `ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md` | Markdown   | Conversation transcript for provenance            |
 | `ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/summary.md`      | Markdown   | Session summary for resumability                  |
 

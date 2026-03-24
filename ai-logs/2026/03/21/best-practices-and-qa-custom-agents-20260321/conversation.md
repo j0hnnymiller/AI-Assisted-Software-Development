@@ -14,11 +14,11 @@ Create a Marp deck explaining best practices and Q&A topics for custom agent des
 
 ## Assistant Work Summary
 
-Created a concise Marp deck at `Slides/individual-slides/best-practices-and-qa-custom-agents.md` focused on safe, practical custom-agent design. The deck turns the supplied recap points into a short best-practices sequence that covers start-simple guidance, clear responsibilities, least-privilege tool choices, iterative refinement, shared organizational agents, and rollout validation. Added matching provenance files and updated the `README.md` artifact catalog.
+Created a concise Marp deck at `slides/marp/best-practices-and-qa-custom-agents.deck.md` focused on safe, practical custom-agent design. The deck turns the supplied recap points into a short best-practices sequence that covers start-simple guidance, clear responsibilities, least-privilege tool choices, iterative refinement, shared organizational agents, and rollout validation. Added matching provenance files and updated the `README.md` artifact catalog.
 
 ## Artifacts Created
 
-- `Slides/individual-slides/best-practices-and-qa-custom-agents.md`
+- `slides/marp/best-practices-and-qa-custom-agents.deck.md`
 - `ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/conversation.md`
 - `ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/summary.md`
 

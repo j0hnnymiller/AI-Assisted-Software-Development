@@ -65,7 +65,7 @@ applyTo: "**/*"
 ```
 
 ```yaml
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 ```
 
 ```yaml

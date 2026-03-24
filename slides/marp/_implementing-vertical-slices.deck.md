@@ -1688,7 +1688,7 @@ If this was a workshop:
 ### Thank You!
 
 **Slides and code examples available at:**
-📂 `AI-Assisted-Software-Development/Slides/individual-slides/`
+📂 `AI-Assisted-Software-Development/slides/marp/`
 📚 `AI-Assisted-Software-Development/docs/`
 
 **Additional resources:**

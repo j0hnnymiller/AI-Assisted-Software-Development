@@ -10,7 +10,7 @@ prompt_metadata:
   version: 1.1.0
   created: 2026-03-21
   updated: 2026-03-21
-  output_path: Slides/output/aiasd-311-<day>-draft.pptx
+  output_path: slides/output/aiasd-311-<day>-draft.pptx
   output_format: markdown
   category: slides
   tags: [marp, slides, pptx, subagent, parallel, pipeline]
@@ -36,11 +36,11 @@ validation problems, they must report them instead of editing those inputs.
 
 Run the pipeline for exactly these manifests:
 
-1. `Slides/aiasd-311-monday.yaml`
-2. `Slides/aiasd-311-tuesday.yaml`
-3. `Slides/aiasd-311-wednesday.yaml`
-4. `Slides/aiasd-311-thursday.yaml`
-5. `Slides/aiasd-311-friday.yaml`
+1. `slides/aiasd-311-monday.yaml`
+2. `slides/aiasd-311-tuesday.yaml`
+3. `slides/aiasd-311-wednesday.yaml`
+4. `slides/aiasd-311-thursday.yaml`
+5. `slides/aiasd-311-friday.yaml`
 
 ## Required Workflow
 
@@ -50,7 +50,7 @@ Run the pipeline for exactly these manifests:
    `.github/prompts/merge-marp-decks.prompt.md` with the exact invocation text:
 
    ```text
-   Manifest: Slides/aiasd-311-<day>.yaml
+   Manifest: slides/aiasd-311-<day>.yaml
    ```
 
 4. Each subagent must run the full workflow for its assigned manifest:
@@ -64,7 +64,7 @@ Run the pipeline for exactly these manifests:
 7. Do not substitute a read-only explorer agent for the execution subagents.
 8. If one manifest fails, continue collecting results from the remaining subagents and report
    the failure alongside the successful runs.
-9. Do not modify any `Slides/*.yaml` manifest or any file under `Slides/individual-slides/`.
+9. Do not modify any `slides/*.yaml` manifest or any file under `slides/marp/`.
 10. Report manifest issues and source-slide issues exactly as found; do not auto-correct them.
 
 ## Subagent Prompt Template
@@ -74,7 +74,7 @@ Use this structure for each subagent, replacing only the manifest path:
 ```text
 Execute `.github/prompts/merge-marp-decks.prompt.md` for this exact invocation:
 
-Manifest: Slides/aiasd-311-<day>.yaml
+Manifest: slides/aiasd-311-<day>.yaml
 
 Follow that prompt end-to-end. Create or overwrite the derived merged deck and PPTX outputs.
 Treat the manifest YAML file and all source slide files as read-only. Do not repair or rewrite
@@ -94,11 +94,11 @@ Return a concise status report with:
 
 | Manifest                          | Merged Deck                           | PPTX Output                                    |
 | --------------------------------- | ------------------------------------- | ---------------------------------------------- |
-| `Slides/aiasd-311-monday.yaml`    | `Slides/aiasd-311-monday-draft.md`    | `Slides/output/aiasd-311-monday-draft.pptx`    |
-| `Slides/aiasd-311-tuesday.yaml`   | `Slides/aiasd-311-tuesday-draft.md`   | `Slides/output/aiasd-311-tuesday-draft.pptx`   |
-| `Slides/aiasd-311-wednesday.yaml` | `Slides/aiasd-311-wednesday-draft.md` | `Slides/output/aiasd-311-wednesday-draft.pptx` |
-| `Slides/aiasd-311-thursday.yaml`  | `Slides/aiasd-311-thursday-draft.md`  | `Slides/output/aiasd-311-thursday-draft.pptx`  |
-| `Slides/aiasd-311-friday.yaml`    | `Slides/aiasd-311-friday-draft.md`    | `Slides/output/aiasd-311-friday-draft.pptx`    |
+| `slides/aiasd-311-monday.yaml`    | `slides/aiasd-311-monday-draft.md`    | `slides/output/aiasd-311-monday-draft.pptx`    |
+| `slides/aiasd-311-tuesday.yaml`   | `slides/aiasd-311-tuesday-draft.md`   | `slides/output/aiasd-311-tuesday-draft.pptx`   |
+| `slides/aiasd-311-wednesday.yaml` | `slides/aiasd-311-wednesday-draft.md` | `slides/output/aiasd-311-wednesday-draft.pptx` |
+| `slides/aiasd-311-thursday.yaml`  | `slides/aiasd-311-thursday-draft.md`  | `slides/output/aiasd-311-thursday-draft.pptx`  |
+| `slides/aiasd-311-friday.yaml`    | `slides/aiasd-311-friday-draft.md`    | `slides/output/aiasd-311-friday-draft.pptx`    |
 
 ## Final Response Format
 

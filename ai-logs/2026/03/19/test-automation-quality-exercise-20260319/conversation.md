@@ -20,7 +20,7 @@
 [2026-03-19T14:30:00Z] johnmillerATcodemag-com
 
 ```text
-create an exercise marp slide using the Slides\individual-slides\exercise-template.pptx template for the following:
+create an exercise marp slide using the slides\exercise-template.pptx template for the following:
 
 ## Exercise: Strengthening Test Automation & Code Quality
 
@@ -66,7 +66,7 @@ First, I examined the exercise-template.md and reviewed existing exercise exampl
 3. Exercise content with Duration, Objectives, Activities, and Success Criteria
 4. Speaker notes section with expanded instructions
 
-Creating the file at: Slides/individual-slides/exercise-test-automation-quality.md
+Creating the file at: slides/marp/exercise-test-automation-quality.deck.md
 ```
 
 [2026-03-19T14:35:00Z] anthropic/claude-3.5-sonnet@2024-10-22
@@ -86,7 +86,7 @@ The slide emphasizes quality over quantity in test generation and includes the i
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-test-automation-quality.md` - Marp exercise slide for test automation and code quality strengthening
+- `slides/marp/exercise-test-automation-quality.deck.md` - Marp exercise slide for test automation and code quality strengthening
 
 **Next Steps**:
 

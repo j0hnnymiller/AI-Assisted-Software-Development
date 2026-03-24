@@ -14,7 +14,7 @@ Create a comprehensive Marp slide deck with speaker notes explaining MCP (Model 
 
 ### Primary Deliverables
 
-1. **Marp Slide Deck** (`Slides/individual-slides/mcp-servers-vscode-copilot.md`)
+1. **Marp Slide Deck** (`slides/marp/mcp-servers-vscode-copilot.deck.md`)
    - 9 slides covering MCP fundamentals through implementation
    - Complete AI provenance metadata (all 11 required fields)
    - Proper pandoc `::: notes` syntax throughout
@@ -123,7 +123,7 @@ Each slide includes detailed speaker notes with:
 
 | Artifact                                                         | Type             | Purpose                                     |
 | ---------------------------------------------------------------- | ---------------- | ------------------------------------------- |
-| `Slides/individual-slides/mcp-servers-vscode-copilot.md`         | Marp Deck        | Educational presentation on MCP integration |
+| `slides/marp/mcp-servers-vscode-copilot.deck.md`         | Marp Deck        | Educational presentation on MCP integration |
 | `ai-logs/2026/02/10/mcp-vscode-copilot-20260210/conversation.md` | Conversation Log | AI provenance and audit trail               |
 | `ai-logs/2026/02/10/mcp-vscode-copilot-20260210/summary.md`      | Session Summary  | High-level overview and resumability        |
 
@@ -153,7 +153,7 @@ Each slide includes detailed speaker notes with:
 
 ## Compliance Status
 
-✅ File location: `Slides/individual-slides/` (correct)
+✅ File location: `slides/marp/` (correct)
 ✅ Naming convention: lowercase kebab-case (correct)
 ✅ YAML front matter: All 11 required fields present
 ✅ Speaker notes syntax: Pandoc `::: notes` blocks used throughout

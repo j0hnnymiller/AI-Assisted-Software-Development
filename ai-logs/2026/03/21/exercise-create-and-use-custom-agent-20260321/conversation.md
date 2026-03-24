@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: Existing custom agents content and Wednesday manifest placeholder for the Custom Agents exercise
-- Targets: Slides/individual-slides/exercise-create-and-use-custom-agent.md, Slides/aiasd-311-wednesday.yaml, README.md
+- Targets: slides/marp/exercise-create-and-use-custom-agent.deck.md, slides/aiasd-311-wednesday.yaml, README.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md, .github/instructions/ai-assisted-output.instructions.md, .github/instructions/copilot-instructions.md
 
 ## Exchanges
@@ -33,8 +33,8 @@ Created a template-aligned Marp exercise slide with objectives, phase-based acti
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-create-and-use-custom-agent.md` - New Marp exercise deck for creating and using a custom agent
-- `Slides/aiasd-311-wednesday.yaml` - Replaced the Custom Agents exercise placeholder with the new slide path
+- `slides/marp/exercise-create-and-use-custom-agent.deck.md` - New Marp exercise deck for creating and using a custom agent
+- `slides/aiasd-311-wednesday.yaml` - Replaced the Custom Agents exercise placeholder with the new slide path
 - `README.md` - Added notable artifact entry for the new custom-agent exercise deck
 - `ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/summary.md` - Session summary and resumability details
 

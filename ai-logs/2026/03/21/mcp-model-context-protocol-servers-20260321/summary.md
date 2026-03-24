@@ -2,11 +2,11 @@
 
 ## Outcome
 
-Created a new Marp deck, `Slides/individual-slides/mcp-model-context-protocol-servers.md`, covering MCP architecture, use cases, available servers, discovery, installation, and token budget management.
+Created a new Marp deck, `slides/marp/mcp-model-context-protocol-servers.deck.md`, covering MCP architecture, use cases, available servers, discovery, installation, and token budget management.
 
 ## Files Added or Updated
 
-- Added `Slides/individual-slides/mcp-model-context-protocol-servers.md`
+- Added `slides/marp/mcp-model-context-protocol-servers.deck.md`
 - Added `ai-logs/2026/03/21/mcp-model-context-protocol-servers-20260321/conversation.md`
 - Added `ai-logs/2026/03/21/mcp-model-context-protocol-servers-20260321/summary.md`
 - Updated `README.md`

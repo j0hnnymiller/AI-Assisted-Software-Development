@@ -14,12 +14,12 @@ Create a Marp exercise deck that guides students through creating and using a cu
 
 ### Primary Deliverables
 
-1. **Exercise Deck** (`Slides/individual-slides/exercise-create-and-use-custom-skill.md`)
+1. **Exercise Deck** (`slides/marp/exercise-create-and-use-custom-skill.deck.md`)
    - Authored a template-aligned exercise slide with duration, objectives, activities, and success criteria
    - Focused the exercise on creating a repository-local skill for reviewing Marp slide quality
    - Included facilitator notes that explain trigger matching, refinement, and usage validation
 
-2. **Wednesday Manifest Update** (`Slides/aiasd-311-wednesday.yaml`)
+2. **Wednesday Manifest Update** (`slides/aiasd-311-wednesday.yaml`)
    - Replaced the `Exercise: Defining Skills` placeholder with the new custom-skill exercise slide path
    - Kept the Skills section immediately usable for deck generation
 
@@ -52,8 +52,8 @@ Create a Marp exercise deck that guides students through creating and using a cu
 
 | Artifact                                                                           | Type                 | Purpose                                                    |
 | ---------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------- |
-| `Slides/individual-slides/exercise-create-and-use-custom-skill.md`                 | Marp slide           | Classroom lab exercise for custom skill creation and usage |
-| `Slides/aiasd-311-wednesday.yaml`                                                  | Manifest update      | Wire the exercise into the Wednesday skills section        |
+| `slides/marp/exercise-create-and-use-custom-skill.deck.md`                 | Marp slide           | Classroom lab exercise for custom skill creation and usage |
+| `slides/aiasd-311-wednesday.yaml`                                                  | Manifest update      | Wire the exercise into the Wednesday skills section        |
 | `README.md`                                                                        | Documentation update | Register the new notable artifact and provenance links     |
 | `ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/conversation.md` | Chat log             | Full conversation provenance                               |
 | `ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/summary.md`      | Chat summary         | Resumable context for future contributors                  |

@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: Existing skills overview deck and Wednesday manifest placeholder for Skills exercise
-- Targets: Slides/individual-slides/exercise-create-and-use-custom-skill.md, Slides/aiasd-311-wednesday.yaml, README.md
+- Targets: slides/marp/exercise-create-and-use-custom-skill.deck.md, slides/aiasd-311-wednesday.yaml, README.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md, .github/instructions/ai-assisted-output.instructions.md, .github/instructions/copilot-instructions.md
 
 ## Exchanges
@@ -33,8 +33,8 @@ Created a template-aligned Marp exercise slide that walks students through creat
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-create-and-use-custom-skill.md` - New Marp exercise deck for creating and using a custom skill
-- `Slides/aiasd-311-wednesday.yaml` - Replaced skills exercise placeholder with the new slide path
+- `slides/marp/exercise-create-and-use-custom-skill.deck.md` - New Marp exercise deck for creating and using a custom skill
+- `slides/aiasd-311-wednesday.yaml` - Replaced skills exercise placeholder with the new slide path
 - `README.md` - Added notable artifact entry for the new skill exercise deck
 - `ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/summary.md` - Session summary and resumability details
 

@@ -14,7 +14,7 @@ Create a Marp exercise deck that guides students through creating, testing, and 
 
 ### Primary Deliverables
 
-1. **Exercise Deck** (`Slides/individual-slides/exercise-mcp-server-create-test-use.md`)
+1. **Exercise Deck** (`slides/marp/exercise-mcp-server-create-test-use.deck.md`)
    - Authored a template-aligned exercise slide with duration, objectives, activities, and success criteria
    - Included comprehensive facilitator notes with commands and troubleshooting focus
    - Aligned exercise phases to Create, Test, and Use workflow
@@ -48,7 +48,7 @@ Create a Marp exercise deck that guides students through creating, testing, and 
 
 | Artifact                                                                          | Type                 | Purpose                                                      |
 | --------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------ |
-| `Slides/individual-slides/exercise-mcp-server-create-test-use.md`                 | Marp slide           | Classroom lab exercise for MCP server creation/testing/usage |
+| `slides/marp/exercise-mcp-server-create-test-use.deck.md`                 | Marp slide           | Classroom lab exercise for MCP server creation/testing/usage |
 | `README.md`                                                                       | Documentation update | Register new notable artifact and provenance links           |
 | `ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/conversation.md` | Chat log             | Full conversation provenance                                 |
 | `ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/summary.md`      | Chat summary         | Resumable context for future contributors                    |

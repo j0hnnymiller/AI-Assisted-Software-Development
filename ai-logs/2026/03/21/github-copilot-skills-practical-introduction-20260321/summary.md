@@ -2,11 +2,11 @@
 
 ## Outcome
 
-Created a new Marp deck, `Slides/individual-slides/github-copilot-skills-practical-introduction.md`, covering GitHub Copilot Skills, skill structure, loading behavior, authoring guidance, and practical use cases.
+Created a new Marp deck, `slides/marp/github-copilot-skills-practical-introduction.deck.md`, covering GitHub Copilot Skills, skill structure, loading behavior, authoring guidance, and practical use cases.
 
 ## Files Added or Updated
 
-- Added `Slides/individual-slides/github-copilot-skills-practical-introduction.md`
+- Added `slides/marp/github-copilot-skills-practical-introduction.deck.md`
 - Added `ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/conversation.md`
 - Added `ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/summary.md`
 - Updated `README.md`

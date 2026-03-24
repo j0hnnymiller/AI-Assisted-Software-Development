@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: Slides/individual-slides/exercise-template.md, workspace-wide content scan
-- Targets: Slides/individual-slides/code-quality-analysis-exercise.md
+- Inputs: slides/marp/exercise-template.deck.md, workspace-wide content scan
+- Targets: slides/marp/code-quality-analysis-exercise.deck.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md, .github/instructions/marp-slides.instructions.md
 
 ## Exchanges
@@ -33,7 +33,7 @@ Created a new exercise slide tailored to Code Quality Analysis using the provide
 
 **Artifacts Produced**:
 
-- Slides/individual-slides/code-quality-analysis-exercise.md - New exercise slide for AI-based non-evergreen code analysis.
+- slides/marp/code-quality-analysis-exercise.deck.md - New exercise slide for AI-based non-evergreen code analysis.
 - ai-logs/2026/03/15/code-quality-analysis-exercise-20260315/conversation.md - Conversation log for provenance.
 - ai-logs/2026/03/15/code-quality-analysis-exercise-20260315/summary.md - Session summary for resumability.
 

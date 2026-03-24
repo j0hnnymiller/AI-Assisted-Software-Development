@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: User request for a new Marp deck title and topics; repository instruction files
-- Targets: Slides/individual-slides/organizational-vs-repository-instruction-files.md
+- Targets: slides/marp/organizational-vs-repository-instruction-files.deck.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md; .github/instructions/marp-slides.instructions.md; .github/instructions/ai-assisted-output.instructions.md
 
 ## Exchanges
@@ -28,14 +28,14 @@ That covers this material: Business/Enterprise tier capabilities; Path-scoped in
 [2026-03-17T08:32:00.0000000-07:00] openai/gpt-5.3-codex@unknown
 
 ```text
-Created a new Marp deck in Slides/individual-slides with the requested title and topic coverage, including speaker notes and repository-required provenance metadata.
+Created a new Marp deck in slides/marp with the requested title and topic coverage, including speaker notes and repository-required provenance metadata.
 ```
 
 ## Work Burst Closure
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/organizational-vs-repository-instruction-files.md` - New Marp deck covering enterprise capabilities, path scoping, and technology-specific folder rules
+- `slides/marp/organizational-vs-repository-instruction-files.deck.md` - New Marp deck covering enterprise capabilities, path scoping, and technology-specific folder rules
 - `ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/conversation.md` - Chat transcript record
 - `ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/summary.md` - Session summary
 

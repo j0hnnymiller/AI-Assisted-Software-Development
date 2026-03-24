@@ -2,7 +2,7 @@
 
 ## What was created
 
-- A new Marp deck at `Slides/individual-slides/vertical-slicing-architecture-introduction.md`
+- A new Marp deck at `slides/marp/vertical-slicing-architecture-introduction.deck.md`
 - Provenance records for the work in `ai-logs/2026/03/21/vertical-slicing-architecture-introduction-20260321/`
 
 ## Content covered
@@ -21,7 +21,7 @@
 
 If this deck needs revision later, check nearby reference decks:
 
-- `Slides/individual-slides/cqrs-architecture.md`
-- `Slides/individual-slides/_implementing-vertical-slices.md`
+- `slides/marp/cqrs-architecture.deck.md`
+- `slides/marp/_implementing-vertical-slices.deck.md`
 
 The current deck uses standard Marp front matter, `::: notes` speaker notes, Mermaid diagrams for architecture visuals, and non-underscored naming consistent with newer slide artifacts.

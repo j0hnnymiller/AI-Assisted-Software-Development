@@ -14,7 +14,7 @@ Create a reusable Marp exercise slide for "Code Quality Analysis" using the exis
 
 ### Primary Deliverables
 
-1. **Code Quality Analysis Exercise Slide** (Slides/individual-slides/code-quality-analysis-exercise.md)
+1. **Code Quality Analysis Exercise Slide** (slides/marp/code-quality-analysis-exercise.deck.md)
    - Added required AI provenance front matter.
    - Applied template sections: Duration, Objectives, Activities, Success Criteria.
    - Added facilitator notes with prompting guidance and verification workflow.
@@ -46,7 +46,7 @@ Create a reusable Marp exercise slide for "Code Quality Analysis" using the exis
 
 | Artifact                                                                   | Type       | Purpose                                               |
 | -------------------------------------------------------------------------- | ---------- | ----------------------------------------------------- |
-| Slides/individual-slides/code-quality-analysis-exercise.md                 | Marp slide | Classroom exercise for AI-assisted evergreen analysis |
+| slides/marp/code-quality-analysis-exercise.deck.md                 | Marp slide | Classroom exercise for AI-assisted evergreen analysis |
 | ai-logs/2026/03/15/code-quality-analysis-exercise-20260315/conversation.md | Log        | Provenance and prompt/response trail                  |
 | ai-logs/2026/03/15/code-quality-analysis-exercise-20260315/summary.md      | Summary    | Resume context and decisions                          |
 

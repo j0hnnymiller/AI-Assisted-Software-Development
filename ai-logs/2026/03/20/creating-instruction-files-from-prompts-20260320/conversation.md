@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: past-class-recordings/2026-02/AI-Assisted Software Development with GitHub Copilot (Tue Morning)-summary.md, existing instruction-file and prompt-file slide decks, README.md
-- Targets: Slides/individual-slides/creating-instruction-files-from-prompts.md
+- Targets: slides/marp/creating-instruction-files-from-prompts.deck.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md, .github/instructions/copilot-instructions.md, .github/instructions/create-marp-slides.instructions.md, .github/instructions/marp-slides.instructions.md, .github/instructions/slide-pipeline.instructions.md
 
 ## Exchanges
@@ -80,7 +80,7 @@ Also created the matching provenance files under ai-logs/2026/03/20/creating-ins
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/creating-instruction-files-from-prompts.md` - Marp deck for the session segment on generating instruction files from prompt files
+- `slides/marp/creating-instruction-files-from-prompts.deck.md` - Marp deck for the session segment on generating instruction files from prompt files
 - `ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/conversation.md` - Conversation log for provenance and traceability
 - `ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/summary.md` - Session summary with resumability context
 

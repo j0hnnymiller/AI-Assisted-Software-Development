@@ -77,15 +77,20 @@ def clean_file_body(body: str) -> str:
     """
     Clean a file body according to merge rules:
     - Remove H1 headings
-    - Replace ../images/ with images/
+    - Rewrite source-local images/ references for merged deck output
     - Normalize merge-time character substitutions
     - Strip leading and trailing slide separators
     """
     # Remove H1 headings
     body = remove_h1_headings(body)
 
-    # Fix image paths
-    body = body.replace('../images/', 'images/')
+    # Source decks keep images under slides/marp/images, but merged decks live in slides/.
+    body = body.replace('](images/', '](marp/images/')
+    body = body.replace('src="images/', 'src="marp/images/')
+    body = body.replace("src='images/", "src='marp/images/")
+    body = body.replace("url('images/", "url('marp/images/")
+    body = body.replace('url("images/', 'url("marp/images/')
+    body = body.replace('url(images/', 'url(marp/images/')
 
     # Normalize characters that render poorly or inconsistently after merge
     for source, target in MERGE_CHAR_REPLACEMENTS.items():
@@ -296,13 +301,13 @@ def merge_marp_decks(manifest_path: str, output_path: str):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        manifest_path = 'Slides/aiasd-311-monday.yaml'
+        manifest_path = 'slides/aiasd-311-monday.yaml'
     else:
         manifest_path = sys.argv[1]
 
     # Derive output filename
     manifest_stem = Path(manifest_path).stem
-    output_path = f'Slides/{manifest_stem}-draft.md'
+    output_path = f'slides/{manifest_stem}-draft.md'
 
     if len(sys.argv) >= 3:
         output_path = sys.argv[2]

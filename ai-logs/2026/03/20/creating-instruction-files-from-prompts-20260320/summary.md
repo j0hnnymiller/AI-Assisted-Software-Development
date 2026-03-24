@@ -14,7 +14,7 @@ Create a standalone Marp deck for the Tuesday morning session segment on generat
 
 ### Primary Deliverables
 
-1. **Marp Deck** (`Slides/individual-slides/creating-instruction-files-from-prompts.md`)
+1. **Marp Deck** (`slides/marp/creating-instruction-files-from-prompts.deck.md`)
    - Created a 7-slide deck covering the prompt-to-instruction workflow, inference as a strength, prompt-first authoring, and refinement strategy
    - Added comprehensive speaker notes to every slide using the required `::: notes` syntax
    - Included a Mermaid workflow diagram so the prompt-to-artifact loop is visually clear
@@ -56,7 +56,7 @@ Create a standalone Marp deck for the Tuesday morning session segment on generat
 
 | Artifact                                                                              | Type      | Purpose                                                         |
 | ------------------------------------------------------------------------------------- | --------- | --------------------------------------------------------------- |
-| `Slides/individual-slides/creating-instruction-files-from-prompts.md`                 | Marp deck | Standalone teaching deck for the prompt-to-instruction workflow |
+| `slides/marp/creating-instruction-files-from-prompts.deck.md`                 | Marp deck | Standalone teaching deck for the prompt-to-instruction workflow |
 | `ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/conversation.md` | Markdown  | Conversation transcript for provenance and auditability         |
 | `ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/summary.md`      | Markdown  | Session summary for resumability                                |
 | `README.md`                                                                           | Markdown  | Catalog entry for the new notable slide artifact                |

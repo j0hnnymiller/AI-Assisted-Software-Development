@@ -4,7 +4,7 @@ model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
 chat_id: "exercise-technical-debt-copilot-workflows-20260322"
 prompt: |
-  create an exercise marp slide using the Slides\individual-slides\exercise-template.pptx template for the following:
+  create an exercise marp slide using the slides\exercise-template.pptx template for the following:
 
 
   # **Exercise: Prompt Copilot to Address Technical Debt**

@@ -14,7 +14,7 @@ Create a single-slide Marp exercise following the `exercise-template.md` pattern
 
 ### Primary Deliverables
 
-1. **Exercise Slide** (`Slides/individual-slides/exercise-c4-diagrams-from-code.md`)
+1. **Exercise Slide** (`slides/marp/exercise-c4-diagrams-from-code.deck.md`)
    - Single Marp slide following the established exercise template pattern
    - Five structured activities covering System Context → Container → Component → additional types → rendering validation
    - Comprehensive speaker notes with sample prompts, expected output, rendering pitfalls, and instructor guidance
@@ -36,7 +36,7 @@ Create a single-slide Marp exercise following the `exercise-template.md` pattern
 
 | Artifact                                                                     | Type       | Purpose                                  |
 | ---------------------------------------------------------------------------- | ---------- | ---------------------------------------- |
-| `Slides/individual-slides/exercise-c4-diagrams-from-code.md`                 | Marp slide | Exercise slide for C4 diagram generation |
+| `slides/marp/exercise-c4-diagrams-from-code.deck.md`                 | Marp slide | Exercise slide for C4 diagram generation |
 | `ai-logs/2026/03/18/exercise-c4-diagrams-from-code-20260318/conversation.md` | Log        | Conversation provenance                  |
 | `ai-logs/2026/03/18/exercise-c4-diagrams-from-code-20260318/summary.md`      | Log        | This summary                             |
 
@@ -56,7 +56,7 @@ Create a single-slide Marp exercise following the `exercise-template.md` pattern
 ✅ YAML front matter with all required provenance fields
 ✅ Pandoc `::: notes` syntax used
 ✅ Speaker notes are comprehensive (well over 3-4 sentences per slide)
-✅ Single slide file in `Slides/individual-slides/`
+✅ Single slide file in `slides/marp/`
 ✅ AI log created at `ai-logs/2026/03/18/<chat-id>/`
 
 ## Chat Metadata

@@ -14,11 +14,11 @@ Create a Marp deck explaining pull request creation, parallel human and AI code 
 
 ## Assistant Work Summary
 
-Created a Marp deck at `Slides/individual-slides/pull-request-code-review.md` to explain the PR workflow from branch and issue linkage through Copilot review, human review, AI feedback triage, and comment resolution. The deck emphasizes metadata compliance, DOM pattern feedback, and the practical decision-making required when handling AI review comments. Added matching provenance artifacts and updated the `README.md` artifact catalog.
+Created a Marp deck at `slides/marp/pull-request-code-review.deck.md` to explain the PR workflow from branch and issue linkage through Copilot review, human review, AI feedback triage, and comment resolution. The deck emphasizes metadata compliance, DOM pattern feedback, and the practical decision-making required when handling AI review comments. Added matching provenance artifacts and updated the `README.md` artifact catalog.
 
 ## Artifacts Created
 
-- `Slides/individual-slides/pull-request-code-review.md`
+- `slides/marp/pull-request-code-review.deck.md`
 - `ai-logs/2026/03/21/pull-request-code-review-20260321/conversation.md`
 - `ai-logs/2026/03/21/pull-request-code-review-20260321/summary.md`
 

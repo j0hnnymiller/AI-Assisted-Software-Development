@@ -13,16 +13,16 @@ task_durations:
 total_duration: "00:01:00"
 ai_log: "ai-logs/2025/10/23/optimize-instructions-20251023/conversation.md"
 source: "optimization-task"
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 ---
 
 # AI Instructions: Create Marp Slides
 
-Generate Marp slides in `Slides/individual-slides/` with required AI provenance metadata.
+Generate Marp slides in `slides/marp/` with required AI provenance metadata.
 
 ## File Location & Naming
 
-- Path: `Slides/individual-slides/`
+- Path: `slides/marp/`
 - Filename: lowercase kebab-case (e.g., `intro-to-aiasd.md`)
 
 ## Required YAML Front Matter
@@ -228,12 +228,12 @@ Architecture explanation...
 
 ```bash
 # Quick check before commit
-grep -L '::: notes' Slides/individual-slides/*.md && echo "ERROR: Missing pandoc notes" || echo "OK"
+grep -L '::: notes' slides/marp/*.deck.md && echo "ERROR: Missing pandoc notes" || echo "OK"
 ````
 
 ## Checklist
 
-- [ ] File in `Slides/individual-slides/`
+- [ ] File in `slides/marp/`
 - [ ] All YAML fields present
 - [ ] `ai_log` path exists with conversation.md
 - [ ] `operator` is GitHub username
@@ -249,7 +249,7 @@ grep -L '::: notes' Slides/individual-slides/*.md && echo "ERROR: Missing pandoc
 ## README Entry Template
 
 ```markdown
-- **[Title]** (`Slides/individual-slides/[filename].md`) — [Description]. Provenance: `ai-logs/[yyyy]/[mm]/[dd]/[chat-id]/`
+- **[Title]** (`slides/marp/[filename].deck.md`) — [Description]. Provenance: `ai-logs/[yyyy]/[mm]/[dd]/[chat-id]/`
 ```
 
 ## Common Mistakes to Avoid

@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: Existing local PowerShell MCP server implementation and test harness in scripts/mcp
-- Targets: Slides/individual-slides/exercise-mcp-server-create-test-use.md, README.md
+- Targets: slides/marp/exercise-mcp-server-create-test-use.deck.md, README.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md, .github/instructions/ai-assisted-output.instructions.md, .github/instructions/copilot-instructions.md
 
 ## Exchanges
@@ -33,7 +33,7 @@ Created a template-aligned Marp exercise slide with objectives, phase-based acti
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-mcp-server-create-test-use.md` - New Marp exercise deck for building, testing, and using a local MCP server
+- `slides/marp/exercise-mcp-server-create-test-use.deck.md` - New Marp exercise deck for building, testing, and using a local MCP server
 - `README.md` - Added notable artifact entry for the new MCP exercise deck
 - `ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/summary.md` - Session summary and resumability details
 

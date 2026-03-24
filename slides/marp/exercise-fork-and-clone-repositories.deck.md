@@ -4,7 +4,7 @@ model: "openai/gpt-5.3-codex@unknown"
 operator: "johnmillerATcodemag-com"
 chat_id: "exercise-repository-fork-clone-deck-20260322"
 prompt: |
-  create an exercise marp slide deck using the Slides\individual-slides\exercise-template.pptx template for the following:
+  create an exercise marp slide deck using the slides\exercise-template.pptx template for the following:
 
 
   ## Exercise: Clone the AI-Assisted-Software-Development Repository

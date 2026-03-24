@@ -2,11 +2,11 @@
 
 ## Outcome
 
-Created a new Marp deck, `Slides/individual-slides/github-cli-pr-management.md`, covering merge strategy decisions, IDE tooling for PR context, CLI-based comment workflows, and token permission constraints.
+Created a new Marp deck, `slides/marp/github-cli-pr-management.deck.md`, covering merge strategy decisions, IDE tooling for PR context, CLI-based comment workflows, and token permission constraints.
 
 ## Files Added or Updated
 
-- Added `Slides/individual-slides/github-cli-pr-management.md`
+- Added `slides/marp/github-cli-pr-management.deck.md`
 - Added `ai-logs/2026/03/21/github-cli-pr-management-20260321/conversation.md`
 - Added `ai-logs/2026/03/21/github-cli-pr-management-20260321/summary.md`
 - Updated `README.md`

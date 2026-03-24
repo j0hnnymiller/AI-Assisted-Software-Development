@@ -1122,7 +1122,7 @@ Three Levels of Scope Control
 '''yaml
 applyTo: "**/*"
 
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 
 applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
 '''
@@ -1134,7 +1134,7 @@ The applyTo field uses glob patterns, which give you three levels of granularity
 
 Level 1: Global patterns like “*/” apply to every file in your repository. Use this sparingly for truly universal instructions like AI provenance requirements or company-wide coding standards. The ai-assisted-output.instructions.md file is a perfect example - it applies everywhere because every AI-generated output needs provenance metadata.
 
-Level 2: Directory-specific patterns like “Slides/individual-slides/**” target a specific folder hierarchy. This is ideal for instructions that only make sense in certain parts of your codebase. Marp slide instructions only matter when you're creating slides, so they target that directory exclusively.
+Level 2: Directory-specific patterns like “slides/marp/**” target a specific folder hierarchy. This is ideal for instructions that only make sense in certain parts of your codebase. Marp slide instructions only matter when you're creating slides, so they target that directory exclusively.
 
 Level 3: Type-specific patterns like “*/.{cs,ts,js}” apply to specific file extensions regardless of location. This is perfect for language-specific instructions, architectural patterns, or technology-specific guidelines. Vertical slice architecture instructions might only apply to backend code files.
 
@@ -1366,7 +1366,7 @@ applyTo: "**/*"
 
 applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
 
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 
 applyTo: "**/*.chatmode.md"
 '''
@@ -1378,7 +1378,7 @@ Example 1: Universal Requirements The ai-assisted-output.instructions.md file us
 
 Example 2: Language-Specific Guidance The vertical-slice-implementation.instructions.md file applies to code files across multiple languages. Notice the pattern includes cs, ts, js, py, java, go, and rb extensions. This instruction file contains architectural guidance about implementing vertical slice architecture, which is relevant to any programming language but not relevant to markdown docs, config files, or slides. By targeting only code files, it stays out of the way when you're writing documentation.
 
-Example 3: Directory-Specific Rules The marp-slides.instructions.md file uses “Slides/individual-slides/**” to target only the specific directory where slide content is created. Marp formatting rules, speaker note syntax, and presentation structure guidance only makes sense for slide files. If this pattern was broader, you'd get slide-specific instructions while writing code, which would be confusing and waste tokens.
+Example 3: Directory-Specific Rules The marp-slides.instructions.md file uses “slides/marp/**” to target only the specific directory where slide content is created. Marp formatting rules, speaker note syntax, and presentation structure guidance only makes sense for slide files. If this pattern was broader, you'd get slide-specific instructions while writing code, which would be confusing and waste tokens.
 
 Example 4: File Type Specialization The chatmode-file.instructions.md file applies only to files ending in .chatmode.md. This is hyper-specific because the instructions are about creating chat mode definition files - they're only relevant when you're actually authoring a chat mode. This prevents developers from seeing chat mode creation instructions when they're working on normal documentation.
 
@@ -1958,7 +1958,7 @@ applyTo: "**/*"
 '''
 
 '''yaml
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 '''
 
 '''yaml
@@ -4360,7 +4360,7 @@ Skills represent a major evolution in Copilot's architecture-moving from reactiv
 
 - **Phase 1 - Create**: Add '.github/skills/slide-quality-check/SKILL.md' with metadata ('name', 'description') and a short procedure for reviewing Marp slides for provenance and speaker notes
 - **Phase 2 - Refine**: Improve the skill by adding strong trigger words such as 'Marp', 'slide', 'speaker notes', and 'provenance', then tighten the procedure so the output is deterministic
-- **Phase 3 - Use**: Prompt Copilot with a task such as 'Review Slides/individual-slides/exercise-create-and-use-custom-agent.md for slide metadata and ::: notes compliance' and compare the output to a normal untuned chat response
+- **Phase 3 - Use**: Prompt Copilot with a task such as 'Review slides/marp/exercise-create-and-use-custom-agent.deck.md for slide metadata and ::: notes compliance' and compare the output to a normal untuned chat response
 
 **Success Criteria**
 

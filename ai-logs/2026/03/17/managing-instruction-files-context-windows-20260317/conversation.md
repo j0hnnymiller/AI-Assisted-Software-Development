@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: User request for a new Marp deck and required topics
-- Targets: Slides/individual-slides/managing-instruction-files-context-windows.md
+- Targets: slides/marp/managing-instruction-files-context-windows.deck.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md; .github/instructions/marp-slides.instructions.md; .github/instructions/ai-assisted-output.instructions.md
 
 ## Exchanges
@@ -35,7 +35,7 @@ Created a Marp deck covering instruction sharing, scope/application, context mon
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/managing-instruction-files-context-windows.md` - New Marp deck
+- `slides/marp/managing-instruction-files-context-windows.deck.md` - New Marp deck
 - `ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/conversation.md` - Conversation log
 - `ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/summary.md` - Session summary
 

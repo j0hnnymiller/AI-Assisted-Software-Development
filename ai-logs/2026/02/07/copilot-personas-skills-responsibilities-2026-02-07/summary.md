@@ -12,7 +12,7 @@ Create a Marp slide deck covering the top 5 skills and top 5 responsibilities fo
 
 ## Deliverables Completed
 
-✅ **Primary Artifact**: `Slides/individual-slides/github-copilot-chat-mode-personas.md`
+✅ **Primary Artifact**: `slides/marp/github-copilot-chat-mode-personas.deck.md`
 
 - 21-slide comprehensive Marp presentation
 - Covers 8 personas: Product Manager, Solution Architect, Senior Developer, Technical Writer, Security Reviewer, DevOps Engineer, DevTest Engineer, SRE
@@ -36,7 +36,7 @@ Create a Marp slide deck covering the top 5 skills and top 5 responsibilities fo
 ## Quality Standards Met
 
 - ✅ Embedded YAML front matter with all required fields
-- ✅ Proper file placement in `Slides/individual-slides/`
+- ✅ Proper file placement in `slides/marp/`
 - ✅ AI provenance metadata compliance
 - ✅ GitHub Copilot instruction adherence
 - ✅ Chat logging workflow completed

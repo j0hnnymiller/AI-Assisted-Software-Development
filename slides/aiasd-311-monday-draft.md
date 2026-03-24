@@ -3918,7 +3918,7 @@ Limit instructions to specific directories:
 
 ```yaml
 ## All files in a directory
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 
 ## Specific file type in directory
 applyTo: "src/Features/**/*.cs"
@@ -3940,11 +3940,11 @@ Directory-specific patterns are crucial for organizing large codebases. They let
 
 **Breaking down the syntax**:
 
-- "Slides/individual-slides/**" - Note there's no leading slash or asterisks. This matches the specific directory path, then /** means everything underneath it
+- "slides/marp/**" - Note there's no leading slash or asterisks. This matches the specific directory path, then /** means everything underneath it
 - "src/Features/\*_/_.cs" - Combines directory path with file extension filter
 - The pattern is always relative to the repository root
 
-**Real-world example from this repo**: The marp-slides.instructions.md uses "Slides/individual-slides/\*\*" because those formatting rules should only apply to presentation slides, not to other markdown files like README.md or documentation.
+**Real-world example from this repo**: The marp-slides.instructions.md uses "slides/marp/\*\*" because those formatting rules should only apply to presentation slides, not to other markdown files like README.md or documentation.
 
 **Another example**: You might have vertical-slice.instructions.md with "src/Features/\*_/_.cs" so those architectural patterns only apply to feature code, not to infrastructure or configuration code.
 
@@ -4026,7 +4026,7 @@ applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
 applyTo: "**/*.{md,txt}"
 
 ## 4. Marp Slide Formatting
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 
 ## 5. Prompt File Authoring
 applyTo: "**/*.prompt.md"
@@ -4098,7 +4098,7 @@ These are actual examples from the AI-Assisted-Software-Development-Course repos
 applyTo: "src/**/*.{cs,ts,js}"
 
 ## Formatting → Specific directory
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 ```
 
 ::: notes
@@ -4153,7 +4153,7 @@ The pattern should make the instruction's purpose obvious at a glance.
 
 ```yaml
 ❌ applyTo: "**" # For slide formatting
-✅ applyTo: "Slides/**"
+✅ applyTo: "slides/**"
 ```
 
 **Pitfall 2: Too Narrow**
@@ -4413,7 +4413,7 @@ These four patterns cover 95% of real-world use cases. Let me give you concrete 
 - Example: Vertical slice could apply to C#, TypeScript, Python features
 
 3. **Directory scope `directory/**`\*\*:
-- Slide formatting (Slides/\*)
+- Slide formatting (slides/\*)
 - API documentation (docs/api/\*\*)
 - Feature isolation (src/Features/\*\*)
 - Test organization (tests/\*\*)
@@ -4662,7 +4662,7 @@ Call out that enterprise-tier files should be stable and short. They should defi
 Path-scoped instructions apply behavior only where it is needed.
 
 ```yaml
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 ```
 
 ```yaml
@@ -4687,7 +4687,7 @@ Explain that path scoping is the precision tool. Show that slide-authoring rules
 
 Use folder-level rules to match local stack and workflow.
 
-- `Slides/` for Marp formatting and speaker-note conventions
+- `slides/` for Marp formatting and speaker-note conventions
 - `Labs/lab1-3-python/` for Python lint/test guidance
 - `Labs/lab1-3-typescript/` for TypeScript build/test patterns
 - `Course/course.github/` for docs automation and publishing rules
@@ -4993,7 +4993,7 @@ applyTo: "**/*"
 ```
 
 ```yaml
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 ```
 
 ```yaml

@@ -2,11 +2,11 @@
 
 ## Outcome
 
-Created a new Marp deck, `Slides/individual-slides/github-code-review-with-copilot.md`, covering GitHub Copilot code review workflow, major findings from PR `#4`, manual review responsibilities, and instruction-file improvements driven by review feedback.
+Created a new Marp deck, `slides/marp/github-code-review-with-copilot.deck.md`, covering GitHub Copilot code review workflow, major findings from PR `#4`, manual review responsibilities, and instruction-file improvements driven by review feedback.
 
 ## Files Added or Updated
 
-- Added `Slides/individual-slides/github-code-review-with-copilot.md`
+- Added `slides/marp/github-code-review-with-copilot.deck.md`
 - Added `ai-logs/2026/03/21/github-code-review-with-copilot-20260321/conversation.md`
 - Added `ai-logs/2026/03/21/github-code-review-with-copilot-20260321/summary.md`
 - Updated `README.md`

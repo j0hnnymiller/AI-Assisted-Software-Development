@@ -2,11 +2,11 @@
 
 ## Outcome
 
-Created a new Marp deck, `Slides/individual-slides/pull-request-code-review.md`, covering pull request creation, reviewer assignment, parallel human and AI review, AI-flagged issues, and comment-resolution workflow.
+Created a new Marp deck, `slides/marp/pull-request-code-review.deck.md`, covering pull request creation, reviewer assignment, parallel human and AI review, AI-flagged issues, and comment-resolution workflow.
 
 ## Files Added or Updated
 
-- Added `Slides/individual-slides/pull-request-code-review.md`
+- Added `slides/marp/pull-request-code-review.deck.md`
 - Added `ai-logs/2026/03/21/pull-request-code-review-20260321/conversation.md`
 - Added `ai-logs/2026/03/21/pull-request-code-review-20260321/summary.md`
 - Updated `README.md`

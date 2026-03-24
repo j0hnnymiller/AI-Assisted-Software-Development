@@ -14,11 +14,11 @@ Create a Marp deck covering prioritization and issue-management guidance for bro
 
 ### Primary Deliverables
 
-1. **Slide Deck** (`Slides/individual-slides/implementation-plan-prioritization.md`)
+1. **Slide Deck** (`slides/marp/implementation-plan-prioritization.deck.md`)
    - Authored a Marp deck focused on common security findings, impact/effort prioritization, debt visibility, Phase Zero planning, and Evergreen-state progression
    - Kept the scope centered on prioritization rather than the full brownfield-protection topic bundle
 
-2. **Manifest Integration** (`Slides/aiasd-311-thursday.yaml`)
+2. **Manifest Integration** (`slides/aiasd-311-thursday.yaml`)
    - Replaced the prior placeholder section wiring with the concrete prioritization slide under the backlog/planning portion of the Thursday deck
 
 3. **Artifact Catalog Update** (`README.md`)
@@ -39,8 +39,8 @@ Create a Marp deck covering prioritization and issue-management guidance for bro
 
 | Artifact                                                                              | Type                 | Purpose                                         |
 | ------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------- |
-| `Slides/individual-slides/implementation-plan-prioritization.md`                      | Marp slide           | Prioritization guidance for brownfield planning |
-| `Slides/aiasd-311-thursday.yaml`                                                      | Manifest update      | Place the slide in the Thursday curriculum      |
+| `slides/marp/implementation-plan-prioritization.deck.md`                      | Marp slide           | Prioritization guidance for brownfield planning |
+| `slides/aiasd-311-thursday.yaml`                                                      | Manifest update      | Place the slide in the Thursday curriculum      |
 | `README.md`                                                                           | Documentation update | Register the artifact and provenance links      |
 | `ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/conversation.md` | Chat log             | Full provenance record                          |
 | `ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/summary.md`      | Chat summary         | Resumable context                               |

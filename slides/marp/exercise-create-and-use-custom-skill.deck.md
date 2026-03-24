@@ -33,7 +33,7 @@ paginate: true
 
 - **Phase 1 - Create**: Add `.github/skills/slide-quality-check/SKILL.md` with metadata (`name`, `description`) and a short procedure for reviewing Marp slides for provenance and speaker notes
 - **Phase 2 - Refine**: Improve the skill by adding strong trigger words such as `Marp`, `slide`, `speaker notes`, and `provenance`, then tighten the procedure so the output is deterministic
-- **Phase 3 - Use**: Prompt Copilot with a task such as `Review Slides/individual-slides/exercise-create-and-use-custom-agent.md for slide metadata and ::: notes compliance` and compare the output to a normal untuned chat response
+- **Phase 3 - Use**: Prompt Copilot with a task such as `Review slides/marp/exercise-create-and-use-custom-agent.deck.md for slide metadata and ::: notes compliance` and compare the output to a normal untuned chat response
 
 **Success Criteria**
 

@@ -1,0 +1,49 @@
+template: slides\jMM-CODE-Training-Slide-Template-clean.pptx
+
+sections:
+  - name: Intro
+    slides:
+      - slides\marp\welcome-back.deck.md
+
+  - name: AI-First Development Methodology
+    slides:
+      - slides\marp\ai-first-vs-prompt-first.deck.md
+      - slides\marp\greenfield-development-workflow.deck.md
+      - slides\marp\getting-started.deck.md
+
+  - name: Specification Driven Software Development
+    slides:
+      - slides\marp\starting-with-requirements.deck.md
+      - slides\marp\exercise-business-requirements-generation.deck.md
+
+  - name: Architecture Specification
+    slides:
+      - slides\marp\cqrs-architecture.deck.md
+
+  - name: Technology Specification
+    slides:
+      - slides\marp\technology-stack-instruction-files.deck.md
+
+  - name: Implementation Specification
+    slides:
+      - slides\marp\vertical-slicing-architecture-introduction.deck.md
+      - slides\marp\implementation-with-vertical-slices.deck.md <------------- Missing from course modules xlsx
+
+  - name: Implementation Planning
+    slides:
+      - slides\marp\vertical-slice-implementation-plans.deck.md
+      - slides\marp\dependency-analysis-planning.deck.md
+
+  - name: Implementation Prompts
+    slides:
+      - slides\marp\implementation-prompts-verification.deck.md
+
+  - name: Vertical Slice Implementation
+    slides:
+      - slides\marp\implementing-vertical-slices.deck.md
+
+  - name: Code Review with GitHub Copilot
+    slides:
+      - slides\marp\pull-request-code-review.deck.md
+      - slides\marp\github-code-review-with-copilot.deck.md
+      - slides\marp\github-cli-pr-management.deck.md

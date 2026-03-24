@@ -14,11 +14,11 @@ Create a Marp deck explaining the "Safety Measures & Best Practices" segment cov
 
 ## Assistant Work Summary
 
-Created a new Marp deck at `Slides/individual-slides/safety-measures-best-practices.md` structured as a concise seven-slide teaching sequence. The deck emphasizes the review mindset for AI-generated code, high-signal testing, safe feature-flag retirement, incremental change sets, and the role of Azure DevOps MCP tooling in review automation. Added matching provenance files and updated the `README.md` notable artifacts catalog.
+Created a new Marp deck at `slides/marp/safety-measures-best-practices.deck.md` structured as a concise seven-slide teaching sequence. The deck emphasizes the review mindset for AI-generated code, high-signal testing, safe feature-flag retirement, incremental change sets, and the role of Azure DevOps MCP tooling in review automation. Added matching provenance files and updated the `README.md` notable artifacts catalog.
 
 ## Artifacts Created
 
-- `Slides/individual-slides/safety-measures-best-practices.md`
+- `slides/marp/safety-measures-best-practices.deck.md`
 - `ai-logs/2026/03/22/safety-measures-best-practices-20260322/conversation.md`
 - `ai-logs/2026/03/22/safety-measures-best-practices-20260322/summary.md`
 

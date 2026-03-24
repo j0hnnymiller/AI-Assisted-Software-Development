@@ -1705,7 +1705,7 @@ CQRS isn't just about architecture - it's about recognizing that reads and write
 ### Thank You!
 
 **Slides and documentation available at:**
-📂 `AI-Assisted-Software-Development/Slides/individual-slides/`
+📂 `AI-Assisted-Software-Development/slides/marp/`
 📚 `AI-Assisted-Software-Development/.github/instructions/`
 
 **Additional resources:**

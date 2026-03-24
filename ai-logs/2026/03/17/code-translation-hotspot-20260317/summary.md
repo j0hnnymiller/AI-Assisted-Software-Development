@@ -14,7 +14,7 @@ Create a comprehensive Marp slide deck explaining code translation between langu
 
 ### Primary Deliverables
 
-1. **Code Translation and Technical Hotspot Analysis Slide Deck** (`Slides/individual-slides/code-translation-technical-hotspot-analysis.md`)
+1. **Code Translation and Technical Hotspot Analysis Slide Deck** (`slides/marp/code-translation-technical-hotspot-analysis.deck.md`)
    - 28 comprehensive slides covering all requested topics
    - Proper AI provenance metadata in YAML front matter
    - Structured progression from concepts to practical implementation
@@ -98,7 +98,7 @@ Create a comprehensive Marp slide deck explaining code translation between langu
 
 | Artifact                                                                  | Type             | Purpose                                                        |
 | ------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------- |
-| `Slides/individual-slides/code-translation-technical-hotspot-analysis.md` | Marp Deck        | Training slide deck on code translation and technical analysis |
+| `slides/marp/code-translation-technical-hotspot-analysis.deck.md` | Marp Deck        | Training slide deck on code translation and technical analysis |
 | `ai-logs/2026/03/17/code-translation-hotspot-20260317/conversation.md`    | Conversation Log | Full chat transcript with provenance                           |
 | `ai-logs/2026/03/17/code-translation-hotspot-20260317/summary.md`         | Summary          | Session overview with resumability context                     |
 
@@ -129,7 +129,7 @@ Create a comprehensive Marp slide deck explaining code translation between langu
 ## Compliance Status
 
 ✅ Proper YAML front matter with all required AI provenance fields
-✅ File created in correct location (`Slides/individual-slides/`)
+✅ File created in correct location (`slides/marp/`)
 ✅ Conversation log created with full exchange history
 ✅ Summary file includes resumability context
 ✅ No H1 headings in slide body (follows Marp pipeline rules)

@@ -242,7 +242,7 @@ Duration ~00:02 **Key Points**: - Standard fork workflow
 - Students should be comfortable with this now **Demo Instructions**: 1. Run clone command
 2. Navigate into directory
 3. Add upstream remote
-4. Verify with `git remote -v` **Directory Structure**: - Show key folders: Slides/, Labs/, CODE/
+4. Verify with `git remote -v` **Directory Structure**: - Show key folders: slides/, Labs/, CODE/
 - Point out .github/instructions/ folder
 - Mention ai-logs/ for provenance tracking **Remote Configuration**: - Origin = Your fork (for your changes)
 - Upstream = Original (for course updates)
@@ -255,13 +255,13 @@ Duration ~00:02 **Key Points**: - Standard fork workflow
 AI-Assisted-Software-Development/
 ├── .github/
 │ └── instructions/ # AI assistant instructions
-├── Slides/
-│ └── individual-slides/ # Course slide decks
+├── slides/
+│ └── marp/ # Course slide decks
 ├── Labs/ # Hands-on lab exercises
 ├── CODE/ # Code examples and templates
 ├── ai-logs/ # AI conversation logs
 └── README.md # Repository overview
-``` **Key Directories:** - **Slides/**: All presentation materials
+``` **Key Directories:** - **slides/**: All presentation materials
 - **Labs/**: Daily lab exercises with solutions
 - **CODE/**: Example code and templates
 - **.github/instructions/**: Rules for AI assistants ::: notes
@@ -270,7 +270,7 @@ Duration ~00:02 **Key Points**: - Overview of repository structure
 - Understanding organization system **Directory Details**: 1. **.github/instructions/**:
 - Instructions for GitHub Copilot
 - Coding standards and conventions
-- AI-assisted development rules 2. **Slides/individual-slides/**:
+- AI-assisted development rules 2. **slides/marp/**:
 - Marp-formatted slide decks
 - Speaker notes included
 - Can be compiled to presentations 3. **Labs/**:

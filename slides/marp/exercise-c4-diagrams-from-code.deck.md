@@ -4,7 +4,7 @@ model: "anthropic/claude-sonnet-4-5@2025-02-19"
 operator: "johnmillerATcodemag-com"
 chat_id: "exercise-c4-diagrams-from-code-20260318"
 prompt: |
-  create an exercise marp slide using the Slides\individual-slides\exercise-template.pptx template for the following:
+  create an exercise marp slide using the slides\exercise-template.pptx template for the following:
   Generating C4 diagrams from code; Component, container, and system context diagrams;
   Diagram types: Dependency graphs, data flow, deployment topologies; Mermaid rendering considerations
 started: "2026-03-18T00:00:00Z"

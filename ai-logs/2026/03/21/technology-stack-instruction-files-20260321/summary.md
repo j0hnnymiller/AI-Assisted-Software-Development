@@ -14,7 +14,7 @@ Create a Marp deck that explains the course content for Section 5 on technology 
 
 ### Primary Deliverables
 
-1. **Technology Stack Instruction Files Deck** (`Slides/individual-slides/technology-stack-instruction-files.md`)
+1. **Technology Stack Instruction Files Deck** (`slides/marp/technology-stack-instruction-files.deck.md`)
    - Seven-slide Marp deck focused on the workflow for creating and improving tech-specific instruction files
    - Covers requirements review, prompt generation, strong file content, critical review, and multi-model evaluation
    - Includes comprehensive speaker notes and Mermaid diagrams for presentation delivery
@@ -50,7 +50,7 @@ Create a Marp deck that explains the course content for Section 5 on technology 
 
 | Artifact                                                                         | Type            | Purpose                                                     |
 | -------------------------------------------------------------------------------- | --------------- | ----------------------------------------------------------- |
-| `Slides/individual-slides/technology-stack-instruction-files.md`                 | Marp deck       | Teach generation and review of technology instruction files |
+| `slides/marp/technology-stack-instruction-files.deck.md`                 | Marp deck       | Teach generation and review of technology instruction files |
 | `ai-logs/2026/03/21/technology-stack-instruction-files-20260321/conversation.md` | Provenance log  | Record the originating chat context                         |
 | `ai-logs/2026/03/21/technology-stack-instruction-files-20260321/summary.md`      | Session summary | Support resumability and auditability                       |
 | `README.md`                                                                      | Catalog update  | Make the deck discoverable from the repository root         |
@@ -58,7 +58,7 @@ Create a Marp deck that explains the course content for Section 5 on technology 
 ## Lessons Learned
 
 1. **Source summaries convert well into teaching decks**: The section outline was detailed enough to reshape into a focused instructional narrative.
-2. **Recent slide files provide a strong pattern**: Existing Marp decks in `Slides/individual-slides/` gave a useful baseline for front matter, pacing, and notes depth.
+2. **Recent slide files provide a strong pattern**: Existing Marp decks in `slides/marp/` gave a useful baseline for front matter, pacing, and notes depth.
 3. **Provenance work is part of artifact completion**: The deck was not complete until the ai-log files and README entry were added.
 
 ## Next Steps
@@ -75,7 +75,7 @@ Create a Marp deck that explains the course content for Section 5 on technology 
 
 ## Compliance Status
 
-✅ Marp deck created under `Slides/individual-slides/`
+✅ Marp deck created under `slides/marp/`
 ✅ Embedded provenance metadata included in the Markdown artifact
 ✅ `conversation.md` and `summary.md` created under the required `ai-logs/` path
 ✅ README updated with artifact and provenance links

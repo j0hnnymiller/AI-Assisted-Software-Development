@@ -14,7 +14,7 @@ Create a Marp slide deck titled "Organizational vs. Repository Instruction Files
 
 ### Primary Deliverables
 
-1. **Organizational vs. Repository Instruction Files Deck** (`Slides/individual-slides/organizational-vs-repository-instruction-files.md`)
+1. **Organizational vs. Repository Instruction Files Deck** (`slides/marp/organizational-vs-repository-instruction-files.deck.md`)
    - Created a 7-slide Marp deck with requested title and complete topic coverage
    - Included speaker notes on each slide
    - Included embedded AI provenance metadata in front matter
@@ -46,7 +46,7 @@ Create a Marp slide deck titled "Organizational vs. Repository Instruction Files
 
 | Artifact                                                                                     | Type      | Purpose                                             |
 | -------------------------------------------------------------------------------------------- | --------- | --------------------------------------------------- |
-| `Slides/individual-slides/organizational-vs-repository-instruction-files.md`                 | Marp deck | Presentation content for instruction-layer strategy |
+| `slides/marp/organizational-vs-repository-instruction-files.deck.md`                 | Marp deck | Presentation content for instruction-layer strategy |
 | `ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/conversation.md` | Log       | Provenance and traceability                         |
 | `ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/summary.md`      | Summary   | Resumable session context                           |
 

@@ -2,11 +2,11 @@
 
 ## Outcome
 
-Created a new Marp deck, `Slides/individual-slides/safety-measures-best-practices.md`, covering safety nets for AI-assisted development, review discipline for AI-generated code, high-signal testing, safe feature-flag removal, small change sets, and Azure DevOps MCP-assisted PR review workflows.
+Created a new Marp deck, `slides/marp/safety-measures-best-practices.deck.md`, covering safety nets for AI-assisted development, review discipline for AI-generated code, high-signal testing, safe feature-flag removal, small change sets, and Azure DevOps MCP-assisted PR review workflows.
 
 ## Files Added or Updated
 
-- Added `Slides/individual-slides/safety-measures-best-practices.md`
+- Added `slides/marp/safety-measures-best-practices.deck.md`
 - Added `ai-logs/2026/03/22/safety-measures-best-practices-20260322/conversation.md`
 - Added `ai-logs/2026/03/22/safety-measures-best-practices-20260322/summary.md`
 - Updated `README.md`

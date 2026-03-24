@@ -5,7 +5,7 @@ operator: "johnmillerATcodemag-com"
 chat_id: "create-marp-slides-instructions-2024-10-19"
 prompt: |
   Create instructions and templates for producing Marp slide files for this
-  repository. Slides must be placed in Slides/individual-slides and every
+  repository. Slides must be placed in slides/marp and every
   generated slide file must include AI provenance metadata that conforms to
   `.github/instructions/ai-assisted-output.instructions.md` and follow
   Copilot guidance in `.github/instructions/copilot-instructions.md`.
@@ -17,13 +17,13 @@ task_durations:
 total_duration: "00:30:00"
 ai_log: "ai-logs/2024/10/19/create-marp-slides-instructions-2024-10-19/conversation.md"
 source: "johnmillerATcodemag-com"
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 ---
 
 # Create Marp Slides Instructions
 
 Purpose: guidance, templates and required metadata for creating Marp (Markdown) slides
-for this repository. Generated slides should be placed under `Slides/individual-slides`.
+for this repository. Generated slides should be placed under `slides/marp`.
 
 These instructions ensure every AI-assisted slide file includes the required
 provenance metadata defined in `.github/instructions/ai-assisted-output.instructions.md`
@@ -31,7 +31,7 @@ and follows the Copilot-specific rules in `.github/instructions/copilot-instruct
 
 ## Where to put slides
 
-- All Marp slide files must be created in: `Slides/individual-slides/`
+- All Marp slide files must be created in: `slides/marp/`
 - Filenames should be lowercase and kebab-case, e.g. `intro-to-aiasd.md`.
 
 ## Required front matter (template)
@@ -111,7 +111,7 @@ Welcome to the course. Use Marp features (--- for new slide) below.
 
 Before committing or generating slides, ensure:
 
-- [ ] The file is created under `Slides/individual-slides/`.
+- [ ] The file is created under `slides/marp/`.
 - [ ] YAML front matter includes all required fields from the template above.
 - [ ] `ai_log` path exists in the repository under `ai-logs/` and contains `conversation.md` for the chat.
 - [ ] `operator` is a GitHub username.
@@ -138,7 +138,7 @@ add a one-line bullet in the repo `README.md` under a `Guidance & Instructions` 
 
 Example README entry:
 
-- **AIASD Intro Slides** (`Slides/individual-slides/aiasd-intro.md`) — 5-slide intro to the course. Provenance: `ai-logs/2025/10/15/<chat-id>/`.
+- **AIASD Intro Slides** (`slides/marp/aiasd-intro.deck.md`) — 5-slide intro to the course. Provenance: `ai-logs/2025/10/15/<chat-id>/`.
 
 ## Examples and templates
 
@@ -155,5 +155,5 @@ the referenced `ai_log` path exists.
 
 ## Next steps
 
-- If you'd like, I can add a sample slide file in `Slides/individual-slides/` and
+- If you'd like, I can add a sample slide file in `slides/marp/` and
   a small PowerShell-based CI validation script to this repo.

@@ -2,11 +2,11 @@
 
 ## Outcome
 
-Created a new Marp deck, `Slides/individual-slides/best-practices-and-qa-custom-agents.md`, covering custom-agent design best practices, tool restriction strategy, collaboration considerations, and validation before rollout.
+Created a new Marp deck, `slides/marp/best-practices-and-qa-custom-agents.deck.md`, covering custom-agent design best practices, tool restriction strategy, collaboration considerations, and validation before rollout.
 
 ## Files Added or Updated
 
-- Added `Slides/individual-slides/best-practices-and-qa-custom-agents.md`
+- Added `slides/marp/best-practices-and-qa-custom-agents.deck.md`
 - Added `ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/conversation.md`
 - Added `ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/summary.md`
 - Updated `README.md`

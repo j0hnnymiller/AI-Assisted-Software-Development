@@ -17,7 +17,7 @@ Create a Marp deck explaining Section 9 content covering:
 ## Actions Taken
 
 1. Reviewed repository slide authoring conventions and an existing Marp example.
-2. Confirmed that `README.md` referenced `Slides/individual-slides/effective-prompts-for-technical-debt.md`, but the file was missing.
+2. Confirmed that `README.md` referenced `slides/marp/effective-prompts-for-technical-debt.deck.md`, but the file was missing.
 3. Authored a new Marp deck with provenance metadata and `::: notes` blocks on every slide.
 4. Added a Mermaid flowchart for the live demonstration workflow.
 5. Created log artifacts for traceability and future maintenance.
@@ -25,7 +25,7 @@ Create a Marp deck explaining Section 9 content covering:
 
 ## Files Created or Updated
 
-- `Slides/individual-slides/effective-prompts-for-technical-debt.md`
+- `slides/marp/effective-prompts-for-technical-debt.deck.md`
 - `ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md`
 - `ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/summary.md`
 - `README.md`

@@ -49,11 +49,11 @@ Create a Marp exercise deck that guides students through creating and using a cu
 
 ### Primary Deliverables
 
-1. **Exercise Slide** (`Slides/individual-slides/exercise-create-and-use-custom-agent.md`)
+1. **Exercise Slide** (`slides/marp/exercise-create-and-use-custom-agent.deck.md`)
    - Authored a template-aligned exercise slide with objectives, phase-based activities, success criteria, and facilitator notes
    - Focused on repository-scoped custom agent creation and usage
 
-2. **Manifest Integration** (`Slides/aiasd-311-wednesday.yaml`)
+2. **Manifest Integration** (`slides/aiasd-311-wednesday.yaml`)
    - Replaced placeholder `Exercise: Building Custom Agents` with the concrete exercise slide path
 
 3. **Artifact Catalog Update** (`README.md`)
@@ -85,8 +85,8 @@ Create a Marp exercise deck that guides students through creating and using a cu
 
 | Artifact                                                                           | Type          | Purpose                                    |
 | ---------------------------------------------------------------------------------- | ------------- | ------------------------------------------ |
-| `Slides/individual-slides/exercise-create-and-use-custom-agent.md`                 | Marp slide    | Hands-on custom-agent exercise             |
-| `Slides/aiasd-311-wednesday.yaml`                                                  | Manifest      | Integrate exercise into Wednesday sequence |
+| `slides/marp/exercise-create-and-use-custom-agent.deck.md`                 | Marp slide    | Hands-on custom-agent exercise             |
+| `slides/aiasd-311-wednesday.yaml`                                                  | Manifest      | Integrate exercise into Wednesday sequence |
 | `README.md`                                                                        | Documentation | Add notable artifact and provenance links  |
 | `ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/conversation.md` | Chat log      | Full provenance record                     |
 | `ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/summary.md`      | Chat summary  | Resumable context                          |

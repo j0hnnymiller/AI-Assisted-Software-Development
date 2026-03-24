@@ -4,7 +4,7 @@ model: "openai/gpt-5.3-codex@unknown"
 operator: "johnmillerATcodemag-com"
 chat_id: "exercise-technology-inventory-instruction-generation-20260317"
 prompt: |
-  create an exercise marp deck using the Slides\individual-slides\exercise-template.md template with the title "Exercise: Technology Inventory & Instruction Generation"
+  create an exercise marp deck using the slides\marp\exercise-template.deck.md template with the title "Exercise: Technology Inventory & Instruction Generation"
 
   That covers this material: Creating inventory of project technologies; Background sessions for concurrent work; Generating multiple instruction files simultaneously; Session management interface
 started: "2026-03-17T08:37:22.0000000-07:00"

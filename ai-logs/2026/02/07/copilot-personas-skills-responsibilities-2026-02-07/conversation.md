@@ -42,6 +42,6 @@ Each persona section includes role-specific, actionable skills and responsibilit
 
 ## Artifacts Produced
 
-- `Slides/individual-slides/github-copilot-chat-mode-personas.md` - Comprehensive Marp slide deck covering GitHub Copilot chat mode skills and responsibilities for 8 personas
+- `slides/marp/github-copilot-chat-mode-personas.deck.md` - Comprehensive Marp slide deck covering GitHub Copilot chat mode skills and responsibilities for 8 personas
 - `ai-logs/2026/02/07/copilot-personas-skills-responsibilities-2026-02-07/conversation.md` - This conversation log
 - `ai-logs/2026/02/07/copilot-personas-skills-responsibilities-2026-02-07/summary.md` - Session summary

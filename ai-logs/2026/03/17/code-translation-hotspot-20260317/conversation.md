@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: User request for Marp deck on code translation and technical hotspot analysis
-- Targets: `Slides/individual-slides/code-translation-technical-hotspot-analysis.md`
+- Targets: `slides/marp/code-translation-technical-hotspot-analysis.deck.md`
 - Constraints/Policies:
   - `.github/instructions/create-marp-slides.instructions.md`
   - `.github/instructions/slide-pipeline.instructions.md`
@@ -57,7 +57,7 @@ Creating slide deck with:
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/code-translation-technical-hotspot-analysis.md` - Complete Marp deck with 28 slides covering code translation, compliance review, scoped analysis, and GitHub issue creation
+- `slides/marp/code-translation-technical-hotspot-analysis.deck.md` - Complete Marp deck with 28 slides covering code translation, compliance review, scoped analysis, and GitHub issue creation
 
 **Next Steps**:
 

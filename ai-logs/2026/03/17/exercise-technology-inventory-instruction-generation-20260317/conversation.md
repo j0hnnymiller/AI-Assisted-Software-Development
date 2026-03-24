@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: User request to create an exercise Marp deck using exercise-template.md
-- Targets: Slides/individual-slides/exercise-technology-inventory-instruction-generation.md
+- Targets: slides/marp/exercise-technology-inventory-instruction-generation.deck.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md; .github/instructions/marp-slides.instructions.md; .github/instructions/ai-assisted-output.instructions.md
 
 ## Exchanges
@@ -20,7 +20,7 @@
 [2026-03-17T08:37:22.0000000-07:00] johnmillerATcodemag-com
 
 ```text
-create an exercise marp deck using the Slides\individual-slides\exercise-template.md template with the title "Exercise: Technology Inventory & Instruction Generation"
+create an exercise marp deck using the slides\marp\exercise-template.deck.md template with the title "Exercise: Technology Inventory & Instruction Generation"
 
 That covers this material: Creating inventory of project technologies; Background sessions for concurrent work; Generating multiple instruction files simultaneously; Session management interface
 ```
@@ -35,7 +35,7 @@ Created an exercise Marp deck based on the repository exercise template, coverin
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-technology-inventory-instruction-generation.md` - Exercise deck
+- `slides/marp/exercise-technology-inventory-instruction-generation.deck.md` - Exercise deck
 - `ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/conversation.md` - Conversation log
 - `ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/summary.md` - Session summary
 

@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: User request to create Marp deck explaining MCP Servers in VSCode and Copilot with speaker notes
-- Targets: `Slides/individual-slides/mcp-servers-vscode-copilot.md`
+- Targets: `slides/marp/mcp-servers-vscode-copilot.deck.md`
 - Constraints/Policies:
   - `.github/instructions/marp-slides.instructions.md` - Updated with explicit pandoc notes requirements
   - `.github/instructions/ai-assisted-output.instructions.md` - AI provenance requirements
@@ -121,7 +121,7 @@ Focused on configuration over development.
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/mcp-servers-vscode-copilot.md` - Complete Marp deck with pandoc speaker notes and Mermaid diagrams, consumer-focused
+- `slides/marp/mcp-servers-vscode-copilot.deck.md` - Complete Marp deck with pandoc speaker notes and Mermaid diagrams, consumer-focused
 - `.github/instructions/marp-slides.instructions.md` - Updated with Mermaid diagram requirements
 
 **Duration Summary**:
@@ -133,7 +133,7 @@ Focused on configuration over development.
 
 **Validation**:
 
-- ✅ File in correct location: `Slides/individual-slides/`
+- ✅ File in correct location: `slides/marp/`
 - ✅ Lowercase kebab-case naming
 - ✅ All 11 YAML front matter fields present
 - ✅ Every slide has `::: notes` block (9 slides, 9 note blocks)

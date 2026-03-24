@@ -5,7 +5,7 @@ This repo was created for the AIASD CODE Training Course
 
 ## Guidance & Instructions
 
-- [`.github/instructions/marp-slides.instructions.md`](.github/instructions/marp-slides.instructions.md) — Instructions and templates for creating Marp slide files. Slides created using these instructions must be placed in `Slides/individual-slides/` and include AI provenance metadata linking to an `ai-logs/` conversation (see `.github/instructions/ai-assisted-output.instructions.md` and `.github/instructions/copilot-instructions.md`).
+- [`.github/instructions/marp-slides.instructions.md`](.github/instructions/marp-slides.instructions.md) — Instructions and templates for creating Marp slide files. Slides created using these instructions must be placed in `slides/marp/` and include AI provenance metadata linking to an `ai-logs/` conversation (see `.github/instructions/ai-assisted-output.instructions.md` and `.github/instructions/copilot-instructions.md`).
 
 ## Useful Keybinding
 
@@ -98,107 +98,107 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes guardrails for non-destructive Git usage, staged-file validation steps, and a standardized completion report format
   - Provenance: [Chat log](ai-logs/2026/03/24/commit-workspace-changes-logical-groups-20260324/conversation.md) | [Summary](ai-logs/2026/03/24/commit-workspace-changes-logical-groups-20260324/summary.md)
 
-- **Managing Instruction Files & Context Windows** ([`Slides/individual-slides/managing-instruction-files-context-windows.md`](Slides/individual-slides/managing-instruction-files-context-windows.md))
+- **Managing Instruction Files & Context Windows** ([`slides/marp/managing-instruction-files-context-windows.deck.md`](slides/marp/managing-instruction-files-context-windows.deck.md))
   - 7-slide Marp deck covering instruction sharing strategy, scoped application patterns, context monitoring, and token tracking
   - Includes an operational workflow blueprint and implementation checklist
   - Provenance: [Chat log](ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/summary.md)
 
-- **Exercise: Technology Inventory & Instruction Generation** ([`Slides/individual-slides/exercise-technology-inventory-instruction-generation.md`](Slides/individual-slides/exercise-technology-inventory-instruction-generation.md))
+- **Exercise: Technology Inventory & Instruction Generation** ([`slides/marp/exercise-technology-inventory-instruction-generation.deck.md`](slides/marp/exercise-technology-inventory-instruction-generation.deck.md))
   - Exercise slide covering technology inventory creation, concurrent background sessions, simultaneous instruction generation, and session management workflows
   - Template-aligned with objectives, activities, success criteria, and facilitator notes
   - Provenance: [Chat log](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/summary.md)
 
-- **Exercise: Creating Prompt Files** ([`Slides/individual-slides/exercise-creating-prompt-files.md`](Slides/individual-slides/exercise-creating-prompt-files.md))
+- **Exercise: Creating Prompt Files** ([`slides/marp/exercise-creating-prompt-files.deck.md`](slides/marp/exercise-creating-prompt-files.deck.md))
   - Exercise slide covering baseline prompt execution, guided rerun with instruction files, and structured comparison of the resulting outputs
   - Emphasizes prompt structure, context isolation, reproducibility, and the impact of instruction files on output quality
   - Provenance: [Chat log](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/summary.md)
 
-- **Exercise: Create, Test, and Use a Local MCP Server** ([`Slides/individual-slides/exercise-mcp-server-create-test-use.md`](Slides/individual-slides/exercise-mcp-server-create-test-use.md))
+- **Exercise: Create, Test, and Use a Local MCP Server** ([`slides/marp/exercise-mcp-server-create-test-use.deck.md`](slides/marp/exercise-mcp-server-create-test-use.deck.md))
   - Hands-on exercise slide guiding students through building a PowerShell MCP server, validating it with an end-to-end test script, and invoking it through Copilot
   - Covers MCP JSON-RPC method flow (`initialize`, `tools/list`, `tools/call`), smoke-test validation, and local `.mcp.json` integration
   - Provenance: [Chat log](ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/summary.md)
 
-- **Exercise: Create and Use a Custom Agent** ([`Slides/individual-slides/exercise-create-and-use-custom-agent.md`](Slides/individual-slides/exercise-create-and-use-custom-agent.md))
+- **Exercise: Create and Use a Custom Agent** ([`slides/marp/exercise-create-and-use-custom-agent.deck.md`](slides/marp/exercise-create-and-use-custom-agent.deck.md))
   - Hands-on exercise slide guiding students through creating a repository-scoped custom agent, refining role boundaries, and running it in Copilot Chat
   - Covers agent file structure, tool-scope decisions, and practical output validation through a targeted prompt
   - Provenance: [Chat log](ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/summary.md)
 
-- **VS Code Copilot Agents Overview** ([`Slides/individual-slides/_vscode-copilot-agents-overview.md`](Slides/individual-slides/_vscode-copilot-agents-overview.md))
+- **VS Code Copilot Agents Overview** ([`slides/marp/_vscode-copilot-agents-overview.deck.md`](slides/marp/_vscode-copilot-agents-overview.deck.md))
   - Multi-slide Marp deck covering the agent model in VS Code, agent types, local versus cloud workflows, and practical task selection guidance
   - Explains how Copilot agents differ from inline suggestions and when to use interactive, background, cloud, or third-party agent flows
   - Provenance: [Chat log](ai-logs/2026/02/06/vscode-agents-slides-20260206/conversation.md) | [Summary](ai-logs/2026/02/06/vscode-agents-slides-20260206/summary.md)
 
-- **Exercise: Create and Use a Custom Skill** ([`Slides/individual-slides/exercise-create-and-use-custom-skill.md`](Slides/individual-slides/exercise-create-and-use-custom-skill.md))
+- **Exercise: Create and Use a Custom Skill** ([`slides/marp/exercise-create-and-use-custom-skill.deck.md`](slides/marp/exercise-create-and-use-custom-skill.deck.md))
   - Hands-on exercise slide guiding students through creating a repository skill, refining trigger phrases, and using it with a matching Copilot prompt
   - Covers `.github/skills/<name>/SKILL.md`, description-driven relevance matching, and procedural output design for repeatable slide review workflows
   - Provenance: [Chat log](ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/summary.md)
 
-- **Creating Instruction Files from Prompts** ([`Slides/individual-slides/creating-instruction-files-from-prompts.md`](Slides/individual-slides/creating-instruction-files-from-prompts.md))
+- **Creating Instruction Files from Prompts** ([`slides/marp/creating-instruction-files-from-prompts.deck.md`](slides/marp/creating-instruction-files-from-prompts.deck.md))
   - 7-slide Marp deck covering prompt execution, generated instruction review, inference as a drafting accelerator, and prompt-first refinement strategy
   - Emphasizes regenerating from the prompt to preserve source control history, reproducibility, and provenance quality
   - Provenance: [Chat log](ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/conversation.md) | [Summary](ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/summary.md)
 
-- **Technology Stack Instruction Files** ([`Slides/individual-slides/technology-stack-instruction-files.md`](Slides/individual-slides/technology-stack-instruction-files.md))
+- **Technology Stack Instruction Files** ([`slides/marp/technology-stack-instruction-files.deck.md`](slides/marp/technology-stack-instruction-files.deck.md))
   - 7-slide Marp deck covering requirements-based instruction generation, review checklists, and multi-model evaluation for HTML5, CSS3, and JavaScript guidance
   - Explains how teams draft standards quickly, critique them systematically, and use multiple models to improve quality during the foundation phase
   - Provenance: [Chat log](ai-logs/2026/03/21/technology-stack-instruction-files-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/technology-stack-instruction-files-20260321/summary.md)
 
-- **Organizational vs. Repository Instruction Files Deck** ([`Slides/individual-slides/organizational-vs-repository-instruction-files.md`](Slides/individual-slides/organizational-vs-repository-instruction-files.md))
+- **Organizational vs. Repository Instruction Files Deck** ([`slides/marp/organizational-vs-repository-instruction-files.deck.md`](slides/marp/organizational-vs-repository-instruction-files.deck.md))
   - 7-slide Marp deck covering enterprise-tier capabilities, path-scoped instruction files, and folder-level technology-specific rules
   - Includes layering and precedence guidance for multi-level instruction governance
   - Provenance: [Chat log](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/summary.md)
 
-- **Feature Flags and Test Suites** ([`Slides/individual-slides/feature-flags-and-test-suites.md`](Slides/individual-slides/feature-flags-and-test-suites.md))
+- **Feature Flags and Test Suites** ([`slides/marp/feature-flags-and-test-suites.deck.md`](slides/marp/feature-flags-and-test-suites.deck.md))
   - Marp deck covering feature flags for work-in-progress, As-Is vs. To-Be test suites, safe deployment gates, and AI-assisted flag retirement
   - Includes speaker notes for delivery and operational guidance for CI pipeline separation
   - Provenance: [Chat log](ai-logs/2026/03/19/feature-flags-test-suites-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/feature-flags-test-suites-20260319/summary.md)
 
-- **Safety Measures & Best Practices** ([`Slides/individual-slides/safety-measures-best-practices.md`](Slides/individual-slides/safety-measures-best-practices.md))
+- **Safety Measures & Best Practices** ([`slides/marp/safety-measures-best-practices.deck.md`](slides/marp/safety-measures-best-practices.deck.md))
   - 7-slide Marp deck covering safety nets, review discipline for AI-generated code, signal-vs-coverage testing guidance, safe feature-flag removal, small change sets, and Azure DevOps MCP-assisted PR review support
   - Frames AI as an eager knowledgeable junior developer and closes with an actionable safety checklist for teams
   - Provenance: [Chat log](ai-logs/2026/03/22/safety-measures-best-practices-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/safety-measures-best-practices-20260322/summary.md)
 
-- **Effective Prompts for Technical Debt** ([`Slides/individual-slides/effective-prompts-for-technical-debt.md`](Slides/individual-slides/effective-prompts-for-technical-debt.md))
+- **Effective Prompts for Technical Debt** ([`slides/marp/effective-prompts-for-technical-debt.deck.md`](slides/marp/effective-prompts-for-technical-debt.deck.md))
   - Marp deck covering structured technical debt prompts, GitHub issue workflow, Copilot-assisted issue handling, and prompt components for safe remediation
   - Includes speaker notes and a reusable prompt template covering constraints, tests, docs, and provenance expectations
   - Provenance: [Chat log](ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/summary.md)
 
-- **Technical Debt Copilot Exercise Sequence** ([`Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md`](Slides/individual-slides/exercise-addressing-technical-debt-with-copilot.md))
+- **Technical Debt Copilot Exercise Sequence** ([`slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md`](slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md))
   - Three-slide exercise set covering prompt authoring, GitHub issue assignment, and multi-step delegation for technical debt remediation with Copilot
   - Uses the exercise template structure with duration, objectives, activities, success criteria, and facilitator notes on every slide
   - Provenance: [Chat log](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/summary.md)
 
-- **Repository Fork and Clone Exercise Deck** ([`Slides/individual-slides/exercise-fork-and-clone-repositories.md`](Slides/individual-slides/exercise-fork-and-clone-repositories.md))
+- **Repository Fork and Clone Exercise Deck** ([`slides/marp/exercise-fork-and-clone-repositories.deck.md`](slides/marp/exercise-fork-and-clone-repositories.deck.md))
   - Three-slide exercise deck covering course repository forking, brownfield branch setup, PAT configuration, and multi-repo fork validation
   - Uses the exercise template structure with objectives, activities, success criteria, command examples, and facilitator notes for each exercise
   - Provenance: [Chat log](ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/summary.md)
 
-- **GitHub Copilot VS Code Workflows Exercise Deck** ([`Slides/individual-slides/exercise-github-copilot-vscode-workflows.md`](Slides/individual-slides/exercise-github-copilot-vscode-workflows.md))
+- **GitHub Copilot VS Code Workflows Exercise Deck** ([`slides/marp/exercise-github-copilot-vscode-workflows.deck.md`](slides/marp/exercise-github-copilot-vscode-workflows.deck.md))
   - Four-slide exercise deck covering Copilot onboarding, context management, chat workflow organization, and Ask/Edit/Agent mode selection
   - Uses the exercise template structure with objectives, activities, success criteria, and facilitator notes for each lab sequence
   - Provenance: [Chat log](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/summary.md)
 
-- **Evergreen Software Development Exercise Deck** ([`Slides/individual-slides/evergreen-software-development-exercise-deck.md`](Slides/individual-slides/evergreen-software-development-exercise-deck.md))
+- **Evergreen Software Development Exercise Deck** ([`slides/marp/evergreen-software-development-exercise-deck.deck.md`](slides/marp/evergreen-software-development-exercise-deck.deck.md))
   - Two exercise slides covering evergreen core principles and common failure modes
   - Template-aligned structure with duration, objectives, activities, success criteria, and speaker notes
   - Provenance: [Chat log](ai-logs/2026/03/16/evergreen-exercise-deck-20260316/conversation.md) | [Summary](ai-logs/2026/03/16/evergreen-exercise-deck-20260316/summary.md)
 
-- **GitHub Copilot Skills: A Practical Introduction** ([`Slides/individual-slides/github-copilot-skills-practical-introduction.md`](Slides/individual-slides/github-copilot-skills-practical-introduction.md))
+- **GitHub Copilot Skills: A Practical Introduction** ([`slides/marp/github-copilot-skills-practical-introduction.deck.md`](slides/marp/github-copilot-skills-practical-introduction.deck.md))
   - 12-slide Marp deck covering skill structure, `SKILL.md` anatomy, loading behavior, authoring practices, and common enterprise use cases
   - Explains how Copilot Skills differ from promptfiles, custom instructions, and chat modes while positioning them as procedural workflow modules
   - Provenance: [Chat log](ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/summary.md)
 
-- **Best Practices and Q&A: Custom Agents** ([`Slides/individual-slides/best-practices-and-qa-custom-agents.md`](Slides/individual-slides/best-practices-and-qa-custom-agents.md))
+- **Best Practices and Q&A: Custom Agents** ([`slides/marp/best-practices-and-qa-custom-agents.deck.md`](slides/marp/best-practices-and-qa-custom-agents.deck.md))
   - 7-slide Marp deck covering agent design best practices, least-privilege tool strategy, team sharing, examples, and rollout validation
   - Explains how to keep agents narrowly scoped, iteratively improved, and safe to share across teams or organizations
   - Provenance: [Chat log](ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/summary.md)
 
-- **Implementation Plan Prioritization** ([`Slides/individual-slides/implementation-plan-prioritization.md`](Slides/individual-slides/implementation-plan-prioritization.md))
+- **Implementation Plan Prioritization** ([`slides/marp/implementation-plan-prioritization.deck.md`](slides/marp/implementation-plan-prioritization.deck.md))
   - Marp deck covering security audit findings, impact/effort prioritization, visible technical-debt tracking, and Phase Zero security planning
   - Frames prioritization as the bridge between backlog generation and safe implementation sequencing for brownfield work
   - Provenance: [Chat log](ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/summary.md)
 
-- **Vertical Slice Implementation** ([`Slides/individual-slides/vertical-slice-implementation-webcat.md`](Slides/individual-slides/vertical-slice-implementation-webcat.md))
+- **Vertical Slice Implementation** ([`slides/marp/vertical-slice-implementation-webcat.deck.md`](slides/marp/vertical-slice-implementation-webcat.deck.md))
   - Marp deck covering first-slice setup, prompt-versus-issue scope checks, Copilot-assisted live coding, and verification strategy for the "Implement Foundational WebCat" slice
   - Highlights `webcat-frontend` organization decisions and the shift from manual verification toward automated testing
   - Provenance: [Chat log](ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/summary.md)
@@ -216,19 +216,19 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Provenance: [Chat log](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/conversation.md) | [Summary](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/summary.md)
   - Verification: [Fixes verified 2025-10-16](validation-fixes-verified-20251016.md) ([chat log](ai-logs/2025/10/16/resume-validation-fixes-20251016/conversation.md))
 
-- **CQRS Architecture Slides** ([`Slides/individual-slides/cqrs-architecture.md`](Slides/individual-slides/cqrs-architecture.md))
+- **CQRS Architecture Slides** ([`slides/marp/cqrs-architecture.deck.md`](slides/marp/cqrs-architecture.deck.md))
   - Comprehensive presentation explaining Command Query Responsibility Segregation (CQRS) pattern
   - Covers when to use CQRS, core principles, implementation examples, and migration strategies
   - Includes detailed speaker notes for effective delivery
   - Provenance: [Chat log](ai-logs/2026/02/07/cqrs-architecture-slides-20260207/conversation.md)
 
-- **Vertical Slicing Architecture Introduction** ([`Slides/individual-slides/vertical-slicing-architecture-introduction.md`](Slides/individual-slides/vertical-slicing-architecture-introduction.md))
+- **Vertical Slicing Architecture Introduction** ([`slides/marp/vertical-slicing-architecture-introduction.deck.md`](slides/marp/vertical-slicing-architecture-introduction.deck.md))
   - 7-slide Marp deck introducing feature-based architecture, layered versus slice-oriented structure, and the maintainability benefits of localized change
   - Covers developer experience improvements, team collaboration, testing strategy, and the introductory CQRS relationship
   - Includes Mermaid visuals and detailed speaker notes for classroom delivery
   - Provenance: [Chat log](ai-logs/2026/03/21/vertical-slicing-architecture-introduction-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/vertical-slicing-architecture-introduction-20260321/summary.md)
 
-- **Instruction File ApplyTo Patterns Slides** ([`Slides/individual-slides/instruction-file-applyto-patterns.md`](Slides/individual-slides/instruction-file-applyto-patterns.md))
+- **Instruction File ApplyTo Patterns Slides** ([`slides/marp/instruction-file-applyto-patterns.deck.md`](slides/marp/instruction-file-applyto-patterns.deck.md))
   - 13-slide Marp presentation explaining glob pattern matching for instruction file applyTo fields
   - Covers universal patterns, file extension matching, directory-specific patterns, and best practices
   - Includes comprehensive speaker notes (1-3 minutes per slide) with timing, examples, and audience interaction cues

@@ -73,7 +73,13 @@ def strip_h1(text: str) -> str:
 
 
 def rewrite_images(text: str) -> str:
-    return text.replace("../images/", "images/")
+    text = text.replace("](images/", "](marp/images/")
+    text = text.replace('src="images/', 'src="marp/images/')
+    text = text.replace("src='images/", "src='marp/images/")
+    text = text.replace("url('images/", "url('marp/images/")
+    text = text.replace('url("images/', 'url("marp/images/')
+    text = text.replace("url(images/", "url(marp/images/")
+    return text
 
 
 def normalize_merge_characters(text: str) -> str:
@@ -187,7 +193,7 @@ def validate(path: Path, content: str) -> list:
     if not any(re.match(r"^## ", l) for l in body_lines):
         warnings.append(f"  WARNING [{path.name}] Rule 3: No ## H2 heading found")
 
-    # Rule 4 – no ../images/ refs
+    # Rule 4 – source decks reference their local images/ folder
     if "../images/" in content:
         warnings.append(f"  WARNING [{path.name}] Rule 4: Contains ../images/ reference")
 

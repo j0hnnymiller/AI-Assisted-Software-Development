@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: Slides/individual-slides/exercise-template.md, Lab 3 content from Labs/Day1.2-Afternoon-HandsOn-Labs.md
-- Targets: Slides/individual-slides/lab3-test-driven-development-exercise.md
+- Inputs: slides/marp/exercise-template.deck.md, Lab 3 content from Labs/Day1.2-Afternoon-HandsOn-Labs.md
+- Targets: slides/marp/lab3-test-driven-development-exercise.deck.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md
 
 ## Exchanges
@@ -33,7 +33,7 @@ Created a new Marp exercise slide for Lab 3 with objectives, activities, success
 
 **Artifacts Produced**:
 
-- Slides/individual-slides/lab3-test-driven-development-exercise.md - New Lab 3 exercise slide.
+- slides/marp/lab3-test-driven-development-exercise.deck.md - New Lab 3 exercise slide.
 - ai-logs/2026/03/17/lab3-test-driven-development-exercise-20260317/conversation.md - Conversation log.
 - ai-logs/2026/03/17/lab3-test-driven-development-exercise-20260317/summary.md - Session summary.
 

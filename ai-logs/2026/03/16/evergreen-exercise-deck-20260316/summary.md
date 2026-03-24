@@ -14,7 +14,7 @@ Create a template-aligned exercise slide deck from provided content covering eve
 
 ### Primary Deliverables
 
-1. **Exercise Deck** (Slides/individual-slides/evergreen-software-development-exercise-deck.md)
+1. **Exercise Deck** (slides/marp/evergreen-software-development-exercise-deck.deck.md)
    - Added Marp and AI provenance front matter.
    - Created one exercise slide for evergreen principles.
    - Created one exercise slide for evergreen failure modes.
@@ -42,7 +42,7 @@ Create a template-aligned exercise slide deck from provided content covering eve
 
 | Artifact                                                                 | Type      | Purpose                      |
 | ------------------------------------------------------------------------ | --------- | ---------------------------- |
-| Slides/individual-slides/evergreen-software-development-exercise-deck.md | Marp deck | Evergreen training exercises |
+| slides/marp/evergreen-software-development-exercise-deck.deck.md | Marp deck | Evergreen training exercises |
 | ai-logs/2026/03/16/evergreen-exercise-deck-20260316/conversation.md      | Log       | Prompt/response provenance   |
 | ai-logs/2026/03/16/evergreen-exercise-deck-20260316/summary.md           | Summary   | Session resumability         |
 

@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: Slides/individual-slides/exercise-template.md, Slides/individual-slides/exercise-template.pptx, user-provided exercise outlines
-- Targets: Slides/individual-slides/exercise-fork-and-clone-repositories.md
+- Inputs: slides/marp/exercise-template.deck.md, slides/exercise-template.pptx, user-provided exercise outlines
+- Targets: slides/marp/exercise-fork-and-clone-repositories.deck.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md, .github/instructions/marp-slides.instructions.md, .github/instructions/ai-assisted-output.instructions.md
 
 ## Exchanges
@@ -20,7 +20,7 @@
 [2026-03-22T00:00:00Z] johnmillerATcodemag-com
 
 ```text
-create an exercise marp slide deck using the Slides\individual-slides\exercise-template.pptx template for the provided repository fork/clone exercises
+create an exercise marp slide deck using the slides\exercise-template.pptx template for the provided repository fork/clone exercises
 ```
 
 [2026-03-22T00:05:00Z] openai/gpt-5.3-codex@unknown
@@ -47,7 +47,7 @@ Added ai-log files and prepared a Notable Artifacts README entry linking the new
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-fork-and-clone-repositories.md` - Three-slide exercise deck for repository setup and forking workflows
+- `slides/marp/exercise-fork-and-clone-repositories.deck.md` - Three-slide exercise deck for repository setup and forking workflows
 - `ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/conversation.md` - Conversation transcript for provenance
 - `ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/summary.md` - Session summary for resumability
 

@@ -14,7 +14,7 @@ Create an exercise slide from the existing exercise template for Lab 2: Test Cov
 
 ### Primary Deliverables
 
-1. **Lab 2 Exercise Slide** (Slides/individual-slides/lab2-test-coverage-improvement-exercise.md)
+1. **Lab 2 Exercise Slide** (slides/marp/lab2-test-coverage-improvement-exercise.deck.md)
    - Added Marp front matter and AI provenance metadata.
    - Structured content to match the exercise template pattern.
    - Included speaker notes with prerequisites and key learning point.
@@ -41,7 +41,7 @@ Create an exercise slide from the existing exercise template for Lab 2: Test Cov
 
 | Artifact                                                                            | Type       | Purpose                       |
 | ----------------------------------------------------------------------------------- | ---------- | ----------------------------- |
-| Slides/individual-slides/lab2-test-coverage-improvement-exercise.md                 | Marp slide | Hands-on Lab 2 exercise slide |
+| slides/marp/lab2-test-coverage-improvement-exercise.deck.md                 | Marp slide | Hands-on Lab 2 exercise slide |
 | ai-logs/2026/03/17/lab2-test-coverage-improvement-exercise-20260317/conversation.md | Log        | Prompt/response provenance    |
 | ai-logs/2026/03/17/lab2-test-coverage-improvement-exercise-20260317/summary.md      | Summary    | Session resumability          |
 

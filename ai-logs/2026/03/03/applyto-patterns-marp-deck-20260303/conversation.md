@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: existing content on applyTo patterns, marp-slides.instructions.md, repository structure
-- Targets: Slides/individual-slides/instruction-file-applyto-patterns.md
+- Targets: slides/marp/instruction-file-applyto-patterns.deck.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md, .github/instructions/marp-slides.instructions.md
 
 ## Exchanges
@@ -61,7 +61,7 @@ Created comprehensive Marp presentation deck with:
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/instruction-file-applyto-patterns.md` - Comprehensive Marp presentation deck explaining applyTo patterns with full speaker notes
+- `slides/marp/instruction-file-applyto-patterns.deck.md` - Comprehensive Marp presentation deck explaining applyTo patterns with full speaker notes
 - `ai-logs/2026/03/03/applyto-patterns-marp-deck-20260303/conversation.md` - This conversation log
 - `ai-logs/2026/03/03/applyto-patterns-marp-deck-20260303/summary.md` - Session summary
 

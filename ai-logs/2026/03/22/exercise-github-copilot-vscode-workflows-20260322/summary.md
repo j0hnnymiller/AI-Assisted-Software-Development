@@ -14,7 +14,7 @@ Create a template-aligned Marp exercise deck that packages four GitHub Copilot l
 
 ### Primary Deliverables
 
-1. **GitHub Copilot VS Code Workflows Exercise Deck** (`Slides/individual-slides/exercise-github-copilot-vscode-workflows.md`)
+1. **GitHub Copilot VS Code Workflows Exercise Deck** (`slides/marp/exercise-github-copilot-vscode-workflows.deck.md`)
    - Four exercise slides created from provided content
    - Covers onboarding, context management, chat workflow, and Copilot modes
    - Includes structured facilitator notes for delivery guidance and pacing
@@ -51,7 +51,7 @@ Create a template-aligned Marp exercise deck that packages four GitHub Copilot l
 
 | Artifact                                                                               | Type          | Purpose                                |
 | -------------------------------------------------------------------------------------- | ------------- | -------------------------------------- |
-| `Slides/individual-slides/exercise-github-copilot-vscode-workflows.md`                 | Marp markdown | Deliver four foundational Copilot labs |
+| `slides/marp/exercise-github-copilot-vscode-workflows.deck.md`                 | Marp markdown | Deliver four foundational Copilot labs |
 | `ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/conversation.md` | Log           | Preserve chat provenance               |
 | `ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/summary.md`      | Summary       | Provide resumable session context      |
 
@@ -77,7 +77,7 @@ Create a template-aligned Marp exercise deck that packages four GitHub Copilot l
 
 ✅ AI-generated metadata included in artifact front matter
 ✅ Conversation log and summary created under `ai-logs`
-✅ Exercise deck placed in `Slides/individual-slides`
+✅ Exercise deck placed in `slides/marp`
 ⚠️ PPTX export not executed in this session
 
 ## Chat Metadata

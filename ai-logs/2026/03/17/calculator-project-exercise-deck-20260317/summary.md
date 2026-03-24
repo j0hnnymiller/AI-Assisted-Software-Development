@@ -14,7 +14,7 @@ Create a full exercise slide deck using the existing exercise template structure
 
 ### Primary Deliverables
 
-1. **Exercise Deck** (Slides/individual-slides/calculator-project-exercise-deck.md)
+1. **Exercise Deck** (slides/marp/calculator-project-exercise-deck.deck.md)
    - Added Marp and provenance front matter.
    - Created one exercise slide per topic area.
    - Kept consistent sections: Duration, Objectives, Activities, Success Criteria, and notes.
@@ -41,7 +41,7 @@ Create a full exercise slide deck using the existing exercise template structure
 
 | Artifact                                                                     | Type      | Purpose                                   |
 | ---------------------------------------------------------------------------- | --------- | ----------------------------------------- |
-| Slides/individual-slides/calculator-project-exercise-deck.md                 | Marp deck | Complete calculator project exercise deck |
+| slides/marp/calculator-project-exercise-deck.deck.md                 | Marp deck | Complete calculator project exercise deck |
 | ai-logs/2026/03/17/calculator-project-exercise-deck-20260317/conversation.md | Log       | Prompt/response provenance                |
 | ai-logs/2026/03/17/calculator-project-exercise-deck-20260317/summary.md      | Summary   | Session resumability                      |
 

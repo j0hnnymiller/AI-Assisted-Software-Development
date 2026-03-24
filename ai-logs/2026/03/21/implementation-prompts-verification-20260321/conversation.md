@@ -10,7 +10,7 @@
 ## Context
 
 - Inputs: `past-class-recordings/2026-02/AI-Assisted Software Development with GitHub Copilot (Thu Afternoon)-summary.md`, `README.md`
-- Targets: `Slides/individual-slides/implementation-prompts-verification.md`
+- Targets: `slides/marp/implementation-prompts-verification.deck.md`
 - Constraints/Policies: `.github/instructions/marp-slides.instructions.md`, `.github/instructions/slide-pipeline.instructions.md`, `.github/instructions/ai-assisted-output.instructions.md`, `.github/instructions/copilot-instructions.md`
 
 ## Exchanges
@@ -82,7 +82,7 @@ Created a new Marp deck for Section 8, added the required ai-log conversation an
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/implementation-prompts-verification.md` - Marp deck explaining how slice-specific prompt files drive implementation, verification, and stakeholder demonstrations
+- `slides/marp/implementation-prompts-verification.deck.md` - Marp deck explaining how slice-specific prompt files drive implementation, verification, and stakeholder demonstrations
 - `ai-logs/2026/03/21/implementation-prompts-verification-20260321/conversation.md` - Conversation log for the deck creation chat
 - `ai-logs/2026/03/21/implementation-prompts-verification-20260321/summary.md` - Resumable summary for the deck creation chat
 - `README.md` - Notable Artifacts entry for the new deck

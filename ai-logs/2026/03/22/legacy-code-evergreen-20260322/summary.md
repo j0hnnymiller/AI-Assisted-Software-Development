@@ -1,6 +1,6 @@
 # Summary
 
-Created a new Marp deck for the legacy code and evergreen code topic at `Slides\individual-slides\legacy-code-evergreen.md`.
+Created a new Marp deck for the legacy code and evergreen code topic at `slides\marp\legacy-code-evergreen.deck.md`.
 
 The deck includes:
 
@@ -11,4 +11,4 @@ The deck includes:
 
 Important context:
 
-- An untracked file named `Slides\individual-slides\understanding-legacy-code.md` already existed, so a new filename was used to avoid overwriting unrelated work.
+- An untracked file named `slides\marp\understanding-legacy-code.deck.md` already existed, so a new filename was used to avoid overwriting unrelated work.

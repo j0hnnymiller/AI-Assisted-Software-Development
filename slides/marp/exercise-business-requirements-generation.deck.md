@@ -4,7 +4,7 @@ model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
 chat_id: "business-requirements-generation-exercise-20260321"
 prompt: |
-  create an exercise marp slide using the Slides\individual-slides\exercise-template.pptx template for the following:
+  create an exercise marp slide using the slides\exercise-template.pptx template for the following:
 
   ## Section 2: Business Requirements Generation Exercise (Duration: 00:17:04) [x]
 

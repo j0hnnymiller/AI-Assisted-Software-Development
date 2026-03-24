@@ -59,6 +59,10 @@ style: |
   }
 ---
 
+<!-- _class: lead -->
+
+# Intro
+
 ---
 
 ## John Michael Miller
@@ -73,8 +77,6 @@ style: |
 - Email: [john.miller@codemag.com](mailto:john.miller@codemag.com)
 - Blog: [codemag.com/blog/AIPractitioner](https://codemag.com/blog/AIPractitioner)
 - [AI Practitioner Resources](https://codemag.com/aipractitioner)
-
-_Merged from: `_Welcome and Introductions.pptx`, `_Welcome-and-introductions.pptx`_
 
 ---
 
@@ -92,10 +94,6 @@ Day One: Outline the day's goals and emphasize participation and hands-on exerci
 
 ---
 
-_Merged from: `_Welcome and Introductions.pptx`, `_Welcome-and-introductions.pptx`_
-
----
-
 ## About CODE
 
 ![bg contain](images/CODE-Group.png)
@@ -103,6 +101,12 @@ _Merged from: `_Welcome and Introductions.pptx`, `_Welcome-and-introductions.ppt
 ::: notes
 CODE is a custom software company, a staff augmentation company, CODE Magazine for software developers, and training like this webinar. We've been in business for 30 years and the magazine just hit its 25th anniversary. Visit the website at https://www.codemag.com/ for more details.
 :::
+
+---
+
+<!-- _class: lead -->
+
+# Module 1 - AIASD
 
 ---
 
@@ -339,6 +343,10 @@ CODE is a custom software company, a staff augmentation company, CODE Magazine f
 - Preserves essential human responsibilities: design, validation, ethical oversight
 
 **The Future**: Not abandoning programming, but refining it—making it more accessible and efficient while keeping human creativity and judgment at the center.
+
+---
+
+## The AI Revolution?
 
 What hasn't changed and what has.
 
@@ -582,6 +590,14 @@ Prompt-First is about interfaces; AI-First is about the entire workflow.
 End with this summary to reinforce the distinction.
 It's the cleanest way to remember the relationship.
 :::
+
+---
+
+<!-- _class: lead -->
+
+# Module 2 - Intro to Copilot
+
+---
 
 ## Repository and Tool Setup
 
@@ -868,6 +884,12 @@ Activities
 | Builder.io / Builder Code Editor | AI-enhanced coding environment with integrated assistants               | Multiple AI integrations depending on setup                          | Strong web-dev focus; modern AI-native UX                                                   | Not a general-purpose IDE                                                         |
 | Code-B Editors                   | Predictive code generation, debugging, and review                       | Multiple AI models depending on configuration                        | Strong AI-centric workflows; optimized for speed                                            | Less mainstream; smaller ecosystem                                                |
 | Claude Code                      | Terminal-first AI coding assistant; autonomous repo-wide reasoning      | Latest models from Anthropic and other via configuration             | Exceptional multi-file context handling; ideal for agentic workflows and automated patching | Not a GUI IDE; best suited for terminal-centric development and large codebases   |
+
+---
+
+<!-- _class: lead -->
+
+# Module 3 - Vibbing
 
 ---
 
@@ -1609,6 +1631,12 @@ This exercise builds confidence in orchestrating multiple models as collaborator
 
 ---
 
+<!-- _class: lead -->
+
+# Module 4 - Adding AI Guardrails
+
+---
+
 ## Adding AI Guardrails
 
 What are instructions, prompts, and Agents
@@ -2050,7 +2078,22 @@ Purpose: Define “how” AI should work, not “what” to do
 
 ## Instruction File Structure
 
---- description: Azure best practices for AI development applyTo: "\*\*" # File pattern scope --- # Core Instructions - Use Azure Tools when handling Azure requests - Follow security best practices - Implement proper error handling - Generate comprehensive documentation # Code Generation Rules - Write tests before implementation - Use dependency injection patterns - Follow naming conventions - Include proper logging
+```markdown
+---
+description: Azure best practices for AI development
+applyTo: "**" # File pattern scope
+---
+
+- Use Azure Tools when handling Azure requests
+- Follow security best practices
+- Implement proper error handling
+- Generate comprehensive documentation
+
+- Write tests before implementation
+- Use dependency injection patterns
+- Follow naming conventions
+- Include proper logging
+```
 
 ---
 
@@ -2082,6 +2125,8 @@ Instructions that conflict with prompt files
 Hardcoded values instead of parameters
 
 ---
+
+## 🎯 Instruction File `applyTo` Patterns
 
 **Understanding Glob Pattern Matching**
 
@@ -2240,7 +2285,7 @@ File extension matching is probably the most common pattern you'll use. The key 
 Limit instructions to specific directories:
 
 ```yaml
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 
 applyTo: "src/Features/**/*.cs"
 
@@ -2258,11 +2303,11 @@ Directory-specific patterns are crucial for organizing large codebases. They let
 
 **Breaking down the syntax**:
 
-- "Slides/individual-slides/**" - Note there's no leading slash or asterisks. This matches the specific directory path, then /** means everything underneath it
+- "slides/marp/**" - Note there's no leading slash or asterisks. This matches the specific directory path, then /** means everything underneath it
 - "src/Features/\*_/_.cs" - Combines directory path with file extension filter
 - The pattern is always relative to the repository root
 
-**Real-world example from this repo**: The marp-slides.instructions.md uses "Slides/individual-slides/\*\*" because those formatting rules should only apply to presentation slides, not to other markdown files like README.md or documentation.
+**Real-world example from this repo**: The marp-slides.instructions.md uses "slides/marp/\*\*" because those formatting rules should only apply to presentation slides, not to other markdown files like README.md or documentation.
 
 **Another example**: You might have vertical-slice.instructions.md with "src/Features/\*_/_.cs" so those architectural patterns only apply to feature code, not to infrastructure or configuration code.
 
@@ -2340,7 +2385,7 @@ applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
 
 applyTo: "**/*.{md,txt}"
 
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 
 applyTo: "**/*.prompt.md"
 ```
@@ -2408,7 +2453,7 @@ These are actual examples from the AI-Assisted-Software-Development-Course repos
 ```yaml
 applyTo: "src/**/*.{cs,ts,js}"
 
-applyTo: "Slides/individual-slides/**"
+applyTo: "slides/marp/**"
 ```
 
 ::: notes
@@ -2462,7 +2507,7 @@ The pattern should make the instruction's purpose obvious at a glance.
 
 ```yaml
 ❌ applyTo: "**" # For slide formatting
-✅ applyTo: "Slides/**"
+✅ applyTo: "slides/**"
 ```
 
 **Pitfall 2: Too Narrow**
@@ -2712,7 +2757,7 @@ These four patterns cover 95% of real-world use cases. Let me give you concrete 
    - Example: Vertical slice could apply to C#, TypeScript, Python features
 
 3. **Directory scope `directory/**`\*\*:
-   - Slide formatting (Slides/\*)
+   - Slide formatting (slides/\*)
    - API documentation (docs/api/\*\*)
    - Feature isolation (src/Features/\*\*)
    - Test organization (tests/\*\*)
@@ -2871,6 +2916,8 @@ Thank you all for your attention. The applyTo pattern system might seem simple o
 **Tone**: Encouraging and supportive - this is about continuous improvement
 :::
 
+---
+
 ## Core Instructions
 
 | Instruction File                         | Purpose                                                         |
@@ -2880,6 +2927,12 @@ Thank you all for your attention. The applyTo pattern system might seem simple o
 | instruction-files.instructions.md        | Guidance for generating instruction files                       |
 | prompt-file.instructions.md              | Guidance for generating prompt files                            |
 | instruction-prompt-files.instructions.md | Guidance for generating prompts that generate instruction files |
+
+---
+
+<!-- _class: lead -->
+
+# Module 5 - Managing Context
 
 ---
 
@@ -2996,3 +3049,7 @@ For example: use a reasoning-heavy model for designing a module, then switch to 
 :::
 
 ---
+
+<!-- _class: lead -->
+
+# Module 6 - Copilot for Teams

@@ -17,14 +17,14 @@ Create a Marp deck explaining the class content for:
 ## Actions Taken
 
 1. Reviewed existing slide naming patterns and nearby vertical-slice decks.
-2. Chose a non-conflicting filename: `Slides/individual-slides/vertical-slice-implementation-webcat.md`.
+2. Chose a non-conflicting filename: `slides/marp/vertical-slice-implementation-webcat.deck.md`.
 3. Authored a Marp deck with provenance metadata and `::: notes` for every slide.
 4. Added a Mermaid workflow diagram to show the implementation loop from slice selection through verification.
 5. Created provenance log artifacts and added a README entry for the new deck.
 
 ## Files Created or Updated
 
-- `Slides/individual-slides/vertical-slice-implementation-webcat.md`
+- `slides/marp/vertical-slice-implementation-webcat.deck.md`
 - `ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/conversation.md`
 - `ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/summary.md`
 - `README.md`

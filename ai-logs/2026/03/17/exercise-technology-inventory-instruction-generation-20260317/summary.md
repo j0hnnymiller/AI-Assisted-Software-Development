@@ -14,7 +14,7 @@ Create an exercise Marp deck using the repository exercise template with the tit
 
 ### Primary Deliverables
 
-1. **Exercise Deck** (`Slides/individual-slides/exercise-technology-inventory-instruction-generation.md`)
+1. **Exercise Deck** (`slides/marp/exercise-technology-inventory-instruction-generation.deck.md`)
    - Created a template-aligned exercise slide with duration, objectives, activities, and success criteria
    - Added comprehensive speaker notes in required `::: notes` format
    - Included full AI provenance metadata in front matter
@@ -27,7 +27,7 @@ Create an exercise Marp deck using the repository exercise template with the tit
 
 ### Secondary Work
 
-- Matched exercise style to existing deck patterns in `Slides/individual-slides/`
+- Matched exercise style to existing deck patterns in `slides/marp/`
 - Structured activities for parallel execution workflow and conflict resolution
 
 ## Key Decisions
@@ -46,7 +46,7 @@ Create an exercise Marp deck using the repository exercise template with the tit
 
 | Artifact                                                                                           | Type       | Purpose                                                          |
 | -------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------- |
-| `Slides/individual-slides/exercise-technology-inventory-instruction-generation.md`                 | Marp slide | Exercise content for inventory + instruction-generation workflow |
+| `slides/marp/exercise-technology-inventory-instruction-generation.deck.md`                 | Marp slide | Exercise content for inventory + instruction-generation workflow |
 | `ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/conversation.md` | Log        | Provenance transcript                                            |
 | `ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/summary.md`      | Summary    | Resumable chat outcome                                           |
 

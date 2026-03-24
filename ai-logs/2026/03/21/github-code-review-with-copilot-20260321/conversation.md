@@ -14,11 +14,11 @@ Create a Marp deck explaining Section 4, GitHub Code Review with Copilot, includ
 
 ## Assistant Work Summary
 
-Authored a classroom-oriented Marp deck at `Slides/individual-slides/github-code-review-with-copilot.md` aligned to repository slide conventions. The deck explains the Copilot review workflow, summarizes the review findings from PR `#4`, distinguishes code correctness issues from compliance and cleanup concerns, and closes with guidance on tightening instruction files based on review output. Added required provenance log artifacts and updated the repository catalog in `README.md`.
+Authored a classroom-oriented Marp deck at `slides/marp/github-code-review-with-copilot.deck.md` aligned to repository slide conventions. The deck explains the Copilot review workflow, summarizes the review findings from PR `#4`, distinguishes code correctness issues from compliance and cleanup concerns, and closes with guidance on tightening instruction files based on review output. Added required provenance log artifacts and updated the repository catalog in `README.md`.
 
 ## Artifacts Created
 
-- `Slides/individual-slides/github-code-review-with-copilot.md`
+- `slides/marp/github-code-review-with-copilot.deck.md`
 - `ai-logs/2026/03/21/github-code-review-with-copilot-20260321/conversation.md`
 - `ai-logs/2026/03/21/github-code-review-with-copilot-20260321/summary.md`
 

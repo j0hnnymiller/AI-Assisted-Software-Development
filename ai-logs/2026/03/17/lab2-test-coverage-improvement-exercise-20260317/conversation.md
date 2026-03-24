@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: Slides/individual-slides/exercise-template.md, Lab 2 content from Labs/Day1.2-Afternoon-HandsOn-Labs.md
-- Targets: Slides/individual-slides/lab2-test-coverage-improvement-exercise.md
+- Inputs: slides/marp/exercise-template.deck.md, Lab 2 content from Labs/Day1.2-Afternoon-HandsOn-Labs.md
+- Targets: slides/marp/lab2-test-coverage-improvement-exercise.deck.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md
 
 ## Exchanges
@@ -33,7 +33,7 @@ Created a new Marp exercise slide with Lab 2 objectives, activities, success cri
 
 **Artifacts Produced**:
 
-- Slides/individual-slides/lab2-test-coverage-improvement-exercise.md - New Lab 2 exercise slide.
+- slides/marp/lab2-test-coverage-improvement-exercise.deck.md - New Lab 2 exercise slide.
 - ai-logs/2026/03/17/lab2-test-coverage-improvement-exercise-20260317/conversation.md - Conversation log.
 - ai-logs/2026/03/17/lab2-test-coverage-improvement-exercise-20260317/summary.md - Session summary.
 

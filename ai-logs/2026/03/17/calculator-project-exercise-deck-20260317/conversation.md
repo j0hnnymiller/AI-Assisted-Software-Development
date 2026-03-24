@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: Slides/individual-slides/exercise-template.md, user-provided multi-exercise calculator lab content
-- Targets: Slides/individual-slides/calculator-project-exercise-deck.md
+- Inputs: slides/marp/exercise-template.deck.md, user-provided multi-exercise calculator lab content
+- Targets: slides/marp/calculator-project-exercise-deck.deck.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md, .github/instructions/marp-slides.instructions.md
 
 ## Exchanges
@@ -33,7 +33,7 @@ Created a multi-slide Marp exercise deck with one slide per exercise, template-a
 
 **Artifacts Produced**:
 
-- Slides/individual-slides/calculator-project-exercise-deck.md - Multi-exercise slide deck.
+- slides/marp/calculator-project-exercise-deck.deck.md - Multi-exercise slide deck.
 - ai-logs/2026/03/17/calculator-project-exercise-deck-20260317/conversation.md - Conversation log.
 - ai-logs/2026/03/17/calculator-project-exercise-deck-20260317/summary.md - Session summary.
 

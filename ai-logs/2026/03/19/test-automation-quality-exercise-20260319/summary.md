@@ -14,7 +14,7 @@ Create a Marp exercise slide for "Strengthening Test Automation & Code Quality" 
 
 ### Primary Deliverables
 
-1. **Exercise Slide** (`Slides/individual-slides/exercise-test-automation-quality.md`)
+1. **Exercise Slide** (`slides/marp/exercise-test-automation-quality.deck.md`)
    - 20-minute exercise focused on test automation and code quality
    - 4 clear learning objectives
    - 6 structured activities with detailed steps
@@ -59,7 +59,7 @@ Create a Marp exercise slide for "Strengthening Test Automation & Code Quality" 
 
 | Artifact                                                       | Type       | Purpose                                                      |
 | -------------------------------------------------------------- | ---------- | ------------------------------------------------------------ |
-| `Slides/individual-slides/exercise-test-automation-quality.md` | Marp slide | Exercise slide for test automation and code quality workshop |
+| `slides/marp/exercise-test-automation-quality.deck.md` | Marp slide | Exercise slide for test automation and code quality workshop |
 | `ai-logs/2026/03/19/.../conversation.md`                       | Markdown   | Full conversation transcript with provenance                 |
 | `ai-logs/2026/03/19/.../summary.md`                            | Markdown   | Session summary for resumability                             |
 

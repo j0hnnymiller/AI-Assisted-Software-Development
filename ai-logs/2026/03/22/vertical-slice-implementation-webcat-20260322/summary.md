@@ -2,7 +2,7 @@
 
 ## Outcome
 
-Created `Slides/individual-slides/vertical-slice-implementation-webcat.md`, a Marp deck covering first-slice setup, issue/prompt scope alignment, live coding with Copilot, `webcat-frontend` organization, and verification strategy.
+Created `slides/marp/vertical-slice-implementation-webcat.deck.md`, a Marp deck covering first-slice setup, issue/prompt scope alignment, live coding with Copilot, `webcat-frontend` organization, and verification strategy.
 
 ## Key Decisions
 

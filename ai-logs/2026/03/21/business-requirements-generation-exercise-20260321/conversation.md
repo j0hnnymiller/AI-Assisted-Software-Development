@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: past-class-recordings/2026-02/AI-Assisted Software Development with GitHub Copilot (Thu Afternoon)-summary.md, Slides/individual-slides/exercise-template.md, Slides/individual-slides/exercise-template.pptx, Slides/individual-slides/starting-with-requirements.md
-- Targets: Slides/individual-slides/exercise-business-requirements-generation.md, README.md
+- Inputs: past-class-recordings/2026-02/AI-Assisted Software Development with GitHub Copilot (Thu Afternoon)-summary.md, slides/marp/exercise-template.deck.md, slides/exercise-template.pptx, slides/marp/starting-with-requirements.deck.md
+- Targets: slides/marp/exercise-business-requirements-generation.deck.md, README.md
 - Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md, .github/instructions/copilot-instructions.md, .github/instructions/create-marp-slides.instructions.md, .github/instructions/slide-pipeline.instructions.md
 
 ## Exchanges
@@ -20,7 +20,7 @@
 [2026-03-21T08:40:31.8154189-07:00] johnmillerATcodemag-com
 
 ```text
-create an exercise marp slide using the Slides\individual-slides\exercise-template.pptx template for the following:
+create an exercise marp slide using the slides\exercise-template.pptx template for the following:
 
 ## Section 2: Business Requirements Generation Exercise (Duration: 00:17:04) [x]
 
@@ -59,7 +59,7 @@ create an exercise marp slide using the Slides\individual-slides\exercise-templa
 [2026-03-21T08:47:31.8154189-07:00] openai/gpt-5.4@unknown
 
 ```text
-Created a standalone Marp exercise slide at Slides/individual-slides/exercise-business-requirements-generation.md using the repository's exercise template pattern.
+Created a standalone Marp exercise slide at slides/marp/exercise-business-requirements-generation.deck.md using the repository's exercise template pattern.
 
 The slide captures the branch setup, Product Manager agent usage, instruction-file guidance, clarification points, and independent working block from the session summary. I also added the matching provenance files and a README catalog entry so the artifact is discoverable and traceable.
 ```
@@ -68,7 +68,7 @@ The slide captures the branch setup, Product Manager agent usage, instruction-fi
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-business-requirements-generation.md` - Marp exercise slide for the business requirements generation workshop
+- `slides/marp/exercise-business-requirements-generation.deck.md` - Marp exercise slide for the business requirements generation workshop
 - `ai-logs/2026/03/21/business-requirements-generation-exercise-20260321/conversation.md` - Conversation log for provenance and traceability
 - `ai-logs/2026/03/21/business-requirements-generation-exercise-20260321/summary.md` - Session summary with resumability context
 

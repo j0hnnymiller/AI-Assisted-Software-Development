@@ -64,10 +64,10 @@ Send framed messages over stdio using `Content-Length` headers. The bundled test
 
 ```powershell
 # Generate a PPTX from a manifest
-python .\scripts\generate_pptx.py Slides\aiasd-311-monday.yaml Slides\output\aiasd-311-monday-draft.pptx
+python .\scripts\generate_pptx.py slides\aiasd-311-monday.yaml slides\output\aiasd-311-monday-draft.pptx
 
 # Finalize the generated PPTX locally with PowerPoint COM to force text fitting
-.\scripts\finalize_pptx_local.ps1 -Path Slides\output\aiasd-311-monday-draft.pptx
+.\scripts\finalize_pptx_local.ps1 -Path slides\output\aiasd-311-monday-draft.pptx
 ```
 
 ### Bash Script (Linux/Mac/WSL)

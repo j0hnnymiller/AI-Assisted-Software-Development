@@ -2,7 +2,7 @@
 
 ## Outcome
 
-Created `Slides/individual-slides/effective-prompts-for-technical-debt.md`, a Marp deck covering prompt design for technical debt, GitHub issue workflows, Copilot assignment, and lessons from the live demonstration.
+Created `slides/marp/effective-prompts-for-technical-debt.deck.md`, a Marp deck covering prompt design for technical debt, GitHub issue workflows, Copilot assignment, and lessons from the live demonstration.
 
 ## Key Decisions
 

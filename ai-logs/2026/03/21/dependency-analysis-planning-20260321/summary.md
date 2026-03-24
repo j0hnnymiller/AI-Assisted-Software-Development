@@ -2,11 +2,11 @@
 
 ## Outcome
 
-Created a new Marp deck, `Slides/individual-slides/dependency-analysis-planning.md`, covering dependency graphs, implementation sequencing, critical path identification, and foundational versus dependent features.
+Created a new Marp deck, `slides/marp/dependency-analysis-planning.deck.md`, covering dependency graphs, implementation sequencing, critical path identification, and foundational versus dependent features.
 
 ## Files Added or Updated
 
-- Added `Slides/individual-slides/dependency-analysis-planning.md`
+- Added `slides/marp/dependency-analysis-planning.deck.md`
 - Added `ai-logs/2026/03/21/dependency-analysis-planning-20260321/conversation.md`
 - Added `ai-logs/2026/03/21/dependency-analysis-planning-20260321/summary.md`
 - Updated `README.md`

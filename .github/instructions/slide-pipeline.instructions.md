@@ -15,7 +15,7 @@ task_durations:
 total_duration: "00:15:00"
 ai_log: "ai-logs/2026/03/13/slide-pipeline-spec-20260313/conversation.md"
 source: "johnmillerATcodemag-com"
-applyTo: "Slides/**"
+applyTo: "slides/**"
 ---
 
 # Slide Pipeline Specification
@@ -68,8 +68,8 @@ AI-driven run.
 ## 1. Repository layout
 
 ```
-Slides/
-├── individual-slides/          # Atomic per-topic slide files (one topic per .md)
+slides/
+├── marp/          # Atomic per-topic slide files (one topic per .md)
 │   ├── images/                 # Images referenced by individual slides
 │   └── *.md
 ├── images/                     # Images referenced by the merged deck
@@ -90,7 +90,7 @@ in order, and within each section the ordered set of individual slide files to i
 ### 2.1 Location and naming
 
 ```
-Slides/<course>-<format>-<day>.yaml      e.g.  Slides/aiasd-311-monday.yaml
+slides/<course>-<format>-<day>.yaml      e.g.  slides/aiasd-311-monday.yaml
 ```
 
 ### 2.2 Format
@@ -99,18 +99,18 @@ Slides/<course>-<format>-<day>.yaml      e.g.  Slides/aiasd-311-monday.yaml
 sections:
   - name: "Intro"
     slides:
-      - file: Slides\individual-slides\welcome-to-aiasd.md
+      - file: slides\marp\welcome-to-aiasd.deck.md
         layout: title slide
-      - Slides\individual-slides\john-michael-miller-intro.md
+      - slides\marp\john-michael-miller-intro.deck.md
 
   - name: "Module 1 - AIASD"
     slides:
-      - Slides\individual-slides\whats-the-big-deal.md
-      - Slides\individual-slides\the-ai-revolution.md
+      - slides\marp\whats-the-big-deal.deck.md
+      - slides\marp\the-ai-revolution.deck.md
 
   - name: "Module 2 - Intro to Copilot"
     slides:
-      - Slides\individual-slides\repository-and-tool-setup.md
+      - slides\marp\repository-and-tool-setup.deck.md
 ```
 
 ### 2.3 Rules
@@ -130,7 +130,7 @@ sections:
 
 ## 3. Individual slide file rules
 
-Each `.md` file under `Slides/individual-slides/` must conform to these rules.
+Each `.md` file under `slides/marp/` must conform to these rules.
 The agent validates and reports violations, but does not abort — it logs a warning and
 continues.
 
@@ -139,7 +139,7 @@ continues.
 | Front matter       | Must begin with a valid Marp YAML front-matter block (`---` … `---`)                                                       |
 | H1 headings        | No `# H1` headings in the body                                                                                             |
 | Slide title        | Should contain at least one `## H2` heading in the body so slide titles carry cleanly into the merged deck and PPTX output |
-| Image paths        | Use `images/` (not `../images/`); individual slide previews use `../images/` but the merged deck lives one level up        |
+| Image paths        | Use `images/` because source decks sit beside `slides/marp/images/`; merged output rewrites those references to `marp/images/` |
 | Trailing separator | Must not end with a bare `---`                                                                                             |
 | Encoding           | No vertical-tab (`\x0b`) characters                                                                                        |
 
@@ -220,7 +220,7 @@ After the injected module list slide, the source files for the section are merge
 | ----------------------- | ---------------------------------------------------------------------------------------------------- |
 | Front matter            | Kept from the **first file processed across all sections only**; stripped from every subsequent file |
 | H1 headings             | Removed; any immediately-following italicised provenance line (`_Merged from: …_`) is also removed   |
-| Image paths             | `../images/` rewritten to `images/`                                                                  |
+| Image paths             | `images/` rewritten to `marp/images/`                                                                |
 | Trailing separator      | One trailing `---` (and surrounding blank lines) stripped from each file body                        |
 | Leading separator       | One leading `---` (and surrounding blank lines) stripped from each file body                         |
 | Separator between files | Exactly one `\n\n---\n\n` inserted between consecutive file blocks by the joiner                     |
@@ -269,9 +269,9 @@ Each injected module list slide counts as 1 slide.
 This block repeats for every section. The merged deck begins with the first file's
 front matter and then the first section's block.
 
-> **⚠️ IMPORTANT**: The merged output file (e.g., `Slides/aiasd-311-monday-draft.md`)
+> **⚠️ IMPORTANT**: The merged output file (e.g., `slides/aiasd-311-monday-draft.md`)
 > is a **generated artifact**. Do not manually edit this file. All changes must be made
-> to individual source slide files in `Slides/individual-slides/` or to the manifest YAML
+> to individual source slide files in `slides/marp/` or to the manifest YAML
 > structure. Re-run `.github/copilot/Promptfiles/merge-marp-decks.prompt.md` to regenerate the deck.
 
 ---
@@ -297,7 +297,7 @@ scripts/generate_pptx.py            (existing script invoked by the agent)
 - **🔒 CRITICAL**: Speaker notes on EVERY slide:
   - **Injected slides**: Notes explaining auto-generation and purpose
     - Module list: "Auto-generated course navigation slide showing all modules with current section highlighted"
-  - **Content slides**: Notes showing source file path (e.g., "Source: Slides\\individual-slides\\welcome.md")
+  - **Content slides**: Notes showing source file path (e.g., "Source: slides\\marp\\welcome.md")
 
 ### 7.3 Slide layout mapping
 
@@ -391,9 +391,9 @@ Default values:
 
 | Variable       | Default                                     |
 | -------------- | ------------------------------------------- |
-| `$OUTPUT_FILE` | `Slides/aiasd-311-monday-draft.md`          |
+| `$OUTPUT_FILE` | `slides/aiasd-311-monday-draft.md`          |
 | `$PPTX_SCRIPT` | `scripts/generate_pptx.py`                  |
-| `$PPTX_OUTPUT` | `Slides/output/aiasd-311-monday-draft.pptx` |
+| `$PPTX_OUTPUT` | `slides/output/aiasd-311-monday-draft.pptx` |
 
 ---
 
@@ -412,7 +412,7 @@ Default values:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ 1. Author Slides/individual-slides/<topic>.md                 │
+│ 1. Author slides/marp/<topic>.md                 │
 │    - One topic per file                                        │
 │    - Valid Marp front matter                                   │
 │    - First ## H2 heading = slide title                         │
@@ -421,7 +421,7 @@ Default values:
                               │
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
-│ 2. Edit Slides/aiasd-311-monday.yaml                          │
+│ 2. Edit slides/aiasd-311-monday.yaml                          │
 │    - List sections with names in course order                  │
 │    - List slide files under each section                       │
 └─────────────────────────────┬────────────────────────────────┘
@@ -434,7 +434,7 @@ Default values:
 │      a. Module list slide (all modules; current highlighted)   │
 │      b. Content slides from source files (merged verbatim)     │
 │                                                                │
-│    → Slides/aiasd-311-monday-draft.md                         │
+│    → slides/aiasd-311-monday-draft.md                         │
 └─────────────────────────────┬────────────────────────────────┘
                               │
                               ▼
@@ -444,7 +444,7 @@ Default values:
 │      - Agenda and content slides                               │
 │      - <p14:section> XML groups per section                    │
 │                                                                │
-│    → Slides/output/aiasd-311-monday-draft.pptx                │
+│    → slides/output/aiasd-311-monday-draft.pptx                │
 │        Editable text boxes, bullets, presenter notes           │
 │        Named section groupings visible in PowerPoint           │
 └──────────────────────────────────────────────────────────────┘
@@ -476,7 +476,7 @@ Default values:
 | Module list highlight | Marp renders `**bold**` text using the theme's default bold style, not a custom colour. To use a custom highlight colour, apply a Marp theme with a styled `.highlight` span or adjust the reference PPTX master after generation. |
 | Slide title fallback  | If a source file has no `## H2` heading, the file stem is used as the agenda bullet. Ensure every content file has at least one `## H2` heading.                                                                                   |
 | Empty sections        | Sections with no source files produce only a module list slide and an empty PPTX section group.                                                                                                                                    |
-| Image paths           | Images referenced in individual slides must exist at `Slides/images/` (not only at `Slides/individual-slides/images/`) for the merged deck to render correctly.                                                                    |
+| Image paths           | Images referenced in individual slides must exist at `slides/marp/images/`; the merge step rewrites them to `marp/images/` so the merged deck still renders correctly.                                                  |
 | Working directory     | Run the agent prompt from the repo root: `C:\git\AIASD\AI-Assisted-Software-Development-Course`.                                                                                                                                   |
 
 ---
@@ -499,7 +499,7 @@ Default values:
 
 - [ ] **Speaker Notes Test**: Open PPTX and verify EVERY slide has speaker notes
   - [ ] Module list slides: Note says "Auto-generated course navigation slide..."
-  - [ ] Content slides: Note says "Source: Slides\\individual-slides\\<filename>.md"
+  - [ ] Content slides: Note says "Source: slides\\marp\\<filename>.md"
 
 - [ ] **Code Verification**: Confirm the following patterns exist in `generate_pptx.py`
   - [ ] Loop uses `enumerate(sections_cfg)` to get section index
@@ -516,12 +516,12 @@ Use this minimal manifest for regression testing:
 sections:
   - name: "Intro"
     slides:
-      - Slides\individual-slides\welcome-to-aiasd.md
-      - Slides\individual-slides\john-michael-miller-intro.md
+      - slides\marp\welcome-to-aiasd.deck.md
+      - slides\marp\john-michael-miller-intro.deck.md
 
   - name: "Module 1 - Test"
     slides:
-      - Slides\individual-slides\whats-the-big-deal.md
+      - slides\marp\whats-the-big-deal.deck.md
 ```
 
 Expected PPTX slide order:
@@ -537,7 +537,7 @@ Expected PPTX slide order:
 
 | Scenario                              | Approach                                                                                                                                      |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add a new slide file                  | Create `Slides/individual-slides/<topic>.md`; add its path to the YAML manifest under the appropriate section                                 |
+| Add a new slide file                  | Create `slides/marp/<topic>.md`; add its path to the YAML manifest under the appropriate section                                 |
 | Add a new section                     | Append a `- name: … slides: …` block to the YAML manifest; all module list slides update automatically on next run                            |
 | Reorder sections                      | Change the order in the YAML manifest; module list slides re-generate in the new order                                                        |
 | Skip module list slides for a section | Add a manifest flag (e.g. `no_injected_slides: true`) and update the prompt to honour it                                                      |

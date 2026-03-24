@@ -9,8 +9,8 @@
 
 ## Context
 
-- Inputs: Slides/individual-slides/exercise-template.md, Slides/individual-slides/exercise-template.pptx, user-provided Copilot lab outlines
-- Targets: Slides/individual-slides/exercise-github-copilot-vscode-workflows.md
+- Inputs: slides/marp/exercise-template.deck.md, slides/exercise-template.pptx, user-provided Copilot lab outlines
+- Targets: slides/marp/exercise-github-copilot-vscode-workflows.deck.md
 - Constraints/Policies: .github/instructions/create-marp-slides.instructions.md, .github/instructions/marp-slides.instructions.md, .github/instructions/ai-assisted-output.instructions.md
 
 ## Exchanges
@@ -20,7 +20,7 @@
 [2026-03-22T00:00:00Z] johnmillerATcodemag-com
 
 ```text
-create an exercise marp slide deck using the Slides\individual-slides\exercise-template.pptx template for the provided Copilot labs
+create an exercise marp slide deck using the slides\exercise-template.pptx template for the provided Copilot labs
 ```
 
 [2026-03-22T00:12:00Z] openai/gpt-5.3-codex@unknown
@@ -47,7 +47,7 @@ Added conversation and summary logs and prepared a README Notable Artifacts entr
 
 **Artifacts Produced**:
 
-- `Slides/individual-slides/exercise-github-copilot-vscode-workflows.md` - Four-slide Copilot exercise deck for foundational hands-on labs
+- `slides/marp/exercise-github-copilot-vscode-workflows.deck.md` - Four-slide Copilot exercise deck for foundational hands-on labs
 - `ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/conversation.md` - Conversation transcript for provenance
 - `ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/summary.md` - Session summary for resumability
 
