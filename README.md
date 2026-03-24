@@ -93,6 +93,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Notable Artifacts
 
+- **Commit Workspace Changes in Logical Groups Prompt** ([`.github/prompts/commit-workspace-changes-logical-groups.prompt.md`](.github/prompts/commit-workspace-changes-logical-groups.prompt.md))
+  - Reusable operational prompt that inspects workspace diffs, creates intent-based commit groupings, stages each group safely, and emits focused commit messages
+  - Includes guardrails for non-destructive Git usage, staged-file validation steps, and a standardized completion report format
+  - Provenance: [Chat log](ai-logs/2026/03/24/commit-workspace-changes-logical-groups-20260324/conversation.md) | [Summary](ai-logs/2026/03/24/commit-workspace-changes-logical-groups-20260324/summary.md)
+
 - **Managing Instruction Files & Context Windows** ([`Slides/individual-slides/managing-instruction-files-context-windows.md`](Slides/individual-slides/managing-instruction-files-context-windows.md))
   - 7-slide Marp deck covering instruction sharing strategy, scoped application patterns, context monitoring, and token tracking
   - Includes an operational workflow blueprint and implementation checklist
