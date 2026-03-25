@@ -19,7 +19,7 @@ ai_log: "ai-logs/2026/02/06/vscode-agents-slides-20260206/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
 
-# VS Code Copilot Agents Overview
+## VS Code Copilot Agents Overview
 
 ### Autonomous AI-Powered Coding Assistance
 
@@ -42,11 +42,11 @@ Welcome to this presentation on VS Code Copilot Agents. This session will introd
 
 **Agents handle complete coding tasks end-to-end, not just suggestions**
 
-- 🔍 **Understand** your project context
-- ✏️ **Make changes** across multiple files
-- ⚡ **Execute commands** and run tests
-- 🔄 **Adapt** based on results and feedback
-- 🎯 **Self-correct** when errors occur
+- **Understand** your project context
+- **Make changes** across multiple files
+- **Execute commands** and run tests
+- **Adapt** based on results and feedback
+- **Self-correct** when errors occur
 
 ::: notes
 Duration ~00:04
@@ -95,6 +95,8 @@ This comparison table helps audience understand when to use each agent type.
 
 ---
 
+<!-- layout: two columns -->
+
 ## Local Agents: Interactive & Immediate
 
 **Best for:** Real-time collaboration and exploratory tasks
@@ -106,6 +108,8 @@ This comparison table helps audience understand when to use each agent type.
 - All VS Code tools and extensions
 - Custom agent personas (reviewer, tester, etc.)
 - BYOK model support
+
+::: column
 
 ❌ **Limitations:**
 
@@ -141,6 +145,8 @@ Local agents are perfect for brainstorming and tasks requiring immediate feedbac
 
 ---
 
+<!-- layout: two columns -->
+
 ## Background Agents: Autonomous Execution
 
 **Best for:** Well-defined tasks without interruption
@@ -151,6 +157,8 @@ Local agents are perfect for brainstorming and tasks requiring immediate feedbac
 - Git worktree isolation
 - No workspace conflicts
 - Custom agent personas
+
+::: column
 
 ❌ **Limitations:**
 
@@ -189,6 +197,8 @@ Background agents excel at implementing well-defined plans without interrupting 
 
 ---
 
+<!-- layout: two columns -->
+
 ## Cloud Agents: Team Collaboration
 
 **Best for:** Team workflows and pull request integration
@@ -200,6 +210,8 @@ Background agents excel at implementing well-defined plans without interrupting 
 - Remote infrastructure scaling
 - Partner agent options (Claude, Codex)
 - MCP server access in cloud
+
+::: column
 
 ❌ **Limitations:**
 
@@ -242,11 +254,11 @@ Cloud agents bridge the gap between AI assistance and team collaboration workflo
 
 **Unified Chat View for all agent types**
 
-- 📊 **Sessions List:** Recent activity, status, file changes
-- 🔄 **Hand-off Support:** Delegate between agent types
-- 📂 **Organized View:** Compact or side-by-side modes
-- 🎯 **Status Indicators:** Unread messages, in-progress work
-- 🗂️ **Archive/Delete:** Keep workspace organized
+- **Sessions List:** Recent activity, status, file changes
+- **Hand-off Support:** Delegate between agent types
+- **Organized View:** Compact or side-by-side modes
+- **Status Indicators:** Unread messages, in-progress work
+- **Archive/Delete:** Keep workspace organized
 
 ::: notes
 Duration ~00:04
@@ -333,11 +345,11 @@ This slide covers the practical aspects of getting started with agents.
 
 **Track and validate agent work**
 
-- 📈 **File Change Statistics** in session details
-- 🔍 **Diff Editor** for individual files
-- 👀 **Multi-file Diff** for complete review
-- ✅ **Apply to Workspace** options
-- 🌿 **Branch Checkout** for cloud agents
+- **File Change Statistics** in session details
+- **Diff Editor** for individual files
+- **Multi-file Diff** for complete review
+- **Apply to Workspace** options
+- **Branch Checkout** for cloud agents
 
 ::: notes
 Duration ~00:04
@@ -379,15 +391,14 @@ This slide addresses a critical concern: how to safely review and integrate agen
 
 **Leverage each agent type's strengths**
 
-```
-📋 Local Agent (Planning)
+Local Agent (Planning)
     ⬇ Hand-off
-🤖 Background Agent (Implementation)
+Background Agent (Implementation)
     ⬇ Delegate
-☁️ Cloud Agent (Team Review)
-```
+Cloud Agent (Team Review)
 
-**Example:** Planning → Proof of Concept → Production Implementation
+**Example:**
+  Planning → Proof of Concept → Production Implementation
 
 ::: notes
 Duration ~00:05
@@ -432,14 +443,14 @@ This slide demonstrates the power of agent collaboration and specialization.
 
 ## Key Takeaways & Next Steps
 
-**🚀 Getting Started:**
+**Getting Started:**
 
 - Enable agents in VS Code settings (`chat.agent.enabled`)
 - Start with local agents for exploration
 - Try background agents for focused tasks
 - Use cloud agents for team collaboration
 
-**📚 Resources:**
+**Resources:**
 
 - [Agents Tutorial](https://code.visualstudio.com/docs/copilot/agents/agents-tutorial)
 - [Custom Agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
@@ -485,51 +496,3 @@ This closing slide provides clear next steps and resources for continued learnin
 - Create team guidelines for agent usage
 :::
 
----
-
-## Questions & Discussion
-
-**Thank you!**
-
-Want to explore specific agent workflows for your team?
-
-::: notes
-Duration ~00:15
-
-**Q&A Session Management:**
-
-**Anticipated questions and responses:**
-
-1. **"How do agents compare to traditional Copilot?"**
-- Traditional Copilot: Suggestions and completions
-- Agents: Complete task execution and multi-step workflows
-
-2. **"What about data privacy and security?"**
-- Local agents: Data stays on your machine
-- Cloud agents: Follow GitHub's privacy policies
-- Enterprise controls available
-
-3. **"Can agents make mistakes?"**
-- Yes, always review agent changes
-- Use diff editors before applying
-- Start with non-critical tasks
-
-4. **"How do I know which agent type to use?"**
-- Refer back to the decision matrix slide
-- Interactive vs autonomous needs
-- Team collaboration requirements
-
-5. **"What if my organization disabled agents?"**
-- Contact your admin
-- May be policy-based restriction
-- Can often be enabled with proper governance
-
-**Session wrap-up:**
-
-- Collect contact information for follow-up questions
-- Share additional resources
-- Suggest pilot projects for interested teams
-- Schedule follow-up sessions if requested
-
-**Time management:**
-:::

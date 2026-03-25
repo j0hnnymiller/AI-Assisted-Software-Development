@@ -16,7 +16,6 @@ sections:
   - name: Instructions vs Prompts vs Custom Chat Modes
     decks:
       - slides\marp\copilot-instruction-files-vs-prompt-files-vs-chatmodes.deck.md
-      - slides\marp\copilot-instruction-control.deck.md
       - slides\marp\ai-development-approaches-comparison.deck.md
 
   - name: Managing Context
@@ -28,9 +27,10 @@ sections:
     decks:
       - slides\marp\custom-agents.deck.md
       - slides\marp\github-copilot-chat-mode-personas.deck.md
-      - slides\marp\_vscode-copilot-agents-overview.deck.md
+      - slides\marp\vscode-copilot-agents-overview.deck.md
       - slides\marp\exercise-create-and-use-custom-agent.deck.md
       - slides\marp\custom-agent-best-practices.deck.md
+      - slides\marp\copilot-instruction-control.deck.md
 
   - name: Skills
     decks:

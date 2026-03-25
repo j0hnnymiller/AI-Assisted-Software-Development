@@ -166,6 +166,8 @@ Objectives
 - Apply intelligent linting and quality gates
 - Validate test adequacy and architectural alignment
 
+::: column
+
 Activities
 
 1. Select a brownfield module or function
@@ -242,6 +244,9 @@ Introduce this module as the backbone of safe AI-assisted development. Testing f
 
 ---
 
+
+
+
 ## Generating Comprehensive Test Suites
 
 AI can help generate:
@@ -261,6 +266,9 @@ Explain that AI accelerates test creation dramatically, but humans still validat
 
 ---
 
+
+
+
 ## Managing Test Suites Over Time
 
 Key Practices
@@ -275,6 +283,9 @@ Test suites age just like code. Without maintenance, they become brittle, noisy,
 :::
 
 ---
+
+
+
 
 ## Test Review & Validation Strategies
 
@@ -293,6 +304,9 @@ AI is excellent at pattern detection and coverage suggestions, but humans valida
 :::
 
 ---
+
+
+
 
 ## Balancing Test Coverage with Maintainability
 
@@ -662,23 +676,27 @@ Canary releases incrementally expand feature exposure. Start with 1% of users—
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Technique 3: Observability Dashboards
 
-**Real-Time Monitoring**
+**Real-time monitoring**
 
 - Feature-specific error rates
-- Latency percentiles (p50, p95, p99)
-- Resource utilization (CPU, memory)
-- User impact metrics (conversion, engagement)
+- Latency percentiles such as p50, p95, p99
+- Resource utilization including CPU and memory
+- User impact metrics such as conversion and engagement
 
-**Essential Alerts**
+**Essential alerts**
 
 - Threshold violations
 - Anomaly detection
-- Comparison against baseline
-- Correlated metrics (multi-signal alerts)
+- Baseline comparisons
+- Correlated multi-signal alerts
 
-**Dashboard Example**
+::: column
+
+**Dashboard example**
 
 ```
 Feature: Payment Processing v2
@@ -694,16 +712,27 @@ Observability is your feedback loop. Without real-time dashboards, production te
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Technique 4: Automated Rollback
 
-**Automated Response to Failures**
+**Automated response to failures**
 
 - Define error budgets per feature
-- Monitor continuously in real-time
-- Auto-disable feature if budget exceeded
-- Alert team for investigation
+- Monitor continuously in real time
+- Auto-disable a feature if the budget is exceeded
+- Alert the team for investigation
 
-**Rollback Conditions**
+**Why automation matters**
+
+- Humans are too slow
+- Response stays consistent
+- Blast radius stays smaller
+- MTTR drops quickly
+
+::: column
+
+**Rollback conditions**
 
 ```yaml
 feature: payment_processing_v2
@@ -713,13 +742,6 @@ error_budget:
   action: disable # auto-disable if exceeded
   notify: [oncall-team, slack-alerts]
 ```
-
-**Why Automation?**
-
-- Humans are too slow
-- Consistent response
-- Limits blast radius
-- Reduces MTTR (Mean Time To Recovery)
 
 ::: notes
 Automated rollback is the safety net. If error rates or latency exceed predefined thresholds, the system disables the feature automatically—no human in the loop. This is critical because production incidents escalate rapidly. The time between "something's wrong" and "customers are affected" is measured in seconds. Automated rollback limits the blast radius and ensures a consistent response. Define your thresholds ahead of time based on historical baselines and capacity planning. The example shows a YAML config: if payment processing v2 exceeds 1% error rate in any 5-minute window, disable it and alert the team. Ask: What's the cost of a two-minute delay in rollback?
@@ -783,6 +805,8 @@ The workflow is simple: continuous monitoring feeds into a real-time evaluation 
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Setting the Right Budget
 
 **Factors to Consider**
@@ -792,13 +816,19 @@ The workflow is simple: continuous monitoring feeds into a real-time evaluation 
 - **Historical Baseline**: What's your current error rate?
 - **Feature Maturity**: New features get tighter budgets
 
-**Budgeting Table Example**
+::: column
 
-| Feature               | Criticality | Budget (errors/5min) | Baseline | Justification              |
-| --------------------- | ----------- | -------------------- | -------- | -------------------------- |
-| Payment Processing    | Critical    | 5                    | 2        | Zero tolerance for revenue |
-| Search Results        | High        | 50                   | 30       | Affects UX, not revenue    |
-| Recommendation Widget | Medium      | 200                  | 150      | Non-blocking, experimental |
+**Budget examples**
+
+- **Payment Processing**
+  Critical, budget `5 errors / 5 min`, baseline `2`.
+  Zero tolerance for revenue-impacting failure.
+- **Search Results**
+  High, budget `50 errors / 5 min`, baseline `30`.
+  Affects UX, but not direct revenue.
+- **Recommendation Widget**
+  Medium, budget `200 errors / 5 min`, baseline `150`.
+  Non-blocking and experimental.
 
 ::: notes
 Not all features deserve the same budget. Payment processing is revenue-critical, so its budget is tight: 5 errors in 5 minutes is the limit. Search is important but not as critical, so it gets a higher budget. Recommendations are experimental and non-blocking, so their budget is loose. The "Baseline" column shows current production error rates; budgets are set relative to baseline with some safety margin. The "Justification" column documents why the budget is what it is—this is crucial for audit trails and future adjustments. Ask the class: What features in your system are truly critical? How would you set their budgets?
@@ -816,29 +846,33 @@ Beta testing is production testing with a human feedback loop. You enable featur
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Beta Testing Implementation
 
-**Building the Beta Pool**
+**Build the beta pool**
 
-- **Internal Users**: Employees, QA team, product managers
-- **External Beta Testers**: Volunteers from customer base
-- **Power Users**: High-engagement users willing to tolerate risk
-- **Segmentation**: Group by role, region, or usage pattern
-
-**Enabling Features**
-
-```python
-if user.in_beta_pool("checkout_redesign"):
-    show_new_checkout()
-else:
-    show_old_checkout()
-```
+- **Internal users** — employees, QA, product managers
+- **External beta testers** — volunteers from the customer base
+- **Power users** — high-engagement users who tolerate some risk
+- **Segmentation** — role, region, or usage pattern
 
 **Instrumentation**
 
 - Track feature usage
 - Log errors and edge cases
-- Collect user feedback (surveys, support tickets)
+- Collect feedback from surveys and support tickets
+
+::: column
+
+**Enable features by cohort**
+
+```python
+if user.in_beta_pool("checkout_redesign"):
+  show_new_checkout()
+else:
+  show_old_checkout()
+```
 
 ::: notes
 Beta testing requires a curated pool of users who are willing to experience new features before general availability. Internal users are the safest starting point—they understand the risks and can report issues effectively. External beta testers add diversity and real-world use cases. The code snippet shows feature-flag logic: if a user is in the beta pool for "checkout_redesign," they see the new version; otherwise, they see the old version. Instrumentation is critical: log everything that happens in the beta path so you can diagnose issues and understand user behavior.
@@ -846,30 +880,34 @@ Beta testing requires a curated pool of users who are willing to experience new 
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Benefits of Beta Testing
 
-**Real-World Validation**
+**Real-world validation**
 
 - Actual users, actual data, actual workflows
 - Validates assumptions under production conditions
 - Exposes edge cases missed in testing
 
-**Early Detection of Issues**
+**Early detection of issues**
 
 - Catch bugs before wide release
 - Identify UX problems from real feedback
 - Discover integration failures at scale
 
-**User Behavior Often Unexpected**
+::: column
 
-- Users interact in ways you didn't anticipate
+**User behavior is often unexpected**
+
+- Users interact in ways you did not anticipate
 - Workflows span multiple sessions or devices
 - Real usage patterns differ from test scenarios
 
-**Reduces Risk of Full-Scale Failure**
+**Reduces full-scale failure risk**
 
-- Limit blast radius to beta pool
-- Iterate and fix before expanding exposure
+- Limit blast radius to the beta pool
+- Iterate before expanding exposure
 - Build confidence incrementally
 
 ::: notes
@@ -904,22 +942,26 @@ The workflow is staged. Start with internal users for rapid feedback and iterati
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Testing in Production: Key Takeaways
 
-**Core Techniques**
+**Core techniques**
 
-- Shadow traffic: Zero-risk production validation
-- Canary releases: Incremental exposure with health checks
-- Observability: Real-time monitoring and alerting
-- Automated rollback: Fast response to failures
-- Error budgets: Formal reliability contracts
-- Beta testing: Real users, limited blast radius
+- Shadow traffic for zero-risk validation
+- Canary releases for incremental exposure
+- Observability for monitoring and alerting
+- Automated rollback for fast response
+- Error budgets for explicit reliability limits
+- Beta testing for real-user feedback
 
-**Mindset Shift**
+::: column
 
-- Production is not a danger zone—it's the ultimate test environment
+**Mindset shift**
+
+- Production is the ultimate test environment
 - Risk is managed, not eliminated
-- Deploy != Release
+- Deploy does not equal release
 - Automation and observability are non-negotiable
 
 ::: notes
@@ -964,41 +1006,39 @@ Open the floor for questions and discussion. Encourage students to share their e
 ## 📂 What Are They?
 
 Instruction Files
-
-- External configuration files that guide Copilot's behavior
-- Define reusable rules, context, or workflows
-  Prompt Files
-- Contain pre-written prompts or templates
-- Provide structured input for consistent outputs
-  Custom Chatmodes
-- Runtime modes that alter Copilot's conversational style
-- Adapt tone, reasoning depth, or interaction model
+  - External configuration files that guide Copilot's behavior
+  - Define reusable rules, context, or workflows
+Prompt Files
+  - Contain pre-written prompts or templates
+  - Provide structured input for consistent outputs
+Custom Chatmodes
+  - Runtime modes that alter Copilot's conversational style
+  - Adapt tone, reasoning depth, or interaction model
 
 ---
 
 ## 🎯 Purpose
 
 Instruction Files
-
-- Standardize behavior across teams/projects
-- Ensure repeatability and compliance
-  Prompt Files
-- Speed up common tasks
-- Reduce prompt engineering overhead
-  Custom Chatmodes
-- Tailor interaction style to user needs
-- Balance between quick answers and deep reasoning
+  - Standardize behavior across teams/projects
+  - Ensure repeatability and compliance
+Prompt Files
+  - Speed up common tasks
+  - Reduce prompt engineering overhead
+Custom Chatmodes
+  - Tailor interaction style to user needs
+  - Balance between quick answers and deep reasoning
 
 ---
 
 ## ⚙️ Scope & Control
 
-| Feature      | Instruction Files | Prompt Files  | Custom Chatmodes   |
-| ------------ | ----------------- | ------------- | ------------------ |
-| Persistence  | Long-term config  | Reusable text | Session-based      |
-| Granularity  | System-level      | Task-level    | Conversation-level |
-| Flexibility  | Medium            | High          | High               |
-| User Control | Admin/Dev         | End-user      | End-user           |
+Feature | Instruction Files | Prompt Files | Custom Chatmodes
+--- | --- | --- | ---
+Persistence | Long-term config | Reusable text | Session-based
+Granularity | System-level | Task-level | Conversation-level
+Flexibility | Medium | High | High
+User Control | Admin/Dev | End-user | End-user
 
 ---
 
@@ -1040,9 +1080,11 @@ This session assumes you're familiar with basic GitHub Copilot usage and have wo
 Every Copilot prompt includes relevant instruction files automatically
 
 ```markdown
+
 ---
-applyTo: "**/*.{ts,js,py}"
----
+
+## applyTo: "\*_/_.{ts,js,py}"
+
 
 ...
 ```
@@ -1109,21 +1151,26 @@ One important caveat: If an instruction file has NO applyTo field, it won't be a
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Prompt Files: Reference, Don't Control
 
-Prompt files execute tasks, they don't control instruction inclusion
+Prompt files execute tasks, but they do not control automatic instruction inclusion.
 
 ```markdown
 <!-- .github/prompts/create-api.prompt.md -->
 
 **CRITICAL**: All AI-generated artifacts MUST comply with
-'.github/instructions/ai-assisted-output.instructions.md'
+`.github/instructions/ai-assisted-output.instructions.md`
 ```
 
-Key Distinction:
-✅ Can reference instruction requirements in content
-❌ Don't control which instructions auto-include
-🎯 The target file's applyTo matching still determines inclusion
+::: column
+
+**Key distinction**
+
+- Can reference instruction requirements in prompt content
+- Cannot decide which instructions auto-include
+- The target file's `applyTo` matching still determines automatic inclusion
 
 ::: notes
 This is a common source of confusion, so let's clarify: prompt files and instruction files serve different purposes and work in different ways.
@@ -1155,24 +1202,24 @@ The prompt metadata can specify output paths, which helps the system know what f
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Chat Modes: Persona, Not Pattern Control
 
-Chat modes create specialized contexts, not instruction filters
+Chat modes create specialized context, not instruction filters.
 
 ```markdown
-# .github/chatmodes/security-analyzer.chatmode.md
 
-# Focus: Code security, vulnerability detection
 ```
 
-Interaction Model:
-graph LR
-A[File Being Edited] --> B{applyTo Match?}
-B -->|Yes| C[Auto-Include Instructions]
-B -->|No| D[Skip Instructions]
-C --> E[Add Chat Mode Persona]
-D --> E
-E --> F[Generate Response]
+::: column
+
+**Interaction model**
+
+- File being edited determines `applyTo` matches
+- Matching instructions are auto-included first
+- Active chat mode then adds persona and workflow guidance
+- Final response uses both the matched instructions and the chat mode persona
 
 ::: notes
 Chat modes are often misunderstood as another way to control instruction inclusion, but they actually serve a different purpose. Let's clarify their role in the context submission system.
@@ -1307,13 +1354,21 @@ Remember: You can see which instructions are active by checking the Copilot cont
 From your current workspace
 
 ```markdown
+
 applyTo: "\*_/_"
+
+
 
 applyTo: "\*_/_.{cs,ts,js,py,java,go,rb}"
 
+
+
 applyTo: "slides/marp/\*\*"
 
+
+
 applyTo: "\*_/_.chatmode.md"
+
 ```
 
 ::: notes
@@ -1549,20 +1604,20 @@ UX Designer Mode → Human-centered design guidance
 
 ## Comparison Matrix
 
-| Aspect      | Instruction Files      | Prompt Files           | Custom Chat Modes             |
-| ----------- | ---------------------- | ---------------------- | ----------------------------- |
-| Purpose     | Define AI behavior     | Execute specific tasks | Provide specialized expertise |
-| Scope       | Repository-wide        | Single task/workflow   | Conversational context        |
-| Persistence | Always active          | On-demand execution    | Session-based                 |
-| Reusability | High (across projects) | High (task templates)  | Medium (role-specific)        |
-| Complexity  | Simple rules           | Detailed procedures    | Rich contextual knowledge     |
+Aspect | Instruction Files | Prompt Files | Custom Chat Modes
+--- | --- | --- | ---
+Purpose | Define AI behavior | Execute specific tasks | Provide specialized expertise
+Scope | Repository-wide | Single task/workflow | Conversational context
+Persistence | Always active | On-demand execution | Session-based
+Reusability | High (across projects) | High (task templates) | Medium (role-specific)
+Complexity | Simple rules | Detailed procedures | Rich contextual knowledge
 
 ---
 
 ## Execution Timeline
 
 gantt
-title AI Approach Activation Timeline
+    title AI Approach Activation Timeline
 
     section Setup Phase
     Instruction Files    :active, inst, 2024-01-01, 2024-12-31
@@ -1608,14 +1663,14 @@ Combine Approaches When:
 ## Layered Integration Approach
 
 ┌─────────────────────────────────────┐
-│ Custom Chat Mode │ ← Conversational Context
-│ (Security Architect Persona) │
+│     Custom Chat Mode               │  ← Conversational Context
+│  (Security Architect Persona)      │
 ├─────────────────────────────────────┤
-│ Prompt Files │ ← Task Execution
-│ (Security Audit Template) │
+│     Prompt Files                   │  ← Task Execution
+│  (Security Audit Template)         │
 ├─────────────────────────────────────┤
-│ Instruction Files │ ← Base Behavior
-│ (Security Standards, Coding Rules) │
+│     Instruction Files              │  ← Base Behavior
+│  (Security Standards, Coding Rules) │
 └─────────────────────────────────────┘
 Result: Specialized security expert using standardized processes with consistent quality standards
 
@@ -1625,17 +1680,16 @@ Result: Specialized security expert using standardized processes with consistent
 
 Scenario: Implementing User Authentication
 Instruction Files provide:
-
-- Security coding standards
-- Testing requirements
-- Documentation standards
-  Prompt File executes:
-- “Implement OAuth2 Authentication System”
-- Step-by-step implementation guide
-  Custom Chat Mode offers:
-- Security Architect expertise
-- Best practice recommendations
-- Threat modeling insights
+  - Security coding standards
+  - Testing requirements
+  - Documentation standards
+Prompt File executes:
+  - “Implement OAuth2 Authentication System”
+  - Step-by-step implementation guide
+Custom Chat Mode offers:
+  - Security Architect expertise
+  - Best practice recommendations
+  - Threat modeling insights
 
 ---
 
@@ -1694,8 +1748,8 @@ Result: AI becomes a true development partner, not just a code generator
 ## Resources & References
 
 Implementation Templates:
-Instruction Files: .github/instructions/_.instructions.md
-Prompt Files: .github/prompts/_.prompt.md
+Instruction Files: .github/instructions/*.instructions.md
+Prompt Files: .github/prompts/*.prompt.md
 Chat Mode Configs: Custom mode documentation
 Documentation:
 AI-Assisted Output Instructions
@@ -1878,7 +1932,7 @@ Explain that teams should avoid copy-paste drift by maintaining canonical files 
 
 ## Instruction File Scope and Application
 
-Use scope to target behavior precisely with 'applyTo' patterns.
+Use scope to target behavior precisely with `applyTo` patterns.
 
 ```yaml
 applyTo: "**/*"
@@ -1905,7 +1959,7 @@ Walk through broad-to-narrow scoping. Clarify that broad scopes are for policy a
 ## Context Window Monitoring Tools
 
 - Use chat/session history panels to detect topic drift
-- Track context attachments ('@workspace', '@file', '@terminal') intentionally
+- Track context attachments (`@workspace`, `@file`, `@terminal`) intentionally
 - Start fresh chats when switching goals or bounded contexts
 - Use lightweight check-ins: "What context are we currently using?"
 
@@ -1964,7 +2018,7 @@ Use this as the operational model teams can adopt immediately. Recommend adding 
 ## Practical Checklist
 
 - Define where instructions live: org, repo, folder, or file scope
-- Validate 'applyTo' patterns before broad adoption
+- Validate `applyTo` patterns before broad adoption
 - Monitor context quality every major prompt turn
 - Track token trends for long-running work streams
 - Capture reusable instruction improvements in versioned files
@@ -1997,21 +2051,27 @@ Core Instruction Files
 
 ---
 
+
+
+
 ## What Copilot Looks For
 
-| Artifact Type                | Required Location            | Required Format         | Notes                       |
-| ---------------------------- | ---------------------------- | ----------------------- | --------------------------- |
-| Org guardrails               | Org settings                 | UI-managed              | Always included             |
-| Repo guardrails              | .github/instructions/        | .md                     | Always included             |
-| Path-scoped guardrails       | Any folder                   | copilot-instructions.md | Applies to subtree          |
-| Agents (formerly chat modes) | .github/copilot/chat_modes/  | .json or .yaml          | Folder name has NOT changed |
-| Promptfiles                  | .github/copilot/promptfiles/ | .md                     | Only when invoked           |
+Artifact Type | Required Location | Required Format | Notes
+--- | --- | --- | ---
+Org guardrails | Org settings | UI-managed | Always included
+Repo guardrails | .github/instructions/ | .md | Always included
+Path-scoped guardrails | Any folder | copilot-instructions.md | Applies to subtree
+Agents (formerly chat modes) | .github/copilot/chat_modes/ | .json or .yaml | Folder name has NOT changed
+Promptfiles | .github/copilot/promptfiles/ | .md | Only when invoked
 
 ::: notes
 Even though “chat modes” are being renamed to “agents,” the folder name remains .github/copilot/chat_modes/ for now.
 :::
 
 ---
+
+
+
 
 ## What's Changing and What Isn't
 
@@ -2031,6 +2091,9 @@ Teams can safely start using the term “agent” in training and inside the fil
 :::
 
 ---
+
+
+
 
 ## Order of Precedence
 
@@ -2195,13 +2258,12 @@ Open GitHub Copilot Chat
 Agents dropdown → Configure Custom Agents…
 Click Create new custom agent
 Choose location:
-
-- Workspace: .github/agents/ (project-specific)
-- User profile: Personal agents (all workspaces)
-  Enter filename
-  Configure in .agent.md file
-  Use Configure Tools… button for tool selection
-  Set model: property for AI model preference
+  - Workspace: .github/agents/ (project-specific)
+  - User profile: Personal agents (all workspaces)
+Enter filename
+Configure in .agent.md file
+Use Configure Tools… button for tool selection
+Set model: property for AI model preference
 
 ::: notes
 Duration ~00:04
@@ -2284,7 +2346,6 @@ You are a testing specialist...
 
 [Detailed instructions and behavior]
 ```
-
 Key Components:
 YAML frontmatter: Metadata and configuration
 Markdown content: Instructions and behavior (max 30,000 chars)
@@ -2898,6 +2959,9 @@ Transition: “You now have everything you need to create your first custom agen
 
 ---
 
+
+
+
 ## Greenfield Chat Modes
 
 Product Manager
@@ -2915,15 +2979,18 @@ This presentation covers 8 critical roles in modern software development. Each p
 
 ---
 
+
+
+
 ## Product Manager
 
-| Skills                                                                                   | Responsibilities                                                                         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Requirements Translation - Convert business needs into precise technical prompts         | Requirement Validation - Ensure AI-generated requirements align with business objectives |
-| Context Management - Maintain conversation threads for complex feature discussions       | Quality Assurance - Review AI outputs for accuracy, completeness, and feasibility        |
-| Documentation Review - Evaluate AI-generated specs, user stories, and technical docs     | Cross-functional Alignment - Coordinate AI-assisted planning across development teams    |
-| Stakeholder Communication - Present AI-assisted analysis to technical and business teams | Risk Assessment - Identify potential issues in AI-suggested technical approaches         |
-| Iterative Refinement - Guide AI through multiple rounds of requirement clarification     | Delivery Tracking - Use AI insights to monitor progress and adjust roadmaps accordingly  |
+Skills | Responsibilities
+--- | ---
+Requirements Translation - Convert business needs into precise technical prompts | Requirement Validation - Ensure AI-generated requirements align with business objectives
+Context Management - Maintain conversation threads for complex feature discussions | Quality Assurance - Review AI outputs for accuracy, completeness, and feasibility
+Documentation Review - Evaluate AI-generated specs, user stories, and technical docs | Cross-functional Alignment - Coordinate AI-assisted planning across development teams
+Stakeholder Communication - Present AI-assisted analysis to technical and business teams | Risk Assessment - Identify potential issues in AI-suggested technical approaches
+Iterative Refinement - Guide AI through multiple rounds of requirement clarification | Delivery Tracking - Use AI insights to monitor progress and adjust roadmaps accordingly
 
 ::: notes
 Product Managers are the bridge between business and technical teams. Their success with AI depends on clear requirement translation. Key challenge: ensuring AI outputs align with business objectives. Focus on iterative refinement - rarely get perfect results on first try. Context management is crucial for complex feature discussions. Always validate AI-generated requirements against business goals.
@@ -2931,15 +2998,18 @@ Product Managers are the bridge between business and technical teams. Their succ
 
 ---
 
+
+
+
 ## Solution Architect
 
-| Skills                                                                                            | Responsibilities                                                                               |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Architecture Prompting - Frame complex system design questions for optimal AI responses           | Design Validation - Verify AI-generated architectural decisions against enterprise standards   |
-| Pattern Recognition - Identify and validate AI-suggested architectural patterns and anti-patterns | Technical Governance - Ensure AI-assisted designs follow organizational guidelines             |
-| Technology Evaluation - Assess AI recommendations for technology stack decisions                  | Risk Mitigation - Evaluate AI suggestions for security, performance, and maintainability risks |
-| Scalability Analysis - Guide AI through performance and scalability considerations                | Knowledge Sharing - Document and communicate AI-derived architectural insights                 |
-| Integration Planning - Use AI to model system interactions and API designs                        | Standards Compliance - Maintain adherence to coding standards and architectural principles     |
+Skills | Responsibilities
+--- | ---
+Architecture Prompting - Frame complex system design questions for optimal AI responses | Design Validation - Verify AI-generated architectural decisions against enterprise standards
+Pattern Recognition - Identify and validate AI-suggested architectural patterns and anti-patterns | Technical Governance - Ensure AI-assisted designs follow organizational guidelines
+Technology Evaluation - Assess AI recommendations for technology stack decisions | Risk Mitigation - Evaluate AI suggestions for security, performance, and maintainability risks
+Scalability Analysis - Guide AI through performance and scalability considerations | Knowledge Sharing - Document and communicate AI-derived architectural insights
+Integration Planning - Use AI to model system interactions and API designs | Standards Compliance - Maintain adherence to coding standards and architectural principles
 
 ::: notes
 Solution Architects work at the highest technical abstraction level. Pattern recognition is critical - AI often suggests common patterns. Must validate AI architectural decisions against enterprise standards. Integration planning is complex - AI can help model system interactions. Risk mitigation is a key responsibility - evaluate long-term implications. Knowledge sharing ensures AI insights benefit the broader organization.
@@ -2947,15 +3017,18 @@ Solution Architects work at the highest technical abstraction level. Pattern rec
 
 ---
 
+
+
+
 ## Senior Developer
 
-| Skills                                                                               | Responsibilities                                                                                     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| Code Generation Prompting - Craft precise requests for complex code implementations  | Code Quality Assurance - Validate AI-generated code for correctness, efficiency, and maintainability |
-| Debug Assistance - Effectively use AI for troubleshooting and error resolution       | Security Review - Ensure AI-suggested code follows security best practices                           |
-| Code Review with AI - Combine human experience with AI analysis for thorough reviews | Performance Optimization - Analyze AI recommendations for potential performance impacts              |
-| Refactoring Guidance - Leverage AI for code improvement and optimization suggestions | Mentorship Integration - Guide junior developers in effective AI-assisted development                |
-| Testing Strategy - Use AI to generate comprehensive test cases and scenarios         | Technical Debt Management - Use AI insights to identify and prioritize technical debt reduction      |
+Skills | Responsibilities
+--- | ---
+Code Generation Prompting - Craft precise requests for complex code implementations | Code Quality Assurance - Validate AI-generated code for correctness, efficiency, and maintainability
+Debug Assistance - Effectively use AI for troubleshooting and error resolution | Security Review - Ensure AI-suggested code follows security best practices
+Code Review with AI - Combine human experience with AI analysis for thorough reviews | Performance Optimization - Analyze AI recommendations for potential performance impacts
+Refactoring Guidance - Leverage AI for code improvement and optimization suggestions | Mentorship Integration - Guide junior developers in effective AI-assisted development
+Testing Strategy - Use AI to generate comprehensive test cases and scenarios | Technical Debt Management - Use AI insights to identify and prioritize technical debt reduction
 
 ::: notes
 Senior Developers are power users of AI coding assistance. Code generation prompting requires precise, specific requests. Debug assistance can dramatically speed troubleshooting. Code review with AI combines human insight with AI analysis. Security review is critical - AI may suggest vulnerable patterns. Mentorship integration helps junior developers use AI effectively. Performance optimization requires evaluating AI suggestions carefully.
@@ -2963,15 +3036,18 @@ Senior Developers are power users of AI coding assistance. Code generation promp
 
 ---
 
+
+
+
 ## Technical Writer
 
-| Skills                                                                                   | Responsibilities                                                                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Content Structuring - Guide AI to create well-organized, logical documentation flow      | Content Accuracy - Ensure all AI-generated documentation is technically correct and current  |
-| Audience Adaptation - Adjust AI outputs for different technical skill levels and roles   | Editorial Standards - Maintain quality, clarity, and consistency in AI-assisted content      |
-| Style Consistency - Maintain organizational voice and formatting standards in AI content | User Experience - Optimize AI-generated docs for end-user comprehension and usability        |
-| Technical Verification - Validate AI-generated technical content for accuracy            | Version Control - Manage documentation updates and revisions with AI assistance              |
-| Multi-format Publishing - Convert AI outputs across various documentation formats        | Cross-team Collaboration - Coordinate with SMEs to validate and enhance AI-generated content |
+Skills | Responsibilities
+--- | ---
+Content Structuring - Guide AI to create well-organized, logical documentation flow | Content Accuracy - Ensure all AI-generated documentation is technically correct and current
+Audience Adaptation - Adjust AI outputs for different technical skill levels and roles | Editorial Standards - Maintain quality, clarity, and consistency in AI-assisted content
+Style Consistency - Maintain organizational voice and formatting standards in AI content | User Experience - Optimize AI-generated docs for end-user comprehension and usability
+Technical Verification - Validate AI-generated technical content for accuracy | Version Control - Manage documentation updates and revisions with AI assistance
+Multi-format Publishing - Convert AI outputs across various documentation formats | Cross-team Collaboration - Coordinate with SMEs to validate and enhance AI-generated content
 
 ::: notes
 Technical Writers can leverage AI for content creation and organization. Content structuring helps AI create logical, well-organized documentation. Audience adaptation is key - same content needs different presentations. Style consistency maintains organizational voice across AI-generated content. Technical verification ensures accuracy - AI can hallucinate technical details. Multi-format publishing expands content reach and usability. Editorial standards maintain quality and consistency.
@@ -2979,15 +3055,18 @@ Technical Writers can leverage AI for content creation and organization. Content
 
 ---
 
+
+
+
 ## Security Reviewer
 
-| Skills                                                                                     | Responsibilities                                                                                |
-| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| Threat Modeling - Use AI to identify potential security vulnerabilities and attack vectors | Vulnerability Assessment - Validate AI-identified security issues and remediation strategies    |
-| Compliance Analysis - Leverage AI for regulatory and standards compliance checking         | Code Security Review - Ensure AI-suggested code changes don't introduce security risks          |
-| Risk Assessment - Guide AI through security impact analysis and risk prioritization        | Policy Enforcement - Verify AI recommendations align with organizational security policies      |
-| Security Testing - Generate security test cases and penetration testing scenarios          | Audit Trail Maintenance - Document security decisions and rationale for AI-assisted reviews     |
-| Incident Response - Use AI for security event analysis and response planning               | Threat Intelligence - Stay current on security trends that may affect AI recommendation quality |
+Skills | Responsibilities
+--- | ---
+Threat Modeling - Use AI to identify potential security vulnerabilities and attack vectors | Vulnerability Assessment - Validate AI-identified security issues and remediation strategies
+Compliance Analysis - Leverage AI for regulatory and standards compliance checking | Code Security Review - Ensure AI-suggested code changes don't introduce security risks
+Risk Assessment - Guide AI through security impact analysis and risk prioritization | Policy Enforcement - Verify AI recommendations align with organizational security policies
+Security Testing - Generate security test cases and penetration testing scenarios | Audit Trail Maintenance - Document security decisions and rationale for AI-assisted reviews
+Incident Response - Use AI for security event analysis and response planning | Threat Intelligence - Stay current on security trends that may affect AI recommendation quality
 
 ::: notes
 Security Reviewers must validate all AI security recommendations. Threat modeling with AI can identify vulnerabilities humans might miss. Compliance analysis leverages AI's knowledge of regulatory requirements. Risk assessment requires balancing AI suggestions with security expertise. Security testing scenarios can be comprehensive with AI assistance. Policy enforcement ensures AI recommendations align with org standards. Audit trail maintenance is critical for security accountability.
@@ -2995,15 +3074,18 @@ Security Reviewers must validate all AI security recommendations. Threat modelin
 
 ---
 
+
+
+
 ## DevOps Engineer
 
-| Skills                                                                                    | Responsibilities                                                                         |
-| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Infrastructure as Code - Generate and optimize IaC templates, scripts, and configurations | Pipeline Reliability - Ensure AI-generated CI/CD configurations are stable and efficient |
-| CI/CD Pipeline Design - Use AI for build, test, and deployment pipeline optimization      | Security Integration - Validate AI-suggested DevSecOps practices and security controls   |
-| Monitoring & Alerting - Create comprehensive observability strategies with AI assistance  | Performance Monitoring - Implement AI-recommended monitoring and alerting strategies     |
-| Automation Scripting - Generate operational scripts and automation workflows              | Cost Management - Review AI suggestions for infrastructure cost optimization             |
-| Cloud Resource Optimization - Leverage AI for cost optimization and resource management   | Disaster Recovery - Develop and test AI-assisted backup and recovery procedures          |
+Skills | Responsibilities
+--- | ---
+Infrastructure as Code - Generate and optimize IaC templates, scripts, and configurations | Pipeline Reliability - Ensure AI-generated CI/CD configurations are stable and efficient
+CI/CD Pipeline Design - Use AI for build, test, and deployment pipeline optimization | Security Integration - Validate AI-suggested DevSecOps practices and security controls
+Monitoring & Alerting - Create comprehensive observability strategies with AI assistance | Performance Monitoring - Implement AI-recommended monitoring and alerting strategies
+Automation Scripting - Generate operational scripts and automation workflows | Cost Management - Review AI suggestions for infrastructure cost optimization
+Cloud Resource Optimization - Leverage AI for cost optimization and resource management | Disaster Recovery - Develop and test AI-assisted backup and recovery procedures
 
 ::: notes
 DevOps Engineers can accelerate infrastructure automation with AI. Infrastructure as Code generation can speed deployment and configuration. CI/CD pipeline design benefits from AI optimization suggestions. Monitoring and alerting strategies become more comprehensive with AI. Automation scripting reduces manual operational overhead. Pipeline reliability must be validated - AI-generated configs need testing. Cost management is crucial - review AI suggestions for optimization opportunities.
@@ -3011,15 +3093,18 @@ DevOps Engineers can accelerate infrastructure automation with AI. Infrastructur
 
 ---
 
+
+
+
 ## DevTest Engineer
 
-| Skills                                                                                                | Responsibilities                                                                       |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Test Case Generation - Create comprehensive test scenarios across functional and non-functional areas | Test Coverage Validation - Ensure AI-generated tests provide adequate coverage         |
-| Test Data Management - Generate realistic test data sets and scenarios                                | Test Environment Management - Maintain consistent, reliable test environments          |
-| Automation Framework - Build robust test automation with AI assistance                                | Quality Metrics - Track and report on quality metrics derived from AI-assisted testing |
-| Performance Testing - Design load, stress, and performance test strategies                            | Test Maintenance - Keep AI-generated test suites current with application changes      |
-| Defect Analysis - Use AI for root cause analysis and bug reproduction                                 | Bug Triage - Prioritize and categorize defects with AI analysis support                |
+Skills | Responsibilities
+--- | ---
+Test Case Generation - Create comprehensive test scenarios across functional and non-functional areas | Test Coverage Validation - Ensure AI-generated tests provide adequate coverage
+Test Data Management - Generate realistic test data sets and scenarios | Test Environment Management - Maintain consistent, reliable test environments
+Automation Framework - Build robust test automation with AI assistance | Quality Metrics - Track and report on quality metrics derived from AI-assisted testing
+Performance Testing - Design load, stress, and performance test strategies | Test Maintenance - Keep AI-generated test suites current with application changes
+Defect Analysis - Use AI for root cause analysis and bug reproduction | Bug Triage - Prioritize and categorize defects with AI analysis support
 
 ::: notes
 DevTest Engineers can dramatically improve test coverage with AI. Test case generation creates comprehensive scenarios across functional areas. Test data management becomes easier with AI-generated realistic datasets. Automation framework development accelerates with AI assistance. Performance testing strategies benefit from AI-designed load scenarios. Test coverage validation ensures AI-generated tests are comprehensive. Quality metrics tracking provides insights into AI-assisted testing effectiveness.
@@ -3027,15 +3112,18 @@ DevTest Engineers can dramatically improve test coverage with AI. Test case gene
 
 ---
 
+
+
+
 ## SRE (Site Reliability Engineer)
 
-| Skills                                                                            | Responsibilities                                                                           |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Incident Response - Use AI for rapid incident analysis, diagnosis, and resolution | System Reliability - Maintain service availability using AI-driven monitoring and response |
-| SLA/SLO Monitoring - Generate comprehensive reliability metrics and alerting      | Performance Optimization - Continuously improve system performance with AI insights        |
-| Capacity Planning - Leverage AI for resource forecasting and scaling decisions    | Incident Documentation - Create detailed incident reports and prevention strategies        |
-| Post-mortem Analysis - Create thorough incident reviews with AI assistance        | Change Management - Assess deployment risks using AI-powered analysis                      |
-| Reliability Engineering - Design fault-tolerant systems with AI recommendations   | On-call Excellence - Optimize on-call procedures and reduce MTTR with AI support           |
+Skills | Responsibilities
+--- | ---
+Incident Response - Use AI for rapid incident analysis, diagnosis, and resolution | System Reliability - Maintain service availability using AI-driven monitoring and response
+SLA/SLO Monitoring - Generate comprehensive reliability metrics and alerting | Performance Optimization - Continuously improve system performance with AI insights
+Capacity Planning - Leverage AI for resource forecasting and scaling decisions | Incident Documentation - Create detailed incident reports and prevention strategies
+Post-mortem Analysis - Create thorough incident reviews with AI assistance | Change Management - Assess deployment risks using AI-powered analysis
+Reliability Engineering - Design fault-tolerant systems with AI recommendations | On-call Excellence - Optimize on-call procedures and reduce MTTR with AI support
 
 ::: notes
 SREs can leverage AI for faster incident response and resolution. Incident response benefits from AI's rapid analysis and diagnosis capabilities. SLA/SLO monitoring becomes more comprehensive with AI-generated metrics. Capacity planning leverages AI for accurate resource forecasting. Post-mortem analysis creates thorough incident reviews with AI assistance. System reliability requires validating AI-driven monitoring recommendations. Performance optimization is continuous with AI insights into system behavior.
@@ -3043,39 +3131,45 @@ SREs can leverage AI for faster incident response and resolution. Incident respo
 
 ---
 
+
+
+
 ## Solution Architect Prompts
 
-| Prompt File                     | Description                                        |
-| ------------------------------- | -------------------------------------------------- |
-| architecture-design.prompt.md   | Comprehensive system architecture designs          |
-| pattern-analysis.prompt.md      | Architectural pattern analysis and recommendations |
-| technology-evaluation.prompt.md | Technology evaluation and selection                |
-| scalability-planning.prompt.md  | Scalability and capacity planning                  |
-| integration-design.prompt.md    | System integration and API design                  |
-| security-architecture.prompt.md | Security controls and threat mitigation            |
-| performance-analysis.prompt.md  | Performance analysis and bottleneck identification |
-| migration-strategy.prompt.md    | System migration and modernization planning        |
-| compliance-check.prompt.md      | Compliance validation and standards alignment      |
-| risk-assessment.prompt.md       | Architectural risk assessment and mitigation       |
+Prompt File | Description
+--- | ---
+architecture-design.prompt.md | Comprehensive system architecture designs
+pattern-analysis.prompt.md | Architectural pattern analysis and recommendations
+technology-evaluation.prompt.md | Technology evaluation and selection
+scalability-planning.prompt.md | Scalability and capacity planning
+integration-design.prompt.md | System integration and API design
+security-architecture.prompt.md | Security controls and threat mitigation
+performance-analysis.prompt.md | Performance analysis and bottleneck identification
+migration-strategy.prompt.md | System migration and modernization planning
+compliance-check.prompt.md | Compliance validation and standards alignment
+risk-assessment.prompt.md | Architectural risk assessment and mitigation
 
 ::: notes
 Prompt: create prompt files for the interactive commands in the #file:solution-architect.chatmode.md. call the prompt files when the interactive commands are triggered
 
 created:
 
-- architecture-design.prompt.md - Comprehensive system architecture designs
-- pattern-analysis.prompt.md - Architectural pattern analysis and recommendations
-- technology-evaluation.prompt.md - Technology evaluation and selection
-- scalability-planning.prompt.md - Scalability and capacity planning
-- integration-design.prompt.md - System integration and API design
-- security-architecture.prompt.md - Security controls and threat mitigation
-- performance-analysis.prompt.md - Performance analysis and bottleneck identification
-- migration-strategy.prompt.md - System migration and modernization planning
-- compliance-check.prompt.md - Compliance validation and standards alignment
-- risk-assessment.prompt.md - Architectural risk assessment and mitigation
-  :::
+* architecture-design.prompt.md - Comprehensive system architecture designs
+* pattern-analysis.prompt.md - Architectural pattern analysis and recommendations
+* technology-evaluation.prompt.md - Technology evaluation and selection
+* scalability-planning.prompt.md - Scalability and capacity planning
+* integration-design.prompt.md - System integration and API design
+* security-architecture.prompt.md - Security controls and threat mitigation
+* performance-analysis.prompt.md - Performance analysis and bottleneck identification
+* migration-strategy.prompt.md - System migration and modernization planning
+* compliance-check.prompt.md - Compliance validation and standards alignment
+* risk-assessment.prompt.md - Architectural risk assessment and mitigation
+:::
 
 ---
+
+
+
 
 ## If you said: "Design an architecture for a Windows desktop application that manages real-time inventory for a warehouse"
 
@@ -3093,10 +3187,6 @@ Prompt: when using the solution architect chat mode, explain what happens when I
 
 ---
 
-marp: true theme: default class: lead paginate: true backgroundColor: #ffffff
-
----
-
 ## GitHub Copilot Chat Mode
 
 Skills & Responsibilities by Persona
@@ -3107,6 +3197,7 @@ Welcome to this comprehensive guide on GitHub Copilot Chat Mode. Today we'll exp
 :::
 
 ---
+
 
 Agenda
 8 Key Personas Covered:
@@ -3128,13 +3219,13 @@ This presentation covers 8 critical roles in modern software development. Each p
 
 ## Product Manager
 
-| Skills                                                                                   | Responsibilities                                                                         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Requirements Translation - Convert business needs into precise technical prompts         | Requirement Validation - Ensure AI-generated requirements align with business objectives |
-| Context Management - Maintain conversation threads for complex feature discussions       | Quality Assurance - Review AI outputs for accuracy, completeness, and feasibility        |
-| Documentation Review - Evaluate AI-generated specs, user stories, and technical docs     | Cross-functional Alignment - Coordinate AI-assisted planning across development teams    |
-| Stakeholder Communication - Present AI-assisted analysis to technical and business teams | Risk Assessment - Identify potential issues in AI-suggested technical approaches         |
-| Iterative Refinement - Guide AI through multiple rounds of requirement clarification     | Delivery Tracking - Use AI insights to monitor progress and adjust roadmaps accordingly  |
+Skills | Responsibilities
+--- | ---
+Requirements Translation - Convert business needs into precise technical prompts | Requirement Validation - Ensure AI-generated requirements align with business objectives
+Context Management - Maintain conversation threads for complex feature discussions | Quality Assurance - Review AI outputs for accuracy, completeness, and feasibility
+Documentation Review - Evaluate AI-generated specs, user stories, and technical docs | Cross-functional Alignment - Coordinate AI-assisted planning across development teams
+Stakeholder Communication - Present AI-assisted analysis to technical and business teams | Risk Assessment - Identify potential issues in AI-suggested technical approaches
+Iterative Refinement - Guide AI through multiple rounds of requirement clarification | Delivery Tracking - Use AI insights to monitor progress and adjust roadmaps accordingly
 
 ::: notes
 Product Managers are the bridge between business and technical teams. Their success with AI depends on clear requirement translation. Key challenge: ensuring AI outputs align with business objectives. Focus on iterative refinement - rarely get perfect results on first try. Context management is crucial for complex feature discussions. Always validate AI-generated requirements against business goals.
@@ -3144,13 +3235,13 @@ Product Managers are the bridge between business and technical teams. Their succ
 
 ## Solution Architect
 
-| Skills                                                                                            | Responsibilities                                                                               |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Architecture Prompting - Frame complex system design questions for optimal AI responses           | Design Validation - Verify AI-generated architectural decisions against enterprise standards   |
-| Pattern Recognition - Identify and validate AI-suggested architectural patterns and anti-patterns | Technical Governance - Ensure AI-assisted designs follow organizational guidelines             |
-| Technology Evaluation - Assess AI recommendations for technology stack decisions                  | Risk Mitigation - Evaluate AI suggestions for security, performance, and maintainability risks |
-| Scalability Analysis - Guide AI through performance and scalability considerations                | Knowledge Sharing - Document and communicate AI-derived architectural insights                 |
-| Integration Planning - Use AI to model system interactions and API designs                        | Standards Compliance - Maintain adherence to coding standards and architectural principles     |
+Skills | Responsibilities
+--- | ---
+Architecture Prompting - Frame complex system design questions for optimal AI responses | Design Validation - Verify AI-generated architectural decisions against enterprise standards
+Pattern Recognition - Identify and validate AI-suggested architectural patterns and anti-patterns | Technical Governance - Ensure AI-assisted designs follow organizational guidelines
+Technology Evaluation - Assess AI recommendations for technology stack decisions | Risk Mitigation - Evaluate AI suggestions for security, performance, and maintainability risks
+Scalability Analysis - Guide AI through performance and scalability considerations | Knowledge Sharing - Document and communicate AI-derived architectural insights
+Integration Planning - Use AI to model system interactions and API designs | Standards Compliance - Maintain adherence to coding standards and architectural principles
 
 ::: notes
 Solution Architects work at the highest technical abstraction level. Pattern recognition is critical - AI often suggests common patterns. Must validate AI architectural decisions against enterprise standards. Integration planning is complex - AI can help model system interactions. Risk mitigation is a key responsibility - evaluate long-term implications. Knowledge sharing ensures AI insights benefit the broader organization.
@@ -3160,13 +3251,13 @@ Solution Architects work at the highest technical abstraction level. Pattern rec
 
 ## Senior Developer
 
-| Skills                                                                               | Responsibilities                                                                                     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| Code Generation Prompting - Craft precise requests for complex code implementations  | Code Quality Assurance - Validate AI-generated code for correctness, efficiency, and maintainability |
-| Debug Assistance - Effectively use AI for troubleshooting and error resolution       | Security Review - Ensure AI-suggested code follows security best practices                           |
-| Code Review with AI - Combine human experience with AI analysis for thorough reviews | Performance Optimization - Analyze AI recommendations for potential performance impacts              |
-| Refactoring Guidance - Leverage AI for code improvement and optimization suggestions | Mentorship Integration - Guide junior developers in effective AI-assisted development                |
-| Testing Strategy - Use AI to generate comprehensive test cases and scenarios         | Technical Debt Management - Use AI insights to identify and prioritize technical debt reduction      |
+Skills | Responsibilities
+--- | ---
+Code Generation Prompting - Craft precise requests for complex code implementations | Code Quality Assurance - Validate AI-generated code for correctness, efficiency, and maintainability
+Debug Assistance - Effectively use AI for troubleshooting and error resolution | Security Review - Ensure AI-suggested code follows security best practices
+Code Review with AI - Combine human experience with AI analysis for thorough reviews | Performance Optimization - Analyze AI recommendations for potential performance impacts
+Refactoring Guidance - Leverage AI for code improvement and optimization suggestions | Mentorship Integration - Guide junior developers in effective AI-assisted development
+Testing Strategy - Use AI to generate comprehensive test cases and scenarios | Technical Debt Management - Use AI insights to identify and prioritize technical debt reduction
 
 ::: notes
 Senior Developers are power users of AI coding assistance. Code generation prompting requires precise, specific requests. Debug assistance can dramatically speed troubleshooting. Code review with AI combines human insight with AI analysis. Security review is critical - AI may suggest vulnerable patterns. Mentorship integration helps junior developers use AI effectively. Performance optimization requires evaluating AI suggestions carefully.
@@ -3176,13 +3267,13 @@ Senior Developers are power users of AI coding assistance. Code generation promp
 
 ## Technical Writer
 
-| Skills                                                                                   | Responsibilities                                                                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Content Structuring - Guide AI to create well-organized, logical documentation flow      | Content Accuracy - Ensure all AI-generated documentation is technically correct and current  |
-| Audience Adaptation - Adjust AI outputs for different technical skill levels and roles   | Editorial Standards - Maintain quality, clarity, and consistency in AI-assisted content      |
-| Style Consistency - Maintain organizational voice and formatting standards in AI content | User Experience - Optimize AI-generated docs for end-user comprehension and usability        |
-| Technical Verification - Validate AI-generated technical content for accuracy            | Version Control - Manage documentation updates and revisions with AI assistance              |
-| Multi-format Publishing - Convert AI outputs across various documentation formats        | Cross-team Collaboration - Coordinate with SMEs to validate and enhance AI-generated content |
+Skills | Responsibilities
+--- | ---
+Content Structuring - Guide AI to create well-organized, logical documentation flow | Content Accuracy - Ensure all AI-generated documentation is technically correct and current
+Audience Adaptation - Adjust AI outputs for different technical skill levels and roles | Editorial Standards - Maintain quality, clarity, and consistency in AI-assisted content
+Style Consistency - Maintain organizational voice and formatting standards in AI content | User Experience - Optimize AI-generated docs for end-user comprehension and usability
+Technical Verification - Validate AI-generated technical content for accuracy | Version Control - Manage documentation updates and revisions with AI assistance
+Multi-format Publishing - Convert AI outputs across various documentation formats | Cross-team Collaboration - Coordinate with SMEs to validate and enhance AI-generated content
 
 ::: notes
 Technical Writers can leverage AI for content creation and organization. Content structuring helps AI create logical, well-organized documentation. Audience adaptation is key - same content needs different presentations. Style consistency maintains organizational voice across AI-generated content. Technical verification ensures accuracy - AI can hallucinate technical details. Multi-format publishing expands content reach and usability. Editorial standards maintain quality and consistency.
@@ -3192,13 +3283,13 @@ Technical Writers can leverage AI for content creation and organization. Content
 
 ## Security Reviewer
 
-| Skills                                                                                     | Responsibilities                                                                                |
-| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| Threat Modeling - Use AI to identify potential security vulnerabilities and attack vectors | Vulnerability Assessment - Validate AI-identified security issues and remediation strategies    |
-| Compliance Analysis - Leverage AI for regulatory and standards compliance checking         | Code Security Review - Ensure AI-suggested code changes don't introduce security risks          |
-| Risk Assessment - Guide AI through security impact analysis and risk prioritization        | Policy Enforcement - Verify AI recommendations align with organizational security policies      |
-| Security Testing - Generate security test cases and penetration testing scenarios          | Audit Trail Maintenance - Document security decisions and rationale for AI-assisted reviews     |
-| Incident Response - Use AI for security event analysis and response planning               | Threat Intelligence - Stay current on security trends that may affect AI recommendation quality |
+Skills | Responsibilities
+--- | ---
+Threat Modeling - Use AI to identify potential security vulnerabilities and attack vectors | Vulnerability Assessment - Validate AI-identified security issues and remediation strategies
+Compliance Analysis - Leverage AI for regulatory and standards compliance checking | Code Security Review - Ensure AI-suggested code changes don't introduce security risks
+Risk Assessment - Guide AI through security impact analysis and risk prioritization | Policy Enforcement - Verify AI recommendations align with organizational security policies
+Security Testing - Generate security test cases and penetration testing scenarios | Audit Trail Maintenance - Document security decisions and rationale for AI-assisted reviews
+Incident Response - Use AI for security event analysis and response planning | Threat Intelligence - Stay current on security trends that may affect AI recommendation quality
 
 ::: notes
 Security Reviewers must validate all AI security recommendations. Threat modeling with AI can identify vulnerabilities humans might miss. Compliance analysis leverages AI's knowledge of regulatory requirements. Risk assessment requires balancing AI suggestions with security expertise. Security testing scenarios can be comprehensive with AI assistance. Policy enforcement ensures AI recommendations align with org standards. Audit trail maintenance is critical for security accountability.
@@ -3208,13 +3299,13 @@ Security Reviewers must validate all AI security recommendations. Threat modelin
 
 ## DevOps Engineer
 
-| Skills                                                                                    | Responsibilities                                                                         |
-| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Infrastructure as Code - Generate and optimize IaC templates, scripts, and configurations | Pipeline Reliability - Ensure AI-generated CI/CD configurations are stable and efficient |
-| CI/CD Pipeline Design - Use AI for build, test, and deployment pipeline optimization      | Security Integration - Validate AI-suggested DevSecOps practices and security controls   |
-| Monitoring & Alerting - Create comprehensive observability strategies with AI assistance  | Performance Monitoring - Implement AI-recommended monitoring and alerting strategies     |
-| Automation Scripting - Generate operational scripts and automation workflows              | Cost Management - Review AI suggestions for infrastructure cost optimization             |
-| Cloud Resource Optimization - Leverage AI for cost optimization and resource management   | Disaster Recovery - Develop and test AI-assisted backup and recovery procedures          |
+Skills | Responsibilities
+--- | ---
+Infrastructure as Code - Generate and optimize IaC templates, scripts, and configurations | Pipeline Reliability - Ensure AI-generated CI/CD configurations are stable and efficient
+CI/CD Pipeline Design - Use AI for build, test, and deployment pipeline optimization | Security Integration - Validate AI-suggested DevSecOps practices and security controls
+Monitoring & Alerting - Create comprehensive observability strategies with AI assistance | Performance Monitoring - Implement AI-recommended monitoring and alerting strategies
+Automation Scripting - Generate operational scripts and automation workflows | Cost Management - Review AI suggestions for infrastructure cost optimization
+Cloud Resource Optimization - Leverage AI for cost optimization and resource management | Disaster Recovery - Develop and test AI-assisted backup and recovery procedures
 
 ::: notes
 DevOps Engineers can accelerate infrastructure automation with AI. Infrastructure as Code generation can speed deployment and configuration. CI/CD pipeline design benefits from AI optimization suggestions. Monitoring and alerting strategies become more comprehensive with AI. Automation scripting reduces manual operational overhead. Pipeline reliability must be validated - AI-generated configs need testing. Cost management is crucial - review AI suggestions for optimization opportunities.
@@ -3224,13 +3315,13 @@ DevOps Engineers can accelerate infrastructure automation with AI. Infrastructur
 
 ## DevTest Engineer
 
-| Skills                                                                                                | Responsibilities                                                                       |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Test Case Generation - Create comprehensive test scenarios across functional and non-functional areas | Test Coverage Validation - Ensure AI-generated tests provide adequate coverage         |
-| Test Data Management - Generate realistic test data sets and scenarios                                | Test Environment Management - Maintain consistent, reliable test environments          |
-| Automation Framework - Build robust test automation with AI assistance                                | Quality Metrics - Track and report on quality metrics derived from AI-assisted testing |
-| Performance Testing - Design load, stress, and performance test strategies                            | Test Maintenance - Keep AI-generated test suites current with application changes      |
-| Defect Analysis - Use AI for root cause analysis and bug reproduction                                 | Bug Triage - Prioritize and categorize defects with AI analysis support                |
+Skills | Responsibilities
+--- | ---
+Test Case Generation - Create comprehensive test scenarios across functional and non-functional areas | Test Coverage Validation - Ensure AI-generated tests provide adequate coverage
+Test Data Management - Generate realistic test data sets and scenarios | Test Environment Management - Maintain consistent, reliable test environments
+Automation Framework - Build robust test automation with AI assistance | Quality Metrics - Track and report on quality metrics derived from AI-assisted testing
+Performance Testing - Design load, stress, and performance test strategies | Test Maintenance - Keep AI-generated test suites current with application changes
+Defect Analysis - Use AI for root cause analysis and bug reproduction | Bug Triage - Prioritize and categorize defects with AI analysis support
 
 ::: notes
 DevTest Engineers can dramatically improve test coverage with AI. Test case generation creates comprehensive scenarios across functional areas. Test data management becomes easier with AI-generated realistic datasets. Automation framework development accelerates with AI assistance. Performance testing strategies benefit from AI-designed load scenarios. Test coverage validation ensures AI-generated tests are comprehensive. Quality metrics tracking provides insights into AI-assisted testing effectiveness.
@@ -3240,13 +3331,13 @@ DevTest Engineers can dramatically improve test coverage with AI. Test case gene
 
 ## SRE (Site Reliability Engineer)
 
-| Skills                                                                            | Responsibilities                                                                           |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Incident Response - Use AI for rapid incident analysis, diagnosis, and resolution | System Reliability - Maintain service availability using AI-driven monitoring and response |
-| SLA/SLO Monitoring - Generate comprehensive reliability metrics and alerting      | Performance Optimization - Continuously improve system performance with AI insights        |
-| Capacity Planning - Leverage AI for resource forecasting and scaling decisions    | Incident Documentation - Create detailed incident reports and prevention strategies        |
-| Post-mortem Analysis - Create thorough incident reviews with AI assistance        | Change Management - Assess deployment risks using AI-powered analysis                      |
-| Reliability Engineering - Design fault-tolerant systems with AI recommendations   | On-call Excellence - Optimize on-call procedures and reduce MTTR with AI support           |
+Skills | Responsibilities
+--- | ---
+Incident Response - Use AI for rapid incident analysis, diagnosis, and resolution | System Reliability - Maintain service availability using AI-driven monitoring and response
+SLA/SLO Monitoring - Generate comprehensive reliability metrics and alerting | Performance Optimization - Continuously improve system performance with AI insights
+Capacity Planning - Leverage AI for resource forecasting and scaling decisions | Incident Documentation - Create detailed incident reports and prevention strategies
+Post-mortem Analysis - Create thorough incident reviews with AI assistance | Change Management - Assess deployment risks using AI-powered analysis
+Reliability Engineering - Design fault-tolerant systems with AI recommendations | On-call Excellence - Optimize on-call procedures and reduce MTTR with AI support
 
 ::: notes
 SREs can leverage AI for faster incident response and resolution. Incident response benefits from AI's rapid analysis and diagnosis capabilities. SLA/SLO monitoring becomes more comprehensive with AI-generated metrics. Capacity planning leverages AI for accurate resource forecasting. Post-mortem analysis creates thorough incident reviews with AI assistance. System reliability requires validating AI-driven monitoring recommendations. Performance optimization is continuous with AI insights into system behavior.
@@ -3277,6 +3368,7 @@ Encourage audience to share specific examples from their experience. Ask for con
 
 ---
 
+
 Thank you!
 Resources:
 GitHub Copilot Documentation
@@ -3288,6 +3380,8 @@ Thank the audience for their attention and participation. Encourage them to expl
 :::
 
 ---
+
+## VS Code Copilot Agents Overview
 
 ### Autonomous AI-Powered Coding Assistance
 
@@ -3405,7 +3499,7 @@ Local agents are perfect for brainstorming and tasks requiring immediate feedbac
 - Use for tasks that are not fully defined
 - Great for learning and exploration
 - Ideal when you need VS Code context (linting errors, test results)
-  :::
+:::
 
 ---
 
@@ -3546,7 +3640,7 @@ The sessions management is what makes the multi-agent workflow practical and org
 - Compact: Embedded in Chat view
 - Side-by-side: Dedicated sessions panel
 - Automatically adapts based on Chat view width
-  :::
+:::
 
 ---
 
@@ -3593,7 +3687,7 @@ This slide covers the practical aspects of getting started with agents.
 - Previous sessions remain active
 - Switch between tasks via sessions list
 - Great for multitasking developers
-  :::
+:::
 
 ---
 
@@ -3639,7 +3733,7 @@ This slide addresses a critical concern: how to safely review and integrate agen
 - Test changes in isolation first
 - Use PR workflow for team visibility
 - Document significant changes
-  :::
+:::
 
 ---
 
@@ -3647,7 +3741,7 @@ This slide addresses a critical concern: how to safely review and integrate agen
 
 **Leverage each agent type's strengths**
 
-```text
+```
 📋 Local Agent (Planning)
     ⬇ Hand-off
 🤖 Background Agent (Implementation)
@@ -3665,19 +3759,16 @@ This slide demonstrates the power of agent collaboration and specialization.
 **Complete workflow example:**
 
 1. **Local agent:** Interactive brainstorming and planning
-
 - Define requirements
 - Explore architecture options
 - Create detailed implementation plan
 
 2. **Background agent:** Autonomous implementation
-
 - Create multiple proof-of-concept variants
 - Test different approaches
 - Implement core functionality
 
 3. **Cloud agent:** Team collaboration
-
 - Create production-ready implementation
 - Submit pull request
 - Enable team review and feedback
@@ -3705,7 +3796,7 @@ This slide demonstrates the power of agent collaboration and specialization.
 
 **🚀 Getting Started:**
 
-- Enable agents in VS Code settings ('chat.agent.enabled')
+- Enable agents in VS Code settings (`chat.agent.enabled`)
 - Start with local agents for exploration
 - Try background agents for focused tasks
 - Use cloud agents for team collaboration
@@ -3754,7 +3845,7 @@ This closing slide provides clear next steps and resources for continued learnin
 - Share documentation links via chat/email
 - Schedule follow-up sessions for advanced topics
 - Create team guidelines for agent usage
-  :::
+:::
 
 ---
 
@@ -3772,30 +3863,25 @@ Duration ~00:15
 **Anticipated questions and responses:**
 
 1. **"How do agents compare to traditional Copilot?"**
-
 - Traditional Copilot: Suggestions and completions
 - Agents: Complete task execution and multi-step workflows
 
 2. **"What about data privacy and security?"**
-
 - Local agents: Data stays on your machine
 - Cloud agents: Follow GitHub's privacy policies
 - Enterprise controls available
 
 3. **"Can agents make mistakes?"**
-
 - Yes, always review agent changes
 - Use diff editors before applying
 - Start with non-critical tasks
 
 4. **"How do I know which agent type to use?"**
-
 - Refer back to the decision matrix slide
 - Interactive vs autonomous needs
 - Team collaboration requirements
 
 5. **"What if my organization disabled agents?"**
-
 - Contact your admin
 - May be policy-based restriction
 - Can often be enabled with proper governance
@@ -3816,13 +3902,13 @@ Duration ~00:15
 
 **Objectives**
 
-- Create a repository-scoped custom agent file in '.github/agents/'
+- Create a repository-scoped custom agent file in `.github/agents/`
 - Configure a clear agent role, description, and tool scope
 - Use the agent in Copilot Chat to complete a targeted task
 
 **Activities**
 
-- **Phase 1 - Create**: Add '.github/agents/test-specialist.agent.md' with frontmatter ('name', 'description', 'tools') and focused behavior instructions
+- **Phase 1 - Create**: Add `.github/agents/test-specialist.agent.md` with frontmatter (`name`, `description`, `tools`) and focused behavior instructions
 - **Phase 2 - Refine**: Tighten scope by clarifying what the agent should do and refuse, then save and re-open chat
 - **Phase 3 - Use**: Select the new custom agent in Copilot Chat and run a prompt such as “Review this feature and propose a test plan with unit and integration tests”
 
@@ -3837,7 +3923,7 @@ Duration ~00:25
 
 Facilitate this as a role-scoping lab, not just a file-authoring task. Start by showing students that a custom agent is essentially a reusable behavioral contract: it combines role intent, tool limits, and execution style.
 
-In Phase 1, have learners create '.github/agents/test-specialist.agent.md' with a concise description and explicit tools list. Encourage strong verbs and constraints, for example "analyze tests, propose coverage improvements, avoid production-code refactors unless asked".
+In Phase 1, have learners create `.github/agents/test-specialist.agent.md` with a concise description and explicit tools list. Encourage strong verbs and constraints, for example "analyze tests, propose coverage improvements, avoid production-code refactors unless asked".
 
 In Phase 2, ask each student to improve one weak instruction in their agent definition. Typical improvements are adding refusal boundaries, output format requirements, or quality checks such as "include risks and assumptions".
 
@@ -3865,7 +3951,7 @@ flowchart LR
 ::: notes
 Duration ~00:01
 
-Explain that simplicity is a force multiplier in agent design. When an agent has one clear job, users know when to use it, reviewers know how to evaluate it, and the team can improve it without destabilizing unrelated workflows. Transition by showing how explicit boundaries reinforce that simplicity.
+Explain that simplicity is a force multiplier in agent design. When an agent has one clear job, users know when to use it, reviewers know how to evaluate it, and the team can improve it without destabilizing unrelated workflows.  Transition by showing how explicit boundaries reinforce that simplicity.
 :::
 
 ---
@@ -3884,7 +3970,7 @@ Explain that simplicity is a force multiplier in agent design. When an agent has
 ::: notes
 Duration ~00:01
 
-Frame this slide around predictability. An agent with clear responsibilities is easier for humans to trust because they know what kind of help it is supposed to give and what it should not attempt, which reduces accidental overreach and context drift. Transition by moving to the related issue of tool access, because boundaries are not just instructional but operational.
+Frame this slide around predictability. An agent with clear responsibilities is easier for humans to trust because they know what kind of help it is supposed to give and what it should not attempt, which reduces accidental overreach and context drift.  Transition by moving to the related issue of tool access, because boundaries are not just instructional but operational.
 :::
 
 ---
@@ -3906,7 +3992,7 @@ flowchart TB
 ::: notes
 Duration ~00:01
 
-Explain that tool design is one of the strongest control surfaces available when building agents. If an agent only needs to read files and analyze code, then it should not also be able to perform broad write operations or run unrelated commands, because excess capability creates unnecessary risk. Transition by showing that even good initial designs need improvement over time.
+Explain that tool design is one of the strongest control surfaces available when building agents. If an agent only needs to read files and analyze code, then it should not also be able to perform broad write operations or run unrelated commands, because excess capability creates unnecessary risk.  Transition by showing that even good initial designs need improvement over time.
 :::
 
 ---
@@ -3921,7 +4007,7 @@ Explain that tool design is one of the strongest control surfaces available when
 ::: notes
 Duration ~00:01
 
-Make the point that real-world usage will reveal gaps that design-time reasoning will miss. Teams learn a lot from where users hesitate, where the agent responds too broadly, or where people keep asking for the same clarification, and those signals should drive iteration. Transition by broadening from personal agents to team and organization sharing.
+Make the point that real-world usage will reveal gaps that design-time reasoning will miss. Teams learn a lot from where users hesitate, where the agent responds too broadly, or where people keep asking for the same clarification, and those signals should drive iteration.  Transition by broadening from personal agents to team and organization sharing.
 :::
 
 ---
@@ -3943,7 +4029,7 @@ Make the point that real-world usage will reveal gaps that design-time reasoning
 ::: notes
 Duration ~00:01
 
-Explain that some workflows are too common to reinvent team by team. When an organization sees repeated needs such as security review or testing guidance, a shared agent can provide a standardized starting point and reduce duplicated authoring effort across repositories. Transition by showing how examples improve agent usability once an agent exists.
+Explain that some workflows are too common to reinvent team by team. When an organization sees repeated needs such as security review or testing guidance, a shared agent can provide a standardized starting point and reduce duplicated authoring effort across repositories.  Transition by showing how examples improve agent usability once an agent exists.
 :::
 
 ---
@@ -3965,7 +4051,7 @@ Explain that some workflows are too common to reinvent team by team. When an org
 ::: notes
 Duration ~00:01
 
-Close with the two practices that make rollout much safer: examples and validation. Examples help users invoke the agent correctly, while validation ensures the agent behaves well under realistic conditions, including edge cases and boundary conditions, before it is trusted more broadly. Encourage the audience to treat agents like any other product capability that needs ownership, feedback, and quality checks.
+Close with the two practices that make rollout much safer: examples and validation. Examples help users invoke the agent correctly, while validation ensures the agent behaves well under realistic conditions, including edge cases and boundary conditions, before it is trusted more broadly.  Encourage the audience to treat agents like any other product capability that needs ownership, feedback, and quality checks.
 :::
 
 ---
@@ -4045,15 +4131,15 @@ A typical skill folder:
       resources/
 ```
 
-'SKILL.md' is the required entry point.
+`SKILL.md` is the required entry point.
 
 ::: notes
-Explain that the structure is intentionally simple so teams can add skills without introducing a new toolchain. The folder name becomes the skill name, while 'SKILL.md' acts as the main definition file that tells Copilot what the skill is for and how to execute it. Spend about one minute here and mention that the extra folders are optional but powerful because they let teams attach automation, examples, and reusable references. Transition by opening up the contents of 'SKILL.md'.
+Explain that the structure is intentionally simple so teams can add skills without introducing a new toolchain. The folder name becomes the skill name, while `SKILL.md` acts as the main definition file that tells Copilot what the skill is for and how to execute it. Spend about one minute here and mention that the extra folders are optional but powerful because they let teams attach automation, examples, and reusable references. Transition by opening up the contents of `SKILL.md`.
 :::
 
 ---
 
-## Anatomy of 'SKILL.md'
+## Anatomy of `SKILL.md`
 
 Minimal example:
 
@@ -4148,7 +4234,7 @@ Explain that skills complement the other instruction layers rather than replacin
 mkdir -p .github/skills/my-skill
 ```
 
-### 2. Add 'SKILL.md'
+### 2. Add `SKILL.md`
 
 Include:
 
@@ -4202,7 +4288,7 @@ Explain that skills are most valuable when a task is procedural, repeatable, and
 ## Summary
 
 - Skills are **modular, procedural knowledge bundles** for Copilot
-- Defined via '.github/skills/<name>/SKILL.md'
+- Defined via `.github/skills/<name>/SKILL.md`
 - Loaded **automatically** when relevant
 - Enable **repeatable**, **auditable**, **domain-specific** workflows
 - Work across Copilot agents and environments
@@ -4218,19 +4304,19 @@ Skills represent a major evolution in Copilot's architecture-moving from reactiv
 
 **Objectives**
 
-- Create a repository skill folder under '.github/skills/'
-- Author a 'SKILL.md' file with a clear description and step-based procedure
+- Create a repository skill folder under `.github/skills/`
+- Author a `SKILL.md` file with a clear description and step-based procedure
 - Use Copilot with a matching prompt so the new skill can guide a real task
 
 **Activities**
 
-- **Phase 1 - Create**: Add '.github/skills/slide-quality-check/SKILL.md' with metadata ('name', 'description') and a short procedure for reviewing Marp slides for provenance and speaker notes
-- **Phase 2 - Refine**: Improve the skill by adding strong trigger words such as 'Marp', 'slide', 'speaker notes', and 'provenance', then tighten the procedure so the output is deterministic
-- **Phase 3 - Use**: Prompt Copilot with a task such as 'Review slides/marp/exercise-create-and-use-custom-agent.deck.md for slide metadata and ::: notes compliance' and compare the output to a normal untuned chat response
+- **Phase 1 - Create**: Add `.github/skills/slide-quality-check/SKILL.md` with metadata (`name`, `description`) and a short procedure for reviewing Marp slides for provenance and speaker notes
+- **Phase 2 - Refine**: Improve the skill by adding strong trigger words such as `Marp`, `slide`, `speaker notes`, and `provenance`, then tighten the procedure so the output is deterministic
+- **Phase 3 - Use**: Prompt Copilot with a task such as `Review slides/marp/exercise-create-and-use-custom-agent.deck.md for slide metadata and ::: notes compliance` and compare the output to a normal untuned chat response
 
 **Success Criteria**
 
-- Skill folder and 'SKILL.md' exist in '.github/skills/slide-quality-check/'
+- Skill folder and `SKILL.md` exist in `.github/skills/slide-quality-check/`
 - Copilot responds with a workflow aligned to the skill procedure instead of a generic answer
 - Student receives a structured review that checks metadata, notes coverage, and suggested fixes
 
@@ -4239,9 +4325,9 @@ Duration ~00:25
 
 Facilitate this as a procedural-workflow lab, not just a markdown-file exercise. Start by explaining that a skill is different from a custom agent: the agent shapes role behavior, while the skill packages a repeatable method Copilot can load when the prompt matches the description.
 
-In Phase 1, have learners create '.github/skills/slide-quality-check/SKILL.md' with a simple but concrete purpose. Encourage them to write a description that contains likely trigger phrases and a procedure with explicit steps such as inspect front matter, verify every slide has '::: notes', and report missing or weak sections.
+In Phase 1, have learners create `.github/skills/slide-quality-check/SKILL.md` with a simple but concrete purpose. Encourage them to write a description that contains likely trigger phrases and a procedure with explicit steps such as inspect front matter, verify every slide has `::: notes`, and report missing or weak sections.
 
-In Phase 2, ask students to improve the skill after reading it once as if they were Copilot. Typical improvements are sharper trigger words, more deterministic steps, and output requirements such as 'return findings as pass/fail bullets with suggested fixes'.
+In Phase 2, ask students to improve the skill after reading it once as if they were Copilot. Typical improvements are sharper trigger words, more deterministic steps, and output requirements such as `return findings as pass/fail bullets with suggested fixes`.
 
 In Phase 3, students run a prompt against an existing slide file and see whether Copilot behaves like it has loaded the skill. If the response is too generic, coach them to adjust either the prompt wording or the skill description so the relevance match is stronger.
 
@@ -4266,7 +4352,7 @@ Timing guidance: 8 minutes create, 7 minutes refine, 8 minutes use and compare, 
 
 <!-- _class: lead -->
 
-## Extending GitHub Copilot with External Tools and Data
+## MCP: Model Context Protocol Servers
 
 - Connect Copilot to databases, APIs, infrastructure tools, and custom systems
 - Built on a standardized protocol so any tool can speak to Copilot
@@ -4315,24 +4401,28 @@ Transition: "Let's look at the architecture in detail."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Architecture: Five Components
 
 ```mermaid
 graph LR
-    A[VS Code<br/>Copilot<br/>Client] <-->|JSON-RPC| B[MCP Server<br/>Transport Layer]
-    B <-->|Protocol| C[Resources<br/>Files, APIs,<br/>Databases]
-    style A fill:#0078d4,color:#fff
-    style B fill:#68217a,color:#fff
-    style C fill:#107c10,color:#fff
+  A[VS Code<br/>Copilot<br/>Client] <-->|JSON-RPC| B[MCP Server<br/>Transport Layer]
+  B <-->|Protocol| C[Resources<br/>Files, APIs,<br/>Databases]
+  style A fill:#0078d4,color:#fff
+  style B fill:#68217a,color:#fff
+  style C fill:#107c10,color:#fff
 ```
 
-| Component     | Role                                                  |
-| ------------- | ----------------------------------------------------- |
-| **Client**    | VS Code / GitHub Copilot — sends requests             |
-| **Server**    | MCP server — provides capabilities and data           |
-| **Protocol**  | Standardized message format connecting both sides     |
-| **Resources** | Data the server exposes (files, records, state)       |
-| **Tools**     | Functions the server gives Copilot permission to call |
+::: column
+
+**Components**
+
+- **Client** — VS Code / GitHub Copilot sends requests
+- **Server** — MCP server provides capabilities and data
+- **Protocol** — standard message format between both sides
+- **Resources** — data exposed to Copilot
+- **Tools** — callable functions the server permits
 
 ::: notes
 Duration ~00:03
@@ -4410,16 +4500,16 @@ Transition: "Now let's find the right server for your needs."
 
 **VS Code Extension Gallery**
 
-- Search 'MCP' in the extensions panel
+- Search `MCP` in the extensions panel
 - Read the description to confirm what resources and tools are exposed
 
 **Model Context Protocol Website**
 
-- 'modelcontextprotocol.io' — canonical registry and documentation
+- `modelcontextprotocol.io` — canonical registry and documentation
 
 **GitHub Community Repository**
 
-- 'github.com/modelcontextprotocol/servers' — community-maintained collection with usage examples
+- `github.com/modelcontextprotocol/servers` — community-maintained collection with usage examples
 
 ::: notes
 Duration ~00:01
@@ -4443,7 +4533,7 @@ Transition: "Let's install your first MCP server."
 npm install -g @modelcontextprotocol/server-github
 ```
 
-2. Configure in VS Code 'settings.json':
+2. Configure in VS Code `settings.json`:
 
 ```json
 {
@@ -4480,27 +4570,31 @@ Transition: "Now let's see Copilot use this context."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Copilot + MCP Integration
 
-**Enhanced capabilities with MCP context:**
+**Enhanced capabilities**
 
-- **Context-Aware Completions** — access to project-specific patterns
-- **Tool Use** — Copilot can invoke server tools on your behalf
-- **Security Boundaries** — controlled, audited access to resources
+- **Context-aware completions** — access project-specific patterns
+- **Tool use** — Copilot can invoke server tools on your behalf
+- **Security boundaries** — controlled, audited resource access
+
+::: column
 
 ```mermaid
 sequenceDiagram
-    participant Dev as Developer
-    participant Copilot as GitHub Copilot
-    participant MCP as MCP Server
-    participant Res as Resources
+  participant Dev as Developer
+  participant Copilot as GitHub Copilot
+  participant MCP as MCP Server
+  participant Res as Resources
 
-    Dev->>Copilot: "Create user auth"
-    Copilot->>MCP: Request context
-    MCP->>Res: Fetch schema, patterns
-    Res-->>MCP: Return context
-    MCP-->>Copilot: Structured context
-    Copilot-->>Dev: Code matching your patterns
+  Dev->>Copilot: "Create user auth"
+  Copilot->>MCP: Request context
+  MCP->>Res: Fetch schema, patterns
+  Res-->>MCP: Return context
+  MCP-->>Copilot: Structured context
+  Copilot-->>Dev: Code matching your patterns
 ```
 
 ::: notes
@@ -4521,21 +4615,25 @@ Transition: "Let's talk about configuring these safely."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Configuring Servers Securely
 
-**Security checklist:**
+**Security checklist**
 
-- ✅ Use environment variables for credentials (never hardcode tokens)
-- ✅ Grant minimum necessary permissions
-- ✅ Review server source code on GitHub before installing
-- ✅ Configure allowed paths/resources explicitly
-- ❌ Never use full admin credentials when a reader role is sufficient
+- Use environment variables for credentials
+- Grant minimum necessary permissions
+- Review server source before installing
+- Configure allowed paths and resources explicitly
+- Never use admin credentials when reader access is sufficient
 
-**Best practices:**
+::: column
+
+**Best practices**
 
 - Start with read-only servers
-- Use scoped tokens (e.g., 'repo:read' only for GitHub)
-- Enable only needed capabilities
+- Use scoped tokens such as `repo:read`
+- Enable only the capabilities you actually need
 - Test in non-production first
 - Keep servers updated
 
@@ -4573,7 +4671,7 @@ Transition: "Let's put this into practice."
 1. Install the MCP extension in VS Code (search "MCP" in marketplace)
 2. Pick **one** server to start: **GitHub** or **Filesystem**
 3. Set credentials in your environment variables
-4. Add server config to 'settings.json'
+4. Add server config to `settings.json`
 5. Reload VS Code and test with Copilot
 
 ```bash
@@ -4593,7 +4691,7 @@ npm install -g @modelcontextprotocol/server-filesystem
 
 Ask Copilot: _"What files are in this project?"_
 
-**Resources:** 'github.com/modelcontextprotocol/servers' | 'modelcontextprotocol.io'
+**Resources:** `github.com/modelcontextprotocol/servers` | `modelcontextprotocol.io`
 
 ::: notes
 Duration ~00:03
@@ -4620,7 +4718,7 @@ Transition: "Questions about getting started?"
 - MCP gives Copilot a standardized way to reach **external data and tools**
 - Architecture: client ↔ protocol ↔ server exposing **resources** and **tools**
 - Pre-built servers cover most common integrations; custom servers handle the rest
-- Find servers via VS Code gallery, 'modelcontextprotocol.io', or GitHub
+- Find servers via VS Code gallery, `modelcontextprotocol.io`, or GitHub
 - Install as extensions, **enable selectively** to manage token cost (~128 per server)
 
 ::: notes
@@ -4641,32 +4739,32 @@ Invite questions or suggest exploring the VS Code gallery as a hands-on follow-u
 
 **Objectives**
 
-- Create a minimal PowerShell MCP server that supports 'initialize', 'tools/list', and 'tools/call'
+- Create a minimal PowerShell MCP server that supports `initialize`, `tools/list`, and `tools/call`
 - Validate protocol behavior with an end-to-end smoke test script
-- Connect the server to VS Code and use the 'echo' tool from Copilot
+- Connect the server to VS Code and use the `echo` tool from Copilot
 
 **Activities**
 
-- **Phase 1 - Create**: Build 'scripts/mcp/simple-mcp-server.ps1' with JSON-RPC framing and MCP method routing
-- **Phase 2 - Test**: Run 'scripts/mcp/test-simple-mcp-server.ps1' and verify initialize/tools/list/tools/call responses
-- **Phase 3 - Use**: Confirm '.mcp.json' points to the local server, then prompt Copilot to call the 'echo' tool
+- **Phase 1 - Create**: Build `scripts/mcp/simple-mcp-server.ps1` with JSON-RPC framing and MCP method routing
+- **Phase 2 - Test**: Run `scripts/mcp/test-simple-mcp-server.ps1` and verify initialize/tools/list/tools/call responses
+- **Phase 3 - Use**: Confirm `.mcp.json` points to the local server, then prompt Copilot to call the `echo` tool
 
 **Success Criteria**
 
 - Server starts without errors and responds with valid MCP JSON-RPC envelopes
-- Test output reports 'MCP test passed.' and confirms all three checkpoints
-- Copilot can discover the 'echo' tool and return the expected echoed text
+- Test output reports `MCP test passed.` and confirms all three checkpoints
+- Copilot can discover the `echo` tool and return the expected echoed text
 
 ::: notes
 Duration ~00:30
 
 Facilitate this as a lab where students progress from implementation to verification to real usage. Start by framing MCP as a local integration pattern: the server reads JSON-RPC over stdio, advertises tools, and returns structured results.
 
-For Phase 1, have students create 'scripts/mcp/simple-mcp-server.ps1' with helper functions for 'Content-Length' framing, plus handlers for 'initialize', 'tools/list', and 'tools/call'. Emphasize that 'tools/list' should return the 'echo' tool schema and 'tools/call' should validate 'name == "echo"' and required 'arguments.text'.
+For Phase 1, have students create `scripts/mcp/simple-mcp-server.ps1` with helper functions for `Content-Length` framing, plus handlers for `initialize`, `tools/list`, and `tools/call`. Emphasize that `tools/list` should return the `echo` tool schema and `tools/call` should validate `name == "echo"` and required `arguments.text`.
 
-For Phase 2, run 'pwsh -NoLogo -NoProfile -File .\scripts\mcp\test-simple-mcp-server.ps1' from repo root. Students should verify three checks in output: initialize success, echo tool listing, and echo text round-trip. If test fails, inspect malformed headers, missing 'id' correlation, or invalid response shape.
+For Phase 2, run `pwsh -NoLogo -NoProfile -File .\scripts\mcp\test-simple-mcp-server.ps1` from repo root. Students should verify three checks in output: initialize success, echo tool listing, and echo text round-trip. If test fails, inspect malformed headers, missing `id` correlation, or invalid response shape.
 
-For Phase 3, confirm '.mcp.json' includes command 'pwsh' and args '-NoProfile -File scripts/mcp/simple-mcp-server.ps1'. In Copilot Chat, ask for a tool call using text like: "Use the echo MCP tool and send the text 'MCP lab check'." Debrief by asking students where they would replace echo with a real internal API or automation tool.
+For Phase 3, confirm `.mcp.json` includes command `pwsh` and args `-NoProfile -File scripts/mcp/simple-mcp-server.ps1`. In Copilot Chat, ask for a tool call using text like: "Use the echo MCP tool and send the text 'MCP lab check'." Debrief by asking students where they would replace echo with a real internal API or automation tool.
 
 Timing guidance: 10 minutes create, 10 minutes test/debug, 8 minutes use and discuss, 2 minutes recap. During recap, connect this lab to production hardening topics: auth, input validation, audit logs, and tool least-privilege design.
 :::
