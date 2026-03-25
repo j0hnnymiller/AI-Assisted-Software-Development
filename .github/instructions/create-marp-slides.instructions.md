@@ -208,6 +208,75 @@ Speaker: Explain this concept with timing and context
 
 **Placement**: Speaker notes MUST be placed immediately after each slide's content, before the next slide separator (`---`).
 
+## Exercise Slides
+
+**REQUIRED**: All exercise slides MUST use the `Two Content` PowerPoint layout.
+
+An exercise slide has a **left column** (setup/objectives) and a **right column** (activities and success criteria), separated by a `::: column` divider.
+
+### Body Structure
+
+````markdown
+## Exercise: <Title>
+
+**Setup and Objectives**
+
+Prerequisites
+
+- <prerequisite 1>
+- <prerequisite 2>
+
+Objectives
+
+- <objective 1>
+- <objective 2>
+
+::: column
+
+**Activities and Success Criteria**
+
+Activities
+
+1. <step 1>
+2. <step 2>
+
+```bash
+# Example command
+<command>
+```
+````
+
+Success Criteria
+
+- <criterion 1>
+- <criterion 2>
+
+::: notes
+Duration ~00:XX
+
+<Speaker delivery notes: context, timing, facilitation tips, transitions>
+:::
+
+```
+
+### Rules
+
+- Exercise slides do not need an explicit `<!-- layout: Two Content -->` directive when they use `::: column`; the slide pipeline infers the `Two Content` layout automatically.
+- If you include `<!-- layout: Two Content -->`, the layout name is resolved against the PowerPoint template and must match the template layout name exactly.
+- The `::: column` divider marks the boundary between left and right columns. Everything before it is the left column, and everything after it until `::: notes` or `---` is the right column.
+- Do NOT close the column block with `:::`. The `::: notes` block or the next slide separator (`---`) closes it implicitly.
+- **Left column** content: heading, prerequisites, objectives.
+- **Right column** content: activities (numbered steps, code blocks), and success criteria.
+- Exercise slide filenames MUST follow the pattern `exercise-<kebab-case-description>.deck.md`.
+
+### Checklist (Exercise Slides)
+
+- [ ] Filename starts with `exercise-`
+- [ ] Body uses `::: column` to split left/right columns
+- [ ] Left column: prerequisites and objectives
+- [ ] Right column: numbered activities, code blocks, and success criteria
+- [ ] `::: notes` block present with duration and facilitation guidance
+
 ## Authoring rules and checklist
 
 Before committing or generating slides, ensure:
@@ -222,6 +291,7 @@ Before committing or generating slides, ensure:
 - [ ] **CRITICAL: NO plain "Note:" paragraphs, HTML comments, or non-standard formats for speaker notes**
 - [ ] **CRITICAL: Speaker notes MUST include delivery guidance, timing, key points, examples, and transitions**
 - [ ] **CRITICAL: Speaker notes MUST be comprehensive (minimum 3-4 sentences per slide)**
+- [ ] **CRITICAL: Every exercise slide MUST include a `::: column` divider so the slide pipeline can infer `Two Content`**
 - [ ] README.md updated with an entry for notable AI-generated slides where applicable.
 
 **ENFORCEMENT**: PRs with slides missing speaker notes will be rejected automatically by CI validation.
@@ -264,3 +334,4 @@ the referenced `ai_log` path exists.
 
 - If you'd like, I can add a sample slide file in `slides/marp/` and
   a small PowerShell-based CI validation script to this repo.
+```

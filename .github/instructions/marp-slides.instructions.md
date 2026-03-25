@@ -190,6 +190,75 @@ Architecture explanation...
 
 ````
 
+## Exercise Slides
+
+**REQUIRED**: All exercise slides MUST use the `Two Content` PowerPoint layout.
+
+An exercise slide has a **left column** (setup/objectives) and a **right column** (activities and success criteria), separated by a `::: column` divider.
+
+### Body Structure
+
+```markdown
+## Exercise: <Title>
+
+**Setup and Objectives**
+
+Prerequisites
+
+- <prerequisite 1>
+- <prerequisite 2>
+
+Objectives
+
+- <objective 1>
+- <objective 2>
+
+::: column
+
+**Activities and Success Criteria**
+
+Activities
+
+1. <step 1>
+2. <step 2>
+
+```bash
+# Example command
+<command>
+```
+
+Success Criteria
+
+- <criterion 1>
+- <criterion 2>
+
+::: notes
+Duration ~00:XX
+
+<Speaker delivery notes: context, timing, facilitation tips, transitions>
+:::
+```
+
+### Rules
+
+- Exercise slides do not need an explicit `<!-- layout: Two Content -->` directive when they use `::: column`; the slide pipeline infers the `Two Content` layout automatically.
+- If you include `<!-- layout: Two Content -->`, the layout name is resolved against the PowerPoint template and must match the template layout name exactly.
+- The `::: column` divider marks the boundary between left and right columns — everything **before** it is the left column, everything **after** (until `::: notes` or `---`) is the right column.
+- Do NOT close the column block with `:::` — the `::: notes` block or the next slide separator (`---`) closes it implicitly.
+- **Left column** content: heading, prerequisites, objectives.
+- **Right column** content: activities (numbered steps, code blocks) and success criteria.
+- Exercise slide filenames MUST follow the pattern `exercise-<kebab-case-description>.deck.md`.
+
+### Checklist (Exercise Slides)
+
+- [ ] Filename starts with `exercise-`
+- [ ] Body uses `::: column` to split left/right columns
+- [ ] Left column: prerequisites and objectives
+- [ ] Right column: numbered activities, code blocks, and success criteria
+- [ ] `::: notes` block present with duration and facilitation guidance
+
+---
+
 ## Generation Rules
 
 **Required**:
@@ -286,7 +355,73 @@ Speaker: Explain this with detailed delivery guidance
 ❌ **WRONG**: `::: Notes` (capitalized)
 ✅ **CORRECT**: `::: notes` (three colons, space, lowercase)
 
-### Mistake 3: Placing Notes After Slide Separator
+### Mistake 3: Exercise Slide Without Column Split
+
+❌ **WRONG** (exercise slide missing the required `::: column` divider):
+
+```markdown
+## Exercise: Setup GitHub Copilot
+
+**Setup and Objectives**
+
+Prerequisites
+
+- GitHub account
+
+Objectives
+
+- Configure Copilot in VS Code
+
+::: column
+
+**Activities and Success Criteria**
+
+Activities
+
+1. Install the Copilot extension
+2. Sign in with GitHub credentials
+
+::: notes
+...
+:::
+```
+
+✅ **CORRECT** (exercise slide with inferred `Two Content` layout via column divider):
+
+```markdown
+## Exercise: Setup GitHub Copilot
+
+**Setup and Objectives**
+
+Prerequisites
+
+- GitHub account
+
+Objectives
+
+- Configure Copilot in VS Code
+
+::: column
+
+**Activities and Success Criteria**
+
+Activities
+
+1. Install the Copilot extension
+2. Sign in with GitHub credentials
+
+Success Criteria
+
+- Copilot suggestions appear in VS Code
+
+::: notes
+Duration ~00:10
+
+...
+:::
+```
+
+### Mistake 4: Placing Notes After Slide Separator
 
 ❌ **WRONG**:
 

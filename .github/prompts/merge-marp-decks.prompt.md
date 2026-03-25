@@ -180,20 +180,20 @@ The manifest uses a sectioned structure:
 ```yaml
 sections:
   - name: <Section Name>
-    slides:
+    decks:
       - slides\marp\<file>.md
       - slides\marp\<file>.md
   - name: <Empty Section>
-    slides:
+    decks:
       # no slide files listed — still creates an empty PPTX section
 ```
 
-Each section has a `name` and an optional `slides` list. Sections with no slide files
+Each section has a `name` and an optional `decks` list. Sections with no slide files
 (null, empty, or comment-only) are still present in the final PPTX as **empty sections**.
 
 ### Manifest entry constraints
 
-- Every `sections[].slides[]` entry must resolve to a repo-relative Markdown source file.
+- Every `sections[].decks[]` entry must resolve to a repo-relative Markdown source file.
 - Supported source slide extensions are `.md` and `.markdown` only.
 - Any slide entry that is missing, malformed, uses a non-Markdown extension, contains a
   label instead of a path, or cannot be resolved exactly as written is a **manifest issue**.
@@ -475,7 +475,7 @@ Validate-only mode must not emit merged markdown or PPTX artifacts.
 - Section names in the PPTX match the `name` field in the YAML exactly
 - Slide file paths are resolved relative to the repository root
 
-> **Agent verification (Issue 6)**: Add a section to the manifest with no `slides:` entries.
+> **Agent verification (Issue 6)**: Add a section to the manifest with no `decks:` entries.
 > Run the PPTX phase and confirm `INFO: Section '...' is empty — only module list slide added`
 > is printed, and the resulting PPTX contains a named section group with only the module
 > list slide.
@@ -493,6 +493,6 @@ Run all checks below after the pipeline completes to confirm spec conformance.
 | V3  | Output file named correctly   | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem       |
 | V4  | PPTX generated                | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                 |
 | V5  | `Title Only` layout used      | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
-| V6  | Empty section logged          | YAML section with no `slides:` entries                                   | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase  |
+| V6  | Empty section logged          | YAML section with no `decks:` entries                                    | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase  |
 | V7  | Slide count reported          | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                           |
 | V8  | Validate-only stays read-only | Run with `Mode: validate-only`                                           | Validation summary and issues are reported, and no merged deck or PPTX file is written   |

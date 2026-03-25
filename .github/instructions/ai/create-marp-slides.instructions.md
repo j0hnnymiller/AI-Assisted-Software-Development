@@ -21,6 +21,7 @@ applyTo: "slides/marp/**"
 Generate Marp slides in `slides/marp/` with required AI provenance metadata.
 
 ## File Location & Naming
+
 - Path: `slides/marp/`
 - Filename: lowercase kebab-case (e.g., `intro-to-aiasd.md`)
 
@@ -79,26 +80,67 @@ Content here
 ---
 ```
 
+## Exercise Slides
+
+**REQUIRED**: Every exercise slide MUST use `::: column` to split setup/objectives from activities/success criteria. That separator causes the slide pipeline to infer the `Two Content` layout automatically.
+
+```markdown
+## Exercise: <Title>
+
+**Setup and Objectives**
+
+Prerequisites
+
+- <prerequisite 1>
+
+Objectives
+
+- <objective 1>
+
+::: column
+
+**Activities and Success Criteria**
+
+Activities
+
+1. <step 1>
+
+Success Criteria
+
+- <criterion 1>
+
+::: notes
+Duration ~00:XX
+
+<facilitation notes>
+:::
+```
+
 ## Generation Rules
 
 **Required**:
+
 - Embed YAML front matter (no sidecar `.meta.md`)
 - Use actual model name in format `provider/model@version`
 - Create `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md`
 - Capture exact prompt verbatim
 - Use ISO8601 timestamps
+- Use `::: column` in every exercise slide to create the left/right layout
 
 **Prohibited**:
+
 - Generic model names like "github/copilot"
 - Creating slides without active chat context
 - Omitting any required metadata fields
 
 ## Checklist
+
 - [ ] File in `slides/marp/`
 - [ ] All YAML fields present
 - [ ] `ai_log` path exists with conversation.md
 - [ ] `operator` is GitHub username
 - [ ] Timestamps in ISO8601 format
+- [ ] Exercise slides use `::: column` to separate the two content areas
 - [ ] Update README.md for notable slides
 
 ## README Entry Template
@@ -108,4 +150,5 @@ Content here
 ```
 
 ## Reference
+
 See `.github/instructions/ai-assisted-output.instructions.md` for complete provenance requirements.

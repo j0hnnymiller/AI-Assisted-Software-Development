@@ -196,7 +196,7 @@ def merge_marp_decks(manifest_path: str, output_path: str):
 
     for section_idx, section in enumerate(sections):
         section_name = section['name']
-        slide_files = section.get('slides', [])
+        deck_files = section.get('decks', [])
 
         print(f"\n=== Section {section_idx + 1}: {section_name} ===")
 
@@ -204,7 +204,7 @@ def merge_marp_decks(manifest_path: str, output_path: str):
         file_contents = []
         slide_titles = []
 
-        for slide_entry in slide_files:
+        for slide_entry in deck_files:
             # Handle both formats: string path or dict with 'file' key
             if isinstance(slide_entry, dict):
                 file_path = slide_entry.get('file')

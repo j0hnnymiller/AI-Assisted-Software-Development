@@ -98,31 +98,30 @@ slides/<course>-<format>-<day>.yaml      e.g.  slides/aiasd-311-monday.yaml
 ```yaml
 sections:
   - name: "Intro"
-    slides:
-      - file: slides\marp\welcome-to-aiasd.deck.md
-        layout: title slide
+    decks:
+      - slides\marp\welcome-to-aiasd.deck.md
       - slides\marp\john-michael-miller-intro.deck.md
 
   - name: "Module 1 - AIASD"
-    slides:
+    decks:
       - slides\marp\whats-the-big-deal.deck.md
       - slides\marp\the-ai-revolution.deck.md
 
   - name: "Module 2 - Intro to Copilot"
-    slides:
+    decks:
       - slides\marp\repository-and-tool-setup.deck.md
 ```
 
 ### 2.3 Rules
 
 - `name` is required and non-empty for every section.
-- `slides` is an ordered list of repo-root-relative paths (Windows or POSIX separators accepted).
-- A slide entry may also be a mapping with `file`/`path` and optional `layout`.
-- Supported explicit `layout` values:
-  - `title slide`
-  - `two column`
+- `decks` is an ordered list of repo-root-relative paths (Windows or POSIX separators accepted).
+- Manifest deck entries do not control PPTX layout.
+- PPTX layout is selected inside slide markdown with an HTML comment such as `<!-- layout: Title Slide -->` or `<!-- layout: Two Content -->`.
+- Exception: a slide body containing an explicit `::: column` separator is automatically rendered with the `Two Content` layout even if the HTML layout comment is omitted.
+- Layout names must match the PowerPoint template layout name exactly.
 - Sections are processed in declaration order.
-- A `slides:` list may be empty or absent; the section still produces a module list slide
+- A `decks:` list may be empty or absent; the section still produces a module list slide
   and an empty section grouping in the PPTX.
 - All section names are used to build the module list that appears on every module list slide.
 
@@ -134,14 +133,14 @@ Each `.md` file under `slides/marp/` must conform to these rules.
 The agent validates and reports violations, but does not abort — it logs a warning and
 continues.
 
-| Rule               | Requirement                                                                                                                |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| Front matter       | Must begin with a valid Marp YAML front-matter block (`---` … `---`)                                                       |
-| H1 headings        | No `# H1` headings in the body                                                                                             |
-| Slide title        | Should contain at least one `## H2` heading in the body so slide titles carry cleanly into the merged deck and PPTX output |
+| Rule               | Requirement                                                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Front matter       | Must begin with a valid Marp YAML front-matter block (`---` … `---`)                                                           |
+| H1 headings        | No `# H1` headings in the body                                                                                                 |
+| Slide title        | Should contain at least one `## H2` heading in the body so slide titles carry cleanly into the merged deck and PPTX output     |
 | Image paths        | Use `images/` because source decks sit beside `slides/marp/images/`; merged output rewrites those references to `marp/images/` |
-| Trailing separator | Must not end with a bare `---`                                                                                             |
-| Encoding           | No vertical-tab (`\x0b`) characters                                                                                        |
+| Trailing separator | Must not end with a bare `---`                                                                                                 |
+| Encoding           | No vertical-tab (`\x0b`) characters                                                                                            |
 
 ---
 
@@ -301,19 +300,21 @@ scripts/generate_pptx.py            (existing script invoked by the agent)
 
 ### 7.3 Slide layout mapping
 
-| Marp source                            | python-pptx layout used  |
-| -------------------------------------- | ------------------------ |
-| Manifest `layout: title slide`         | Title Slide layout       |
-| Manifest `layout: two column`          | Two Column / Two Content layout |
-| `<!-- _class: lead -->` + `## heading` | Section Header layout    |
-| `<!-- _class: lead -->` + `# heading`  | Section Header layout    |
-| `## heading` + body bullets            | Title and Content layout |
-| `## heading` (no body)                 | Title Only layout        |
+| Marp source                            | python-pptx layout used         |
+| -------------------------------------- | ------------------------------- |
+| `<!-- layout: Title Slide -->`         | Title Slide layout              |
+| `<!-- layout: Two Content -->` or body contains `::: column` | Two Column / Two Content layout |
+| `<!-- _class: lead -->` + `## heading` | Section Header layout           |
+| `<!-- _class: lead -->` + `# heading`  | Section Header layout           |
+| `## heading` + body bullets            | Title and Content layout        |
+| `## heading` (no body)                 | Title Only layout               |
 
-For explicit `two column` slides, the body is split into left/right placeholders using one of these formats:
+For `Two Content` slides, the body is split into left/right placeholders using one of these formats:
 
 - A separator line containing exactly `::: column`
 - Two `###` subsections, where the first subsection becomes the left column and the second becomes the right column
+
+Slides that use `::: column` are auto-mapped to `Two Content`. Slides that rely on two `###` subsections without `::: column` still need the explicit `<!-- layout: Two Content -->` directive.
 
 ### 7.4 First Section Exception (🔒 CRITICAL)
 
@@ -374,11 +375,11 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
 ```bash
 pip install python-pptx pyyaml --quiet
 python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT
-```
+    decks:
 
 The agent runs both commands, reports any missing-file warnings, and confirms
 `$PPTX_OUTPUT` on success.
-
+    decks:
 ### 7.5 Outputs
 
 | File           | Description                                            |
@@ -400,55 +401,59 @@ Default values:
 ## 8. Agent prompt invocation
 
 ```
+
 1. Open .github/copilot/Promptfiles/merge-marp-decks.prompt.md in VS Code
 2. Click "Run Prompt" in the Copilot chat panel (agent mode)
    — or —
-   Type in Copilot chat:  /merge-marp-decks
+   Type in Copilot chat: /merge-marp-decks
 3. Optionally override $MANIFEST, $OUTPUT_FILE, $PPTX_SCRIPT, $PPTX_OUTPUT
    by editing the Default Values section of the prompt before running
+
 ```
 
 ### End-to-end flow
 
 ```
+
 ┌──────────────────────────────────────────────────────────────┐
-│ 1. Author slides/marp/<topic>.md                 │
-│    - One topic per file                                        │
-│    - Valid Marp front matter                                   │
-│    - First ## H2 heading = slide title                         │
-│    - No H1 headings; no trailing ---                           │
+│ 1. Author slides/marp/<topic>.md │
+│ - One topic per file │
+│ - Valid Marp front matter │
+│ - First ## H2 heading = slide title │
+│ - No H1 headings; no trailing --- │
 └─────────────────────────────┬────────────────────────────────┘
-                              │
-                              ▼
+│
+▼
 ┌──────────────────────────────────────────────────────────────┐
-│ 2. Edit slides/aiasd-311-monday.yaml                          │
-│    - List sections with names in course order                  │
-│    - List slide files under each section                       │
+│ 2. Edit slides/aiasd-311-monday.yaml │
+│ - List sections with names in course order │
+│ - List slide files under each section │
 └─────────────────────────────┬────────────────────────────────┘
-                              │
-                              ▼
+│
+▼
 ┌──────────────────────────────────────────────────────────────┐
-│ 3. Run merge-marp-decks.prompt.md in Copilot agent mode       │
-│                                                                │
-│    Agent merge phase — for each section emits:                 │
-│      a. Module list slide (all modules; current highlighted)   │
-│      b. Content slides from source files (merged verbatim)     │
-│                                                                │
-│    → slides/aiasd-311-monday-draft.md                         │
+│ 3. Run merge-marp-decks.prompt.md in Copilot agent mode │
+│ │
+│ Agent merge phase — for each section emits: │
+│ a. Module list slide (all modules; current highlighted) │
+│ b. Content slides from source files (merged verbatim) │
+│ │
+│ → slides/aiasd-311-monday-draft.md │
 └─────────────────────────────┬────────────────────────────────┘
-                              │
-                              ▼
+│
+▼
 ┌──────────────────────────────────────────────────────────────┐
-│    Agent PPTX phase                                            │
-│      Runs scripts/generate_pptx.py                            │
-│      - Agenda and content slides                               │
-│      - <p14:section> XML groups per section                    │
-│                                                                │
-│    → slides/output/aiasd-311-monday-draft.pptx                │
-│        Editable text boxes, bullets, presenter notes           │
-│        Named section groupings visible in PowerPoint           │
+│ Agent PPTX phase │
+│ Runs scripts/generate_pptx.py │
+│ - Agenda and content slides │
+│ - <p14:section> XML groups per section │
+│ │
+│ → slides/output/aiasd-311-monday-draft.pptx │
+│ Editable text boxes, bullets, presenter notes │
+│ Named section groupings visible in PowerPoint │
 └──────────────────────────────────────────────────────────────┘
-```
+
+````
 
 ---
 
@@ -515,14 +520,14 @@ Use this minimal manifest for regression testing:
 ```yaml
 sections:
   - name: "Intro"
-    slides:
+    decks:
       - slides\marp\welcome-to-aiasd.deck.md
       - slides\marp\john-michael-miller-intro.deck.md
 
   - name: "Module 1 - Test"
-    slides:
+    decks:
       - slides\marp\whats-the-big-deal.deck.md
-```
+````
 
 Expected PPTX slide order:
 
@@ -537,8 +542,8 @@ Expected PPTX slide order:
 
 | Scenario                              | Approach                                                                                                                                      |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add a new slide file                  | Create `slides/marp/<topic>.md`; add its path to the YAML manifest under the appropriate section                                 |
-| Add a new section                     | Append a `- name: … slides: …` block to the YAML manifest; all module list slides update automatically on next run                            |
+| Add a new slide file                  | Create `slides/marp/<topic>.md`; add its path to the YAML manifest under the appropriate section                                              |
+| Add a new section                     | Append a `- name: … decks: …` block to the YAML manifest; all module list slides update automatically on next run                             |
 | Reorder sections                      | Change the order in the YAML manifest; module list slides re-generate in the new order                                                        |
 | Skip module list slides for a section | Add a manifest flag (e.g. `no_injected_slides: true`) and update the prompt to honour it                                                      |
 | Use a branded PPTX template           | Extend `generate_pptx.py` to load a reference `.pptx` and copy its slide master before adding slides                                          |

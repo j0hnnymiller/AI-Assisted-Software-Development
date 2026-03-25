@@ -8,13 +8,15 @@ Usage:
 🔒 CRITICAL INVARIANTS (DO NOT BREAK):
 
 1. FIRST SECTION EXCEPTION:
-   The first section (idx=0) in the YAML manifest MUST NOT receive injected slides.
-   Only sections with idx > 0 get the three injected slides (module list, header, agenda).
+    The first section (idx=0) in the YAML manifest MUST NOT receive the injected
+    module list slide. Only sections with idx > 0 receive that injected slide.
 
-   Rationale: First section typically contains welcome/title slides. Adding navigation
-   slides before it creates an awkward opening that frontloads course structure.
+    Rationale: First section typically contains welcome/title slides. Adding
+    navigation before it creates an awkward opening that frontloads course
+    structure.
 
-   Implementation: The section loop MUST use enumerate() and check: if idx > 0
+    Implementation: The section loop MUST use enumerate() and check: if idx > 0
+    before adding add_module_list_slide().
 
 2. SPEAKER NOTES ON ALL SLIDES:
    Every slide (injected and content) MUST have speaker notes:
@@ -91,7 +93,7 @@ def ensure_markdown_slide_entry(slide_path: str | Path) -> None:
         raise ValueError(
             f"Non-markdown slide entry detected: {slide_path} "
             f"(extension: {ext}). Expected one of: {allowed}. "
-            "Use a markdown slide source in sections[].slides, or configure a .pptx under the top-level template field."
+            "Use a markdown deck source in sections[].decks, or configure a .pptx under the top-level template field."
         )
 
 
@@ -136,6 +138,29 @@ def get_slide_layout(prs: Presentation, preferred_names: list[str], fallback_ind
         return prs.slide_layouts[fallback_index]
     except IndexError:
         return prs.slide_layouts[0]
+
+
+def find_slide_layout_by_name(prs: Presentation, layout_name: str):
+    """Return the slide layout whose name matches the requested name, else None."""
+    normalized_name = layout_name.strip().casefold()
+    if not normalized_name:
+        return None
+
+    for layout in prs.slide_layouts:
+        candidate_name = getattr(layout, "name", "").strip().casefold()
+        if candidate_name == normalized_name:
+            return layout
+
+    return None
+
+
+def format_available_layout_names(prs: Presentation) -> str:
+    """Return a readable list of layout names available in the template."""
+    names = []
+    for index, layout in enumerate(prs.slide_layouts):
+        layout_name = getattr(layout, "name", "").strip()
+        names.append(layout_name or f"<unnamed:{index}>")
+    return ", ".join(names)
 
 
 def build_section_id(section_name: str, slide_start_idx: int) -> str:
@@ -186,7 +211,7 @@ def split_marp_slides(md_content: str) -> list[str]:
     slides.append(current)
 
     # Filter out empty or whitespace-only blocks
-    return ["\n".join(block).strip() for block in slides if any(l.strip() for l in block)]
+    return ["\n".join(block).strip() for block in slides if any(line.strip() for line in block)]
 
 
 def process_markdown_links(text: str) -> str:
@@ -338,17 +363,19 @@ def parse_markdown_table(body: str) -> list[list[str]]:
     return rows
 
 
-def parse_slide(md_content: str) -> tuple[str, str, str | None, str]:
-    """Return (title, body, background_image_path, speaker_notes) parsed from a single markdown slide block."""
+def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str]:
+    """Return (title, body, background_image_path, speaker_notes, layout_name) parsed from a single markdown slide block."""
     lines = md_content.strip().splitlines()
 
     title = ""
     body_lines = []
     bg_image = None
     speaker_notes = ""
+    layout_name = ""
 
     # Pattern to match Marp background images: ![bg ...](path)
     bg_pattern = re.compile(r'!\[bg[^\]]*\]\(([^)]+)\)')
+    layout_pattern = re.compile(r'^<!--\s*layout\s*:\s*(.*?)\s*-->$', re.IGNORECASE)
 
     for line in lines:
         if not title and line.startswith("# "):
@@ -363,6 +390,10 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None, str]:
                 match = bg_pattern.match(stripped)
                 if match:
                     bg_image = match.group(1)
+            elif stripped.startswith("<!--"):
+                match = layout_pattern.match(stripped)
+                if match:
+                    layout_name = match.group(1).strip()
             # Skip Marp directives (background images and HTML comments)
             elif not stripped.startswith("<!--"):
                 body_lines.append(line)
@@ -378,7 +409,7 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None, str]:
     # Process markdown links according to rendering rules
     body = process_markdown_links(body)
 
-    return title, body, bg_image, speaker_notes
+    return title, body, bg_image, speaker_notes, layout_name
 
 
 def set_slide_notes(slide, note_text: str) -> None:
@@ -445,6 +476,12 @@ def split_two_column_body(body: str) -> tuple[str, str]:
     return body.strip(), ""
 
 
+def has_explicit_two_column_separator(body: str) -> bool:
+    """Return True when the slide body explicitly declares a two-column split."""
+    separator_pattern = re.compile(r"^\s*:::\s*column\s*$", re.IGNORECASE | re.MULTILINE)
+    return separator_pattern.search(body) is not None
+
+
 def add_title_content_slide(prs: Presentation, title: str, body: str, note: str = "") -> None:
     """Add a Title and Content layout slide with markdown bold formatting support."""
     layout = get_slide_layout(prs, ["Title and Content"], LAYOUT_TITLE_CONTENT)
@@ -459,6 +496,70 @@ def add_title_content_slide(prs: Presentation, title: str, body: str, note: str 
 
     if note:
         set_slide_notes(slide, note)
+
+
+def add_background_image(slide, bg_image: str | None) -> None:
+    """Add a full-slide background image behind existing content."""
+    if not bg_image:
+        return
+
+    try:
+        pic = slide.shapes.add_picture(
+            bg_image,
+            left=0,
+            top=0,
+            width=Inches(10),
+            height=Inches(7.5)
+        )
+        slide.shapes._spTree.remove(pic._element)
+        slide.shapes._spTree.insert(2, pic._element)
+    except Exception as e:
+        print(f"  WARNING: Could not add background image {bg_image}: {e}")
+
+
+def add_named_layout_slide(
+    prs: Presentation,
+    layout_name: str,
+    title: str,
+    body: str,
+    bg_image: str | None = None,
+    note: str = "",
+) -> bool:
+    """Add a slide using the exact layout name requested in slide markdown or manifest."""
+    layout = find_slide_layout_by_name(prs, layout_name)
+    if layout is None:
+        print(
+            f'  WARNING: layout "{layout_name}" not found in template. '
+            f"Available layouts: {format_available_layout_names(prs)}"
+        )
+        return False
+
+    slide = prs.slides.add_slide(layout)
+    add_background_image(slide, bg_image)
+
+    if slide.shapes.title:
+        slide.shapes.title.text = title
+
+    title_placeholder_idx = slide.shapes.title.placeholder_format.idx if slide.shapes.title else None
+    content_placeholders = []
+    for shape in slide.placeholders:
+        if shape.placeholder_format.idx == title_placeholder_idx:
+            continue
+        content_placeholders.append(shape)
+
+    content_placeholders.sort(key=lambda shape: shape.placeholder_format.idx)
+
+    left_body, right_body = split_two_column_body(body)
+    if len(content_placeholders) >= 2 and right_body:
+        populate_text_placeholder(content_placeholders[0], left_body)
+        populate_text_placeholder(content_placeholders[1], right_body)
+    elif content_placeholders and body:
+        populate_text_placeholder(content_placeholders[0], body)
+
+    if note:
+        set_slide_notes(slide, note)
+
+    return True
 
 
 def add_two_column_slide(
@@ -540,40 +641,11 @@ def add_title_only_slide(prs: Presentation, title: str, bg_image: str | None = N
     slide = prs.slides.add_slide(layout)
 
     # Add background image first (before setting title) so it appears behind content
-    if bg_image:
-        try:
-            # Add image to fill the slide (standard 16:9 is 10x7.5 inches)
-            pic = slide.shapes.add_picture(
-                bg_image,
-                left=0,
-                top=0,
-                width=Inches(10),
-                height=Inches(7.5)
-            )
-            # Move the picture to the back by manipulating the XML
-            slide.shapes._spTree.remove(pic._element)
-            slide.shapes._spTree.insert(2, pic._element)
-        except Exception as e:
-            print(f"  WARNING: Could not add background image {bg_image}: {e}")
+    add_background_image(slide, bg_image)
 
     # Set title after adding background image
     if slide.shapes.title:
         slide.shapes.title.text = title
-
-    if note:
-        set_slide_notes(slide, note)
-
-
-def add_section_header_slide(prs: Presentation, section_name: str, note: str = "") -> None:
-    """Add a section header slide (# Section Name, lead layout)."""
-    try:
-        layout = get_slide_layout(prs, ["Section Header"], LAYOUT_SECTION_HEADER)
-    except IndexError:
-        layout = prs.slide_layouts[0]
-
-    slide = prs.slides.add_slide(layout)
-    if slide.shapes.title:
-        slide.shapes.title.text = section_name
 
     if note:
         set_slide_notes(slide, note)
@@ -626,32 +698,6 @@ def add_module_list_slide(prs: Presentation, all_sections: list[str], current: s
 
     if note:
         set_slide_notes(slide, note)
-
-
-def add_section_agenda_slide(
-    prs: Presentation, section_name: str, slide_files: list, repo_root: Path
-) -> None:
-    """Add an agenda slide listing titles extracted from source files."""
-    if not slide_files:
-        return
-
-    # Extract file paths (support both string and dict entries)
-    paths = []
-    for entry in slide_files:
-        if isinstance(entry, dict):
-            path = entry.get("file") or entry.get("path")
-        else:
-            path = entry
-        if path:
-            paths.append(path)
-
-    titles = [extract_slide_title(resolve_repo_path(repo_root, f)) for f in paths]
-    add_title_content_slide(
-        prs,
-        section_name,
-        "\n".join(f"- {t}" for t in titles),
-        note="Auto-generated section agenda slide listing slide titles from manifest"
-    )
 
 
 def build_presentation(yaml_path: Path, output_path: Path) -> None:
@@ -720,13 +766,10 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
 
     for idx, section in enumerate(sections_cfg):
         section_name = section.get("name", "Unnamed Section")
-        slides = [s for s in (section.get("slides") or []) if s]
+        deck_entries = [s for s in (section.get("decks") or []) if s]
 
         slide_start_idx = len(prs.slides)
 
-        # Per specification (.github/instructions/slide-pipeline.instructions.md section 4):
-        # Skip injected slides for first section to prevent navigation-heavy opening
-        # that would precede the welcome slide.
         if idx > 0:
             add_module_list_slide(
                 prs,
@@ -734,21 +777,18 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                 section_name,
                 note="Auto-generated course navigation slide showing all modules with current section highlighted"
             )
-            add_section_header_slide(
-                prs,
-                section_name,
-                note="Auto-generated section header slide to announce the section"
-            )
-            add_section_agenda_slide(prs, section_name, slides, repo_root)
 
-        for slide_entry in slides:
-            # Support both simple string paths and dict with layout specification
+        for slide_entry in deck_entries:
             if isinstance(slide_entry, dict):
+                if "layout" in slide_entry:
+                    raise ValueError(
+                        "Manifest deck layouts are no longer supported. "
+                        "Move the layout into the slide markdown using "
+                        '`<!-- layout: Layout Name -->`.'
+                    )
                 slide_path = slide_entry.get("file") or slide_entry.get("path")
-                layout_type = slide_entry.get("layout", "").strip().lower()
             else:
                 slide_path = slide_entry
-                layout_type = ""
 
             ensure_markdown_slide_entry(slide_path)
 
@@ -761,7 +801,7 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
             md = slide_file.read_text(encoding="utf-8")
             slide_blocks = split_marp_slides(md)
             for block in slide_blocks:
-                title, body, bg_image, speaker_notes = parse_slide(block)
+                title, body, bg_image, speaker_notes, slide_layout_name = parse_slide(block)
 
                 # Combine source path with speaker notes if they exist
                 if speaker_notes:
@@ -783,21 +823,31 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                     else:
                         bg_image_path = str(bg_image_path)
 
-                # Honor explicit layout specification
-                if layout_type == "title" or layout_type == "title slide":
-                    # Extract subtitle from body (first line)
-                    subtitle = body.split("\n")[0] if body else ""
-                    add_title_slide(prs, title or slide_file.stem, subtitle, note=combined_note)
-                elif layout_type in {"two column", "two columns", "two content"}:
+                requested_layout_name = slide_layout_name
+
+                if requested_layout_name and add_named_layout_slide(
+                    prs,
+                    requested_layout_name,
+                    title or slide_file.stem,
+                    body,
+                    bg_image=bg_image_path,
+                    note=combined_note,
+                ):
+                    continue
+
+                if body and has_explicit_two_column_separator(body):
                     left_body, right_body = split_two_column_body(body)
-                    add_two_column_slide(
-                        prs,
-                        title or slide_file.stem,
-                        left_body,
-                        right_body,
-                        note=combined_note,
-                    )
-                elif contains_markdown_table(body):
+                    if right_body:
+                        add_two_column_slide(
+                            prs,
+                            title or slide_file.stem,
+                            left_body,
+                            right_body,
+                            note=combined_note,
+                        )
+                        continue
+
+                if contains_markdown_table(body):
                     # Parse and create table slide
                     table_data = parse_markdown_table(body)
                     add_table_slide(prs, title or slide_file.stem, table_data, note=combined_note)
@@ -824,8 +874,8 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                 attrib={"id": sld_el.get("id")},
             )
 
-        if not slides:
-            print(f"  INFO: Section '{section_name}' is empty — only injected slides added")
+        if not deck_entries:
+            print(f"  INFO: Section '{section_name}' is empty — only module list slide added")
 
     prs.save(output_path)
     print(f"✅ Saved: {output_path}")

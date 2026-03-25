@@ -60,6 +60,8 @@ Send framed messages over stdio using `Content-Length` headers. The bundled test
 
 **Purpose:** Support the Marp-to-PPTX slide workflow.
 
+**Manifest schema:** Course day manifests define ordered source deck files under `sections[].decks`.
+
 **Usage:**
 
 ```powershell

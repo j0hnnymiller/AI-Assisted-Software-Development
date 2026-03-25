@@ -42,10 +42,12 @@ This directory contains standardized AI prompts for various development and anal
 
 ### Slides & Presentation Pipeline
 
-| File                                                                                     | Purpose                              | Output                                         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------- |
-| [`merge-marp-decks.prompt.md`](merge-marp-decks.prompt.md)                               | Single Manifest Slide Merge Pipeline | One merged Marp deck and one PPTX per manifest |
-| [`run-aiasd-weekly-slide-pipeline.prompt.md`](run-aiasd-weekly-slide-pipeline.prompt.md) | Weekly AIASD Batch Slide Pipeline    | Monday-Friday merged decks and PPTX outputs    |
+| File                                                                                     | Purpose                             | Output                                         |
+| ---------------------------------------------------------------------------------------- | ----------------------------------- | ---------------------------------------------- |
+| [`merge-marp-decks.prompt.md`](merge-marp-decks.prompt.md)                               | Single Manifest Deck Merge Pipeline | One merged Marp deck and one PPTX per manifest |
+| [`run-aiasd-weekly-slide-pipeline.prompt.md`](run-aiasd-weekly-slide-pipeline.prompt.md) | Weekly AIASD Batch Deck Pipeline    | Monday-Friday merged decks and PPTX outputs    |
+
+Current manifest schema note: day manifests list source deck files under `sections[].decks`.
 
 ## Meta Prompts
 

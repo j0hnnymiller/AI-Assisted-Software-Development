@@ -251,7 +251,7 @@ def main():
     # Collect unique source file paths (manifest order)
     all_paths: list[str] = []
     for section in sections:
-        for p in (section.get("slides") or []):
+        for p in (section.get("decks") or []):
             if p and p not in all_paths:
                 all_paths.append(p)
 
@@ -284,9 +284,9 @@ def main():
     # Global front matter from the very first source file across all sections
     global_fm = ""
     for section in sections:
-        slides = [s for s in (section.get("slides") or []) if s]
-        if slides and slides[0] in contents:
-            global_fm, _ = strip_front_matter(contents[slides[0]])
+        deck_entries = [s for s in (section.get("decks") or []) if s]
+        if deck_entries and deck_entries[0] in contents:
+            global_fm, _ = strip_front_matter(contents[deck_entries[0]])
             break
 
     if not global_fm:
@@ -298,11 +298,11 @@ def main():
 
     for section in sections:
         section_name = section.get("name", "Unnamed")
-        src_slides   = [s for s in (section.get("slides") or []) if s]
+        src_decks    = [s for s in (section.get("decks") or []) if s]
 
         # Collect first H2 from each source file (for agenda slide)
         first_h2s = []
-        for p in src_slides:
+        for p in src_decks:
             txt = contents.get(p, "")
             _, body = strip_front_matter(txt)
             h2 = get_first_h2(body)
@@ -315,10 +315,10 @@ def main():
         slide_blocks.append(section_header_slide(section_name))
 
         # 3. Section agenda slide + content (only when section has source files)
-        if src_slides:
+        if src_decks:
             slide_blocks.append(section_agenda_slide(section_name, first_h2s))
 
-            for p in src_slides:
+            for p in src_decks:
                 txt = contents.get(p, "")
                 if not txt:
                     print(f"  WARNING: skipping empty/missing {p}")
