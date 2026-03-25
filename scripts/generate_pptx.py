@@ -72,8 +72,10 @@ from pathlib import Path
 import yaml
 from lxml import etree
 from pptx import Presentation
+from pptx.enum.dml import MSO_THEME_COLOR
 from pptx.enum.text import MSO_AUTO_SIZE
-from pptx.util import Inches
+from pptx.oxml.xmlchemy import OxmlElement
+from pptx.util import Inches, Pt
 
 LAYOUT_TITLE_SLIDE = 0  # Title Slide layout
 LAYOUT_TITLE_CONTENT = 1  # adjust index if template differs
@@ -235,7 +237,7 @@ def process_markdown_links(text: str) -> str:
     return re.sub(pattern, replace_link, text)
 
 
-def apply_markdown_formatting(text_frame, line_text: str) -> None:
+def apply_markdown_formatting(text_frame, line_text: str, paragraph=None) -> None:
     """
     Parse markdown bold and blockquote syntax and add formatted runs to the text frame paragraph.
     Supports **bold text** syntax and > blockquote syntax.
@@ -251,6 +253,20 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
     Example: "> 'Programming hasn't changed'"
     -> Run 1: "'Programming hasn't changed'" (italic)
     """
+    def set_bullet_visibility(paragraph, show_bullet: bool) -> None:
+        p_pr = paragraph._p.get_or_add_pPr()
+        for child in list(p_pr):
+            if child.tag.endswith("}buNone") or child.tag.endswith("}buChar") or child.tag.endswith("}buAutoNum"):
+                p_pr.remove(child)
+        if not show_bullet:
+            p_pr.insert(0, OxmlElement("a:buNone"))
+
+    if paragraph is None:
+        p = text_frame.add_paragraph()
+    else:
+        p = paragraph
+        p.clear()
+
     # Handle blockquote lines: render as italic, strip the '> ' prefix
     is_blockquote = line_text.startswith("> ")
     if is_blockquote:
@@ -267,12 +283,13 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
 
     # If no bold sections, just add the text as-is (with italic if blockquote)
     if not bold_sections:
-        p = text_frame.add_paragraph()
         if line_text.startswith("- "):
             p.text = line_text[2:]
             p.level = 0
+            set_bullet_visibility(p, True)
         else:
             p.text = line_text
+            set_bullet_visibility(p, False)
         if is_blockquote:
             for run in p.runs:
                 run.font.italic = True
@@ -285,13 +302,15 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
         return
 
     # Build the line with formatting
-    p = text_frame.add_paragraph()
     if line_text.startswith("- "):
         # Remove bullet prefix, it will be added by paragraph level
         line_text = line_text[2:]
         p.level = 0
+        set_bullet_visibility(p, True)
         # Adjust positions for removed "- "
         bold_sections = [(start - 2, end - 2, text) for start, end, text in bold_sections]
+    else:
+        set_bullet_visibility(p, False)
 
     # Add runs with proper formatting
     last_pos = 0
@@ -423,14 +442,63 @@ def populate_text_placeholder(shape, body: str) -> None:
     """Populate a text placeholder using the existing markdown formatting rules."""
     tf = shape.text_frame
     tf.clear()
-    for line in body.splitlines():
-        apply_markdown_formatting(tf, line)
+    lines = body.splitlines()
+    if lines:
+        apply_markdown_formatting(tf, lines[0], paragraph=tf.paragraphs[0])
+        for line in lines[1:]:
+            apply_markdown_formatting(tf, line)
     tf.margin_top = Inches(0.05)
     tf.margin_bottom = Inches(0.05)
     tf.margin_left = Inches(0.1)
     tf.margin_right = Inches(0.1)
-    tf.word_wrap = True
-    tf.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+    finalize_text_frame(tf)
+
+
+def populate_paragraph_lines(text_frame, lines: list[str]) -> None:
+    """Populate a text frame without leaving an empty first paragraph behind."""
+    text_frame.clear()
+    if not lines:
+        return
+
+    first_paragraph = text_frame.paragraphs[0]
+    first_paragraph.text = lines[0]
+    for line in lines[1:]:
+        paragraph = text_frame.add_paragraph()
+        paragraph.text = line
+
+    finalize_text_frame(text_frame)
+
+
+def finalize_text_frame(text_frame, max_size: int = 28) -> None:
+    """Force text fitting during generation instead of relying on PowerPoint refresh."""
+    text_frame.word_wrap = True
+    try:
+        text_frame.fit_text(font_family="Arial", max_size=max_size)
+    except Exception:
+        text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+
+
+def style_table_medium_accent_4(table) -> None:
+    """Apply a visual style matching PowerPoint's Medium Style 2 - Accent 4."""
+    table.first_row = True
+    table.horz_banding = True
+
+    for row_index, row in enumerate(table.rows):
+        for cell in row.cells:
+            cell.fill.solid()
+            cell.text_frame.word_wrap = True
+            paragraph = cell.text_frame.paragraphs[0]
+            paragraph.font.size = Pt(16)
+
+            if row_index == 0:
+                cell.fill.fore_color.theme_color = MSO_THEME_COLOR.ACCENT_4
+                paragraph.font.bold = True
+                paragraph.font.color.theme_color = MSO_THEME_COLOR.BACKGROUND_1
+            else:
+                cell.fill.fore_color.theme_color = MSO_THEME_COLOR.ACCENT_4
+                cell.fill.fore_color.brightness = 0.8 if row_index % 2 == 1 else 0.92
+                paragraph.font.bold = False
+                paragraph.font.color.theme_color = MSO_THEME_COLOR.TEXT_1
 
 
 def split_two_column_body(body: str) -> tuple[str, str]:
@@ -615,6 +683,7 @@ def add_table_slide(prs: Presentation, title: str, table_data: list[list[str]], 
         # Add table
         table_shape = slide.shapes.add_table(rows, cols, left, top, width, height)
         table = table_shape.table
+        style_table_medium_accent_4(table)
 
         # Populate table cells
         for i, row_data in enumerate(table_data):
@@ -622,10 +691,7 @@ def add_table_slide(prs: Presentation, title: str, table_data: list[list[str]], 
                 if j < cols:  # Ensure we don't exceed column count
                     cell = table.cell(i, j)
                     cell.text = cell_value
-                    # Format header row (first row) differently
-                    if i == 0:
-                        cell.text_frame.paragraphs[0].font.bold = True
-                        cell.text_frame.paragraphs[0].font.size = Inches(0.18)
+                    cell.text_frame.paragraphs[0].font.size = Pt(16)
 
     if note:
         set_slide_notes(slide, note)
@@ -684,15 +750,11 @@ def add_module_list_slide(prs: Presentation, all_sections: list[str], current: s
             tf = shape.text_frame
             tf.clear()
             tf.word_wrap = True
-            for name in all_sections:
-                p = tf.add_paragraph()
-                p.level = 0
-                run = p.add_run()
-                if name == current:
-                    run.text = f"▶ {name}"
-                    run.font.bold = True
-                else:
-                    run.text = name
+            lines = [f"- **▶ {name}**" if name == current else f"- {name}" for name in all_sections]
+            if lines:
+                apply_markdown_formatting(tf, lines[0], paragraph=tf.paragraphs[0])
+                for line in lines[1:]:
+                    apply_markdown_formatting(tf, line)
             tf.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
             break
 
@@ -745,13 +807,7 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
         if agenda_title.lower() == "agenda":
             for shape in agenda_slide.placeholders:
                 if shape.placeholder_format.idx == 1:
-                    tf = shape.text_frame
-                    tf.clear()
-                    tf.word_wrap = True
-                    for name in all_section_names:
-                        p = tf.add_paragraph()
-                        p.text = name
-                    tf.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+                    populate_paragraph_lines(shape.text_frame, all_section_names)
                     break
 
     # python-pptx exposes the underlying <p:presentation> element via part._element.
