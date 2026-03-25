@@ -59,8 +59,6 @@ Objectives
 - Apply intelligent linting and quality gates
 - Validate test adequacy and architectural alignment
 
-::: column
-
 Activities
 
 1. Select a brownfield module or function
@@ -68,6 +66,9 @@ Activities
    - Coverage gaps
    - Missing edge cases
    - Redundant or brittle tests
+
+::: column
+
 3. Ask AI to generate missing tests
 4. Run linting and architectural checks
 5. Propose quality gates to enforce improvements

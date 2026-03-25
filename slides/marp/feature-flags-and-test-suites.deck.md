@@ -119,6 +119,8 @@ Walk through this workflow step by step. The flag is the pivot point: it control
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Automation Strategy
 
 Two-phase CI/CD pipeline
@@ -128,6 +130,8 @@ Two-phase CI/CD pipeline
 - Set flags to match **production state**
 - Run regression tests
 - Block merge if failures detected
+
+::: column
 
 **Phase 2 — To-Be Tests**
 
@@ -176,6 +180,8 @@ This is often forgotten but critical. When a feature ships, its To-Be tests must
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Feature Flag Retirement — AI-Assisted
 
 AI dramatically simplifies flag removal
@@ -186,6 +192,8 @@ AI dramatically simplifies flag removal
 2. Merge the changes
 3. Schedule flag retirement for a later sprint
 4. Manually trace all code paths
+
+::: column
 
 **With AI:**
 

@@ -83,12 +83,16 @@ Testing in production is not reckless—it's engineered risk management. Traditi
 
 ## Why Test in Production?
 
+<!-- layout: Two Content -->
+
 **The Reality Gap**
 
 - Staging can't replicate production scale
 - Real user behavior is unpredictable
 - Production data reveals edge cases
 - Load patterns differ between environments
+
+::: column
 
 **The Risk Without It**
 
@@ -103,7 +107,7 @@ The gap between staging and production is inevitable. No matter how sophisticate
 
 ---
 
-## Subsection 5.1: Engineered Production Testing
+## Engineered Production Testing
 
 Core principles and safe techniques
 
@@ -113,6 +117,8 @@ This section introduces the fundamental techniques for safe production testing. 
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Core Principle
 
 **Hide features behind flags until ready**
@@ -121,6 +127,8 @@ This section introduces the fundamental techniques for safe production testing. 
 - Control exposure programmatically
 - Enable instant rollback
 - Test incrementally with real infrastructure
+
+::: column
 
 **Test in real environment with real loads**
 
@@ -134,6 +142,8 @@ Feature flags are the foundation of safe production testing. They allow you to d
 :::
 
 ---
+
+<!-- layout: Two Content -->
 
 ## Technique 1: Shadow Traffic
 
@@ -150,19 +160,21 @@ No user impact—shadow results are discarded
 - Compare old vs. new behavior
 - Identify performance regressions
 
+::: column
+
 **Implementation**
 
-```
 Incoming Request
   ├─> Old Code (serves response)
   └─> New Code (logged/monitored, discarded)
-```
 
 ::: notes
 Shadow traffic is the safest production testing technique. Every production request is duplicated: one copy goes to the existing code (which serves the user), and one copy goes to the new code (which is monitored but discarded). You get full production validation with zero customer risk. Shadow traffic is ideal for testing performance, correctness, and edge-case handling. It's especially valuable for AI-generated code because you can compare outputs between human-written and AI-generated implementations at production scale.
 :::
 
 ---
+
+<!-- layout: Two Content -->
 
 ## Technique 2: Canary Releases
 
@@ -178,6 +190,8 @@ Expand exposure only if metrics are healthy
 - **5%**: Expand to low-risk segments
 - **25%**: Quarter of production traffic
 - **100%**: Full rollout after validation
+
+::: column
 
 **Health Checks**
 
@@ -264,7 +278,7 @@ Automated rollback is the safety net. If error rates or latency exceed predefine
 
 ---
 
-## Subsection 5.2: Error Budget Management
+## Error Budget Management
 
 Automatic feature disabling based on thresholds
 
@@ -351,7 +365,7 @@ Not all features deserve the same budget. Payment processing is revenue-critical
 
 ---
 
-## Subsection 5.3: Beta Testing Strategy
+## Beta Testing Strategy
 
 Testing in production with real users, limited exposure
 
@@ -431,21 +445,25 @@ Beta testing is insurance. You get real-world validation with limited blast radi
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Beta Testing Workflow
 
-**Phase 1: Internal Beta (1-3 days)**
+**Phase 1: Internal Beta**
 
 - 10-50 internal users
 - High-touch feedback (Slack, stand-ups)
 - Rapid iteration on critical bugs
 
-**Phase 2: External Beta (1-2 weeks)**
+**Phase 2: External Beta**
 
 - 100-1,000 external testers
 - Survey-based feedback
 - Monitor error rates and support tickets
 
-**Phase 3: Gradual Rollout (2-4 weeks)**
+::: column
+
+**Phase 3: Gradual Rollout**
 
 - 5% → 25% → 50% → 100%
 - Each tier validated before expansion
@@ -483,17 +501,3 @@ The workflow is staged. Start with internal users for rapid feedback and iterati
 Testing in production is a disciplined practice, not a gamble. The techniques we've covered—shadow traffic, canaries, observability, automated rollback, error budgets, and beta testing—work together as a system. Feature flags decouple deployment from release. Observability tells you when something goes wrong. Automated rollback limits damage. Error budgets encode acceptable risk. Beta testing gives you qualitative feedback. The mindset shift: production is not scary if you have the right tools and processes. In fact, production is the only environment that truly matters. Everything else is a rehearsal. AI accelerates development velocity, and these techniques ensure you can accelerate safely.
 :::
 
----
-
-## Questions & Discussion
-
-**Discussion Prompts**
-
-- What production testing techniques does your organization currently use?
-- What are the biggest barriers to testing in production in your environment?
-- How would automated rollback reduce MTTR in your last production incident?
-- What error budgets would you set for your most critical features?
-
-::: notes
-Open the floor for questions and discussion. Encourage students to share their experiences with production testing (or the lack thereof). Ask about their most painful production incidents and how these techniques could have reduced the impact. The goal is to make production testing feel achievable, not aspirational. If the organization lacks feature flags or observability, that's a conversation starter: What would it take to implement these? What's the ROI? Production testing is a cultural shift as much as a technical one.
-:::
