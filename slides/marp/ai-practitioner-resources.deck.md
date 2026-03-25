@@ -8,6 +8,7 @@ paginate: true
 
 AI Practitioner Resources
   - https://ai-resources.codemag.com
-Prompt review
-Implementing Slices
-Wrap up
+  - AI curated collection of resources for AI-assisted software development
+  - AI-first
+  - Prompt-first
+  - Prompt-only
