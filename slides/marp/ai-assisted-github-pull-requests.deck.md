@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## AI-Assisted GitHub Pull Requests
 
 ## Faster, Better PRs with GitHub Copilot
@@ -384,19 +385,31 @@ Duration ~00:02
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Summary
 
-### AI transforms the PR workflow:
+### AI transforms the PR workflow
 
-| Without AI             | With AI                                       |
-| ---------------------- | --------------------------------------------- |
-| Manual PR descriptions | Auto-generated, structured descriptions       |
-| Line-by-line review    | AI-summarized highlights + human logic review |
-| Slow feedback loops    | Inline fix suggestions from review comments   |
-| Inconsistent standards | Automated checks on every PR                  |
-| Slow onboarding        | New devs match team standards faster          |
+**Without AI**
 
-**Pull requests become a collaboration between humans and AI**
+- Manual PR descriptions
+- Line-by-line review only
+- Slow feedback loops
+- Inconsistent standards
+- Slower onboarding
+
+::: column
+
+**With AI**
+
+- Structured draft descriptions
+- AI summaries plus human logic review
+- Faster inline fix suggestions
+- Automated checks on every PR
+- Faster onboarding to team standards
+
+**Pull requests become a collaboration between humans and AI.**
 
 ::: notes
 Duration ~00:02

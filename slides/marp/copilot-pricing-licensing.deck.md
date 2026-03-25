@@ -31,16 +31,38 @@ Transition: "Let's start with an overview of what's available."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Copilot Plan Overview
 
-| Feature               | **Individual** | **Business**    | **Enterprise** |
-| --------------------- | -------------- | --------------- | -------------- |
-| Price                 | $10/mo         | **$19/user/mo** | $39/user/mo    |
-| Code completions      | ✅             | ✅              | ✅             |
-| Copilot Chat          | ✅             | ✅              | ✅             |
-| Policy management     | ❌             | ✅              | ✅             |
-| Org instruction files | ❌             | ✅              | ✅             |
-| Enterprise features   | ❌             | ❌              | ✅             |
+**Individual**
+
+- `$10/mo`
+- Code completions
+- Copilot Chat
+- No policy management
+- No org instruction files
+
+**Business**
+
+- **`$19/user/mo`**
+- Code completions and chat
+- Policy management
+- Org instruction files
+
+::: column
+
+**Enterprise**
+
+- `$39/user/mo`
+- Includes Business capabilities
+- Adds enterprise-only features
+
+**Quick comparison**
+
+- Individual is for solo usage
+- Business is the main team starting point
+- Enterprise adds knowledge, analytics, and deeper controls
 
 ::: notes
 Duration ~00:02
@@ -121,6 +143,8 @@ Help the audience self-select: "If you have a team under 500 and no compliance r
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Organization-Level Instruction Files
 
 ### Business & Enterprise unlock `.github/instructions/`
@@ -128,16 +152,20 @@ Help the audience self-select: "If you have a team under 500 and no compliance r
 ```
 your-org/
 └── .github/
-    └── instructions/
-        ├── coding-standards.instructions.md   ← all repos
-        ├── security-policy.instructions.md    ← all repos
-        └── api-guidelines.instructions.md     ← all repos
+  └── instructions/
+    ├── coding-standards.instructions.md
+    ├── security-policy.instructions.md
+    └── api-guidelines.instructions.md
 ```
 
-- 📌 Instructions apply **automatically** to all org repositories
-- 🤖 Copilot follows them in every chat and code suggestion
-- ✍️ Teams can still add **repo-level** instructions that extend org rules
-- 🔄 Changes propagate instantly — no developer action needed
+::: column
+
+**What this gives you**
+
+- Instructions apply automatically across org repositories
+- Copilot follows them in chat and code suggestions
+- Repo-level instructions can extend the org defaults
+- Updates propagate without developer action
 
 ::: notes
 Duration ~00:03

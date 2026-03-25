@@ -3,24 +3,33 @@ marp: true
 theme: default
 paginate: true
 ---
+
+<!-- layout: Two Content -->
+
 ## Evergreen Software Development - Core Principles
 
-Intent-First Design
+**Design and interface principles**
 
-- Define the system's purpose, invariants, and boundaries before writing code to ensure long-term clarity.
-  Stable Interfaces, Evolving Internals
-- Keep contracts predictable while allowing implementations to improve continuously.
-  Continuous Regeneration with Guardrails
-- Use AI to rewrite or extend components safely, backed by tests, specs, and architectural constraints.
-  Modular, Replaceable Components
-- Structure the system so any part can be regenerated, swapped, or upgraded without cascading breakage.
-  Lifecycle Governance
-- Maintain quality through automated tests, versioning discipline, and human-in-the-loop validation.
+- **Intent-First Design**
+  Define purpose, invariants, and boundaries before writing code.
+- **Stable Interfaces, Evolving Internals**
+  Keep contracts predictable while implementations improve.
+- **Lifecycle Governance**
+  Maintain quality through tests, versioning, and human validation.
+
+::: column
+
+**Regeneration principles**
+
+- **Continuous Regeneration with Guardrails**
+  Use AI safely with tests, specs, and architectural constraints.
+- **Modular, Replaceable Components**
+  Structure the system so parts can be regenerated or swapped without cascading breakage.
 
 ::: notes
 Duration ~00:05
 
-  Introduce Evergreen Software Development as a philosophy for building systems that can evolve indefinitely without degrading. This is crucial for AI-assisted development.
+Introduce Evergreen Software Development as a philosophy for building systems that can evolve indefinitely without degrading. This is crucial for AI-assisted development.
 
 Explain each principle:
 
@@ -37,24 +46,32 @@ Transition: "Let's see why software fails to be evergreen..."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Why Software Fails to Be Evergreen
 
-Intent Rot
+**Design failures**
 
-- The original purpose, constraints, and invariants are undocumented or lost, making safe regeneration impossible.
-  Unstable or Leaky Interfaces
-- APIs, data contracts, and boundaries change unpredictably, causing cascading breakage when internals evolve.
-  Tightly Coupled Architecture
-- Components depend on each other's internal details, preventing isolated regeneration or replacement.
-  Insufficient Guardrails
-- Missing tests, specs, or validation layers mean AI-assisted regeneration can't be trusted to preserve behavior.
-  One-Off Patches and Drift
-- Ad-hoc fixes accumulate, diverging the system from its intended design and making regeneration unsafe.
+- **Intent Rot**
+  Purpose, constraints, and invariants are undocumented or lost.
+- **Unstable or Leaky Interfaces**
+  APIs and boundaries change unpredictably.
+- **Tightly Coupled Architecture**
+  Components depend on each other's internals.
+
+::: column
+
+**Safety failures**
+
+- **Insufficient Guardrails**
+  Missing tests and validation make safe regeneration impossible.
+- **One-Off Patches and Drift**
+  Ad-hoc fixes pull the system away from intended design.
 
 ::: notes
 Duration ~00:05
 
-  Explain the common anti-patterns that prevent software from being evergreen. These are the enemies of long-term maintainability.
+Explain the common anti-patterns that prevent software from being evergreen. These are the enemies of long-term maintainability.
 
 1. Intent Rot: Documentation becomes outdated or nonexistent. AI can't regenerate code when it doesn't know the purpose.
 2. Unstable Interfaces: Breaking changes cascade through the system. AI regeneration requires stable contracts.

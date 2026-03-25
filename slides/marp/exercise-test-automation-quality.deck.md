@@ -49,6 +49,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Exercise: Strengthening Test Automation & Code Quality
 
 Objectives

@@ -18,6 +18,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Why Customize VS Code?
 
 - Default shortcuts cover **common tasks** — not YOUR workflow
@@ -148,9 +149,11 @@ Transition: "Let's see what the configuration looks like."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Multi-command: Configuration Structure
 
-`settings.json`:
+**`settings.json`**
 
 ```json
 "multiCommand.commands": [
@@ -169,7 +172,9 @@ Transition: "Let's see what the configuration looks like."
 ]
 ```
 
-Then bind it in `keybindings.json`:
+::: column
+
+**`keybindings.json`**
 
 ```json
 {
@@ -177,6 +182,11 @@ Then bind it in `keybindings.json`:
   "command": "multiCommand.marpBuildAndPreview"
 }
 ```
+
+**Mental model**
+
+- `settings.json` defines the macro.
+- `keybindings.json` assigns the trigger.
 
 ::: notes
 Duration ~00:03
@@ -229,9 +239,11 @@ Transition: "Let's also set up the VS Code task that runs Marp CLI."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## VS Code Task: Marp Export PDF
 
-`.vscode/tasks.json`:
+**`.vscode/tasks.json`**
 
 ```json
 {
@@ -254,6 +266,15 @@ Transition: "Let's also set up the VS Code task that runs Marp CLI."
 }
 ```
 
+::: column
+
+**What matters**
+
+- `${file}` targets the active deck
+- `--pdf` can be replaced with `--pptx` when needed
+- Output stays beside the source file
+- `"reveal": "silent"` keeps focus on authoring
+
 ::: notes
 Duration ~00:02
 
@@ -271,24 +292,24 @@ Transition: "Before we wrap up, let me share a few more power-user tips."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Power-User Tips
 
-**Keyboard shortcut tips:**
+**Keyboard shortcut tips**
 
 - Use `when: "editorLangId == markdown"` to scope Marp shortcuts
 - Chain `Ctrl+K` as a leader key for shortcut groups
-- View all active shortcuts: `Ctrl+K Ctrl+S`
+- View all active shortcuts with `Ctrl+K Ctrl+S`
 
-**Multi-command tips:**
+::: column
 
-- Add `{ "command": "vscode.delay", "args": 500 }` between steps if a command is async
-- Use `label` to find your macros in the Command Palette
-- Keep sequences short — 3–5 steps is the sweet spot
+**Multi-command and sync tips**
 
-**Sync your config:**
-
-- Enable **Settings Sync** (`Ctrl+Shift+P` → "Settings Sync: Turn On")
-- Keybindings and settings sync automatically across machines
+- Add `{ "command": "vscode.delay", "args": 500 }` when a command is async
+- Use `label` to find macros in the Command Palette
+- Keep sequences short: 3 to 5 steps
+- Turn on **Settings Sync** so keybindings and settings follow you across machines
 
 ::: notes
 Duration ~00:02
@@ -304,16 +325,33 @@ Transition: "Let's look at where to find these settings in your own VS Code."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Where to Find These Files
 
-| File                        | Location                | How to Open                              |
-| --------------------------- | ----------------------- | ---------------------------------------- |
-| `keybindings.json`          | `~/.config/Code/User/`  | `Ctrl+K Ctrl+S` → icon top-right         |
-| `settings.json` (user)      | `~/.config/Code/User/`  | `Ctrl+,` → icon top-right                |
-| `settings.json` (workspace) | `.vscode/settings.json` | Create manually                          |
-| `tasks.json`                | `.vscode/tasks.json`    | `Ctrl+Shift+P` → "Tasks: Configure Task" |
+**User-level files**
 
-> 💡 Workspace `.vscode/` settings are **version-controllable** — commit them with your slides repo!
+- `keybindings.json`
+  `~/.config/Code/User/`
+  Open via `Ctrl+K Ctrl+S` and the icon in the top-right.
+- `settings.json` (user)
+  `~/.config/Code/User/`
+  Open via `Ctrl+,` and the icon in the top-right.
+
+::: column
+
+**Workspace-level files**
+
+- `settings.json` (workspace)
+  `.vscode/settings.json`
+  Create manually.
+- `tasks.json`
+  `.vscode/tasks.json`
+  Open via `Ctrl+Shift+P` and `Tasks: Configure Task`.
+
+**Tip**
+
+- Workspace `.vscode/` settings are version-controllable and should ship with the slides repo.
 
 ::: notes
 Duration ~00:02

@@ -19,6 +19,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Exercise: Calculator Project - Setup and Basic Implementation
 
 Objectives
@@ -78,7 +79,7 @@ Duration ~01:00
 - Four operations work end-to-end.
 - Build is green.
 - Team can explain logic and edge-case handling.
-:::
+  :::
 
 ---
 
@@ -121,7 +122,7 @@ Duration ~00:15
 ### Success Criteria
 
 - CE and C behaviors are consistent and explainable.
-:::
+  :::
 
 ---
 
@@ -165,7 +166,7 @@ Duration ~00:12
 
 - No duplicate decimal points accepted.
 - Decimal math behaves correctly.
-:::
+  :::
 
 ---
 
@@ -205,7 +206,7 @@ Duration ~00:08
 ### Success Criteria
 
 - Toggle is stable across value states.
-:::
+  :::
 
 ---
 
@@ -251,7 +252,7 @@ Duration ~00:15
 ### Success Criteria
 
 - Three key percentage patterns operate correctly.
-:::
+  :::
 
 ---
 
@@ -293,7 +294,7 @@ Duration ~00:18
 ### Success Criteria
 
 - Memory operations are consistent and validated.
-:::
+  :::
 
 ---
 
@@ -336,7 +337,7 @@ Duration ~00:10
 ### Success Criteria
 
 - Error handling is visible, predictable, and recoverable.
-:::
+  :::
 
 ---
 
@@ -380,7 +381,7 @@ Duration ~00:15
 ### Success Criteria
 
 - Trig pipeline works end-to-end with tested expectations.
-:::
+  :::
 
 ---
 
@@ -427,7 +428,7 @@ Duration ~00:15
 ### Success Criteria
 
 - Workflow passes from input to output with no breaks.
-:::
+  :::
 
 ---
 
@@ -489,7 +490,7 @@ Duration ~01:00
 ### Success Criteria
 
 - Test suite is meaningful, comprehensive, and green.
-:::
+  :::
 
 ---
 
@@ -546,7 +547,7 @@ Duration ~00:40
 ### Success Criteria
 
 - Coverage setup works and leads to actionable improvements.
-:::
+  :::
 
 ---
 
@@ -607,7 +608,7 @@ Duration ~00:40
 ### Success Criteria
 
 - Issue resolution is repeatable and well-documented.
-:::
+  :::
 
 ---
 
@@ -650,7 +651,7 @@ Duration ~00:40
 ### Success Criteria
 
 - Improvements are justified and validated.
-:::
+  :::
 
 ---
 
@@ -709,7 +710,7 @@ Duration ~00:30
 ### Success Criteria
 
 - Team can explain when premium models are worth it.
-:::
+  :::
 
 ---
 
@@ -757,7 +758,7 @@ Duration ~00:15
 ### Success Criteria
 
 - Core logic is isolated and reusable.
-:::
+  :::
 
 ---
 
@@ -800,7 +801,7 @@ Duration ~00:40
 ### Success Criteria
 
 - Security posture improves with documented rationale.
-:::
+  :::
 
 ---
 
@@ -843,7 +844,7 @@ Duration ~00:40
 ### Success Criteria
 
 - Docs are complete, correct, and actionable.
-:::
+  :::
 
 ---
 
@@ -887,4 +888,4 @@ Duration ~00:40
 ### Success Criteria
 
 - Selected refactor improves clarity without regressions.
-:::
+  :::

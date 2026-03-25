@@ -19,37 +19,50 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Exercise: Test Coverage Improvement
 
 Objectives
+
 - Analyze code coverage reports
 - Use Copilot to intelligently add tests
 - Achieve target coverage percentage
 - Balance quantity vs. quality of tests
 
 Activities
+
 1. Review Current Coverage:
-  - Run tests with coverage reporting
-  - Identify uncovered code paths
-  - Analyze coverage percentage by file/class
+
+- Run tests with coverage reporting
+- Identify uncovered code paths
+- Analyze coverage percentage by file/class
+
 2. Targeted Test Generation:
-  - Prompt: "Add tests to increase code coverage to [X]%"
-  - Observe how Copilot identifies gaps
-  - Review generated tests for quality
+
+- Prompt: "Add tests to increase code coverage to [X]%"
+- Observe how Copilot identifies gaps
+- Review generated tests for quality
+
 3. Strategic Coverage Improvement:
-  - Prompt: "Add tests for edge cases in division operation"
-  - Prompt: "Add tests for corner cases like divide by zero"
-  - Prompt: "Add integration tests for evaluate arithmetic method"
+
+- Prompt: "Add tests for edge cases in division operation"
+- Prompt: "Add tests for corner cases like divide by zero"
+- Prompt: "Add integration tests for evaluate arithmetic method"
+
 4. Verify Test Quality:
-  - Confirm tests call real implementation code
-  - Confirm tests verify expected behavior, not just execution
-  - Confirm edge cases are properly handled
+
+- Confirm tests call real implementation code
+- Confirm tests verify expected behavior, not just execution
+- Confirm edge cases are properly handled
+
 5. Re-run Coverage:
-  - Execute test suite with coverage
-  - Compare before/after percentages
-  - Identify remaining gaps
+
+- Execute test suite with coverage
+- Compare before/after percentages
+- Identify remaining gaps
 
 Success Criteria
+
 - Code coverage increased by at least 20 percentage points
 - All new tests are meaningful and test actual implementation
 - Tests include edge cases and error conditions

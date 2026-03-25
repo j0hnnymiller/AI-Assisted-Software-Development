@@ -191,23 +191,27 @@ Canary releases incrementally expand feature exposure. Start with 1% of users—
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Technique 3: Observability Dashboards
 
-**Real-Time Monitoring**
+**Real-time monitoring**
 
 - Feature-specific error rates
-- Latency percentiles (p50, p95, p99)
-- Resource utilization (CPU, memory)
-- User impact metrics (conversion, engagement)
+- Latency percentiles such as p50, p95, p99
+- Resource utilization including CPU and memory
+- User impact metrics such as conversion and engagement
 
-**Essential Alerts**
+**Essential alerts**
 
 - Threshold violations
 - Anomaly detection
-- Comparison against baseline
-- Correlated metrics (multi-signal alerts)
+- Baseline comparisons
+- Correlated multi-signal alerts
 
-**Dashboard Example**
+::: column
+
+**Dashboard example**
 
 ```
 Feature: Payment Processing v2
@@ -223,16 +227,27 @@ Observability is your feedback loop. Without real-time dashboards, production te
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Technique 4: Automated Rollback
 
-**Automated Response to Failures**
+**Automated response to failures**
 
 - Define error budgets per feature
-- Monitor continuously in real-time
-- Auto-disable feature if budget exceeded
-- Alert team for investigation
+- Monitor continuously in real time
+- Auto-disable a feature if the budget is exceeded
+- Alert the team for investigation
 
-**Rollback Conditions**
+**Why automation matters**
+
+- Humans are too slow
+- Response stays consistent
+- Blast radius stays smaller
+- MTTR drops quickly
+
+::: column
+
+**Rollback conditions**
 
 ```yaml
 feature: payment_processing_v2
@@ -242,13 +257,6 @@ error_budget:
   action: disable # auto-disable if exceeded
   notify: [oncall-team, slack-alerts]
 ```
-
-**Why Automation?**
-
-- Humans are too slow
-- Consistent response
-- Limits blast radius
-- Reduces MTTR (Mean Time To Recovery)
 
 ::: notes
 Automated rollback is the safety net. If error rates or latency exceed predefined thresholds, the system disables the feature automatically—no human in the loop. This is critical because production incidents escalate rapidly. The time between "something's wrong" and "customers are affected" is measured in seconds. Automated rollback limits the blast radius and ensures a consistent response. Define your thresholds ahead of time based on historical baselines and capacity planning. The example shows a YAML config: if payment processing v2 exceeds 1% error rate in any 5-minute window, disable it and alert the team. Ask: What's the cost of a two-minute delay in rollback?
@@ -312,6 +320,8 @@ The workflow is simple: continuous monitoring feeds into a real-time evaluation 
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Setting the Right Budget
 
 **Factors to Consider**
@@ -321,13 +331,19 @@ The workflow is simple: continuous monitoring feeds into a real-time evaluation 
 - **Historical Baseline**: What's your current error rate?
 - **Feature Maturity**: New features get tighter budgets
 
-**Budgeting Table Example**
+::: column
 
-| Feature               | Criticality | Budget (errors/5min) | Baseline | Justification              |
-| --------------------- | ----------- | -------------------- | -------- | -------------------------- |
-| Payment Processing    | Critical    | 5                    | 2        | Zero tolerance for revenue |
-| Search Results        | High        | 50                   | 30       | Affects UX, not revenue    |
-| Recommendation Widget | Medium      | 200                  | 150      | Non-blocking, experimental |
+**Budget examples**
+
+- **Payment Processing**
+  Critical, budget `5 errors / 5 min`, baseline `2`.
+  Zero tolerance for revenue-impacting failure.
+- **Search Results**
+  High, budget `50 errors / 5 min`, baseline `30`.
+  Affects UX, but not direct revenue.
+- **Recommendation Widget**
+  Medium, budget `200 errors / 5 min`, baseline `150`.
+  Non-blocking and experimental.
 
 ::: notes
 Not all features deserve the same budget. Payment processing is revenue-critical, so its budget is tight: 5 errors in 5 minutes is the limit. Search is important but not as critical, so it gets a higher budget. Recommendations are experimental and non-blocking, so their budget is loose. The "Baseline" column shows current production error rates; budgets are set relative to baseline with some safety margin. The "Justification" column documents why the budget is what it is—this is crucial for audit trails and future adjustments. Ask the class: What features in your system are truly critical? How would you set their budgets?
@@ -345,29 +361,33 @@ Beta testing is production testing with a human feedback loop. You enable featur
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Beta Testing Implementation
 
-**Building the Beta Pool**
+**Build the beta pool**
 
-- **Internal Users**: Employees, QA team, product managers
-- **External Beta Testers**: Volunteers from customer base
-- **Power Users**: High-engagement users willing to tolerate risk
-- **Segmentation**: Group by role, region, or usage pattern
-
-**Enabling Features**
-
-```python
-if user.in_beta_pool("checkout_redesign"):
-    show_new_checkout()
-else:
-    show_old_checkout()
-```
+- **Internal users** — employees, QA, product managers
+- **External beta testers** — volunteers from the customer base
+- **Power users** — high-engagement users who tolerate some risk
+- **Segmentation** — role, region, or usage pattern
 
 **Instrumentation**
 
 - Track feature usage
 - Log errors and edge cases
-- Collect user feedback (surveys, support tickets)
+- Collect feedback from surveys and support tickets
+
+::: column
+
+**Enable features by cohort**
+
+```python
+if user.in_beta_pool("checkout_redesign"):
+  show_new_checkout()
+else:
+  show_old_checkout()
+```
 
 ::: notes
 Beta testing requires a curated pool of users who are willing to experience new features before general availability. Internal users are the safest starting point—they understand the risks and can report issues effectively. External beta testers add diversity and real-world use cases. The code snippet shows feature-flag logic: if a user is in the beta pool for "checkout_redesign," they see the new version; otherwise, they see the old version. Instrumentation is critical: log everything that happens in the beta path so you can diagnose issues and understand user behavior.
@@ -375,30 +395,34 @@ Beta testing requires a curated pool of users who are willing to experience new 
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Benefits of Beta Testing
 
-**Real-World Validation**
+**Real-world validation**
 
 - Actual users, actual data, actual workflows
 - Validates assumptions under production conditions
 - Exposes edge cases missed in testing
 
-**Early Detection of Issues**
+**Early detection of issues**
 
 - Catch bugs before wide release
 - Identify UX problems from real feedback
 - Discover integration failures at scale
 
-**User Behavior Often Unexpected**
+::: column
 
-- Users interact in ways you didn't anticipate
+**User behavior is often unexpected**
+
+- Users interact in ways you did not anticipate
 - Workflows span multiple sessions or devices
 - Real usage patterns differ from test scenarios
 
-**Reduces Risk of Full-Scale Failure**
+**Reduces full-scale failure risk**
 
-- Limit blast radius to beta pool
-- Iterate and fix before expanding exposure
+- Limit blast radius to the beta pool
+- Iterate before expanding exposure
 - Build confidence incrementally
 
 ::: notes
@@ -433,22 +457,26 @@ The workflow is staged. Start with internal users for rapid feedback and iterati
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Testing in Production: Key Takeaways
 
-**Core Techniques**
+**Core techniques**
 
-- Shadow traffic: Zero-risk production validation
-- Canary releases: Incremental exposure with health checks
-- Observability: Real-time monitoring and alerting
-- Automated rollback: Fast response to failures
-- Error budgets: Formal reliability contracts
-- Beta testing: Real users, limited blast radius
+- Shadow traffic for zero-risk validation
+- Canary releases for incremental exposure
+- Observability for monitoring and alerting
+- Automated rollback for fast response
+- Error budgets for explicit reliability limits
+- Beta testing for real-user feedback
 
-**Mindset Shift**
+::: column
 
-- Production is not a danger zone—it's the ultimate test environment
+**Mindset shift**
+
+- Production is the ultimate test environment
 - Risk is managed, not eliminated
-- Deploy != Release
+- Deploy does not equal release
 - Automation and observability are non-negotiable
 
 ::: notes

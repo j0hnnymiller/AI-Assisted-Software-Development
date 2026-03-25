@@ -76,15 +76,36 @@ Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and 
 
 ---
 
+<!-- layout: Two Content -->
+
 ## IDE Support for AI Assistance
 
-| IDE / Editor                     | Built-In AI Features                                                    | Supported AI Assistants                                              | Strengths                                                                                   | Limitations                                                                       |
-| -------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| VS Code                          | Deep AI integration through extensions; increasingly AI-first workflows | GitHub Copilot, Cline, ChatGPT-based extensions, Gemini integrations | Extremely flexible; huge ecosystem; top-tier AI support; widely adopted                     | Requires extension management; quality varies by plugin                           |
-| Visual Studio (Windows)          | Native GitHub Copilot integration; AI-powered IntelliCode               | GitHub Copilot, IntelliCode                                          | Strong enterprise + .NET support; excellent refactoring and debugging                       | Less flexible than VS Code for non-Microsoft stacks                               |
-| JetBrains IDEs                   | JetBrains AI Assistant; code completion, refactoring, doc generation    | JetBrains AI Assistant, GitHub Copilot                               | Deep static analysis + AI; strong multi-language support                                    | JetBrains AI Assistant is subscription-based; Copilot integration not as seamless |
-| Cursor IDE                       | AI-first editor; conversational coding; multi-file reasoning            | Built-in AI models (GPT-based, Claude-based), Copilot alternatives   | Designed for AI pair-programming; strong repo-wide reasoning                                | Not a traditional IDE; still maturing for large enterprise workflows              |
-| Replit                           | AI-powered Ghostwriter for code generation, debugging, and explanations | Ghostwriter                                                          | Great for beginners and rapid prototyping; browser-based                                    | Less powerful for large, multi-module projects                                    |
-| Builder.io / Builder Code Editor | AI-enhanced coding environment with integrated assistants               | Multiple AI integrations depending on setup                          | Strong web-dev focus; modern AI-native UX                                                   | Not a general-purpose IDE                                                         |
-| Code-B Editors                   | Predictive code generation, debugging, and review                       | Multiple AI models depending on configuration                        | Strong AI-centric workflows; optimized for speed                                            | Less mainstream; smaller ecosystem                                                |
-| Claude Code                      | Terminal-first AI coding assistant; autonomous repo-wide reasoning      | Latest models from Anthropic and other via configuration             | Exceptional multi-file context handling; ideal for agentic workflows and automated patching | Not a GUI IDE; best suited for terminal-centric development and large codebases   |
+**Established IDEs**
+
+- **VS Code**
+  Deep extension ecosystem with strong Copilot, Cline, ChatGPT, and Gemini support.
+- **Visual Studio**
+  Strong .NET refactoring, debugging, and native Copilot integration.
+- **JetBrains IDEs**
+  Excellent static analysis and multi-language depth; AI features are strong but more subscription-driven.
+- **Cursor**
+  AI-first editing experience with strong multi-file reasoning, but less mature for some enterprise workflows.
+
+::: column
+
+**Lightweight and Specialized Options**
+
+- **Replit**
+  Browser-based and beginner-friendly for rapid prototyping.
+- **Builder.io / Builder Code Editor**
+  Web-focused environment with modern AI-native workflows.
+- **Code-B editors**
+  Fast AI-centric editing, but with a smaller ecosystem.
+- **Claude Code**
+  Terminal-first, repo-wide reasoning and patching; powerful, but not a GUI IDE.
+
+**Selection lens**
+
+- GUI IDEs favor structured refactoring and debugging.
+- AI-first tools favor conversational, agentic workflows.
+- Team choice depends on stack, governance, and workflow fit.

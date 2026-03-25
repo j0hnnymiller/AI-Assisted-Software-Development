@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## 🎯 Instruction File `applyTo` Patterns
 
 **Understanding Glob Pattern Matching**
@@ -38,32 +39,29 @@ Welcome to this presentation on instruction file applyTo patterns. This is a cri
 
 ---
 
-
-
+<!-- layout: Two Content -->
 
 ## Where `appliesTo` Fits
 
-The filtering mechanism for instruction files
+The filtering mechanism for instruction files.
 
-`appliesTo` is a **selector** that determines _when_ an instruction file
-is included in the stack.
+`appliesTo` is a **selector** that determines _when_ an instruction file is included in the stack.
 
-Common selectors include:
+::: column
 
-- **repositories** -- include only for specific repos
-- **languages** -- include only for certain languages
-- **filePatterns** -- include only when editing certain files
-- **tools** -- include only when using specific Copilot features
-- **scopes** -- include only in chat, only in editor, etc.
+**Common selectors**
+
+- **repositories** -- specific repos only
+- **languages** -- certain languages only
+- **filePatterns** -- specific files only
+- **tools** -- certain Copilot features only
+- **scopes** -- chat only, editor only, and similar contexts
 
 **Speaker Notes:** `appliesTo` is not a guardrail itself. It's a routing
 rule. It prevents irrelevant instructions from polluting the stack and
 keeps the assistant focused.
 
 ---
-
-
-
 
 ## How `appliesTo` Interacts with the Stack
 
@@ -230,18 +228,29 @@ Directory-specific patterns are crucial for organizing large codebases. They let
 
 ---
 
+<!-- layout: Two Content -->
+
 ## 🔤 Glob Pattern Syntax
 
-Understanding the building blocks:
+**Core wildcards**
 
-| Pattern | Meaning                  | Example                     |
-| ------- | ------------------------ | --------------------------- |
-| `*`     | Any characters (not `/`) | `*.md` → `README.md`        |
-| `**`    | Zero or more directories | `**/*.md` → `docs/guide.md` |
-| `?`     | Single character         | `file?.md` → `file1.md`     |
-| `[abc]` | Character set            | `[abc].md` → `a.md`         |
-| `[a-z]` | Character range          | `[a-z].md` → `x.md`         |
-| `{a,b}` | Alternatives             | `*.{js,ts}` → `app.ts`      |
+- `*` -- any characters except `/`
+- `**` -- zero or more directory levels
+- `?` -- exactly one character
+
+::: column
+
+**Pattern sets**
+
+- `[abc]` -- one character from a set
+- `[a-z]` -- one character from a range
+- `{a,b}` -- one of several alternatives
+
+**Examples**
+
+- `*.md` -> `README.md`
+- `**/*.md` -> `docs/guide.md`
+- `*.{js,ts}` -> `app.ts`
 
 ::: notes
 Duration ~00:03
@@ -287,26 +296,32 @@ This slide is your reference guide for glob pattern syntax. Let's walk through e
 
 ---
 
+<!-- layout: Two Content -->
+
 ## 💼 Real-World Examples
 
-From this repository's instruction files:
+**Repository-wide and code-focused**
 
 ```yaml
-## 1. AI Output Standards (Universal)
 applyTo: "**/*"
-
-## 2. Vertical Slice Architecture (Code)
 applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
-
-## 3. Business Rules Documentation
 applyTo: "**/*.{md,txt}"
+```
 
-## 4. Marp Slide Formatting
+::: column
+
+**Specialized authoring scopes**
+
+```yaml
 applyTo: "slides/marp/**"
-
-## 5. Prompt File Authoring
 applyTo: "**/*.prompt.md"
 ```
+
+**Interpretation**
+
+- Universal rules apply everywhere
+- Language rules apply only to source files
+- Authoring rules apply only to their target artifact types
 
 ::: notes
 Duration ~00:03
@@ -351,31 +366,36 @@ These are actual examples from the AI-Assisted-Software-Development-Course repos
 
 ---
 
+<!-- layout: Two Content -->
+
 ## 🎯 Best Practices
 
-**1. Be Specific When Possible**
+**Be specific when possible**
 
 ```yaml
 ✅ applyTo: "**/*.instructions.md"
 ❌ applyTo: "**"
 ```
 
-**2. Use Brace Expansion for Multiple Extensions**
+**Use brace expansion for multiple extensions**
 
 ```yaml
 ✅ applyTo: "**/*.{cs,ts,js}"
-❌ Three separate instruction files
 ```
 
-**3. Match Scope to Purpose**
+::: column
+
+**Match scope to purpose**
 
 ```yaml
-## Architecture → Code files
 applyTo: "src/**/*.{cs,ts,js}"
-
-## Formatting → Specific directory
 applyTo: "slides/marp/**"
 ```
+
+**Rule of thumb**
+
+- Narrower patterns reduce conflicts and wasted context
+- Broader patterns are only for truly universal policy
 
 ::: notes
 Duration ~00:03
@@ -676,6 +696,7 @@ Let's wrap up with a practical decision-making framework:
 These four patterns cover 95% of real-world use cases. Let me give you concrete examples of when to use each:
 
 1. **Universal `**/\*`\*\*:
+
 - AI provenance policies
 - Security compliance requirements
 - Legal/licensing standards
@@ -683,18 +704,21 @@ These four patterns cover 95% of real-world use cases. Let me give you concrete 
 - Should be max 2-3 instruction files in your entire repo
 
 2. **Multi-extension `**/\*.{ext1,ext2}`\*\*:
+
 - Language-agnostic code quality patterns
 - Cross-language architecture styles
 - Multi-language testing strategies
 - Example: Vertical slice could apply to C#, TypeScript, Python features
 
 3. **Directory scope `directory/**`\*\*:
+
 - Slide formatting (slides/\*)
 - API documentation (docs/api/\*\*)
 - Feature isolation (src/Features/\*\*)
 - Test organization (tests/\*\*)
 
 4. **Specialized naming `**/\*.pattern.ext`\*\*:
+
 - Instruction files themselves (\*.instructions.md)
 - Prompt files (\*.prompt.md)
 - Test files (_.test.js, _.spec.ts)
@@ -740,9 +764,6 @@ Then review and update your patterns. This is normal maintenance.
 :::
 
 ---
-
-
-
 
 ## 💡 Resources & Next Steps
 

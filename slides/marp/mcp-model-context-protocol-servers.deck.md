@@ -24,6 +24,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 <!-- _class: lead -->
 
 # MCP: Model Context Protocol Servers
@@ -77,24 +78,28 @@ Transition: "Let's look at the architecture in detail."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Architecture: Five Components
 
 ```mermaid
 graph LR
-    A[VS Code<br/>Copilot<br/>Client] <-->|JSON-RPC| B[MCP Server<br/>Transport Layer]
-    B <-->|Protocol| C[Resources<br/>Files, APIs,<br/>Databases]
-    style A fill:#0078d4,color:#fff
-    style B fill:#68217a,color:#fff
-    style C fill:#107c10,color:#fff
+  A[VS Code<br/>Copilot<br/>Client] <-->|JSON-RPC| B[MCP Server<br/>Transport Layer]
+  B <-->|Protocol| C[Resources<br/>Files, APIs,<br/>Databases]
+  style A fill:#0078d4,color:#fff
+  style B fill:#68217a,color:#fff
+  style C fill:#107c10,color:#fff
 ```
 
-| Component     | Role                                                  |
-| ------------- | ----------------------------------------------------- |
-| **Client**    | VS Code / GitHub Copilot — sends requests             |
-| **Server**    | MCP server — provides capabilities and data           |
-| **Protocol**  | Standardized message format connecting both sides     |
-| **Resources** | Data the server exposes (files, records, state)       |
-| **Tools**     | Functions the server gives Copilot permission to call |
+::: column
+
+**Components**
+
+- **Client** — VS Code / GitHub Copilot sends requests
+- **Server** — MCP server provides capabilities and data
+- **Protocol** — standard message format between both sides
+- **Resources** — data exposed to Copilot
+- **Tools** — callable functions the server permits
 
 ::: notes
 Duration ~00:03
@@ -242,27 +247,31 @@ Transition: "Now let's see Copilot use this context."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Copilot + MCP Integration
 
-**Enhanced capabilities with MCP context:**
+**Enhanced capabilities**
 
-- **Context-Aware Completions** — access to project-specific patterns
-- **Tool Use** — Copilot can invoke server tools on your behalf
-- **Security Boundaries** — controlled, audited access to resources
+- **Context-aware completions** — access project-specific patterns
+- **Tool use** — Copilot can invoke server tools on your behalf
+- **Security boundaries** — controlled, audited resource access
+
+::: column
 
 ```mermaid
 sequenceDiagram
-    participant Dev as Developer
-    participant Copilot as GitHub Copilot
-    participant MCP as MCP Server
-    participant Res as Resources
+  participant Dev as Developer
+  participant Copilot as GitHub Copilot
+  participant MCP as MCP Server
+  participant Res as Resources
 
-    Dev->>Copilot: "Create user auth"
-    Copilot->>MCP: Request context
-    MCP->>Res: Fetch schema, patterns
-    Res-->>MCP: Return context
-    MCP-->>Copilot: Structured context
-    Copilot-->>Dev: Code matching your patterns
+  Dev->>Copilot: "Create user auth"
+  Copilot->>MCP: Request context
+  MCP->>Res: Fetch schema, patterns
+  Res-->>MCP: Return context
+  MCP-->>Copilot: Structured context
+  Copilot-->>Dev: Code matching your patterns
 ```
 
 ::: notes
@@ -283,21 +292,25 @@ Transition: "Let's talk about configuring these safely."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Configuring Servers Securely
 
-**Security checklist:**
+**Security checklist**
 
-- ✅ Use environment variables for credentials (never hardcode tokens)
-- ✅ Grant minimum necessary permissions
-- ✅ Review server source code on GitHub before installing
-- ✅ Configure allowed paths/resources explicitly
-- ❌ Never use full admin credentials when a reader role is sufficient
+- Use environment variables for credentials
+- Grant minimum necessary permissions
+- Review server source before installing
+- Configure allowed paths and resources explicitly
+- Never use admin credentials when reader access is sufficient
 
-**Best practices:**
+::: column
+
+**Best practices**
 
 - Start with read-only servers
-- Use scoped tokens (e.g., `repo:read` only for GitHub)
-- Enable only needed capabilities
+- Use scoped tokens such as `repo:read`
+- Enable only the capabilities you actually need
 - Test in non-production first
 - Keep servers updated
 

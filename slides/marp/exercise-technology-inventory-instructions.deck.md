@@ -23,6 +23,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Exercise: Technology Inventory & Instruction Generation
 
 Objectives

@@ -91,23 +91,33 @@ This is the conceptual hierarchy. Prompt-First is necessary but not sufficient f
 
 ---
 
+<!-- layout: Two Content -->
+
 ## AI First Software Development
 
-Building software where AI is a core capability, not an add-on
-Why AI-First
+Building software where AI is a core capability, not an add-on.
 
-- Software requirements increasingly expressed in natural language
-- AI copilots accelerate architecture, coding, testing, and documentation
-- Teams shift from “writing code” to “designing intent + validating outputs”
-  Core Principles
-- Prompt-First Design: Requirements, architecture, and workflows expressed as structured prompts
-- AI-Native Architecture: Modular services, clear boundaries, deterministic interfaces for AI-generated components
-- Human-in-the-Loop: Review, validation, and traceability baked into every stage
-- Continuous Verification: Automated tests, static analysis, and guardrails to ensure safe outputs
-- Lifecycle Governance: Versioning, provenance, and risk-based controls for AI-generated artifacts
-  Outcomes
+**Why AI-First**
+
+- Software requirements are increasingly expressed in natural language.
+- AI copilots accelerate architecture, coding, testing, and documentation.
+- Teams shift from writing code to designing intent and validating outputs.
+
+**Outcomes**
+
 - Faster iteration cycles
-- Higher coverage of documentation and tests
+- Better documentation and test coverage
+
+::: column
+
+**Core principles**
+
+- **Prompt-First Design** — workflows expressed as structured prompts
+- **AI-Native Architecture** — modular boundaries and deterministic interfaces
+- **Human-in-the-Loop** — review, validation, and traceability everywhere
+- **Continuous Verification** — tests, analysis, and guardrails on every output
+- **Lifecycle Governance** — versioning, provenance, and risk-based controls
+
 - Reduced cognitive load on developers
 - More resilient, adaptable systems
 
@@ -145,23 +155,33 @@ Outcomes
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Prompt-First Software Development
 
-Design the intent first — let AI generate the implementation
-Why Prompt-First
+Design the intent first — let AI generate the implementation.
 
-- Behaviors, and constraints expressed in structured natural language
-- Prompts become the new “source of truth” artifacts
-- Teams shift from writing functions to defining outcomes, invariants, and interfaces
-  Core Practices
-- Structured Prompts: Use templates for features, APIs, data models, tests, and refactors
-- Instruction Files: Persistent, versioned artifacts guiding AI code generation
-- Deterministic Boundaries: Clear module contracts so AI-generated code stays predictable
-- Validation Loops: Automated tests + human review ensure correctness and safety
-- Prompt Versioning: Track evolution of intent just like code changes
-  Benefits
-- Faster iteration from idea → working software
+**Why Prompt-First**
+
+- Behaviors and constraints are expressed in structured natural language.
+- Prompts become first-class source-of-truth artifacts.
+- Teams shift from writing functions to defining outcomes, invariants, and interfaces.
+
+**Benefits**
+
+- Faster iteration from idea to working software
 - Higher consistency across generated components
+
+::: column
+
+**Core practices**
+
+- **Structured Prompts** — templates for features, APIs, data models, tests, and refactors
+- **Instruction Files** — persistent, versioned guidance for code generation
+- **Deterministic Boundaries** — clear contracts keep outputs predictable
+- **Validation Loops** — tests plus human review ensure correctness and safety
+- **Prompt Versioning** — track intent evolution just like code changes
+
 - Reduced cognitive load on developers
 - Better alignment between business intent and implementation
 

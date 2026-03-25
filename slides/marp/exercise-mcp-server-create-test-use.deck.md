@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Exercise: Create, Test, and Use a Local MCP Server
 
 **Objectives**

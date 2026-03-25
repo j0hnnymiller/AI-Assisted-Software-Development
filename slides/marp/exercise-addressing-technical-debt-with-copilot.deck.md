@@ -42,7 +42,8 @@ prompt: |
   :::
 
   ---
-  # **Exercise: Assigning an Issue to Copilot**
+
+  ## **Exercise: Assigning an Issue to Copilot**
 
   10 minutes
 
@@ -59,6 +60,7 @@ prompt: |
      - Title
      - Description
      - Impact and risk
+::: column
      - Acceptance criteria
      - Provenance metadata
   3. Assign the issue to Copilot.
@@ -78,56 +80,59 @@ Duration ~00:10
 :::
 
 ---
-  # **Exercise: Delegating Work to Copilot**
 
-  15 minutes
+# **Exercise: Delegating Work to Copilot**
 
-  ### Objectives
+15 minutes
 
-  - Practice delegating multi-step tasks
-  - Ensure Copilot follows architectural rules
-  - Validate AI-generated remediation plans
+### Objectives
 
-  ### Activities
+- Practice delegating multi-step tasks
+- Ensure Copilot follows architectural rules
+- Validate AI-generated remediation plans
 
-  1. Select a multi-step technical debt item.
-  2. Ask Copilot to:
-     - Analyze the problem
-     - Propose a remediation plan
-     - Generate code changes
-     - Update tests
-     - Update documentation
-  3. Review Copilot's output.
-  4. Identify missing context or risks.
+### Activities
 
-  ### Success Criteria
+1. Select a multi-step technical debt item.
+2. Ask Copilot to:
+   - Analyze the problem
+   - Propose a remediation plan
+   - Generate code changes
+::: column
+   - Update tests
+   - Update documentation
+3. Review Copilot's output.
+4. Identify missing context or risks.
 
-  - Delegation prompt is complete and structured
-  - Copilot produces a multi-step plan
-  - Output is safe, incremental, and reversible
-  - Human review identifies any gaps
+### Success Criteria
+
+- Delegation prompt is complete and structured
+- Copilot produces a multi-step plan
+- Output is safe, incremental, and reversible
+- Human review identifies any gaps
 
 ::: notes
 Duration ~00:15
 
-  This exercise builds confidence in delegating larger tasks while maintaining safety and architectural alignment. Emphasize that humans remain the final reviewers.
+This exercise builds confidence in delegating larger tasks while maintaining safety and architectural alignment. Emphasize that humans remain the final reviewers.
 :::
 
 started: "2026-03-22T12:35:12.0096510-07:00"
 ended: "2026-03-22T12:38:26.6899826-07:00"
 task_durations:
-  - task: "template review"
-    duration: "00:01:00"
-  - task: "exercise slide authoring"
-    duration: "00:01:30"
-  - task: "provenance and catalog updates"
-    duration: "00:00:44"
-total_duration: "00:03:14"
-ai_log: "ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md"
-source: "johnmillerATcodemag-com"
-marp: true
-theme: default
-paginate: true
+
+- task: "template review"
+  duration: "00:01:00"
+- task: "exercise slide authoring"
+  duration: "00:01:30"
+- task: "provenance and catalog updates"
+  duration: "00:00:44"
+  total_duration: "00:03:14"
+  ai_log: "ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md"
+  source: "johnmillerATcodemag-com"
+  marp: true
+  theme: default
+  paginate: true
 
 ---
 
@@ -145,6 +150,7 @@ Activities
 2. Write a prompt that includes:
    - Description of the debt
    - Constraints and rules
+::: column
    - Expected behavior
    - Required tests and documentation
 3. Ask Copilot to propose a remediation.
@@ -184,6 +190,7 @@ Activities
    - Title
    - Description
    - Impact and risk
+::: column
    - Acceptance criteria
    - Provenance metadata
 3. Assign the issue to Copilot.
@@ -223,6 +230,7 @@ Activities
    - Analyze the problem
    - Propose a remediation plan
    - Generate code changes
+::: column
    - Update tests
    - Update documentation
 3. Review Copilot's output.

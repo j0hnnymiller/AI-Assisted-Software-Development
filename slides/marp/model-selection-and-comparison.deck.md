@@ -4,33 +4,38 @@ theme: default
 paginate: true
 ---
 
+<!-- layout: Two Content -->
+
 ## Model Selection & Comparison
 
-Available models vary over time (Jan 18, 2026)
-Multipliers vary with Copilot Subscription level
-Name | Input Context Size | Output Context Size | Capabilities | Multiplier
---- | --- | --- | --- | ---
-Claude Haiku 4.5 | 128K | 16K | Tools, Vision | 0.33x
-Claude Opus 4.1 | 68K | 16K | Vision | 10x
-Claude Opus 4.5 | 128K | 16K | Tools, Vision | 3x
-Claude Sonnet 4 | 128K | 16K | Tools, Vision | 1x
-Claude Sonnet 4.5 | 128K | 16K | Tools, Vision | 1x
-Gemini 2.5 P Gemini 3 Flash (Preview) | 109K | 64K | Tools, Vision | 1x
-Gemini 3 Flash (Preview) | 109K | 64K | Tools, Vision | 0.33x
-Gemini 3 Pro (Preview) | 109K | 64K | Tools, Vision | 1x
-GPT-4.1 | 111K | 16K | Tools, Vision | 0x
-GPT-4o | 64K | 4K | Tools, Vision | 0x
-GPT-5 | 128K | 128K | Tools, Vision | 1x
-GPT-5 mini | 128K | 64K | Tools, Vision | 0x
-GPT-5-Codex (Preview) | 128K | 128K | Tools, Vision | 1x
-GPT-5.1 | 128K | 64K | Tools, Vision | 1x
-GPT-5.1-Codex | 128K | 128K | Tools, Vision | 1x
-GPT-5.1-Codex-Max | 128K | 128K | Tools, Vision | 1x
-GPT-5.1-Codex-Mini (Preview) | 128K | 128K | Tools, Vision | 0.33x
-GPT-5.2 | 128K | 64K | Tools, Vision | 1x
-GPT-5.2-Codex | 272K | 128K | Tools, Vision | 1x
-Grok Code Fast 1 | 109K | 64K | Tools | 0x
-Raptor mini (Preview) | 200K | 64K | Tools, Vision | 0x
+Available models vary over time (Jan 18, 2026).
+Multipliers also vary by Copilot subscription level.
+
+**Claude and Gemini family**
+
+- **Claude Haiku 4.5** — 128K / 16K, Tools + Vision, `0.33x`
+- **Claude Opus 4.1** — 68K / 16K, Vision, `10x`
+- **Claude Opus 4.5** — 128K / 16K, Tools + Vision, `3x`
+- **Claude Sonnet 4 / 4.5** — 128K / 16K, Tools + Vision, `1x`
+- **Gemini 2.5 Pro** — 109K / 64K, Tools + Vision, `1x`
+- **Gemini 3 Flash (Preview)** — 109K / 64K, Tools + Vision, `0.33x`
+- **Gemini 3 Pro (Preview)** — 109K / 64K, Tools + Vision, `1x`
+
+::: column
+
+**OpenAI and other models**
+
+- **GPT-4.1** — 111K / 16K, Tools + Vision, `0x`
+- **GPT-4o** — 64K / 4K, Tools + Vision, `0x`
+- **GPT-5** — 128K / 128K, Tools + Vision, `1x`
+- **GPT-5 mini** — 128K / 64K, Tools + Vision, `0x`
+- **GPT-5-Codex / 5.1-Codex / 5.1-Codex-Max** — 128K / 128K, `1x`
+- **GPT-5.1** — 128K / 64K, Tools + Vision, `1x`
+- **GPT-5.1-Codex-Mini (Preview)** — 128K / 128K, `0.33x`
+- **GPT-5.2** — 128K / 64K, Tools + Vision, `1x`
+- **GPT-5.2-Codex** — 272K / 128K, Tools + Vision, `1x`
+- **Grok Code Fast 1** — 109K / 64K, Tools, `0x`
+- **Raptor mini (Preview)** — 200K / 64K, Tools + Vision, `0x`
 
 ---
 

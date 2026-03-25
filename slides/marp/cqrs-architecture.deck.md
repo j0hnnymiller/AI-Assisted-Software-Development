@@ -22,11 +22,12 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # CQRS Architecture
 
 ## Command Query Responsibility Segregation
 
-*AI-Assisted Software Development*
+_AI-Assisted Software Development_
 
 ::: notes
 Duration ~00:01
@@ -34,6 +35,7 @@ Duration ~00:01
 Welcome to the CQRS Architecture module. This session covers Command Query Responsibility Segregation — a pattern that separates read and write operations into distinct models to improve scalability and maintainability.
 
 **Key Points**:
+
 - CQRS separates write (command) operations from read (query) operations
 - Enables independent scaling and optimization of each model
 - Useful when read and write workloads have very different characteristics
@@ -48,6 +50,7 @@ Welcome to the CQRS Architecture module. This session covers Command Query Respo
 ## When to Use CQRS
 
 **✅ Use CQRS when:**
+
 - Read and write workloads scale differently
 - Read models need denormalization, caching, or projections
 - Write model needs strong invariants and task-focused workflows
@@ -55,6 +58,7 @@ Welcome to the CQRS Architecture module. This session covers Command Query Respo
 - Query complexity slows transactional throughput
 
 **❌ Avoid CQRS when:**
+
 - Domain is small and reads/writes are balanced
 - No clear boundary between commands and queries
 - Operational overhead is not justified
@@ -65,6 +69,7 @@ Duration ~00:03
 CQRS is a powerful pattern but it adds operational complexity. Use it only when the benefits outweigh the costs.
 
 **Key Points**:
+
 - The classic CRUD pattern couples reads and writes to the same model — fine for simple domains
 - CQRS shines when the query model needs to be radically different from the write model
 - Event sourcing almost always pairs with CQRS
@@ -81,13 +86,13 @@ CQRS is a powerful pattern but it adds operational complexity. Use it only when 
 
 ## Core Principles
 
-| Principle | Detail |
-|-----------|--------|
-| **Separation** | Commands change state; queries never change state |
-| **Invariants** | Write model enforces all business rules |
-| **Optimization** | Read model is shaped for query use cases |
-| **Independence** | Models can evolve separately |
-| **Consistency** | Eventual consistency between write and read |
+| Principle        | Detail                                            |
+| ---------------- | ------------------------------------------------- |
+| **Separation**   | Commands change state; queries never change state |
+| **Invariants**   | Write model enforces all business rules           |
+| **Optimization** | Read model is shaped for query use cases          |
+| **Independence** | Models can evolve separately                      |
+| **Consistency**  | Eventual consistency between write and read       |
 
 > Commands can fail. Queries should not.
 
@@ -97,6 +102,7 @@ Duration ~00:02
 These five principles guide every CQRS implementation decision.
 
 **Key Points**:
+
 - The read/write separation is absolute — queries must be side-effect free
 - Write model is where business logic lives — all invariants enforced here
 - Read models are projections built from the write model's events
@@ -110,6 +116,8 @@ These five principles guide every CQRS implementation decision.
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Architecture Components
 
 ```
@@ -117,16 +125,28 @@ These five principles guide every CQRS implementation decision.
 │  Command    │───▶│  Command Handler  │───▶│ Write Store│
 │    API      │    │  (Domain Logic)   │    │  (OLTP)    │
 └─────────────┘    └──────────────────┘    └─────┬──────┘
-                                                 │ Events
-                   ┌──────────────────┐          ▼
+             │ Events
+       ┌──────────────────┐          ▼
 ┌─────────────┐    │    Projection    │    ┌────────────┐
 │  Query API  │◀───│    Updater       │◀───│  Publisher │
 └─────────────┘    └──────────────────┘    └────────────┘
-        │                                  ┌────────────┐
-        └─────────────────────────────────▶│ Read Store │
-                                           │  (OLAP)    │
-                                           └────────────┘
+  │                                  ┌────────────┐
+  └─────────────────────────────────▶│ Read Store │
+             │  (OLAP)    │
+             └────────────┘
 ```
+
+::: column
+
+**Minimum components**
+
+- **Command API** — receives write requests
+- **Command Handler** — enforces domain rules
+- **Write Store** — authoritative OLTP system
+- **Publisher** — emits events reliably
+- **Projection Updater** — rebuilds read models
+- **Query API** — serves optimized reads
+- **Read Store** — denormalized query model
 
 ::: notes
 Duration ~00:03
@@ -134,6 +154,7 @@ Duration ~00:03
 This diagram shows the minimum components for a CQRS implementation.
 
 **Walk Through the Diagram**:
+
 1. Command API receives write requests and routes to handlers
 2. Command Handler orchestrates domain logic and writes to the Write Store
 3. Events are published after successful writes
@@ -141,6 +162,7 @@ This diagram shows the minimum components for a CQRS implementation.
 5. Query API serves the Read Store with fast, optimized queries
 
 **Key Components**:
+
 - **Command API**: Validates input, routes to appropriate handler
 - **Command Handler**: Enforces invariants, orchestrates domain operations
 - **Write Store**: OLTP database for aggregates and consistency
@@ -157,10 +179,12 @@ This diagram shows the minimum components for a CQRS implementation.
 ## Command Model Design
 
 **Commands** — task-based, intention-revealing names:
+
 - `CreateOrder` / `ApproveOrder` / `CancelOrder`
 - `RegisterUser` / `UpdateShippingAddress`
 
 **Rules**:
+
 1. Validate at the command boundary — reject early
 2. Use aggregates to enforce invariants and consistency
 3. Keep handlers deterministic and side-effect controlled
@@ -173,6 +197,7 @@ Duration ~00:03
 Good command design is the foundation of a maintainable CQRS system.
 
 **Key Points**:
+
 - Task-based command names reveal business intent — much better than `UpdateOrder`
 - Aggregates are the consistency boundary — they decide if a command is valid
 - Early validation prevents unnecessary database round-trips
@@ -180,6 +205,7 @@ Good command design is the foundation of a maintainable CQRS system.
 - Side effects (email, events) should happen after the transaction commits
 
 **Code Example**:
+
 ```csharp
 public record ApproveOrderCommand(Guid OrderId, string ApprovedBy);
 
@@ -203,6 +229,7 @@ await _publisher.PublishAsync(new OrderApprovedEvent(order.Id));
 ## Query Model Design
 
 **Queries** — shaped for the consumer use case:
+
 - Avoid joins and complex calculations at query time
 - Use projections updated from events or change feeds
 - Keep models versioned and rebuildable
@@ -221,6 +248,7 @@ Duration ~00:02
 The query model is designed entirely around how data will be consumed.
 
 **Key Points**:
+
 - Query models are "read-only databases" shaped for specific views
 - Different query types may use different storage technologies
 - Projections are pre-computed at write time, not at query time
@@ -238,16 +266,19 @@ The query model is designed entirely around how data will be consumed.
 ## Consistency Strategy
 
 **Strong Consistency** — needed for:
+
 - Payments and financial transactions
 - Inventory management
 - Security and access control
 
 **Eventual Consistency** — acceptable for:
+
 - Activity feeds and notifications
 - Analytics dashboards
 - Search indexes and recommendations
 
 **Reliable Event Publication** — use the Outbox Pattern:
+
 > Write event to database table atomically with domain change → background process publishes → idempotent consumers
 
 ::: notes
@@ -256,12 +287,14 @@ Duration ~00:03
 Consistency is often the most debated aspect of CQRS implementations.
 
 **Key Points**:
+
 - Not all data requires strong consistency — choosing the right model reduces complexity
 - The Outbox Pattern is the industry standard for reliable event publishing
 - "Dual writes" (write to DB and publish in the same transaction) are dangerous — use the outbox
 - Idempotent consumers handle duplicate event delivery gracefully
 
 **The Outbox Pattern**:
+
 1. Within the same database transaction: write the domain change AND an outbox event record
 2. A background process reads unprocessed outbox events and publishes them to the message broker
 3. Mark events as processed after successful publication
@@ -274,12 +307,12 @@ Consistency is often the most debated aspect of CQRS implementations.
 
 ## Anti-Patterns to Avoid
 
-| Anti-Pattern | Problem | Solution |
-|-------------|---------|----------|
-| Mixed query in command handler | Breaks separation of concerns | Query read model separately |
-| Shared ORM model for reads/writes | Couples both models | Use separate query DTOs |
-| CQRS on simple CRUD | Unnecessary complexity | Use simple repository pattern |
-| Dual writes without outbox | Risk of lost events | Implement outbox pattern |
+| Anti-Pattern                      | Problem                       | Solution                      |
+| --------------------------------- | ----------------------------- | ----------------------------- |
+| Mixed query in command handler    | Breaks separation of concerns | Query read model separately   |
+| Shared ORM model for reads/writes | Couples both models           | Use separate query DTOs       |
+| CQRS on simple CRUD               | Unnecessary complexity        | Use simple repository pattern |
+| Dual writes without outbox        | Risk of lost events           | Implement outbox pattern      |
 
 ::: notes
 Duration ~00:02
@@ -287,6 +320,7 @@ Duration ~00:02
 These anti-patterns are the most common mistakes in CQRS implementations.
 
 **Key Points**:
+
 - The most common mistake is reading from the write store in a query context
 - Sharing a single ORM model defeats the purpose of model separation
 - Over-engineering is real — CQRS adds complexity that's only worth it in the right domains
@@ -299,21 +333,26 @@ These anti-patterns are the most common mistakes in CQRS implementations.
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Migration Strategy
 
-**Start small, migrate incrementally:**
+**Start small, migrate incrementally**
 
 1. **Identify** one bounded context or high-value feature
-2. **Split read model** first — keep write model intact
-3. **Add projections** and read store incrementally
-4. **Introduce event publishing** after stable write flow
+2. **Split read model** first while keeping the write model intact
+3. **Add projections** and the read store incrementally
+4. **Introduce event publishing** after the write flow is stable
 5. **Expand** to additional contexts over time
 
-**Quality Checklist:**
-- [ ] Command and query models are clearly separated
-- [ ] Write model enforces all invariants
-- [ ] Event publication is reliable (outbox or equivalent)
-- [ ] Projection updates are idempotent and monitored
+::: column
+
+**Quality checklist**
+
+- Command and query models are clearly separated
+- Write model enforces all invariants
+- Event publication is reliable through outbox or equivalent
+- Projection updates are idempotent and monitored
 
 ::: notes
 Duration ~00:02
@@ -321,6 +360,7 @@ Duration ~00:02
 Incremental migration reduces risk and allows the team to learn the pattern gradually.
 
 **Key Points**:
+
 - Big-bang migrations almost always fail — start with one context
 - Splitting the read model first gives immediate query performance wins without disrupting writes
 - Monitoring projection lag is essential once you go to production
@@ -336,6 +376,7 @@ Incremental migration reduces risk and allows the team to learn the pattern grad
 ## Example: Order Approval Flow
 
 **Command flow (write)**:
+
 1. API receives `ApproveOrder` command
 2. Command handler loads `Order` aggregate
 3. Aggregate validates approval rules
@@ -343,6 +384,7 @@ Incremental migration reduces risk and allows the team to learn the pattern grad
 5. `OrderApproved` event published via outbox
 
 **Query flow (read)**:
+
 1. UI requests order summary dashboard
 2. Query API reads `OrderSummary` projection
 3. Read store returns denormalized view
@@ -354,6 +396,7 @@ Duration ~00:02
 Tying the concepts together with a concrete example makes the pattern tangible.
 
 **Key Points**:
+
 - The command and query flows are completely independent paths
 - The event bridges the write and read sides asynchronously
 - `lastUpdatedUtc` in the query response lets the UI show freshness information
@@ -366,18 +409,25 @@ Tying the concepts together with a concrete example makes the pattern tangible.
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Key Takeaways
 
-- **Separate** commands (writes) from queries (reads) at the architectural level
-- **Use CQRS** when read/write workloads differ significantly
-- **Outbox pattern** ensures reliable event publication
-- **Eventual consistency** is the default — design for it intentionally
-- **Start small** — migrate one context at a time
+**Core reminders**
 
-### Further Reading
-- Martin Fowler's CQRS article: `martinfowler.com/bliki/CQRS.html`
-- Outbox Pattern: `microservices.io/patterns/data/transactional-outbox.html`
-- Greg Young's CQRS Documents
+- Separate commands from queries at the architectural level
+- Use CQRS when read and write workloads differ materially
+- Use the outbox pattern for reliable event publication
+- Design for eventual consistency intentionally
+- Start small and migrate one context at a time
+
+::: column
+
+**Further reading**
+
+- Martin Fowler: `martinfowler.com/bliki/CQRS.html`
+- Transactional outbox: `microservices.io/patterns/data/transactional-outbox.html`
+- Greg Young's CQRS documents
 
 ::: notes
 Duration ~00:02
@@ -385,6 +435,7 @@ Duration ~00:02
 Summarize the key points and provide resources for deeper learning.
 
 **Summary**:
+
 - CQRS separates write models (commands) from read models (queries)
 - Use it when the complexity pays off — don't over-apply
 - Reliable event publication requires the outbox pattern

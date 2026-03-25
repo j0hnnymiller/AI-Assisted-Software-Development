@@ -3,6 +3,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Controlling GitHub Copilot Instruction Files
 
 Understanding Context Submission in AI-Assisted Development
@@ -19,19 +20,19 @@ This session assumes you're familiar with basic GitHub Copilot usage and have wo
 
 ---
 
-
-
-
 ## The Core Concept
 
 Every Copilot prompt includes relevant instruction files automatically
 
 ```markdown
 # .github/instructions/security.instructions.md
+
 ---
-applyTo: "**/*.{ts,js,py}"
----
+
+## applyTo: "\*_/_.{ts,js,py}"
+
 # Security Best Practices
+
 ...
 ```
 
@@ -59,9 +60,6 @@ Think of it like having domain experts looking over your shoulder, but only when
 
 ---
 
-
-
-
 ## The applyTo Field: Pattern Matching
 
 Three Levels of Scope Control
@@ -82,11 +80,11 @@ Result: Only matching instruction files are included in context
 ::: notes
 The applyTo field uses glob patterns, which give you three levels of granularity for controlling instruction scope.
 
-Level 1: Global patterns like “*/” apply to every file in your repository. Use this sparingly for truly universal instructions like AI provenance requirements or company-wide coding standards. The ai-assisted-output.instructions.md file is a perfect example - it applies everywhere because every AI-generated output needs provenance metadata.
+Level 1: Global patterns like “\*/” apply to every file in your repository. Use this sparingly for truly universal instructions like AI provenance requirements or company-wide coding standards. The ai-assisted-output.instructions.md file is a perfect example - it applies everywhere because every AI-generated output needs provenance metadata.
 
-Level 2: Directory-specific patterns like “slides/marp/**” target a specific folder hierarchy. This is ideal for instructions that only make sense in certain parts of your codebase. Marp slide instructions only matter when you're creating slides, so they target that directory exclusively.
+Level 2: Directory-specific patterns like “slides/marp/\*\*” target a specific folder hierarchy. This is ideal for instructions that only make sense in certain parts of your codebase. Marp slide instructions only matter when you're creating slides, so they target that directory exclusively.
 
-Level 3: Type-specific patterns like “*/.{cs,ts,js}” apply to specific file extensions regardless of location. This is perfect for language-specific instructions, architectural patterns, or technology-specific guidelines. Vertical slice architecture instructions might only apply to backend code files.
+Level 3: Type-specific patterns like “\*/.{cs,ts,js}” apply to specific file extensions regardless of location. This is perfect for language-specific instructions, architectural patterns, or technology-specific guidelines. Vertical slice architecture instructions might only apply to backend code files.
 
 The matching happens automatically when you:
 
@@ -96,19 +94,18 @@ Reference a file in chat
 
 Run a command that targets specific files
 
-Pro tip: You can combine these patterns. For example, “src/*/.test.{ts,js}” would only match test files in the src directory. This allows very precise control over which instructions apply where.
+Pro tip: You can combine these patterns. For example, “src/\*/.test.{ts,js}” would only match test files in the src directory. This allows very precise control over which instructions apply where.
 
 One important caveat: If an instruction file has NO applyTo field, it won't be automatically included at all. You'd need to manually reference it with @-mentions.
 :::
 
 ---
 
-
-
+<!-- layout: Two Content -->
 
 ## Prompt Files: Reference, Don't Control
 
-Prompt files execute tasks, they don't control instruction inclusion
+Prompt files execute tasks, but they do not control automatic instruction inclusion.
 
 ```markdown
 <!-- .github/prompts/create-api.prompt.md -->
@@ -117,10 +114,13 @@ Prompt files execute tasks, they don't control instruction inclusion
 `.github/instructions/ai-assisted-output.instructions.md`
 ```
 
-Key Distinction:
-✅ Can reference instruction requirements in content
-❌ Don't control which instructions auto-include
-🎯 The target file's applyTo matching still determines inclusion
+::: column
+
+**Key distinction**
+
+- Can reference instruction requirements in prompt content
+- Cannot decide which instructions auto-include
+- The target file's `applyTo` matching still determines automatic inclusion
 
 ::: notes
 This is a common source of confusion, so let's clarify: prompt files and instruction files serve different purposes and work in different ways.
@@ -137,7 +137,7 @@ The AI reads those references as part of the prompt
 
 But the automatic inclusion of instruction files is still controlled by the applyTo patterns matching the files being created or modified
 
-Here's a practical scenario: You run a prompt to create a new TypeScript API file. The prompt mentions that security instructions must be followed. The security.instructions.md file has applyTo: “*/.ts”. When the AI creates the new .ts file:
+Here's a practical scenario: You run a prompt to create a new TypeScript API file. The prompt mentions that security instructions must be followed. The security.instructions.md file has applyTo: “\*/.ts”. When the AI creates the new .ts file:
 
 The prompt content enforces the requirement
 
@@ -152,26 +152,26 @@ The prompt metadata can specify output paths, which helps the system know what f
 
 ---
 
-
-
+<!-- layout: Two Content -->
 
 ## Chat Modes: Persona, Not Pattern Control
 
-Chat modes create specialized contexts, not instruction filters
+Chat modes create specialized context, not instruction filters.
 
 ```markdown
 # .github/chatmodes/security-analyzer.chatmode.md
+
 # Focus: Code security, vulnerability detection
 ```
 
-Interaction Model:
-graph LR
-    A[File Being Edited] --> B{applyTo Match?}
-    B -->|Yes| C[Auto-Include Instructions]
-    B -->|No| D[Skip Instructions]
-    C --> E[Add Chat Mode Persona]
-    D --> E
-    E --> F[Generate Response]
+::: column
+
+**Interaction model**
+
+- File being edited determines `applyTo` matches
+- Matching instructions are auto-included first
+- Active chat mode then adds persona and workflow guidance
+- Final response uses both the matched instructions and the chat mode persona
 
 ::: notes
 Chat modes are often misunderstood as another way to control instruction inclusion, but they actually serve a different purpose. Let's clarify their role in the context submission system.
@@ -211,20 +211,18 @@ One important note: If your chat mode references specific instruction files in i
 
 ---
 
-
-
-
 ## The Control Hierarchy
 
 Understanding the complete context assembly
+
 1. 📝 File Being Edited (e.g., src/api.ts)
-          ↓
+   ↓
 2. 🎯 Instruction Files (applyTo pattern matching)
-          ↓
+   ↓
 3. 🎭 Active Chat Mode (if any - adds persona/context)
-          ↓
+   ↓
 4. 📋 Prompt Files (can reference additional instructions)
-          ↓
+   ↓
 5. 👤 Manual @-mentions (explicit instruction references)
 
 ::: notes
@@ -255,23 +253,20 @@ Pro tip: Use levels 1-2 for 90% of your work (file-driven automatic inclusion), 
 
 ---
 
-
-
-
 ## Practical Control Strategies
 
 Four approaches to managing instruction context
 Strategy | Use Case | Example
 --- | --- | ---
-Specific Patterns | Domain-specific guidance | src/**/*.ts for backend TypeScript
+Specific Patterns | Domain-specific guidance | src/**/\*.ts for backend TypeScript
 No applyTo | Manual inclusion only | Docs that need explicit opt-in
-Global with Overrides | Base + specialized | **/* + specific overrides
+Global with Overrides | Base + specialized | **/\* + specific overrides
 Directory Isolation | Project sections | frontend/** vs backend/**
 
 ::: notes
 Let's conclude with four practical strategies you can use to manage instruction context effectively. These are patterns we've seen work well in real development teams.
 
-Strategy 1: Specific Patterns (Recommended for Most Cases) Use precise glob patterns that match only the files where instructions are relevant. For example, if you have vertical slice architecture instructions, apply them only to your backend code: “src/backend/*/.{cs,ts,py}”. This keeps your context clean and focused. It also reduces token costs since irrelevant instructions aren't included.
+Strategy 1: Specific Patterns (Recommended for Most Cases) Use precise glob patterns that match only the files where instructions are relevant. For example, if you have vertical slice architecture instructions, apply them only to your backend code: “src/backend/\*/.{cs,ts,py}”. This keeps your context clean and focused. It also reduces token costs since irrelevant instructions aren't included.
 
 When to use: This should be your default strategy. Be specific about where instructions apply. Think about the actual files developers will be editing and match those patterns.
 
@@ -289,9 +284,9 @@ When to use: For instructions that might cause confusion if automatically includ
 
 Strategy 3: Global with Overrides (Advanced) Start with global instructions that apply everywhere (like AI provenance requirements), then create more specific instruction files that override or extend them for particular domains. For example:
 
-ai-assisted-output.instructions.md: applyTo: “*/”
+ai-assisted-output.instructions.md: applyTo: “\*/”
 
-ai-assisted-code-output.instructions.md: applyTo: “*/.{code}” The more specific file can provide additional requirements that layer on top of the global ones.
+ai-assisted-code-output.instructions.md: applyTo: “\*/.{code}” The more specific file can provide additional requirements that layer on top of the global ones.
 
 When to use: When you have a base set of universal requirements but need domain-specific extensions. Be careful not to create conflicting instructions.
 
@@ -306,39 +301,44 @@ Remember: You can see which instructions are active by checking the Copilot cont
 
 ---
 
-
-
-
 ## Real-World Examples
 
 From your current workspace
 
 ```markdown
 # ai-assisted-output.instructions.md
-applyTo: "**/*"
+
+applyTo: "\*_/_"
+
 # ✅ Applies everywhere - fundamental provenance requirements
 
 # vertical-slice-implementation.instructions.md
-applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+
+applyTo: "\*_/_.{cs,ts,js,py,java,go,rb}"
+
 # ✅ Code files only - architectural guidance
 
 # marp-slides.instructions.md
-applyTo: "slides/marp/**"
+
+applyTo: "slides/marp/\*\*"
+
 # ✅ Specific directory - presentation formatting
 
 # chatmode-file.instructions.md
-applyTo: "**/*.chatmode.md"
+
+applyTo: "\*_/_.chatmode.md"
+
 # ✅ Specific file type - chat mode creation rules
 ```
 
 ::: notes
 Let's look at real examples from your actual workspace to see these strategies in action. These are live instruction files that demonstrate the patterns we've discussed.
 
-Example 1: Universal Requirements The ai-assisted-output.instructions.md file uses the global pattern “*/”. This makes sense because every AI-generated artifact in your repository needs complete provenance metadata - the chat ID, model used, timestamps, operator, etc. There's no file type that should be exempt from these requirements. This is a perfect use case for global application.
+Example 1: Universal Requirements The ai-assisted-output.instructions.md file uses the global pattern “\*/”. This makes sense because every AI-generated artifact in your repository needs complete provenance metadata - the chat ID, model used, timestamps, operator, etc. There's no file type that should be exempt from these requirements. This is a perfect use case for global application.
 
 Example 2: Language-Specific Guidance The vertical-slice-implementation.instructions.md file applies to code files across multiple languages. Notice the pattern includes cs, ts, js, py, java, go, and rb extensions. This instruction file contains architectural guidance about implementing vertical slice architecture, which is relevant to any programming language but not relevant to markdown docs, config files, or slides. By targeting only code files, it stays out of the way when you're writing documentation.
 
-Example 3: Directory-Specific Rules The marp-slides.instructions.md file uses “slides/marp/**” to target only the specific directory where slide content is created. Marp formatting rules, speaker note syntax, and presentation structure guidance only makes sense for slide files. If this pattern was broader, you'd get slide-specific instructions while writing code, which would be confusing and waste tokens.
+Example 3: Directory-Specific Rules The marp-slides.instructions.md file uses “slides/marp/\*\*” to target only the specific directory where slide content is created. Marp formatting rules, speaker note syntax, and presentation structure guidance only makes sense for slide files. If this pattern was broader, you'd get slide-specific instructions while writing code, which would be confusing and waste tokens.
 
 Example 4: File Type Specialization The chatmode-file.instructions.md file applies only to files ending in .chatmode.md. This is hyper-specific because the instructions are about creating chat mode definition files - they're only relevant when you're actually authoring a chat mode. This prevents developers from seeing chat mode creation instructions when they're working on normal documentation.
 
@@ -348,9 +348,6 @@ You can examine your own instruction files and ask: “Is this applyTo pattern o
 :::
 
 ---
-
-
-
 
 ## Key Takeaways
 
@@ -372,7 +369,7 @@ Third: Chat modes create specialized AI personas that layer on top of the instru
 
 Fourth: Understanding the hierarchy helps you debug and optimize. When something unexpected happens - instructions not being applied, wrong context being included, token limits being hit - trace through the hierarchy: What file am I working on? What patterns match? What chat mode is active? What prompt am I running? What did I manually @-mention?
 
-Fifth: Specificity beats generality. It's tempting to use broad patterns like “*/” for everything, but resist that temptation. Specific patterns mean:
+Fifth: Specificity beats generality. It's tempting to use broad patterns like “\*/” for everything, but resist that temptation. Specific patterns mean:
 
 Lower token costs (only relevant context)
 
@@ -408,9 +405,6 @@ Thank you for your attention. Let's open it up for questions.
 :::
 
 ---
-
-
-
 
 ## Questions & Discussion
 

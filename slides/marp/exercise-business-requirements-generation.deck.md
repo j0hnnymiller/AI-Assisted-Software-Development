@@ -54,6 +54,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Exercise: Business Requirements Generation
 
 Objectives
