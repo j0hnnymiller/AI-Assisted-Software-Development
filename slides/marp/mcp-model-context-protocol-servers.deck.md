@@ -27,9 +27,7 @@ paginate: true
 
 <!-- _class: lead -->
 
-# MCP: Model Context Protocol Servers
-
-## Extending GitHub Copilot with External Tools and Data
+## MCP: Model Context Protocol Servers
 
 - Connect Copilot to databases, APIs, infrastructure tools, and custom systems
 - Built on a standardized protocol so any tool can speak to Copilot
