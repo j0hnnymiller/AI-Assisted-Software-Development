@@ -42,6 +42,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 ## Start Simple
 
 - Create one agent for one specific pain point

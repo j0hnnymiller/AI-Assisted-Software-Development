@@ -32,9 +32,11 @@ paginate: true
 
 **Activities**
 
-- **Phase 1 - Create**: Add `.github/agents/test-specialist.agent.md` with frontmatter (`name`, `description`, `tools`) and focused behavior instructions
-- **Phase 2 - Refine**: Tighten scope by clarifying what the agent should do and refuse, then save and re-open chat
-- **Phase 3 - Use**: Select the new custom agent in Copilot Chat and run a prompt such as “Review this feature and propose a test plan with unit and integration tests”
+1. Create: Add `.github/agents/test-specialist.agent.md` with frontmatter (`name`, `description`, `tools`) and focused behavior instructions
+2. Refine: Tighten scope by clarifying what the agent should do and refuse, then save and re-open chat
+3. Use: Select the new custom agent in Copilot Chat and run a prompt such as “Review this feature and propose a test plan with unit and integration tests”
+
+::: column
 
 **Success Criteria**
 

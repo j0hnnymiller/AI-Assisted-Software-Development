@@ -4,17 +4,6 @@ theme: default
 paginate: true
 ---
 
-## Greenfield Development
-
-Creating Custom Chat Modes for Greenfield development
-Chat Mode Command Prompts
-Core Instruction Files
-
----
-
-
-
-
 ## What Copilot Looks For
 
 Artifact Type | Required Location | Required Format | Notes
@@ -31,31 +20,6 @@ Even though “chat modes” are being renamed to “agents,” the folder name 
 
 ---
 
-
-
-
-## What's Changing and What Isn't
-
-Changing:
-Terminology in UI and documentation
-Conceptual framing (agents = more powerful, structured roles)
-Schema will expand over time
-Not changing (yet):
-Folder name: .github/copilot/chat_modes/
-File discovery rules
-Filename requirements
-Promptfile behavior
-Instruction stack mechanics
-
-::: notes
-Teams can safely start using the term “agent” in training and inside the file's name: field, but must keep the existing folder structure.
-:::
-
----
-
-
-
-
 ## Order of Precedence
 
 Organization-level instruction files
@@ -70,10 +34,11 @@ User message
 ## What Are Custom Agents?
 
 Custom agents are specialized AI assistants with:
-Tailored expertise for specific development tasks
-Configurable tools and capabilities
-Custom instructions defining behavior
-Reusable profiles across projects
+- Tailored expertise for specific development tasks
+- Configurable tools and capabilities
+- Custom instructions defining behavior
+- Reusable profiles across projects
+
 Available in multiple environments (GitHub.com, VS Code, JetBrains, Eclipse, Xcode)
 
 ::: notes
@@ -107,14 +72,13 @@ Transition: “Now let's see where and how you can create these custom agents.�
 ## Where to Create Custom Agents
 
 GitHub.com
-Navigate to github.com/copilot/agents
-Available at repository, organization, or enterprise level
-Template-based creation process
+- Navigate to github.com/copilot/agents
+- Available at repository, organization, or enterprise level
+- Template-based creation process
+
 IDEs
-VS Code: Configure Custom Agents menu
-JetBrains: Configure Agents settings
-Eclipse: Add custom agents dialog
-Xcode: Create agent from dropdown
+- VS Code: Configure Custom Agents menu
+- .github/agents/ directory for workspace agents
 
 ::: notes
 Duration ~00:03
@@ -215,16 +179,16 @@ Transition: “Now that we know how to create the file, let's understand what go
 
 ## Creating in VS Code
 
-Open GitHub Copilot Chat
-Agents dropdown → Configure Custom Agents…
-Click Create new custom agent
-Choose location:
+- Open GitHub Copilot Chat
+- Agents dropdown → Configure Custom Agents…
+- Click Create new custom agent
+- Choose location:
   - Workspace: .github/agents/ (project-specific)
   - User profile: Personal agents (all workspaces)
-Enter filename
-Configure in .agent.md file
-Use Configure Tools… button for tool selection
-Set model: property for AI model preference
+- Enter filename
+- Configure in .agent.md file
+- Use Configure Tools… button for tool selection
+- Set model: property for AI model preference
 
 ::: notes
 Duration ~00:04
@@ -292,337 +256,22 @@ Transition: “The process is similar in JetBrains, Eclipse, and Xcode with slig
 
 ---
 
-## Agent Profile Structure
-
-```markdown
----
-name: test-specialist
-description: Focuses on test coverage and quality
-tools: ["read", "edit", "search"]
-model: gpt-4
-target: vscode # optional: vscode or github-copilot
----
-
-You are a testing specialist...
-
-[Detailed instructions and behavior]
-```
-Key Components:
-YAML frontmatter: Metadata and configuration
-Markdown content: Instructions and behavior (max 30,000 chars)
-
-::: notes
-Duration ~00:05
-
-Anatomy of an Agent Profile:
-
-YAML Frontmatter (Required):
-
-name (optional): Display name in dropdown
-
-Defaults to filename without extension
-
-Keep concise (2-4 words)
-
-Examples: “Test Specialist”, “Security Reviewer”
-
-description (REQUIRED): What the agent does
-
-Must be clear and specific
-
-Explains capabilities and domain
-
-Appears in agent selection UI
-
-1-2 sentence summary
-
-tools (optional): Which tools agent can use
-
-Omit to enable ALL tools
-
-List specific tools to restrict access
-
-Format: ["tool1", "tool2", "mcp-server/tool3"]
-
-Common tools: read, edit, search, run, debug
-
-model (IDE only): Which AI model to use
-
-Only works in VS Code, JetBrains, Eclipse, Xcode
-
-Examples: “gpt-4”, “gpt-3.5-turbo”, “claude-3-opus”
-
-Ignored on GitHub.com
-
-target (optional): Environment restriction
-
-“vscode” = only in IDEs
-
-“github-copilot” = only on GitHub.com
-
-Omit = works everywhere
-
-mcp-servers (org/enterprise only): Configure MCP servers for this agent
-
-Markdown Content (The Agent's “Brain”):
-
-Define personality and expertise
-
-Set boundaries and constraints
-
-Provide examples of good behavior
-
-Specify output formats
-
-Maximum 30,000 characters (plenty of space!)
-
-Best Practices:
-
-Be specific about what the agent should AND shouldn't do
-
-Include examples of desired behavior
-
-Mention file patterns or naming conventions
-
-Specify testing/validation requirements
-
-Transition: “Let's see what these instructions look like in real agent examples.”
-:::
-
----
-
-## Example 1: Testing Specialist
-
-```markdown
----
-name: test-specialist
-description: Focuses on test coverage, quality, and testing
-  best practices without modifying production code
----
-
-You are a testing specialist focused on improving code
-quality through comprehensive testing. Your responsibilities:
-
-- Analyze existing tests and identify coverage gaps
-- Write unit tests, integration tests, and end-to-end tests
-- Review test quality and suggest improvements
-- Ensure tests are isolated, deterministic, and documented
-- Focus only on test files - avoid modifying production code
-
-Always include clear test descriptions and use appropriate
-testing patterns for the language and framework.
-```
-
-::: notes
-Duration ~00:04
-
-Why This Example Works:
-
-Clear Scope Definition:
-
-“Focuses on test coverage” - tells user what it does
-
-“Without modifying production code” - tells user what it WON'T do
-
-Sets clear boundaries to prevent scope creep
-
-Specific Responsibilities:
-
-“Analyze existing tests” - audit capability
-
-“Write unit/integration/e2e tests” - creation capability
-
-“Review test quality” - critique capability
-
-“Ensure tests are isolated” - quality standards
-
-“Focus only on test files” - reinforces boundary
-
-Behavioral Constraints:
-
-“Focus only on test files” - prevents the agent from refactoring production code
-
-“Avoid modifying production code unless specifically requested” - allows override when needed
-
-Quality Standards:
-
-“Isolated” - no shared state between tests
-
-“Deterministic” - same input = same output
-
-“Well-documented” - clear descriptions and comments
-
-Pattern Recognition:
-
-“Use appropriate testing patterns for the language and framework”
-
-Agent will adapt to Jest, pytest, JUnit, etc.
-
-Usage Scenarios:
-
-Adding tests to legacy code
-
-Improving test coverage metrics
-
-Reviewing PR test quality
-
-Learning testing best practices
-
-Customization Ideas:
-
-Add specific test frameworks to use
-
-Include code coverage thresholds
-
-Specify test naming conventions
-
-Add mutation testing requirements
-
-Common Question: “Why not enable all tools?” Answer: Not specified here, so all tools are available. But you might restrict to [“read”, “edit”] to prevent running or deploying.
-
-Transition: “Here's another example that shows a different use case - planning instead of coding.”
-:::
-
----
-
-## Example 2: Implementation Planner
-
-```markdown
----
-name: implementation-planner
-description: Creates detailed implementation plans and
-  technical specifications in markdown format
-tools: ["read", "search", "edit"]
----
-
-You are a technical planning specialist. Your responsibilities:
-
-- Analyze requirements and break them into actionable tasks
-- Create detailed technical specs and architecture docs
-- Generate implementation plans with steps and dependencies
-- Document API designs, data models, and system interactions
-- Create markdown files that development teams can follow
-
-Always structure plans with clear headings, task breakdowns,
-and acceptance criteria. Include considerations for testing,
-deployment, and risks. Focus on thorough documentation
-rather than implementing code.
-```
-
-::: notes
-Duration ~00:04
-
-Strategic Difference from Test Specialist:
-
-Tools Restriction:
-
-Only ["read", "search", "edit"] enabled
-
-NOT “run” or “debug” - this agent doesn't execute code
-
-NOT “shell” - doesn't deploy or build
-
-Enforces its role as a planner, not implementer
-
-Planning-Specific Responsibilities:
-
-“Analyze requirements” - requirements engineering
-
-“Break them into actionable tasks” - work breakdown
-
-“Technical specs and architecture docs” - documentation focus
-
-“Implementation plans with dependencies” - sequencing and scheduling
-
-“API designs, data models” - interface definition
-
-Output Format:
-
-“Markdown format” - specified in description
-
-“Markdown files that development teams can follow” - artifact focus
-
-“Clear headings, task breakdowns” - structure requirements
-
-Non-Code Focus:
-
-“Focus on thorough documentation rather than implementing code”
-
-Critical boundary: this agent designs but doesn't build
-
-Prevents mixing planning and implementation concerns
-
-When to Use This Agent:
-
-Starting new features or projects
-
-Architectural decision records (ADRs)
-
-Epic and story breakdown
-
-Technical RFCs
-
-Onboarding documentation
-
-Migration plans
-
-Output Examples:
-
-IMPLEMENTATION_PLAN.md with tasks and timeline
-
-ARCHITECTURE.md with system design
-
-API_SPEC.md with endpoint definitions
-
-DATA_MODEL.md with schema definitions
-
-Team Benefits:
-
-Consistent planning documentation format
-
-Separation of planning from coding
-
-Better task estimation
-
-Clear acceptance criteria
-
-Risk identification upfront
-
-Customization Ideas:
-
-Add specific template sections
-
-Include estimation guidance
-
-Specify diagram types (C4, sequence, etc.)
-
-Add stakeholder communication sections
-
-Comparison to Test Specialist:
-
-Test Specialist: All tools, focused on test files
-
-Implementation Planner: Limited tools, focused on documentation
-
-Transition: “These examples show two very different agent types. Now let's learn how to actually use custom agents once they're created.”
-:::
-
----
-
 ## Using Custom Agents
 
 On GitHub.com
-Agents panel/tab dropdown → Select your custom agent
-Assign custom agent to issues
-Noted in PR descriptions when used
+- Agents panel/tab dropdown → Select your custom agent
+- Assign custom agent to issues
+- Noted in PR descriptions when used
+
 In IDEs
-Chat window dropdown → Select agent
-Switch agents mid-conversation
-Access specialized configurations per task
+- Chat window dropdown → Select agent
+- Switch agents mid-conversation
+- Access specialized configurations per task
+
 GitHub Copilot CLI
-/agent command to select agent
-Reference agent in prompts
-Command-line argument support
+- /agent command to select agent
+- Reference agent in prompts
+- Command-line argument support
 
 ::: notes
 Duration ~00:05
@@ -923,7 +572,7 @@ Transition: “You now have everything you need to create your first custom agen
 
 
 
-## Greenfield Chat Modes
+## AIASD Custom Agents
 
 Product Manager
 Solution Architect
@@ -1127,21 +776,3 @@ created:
 * risk-assessment.prompt.md - Architectural risk assessment and mitigation
 :::
 
----
-
-
-
-
-## If you said: "Design an architecture for a Windows desktop application that manages real-time inventory for a warehouse"
-
-The chatmode would deliver:
-Component breakdown (UI for warehouse staff, inventory service, database layer, real-time sync)
-Tech stack (WinUI 3 or WPF, .NET 8, SQL Server, SignalR for real-time updates)
-Patterns (MVVM for UI, Repository pattern for data, async/await for responsiveness)
-Performance angles (connection pooling, efficient queries, UI thread optimization)
-Security (role-based access, encrypted communications, audit logging)
-Rollout plan (Phase 1: core inventory, Phase 2: real-time sync, Phase 3: analytics)
-
-::: notes
-Prompt: when using the solution architect chat mode, explain what happens when I ask it to design a new architecture for windows application
-:::
