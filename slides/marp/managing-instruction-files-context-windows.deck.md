@@ -24,8 +24,6 @@ theme: default
 paginate: true
 ---
 
-<!-- _class: lead -->
-
 ## Managing Instruction Files & Context Windows
 
 - Instruction sharing strategies
@@ -60,17 +58,11 @@ Explain that teams should avoid copy-paste drift by maintaining canonical files 
 
 Use scope to target behavior precisely with `applyTo` patterns.
 
-```yaml
 applyTo: "**/*"
-```
 
-```yaml
 applyTo: "slides/marp/**"
-```
 
-```yaml
 applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
-```
 
 ### Rule of Thumb
 

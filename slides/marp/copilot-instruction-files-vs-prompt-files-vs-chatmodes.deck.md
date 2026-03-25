@@ -4,26 +4,7 @@ theme: default
 paginate: true
 ---
 
-
-🧭 Comparing Copilot Instruction Files, Prompt Files & Custom Chatmodes
-
----
-
-## 📂 What Are They?
-
-Instruction Files
-  - External configuration files that guide Copilot's behavior
-  - Define reusable rules, context, or workflows
-Prompt Files
-  - Contain pre-written prompts or templates
-  - Provide structured input for consistent outputs
-Custom Chatmodes
-  - Runtime modes that alter Copilot's conversational style
-  - Adapt tone, reasoning depth, or interaction model
-
----
-
-## 🎯 Purpose
+## Purpose
 
 Instruction Files
   - Standardize behavior across teams/projects
@@ -37,7 +18,7 @@ Custom Chatmodes
 
 ---
 
-## ⚙️ Scope & Control
+## Scope & Control
 
 Feature | Instruction Files | Prompt Files | Custom Chatmodes
 --- | --- | --- | ---
@@ -48,12 +29,12 @@ User Control | Admin/Dev | End-user | End-user
 
 ---
 
-## 🔄 How They Work Together
+## How They Work Together
 
 Instruction Files set the baseline rules
 Prompt Files provide repeatable task inputs
 Custom Chatmodes adjust interaction dynamics
-➡️ Together, they create a layered control model: - Stable foundation (instructions) - Reusable building blocks (prompts) - Adaptive conversation (chatmodes)
+Together, they create a layered control model: - Stable foundation (instructions) - Reusable building blocks (prompts) - Adaptive conversation (chatmodes)
 
 ---
 
