@@ -79,9 +79,7 @@ title: "Creating Vertical Slice Implementation Plans"
 description: "Section 7 deck on slice planning guidance, AI-generated plans, and multi-model review."
 ---
 
-# Creating Vertical Slice Implementation Plans
-
-## Section 7 overview
+## Creating Vertical Slice Implementation Plans
 
 - 16-minute teaching segment
 - Focus: how to plan before implementation

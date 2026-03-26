@@ -23,9 +23,7 @@ theme: default
 paginate: true
 ---
 
-# CQRS Architecture
-
-## Command Query Responsibility Segregation
+## Command Query Responsibility Segregation Architecture
 
 _AI-Assisted Software Development_
 

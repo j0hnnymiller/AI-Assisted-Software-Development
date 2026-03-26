@@ -82,9 +82,9 @@ marp: true
 theme: default
 paginate: true
 ---
-# Vertical Slicing Architecture Introduction
+## Vertical Slicing Architecture Introduction
 
-## Organizing software around features instead of layers
+### Organizing software around features instead of layers
 
 *AI-Assisted Software Development*
 
