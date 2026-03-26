@@ -222,6 +222,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes detailed speaker notes for effective delivery
   - Provenance: [Chat log](ai-logs/2026/02/07/cqrs-architecture-slides-20260207/conversation.md)
 
+- **Getting Started Checklist** ([`slides/marp/getting-started-checklist.deck.md`](slides/marp/getting-started-checklist.deck.md))
+  - Converted 3-slide Marp deck covering phased AI adoption steps and a high-level AI-assisted workflow from requirements to implementation
+  - Preserves the extracted workflow visual and adds speaker notes for presentation use in the course slide pipeline
+  - Provenance: [Chat log](ai-logs/2026/03/26/convert-getting-started-checklist-20260326/conversation.md) | [Summary](ai-logs/2026/03/26/convert-getting-started-checklist-20260326/summary.md)
+
 - **Vertical Slicing Architecture Introduction** ([`slides/marp/vertical-slicing-architecture-introduction.deck.md`](slides/marp/vertical-slicing-architecture-introduction.deck.md))
   - 7-slide Marp deck introducing feature-based architecture, layered versus slice-oriented structure, and the maintainability benefits of localized change
   - Covers developer experience improvements, team collaboration, testing strategy, and the introductory CQRS relationship
