@@ -237,18 +237,14 @@ def process_markdown_links(text: str) -> str:
     return re.sub(pattern, replace_link, text)
 
 
-def apply_markdown_formatting(text_frame, line_text: str, paragraph=None) -> None:
+def apply_markdown_formatting(text_frame, line_text: str, paragraph=None, force_monospace: bool = False) -> None:
     """
-    Parse markdown bold and blockquote syntax and add formatted runs to the text frame paragraph.
-    Supports **bold text** syntax and > blockquote syntax.
+    Parse markdown inline formatting and blockquote syntax into PowerPoint runs.
+    Supports **bold**, *italic*, _italic_, ~~strikethrough~~, <u>underline</u>, and
+    inline code spans using backticks.
 
     Blockquote lines (starting with '> ') are rendered as italic text — PPTX has no
     native blockquote element so italic is the closest visual equivalent.
-
-    Example: "This is **bold text** and normal"
-    -> Run 1: "This is " (normal)
-    -> Run 2: "bold text" (bold)
-    -> Run 3: " and normal" (normal)
 
     Example: "> 'Programming hasn't changed'"
     -> Run 1: "'Programming hasn't changed'" (italic)
@@ -267,76 +263,92 @@ def apply_markdown_formatting(text_frame, line_text: str, paragraph=None) -> Non
         p = paragraph
         p.clear()
 
+    if force_monospace:
+        p_pr = p._p.get_or_add_pPr()
+        for child in list(p_pr):
+            if child.tag.endswith("}buNone") or child.tag.endswith("}buChar") or child.tag.endswith("}buAutoNum"):
+                p_pr.remove(child)
+        p_pr.insert(0, OxmlElement("a:buNone"))
+
+        run = p.add_run()
+        run.text = line_text
+        run.font.name = "Consolas"
+        return
+
     # Handle blockquote lines: render as italic, strip the '> ' prefix
     is_blockquote = line_text.startswith("> ")
     if is_blockquote:
         line_text = line_text[2:]
 
-    # Pattern to match **bold text**
-    # Using non-greedy matching to handle multiple bold sections on one line
-    pattern = r'\*\*([^\*]+)\*\*'
-
-    # Find all bold sections
-    bold_sections = []
-    for match in re.finditer(pattern, line_text):
-        bold_sections.append((match.start(), match.end(), match.group(1)))
-
-    # If no bold sections, just add the text as-is (with italic if blockquote)
-    if not bold_sections:
-        if line_text.startswith("- "):
-            p.text = line_text[2:]
-            p.level = 0
-            set_bullet_visibility(p, True)
-        else:
-            p.text = line_text
-            set_bullet_visibility(p, False)
-        if is_blockquote:
-            for run in p.runs:
-                run.font.italic = True
-            # If text was set directly (no runs), we need to use a run
-            if not p.runs:
-                p.clear()
-                run = p.add_run()
-                run.text = line_text
-                run.font.italic = True
-        return
-
-    # Build the line with formatting
-    if line_text.startswith("- "):
-        # Remove bullet prefix, it will be added by paragraph level
-        line_text = line_text[2:]
+    # Support task list markers: - [ ] item, - [x] item
+    task_match = re.match(r"^\s*[-*+]\s+\[([ xX])\]\s+(.*)$", line_text)
+    if task_match:
+        checked = task_match.group(1).lower() == "x"
+        line_text = f"[{'x' if checked else ' '}] {task_match.group(2)}"
+        set_bullet_visibility(p, False)
+    # Support ordered list markers: 1. item
+    elif re.match(r"^\s*\d+\.\s+", line_text):
+        set_bullet_visibility(p, False)
+    # Support unordered list markers -, *, +
+    bullet_match = re.match(r"^\s*([-*+])\s+(.*)$", line_text)
+    if bullet_match and not task_match:
+        line_text = bullet_match.group(2)
         p.level = 0
         set_bullet_visibility(p, True)
-        # Adjust positions for removed "- "
-        bold_sections = [(start - 2, end - 2, text) for start, end, text in bold_sections]
-    else:
+    elif not task_match and not re.match(r"^\s*\d+\.\s+", line_text):
         set_bullet_visibility(p, False)
 
-    # Add runs with proper formatting
+    token_pattern = re.compile(r"(<u>[^<]+</u>|\*\*[^*]+\*\*|~~[^~]+~~|`[^`\n]+`|\*[^*\n]+\*|_[^_\n]+_)")
+    segments = []
     last_pos = 0
-    for start, end, bold_text in bold_sections:
-        # Add normal text before this bold section
-        if start > last_pos:
-            run = p.add_run()
-            run.text = line_text[last_pos:start]
-            if is_blockquote:
-                run.font.italic = True
+    for match in token_pattern.finditer(line_text):
+        if match.start() > last_pos:
+            segments.append((line_text[last_pos:match.start()], False, False, False, False, False))
 
-        # Add bold text
-        run = p.add_run()
-        run.text = bold_text
-        run.font.bold = True
-        if is_blockquote:
-            run.font.italic = True
+        token = match.group(0)
+        is_bold = token.startswith("**") and token.endswith("**")
+        is_strike = token.startswith("~~") and token.endswith("~~")
+        is_underline = token.startswith("<u>") and token.endswith("</u>")
+        is_code = token.startswith("`") and token.endswith("`")
+        is_italic = (
+            (token.startswith("*") and token.endswith("*") and not is_bold)
+            or (token.startswith("_") and token.endswith("_") and not (token.startswith("__") and token.endswith("__")))
+        )
 
-        last_pos = end
+        if is_bold:
+            inner = token[2:-2]
+        elif is_strike:
+            inner = token[2:-2]
+        elif is_underline:
+            inner = token[3:-4]
+        elif is_code:
+            inner = token[1:-1]
+        elif is_italic:
+            inner = token[1:-1]
+        else:
+            inner = token
 
-    # Add any remaining normal text after the last bold section
+        segments.append((inner, is_bold, is_italic, is_underline, is_strike, is_code))
+        last_pos = match.end()
+
     if last_pos < len(line_text):
+        segments.append((line_text[last_pos:], False, False, False, False, False))
+
+    if not segments:
+        segments = [(line_text, False, False, False, False, False)]
+
+    for seg_text, seg_bold, seg_italic, seg_underline, seg_strike, seg_code in segments:
         run = p.add_run()
-        run.text = line_text[last_pos:]
-        if is_blockquote:
-            run.font.italic = True
+        run.text = seg_text
+        run.font.bold = seg_bold
+        run.font.italic = seg_italic or is_blockquote
+        run.font.underline = seg_underline
+        run.font.strike = seg_strike
+        if seg_strike:
+            # Ensure reliable strike rendering across PowerPoint clients.
+            run._r.get_or_add_rPr().set("strike", "sngStrike")
+        if seg_code:
+            run.font.name = "Consolas"
 
 
 def contains_markdown_table(body: str) -> bool:
@@ -444,14 +456,62 @@ def populate_text_placeholder(shape, body: str) -> None:
     tf.clear()
     lines = body.splitlines()
     if lines:
-        apply_markdown_formatting(tf, lines[0], paragraph=tf.paragraphs[0])
+        fence_pattern = re.compile(r"^(`{3,}|~{3,})")
+        in_code_fence = False
+
+        def add_line(line: str, paragraph=None) -> None:
+            nonlocal in_code_fence
+            stripped = line.strip()
+            fence_match = fence_pattern.match(stripped)
+            if fence_match:
+                if not in_code_fence:
+                    # Opening fence — suppress backticks and language label.
+                    in_code_fence = True
+                else:
+                    # Closing fence — skip rendering entirely
+                    in_code_fence = False
+            else:
+                apply_markdown_formatting(tf, line, paragraph=paragraph, force_monospace=in_code_fence)
+
+        add_line(lines[0], paragraph=tf.paragraphs[0])
         for line in lines[1:]:
-            apply_markdown_formatting(tf, line)
+            add_line(line)
     tf.margin_top = Inches(0.05)
     tf.margin_bottom = Inches(0.05)
     tf.margin_left = Inches(0.1)
     tf.margin_right = Inches(0.1)
+
+    # Save run-level font overrides before finalize_text_frame overwrites them
+    # via fit_text(font_family="Arial"), which normalises every run to Arial.
+    font_overrides: dict[tuple[int, int], str] = {}
+    for pi, para in enumerate(tf.paragraphs):
+        for ri, run in enumerate(para.runs):
+            if run.font.name is not None:
+                font_overrides[(pi, ri)] = run.font.name
+
+    def restore_font_overrides() -> None:
+        for pi, para in enumerate(tf.paragraphs):
+            for ri, run in enumerate(para.runs):
+                if (pi, ri) in font_overrides:
+                    run.font.name = font_overrides[(pi, ri)]
+
+    # Pre-fit once so slides open already fitted without requiring manual
+    # toggle/reflow in PowerPoint. Use Consolas metrics when code runs exist
+    # because it is wider than Arial and gives a safer initial fit.
+    if font_overrides:
+        has_consolas = any(name.lower() == "consolas" for name in font_overrides.values())
+        prefit_family = "Consolas" if has_consolas else "Arial"
+        prefit_max_size = 18 if has_consolas else 28
+        try:
+            tf.fit_text(font_family=prefit_family, max_size=prefit_max_size)
+        except Exception:
+            pass
+        restore_font_overrides()
+
     finalize_text_frame(tf)
+
+    # Restore run-level font overrides (e.g. Consolas for code blocks/spans).
+    restore_font_overrides()
 
 
 def populate_paragraph_lines(text_frame, lines: list[str]) -> None:
@@ -470,12 +530,39 @@ def populate_paragraph_lines(text_frame, lines: list[str]) -> None:
 
 
 def finalize_text_frame(text_frame, max_size: int = 28) -> None:
-    """Force text fitting during generation instead of relying on PowerPoint refresh."""
+    """Configure text frame for live PowerPoint autofit behavior."""
     text_frame.word_wrap = True
-    try:
-        text_frame.fit_text(font_family="Arial", max_size=max_size)
-    except Exception:
-        text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+    # Keep native autofit enabled so Office computes sizing with the actual
+    # run fonts (e.g. Consolas in code blocks), not a precomputed Arial fit.
+    text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+
+    # Enforce OOXML autofit explicitly so template-level noAutofit/spAutoFit
+    # settings cannot override the desired behavior in PowerPoint.
+    body_pr = text_frame._txBody.bodyPr
+    for child in list(body_pr):
+        if child.tag.endswith("}noAutofit") or child.tag.endswith("}spAutoFit") or child.tag.endswith("}normAutofit"):
+            body_pr.remove(child)
+    body_pr.append(OxmlElement("a:normAutofit"))
+
+
+def enforce_autofit_in_presentation(prs: Presentation) -> None:
+    """Force autofit mode on every text frame in the presentation.
+
+    Some templates/layout placeholders can reintroduce noAutofit through
+    inheritance; this pass makes the final slide XML deterministic.
+    """
+    for slide in prs.slides:
+        for shape in slide.shapes:
+            if not getattr(shape, "has_text_frame", False):
+                continue
+            tf = shape.text_frame
+            tf.word_wrap = True
+            tf.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+            body_pr = tf._txBody.bodyPr
+            for child in list(body_pr):
+                if child.tag.endswith("}noAutofit") or child.tag.endswith("}spAutoFit") or child.tag.endswith("}normAutofit"):
+                    body_pr.remove(child)
+            body_pr.append(OxmlElement("a:normAutofit"))
 
 
 def style_table_medium_accent_4(table) -> None:
@@ -499,6 +586,16 @@ def style_table_medium_accent_4(table) -> None:
                 cell.fill.fore_color.brightness = 0.8 if row_index % 2 == 1 else 0.92
                 paragraph.font.bold = False
                 paragraph.font.color.theme_color = MSO_THEME_COLOR.TEXT_1
+
+
+def populate_table_cell_markdown(cell, text: str, font_size: int = 16) -> None:
+    """Populate a table cell using markdown inline formatting rules."""
+    tf = cell.text_frame
+    tf.clear()
+    apply_markdown_formatting(tf, text, paragraph=tf.paragraphs[0])
+    for paragraph in tf.paragraphs:
+        for run in paragraph.runs:
+            run.font.size = Pt(font_size)
 
 
 def split_two_column_body(body: str) -> tuple[str, str]:
@@ -690,8 +787,7 @@ def add_table_slide(prs: Presentation, title: str, table_data: list[list[str]], 
             for j, cell_value in enumerate(row_data):
                 if j < cols:  # Ensure we don't exceed column count
                     cell = table.cell(i, j)
-                    cell.text = cell_value
-                    cell.text_frame.paragraphs[0].font.size = Pt(16)
+                    populate_table_cell_markdown(cell, cell_value, font_size=16)
 
     if note:
         set_slide_notes(slide, note)
@@ -933,6 +1029,7 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
         if not deck_entries:
             print(f"  INFO: Section '{section_name}' is empty — only module list slide added")
 
+    enforce_autofit_in_presentation(prs)
     prs.save(output_path)
     print(f"✅ Saved: {output_path}")
 
