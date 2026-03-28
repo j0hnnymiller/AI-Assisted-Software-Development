@@ -148,6 +148,12 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes layering and precedence guidance for multi-level instruction governance
   - Provenance: [Chat log](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/summary.md)
 
+- **Hands-On with GitHub Copilot in Visual Studio 2026** ([`slides/marp/hands-on-with-github-copilot-visual-studio.deck.md`](slides/marp/hands-on-with-github-copilot-visual-studio.deck.md))
+  - 15-slide comprehensive Marp deck covering GitHub Copilot features exclusive to Visual Studio 2026 for enterprise .NET developers
+  - Includes installation, core features, VS-exclusive capabilities (doc comments, QuickInfo AI, Microsoft Learn integration, profiler agent), debugging integration, MCP support, feature comparison with VS Code, best practices, and hands-on lab exercises
+  - Detailed speaker notes provide demos, timing, troubleshooting, and teaching points for each slide
+  - Provenance: [Chat log](ai-logs/2026/03/27/vs2026-copilot-deck-20260327/conversation.md) | [Summary](ai-logs/2026/03/27/vs2026-copilot-deck-20260327/summary.md)
+
 - **Feature Flags and Test Suites** ([`slides/marp/feature-flags-and-test-suites.deck.md`](slides/marp/feature-flags-and-test-suites.deck.md))
   - Marp deck covering feature flags for work-in-progress, As-Is vs. To-Be test suites, safe deployment gates, and AI-assisted flag retirement
   - Includes speaker notes for delivery and operational guidance for CI pipeline separation
