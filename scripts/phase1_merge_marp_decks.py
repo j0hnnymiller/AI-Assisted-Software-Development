@@ -301,7 +301,7 @@ def merge_marp_decks(manifest_path: str, output_path: str):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        manifest_path = 'slides/aiasd-311-monday.yaml'
+        manifest_path = 'slides/manifests/aiasd-311-monday.yaml'
     else:
         manifest_path = sys.argv[1]
 

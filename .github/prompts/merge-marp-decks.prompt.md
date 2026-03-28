@@ -7,9 +7,9 @@ prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks, Validate Sources, and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 3.0.0
+  version: 3.1.0
   created: 2026-03-12
-  updated: 2026-03-21
+  updated: 2026-03-28
   output_path: slides/<manifest-stem>-draft.md
   output_format: markdown
   category: slides
@@ -32,7 +32,7 @@ prompt file to switch manifests.
 Preferred invocation format:
 
 ```
-Manifest: slides/aiasd-311-<day>.yaml
+Manifest: slides/manifests/aiasd-311-<day>.yaml
 ```
 
 Optional mode line:
@@ -44,13 +44,13 @@ Mode: validate-only
 Also accepted:
 
 ```text
-Use manifest slides/aiasd-311-tuesday.yaml
+Use manifest slides/manifests/aiasd-311-tuesday.yaml
 ```
 
 Also accepted for validation:
 
 ```text
-Validate only using manifest slides/aiasd-311-tuesday.yaml
+Validate only using manifest slides/manifests/aiasd-311-tuesday.yaml
 ```
 
 The manifest path is mandatory for every run. The agent must not assume a default manifest,
@@ -62,7 +62,7 @@ Resolve the manifest path from the invocation text using this order:
 
 1. A line starting with `Manifest:`
 2. A plain-language instruction of the form `Use manifest <path>`
-3. A single unambiguous repo-relative YAML path under `slides/`
+3. A single unambiguous repo-relative YAML path under `slides/manifests/`
 
 If none of the above yields exactly one manifest path, abort immediately.
 
@@ -85,10 +85,10 @@ If an explicit mode is provided but is not one of the supported values, abort im
 
 After resolving the manifest path, derive these runtime paths automatically:
 
-- `Merged deck path`: strip `.yaml` and append `-draft.md`
-  (e.g. `slides/aiasd-311-tuesday.yaml` → `slides/aiasd-311-tuesday-draft.md`)
+- `Merged deck path`: strip `.yaml`, get basename, prepend `slides/merged/` and append `-draft.md`
+  (e.g. `slides/manifests/aiasd-311-tuesday.yaml` → `slides/merged/aiasd-311-tuesday-draft.md`)
 - `PPTX output path`: strip `.yaml`, get basename, prepend `slides/output/` and append `-draft.pptx`
-  (e.g. `slides/aiasd-311-tuesday.yaml` → `slides/output/aiasd-311-tuesday-draft.pptx`)
+  (e.g. `slides/manifests/aiasd-311-tuesday.yaml` → `slides/output/aiasd-311-tuesday-draft.pptx`)
 
 Fixed path:
 
@@ -104,7 +104,7 @@ Front matter note:
 
 - `prompt_metadata.output_path` is a documentation pattern, not a fixed runtime destination.
 - The actual merged deck path must always be derived from the manifest path supplied in the invocation.
-- Example: `Manifest: slides/aiasd-311-tuesday.yaml` produces `slides/aiasd-311-tuesday-draft.md`.
+- Example: `Manifest: slides/manifests/aiasd-311-tuesday.yaml` produces `slides/merged/aiasd-311-tuesday-draft.md`.
 
 > **⚠️ IMPORTANT**: The merged deck path is a **generated artifact**. Do not manually edit it.
 > Never update, patch, salvage, or partially clean up an existing `*-draft.md` file.
@@ -125,14 +125,14 @@ Before doing any repository exploration or file generation, resolve and validate
 - If the manifest path does not exist, abort immediately.
 - If the manifest file cannot be parsed as YAML with a top-level `sections:` array, abort immediately.
 - Do not guess the manifest path.
-- Do not fall back to `slides/aiasd-311-monday.yaml` or any other file.
+- Do not fall back to `slides/manifests/aiasd-311-monday.yaml` or any other file.
 - Do not scan `slides/marp/` to assemble a deck without a manifest.
 
 Abort message format:
 
 ```text
 ERROR: Missing or invalid manifest path. Provide an explicit manifest path such as
-slides/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest.
+slides/manifests/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest.
 ```
 
 ## Execution Rule
@@ -215,7 +215,7 @@ Each section has a `name` and an optional `decks` list. Sections with no slide f
 
 Collect the complete list of unique source file paths from the manifest, then **validate
 each source file using a subagent**. Launch one subagent per source file — all subagents
-may run concurrently. Each subagent must read the file it is assigned and apply the six
+may run concurrently. Each subagent must read the file it is assigned and apply the five
 validation rules listed below, returning a structured result (file path, pass/fail per
 rule, and any warning messages).
 
@@ -226,11 +226,11 @@ If the manifest path is missing or invalid, Phase 0 must not start.
 For each source file, invoke a subagent with a prompt that instructs it to:
 
 1. Read the entire file content
-2. Apply the six validation rules below
+2. Apply the five validation rules below
 3. Extract the first `## H2` heading text from the body (after stripping front matter)
 4. Return a JSON-style result containing:
    - `file`: the source file path
-   - `rules`: an object with keys `1`–`6`, each `true` (pass) or `false` (fail)
+   - `rules`: an object with keys `1`–`5`, each `true` (pass) or `false` (fail)
    - `warnings`: a list of human-readable warning strings (empty if all rules pass)
    - `content`: the full file content (used by Phase 1 — avoids re-reading files)
    - `first_h2`: the text of the first `## H2` heading, or `null` if none found
@@ -246,11 +246,10 @@ For each source file, invoke a subagent with a prompt that instructs it to:
 | #   | Rule                      | Check                                                                 |
 | --- | ------------------------- | --------------------------------------------------------------------- |
 | 1   | **Front matter**          | File begins with a valid Marp YAML front-matter block (`---` … `---`) |
-| 2   | **No H1 in body**         | No `# H1` headings appear after the front-matter block                |
-| 3   | **H2 present**            | At least one `## H2` heading exists in the body                       |
-| 4   | **Image paths**           | No `../images/` references (must use the local `images/` prefix)      |
-| 5   | **No trailing separator** | File does not end with a bare `---` line                              |
-| 6   | **Encoding**              | No vertical-tab (`\x0b`) characters                                   |
+| 2   | **H2 present**            | At least one `## H2` heading exists in the body                       |
+| 3   | **Image paths**           | No `../images/` references (must use the local `images/` prefix)      |
+| 4   | **No trailing separator** | File does not end with a bare `---` line                              |
+| 5   | **Encoding**              | No vertical-tab (`\x0b`) characters                                   |
 
 ### Collecting results
 
@@ -357,7 +356,8 @@ Rules:
 
 #### Level-1 headings (`# H1`)
 
-- Strip **all** `# H1` headings from every source file
+- Each source file has exactly one `# H1` heading at the start of its body (the deck title)
+- Strip this `# H1` from every source file during merge
 - Also strip any immediately-following provenance lines like `_Merged from: ..._`
 
 #### Slide separators (`---`)

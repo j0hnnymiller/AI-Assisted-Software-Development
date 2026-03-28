@@ -73,8 +73,9 @@ slides/
 │   ├── images/                 # Images referenced by individual slides
 │   └── *.md
 ├── images/                     # Images referenced by the merged deck
+├── merged/                     # Merged Marp decks (generated artifacts)
+│   └── <course>-<format>-<day>-draft.md   # e.g. aiasd-311-monday-draft.md
 ├── output/                     # Generated artefacts (PPTX)
-└── <course>-<format>-<day>-draft.md   # Merged Marp output (e.g. aiasd-311-monday-draft.md)
 
 .github/copilot/Promptfiles/
 └── merge-marp-decks.prompt.md  # Pipeline entry point: Copilot agent prompt
@@ -90,7 +91,7 @@ in order, and within each section the ordered set of individual slide files to i
 ### 2.1 Location and naming
 
 ```
-slides/<course>-<format>-<day>.yaml      e.g.  slides/aiasd-311-monday.yaml
+slides/manifests/<course>-<format>-<day>.yaml      e.g.  slides/manifests/aiasd-311-monday.yaml
 ```
 
 ### 2.2 Format
@@ -136,7 +137,7 @@ continues.
 | Rule               | Requirement                                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | Front matter       | Must begin with a valid Marp YAML front-matter block (`---` … `---`)                                                           |
-| H1 headings        | No `# H1` headings in the body                                                                                                 |
+| H1 headings        | Exactly one `# H1` heading at the start of the body (deck title); no additional `# H1` headings elsewhere in the file          |
 | Slide title        | Should contain at least one `## H2` heading in the body so slide titles carry cleanly into the merged deck and PPTX output     |
 | Image paths        | Use `images/` because source decks sit beside `slides/marp/images/`; merged output rewrites those references to `marp/images/` |
 | Trailing separator | Must not end with a bare `---`                                                                                                 |
@@ -268,7 +269,7 @@ Each injected module list slide counts as 1 slide.
 This block repeats for every section. The merged deck begins with the first file's
 front matter and then the first section's block.
 
-> **⚠️ IMPORTANT**: The merged output file (e.g., `slides/aiasd-311-monday-draft.md`)
+> **⚠️ IMPORTANT**: The merged output file (e.g., `slides/merged/aiasd-311-monday-draft.md`)
 > is a **generated artifact**. Do not manually edit this file. All changes must be made
 > to individual source slide files in `slides/marp/` or to the manifest YAML
 > structure. Re-run `.github/copilot/Promptfiles/merge-marp-decks.prompt.md` to regenerate the deck.
@@ -426,11 +427,11 @@ The agent runs both commands, reports any missing-file warnings, and confirms
 
 Default values:
 
-| Variable       | Default                                     |
-| -------------- | ------------------------------------------- |
-| `$OUTPUT_FILE` | `slides/aiasd-311-monday-draft.md`          |
-| `$PPTX_SCRIPT` | `scripts/generate_pptx.py`                  |
-| `$PPTX_OUTPUT` | `slides/output/aiasd-311-monday-draft.pptx` |
+| Variable       | Default                                           |
+| -------------- | ------------------------------------------------- |
+| `$OUTPUT_FILE` | `slides/merged/aiasd-311-monday-draft.md`         |
+| `$PPTX_SCRIPT` | `scripts/generate_pptx.py`                        |
+| `$PPTX_OUTPUT` | `slides/output/aiasd-311-monday-draft.pptx`       |
 
 ---
 
@@ -455,13 +456,13 @@ Default values:
 │ 1. Author slides/marp/<topic>.md │
 │ - One topic per file │
 │ - Valid Marp front matter │
+│ - One `# H1` at the start (deck title); no trailing --- │
 │ - First ## H2 heading = slide title │
-│ - No H1 headings; no trailing --- │
 └─────────────────────────────┬────────────────────────────────┘
 │
 ▼
 ┌──────────────────────────────────────────────────────────────┐
-│ 2. Edit slides/aiasd-311-monday.yaml │
+│ 2. Edit slides/manifests/aiasd-311-monday.yaml │
 │ - List sections with names in course order │
 │ - List slide files under each section │
 └─────────────────────────────┬────────────────────────────────┘
@@ -474,7 +475,7 @@ Default values:
 │ a. Module list slide (all modules; current highlighted) │
 │ b. Content slides from source files (merged verbatim) │
 │ │
-│ → slides/aiasd-311-monday-draft.md │
+│ → slides/merged/aiasd-311-monday-draft.md │
 └─────────────────────────────┬────────────────────────────────┘
 │
 ▼

@@ -114,6 +114,7 @@ def detect_mermaid_cli() -> list[str] | None:
     if shutil.which("npx"):
         candidates.append(["npx", "-y", "@mermaid-js/mermaid-cli"])
 
+    import os
     for cmd in candidates:
         try:
             subprocess.run(
@@ -121,6 +122,7 @@ def detect_mermaid_cli() -> list[str] | None:
                 check=True,
                 capture_output=True,
                 text=True,
+                shell=(os.name == "nt")
             )
             return cmd
         except Exception:
@@ -169,8 +171,9 @@ def render_mermaid_png(
         str(height),
     ]
 
+    import os
     try:
-        subprocess.run(cmd, check=True, capture_output=True, text=True)
+        subprocess.run(cmd, check=True, capture_output=True, text=True, shell=(os.name == "nt"))
     except subprocess.CalledProcessError as exc:
         stderr = (exc.stderr or "").strip()
         print("  WARNING: Mermaid render failed; leaving Mermaid code block as text")
@@ -205,7 +208,7 @@ def extract_slide_title(file_path: Path) -> str:
     """Return the first ## H2 heading text, or the file stem as fallback."""
     ensure_markdown_slide_entry(file_path)
     try:
-        text = file_path.read_text(encoding="utf-8")
+        text = file_path.read_text(encoding="utf-8-sig")
     except FileNotFoundError:
         return file_path.stem
 
@@ -280,6 +283,8 @@ def split_marp_slides(md_content: str) -> list[str]:
     `---` lines that are NOT inside fenced code blocks.
     Returns a list of slide content strings (one per slide).
     """
+    if md_content.startswith('\ufeff'):
+        md_content = md_content[1:]
     lines = md_content.splitlines()
 
     # Strip YAML front matter. We can't just take the first closing `---`
@@ -287,7 +292,7 @@ def split_marp_slides(md_content: str) -> list[str]:
     # lines as plain scalar content.
     if lines and lines[0].strip() == "---":
         for end in range(1, len(lines)):
-            if lines[end] != "---":
+            if lines[end].strip() != "---":
                 continue
             front_matter = "\n".join(lines[1:end])
             try:
@@ -297,6 +302,12 @@ def split_marp_slides(md_content: str) -> list[str]:
             if isinstance(parsed, dict):
                 lines = lines[end + 1:]
                 break
+            else:
+                print(f"Warning: Front matter parsed to {type(parsed)}, expected dict.")
+                break
+        else:
+            print("Warning: Front matter stripping failed to find a valid closing ---.")
+            pass
 
     # Split on bare --- separators outside fenced code blocks
     slides: list[list[str]] = []
@@ -307,7 +318,7 @@ def split_marp_slides(md_content: str) -> list[str]:
     for line in lines:
         if fence_pat.match(line):
             in_fence = not in_fence
-        if line == "---" and not in_fence:
+        if line.strip() == "---" and not in_fence:
             slides.append(current)
             current = []
         else:
@@ -1209,7 +1220,7 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                 continue
 
             note = f"Source: {slide_path}"
-            md = slide_file.read_text(encoding="utf-8")
+            md = slide_file.read_text(encoding="utf-8-sig")
             slide_blocks = split_marp_slides(md)
             for block in slide_blocks:
                 title, body, bg_image, speaker_notes, slide_layout_name, inline_image_refs, title_is_h1, matter_of_fact_title = parse_slide(block)

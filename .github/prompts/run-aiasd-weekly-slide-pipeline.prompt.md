@@ -36,11 +36,11 @@ validation problems, they must report them instead of editing those inputs.
 
 Run the pipeline for exactly these manifests:
 
-1. `slides/aiasd-311-monday.yaml`
-2. `slides/aiasd-311-tuesday.yaml`
-3. `slides/aiasd-311-wednesday.yaml`
-4. `slides/aiasd-311-thursday.yaml`
-5. `slides/aiasd-311-friday.yaml`
+1. `slides/manifests/aiasd-311-monday.yaml`
+2. `slides/manifests/aiasd-311-tuesday.yaml`
+3. `slides/manifests/aiasd-311-wednesday.yaml`
+4. `slides/manifests/aiasd-311-thursday.yaml`
+5. `slides/manifests/aiasd-311-friday.yaml`
 
 ## Required Workflow
 
@@ -50,16 +50,16 @@ Run the pipeline for exactly these manifests:
    `.github/prompts/merge-marp-decks.prompt.md` with the exact invocation text:
 
    ```text
-   Manifest: slides/aiasd-311-<day>.yaml
+   Manifest: slides/manifests/aiasd-311-<day>.yaml
    ```
 
 4. Each subagent must run the full workflow for its assigned manifest:
-    - manifest validation
-    - Phase 0 source-file validation
-    - Phase 1 merged deck generation
-    - Phase 2 PPTX generation via `scripts/generate_pptx.py`
+   - manifest validation
+   - Phase 0 source-file validation
+   - Phase 1 merged deck generation
+   - Phase 2 PPTX generation via `scripts/generate_pptx.py`
 5. Do not serialize PPTX generation. Because each manifest runs in its own subagent, PPTX
-    creation must proceed in parallel with the other manifest runs.
+   creation must proceed in parallel with the other manifest runs.
 6. Do not edit `.github/prompts/merge-marp-decks.prompt.md`.
 7. Do not substitute a read-only explorer agent for the execution subagents.
 8. If one manifest fails, continue collecting results from the remaining subagents and report
@@ -74,7 +74,7 @@ Use this structure for each subagent, replacing only the manifest path:
 ```text
 Execute `.github/prompts/merge-marp-decks.prompt.md` for this exact invocation:
 
-Manifest: slides/aiasd-311-<day>.yaml
+Manifest: slides/manifests/aiasd-311-<day>.yaml
 
 Follow that prompt end-to-end. Create or overwrite the derived merged deck and PPTX outputs.
 Treat the manifest YAML file and all source slide files as read-only. Do not repair or rewrite
@@ -92,13 +92,13 @@ Return a concise status report with:
 
 ## Expected Outputs
 
-| Manifest                          | Merged Deck                           | PPTX Output                                    |
-| --------------------------------- | ------------------------------------- | ---------------------------------------------- |
-| `slides/aiasd-311-monday.yaml`    | `slides/aiasd-311-monday-draft.md`    | `slides/output/aiasd-311-monday-draft.pptx`    |
-| `slides/aiasd-311-tuesday.yaml`   | `slides/aiasd-311-tuesday-draft.md`   | `slides/output/aiasd-311-tuesday-draft.pptx`   |
-| `slides/aiasd-311-wednesday.yaml` | `slides/aiasd-311-wednesday-draft.md` | `slides/output/aiasd-311-wednesday-draft.pptx` |
-| `slides/aiasd-311-thursday.yaml`  | `slides/aiasd-311-thursday-draft.md`  | `slides/output/aiasd-311-thursday-draft.pptx`  |
-| `slides/aiasd-311-friday.yaml`    | `slides/aiasd-311-friday-draft.md`    | `slides/output/aiasd-311-friday-draft.pptx`    |
+| Manifest                                    | Merged Deck                                 | PPTX Output                                    |
+| ------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
+| `slides/manifests/aiasd-311-monday.yaml`    | `slides/merged/aiasd-311-monday-draft.md`    | `slides/output/aiasd-311-monday-draft.pptx`    |
+| `slides/manifests/aiasd-311-tuesday.yaml`   | `slides/merged/aiasd-311-tuesday-draft.md`   | `slides/output/aiasd-311-tuesday-draft.pptx`   |
+| `slides/manifests/aiasd-311-wednesday.yaml` | `slides/merged/aiasd-311-wednesday-draft.md` | `slides/output/aiasd-311-wednesday-draft.pptx` |
+| `slides/manifests/aiasd-311-thursday.yaml`  | `slides/merged/aiasd-311-thursday-draft.md`  | `slides/output/aiasd-311-thursday-draft.pptx`  |
+| `slides/manifests/aiasd-311-friday.yaml`    | `slides/merged/aiasd-311-friday-draft.md`    | `slides/output/aiasd-311-friday-draft.pptx`    |
 
 ## Final Response Format
 

@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Markdown Formatting Regression Test || Does This Bold Text Look Bold to You?
 
 ## Markdown Rendering Regression
@@ -191,7 +192,7 @@ for i in range(3):
 Fenced code block with shell commands:
 
 ```bash
-python .\scripts\generate_pptx.py .\slides\aiasd-311-monday.yaml .\slides\output\aiasd-311-monday-draft.pptx
+python .\scripts\generate_pptx.py .\slides\manifests\aiasd-311-monday.yaml .\slides\output\aiasd-311-monday-draft.pptx
 ```
 
 ::: notes
