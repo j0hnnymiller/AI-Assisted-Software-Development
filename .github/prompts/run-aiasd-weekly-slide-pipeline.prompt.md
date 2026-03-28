@@ -92,8 +92,8 @@ Return a concise status report with:
 
 ## Expected Outputs
 
-| Manifest                                    | Merged Deck                                 | PPTX Output                                    |
-| ------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
+| Manifest                                           | Merged Deck                                  | PPTX Output                                    |
+| -------------------------------------------------- | -------------------------------------------- | ---------------------------------------------- |
 | `slides/manifests/aiasd-311-monday.manifest.md`    | `slides/merged/aiasd-311-monday-draft.md`    | `slides/output/aiasd-311-monday-draft.pptx`    |
 | `slides/manifests/aiasd-311-tuesday.manifest.md`   | `slides/merged/aiasd-311-tuesday-draft.md`   | `slides/output/aiasd-311-tuesday-draft.pptx`   |
 | `slides/manifests/aiasd-311-wednesday.manifest.md` | `slides/merged/aiasd-311-wednesday-draft.md` | `slides/output/aiasd-311-wednesday-draft.pptx` |
