@@ -36,11 +36,11 @@ validation problems, they must report them instead of editing those inputs.
 
 Run the pipeline for exactly these manifests:
 
-1. `slides/manifests/aiasd-311-monday.yaml`
-2. `slides/manifests/aiasd-311-tuesday.yaml`
-3. `slides/manifests/aiasd-311-wednesday.yaml`
-4. `slides/manifests/aiasd-311-thursday.yaml`
-5. `slides/manifests/aiasd-311-friday.yaml`
+1. `slides/manifests/aiasd-311-monday.manifest.md`
+2. `slides/manifests/aiasd-311-tuesday.manifest.md`
+3. `slides/manifests/aiasd-311-wednesday.manifest.md`
+4. `slides/manifests/aiasd-311-thursday.manifest.md`
+5. `slides/manifests/aiasd-311-friday.manifest.md`
 
 ## Required Workflow
 
@@ -50,7 +50,7 @@ Run the pipeline for exactly these manifests:
    `.github/prompts/merge-marp-decks.prompt.md` with the exact invocation text:
 
    ```text
-   Manifest: slides/manifests/aiasd-311-<day>.yaml
+   Manifest: slides/manifests/aiasd-311-<day>.manifest.md
    ```
 
 4. Each subagent must run the full workflow for its assigned manifest:
@@ -64,7 +64,7 @@ Run the pipeline for exactly these manifests:
 7. Do not substitute a read-only explorer agent for the execution subagents.
 8. If one manifest fails, continue collecting results from the remaining subagents and report
    the failure alongside the successful runs.
-9. Do not modify any `slides/*.yaml` manifest or any file under `slides/marp/`.
+9. Do not modify any `slides/manifests/*.manifest.md` manifest or any file under `slides/marp/`.
 10. Report manifest issues and source-slide issues exactly as found; do not auto-correct them.
 
 ## Subagent Prompt Template
@@ -74,7 +74,7 @@ Use this structure for each subagent, replacing only the manifest path:
 ```text
 Execute `.github/prompts/merge-marp-decks.prompt.md` for this exact invocation:
 
-Manifest: slides/manifests/aiasd-311-<day>.yaml
+Manifest: slides/manifests/aiasd-311-<day>.manifest.md
 
 Follow that prompt end-to-end. Create or overwrite the derived merged deck and PPTX outputs.
 Treat the manifest YAML file and all source slide files as read-only. Do not repair or rewrite
@@ -94,11 +94,11 @@ Return a concise status report with:
 
 | Manifest                                    | Merged Deck                                 | PPTX Output                                    |
 | ------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
-| `slides/manifests/aiasd-311-monday.yaml`    | `slides/merged/aiasd-311-monday-draft.md`    | `slides/output/aiasd-311-monday-draft.pptx`    |
-| `slides/manifests/aiasd-311-tuesday.yaml`   | `slides/merged/aiasd-311-tuesday-draft.md`   | `slides/output/aiasd-311-tuesday-draft.pptx`   |
-| `slides/manifests/aiasd-311-wednesday.yaml` | `slides/merged/aiasd-311-wednesday-draft.md` | `slides/output/aiasd-311-wednesday-draft.pptx` |
-| `slides/manifests/aiasd-311-thursday.yaml`  | `slides/merged/aiasd-311-thursday-draft.md`  | `slides/output/aiasd-311-thursday-draft.pptx`  |
-| `slides/manifests/aiasd-311-friday.yaml`    | `slides/merged/aiasd-311-friday-draft.md`    | `slides/output/aiasd-311-friday-draft.pptx`    |
+| `slides/manifests/aiasd-311-monday.manifest.md`    | `slides/merged/aiasd-311-monday-draft.md`    | `slides/output/aiasd-311-monday-draft.pptx`    |
+| `slides/manifests/aiasd-311-tuesday.manifest.md`   | `slides/merged/aiasd-311-tuesday-draft.md`   | `slides/output/aiasd-311-tuesday-draft.pptx`   |
+| `slides/manifests/aiasd-311-wednesday.manifest.md` | `slides/merged/aiasd-311-wednesday-draft.md` | `slides/output/aiasd-311-wednesday-draft.pptx` |
+| `slides/manifests/aiasd-311-thursday.manifest.md`  | `slides/merged/aiasd-311-thursday-draft.md`  | `slides/output/aiasd-311-thursday-draft.pptx`  |
+| `slides/manifests/aiasd-311-friday.manifest.md`    | `slides/merged/aiasd-311-friday-draft.md`    | `slides/output/aiasd-311-friday-draft.pptx`    |
 
 ## Final Response Format
 

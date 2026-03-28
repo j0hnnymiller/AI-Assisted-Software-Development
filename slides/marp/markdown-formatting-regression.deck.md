@@ -1,4 +1,4 @@
-﻿---
+---
 ai_generated: true
 model: "openai/gpt-5.3-codex@2026-03-25"
 operator: "johnmillerATcodemag-com"
@@ -192,7 +192,7 @@ for i in range(3):
 Fenced code block with shell commands:
 
 ```bash
-python .\scripts\generate_pptx.py .\slides\manifests\aiasd-311-monday.yaml .\slides\output\aiasd-311-monday-draft.pptx
+python .\scripts\generate_pptx.py .\slides\manifests\aiasd-311-monday.manifest.md .\slides\output\aiasd-311-monday-draft.pptx
 ```
 
 ::: notes

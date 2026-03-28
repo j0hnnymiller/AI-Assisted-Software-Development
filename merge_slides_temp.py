@@ -2,7 +2,7 @@ import os
 
 import yaml
 
-manifest_path = r"c:\git\AIASD\AI-Assisted-Software-Development-Course\slides\manifests\aiasd-311-monday.ge.yaml"
+manifest_path = r"c:\git\AIASD\AI-Assisted-Software-Development-Course\slides\manifests\aiasd-311-monday.ge.manifest.md"
 base_dir = r"c:\git\AIASD\AI-Assisted-Software-Development-Course"
 
 with open(manifest_path, 'r', encoding='utf-8') as f:

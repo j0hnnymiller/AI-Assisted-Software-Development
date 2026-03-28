@@ -91,7 +91,7 @@ in order, and within each section the ordered set of individual slide files to i
 ### 2.1 Location and naming
 
 ```
-slides/manifests/<course>-<format>-<day>.yaml      e.g.  slides/manifests/aiasd-311-monday.yaml
+slides/manifests/<course>-<format>-<day>.manifest.md      e.g.  slides/manifests/aiasd-311-monday.manifest.md
 ```
 
 ### 2.2 Format
@@ -462,7 +462,7 @@ Default values:
 │
 ▼
 ┌──────────────────────────────────────────────────────────────┐
-│ 2. Edit slides/manifests/aiasd-311-monday.yaml │
+│ 2. Edit slides/manifests/aiasd-311-monday.manifest.md │
 │ - List sections with names in course order │
 │ - List slide files under each section │
 └─────────────────────────────┬────────────────────────────────┘
@@ -498,7 +498,7 @@ Default values:
 
 | Pattern                              | Example                       | Description                |
 | ------------------------------------ | ----------------------------- | -------------------------- |
-| `<course>-<format>-<day>.yaml`       | `aiasd-311-monday.yaml`       | Manifest file              |
+| `<course>-<format>-<day>.manifest.md`       | `aiasd-311-monday.manifest.md`       | Manifest file              |
 | `<course>-<format>-<day>-draft.md`   | `aiasd-311-monday-draft.md`   | Merged Marp deck           |
 | `generate_pptx.py`                   | `scripts/generate_pptx.py`    | Existing PPTX build script |
 | `<course>-<format>-<day>-draft.pptx` | `aiasd-311-monday-draft.pptx` | Editable PPTX output       |

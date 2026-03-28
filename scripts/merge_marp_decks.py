@@ -1,6 +1,6 @@
 """
 Phase 1 Merge Script - Generate complete merged markdown from manifest
-Reads slides/manifests/aiasd-311-monday.ge.yaml and merges all source files according to spec.
+Reads slides/manifests/aiasd-311-monday.ge.manifest.md and merges all source files according to spec.
 """
 import re
 from pathlib import Path
@@ -89,7 +89,7 @@ def merge_section(section_data, base_path, sections, is_first_section):
 
 def main():
     # Load manifest
-    manifest_path = Path("slides/manifests/aiasd-311-monday.ge.yaml")
+    manifest_path = Path("slides/manifests/aiasd-311-monday.ge.manifest.md")
     output_path = Path("slides/merged/aiasd-311-monday.ge-draft.md")
     base_path = Path("slides")
 

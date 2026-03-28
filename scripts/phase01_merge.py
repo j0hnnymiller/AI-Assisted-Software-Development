@@ -16,7 +16,7 @@ except ImportError:
     import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-YAML_FILE  = REPO_ROOT / "Slides" / "manifests" / "aiasd-311-monday.yaml"
+YAML_FILE  = REPO_ROOT / "Slides" / "manifests" / "aiasd-311-monday.manifest.md"
 OUTPUT_FILE = REPO_ROOT / "Slides" / "merged" / "aiasd-311-monday-draft.md"
 SEP = "\n\n---\n\n"
 MERGE_CHAR_REPLACEMENTS = {

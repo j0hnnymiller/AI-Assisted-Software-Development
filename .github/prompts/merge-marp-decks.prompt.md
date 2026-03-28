@@ -32,7 +32,7 @@ prompt file to switch manifests.
 Preferred invocation format:
 
 ```
-Manifest: slides/manifests/aiasd-311-<day>.yaml
+Manifest: slides/manifests/aiasd-311-<day>.manifest.md
 ```
 
 Optional mode line:
@@ -44,13 +44,13 @@ Mode: validate-only
 Also accepted:
 
 ```text
-Use manifest slides/manifests/aiasd-311-tuesday.yaml
+Use manifest slides/manifests/aiasd-311-tuesday.manifest.md
 ```
 
 Also accepted for validation:
 
 ```text
-Validate only using manifest slides/manifests/aiasd-311-tuesday.yaml
+Validate only using manifest slides/manifests/aiasd-311-tuesday.manifest.md
 ```
 
 The manifest path is mandatory for every run. The agent must not assume a default manifest,
@@ -86,9 +86,9 @@ If an explicit mode is provided but is not one of the supported values, abort im
 After resolving the manifest path, derive these runtime paths automatically:
 
 - `Merged deck path`: strip `.yaml`, get basename, prepend `slides/merged/` and append `-draft.md`
-  (e.g. `slides/manifests/aiasd-311-tuesday.yaml` → `slides/merged/aiasd-311-tuesday-draft.md`)
+  (e.g. `slides/manifests/aiasd-311-tuesday.manifest.md` → `slides/merged/aiasd-311-tuesday-draft.md`)
 - `PPTX output path`: strip `.yaml`, get basename, prepend `slides/output/` and append `-draft.pptx`
-  (e.g. `slides/manifests/aiasd-311-tuesday.yaml` → `slides/output/aiasd-311-tuesday-draft.pptx`)
+  (e.g. `slides/manifests/aiasd-311-tuesday.manifest.md` → `slides/output/aiasd-311-tuesday-draft.pptx`)
 
 Fixed path:
 
@@ -104,7 +104,7 @@ Front matter note:
 
 - `prompt_metadata.output_path` is a documentation pattern, not a fixed runtime destination.
 - The actual merged deck path must always be derived from the manifest path supplied in the invocation.
-- Example: `Manifest: slides/manifests/aiasd-311-tuesday.yaml` produces `slides/merged/aiasd-311-tuesday-draft.md`.
+- Example: `Manifest: slides/manifests/aiasd-311-tuesday.manifest.md` produces `slides/merged/aiasd-311-tuesday-draft.md`.
 
 > **⚠️ IMPORTANT**: The merged deck path is a **generated artifact**. Do not manually edit it.
 > Never update, patch, salvage, or partially clean up an existing `*-draft.md` file.
@@ -125,14 +125,14 @@ Before doing any repository exploration or file generation, resolve and validate
 - If the manifest path does not exist, abort immediately.
 - If the manifest file cannot be parsed as YAML with a top-level `sections:` array, abort immediately.
 - Do not guess the manifest path.
-- Do not fall back to `slides/manifests/aiasd-311-monday.yaml` or any other file.
+- Do not fall back to `slides/manifests/aiasd-311-monday.manifest.md` or any other file.
 - Do not scan `slides/marp/` to assemble a deck without a manifest.
 
 Abort message format:
 
 ```text
 ERROR: Missing or invalid manifest path. Provide an explicit manifest path such as
-slides/manifests/aiasd-311-tuesday.yaml. This prompt must not run without a valid manifest.
+slides/manifests/aiasd-311-tuesday.manifest.md. This prompt must not run without a valid manifest.
 ```
 
 ## Execution Rule

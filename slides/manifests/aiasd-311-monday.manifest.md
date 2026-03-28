@@ -43,7 +43,3 @@ sections:
       - slides\marp\core-instruction-files.deck.md
       - slides\marp\organizational-vs-repository-instruction-files.deck.md
       - slides\marp\exercise-technology-inventory-instructions.deck.md
-
-  - name: Markdown Rendering Test
-    decks:
-      - slides\marp\markdown-formatting-regression.deck.md
