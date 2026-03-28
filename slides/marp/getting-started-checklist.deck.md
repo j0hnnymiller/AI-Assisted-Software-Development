@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Getting Started Checklist || The Recipe Before the Meal
 
 ## High Level AI Assisted Workflow
 

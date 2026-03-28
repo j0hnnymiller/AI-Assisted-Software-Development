@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -69,6 +69,8 @@ total_duration: "00:04:43"
 ai_log: "ai-logs/2026/03/22/ai-implementation-workflow-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# AI Implementation Workflow || Don't Let the AI Drive Before You Check the Mirrors
+
 ## AI Implementation Workflow
 
 - Getting AI implementation proposals

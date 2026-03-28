@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.3-codex@unknown"
 operator: "johnmillerATcodemag-com"
@@ -23,6 +23,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Exercise: Technology Inventory and Instruction Generation || Exercise: Take Stock Before You Start Spending Tokens
 
 ## Exercise: Technology Inventory & Instruction Generation
 

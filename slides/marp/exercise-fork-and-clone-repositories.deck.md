@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.3-codex@unknown"
 operator: "johnmillerATcodemag-com"
@@ -76,6 +76,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Exercise: Fork and Clone Repositories || Exercise: Your First git clone of Many
 
 ## Exercise: Clone the AI-Assisted-Software-Development Repository
 
@@ -145,10 +146,10 @@ Activities
 5. Store the token in the `GITHUB_TOKEN` environment variable.
 
 ```bash
-# PowerShell
+# Exercise: Fork and Clone Repositories || Exercise: Your First git clone of Many
 $env:GITHUB_TOKEN = "<your-pat>"
 
-# Bash
+# Exercise: Fork and Clone Repositories || Exercise: Your First git clone of Many
 export GITHUB_TOKEN="<your-pat>"
 ```
 

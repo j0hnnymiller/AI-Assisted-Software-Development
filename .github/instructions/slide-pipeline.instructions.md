@@ -272,6 +272,9 @@ front matter and then the first section's block.
 > is a **generated artifact**. Do not manually edit this file. All changes must be made
 > to individual source slide files in `slides/marp/` or to the manifest YAML
 > structure. Re-run `.github/copilot/Promptfiles/merge-marp-decks.prompt.md` to regenerate the deck.
+> The generated draft markdown file is **replace-only**: never update it incrementally,
+> never patch specific sections, and never treat the previous draft contents as source material.
+> Every rerun must rebuild from manifest plus source decks and replace the entire `*-draft.md` file.
 
 ---
 
@@ -300,14 +303,16 @@ scripts/generate_pptx.py            (existing script invoked by the agent)
 
 ### 7.3 Slide layout mapping
 
-| Marp source                            | python-pptx layout used         |
-| -------------------------------------- | ------------------------------- |
-| `<!-- layout: Title Slide -->`         | Title Slide layout              |
-| `<!-- layout: Two Content -->` or body contains `::: column` | Two Column / Two Content layout |
-| `<!-- _class: lead -->` + `## heading` | Section Header layout           |
-| `<!-- _class: lead -->` + `# heading`  | Section Header layout           |
-| `## heading` + body bullets            | Title and Content layout        |
-| `## heading` (no body)                 | Title Only layout               |
+| Marp source                                                  | python-pptx layout used                                               |
+| ------------------------------------------------------------ | --------------------------------------------------------------------- |
+| `<!-- layout: Title Slide -->`                               | Title Slide layout                                                    |
+| `<!-- layout: Two Content -->` or body contains `::: column` | Two Column / Two Content layout                                       |
+| `<!-- _class: lead -->` + `## heading`                       | Section Header layout                                                 |
+| `<!-- _class: lead -->` + `# heading`                        | Section Header layout                                                 |
+| `# Matter of Fact \|\| Witty Title` + no body                | Centered Two Titles layout (matter-of-fact → Title, witty → Subtitle) |
+| `# heading` + no body (not first H1 in first deck)           | Section Header layout (Centered Title — auto-injected)                |
+| `## heading` + body bullets                                  | Title and Content layout                                              |
+| `## heading` (no body)                                       | Title Only layout                                                     |
 
 For `Two Content` slides, the body is split into left/right placeholders using one of these formats:
 
@@ -334,6 +339,37 @@ for idx, section in enumerate(sections_cfg):
 1. The first section in the PPTX starts with its first content slide (no "Course Modules" slide)
 2. Subsequent sections DO have the injected module list slide before their content
 3. ALL slides (including injected) have speaker notes
+
+### 7.4.3 Centered Title Slides for H1 Headings (🔒 CRITICAL)
+
+**REQUIRED BEHAVIOR**: Any slide block whose title is set from a bare `# H1` heading and has **no body content** and **no explicit layout directive** is automatically rendered as a **Centered Title** slide (Section Header layout) — **except** for the very first H1 encountered in the very first deck file in the manifest.
+
+**Rationale**: The `# H1` heading convention is used as the deck-cover/divider slide for each individual slide file. Rendering these with the Section Header layout gives a visually distinct centred title that signals a new topic. The first H1 in the first deck is preserved as-is so the opening slide of the entire presentation is not accidentally converted.
+
+**Implementation** in `generate_pptx.py`:
+
+```python
+# Tracking state (initialised before the section loop)
+first_h1_seen = False
+global_deck_idx = 0  # incremented once per processed deck file
+
+# Inside the slide-block loop
+if title_is_h1 and not body and not slide_layout_name:
+    if not first_h1_seen and is_first_deck:
+        first_h1_seen = True   # keep as-is
+    else:
+        first_h1_seen = True
+        add_centered_title_slide(prs, title, note=combined_note)
+        continue
+```
+
+**`is_first_deck`** is `True` only for `global_deck_idx == 0` (the first file listed in the first section).
+
+**Testing verification**: When testing modifications, confirm that:
+
+1. The first `# H1` slide in the first deck renders as a normal Title Only slide (not Section Header)
+2. All other `# H1`-only slide blocks across all decks render as centered Section Header slides
+3. `# H1` slides that also have body content or an explicit layout are NOT affected and continue to follow the usual layout selection logic
 
 ### 7.4.5 Markdown Formatting Support
 

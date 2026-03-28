@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Vibe Coding: Collaborative AI Development || One Keyboard, Many Opinions, One Calculator
 
 ## Collaborating on a Solution
 

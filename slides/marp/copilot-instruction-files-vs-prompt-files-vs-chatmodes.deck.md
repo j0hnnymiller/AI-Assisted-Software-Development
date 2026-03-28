@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Instruction Files vs. Prompt Files vs. Chat Modes || Three Flavors of Telling Your AI What to Do
 
 ## Purpose
 

@@ -1,8 +1,9 @@
----
+﻿---
 ai_generated: false
 operator: "johnmillerATcodemag-com"
 source: "johnmillerATcodemag-com"
 ---
+# The AI Revolution in Software Development || With Great Token Budget Comes Great Responsibility
 
 ## The AI Revolution?
 

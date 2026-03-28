@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.6"
 operator: "johnmillerATcodemag-com"
@@ -35,6 +35,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
+
 ## Forking the AIASD Brownfield Repository ### Getting Your Own Copy to Work With ::: notes
 Duration ~00:01 This slide introduces the concept of forking the AIASD Brownfield Example repository. Forking creates a personal copy of the repository under your GitHub account, allowing you to experiment and make changes without affecting the original. **Key Points**: - Forking is essential for hands-on practice
 - Creates an independent copy you can modify
@@ -66,7 +68,7 @@ Duration ~00:03 **Key Points**: - Most intuitive method for beginners
 5. Show the resulting forked repository **Common Issues**: - "I don't see the Fork button" - Check if you're logged into GitHub
 - "It says 'already forked'" - You already have a fork; use that one **Best Practice**: Recommend copying main branch only for cleaner starting point. **Transition**: "For those comfortable with the command line, here's the CLI approach."
 ::: --- ## Forking Via GitHub CLI ### Method 2: Command Line (gh CLI) ```bash
-# Fork the repository
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 gh repo fork j0hnnymiller/AIASD-Brownfield-Example # Fork and clone in one step
 gh repo fork j0hnnymiller/AIASD-Brownfield-Example --clone # Fork with a custom name
 gh repo fork j0hnnymiller/AIASD-Brownfield-Example \ --fork-name my-brownfield-example
@@ -83,15 +85,15 @@ Duration ~00:03 **Key Points**: - Faster for developers comfortable with CLI
 - Automatically configures remotes properly **Common Issues**: - "gh command not found" - Need to install GitHub CLI
 - "Authentication failed" - Run `gh auth login` **Transition**: "After forking, you need to clone your fork locally."
 ::: --- ## Cloning Your Fork ### Getting the Code on Your Machine ```bash
-# Clone your fork (if you didn't use --clone)
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git clone https://github.com/YOUR_USERNAME/AIASD-Brownfield-Example.git # Or use SSH
 git clone git@github.com:YOUR_USERNAME/AIASD-Brownfield-Example.git # Navigate into the directory
 cd AIASD-Brownfield-Example
 ``` **Verify your setup**: ```bash
-# Check remote configuration
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git remote -v # Should show:
-# origin https://github.com/YOUR_USERNAME/AIASD-Brownfield-Example.git (fetch)
-# origin https://github.com/YOUR_USERNAME/AIASD-Brownfield-Example.git (push)
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 ``` ::: notes
 Duration ~00:02 **Key Points**: - Clone creates a local working copy
 - Origin points to YOUR fork
@@ -103,11 +105,11 @@ Duration ~00:02 **Key Points**: - Clone creates a local working copy
 - Verify you can see the files locally **Common Issues**: - "Permission denied" - Authentication problem
 - "Repository not found" - Check the URL has YOUR username **Transition**: "Next, let's set up the connection to the original repository."
 ::: --- ## Setting Up Upstream Remote ### Staying Connected to the Original ```bash
-# Add the original repository as 'upstream'
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git remote add upstream https://github.com/j0hnnymiller/AIASD-Brownfield-Example.git # Verify both remotes are configured
 git remote -v # Should show:
-# origin https://github.com/YOUR_USERNAME/AIASD-Brownfield-Example.git
-# upstream https://github.com/j0hnnymiller/AIASD-Brownfield-Example.git
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 ``` **Why?** This lets you pull updates from the original repository while working in your fork. ::: notes
 Duration ~00:02 **Key Points**: - Upstream tracks the original repository
 - Origin tracks your fork
@@ -120,7 +122,7 @@ Duration ~00:02 **Key Points**: - Upstream tracks the original repository
 - `git push upstream` - Usually disabled (no permission) **Common Issues**: - "Upstream already exists" - Already configured, skip this step
 - Name confusion - Remind that these are just labels **Best Practice**: Always fetch from upstream before starting new work. **Transition**: "Now you're ready to work with the repository."
 ::: --- ## Your Fork Workflow ### Making Changes and Staying Updated ```bash
-# 1. Fetch latest changes from original
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git fetch upstream # 2. Merge upstream changes into your main
 git checkout main
 git merge upstream/main # 3. Create a feature branch for your work
@@ -144,7 +146,7 @@ upstream/main → your/main → feature-branch → commit → push → PR
 - After major updates announced **Common Issues**: - "Diverged branches" - Resolve conflicts carefully
 - "Push failed" - Might be pushing to wrong remote **Transition**: "Let's look at what to do when the original repository updates."
 ::: --- ## Syncing Your Fork with Updates ### Keeping Your Fork Current **When the original repository gets updates:** ```bash
-# Fetch all changes from upstream
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git fetch upstream # Switch to your main branch
 git checkout main # Merge upstream changes
 git merge upstream/main # Push updates to your fork on GitHub
@@ -210,7 +212,7 @@ Duration ~00:02 **Key Points**: - Second repository to fork
 4. **Optionally** rename (e.g., `my-aiasd-course`)
 5. **Choose** to copy the main branch only (recommended)
 6. **Click** "Create Fork" ✨ **Result**: Repository at `https://github.com/YOUR_USERNAME/AI-Assisted-Software-Development` **Or via GitHub CLI:** ```bash
-# Fork the repository
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 gh repo fork johnmillerATcodemag-com/AI-Assisted-Software-Development # Fork and clone in one step
 gh repo fork johnmillerATcodemag-com/AI-Assisted-Software-Development --clone
 ``` ::: notes
@@ -227,7 +229,7 @@ Duration ~00:02 **Key Points**: - Same forking process as brownfield
 - "Can I just use one?" - Each serves different role
 - "Why not just share access?" - Forking gives you control **Transition**: "Now let's clone and set up this repository."
 ::: --- ## Cloning and Setting Up Course Materials ### Getting the Repository Locally ```bash
-# Clone your fork (if you didn't use --clone)
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git clone https://github.com/YOUR_USERNAME/AI-Assisted-Software-Development.git # Or use SSH
 git clone git@github.com:YOUR_USERNAME/AI-Assisted-Software-Development.git # Navigate into the directory
 cd AI-Assisted-Software-Development # Add upstream remote
@@ -300,7 +302,7 @@ Duration ~00:02 **Key Points**: - This is a different workflow from forking
 - 20260323-AIASD = Shared repo (personal branches) **When to Use Each**: - Fork: Long-term projects, portfolio work
 - Clone + Branch: Team environments, courses, shared projects **Transition**: "Let's clone this repository and set up your personal workspace."
 ::: --- ## Cloning the 20260323-AIASD Repository ### Getting Started ```bash
-# Clone the repository
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git clone https://github.com/j0hnnymiller/20260323-aiasd.git # Navigate into the directory
 cd 20260323-aiasd # Check current branch
 git branch
@@ -308,10 +310,10 @@ git branch
 git clone git@github.com:j0hnnymiller/20260323-aiasd.git
 cd 20260323-aiasd
 ``` **Verify the clone:** ```bash
-# Check remote configuration
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git remote -v # Should show:
-# origin https://github.com/j0hnnymiller/20260323-aiasd.git (fetch)
-# origin https://github.com/j0hnnymiller/20260323-aiasd.git (push)
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 ``` ::: notes
 Duration ~00:02 **Key Points**: - Standard git clone operation
 - No forking needed for this repository
@@ -324,12 +326,12 @@ Duration ~00:02 **Key Points**: - Standard git clone operation
 - SSH: Requires SSH key setup but smoother for multiple operations **Common Issues**: - "Authentication failed": Need GitHub credentials or token
 - "Already exists": Directory name conflict, clone elsewhere or rename **Transition**: "Now let's create your personal branch."
 ::: --- ## Creating Your Personal Branch ### Setting Up Your Workspace **Create a branch with your name or identifier:** ```bash
-# Create and switch to your personal branch
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git checkout -b yourname-workspace # Example with actual name:
 git checkout -b john-miller-workspace # Or use a convention like firstname-lastname:
 git checkout -b jane-doe-workspace
 ``` **Verify your branch:** ```bash
-# Check current branch (should show your new branch with *)
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git branch # Or see current branch in prompt
 git status
 ``` ::: notes
@@ -347,14 +349,14 @@ Duration ~00:02 **Key Points**: - Each student creates their own named branch
 - Can be pushed for instructor review **Branch Strategy**: - One main personal branch for the session
 - Can create feature branches off your personal branch if needed **Transition**: "Let's push your branch and verify the setup."
 ::: --- ## Pushing Your Personal Branch ### Making Your Branch Available ```bash
-# Push your branch to the remote repository
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git push -u origin yourname-workspace # The -u flag sets up tracking
-# Future pushes can just be: git push
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 ``` **After pushing:** ```bash
-# Verify tracking is set up
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git branch -vv # Should show your branch tracking origin/yourname-workspace
 ``` **Create a test commit to verify access:** ```bash
-# Create a test file
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 echo "# My Workspace" > README-yourname.md
 git add README-yourname.md
 git commit -m "Initial workspace setup"
@@ -391,7 +393,7 @@ Duration ~00:02 **Key Points**: - Push creates your branch on the remote
 - ✅ Session-specific exercises
 - ✅ Instructor can review and provide feedback
 - ✅ Collaborative environment ```bash
-# Quick way to see which repo you're in:
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git remote get-url origin
 ``` ::: notes
 Duration ~00:02 **Key Points**: - Three different repositories, three different workflows
@@ -455,7 +457,7 @@ Duration ~00:02 **Key Points**: - Use these checklists to verify complete setup
 - Show of hands when all three repositories ready
 - Pair up students to help each other
 - Instructor circulates to help **Quick Verification Commands**: ```bash
-# For Brownfield:
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 cd AIASD-Brownfield-Example
 git remote -v
 git fetch upstream # For Course Materials:
@@ -505,7 +507,7 @@ Duration ~00:01 **Key Points**: - Setup is complete for all three repositories
 - Ensure everyone has all three repos ready
 - Verify everyone can push/pull **Transition**: "Let's explore what's inside these repositories."
 ::: --- ## Quick Reference: Repository Commands ### Command Cheat Sheet **Brownfield Fork Workflow:** ```bash
-# Fork via CLI
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 gh repo fork j0hnnymiller/AIASD-Brownfield-Example --clone # Or fork via web + clone manually
 git clone https://github.com/YOUR_USERNAME/AIASD-Brownfield-Example.git
 cd AIASD-Brownfield-Example # Add upstream remote
@@ -515,7 +517,7 @@ git checkout main
 git merge upstream/main
 git push origin main
 ``` **Course Materials Fork Workflow:** ```bash
-# Fork via CLI
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 gh repo fork johnmillerATcodemag-com/AI-Assisted-Software-Development --clone # Or fork via web + clone manually
 git clone https://github.com/YOUR_USERNAME/AI-Assisted-Software-Development.git
 cd AI-Assisted-Software-Development # Add upstream remote
@@ -525,7 +527,7 @@ git checkout main
 git merge upstream/main
 git push origin main
 ``` **20260323-AIASD Clone and Branch Workflow:** ```bash
-# Clone the repository
+# Forking and Cloning Course Repositories || Three Repos Walk Into a GitHub...
 git clone https://github.com/j0hnnymiller/20260323-aiasd.git
 cd 20260323-aiasd # Create and push your personal branch
 git checkout -b yourname-workspace

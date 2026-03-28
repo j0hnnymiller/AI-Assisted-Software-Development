@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -19,6 +19,7 @@ total_duration: "00:02:30"
 ai_log: "ai-logs/2026/03/22/understanding-legacy-code-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# Understanding Legacy Code || Legacy Code Deserves Respect, Not Fear
 
 ## What is Legacy Code
 

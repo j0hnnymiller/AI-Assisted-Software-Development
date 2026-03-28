@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -58,6 +58,7 @@ total_duration: "00:14:00"
 ai_log: "ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# Implementing Your First Vertical Slice || Slice One: Where Theory Meets git commit
 
 ## Vertical Slice Implementation
 

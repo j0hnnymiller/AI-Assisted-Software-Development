@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Controlling Copilot Instruction Files || Who's Allowed at the AI Dinner Table?
 
 ## Controlling GitHub Copilot Files
 

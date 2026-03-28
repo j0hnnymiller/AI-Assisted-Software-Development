@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -52,6 +52,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# GitHub Code Review with Copilot || The AI Reviewer Who Never Says "Looks Good to Me"
+
 <!-- _class: lead -->
 
 ## GitHub Code Review with Copilot

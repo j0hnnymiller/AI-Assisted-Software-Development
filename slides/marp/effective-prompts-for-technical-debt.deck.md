@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -111,6 +111,8 @@ total_duration: "00:12:00"
 ai_log: "ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# Effective Prompts for Technical Debt || The Art of Complaining Productively to Your AI
+
 ## Effective Prompts for Technical Debt
 
 Section 9 overview

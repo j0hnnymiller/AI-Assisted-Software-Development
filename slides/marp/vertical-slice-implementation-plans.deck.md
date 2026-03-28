@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@2026-03-21"
 operator: "johnmillerATcodemag-com"
@@ -78,6 +78,7 @@ size: 16:9
 title: "Creating Vertical Slice Implementation Plans"
 description: "Section 7 deck on slice planning guidance, AI-generated plans, and multi-model review."
 ---
+# Vertical Slice Implementation Plans || The Blueprint Before the Blueprint
 
 ## Creating Vertical Slice Implementation Plans
 

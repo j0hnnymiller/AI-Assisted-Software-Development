@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.5@2026-03-18"
 operator: "johnmillerATcodemag-com"
@@ -43,6 +43,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Code Explanation and Analysis || Ctrl+I: The "What Does This Even Do?" Button
+
 ## Understanding Unfamiliar Code with GitHub Copilot
 
 Section 10 · AI-Assisted Software Development

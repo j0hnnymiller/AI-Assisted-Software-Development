@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# AI Practitioner Resources || The AI Practitioner's Cheat Sheet
 
 ## AI Practitioner Resources
 

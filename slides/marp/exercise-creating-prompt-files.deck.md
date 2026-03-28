@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
@@ -15,6 +15,7 @@ total_duration: "00:10:00"
 ai_log: "ai-logs/2026/03/17/exercise-creating-prompt-files-refactor-2026-03-17/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# Exercise: Creating Prompt Files || Exercise: The Prompt Engineering Gauntlet
 
 marp: true
 theme: default

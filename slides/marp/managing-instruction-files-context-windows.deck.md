@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.3-codex@unknown"
 operator: "johnmillerATcodemag-com"
@@ -23,6 +23,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Managing Instruction Files and Context Windows || You Only Have So Many Tokens - Use Them Wisely
 
 ## Managing Instruction Files & Context Windows
 

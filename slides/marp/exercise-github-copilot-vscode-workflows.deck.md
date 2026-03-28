@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.3-codex@unknown"
 operator: "johnmillerATcodemag-com"
@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Lab: Getting Started with GitHub Copilot in VS Code || Lab: Your AI Copilot Reports for Duty
 
 ## Lab: Getting Started with GitHub Copilot
 

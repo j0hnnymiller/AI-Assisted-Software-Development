@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Instruction Files || The .editorconfig for Your AI's Soul
 
 ## Instruction Files
 

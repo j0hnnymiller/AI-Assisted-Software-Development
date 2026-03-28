@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.5@2026-03-18"
 operator: "johnmillerATcodemag-com"
@@ -22,7 +22,7 @@ marp: true
 theme: default
 paginate: true
 ---
-# AI-Assisted Output
+# AI-Assisted Output || The Compiler That Covers Its Tracks
 
 ## Provenance, Logging & Quality Standards
 
@@ -186,7 +186,7 @@ The ai-logs folder is the audit trail for all AI-assisted work. It must be creat
 ## Conversation Log Template
 
 ```markdown
-# AI Conversation Log
+# AI-Assisted Output || The Compiler That Covers Its Tracks
 
 - Chat ID: <chat-id>
 - Operator: <github-username>

@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# GitHub Copilot for Teams || Deploying AI Without Deploying Chaos
 
 ## GitHub Copilot for Teams
 

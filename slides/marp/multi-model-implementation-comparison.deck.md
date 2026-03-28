@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Multi-Model Implementation Comparison || Ask Three AIs, Get Four Opinions
 
 ## Multi-Model Implementation Comparison
 

@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -80,8 +80,9 @@ Duration ~00:10
 :::
 
 ---
+# Exercise: Addressing Technical Debt with Copilot || Exercise: Ask Copilot to Clean Your Room
 
-# **Exercise: Delegating Work to Copilot**
+# Exercise: Addressing Technical Debt with Copilot || Exercise: Ask Copilot to Clean Your Room
 
 15 minutes
 

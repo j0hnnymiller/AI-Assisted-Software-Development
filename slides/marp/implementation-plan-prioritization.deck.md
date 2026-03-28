@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "claude-sonnet-4.6@2026-03-21"
 operator: "johnmillerATcodemag-com"
@@ -25,6 +25,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Implementation Plan Prioritization || Security First: The Only Priority With No Exceptions
+
 ## Finding the Gaps: Common Security Findings
 
 When AI audits a brownfield codebase, these issues surface first:

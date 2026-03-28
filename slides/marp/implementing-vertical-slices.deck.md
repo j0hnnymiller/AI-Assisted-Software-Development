@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
@@ -18,6 +18,7 @@ total_duration: "00:20:00"
 ai_log: "ai-logs/2026/02/07/vertical-slices-slides-20260207/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# Implementing Vertical Slices || Stop Organizing Code by Type, Start by Intent
 
 ## Implementing Vertical Slices
 

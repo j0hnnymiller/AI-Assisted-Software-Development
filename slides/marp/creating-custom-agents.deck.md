@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
@@ -23,7 +23,7 @@ paginate: true
 title: "Creating Custom Agents"
 subtitle: "Specialized AI Assistants for Your Workflow"
 ---
-# Creating Custom Agents
+# Creating Custom Agents || Build the Robot That Does Your Bidding
 
 ## Specialized AI Assistants for Your Workflow
 

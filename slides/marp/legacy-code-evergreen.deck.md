@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -44,8 +44,7 @@ prompt: |
   :::
 
 ---
-
-
+# Legacy Code and Evergreen Development || The Code That Time Forgot (But Production Didn't)
 
   ## Codebases degrade over time
 
@@ -106,7 +105,7 @@ source: "johnmillerATcodemag-com"
 
 <!-- _class: lead -->
 
-# Legacy Code, Evergreen Code, and Respectful Change
+# Legacy Code and Evergreen Development || The Code That Time Forgot (But Production Didn't)
 
 ## Understanding how code ages and how teams respond
 

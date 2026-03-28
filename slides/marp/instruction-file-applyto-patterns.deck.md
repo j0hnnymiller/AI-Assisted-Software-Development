@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Instruction File applyTo Patterns || Glob Patterns: The Bouncer at Your AI's Door
 
 ## 🎯 Instruction File `applyTo` Patterns
 

@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.3-codex@2026-03-16"
 operator: "johnmillerATcodemag-com"
@@ -19,6 +19,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Exercise: Test-Driven Development with Copilot || Exercise: Write the Test First. Trust the Process.
 
 ## Exercise: Lab 3 - Test-Driven Development (TDD) with Copilot
 

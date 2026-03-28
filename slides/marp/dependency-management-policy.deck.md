@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.5@2026-03-18"
 operator: "johnmillerATcodemag-com"
@@ -22,7 +22,7 @@ marp: true
 theme: default
 paginate: true
 ---
-# Dependency Management Policy
+# Dependency Management Policy || npm install chaos --save-never
 
 ## Secure, Compliant, and Maintainable Dependencies
 
@@ -313,7 +313,7 @@ Supply chain attacks are now one of the top threat vectors — SolarWinds, XZ Ut
 
 **Dependabot Configuration**:
 ```yaml
-# .github/dependabot.yml
+# Dependency Management Policy || npm install chaos --save-never
 version: 2
 updates:
   - package-ecosystem: "npm"

@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4-5@unknown"
 operator: "johnmillerATcodemag-com"
@@ -24,6 +24,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Model Context Protocol Servers || Giving Your AI a USB Hub
 
 <!-- _class: lead -->
 
@@ -350,7 +351,7 @@ Transition: "Let's put this into practice."
 5. Reload VS Code and test with Copilot
 
 ```bash
-# Filesystem server quick start
+# Model Context Protocol Servers || Giving Your AI a USB Hub
 npm install -g @modelcontextprotocol/server-filesystem
 ```
 

@@ -107,12 +107,15 @@ Front matter note:
 - Example: `Manifest: slides/aiasd-311-tuesday.yaml` produces `slides/aiasd-311-tuesday-draft.md`.
 
 > **⚠️ IMPORTANT**: The merged deck path is a **generated artifact**. Do not manually edit it.
-> This pipeline is **output-only**: it may create or overwrite the derived merged deck path
+> Never update, patch, salvage, or partially clean up an existing `*-draft.md` file.
+> This pipeline is **output-only**: it may create or replace the derived merged deck path
 > and PPTX output path, but it must **never modify** source Marp slides in
 > `slides/marp/` or the manifest YAML file. If the manifest or any source slide
 > is invalid, missing, malformed, or inconsistent with this prompt, report the issue and
 > continue where the prompt allows. Do not auto-fix, normalize, rewrite, rename, or replace
 > manifest entries or source slide files as part of this run.
+> If a draft markdown file already exists, regenerate from the manifest and replace the
+> entire file contents in one write. Never preserve any portion of the previous draft.
 
 ## Manifest Requirement
 
@@ -161,6 +164,11 @@ When mode is `validate-only`:
 > **⚠️ CRITICAL (cloud compatibility)**: Output files (merged deck path and PPTX output path) may
 > already exist from a previous run. **Always overwrite** — never create a new file with a
 > modified name or leave the old content in place.
+>
+> **Draft markdown rule**: The merged deck path is **replace-only**. Never update it in place,
+> never apply targeted fixes to selected sections, and never use the existing draft content as
+> merge input. Build the new merged markdown fully in memory from the manifest and source decks,
+> then replace the entire file.
 >
 > - If the file **does not exist**: create it.
 > - If the file **already exists**: replace its entire content using the `edit` tool
@@ -287,6 +295,7 @@ Run Phase 1 only in `full` mode. Skip it entirely in `validate-only` mode.
 - **Exists**: overwrite its entire contents using the `edit` tool (full replacement).
 - **Does not exist**: create it with the `create` tool.
 - Never rename or append a suffix to the file. The output path is fixed.
+- Never patch, repair, or selectively edit an existing draft markdown file. Replace it as a whole.
 
 The manifest is the sole source of truth for slide selection and ordering. Never merge
 all files in `slides/marp/` unless every one of those files is explicitly

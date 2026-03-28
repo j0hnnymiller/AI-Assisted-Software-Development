@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -19,6 +19,7 @@ total_duration: "00:04:00"
 ai_log: "ai-logs/2026/03/22/feature-flags-test-suites-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# Feature Flags and Test Suites || Ship It Behind a Flag and Pretend It's Not There Yet
 
 ## Feature Flags & Test Suites
 

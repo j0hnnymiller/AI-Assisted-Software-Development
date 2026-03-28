@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.5@2026-03-18"
 operator: "johnmillerATcodemag-com"
@@ -22,7 +22,7 @@ marp: true
 theme: default
 paginate: true
 ---
-# GitHub CLI
+# GitHub CLI || The Terminal Never Lies
 
 ## Supercharge Your GitHub Workflow from the Terminal
 
@@ -49,10 +49,10 @@ Welcome to the GitHub CLI module. This session covers the `gh` command-line tool
 
 **Create Issues**:
 ```bash
-# Interactive
+# GitHub CLI || The Terminal Never Lies
 gh issue create
 
-# With options
+# GitHub CLI || The Terminal Never Lies
 gh issue create \
   --title "Bug: App crashes on startup" \
   --body "Description here" \
@@ -230,10 +230,10 @@ gh pr comment $PR_NUMBER --body "✅ Deployed to staging: $STAGING_URL"
 
 **VS Code Integration**:
 ```bash
-# Clone and open in VS Code in one step
+# GitHub CLI || The Terminal Never Lies
 gh repo clone owner/repo && cd repo && code .
 
-# Create PR from the VS Code terminal
+# GitHub CLI || The Terminal Never Lies
 gh pr create --web
 ```
 

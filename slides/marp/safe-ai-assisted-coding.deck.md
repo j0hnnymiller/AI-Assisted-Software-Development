@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -18,6 +18,7 @@ total_duration: "00:07:00"
 ai_log: "ai-logs/2026/03/14/safe-ai-assisted-coding-20260314/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# Safe AI-Assisted Coding || AI Goes Faster. Tests Make Sure It Goes Somewhere Good.
 
 ## Safe AI-Assisted Coding
 

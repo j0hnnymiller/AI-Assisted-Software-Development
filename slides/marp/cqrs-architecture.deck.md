@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.5@2026-03-18"
 operator: "johnmillerATcodemag-com"
@@ -22,6 +22,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# CQRS Architecture || Reads and Writes: Better Apart, Like Most Couples
 
 ## Command Query Responsibility Segregation Architecture
 

@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Exercise: Create and Use a Custom Skill || Exercise: Teach Your AI a New Trick
 
 ## Exercise: Create and Use a Custom Skill
 

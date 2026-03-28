@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
@@ -16,6 +16,7 @@ total_duration: "00:15:00"
 ai_log: "ai-logs/2026/02/07/marp-deck-wtbd-2026-02-07/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# What's the Big Deal About AI? || The More Things Change, the More They Still Compile
 
 <!-- _class: lead -->
 

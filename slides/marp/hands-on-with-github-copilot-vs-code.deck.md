@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Hands-On with GitHub Copilot in VS Code || Getting Your Pair Programmer to Stop Guessing
 
 ## Hands-On with GitHub Copilot
 

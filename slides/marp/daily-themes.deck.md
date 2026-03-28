@@ -1,8 +1,10 @@
----
+﻿---
 marp: true
 theme: default
 paginate: false
 ---
+# Course Daily Themes || Five Days. One AI. Zero Excuses.
+
 ## Daily Themes
 
 | Day       | Theme                                       |

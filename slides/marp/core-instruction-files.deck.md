@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Core Instruction Files || The Constitution of Your AI Republic
 
 <!-- layout: Two Content -->
 

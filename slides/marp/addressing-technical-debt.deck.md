@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Addressing Technical Debt with Copilot || Your Technical Debt Has an AI Payment Plan
 
 ## Addressing Technical Debt
 

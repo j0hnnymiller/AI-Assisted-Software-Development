@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
@@ -49,6 +49,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Exercise: Test Automation and Quality || Exercise: The Tests You Always Meant to Write
 
 ## Exercise: Strengthening Test Automation & Code Quality
 

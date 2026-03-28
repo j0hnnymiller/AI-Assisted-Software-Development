@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.6"
 operator: "johnmillerATcodemag-com"
@@ -18,6 +18,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Large Language Models || It's Not Magic. It's Calculus.
 
 ## What Is a Large Language Model?
 

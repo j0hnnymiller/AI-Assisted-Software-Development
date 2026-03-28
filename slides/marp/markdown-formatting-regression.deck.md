@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.3-codex@2026-03-25"
 operator: "johnmillerATcodemag-com"
@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Markdown Formatting Regression Test || Does This Bold Text Look Bold to You?
 
 ## Markdown Rendering Regression
 

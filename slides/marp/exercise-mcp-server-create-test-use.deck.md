@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.3-codex@2026-03-21"
 operator: "johnmillerATcodemag-com"
@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Exercise: Create, Test, and Use an MCP Server || Exercise: Build the Bridge Between Copilot and Everything Else
 
 ## Exercise: Create, Test, and Use a Local MCP Server
 

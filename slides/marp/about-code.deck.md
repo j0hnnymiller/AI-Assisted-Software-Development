@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# About CODE Magazine || Thirty Years and Still Compiling
 
 ## About CODE
 

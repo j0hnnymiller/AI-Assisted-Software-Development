@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -63,6 +63,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Pull Request Code Review || The Code Review That Doesn't Ghost You
+
 <!-- _class: lead -->
 
 ## Pull Request and Code Review

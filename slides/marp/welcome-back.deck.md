@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.6"
 operator: "johnmillerATcodemag-com"
@@ -17,6 +17,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Welcome Back || The Return of the Prompter
+
 ## Welcome Back to AI-Assisted Software Development
 
 - Ready to continue where we left off

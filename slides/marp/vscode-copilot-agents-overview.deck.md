@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
@@ -18,6 +18,7 @@ total_duration: "00:10:00"
 ai_log: "ai-logs/2026/02/06/vscode-agents-slides-20260206/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# VS Code Copilot Agents Overview || Agents: Copilot With a To-Do List
 
 ## VS Code Copilot Agents Overview
 

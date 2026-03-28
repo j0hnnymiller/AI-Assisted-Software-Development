@@ -1,9 +1,9 @@
----
+﻿---
 marp: true
 paginate: false
 ---
 
-# When to Use Each Copilot Instruction File Type
+# When to Use Each Copilot Instruction File Type || Right Tool, Right File, Right AI Behavior
 
 ## **Repo‑level `.md` files**
 - Apply **everywhere** in the repo

@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -67,6 +67,7 @@ total_duration: "00:12:00"
 ai_log: "ai-logs/2026/03/17/testing-in-production-20260317/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# Testing in Production || Testing in Production: Bravery or Strategy?
 
 ## Testing in Production
 

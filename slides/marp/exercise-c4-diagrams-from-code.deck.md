@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4-5@2025-02-19"
 operator: "johnmillerATcodemag-com"
@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Exercise: C4 Diagrams from Code || Exercise: Boxes, Arrows, and the Truth About Your Architecture
 
 ## Exercise: Generating C4 Diagrams from Code
 

@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -58,6 +58,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Technology Stack Instruction Files || Teaching Your AI the House Rules for Every Room
 
 <!-- _class: lead -->
 

@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@2026-03-21"
 operator: "johnmillerATcodemag-com"
@@ -82,6 +82,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Vertical Slicing Architecture Introduction || Features Go Vertical. Layers Go Home.
+
 ## Vertical Slicing Architecture Introduction
 
 ### Organizing software around features instead of layers

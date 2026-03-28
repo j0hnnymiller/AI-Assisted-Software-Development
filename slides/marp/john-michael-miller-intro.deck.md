@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Instructor Introduction || The Human Behind the AI Prompts
 
 ## John Michael Miller
 

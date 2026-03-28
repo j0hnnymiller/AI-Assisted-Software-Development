@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.6"
 operator: "johnmillerATcodemag-com"
@@ -21,6 +21,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# AI-Assisted Pull Request Workflows || Pull Requests That Actually Get Reviewed
 
 ## AI-Assisted GitHub Pull Requests
 
@@ -117,7 +118,7 @@ Duration ~00:03
 Getting great AI output starts with **good context**:
 
 ```markdown
-# Good PR Description Prompt Pattern
+# AI-Assisted Pull Request Workflows || Pull Requests That Actually Get Reviewed
 
 ## What changed
 
@@ -256,7 +257,7 @@ Duration ~00:03
 Integrate AI into your **CI/CD pipeline**:
 
 ```yaml
-# .github/workflows/pr-review.yml
+# AI-Assisted Pull Request Workflows || Pull Requests That Actually Get Reviewed
 - name: Copilot Code Review
   uses: github/copilot-code-review@v1
 

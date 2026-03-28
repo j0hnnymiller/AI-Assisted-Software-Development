@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Comparing AI Development Approaches || Know Thy Copilot: Context, Artifacts, and Agent Files
 
 ## What Are Custom Chat Modes?
 

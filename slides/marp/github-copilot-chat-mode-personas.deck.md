@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# GitHub Copilot Chat Mode Personas || One Copilot, Many Hats
 
 ## GitHub Copilot Chat Mode
 

@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -70,6 +70,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Implementation Prompts and Verification || The Prompt That Does the Implementation (With a Checklist)
+
 <!-- _class: lead -->
 
 ## Implementation Prompts and Verification

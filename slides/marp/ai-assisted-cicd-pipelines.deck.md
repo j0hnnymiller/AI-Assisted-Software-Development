@@ -1,4 +1,4 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
@@ -18,6 +18,7 @@ total_duration: "00:08:00"
 ai_log: "ai-logs/2026/03/14/ai-cicd-pipelines-20260314/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+# AI-Assisted CI/CD Pipelines || YAML: Now With 50% Less Soul-Crushing Manual Edits
 
 ## AI-Assisted CI/CD Pipelines
 
@@ -223,7 +224,7 @@ Maintenance is where AI pays long-term dividends. Demo: paste a failing workflow
 AI generates caller and callee in one prompt
 
 ```yaml
-# .github/workflows/reusable-test.yml
+# AI-Assisted CI/CD Pipelines || YAML: Now With 50% Less Soul-Crushing Manual Edits
 on:
   workflow_call:
     inputs:

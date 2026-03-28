@@ -34,7 +34,7 @@ sections:
 
   - name: Vertical Slice Implementation
     decks:
-      - slides\marp\implementing-vertical-slices.deck.md
+      - slides\marp\basic-vertical-slice-workflow.deck.md
 
   - name: Code Review with GitHub Copilot
     decks:

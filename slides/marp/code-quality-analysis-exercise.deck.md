@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.3-codex@2026-03-15"
 operator: "johnmillerATcodemag-com"
@@ -20,6 +20,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Code Quality Analysis Exercise || AI-Powered Code Shame Session
+
 ## Exercise: Code Quality Analysis
 
 Objectives

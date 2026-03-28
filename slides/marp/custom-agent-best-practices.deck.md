@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -42,6 +42,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# Custom Agent Best Practices || Your AI Agent Is Not a Swiss Army Knife
 
 ## Start Simple
 

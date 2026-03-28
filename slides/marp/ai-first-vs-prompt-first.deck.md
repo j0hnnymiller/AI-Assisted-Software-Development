@@ -1,9 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
-
+# AI-First vs. Prompt-First Development || Philosophy vs. Practice: The AI Developer's Identity Crisis
 
 AI-First vs. Prompt-First Development
 

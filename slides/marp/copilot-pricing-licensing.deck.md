@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.6"
 operator: "johnmillerATcodemag-com"
@@ -18,6 +18,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# GitHub Copilot Pricing and Licensing || How Much Does an AI Pair Programmer Cost?
 
 ### What you need to know for your organization
 

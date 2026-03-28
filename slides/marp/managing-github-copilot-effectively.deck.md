@@ -1,8 +1,9 @@
----
+﻿---
 marp: true
 theme: default
 paginate: true
 ---
+# Managing GitHub Copilot Effectively || Fast, Eager, and Sometimes Confidently Wrong
 
 ## Managing GitHub Copilot Effectively
 

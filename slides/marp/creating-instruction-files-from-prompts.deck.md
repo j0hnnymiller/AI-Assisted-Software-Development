@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -66,6 +66,8 @@ marp: true
 theme: default
 paginate: true
 ---
+# Creating Instruction Files from Prompts || The Prompt That Writes the Rules That Guide the Prompt
+
 ## Creating Instruction Files from Prompts
 
 - Run the prompt files from the prior exercise

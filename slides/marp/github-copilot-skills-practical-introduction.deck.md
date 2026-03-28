@@ -1,4 +1,4 @@
----
+﻿---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -25,6 +25,7 @@ marp: true
 theme: default
 paginate: true
 ---
+# GitHub Copilot Skills: A Practical Introduction || Skills: The API for Telling Copilot How to Think
 
 <!-- _class: lead -->
 
