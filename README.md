@@ -93,6 +93,16 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Notable Artifacts
 
+- **Slide Master Agent** ([`.github/agents/slide-master.agent.md`](.github/agents/slide-master.agent.md))
+  - Workspace custom agent specialized in PPTX files, PowerPoint templates, Marp pipelines, and Pandoc-adjacent slide workflows
+  - Routes slide automation through the `/merge-marp-decks` and `/finalize-pptx-local` prompt commands for repeatable merge, export, and local cleanup tasks
+  - Provenance: [Chat log](ai-logs/2026/03/28/slide-master-agent-20260328/conversation.md) | [Summary](ai-logs/2026/03/28/slide-master-agent-20260328/summary.md)
+
+- **Finalize PPTX Local Prompt** ([`.github/prompts/finalize-pptx-local.prompt.md`](.github/prompts/finalize-pptx-local.prompt.md))
+  - Prompt wrapper for `scripts/finalize_pptx_local.ps1` that finalizes a generated PPTX in place or to a separate output path using local PowerPoint COM automation
+  - Intended for post-export cleanup when overflowing text frames or table cells need shrink-to-fit handling before delivery
+  - Provenance: [Chat log](ai-logs/2026/03/28/slide-master-agent-20260328/conversation.md) | [Summary](ai-logs/2026/03/28/slide-master-agent-20260328/summary.md)
+
 - **Commit Workspace Changes in Logical Groups Prompt** ([`.github/prompts/commit-workspace-changes-logical-groups.prompt.md`](.github/prompts/commit-workspace-changes-logical-groups.prompt.md))
   - Reusable operational prompt that inspects workspace diffs, creates intent-based commit groupings, stages each group safely, and emits focused commit messages
   - Includes guardrails for non-destructive Git usage, staged-file validation steps, and a standardized completion report format

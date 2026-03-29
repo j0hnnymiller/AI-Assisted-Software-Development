@@ -1,13 +1,13 @@
 ---
 mode: agent
 model: "openai/gpt-5.4@unknown"
-tools: ["read", "search", "run_command"]
+toolsets: ["weekly-slide-pipeline"]
 description: Delegates the AIASD Monday-Friday slide pipeline to parallel subagents so each manifest is merged and exported to PPTX in one coordinated run.
 prompt_metadata:
   id: run-aiasd-weekly-slide-pipeline
   title: Run AIASD Weekly Slide Pipeline
   owner: johnmillerATcodemag-com
-  version: 1.1.0
+   version: 1.2.0
   created: 2026-03-21
   updated: 2026-03-21
   output_path: slides/output/aiasd-311-<day>-draft.pptx

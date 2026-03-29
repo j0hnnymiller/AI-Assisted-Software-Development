@@ -69,17 +69,28 @@ AI-driven run.
 
 ```
 slides/
-├── marp/          # Atomic per-topic slide files (one topic per .md)
+├── marp/          # Atomic per-topic slide files (one topic per .md) — EDITABLE
 │   ├── images/                 # Images referenced by individual slides
 │   └── *.md
 ├── images/                     # Images referenced by the merged deck
-├── merged/                     # Merged Marp decks (generated artifacts)
+├── merged/        # 🚫 GENERATED ARTIFACTS — DO NOT EDIT MANUALLY
 │   └── <course>-<format>-<day>-draft.md   # e.g. aiasd-311-monday-draft.md
-├── output/                     # Generated artefacts (PPTX)
+├── output/        # 🚫 GENERATED ARTIFACTS — DO NOT EDIT MANUALLY
+│   └── <course>-<format>-<day>-draft.pptx
+├── manifests/     # YAML configuration files — EDITABLE
+│   └── <course>-<format>-<day>.manifest.md
 
-.github/copilot/Promptfiles/
+.github/prompts/
 └── merge-marp-decks.prompt.md  # Pipeline entry point: Copilot agent prompt
 ```
+
+**🚫 CRITICAL — DO NOT EDIT MERGED FILES**:
+
+- `slides/merged/*.md` are **generated artifacts** — treat as **read-only outputs**
+- `slides/output/*.pptx` are **generated artifacts** — treat as **read-only outputs**
+- To fix issues: edit sources in `slides/marp/` or `slides/manifests/`, then regenerate
+- Never manually patch, update, or incrementally edit merged markdown files
+- The merge workflow is **replace-only** — it regenerates from sources every time
 
 ---
 
@@ -133,6 +144,9 @@ sections:
 Each `.md` file under `slides/marp/` must conform to these rules.
 The agent validates and reports violations, but does not abort — it logs a warning and
 continues.
+
+**Editable Files**: Only files in `slides/marp/` and `slides/manifests/` should be edited.
+**Generated Files**: Files in `slides/merged/` and `slides/output/` are generated artifacts — do not edit manually.
 
 | Rule               | Requirement                                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -219,7 +233,7 @@ After the injected module list slide, the source files for the section are merge
 | Transformation          | Rule                                                                                                 |
 | ----------------------- | ---------------------------------------------------------------------------------------------------- |
 | Front matter            | Kept from the **first file processed across all sections only**; stripped from every subsequent file |
-| H1 headings             | Removed; any immediately-following italicised provenance line (`_Merged from: …_`) is also removed   |
+| H1 headings             | **Preserved intact** (Phase 2 renders them as Section Header slides)                                 |
 | Image paths             | `images/` rewritten to `marp/images/`                                                                |
 | Trailing separator      | One trailing `---` (and surrounding blank lines) stripped from each file body                        |
 | Leading separator       | One leading `---` (and surrounding blank lines) stripped from each file body                         |
@@ -346,6 +360,8 @@ for idx, section in enumerate(sections_cfg):
 **REQUIRED BEHAVIOR**: Any slide block whose title is set from a bare `# H1` heading and has **no body content** and **no explicit layout directive** is automatically rendered as a **Centered Title** slide (Section Header layout) — **except** for the very first H1 encountered in the very first deck file in the manifest.
 
 **Rationale**: The `# H1` heading convention is used as the deck-cover/divider slide for each individual slide file. Rendering these with the Section Header layout gives a visually distinct centred title that signals a new topic. The first H1 in the first deck is preserved as-is so the opening slide of the entire presentation is not accidentally converted.
+
+**CHANGE (2026-03-29)**: Phase 1 now **preserves all H1 headings** in the merged markdown. They are no longer stripped during merge. Phase 2 receives the full H1 content and renders it according to the layout rules above.
 
 **Implementation** in `generate_pptx.py`:
 

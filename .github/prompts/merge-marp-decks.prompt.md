@@ -1,13 +1,15 @@
 ---
+name: merge-marp-decks
 mode: agent
 model: "anthropic/claude-sonnet-4-5@2025-02-19"
-tools: ["read", "create", "edit", "search", "run_command"]
+agent: slide-master
+toolsets: ["merge-marp-decks"]
 description: Merges Marp slide decks listed in a YAML file into a single Marp deck and generates a PPTX with named sections using python-pptx, or runs a validate-only pass on the manifest and source slides.
 prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks, Validate Sources, and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 3.1.0
+  version: 3.4.0
   created: 2026-03-12
   updated: 2026-03-28
   output_path: slides/<manifest-stem>-draft.md
@@ -106,14 +108,32 @@ Front matter note:
 - The actual merged deck path must always be derived from the manifest path supplied in the invocation.
 - Example: `Manifest: slides/manifests/aiasd-311-tuesday.manifest.md` produces `slides/merged/aiasd-311-tuesday-draft.md`.
 
-> **⚠️ IMPORTANT**: The merged deck path is a **generated artifact**. Do not manually edit it.
-> Never update, patch, salvage, or partially clean up an existing `*-draft.md` file.
-> This pipeline is **output-only**: it may create or replace the derived merged deck path
-> and PPTX output path, but it must **never modify** source Marp slides in
-> `slides/marp/` or the manifest YAML file. If the manifest or any source slide
-> is invalid, missing, malformed, or inconsistent with this prompt, report the issue and
-> continue where the prompt allows. Do not auto-fix, normalize, rewrite, rename, or replace
-> manifest entries or source slide files as part of this run.
+> **🚫 CRITICAL — DO NOT EDIT MERGED FILES**:
+>
+> **Files in `slides/merged/` are GENERATED ARTIFACTS. Manual editing is strictly PROHIBITED.**
+>
+> - **NEVER** open a merged markdown file and make targeted edits
+> - **NEVER** update, patch, salvage, or partially clean up an existing `*-draft.md` file
+> - **NEVER** use an existing merged file as input for the next merge
+> - **NEVER** treat merged files as "working drafts" that can be incrementally improved
+>
+> **If you need to fix something**:
+>
+> 1. Edit the SOURCE files in `slides/marp/` OR the manifest in `slides/manifests/`
+> 2. Re-run this prompt to regenerate the merged file completely
+> 3. The merged file will be replaced in its entirety
+>
+> **This pipeline is output-only**:
+>
+> - May CREATE or REPLACE files in `slides/merged/` and `slides/output/`
+> - Must NEVER MODIFY source Marp slides in `slides/marp/`
+> - Must NEVER MODIFY manifest YAML files in `slides/manifests/`
+>
+> If the manifest or any source slide is invalid, missing, malformed, or inconsistent
+> with this prompt, report the issue and continue where the prompt allows. Do not
+> auto-fix, normalize, rewrite, rename, or replace manifest entries or source slide
+> files as part of this run.
+>
 > If a draft markdown file already exists, regenerate from the manifest and replace the
 > entire file contents in one write. Never preserve any portion of the previous draft.
 
@@ -267,6 +287,30 @@ Also report any **manifest issues** discovered before subagent dispatch or while
 slide paths. Manifest issues are input problems, not output-generation tasks. Report them;
 do not repair them in-place.
 
+### Regression-only expected warnings
+
+Apply this subsection only when the manifest path is exactly:
+
+`slides/manifests/regression-phase1-phase2.manifest.md`
+
+For this regression harness, the following warnings are expected and should be reported
+as non-fatal:
+
+- Phase 0 warning: front matter YAML uses tab indentation in
+  `slides/marp/regression-phase12/phase12-02-h1-centered.deck.md`
+- Phase 0 warning: front matter YAML uses tab indentation in
+  `slides/marp/regression-phase12/phase12-03-layout-and-columns.deck.md`
+- Phase 0 warning: source ends with a bare `---` in
+  `slides/marp/regression-phase12/phase12-05-leading-trailing-separators.deck.md`
+- Phase 2 warning: unknown layout name fallback from
+  `<!-- layout: Definitely Not A Real Layout -->` in
+  `slides/marp/regression-phase12/phase12-03-layout-and-columns.deck.md`
+- Phase 2 warning: Mermaid CLI may be unavailable for
+  `slides/marp/regression-phase12/phase12-04-table-mermaid-background.deck.md`
+
+These warnings are intentionally part of regression coverage and must not block merge
+or PPTX generation when all other required checks pass.
+
 If mode is `validate-only`, stop here after printing the validation summary and issue report.
 Do not continue to merge or PPTX generation.
 
@@ -412,6 +456,84 @@ Report the count in the form: `Merged deck: N slide(s) across M section(s).`
 
 ---
 
+## Phase 1.5 — Validate Merged Markdown
+
+Run this phase only in `full` mode, immediately after Phase 1 writes the merged deck path
+and before Phase 2 starts.
+
+All checks in this phase are required.
+
+1. **Single front matter block at file top**
+
+- The merged deck path must contain exactly one YAML front matter block.
+- It must be the first block in the file.
+- No additional front matter blocks are allowed later in the body.
+
+2. **Front matter YAML parse succeeds**
+
+- Parse the merged front matter as YAML.
+- Fail validation if the YAML is malformed, uses illegal tab indentation, or has duplicate keys.
+
+3. **Separator integrity**
+
+- No leading bare `---` immediately after front matter.
+- No trailing bare `---` at end of file.
+- No consecutive separator runs that would create empty slides.
+
+4. **Fence balance**
+
+- Fenced code blocks must be balanced in the merged output.
+- This applies to both backtick fences and tilde fences.
+
+5. **Notes block balance**
+
+- Every `::: notes` block must be closed.
+- Notes blocks must not cross slide boundaries.
+
+6. **Slide block non-emptiness**
+
+- Every merged slide block must contain at least one meaningful element:
+  heading, text, image, notes, code, or table content.
+- Fully empty slide blocks are invalid.
+
+7. **Module slide correctness**
+
+- Every non-first section must contribute exactly one injected module list slide.
+- Module list bullets must match manifest section names in order.
+- Current-section marker must appear exactly once on each injected module slide.
+
+8. **Manifest-to-output traceability**
+
+- Every manifest deck entry must contribute one or more slide blocks in output order,
+  unless the section is intentionally empty.
+- Detect and report silently dropped deck entries.
+
+9. **Post-rewrite image path resolution**
+
+- For local image references rewritten to `marp/images/...`, verify target files exist.
+- Ignore remote URLs and data URIs for local existence checks.
+
+10. **H1 and provenance-strip correctness**
+
+- Confirm deck-title H1 lines are removed from merged body.
+- Confirm immediate `_Merged from: ..._` lines adjacent to stripped H1 are removed.
+- Do not remove non-adjacent or non-provenance body lines.
+
+11. **Duplicate slide block detection**
+
+- Detect accidental duplicate slide blocks introduced by join logic or stale output reuse.
+- Report duplicates with enough detail to locate source deck and slide block.
+
+12. **Deterministic output check**
+
+- Recompute merged output in memory from the same manifest inputs.
+- Result must be byte-identical to the written merged deck path.
+
+If any required check fails, stop before Phase 2 and report a merged-markdown validation failure
+summary with the failing check names and affected locations.
+
+---
+
 ## Phase 2 — Generate PPTX with Sections
 
 Run Phase 2 only in `full` mode. Skip it entirely in `validate-only` mode.
@@ -442,14 +564,43 @@ This ensures that markdown bold syntax in source slides (e.g., `slides/marp/*.de
 
 ### Execution
 
+### Preflight lock check (required)
+
+Before running `generate_pptx.py`, check whether a PowerPoint lock file exists for the
+target PPTX output path.
+
+Given `<pptx-output-path>` like:
+
+- `slides/output/aiasd-311-monday-draft.pptx`
+
+derive lock file path in the same directory with `~$` prepended to the filename:
+
+- `slides/output/~$aiasd-311-monday-draft.pptx`
+
+Rules:
+
+1. If the `~$` lock file exists, treat this as an active PowerPoint file lock.
+2. Report a blocker clearly and state that the PPTX is open in PowerPoint.
+3. Instruct to close PowerPoint or kill the PowerPoint process to release the lock.
+4. Do not run `generate_pptx.py` until the lock file is gone.
+
+Blocker message format:
+
+```text
+ERROR: PPTX output is locked by PowerPoint (lock file found): <lock-file-path>
+Close the deck in PowerPoint or kill POWERPNT.EXE to release the lock, then rerun.
+```
+
+After lock is cleared, continue with normal execution:
+
 ```bash
 pip install python-pptx pyyaml --quiet
-python scripts/generate_pptx.py <manifest-path> <pptx-output-path>
+python scripts/generate_pptx.py <merged-draft-path> <manifest-path> <pptx-output-path>
 ```
 
 Report any warnings (missing slide files) and confirm the output path on success.
 
-> **Agent verification (Issue 4)**: Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>`
+> **Agent verification (Issue 4)**: Run `python scripts/generate_pptx.py <merged-draft-path> <manifest-path> <pptx-output-path>`
 > and verify the PPTX is created at the PPTX output path.
 >
 > **Agent verification (Issue 5)**: Open the generated PPTX. For any source slide whose
@@ -505,3 +656,4 @@ Run all checks below after the pipeline completes to confirm spec conformance.
 | V6  | Empty section logged          | YAML section with no `decks:` entries                                    | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase  |
 | V7  | Slide count reported          | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                           |
 | V8  | Validate-only stays read-only | Run with `Mode: validate-only`                                           | Validation summary and issues are reported, and no merged deck or PPTX file is written   |
+| V9  | PPTX lock preflight           | Before `generate_pptx.py`, check for `~$<output-filename>.pptx`          | If lock file exists, run stops with lock error and does not execute PPTX generation      |
