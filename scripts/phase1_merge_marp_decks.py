@@ -11,9 +11,38 @@ from typing import Dict, List, Optional, Tuple
 
 import yaml
 
+# Character replacements for merge normalization
+# NOTE: Backtick replacement is handled specially to preserve code fences
 MERGE_CHAR_REPLACEMENTS = {
-    "`": "'",
+    # Backticks are handled by normalize_backticks() to preserve code fences
 }
+
+def normalize_backticks(body: str) -> str:
+    """
+    Replace single backticks with single quotes for inline code,
+    but preserve triple backticks and triple tildes for code fences.
+
+    This prevents breaking code fence markers (``` or ~~~) while still
+    normalizing problematic characters in inline content.
+    """
+    lines = body.split('\n')
+    result = []
+
+    for line in lines:
+        stripped = line.strip()
+        # Preserve lines that start with code fence markers
+        if stripped.startswith('```') or stripped.startswith('~~~'):
+            result.append(line)
+        else:
+            # Replace single backticks in non-fence lines
+            # Only replace standalone backticks, not those in groups of 3+
+            modified = line
+            # Replace single backticks that aren't part of triple backticks
+            # Use negative lookahead/lookbehind to avoid matching ``` sequences
+            modified = re.sub(r'(?<!`)`(?!`)', "'", modified)
+            result.append(modified)
+
+    return '\n'.join(result)
 
 
 def load_manifest(manifest_path: str) -> Dict:
@@ -51,38 +80,128 @@ def extract_first_h2(body: str) -> Optional[str]:
 
     return None
 
-def remove_h1_headings(body: str) -> str:
-    """Remove any # H1 headings and their provenance lines."""
+def remove_h1_headings(body: str, preserve_first_h1: bool = False) -> str:
+    """Remove any # H1 headings and their provenance lines.
+
+    Exception: Preserve H1s with || separator (Centered Two Titles layout directive),
+    but still strip any provenance lines that follow them.
+
+    Args:
+        body: The markdown body text
+        preserve_first_h1: If True, preserve the very first H1 encountered (for first deck in manifest)
+    """
     lines = body.split('\n')
     result = []
-    skip_next = False
+    i = 0
+    first_h1_seen = False
 
-    for i, line in enumerate(lines):
-        if skip_next:
-            skip_next = False
-            continue
+    while i < len(lines):
+        line = lines[i]
 
         # Check if this is an H1 heading
         if line.startswith('# ') and not line.startswith('## '):
-            # Check if next line is provenance (italic)
-            if i + 1 < len(lines) and lines[i + 1].strip().startswith('_Merged from:'):
-                skip_next = True
+            # Preserve first H1 if requested (first deck in manifest)
+            if preserve_first_h1 and not first_h1_seen:
+                first_h1_seen = True
+                result.append(line)
+                i += 1
+
+                # Still skip blank lines and provenance after preserved H1
+                while i < len(lines) and lines[i].strip() == '':
+                    i += 1
+
+                if i < len(lines) and lines[i].strip().startswith('_Merged from:'):
+                    i += 1
+                    # Skip blank lines after provenance
+                    while i < len(lines) and lines[i].strip() == '':
+                        i += 1
+
+                continue
+
+            # Preserve H1s with || separator (layout directive for Centered Two Titles)
+            if '||' in line:
+                result.append(line)
+                i += 1
+
+                # Still skip blank lines and provenance after preserved H1s
+                while i < len(lines) and lines[i].strip() == '':
+                    i += 1
+
+                if i < len(lines) and lines[i].strip().startswith('_Merged from:'):
+                    i += 1
+                    # Skip blank lines after provenance
+                    while i < len(lines) and lines[i].strip() == '':
+                        i += 1
+
+                continue
+
+            # Regular H1 - strip it and its provenance
+            i += 1
+
+            # Skip blank lines directly after the stripped H1.
+            while i < len(lines) and lines[i].strip() == '':
+                i += 1
+
+            # Strip immediately-adjacent provenance lines after H1.
+            if i < len(lines) and lines[i].strip().startswith('_Merged from:'):
+                i += 1
+
+                # Also skip one blank spacer after the provenance line.
+                while i < len(lines) and lines[i].strip() == '':
+                    i += 1
+
             continue
 
         result.append(line)
+        i += 1
 
     return '\n'.join(result)
 
-def clean_file_body(body: str) -> str:
+def remove_provenance_lines(body: str) -> str:
+    """Remove provenance lines (_Merged from: ..._) that appear after H1 headings.
+
+    These lines are metadata added during merge and should not appear in the final output.
+    They typically appear on the line following an H1 heading.
+    """
+    lines = body.split('\n')
+    result = []
+    i = 0
+
+    while i < len(lines):
+        line = lines[i]
+
+        # Check if this is a provenance line
+        if line.strip().startswith('_Merged from:') and line.strip().endswith('_'):
+            # Skip the provenance line
+            i += 1
+            # Skip any blank lines after provenance
+            while i < len(lines) and lines[i].strip() == '':
+                i += 1
+            continue
+
+        result.append(line)
+        i += 1
+
+    return '\n'.join(result)
+
+def clean_file_body(body: str, preserve_first_h1: bool = False) -> str:
     """
     Clean a file body according to merge rules:
-    - Remove H1 headings
+    - Keep H1 headings intact (changed: no longer stripping H1s)
+    - Remove provenance lines (_Merged from: ..._)
     - Rewrite source-local images/ references for merged deck output
     - Normalize merge-time character substitutions
     - Strip leading and trailing slide separators
+
+    Args:
+        body: The markdown body text
+        preserve_first_h1: DEPRECATED parameter (kept for API compatibility, no longer used)
     """
-    # Remove H1 headings
-    body = remove_h1_headings(body)
+    # NOTE: H1 headings are now preserved in merged markdown
+    # Phase 2 (generate_pptx.py) will render them as Section Header slides
+
+    # Remove provenance lines that appear after H1 headings
+    body = remove_provenance_lines(body)
 
     # Source decks keep images under slides/marp/images, but merged decks live in slides/.
     body = body.replace('](images/', '](marp/images/')
@@ -92,7 +211,18 @@ def clean_file_body(body: str) -> str:
     body = body.replace('url("images/', 'url("marp/images/')
     body = body.replace('url(images/', 'url(marp/images/')
 
-    # Normalize characters that render poorly or inconsistently after merge
+    # Rewrite legacy inline image markers used by older slide exports.
+    body = re.sub(
+        r'(!Slide\s+\d+\s+image:\s+)images/',
+        r'\1marp/images/',
+        body,
+        flags=re.IGNORECASE,
+    )
+
+    # Normalize backticks (preserving code fence markers)
+    body = normalize_backticks(body)
+
+    # Normalize other characters that render poorly or inconsistently after merge
     for source, target in MERGE_CHAR_REPLACEMENTS.items():
         body = body.replace(source, target)
 
@@ -191,6 +321,7 @@ def merge_marp_decks(manifest_path: str, output_path: str):
     merged_parts = []
     first_front_matter = None
     total_slide_count = 0
+    global_file_idx = 0  # Track if we're processing the very first file
 
     print(f"Processing {len(sections)} sections...")
 
@@ -237,12 +368,17 @@ def merge_marp_decks(manifest_path: str, output_path: str):
                 # Fallback to filename
                 slide_titles.append(Path(file_path).stem)
 
-            # Clean the body
-            cleaned_body = clean_file_body(body)
+            # Clean the body (preserve first H1 for very first file only)
+            is_first_file = (global_file_idx == 0)
+            cleaned_body = clean_file_body(body, preserve_first_h1=is_first_file)
+            global_file_idx += 1
 
             # Count slides in this file
             slide_count = count_slides_in_block(cleaned_body)
-            print(f"  {Path(file_path).name}: {slide_count} slides")
+            if is_first_file:
+                print(f"  {Path(file_path).name}: {slide_count} slides [FIRST FILE - H1 PRESERVED]")
+            else:
+                print(f"  {Path(file_path).name}: {slide_count} slides")
 
             file_contents.append(cleaned_body)
 

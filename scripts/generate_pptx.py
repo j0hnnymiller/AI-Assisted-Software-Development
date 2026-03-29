@@ -295,14 +295,20 @@ def split_marp_slides(md_content: str) -> list[str]:
             if lines[end].strip() != "---":
                 continue
             front_matter = "\n".join(lines[1:end])
+            parsed = None
             try:
                 parsed = yaml.safe_load(front_matter)
             except yaml.YAMLError:
-                continue
+                # Some source decks use tab-indented YAML; retry with tabs expanded.
+                try:
+                    parsed = yaml.safe_load(front_matter.expandtabs(2))
+                except yaml.YAMLError:
+                    parsed = None
+
             if isinstance(parsed, dict):
                 lines = lines[end + 1:]
                 break
-            else:
+            if parsed is not None:
                 print(f"Warning: Front matter parsed to {type(parsed)}, expected dict.")
                 break
         else:
@@ -538,8 +544,9 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str, list[s
     inline_images: list[str] = []
 
     # Pattern to match Marp background images: ![bg ...](path)
-    bg_pattern = re.compile(r'!\[bg[^\]]*\]\(([^)]+)\)')
+    bg_pattern = re.compile(r'!\[bg[^\]]*\]\(([^)]+)\)', re.IGNORECASE)
     inline_image_pattern = re.compile(r'^!\[[^\]]*\]\(([^)]+)\)$')
+    inline_image_anywhere_pattern = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
     legacy_image_marker_pattern = re.compile(r'^!Slide\s+\d+\s+image:\s+(.+)$', re.IGNORECASE)
     layout_pattern = re.compile(r'^<!--\s*layout\s*:\s*(.*?)\s*-->$', re.IGNORECASE)
 
@@ -568,6 +575,25 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str, list[s
                 match = inline_image_pattern.match(stripped)
                 if match:
                     inline_images.append(match.group(1).strip())
+            elif "![" in line:
+                # Support inline image tokens embedded in normal body text,
+                # e.g. "- Label: ![Alt](images/foo.jpg)".
+                extracted_any = False
+                for img_match in inline_image_anywhere_pattern.finditer(line):
+                    alt_text = (img_match.group(1) or "").strip()
+                    image_ref = img_match.group(2).strip()
+                    if alt_text.lower().startswith("bg"):
+                        # Background directive is handled separately and should
+                        # not be treated as an inline image.
+                        continue
+                    inline_images.append(image_ref)
+                    extracted_any = True
+
+                if extracted_any:
+                    cleaned_line = inline_image_anywhere_pattern.sub("", line)
+                    if cleaned_line.strip():
+                        body_lines.append(cleaned_line.rstrip())
+                    continue
             elif stripped.startswith("!Slide"):
                 match = legacy_image_marker_pattern.match(stripped)
                 if match:
@@ -1116,7 +1142,12 @@ def add_centered_two_titles_slide(prs: Presentation, title: str, subtitle: str, 
 
 def build_presentation(yaml_path: Path, output_path: Path) -> None:
     yaml_path = yaml_path.resolve()
-    repo_root = yaml_path.parent.parent
+    # Calculate repo_root: if manifest is in slides/manifests/, go up 3 levels
+    # If manifest is in slides/, go up 2 levels (backward compatible)
+    if yaml_path.parent.name == "manifests":
+        repo_root = yaml_path.parent.parent.parent
+    else:
+        repo_root = yaml_path.parent.parent
 
     with open(yaml_path, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
@@ -1281,10 +1312,12 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                         continue
 
                 # Resolve background image path relative to source deck first,
-                # then fall back to manifest folder and repo root.
+                # then fall back to deck parent, manifest folder, and repo root.
                 bg_image_path = None
                 if bg_image:
                     bg_image_path = (slide_file.parent / bg_image).resolve()
+                    if not bg_image_path.exists():
+                        bg_image_path = (slide_file.parent.parent / bg_image).resolve()
                     if not bg_image_path.exists():
                         bg_image_path = (yaml_path.parent / bg_image).resolve()
                     if not bg_image_path.exists():
@@ -1298,6 +1331,8 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                 inline_image_paths: list[str] = []
                 for image_ref in inline_image_refs:
                     image_path = (slide_file.parent / image_ref).resolve()
+                    if not image_path.exists():
+                        image_path = (slide_file.parent.parent / image_ref).resolve()
                     if not image_path.exists():
                         image_path = (yaml_path.parent / image_ref).resolve()
                     if not image_path.exists():
