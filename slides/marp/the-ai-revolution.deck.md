@@ -36,9 +36,9 @@ Key message: AI doesn't replace developers—it amplifies their capabilities
 ## AI-First & Prompt-First
 
 AI-First Development
-A software engineering philosophy where AI is embedded across the entire SDLC–requirements, design, implementation, testing, documentation, compliance, and maintenance.
+- A software engineering philosophy where AI is embedded across the entire SDLC–requirements, design, implementation, testing, documentation, compliance, and maintenance.
 Prompt-First Development
-A workflow pattern where prompts, instruction files, and chat modes are treated as first-class, version-controlled artifacts.
+- A workflow pattern where prompts, instruction files, and chat modes are treated as first-class, version-controlled artifacts.
 
 ::: notes
 AI-First is the broad philosophy. Prompt-First is the tactical layer that enables predictable AI behavior. You can do Prompt-First without being AI-First, but not the reverse.
@@ -64,15 +64,16 @@ This table is the heart of the comparison. AI-First is about organizational and 
 ## How They Treat Artifacts
 
 AI-First
-Requirements written with AI collaboration in mind
-AI-generated scaffolds, tests, docs
-Provenance enforced across all AI outputs
-Architecture assumes AI participation
+  - Requirements written with AI collaboration in mind
+  - AI-generated scaffolds, tests, docs
+  - Provenance enforced across all AI outputs
+  - Architecture assumes AI participation
+
 Prompt-First
-Prompts and instruction files are version-controlled
-Prompts define behavioral contracts
-Reusable prompt modules
-Chat modes define safe, predictable interactions
+  - Prompts and instruction files are version-controlled
+  - Prompts define behavioral contracts
+  - Reusable prompt modules
+  - Chat modes define safe, predictable interactions
 
 ::: notes
 AI-First changes what you build and how you build it. Prompt-First changes how you communicate intent to the AI.
@@ -99,25 +100,21 @@ This is the conceptual hierarchy. Prompt-First is necessary but not sufficient f
 Building software where AI is a core capability, not an add-on.
 
 **Why AI-First**
-
-- Software requirements are increasingly expressed in natural language.
-- AI copilots accelerate architecture, coding, testing, and documentation.
-- Teams shift from writing code to designing intent and validating outputs.
-
+  - Software requirements are increasingly expressed in natural language.
+  - AI copilots accelerate architecture, coding, testing, and documentation.
+  - Teams shift from writing code to designing intent and validating outputs.
 **Outcomes**
-
-- Faster iteration cycles
-- Better documentation and test coverage
+  - Faster iteration cycles
+  - Better documentation and test coverage
 
 ::: column
 
 **Core principles**
-
-- **Prompt-First Design** — workflows expressed as structured prompts
-- **AI-Native Architecture** — modular boundaries and deterministic interfaces
-- **Human-in-the-Loop** — review, validation, and traceability everywhere
-- **Continuous Verification** — tests, analysis, and guardrails on every output
-- **Lifecycle Governance** — versioning, provenance, and risk-based controls
+  - **Prompt-First Design** — workflows expressed as structured prompts
+  - **AI-Native Architecture** — modular boundaries and deterministic interfaces
+  - **Human-in-the-Loop** — review, validation, and traceability everywhere
+  - **Continuous Verification** — tests, analysis, and guardrails on every output
+  - **Lifecycle Governance** — versioning, provenance, and risk-based controls
 
 - Reduced cognitive load on developers
 - More resilient, adaptable systems
@@ -163,25 +160,22 @@ Outcomes
 Design the intent first — let AI generate the implementation.
 
 **Why Prompt-First**
-
-- Behaviors and constraints are expressed in structured natural language.
-- Prompts become first-class source-of-truth artifacts.
-- Teams shift from writing functions to defining outcomes, invariants, and interfaces.
+  - Behaviors and constraints are expressed in structured natural language.
+  - Prompts become first-class source-of-truth artifacts.
+  - Teams shift from writing functions to defining outcomes, invariants, and interfaces.
 
 **Benefits**
-
-- Faster iteration from idea to working software
-- Higher consistency across generated components
+  - Faster iteration from idea to working software
+  - Higher consistency across generated components
 
 ::: column
 
 **Core practices**
-
-- **Structured Prompts** — templates for features, APIs, data models, tests, and refactors
-- **Instruction Files** — persistent, versioned guidance for code generation
-- **Deterministic Boundaries** — clear contracts keep outputs predictable
-- **Validation Loops** — tests plus human review ensure correctness and safety
-- **Prompt Versioning** — track intent evolution just like code changes
+  - **Structured Prompts** — templates for features, APIs, data models, tests, and refactors
+  - **Instruction Files** — persistent, versioned guidance for code generation
+  - **Deterministic Boundaries** — clear contracts keep outputs predictable
+  - **Validation Loops** — tests plus human review ensure correctness and safety
+  - **Prompt Versioning** — track intent evolution just like code changes
 
 - Reduced cognitive load on developers
 - Better alignment between business intent and implementation
@@ -220,21 +214,19 @@ Benefits
 
 ---
 
-## **Concrete Examples**
+## Concrete Examples
 
 **Prompt-First Example**
-
-- Promptfile for generating unit tests
-- Instruction file for documentation
-- Chat mode for brownfield developers
+  - Promptfile for generating unit tests
+  - Instruction file for documentation
+  - Chat mode for brownfield developers
 
 **AI-First Example**
-
-- Requirements → AI-generated scaffolds
-- Code changes → AI-assisted reviews
-- Docs → continuously AI-generated
-- Modernization → AI-guided refactoring plans
-- Provenance → enforced everywhere
+  - Requirements → AI-generated scaffolds
+  - Code changes → AI-assisted reviews
+  - Docs → continuously AI-generated
+  - Modernization → AI-guided refactoring plans
+  - Provenance → enforced everywhere
 
 ::: notes
 Use these examples to help teams visualize the difference.
@@ -243,7 +235,7 @@ Prompt-First is about interfaces; AI-First is about the entire workflow.
 
 ---
 
-## **Shortest Summary**
+## Shortest Summary
 
 - **AI-First = philosophy + architecture + lifecycle integration**
 - **Prompt-First = structured, version-controlled interfaces for interacting with AI**

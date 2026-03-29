@@ -13,7 +13,7 @@ sections:
 
   - name: AI Assisted Software Development
     decks:
-      - slides\marp\whats-the-big-deal.deck.md
+      - slides\marp\whats-the-big-deal-short.deck.md
       - slides\marp\the-ai-revolution.deck.md
 
   - name: Intro to Copilot

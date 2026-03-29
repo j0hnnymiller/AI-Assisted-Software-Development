@@ -5,7 +5,7 @@ sections:
     decks:
       - slides\marp\welcome-back.deck.md
 
-  - name: AI Practitioner Resources Overview
+  - name: AI Practitioner Resources
     decks:
       - slides\marp\ai-practitioner-resources.deck.md
 

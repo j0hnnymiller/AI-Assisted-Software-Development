@@ -7,13 +7,13 @@ paginate: false
 
 ## Daily Themes
 
-| Day       | Theme                                       |
-| --------- | ------------------------------------------- |
-| Monday    | AI Guardrails, Instructions                 |
-| Tuesday   | AI Guardrails, Prompts                      |
-| Wednesday | AI Guardrails, Agents                       |
-| Thursday  | AI Assisted Brownfield Software Development |
-| Friday    | AI Assisted Greenfield Software Development |
+| Day       | Theme                                                                                  |
+| --------- | -------------------------------------------------------------------------------------- |
+| Monday    | AI Guardrails: Instructions, Copilot UI |
+| Tuesday   | AI Guardrails: Prompts, Copilot for Teams, Models and Context, LLMs |
+| Wednesday | AI Guardrails: Agents, Skills, Managing Context, Instructions vs Prompts vs Agents, Test Automation and Code Quality, MCP                       |
+| Thursday  | AI Assisted Brownfield SD: AI Implementation Workflow, Addressing Technical Debt, Building a Backlog, Multi-Implementation Comparison, AI Practitioner Resources |
+| Friday    | AI Assisted Greenfield SD: Specification Driven Software Development, Architecture Specification, Technology Specification, Implementation Specification, Implementation Planning, Implementation Prompts, Vertical Slice Implementation, Code Review with GitHub Copilot |
 
 ::: notes
 Duration ~00:03

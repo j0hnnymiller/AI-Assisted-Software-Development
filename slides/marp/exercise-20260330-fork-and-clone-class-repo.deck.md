@@ -31,12 +31,15 @@ prompt: |
 
   ---
 
-  ## Exercise: Fork the AIASD-20260209-BF Repo
+  ## Exercise: Fork the Class Repo
+
+repo: https://github.com/j0hnnymiller/20260330-aiasd-ge.git
 
   Objectives
     - Explore an unfamiliar codebase
+
   Activities
-    - Fork this repo https://github.com/j0hnnymiller/AIASD-20260209-BF.git
+    - Fork this repo
     - Clone the forked repo
     - Create a GitHub PAT https://github.com/settings/tokens
     - Store the PAT in the GITHUB_TOKEN environment variable
