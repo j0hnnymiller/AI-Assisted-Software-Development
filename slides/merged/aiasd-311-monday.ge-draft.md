@@ -1,4 +1,4 @@
-﻿---
+---
 marp: true
 theme: default
 paginate: true
@@ -58,7 +58,6 @@ style: |
     letter-spacing: 8px;
   }
 ---
-# Welcome to AI-Assisted Software Development
 
 <!-- layout: Title Slide -->
 
@@ -101,8 +100,6 @@ John Michael Miller is a Principal Software Engineer at CODE with over 15 years 
 ---
 
 <!-- layout: Centered Two Titles -->
-
-# Course Introductions || Hi, I'm a Developer Who Has Talked to a Robot
 
 ::: notes
 Duration ~00:01
@@ -154,8 +151,6 @@ Transition: "Great to meet everyone! Now let's talk about why we're all here..."
 
 ---
 
-# About CODE Magazine || Thirty Years and Still Compiling
-
 ## About CODE
 
 <img src="marp/images/CODE-30.jpg" style="width: 100%;" />
@@ -165,8 +160,6 @@ CODE is a custom software company, a staff augmentation company, CODE Magazine f
 :::
 
 ---
-
-# Course Daily Themes || Five Days. One AI. Zero Excuses.
 
 ## Daily Themes
 
@@ -198,7 +191,7 @@ Transition: "Today we'll start with the foundation..."
 
 ---
 
-<!-- layout: Section Header -->
+<!-- _class: lead -->
 
 ## Course Modules
 
@@ -209,8 +202,6 @@ Transition: "Today we'll start with the foundation..."
 - Adding AI Guardrails
 
 ---
-
-# What's the Big Deal About AI? || The More Things Change, the More They Still Compile
 
 <!-- _class: lead -->
 
@@ -508,8 +499,6 @@ Transition: "Today we'll start with the foundation..."
 
 ---
 
-# The AI Revolution in Software Development || With Great Token Budget Comes Great Responsibility
-
 ## The AI Revolution?
 
 What hasn't changed and what has.
@@ -760,7 +749,7 @@ It's the cleanest way to remember the relationship.
 
 ---
 
-<!-- layout: Section Header -->
+<!-- _class: lead -->
 
 ## Course Modules
 
@@ -772,8 +761,6 @@ It's the cleanest way to remember the relationship.
 
 ---
 
-# Repository and Tool Setup || Day One: Clone Something, Break Nothing
-
 ## Repository and Tool Setup
 
 Cloning course repository
@@ -781,7 +768,51 @@ GitHub authentication
 
 ---
 
-# Exercise: Fork and Clone Repositories || Exercise: Your First git clone of Many
+  ## Exercise: Fork the AIASD-20260209-BF Repo
+
+  Objectives: Explore an unfamiliar codebase
+  Activities
+  Fork this repo https://github.com/j0hnnymiller/AIASD-20260209-BF.git
+  Clone the forked repo
+  Create a GitHub PAT https://github.com/settings/tokens
+  Store the PAT in the GITHUB_TOKEN environment variable
+  Success Criteria
+  Repo is available locally
+
+  ::: notes
+  Duration ~00:20
+
+  Guide participants through creating a fork of the brownfield exercise repository, cloning it locally, and creating a GitHub PAT for authenticated access. Emphasize that this setup work enables the later brownfield labs.
+  :::
+
+  ---
+
+  ## Exercise: Fork the repos
+
+  Objective: Fork the course repos
+  Search GitHub for
+
+  - AI-Assisted-Software-Development
+  - zeus.academia.3b
+    Fork the repos
+  - This will create a personal copy under your GitHub account
+  - You can make changes without affecting the original repo
+started: "2026-03-22T00:00:00Z"
+ended: "2026-03-22T00:10:00Z"
+task_durations:
+  - task: "exercise deck authoring"
+    duration: "00:06:00"
+  - task: "provenance logging"
+    duration: "00:02:00"
+  - task: "readme update"
+    duration: "00:02:00"
+total_duration: "00:10:00"
+ai_log: "ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/conversation.md"
+source: "johnmillerATcodemag-com"
+marp: true
+theme: default
+paginate: true
+---
 
 ## Exercise: Clone the AI-Assisted-Software-Development Repository
 
@@ -851,10 +882,8 @@ Activities
 5. Store the token in the `GITHUB_TOKEN` environment variable.
 
 ```bash
-# Exercise: Fork and Clone Repositories || Exercise: Your First git clone of Many
 $env:GITHUB_TOKEN = "<your-pat>"
 
-# Exercise: Fork and Clone Repositories || Exercise: Your First git clone of Many
 export GITHUB_TOKEN="<your-pat>"
 ```
 
@@ -902,10 +931,6 @@ Duration ~00:10
 
 Use this slide as a consolidation exercise to reinforce the fork-first workflow pattern across multiple repositories. Encourage participants to describe the difference between upstream and origin in their own words, because that understanding reduces merge and push mistakes later in the course. If time permits, have learners quickly clone one of the forks and verify remotes using `git remote -v` as a confidence check. End with a short recap that forking gives each participant a safe workspace while preserving the integrity of the course-owned repositories.
 :::
-
----
-
-# Hands-On with GitHub Copilot in Visual Studio || GitHub Copilot Meets the IDE That Never Left
 
 ---
 
@@ -2163,7 +2188,7 @@ Practice exercises for Visual Studio Copilot
 - Generic implementations: Add more context via comments
 - Missing NuGet packages: Install Entity Framework Core
 
----
+Lab transition: Lab 1 complete, move into debugging and profiling.
 
 **Lab 2: Debugging and Profiling (25 minutes)**
 
@@ -2212,7 +2237,7 @@ Practice exercises for Visual Studio Copilot
 - Identified performance bottlenecks
 - Evidence-based optimization via benchmarks
 
----
+Lab transition: Lab 2 complete, move into agent mode and MCP.
 
 **Lab 3: Agent Mode and MCP (25 minutes)**
 
@@ -2276,7 +2301,7 @@ Practice exercises for Visual Studio Copilot
 - MCP server won't connect: Verify connection string, check firewall
 - Generated code has errors: Iterate with follow-up prompts ("Fix compilation errors")
 
----
+Lab transition: Lab 3 complete, proceed to wrap-up and Q&A.
 
 **Wrap-Up and Q&A (10 minutes)**
 
@@ -2399,8 +2424,6 @@ GitHub Copilot does not store your code. Code snippets are sent to Copilot API f
 :::
 
 ---
-
-# Lab: Getting Started with GitHub Copilot in VS Code || Lab: Your AI Copilot Reports for Duty
 
 ## Lab: Getting Started with GitHub Copilot
 
@@ -2563,7 +2586,7 @@ Position this lab as decision-making practice so participants learn to match the
 
 ---
 
-<!-- layout: Section Header -->
+<!-- _class: lead -->
 
 ## Course Modules
 
@@ -2574,8 +2597,6 @@ Position this lab as decision-making practice so participants learn to match the
 - Adding AI Guardrails
 
 ---
-
-# Vibe Coding: Collaborative AI Development || One Keyboard, Many Opinions, One Calculator
 
 ## Collaborating on a Solution
 
@@ -2617,8 +2638,6 @@ The project should be ready to build and run from the command line.
 :::
 
 ---
-
-# Exercise: Calculator Project Setup || Exercise: The Calculator That Launched a Thousand Prompts
 
 ## Exercise: Calculator Project - Setup and Basic Implementation
 
@@ -3492,8 +3511,6 @@ Duration ~00:40
 
 ---
 
-# Exercise: Test Coverage Improvement || Exercise: From "It Works on My Machine" to Actually Tested
-
 ## Exercise: Test Coverage Improvement
 
 Objectives
@@ -3579,8 +3596,6 @@ As discovered in the session, asking Copilot to "increase coverage to 50%" can w
 :::
 
 ---
-
-# Exercise: Test-Driven Development with Copilot || Exercise: Write the Test First. Trust the Process.
 
 ## Exercise: Lab 3 - Test-Driven Development (TDD) with Copilot
 
@@ -3671,8 +3686,6 @@ Duration ~00:60
    :::
 
 ---
-
-# Multi-Model Implementation Comparison || Ask Three AIs, Get Four Opinions
 
 ## Multi-Model Implementation Comparison
 
@@ -3859,8 +3872,6 @@ This exercise builds confidence in orchestrating multiple models as collaborator
 
 ---
 
-# Evergreen Software Core Principles || Code That Doesn't Rot: A Love Story
-
 <!-- layout: Two Content -->
 
 ## Evergreen Software Development - Core Principles
@@ -3947,7 +3958,7 @@ Transition: "Let's see how to avoid these pitfalls..."
 
 ---
 
-<!-- layout: Section Header -->
+<!-- _class: lead -->
 
 ## Course Modules
 
@@ -3958,8 +3969,6 @@ Transition: "Let's see how to avoid these pitfalls..."
 - **▶ Adding AI Guardrails**
 
 ---
-
-# Adding AI Guardrails || Teaching Your AI to Color Inside the Lines
 
 ## Adding AI Guardrails
 
@@ -4425,8 +4434,6 @@ This exercise builds intuition for context management—one of the most importan
 
 ---
 
-# Instruction Files || The .editorconfig for Your AI's Soul
-
 ## Instruction Files
 
 ::: notes
@@ -4524,8 +4531,6 @@ Hardcoded values instead of parameters
 
 ---
 
-# When to Use Each Copilot Instruction File Type || Right Tool, Right File, Right AI Behavior
-
 ## **Repo‑level `.md` files**
 - Apply **everywhere** in the repo
 - Always included
@@ -4557,8 +4562,6 @@ The decision rule gives teams a simple, auditable way to choose the correct mech
 :::
 
 ---
-
-# Instruction File applyTo Patterns || Glob Patterns: The Bouncer at Your AI's Door
 
 ## 🎯 Instruction File `applyTo` Patterns
 
@@ -5414,8 +5417,6 @@ Thank you all for your attention. The applyTo pattern system might seem simple o
 
 ---
 
-# Core Instruction Files || The Constitution of Your AI Republic
-
 <!-- layout: Two Content -->
 
 ## Core Instructions
@@ -5457,8 +5458,6 @@ Transition: "Let's dive into how to use these..."
 :::
 
 ---
-
-# Organizational vs. Repository Instruction Files || Corporate Rules vs. Your Team's Rules
 
 <!-- _class: lead -->
 
@@ -5585,8 +5584,6 @@ End with action items. Suggest teams pilot this in one repo before scaling. Enco
 :::
 
 ---
-
-# Exercise: Technology Inventory and Instruction Generation || Exercise: Take Stock Before You Start Spending Tokens
 
 ## Exercise: Technology Inventory & Instruction Generation
 

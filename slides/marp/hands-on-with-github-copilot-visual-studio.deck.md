@@ -20,6 +20,7 @@ total_duration: "00:30:00"
 ai_log: "ai-logs/2026/03/27/vs2026-copilot-deck-20260327/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+
 # Hands-On with GitHub Copilot in Visual Studio || GitHub Copilot Meets the IDE That Never Left
 
 ---
@@ -1278,7 +1279,7 @@ Practice exercises for Visual Studio Copilot
 - Generic implementations: Add more context via comments
 - Missing NuGet packages: Install Entity Framework Core
 
----
+Lab transition: Lab 1 complete, move into debugging and profiling.
 
 **Lab 2: Debugging and Profiling (25 minutes)**
 
@@ -1327,7 +1328,7 @@ Practice exercises for Visual Studio Copilot
 - Identified performance bottlenecks
 - Evidence-based optimization via benchmarks
 
----
+Lab transition: Lab 2 complete, move into agent mode and MCP.
 
 **Lab 3: Agent Mode and MCP (25 minutes)**
 
@@ -1391,7 +1392,7 @@ Practice exercises for Visual Studio Copilot
 - MCP server won't connect: Verify connection string, check firewall
 - Generated code has errors: Iterate with follow-up prompts ("Fix compilation errors")
 
----
+Lab transition: Lab 3 complete, proceed to wrap-up and Q&A.
 
 **Wrap-Up and Q&A (10 minutes)**
 
