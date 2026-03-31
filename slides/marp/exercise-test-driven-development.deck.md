@@ -19,63 +19,56 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Exercise: Test-Driven Development with Copilot || Exercise: Write the Test First. Trust the Process.
 
-## Exercise: Lab 3 - Test-Driven Development (TDD) with Copilot
+---
+
+<!-- layout: Two Content -->
+
+## Exercise: Test-Driven Development (TDD) with Copilot
 
 Objectives
-
-- Practice TDD workflow with AI assistance
-- Write failing tests before implementation
-- Use tests to drive design decisions
-- Understand red-green-refactor cycle
+  - Practice TDD workflow with AI assistance
+  - Write failing tests before implementation
+  - Use tests to drive design decisions
+  - Understand red-green-refactor cycle
 
 Activities
-
-1. Define New Feature:
-
-- Choose a feature (for example, memory operations for calculator)
-- Store current result (ANS/answer functionality)
-- Recall previous result
-- Handle "ANS + 5" style operations
-
-2. Write Failing Tests First:
-
-- Prompt: "Using TDD, create tests for a memory/answer feature in the calculator. DO NOT implement the feature yet."
-- Review generated tests
-- Verify tests reference methods that do not exist yet
-
-3. Run Tests (Expect Failures):
-
-- Execute test suite
-- Observe compilation errors or test failures
-- Document what is missing
-
-4. Implement Feature to Pass Tests:
-
-- Prompt: "Implement the memory/answer feature to make the tests pass"
-- Review generated implementation
-- Run tests again
-- Verify all tests now pass
-
-5. Refactor:
-
-- With tests passing, ask for improvements
-- Prompt: "Refactor the answer implementation for better readability"
-- Verify tests still pass after refactoring
+  1. Define New Feature:
+    - Choose a feature (for example, memory operations for calculator)
+    - Store current result (ANS/answer functionality)
+    - Recall previous result
+    - Handle "ANS + 5" style operations
+  2. Write Failing Tests First:
+    - Prompt: "Using TDD, create tests for a memory/answer feature in the calculator. DO NOT implement the feature yet."
+    - Review generated tests
+    - Verify tests reference methods that do not exist yet
+  3. Run Tests (Expect Failures):
+    - Execute test suite
+    - Observe compilation errors or test failures
+    - Document what is missing
+  4. Implement Feature to Pass Tests:
+    - Prompt: "Implement the memory/answer feature to make the tests pass"
+    - Review generated implementation
+    - Run tests again
+    - Verify all tests now pass
+  5. Refactor:
+    - With tests passing, ask for improvements
+    - Prompt: "Refactor the answer implementation for better readability"
+    - Verify tests still pass after refactoring
 
 Success Criteria
-
-- Tests written before implementation
-- Initial test run shows failures (red phase)
-- Implementation makes all tests pass (green phase)
-- Code refactored while maintaining passing tests
-- Understanding of TDD benefits and workflow
+  - Tests written before implementation
+  - Initial test run shows failures (red phase)
+  - Implementation makes all tests pass (green phase)
+  - Code refactored while maintaining passing tests
+  - Understanding of TDD benefits and workflow
 
 ::: notes
 Duration ~00:60
 
-## Lab 3 - Test-Driven Development (TDD) with Copilot Exercise Instructions
+## Test-Driven Development (TDD) with Copilot Exercise Instructions
 
 **Prerequisites:** Understanding of TDD principles
 

@@ -43,11 +43,8 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Code Explanation and Analysis || Ctrl+I: The "What Does This Even Do?" Button
-
-## Understanding Unfamiliar Code with GitHub Copilot
-
-Section 10 · AI-Assisted Software Development
 
 ::: notes
 Duration ~00:01
@@ -67,39 +64,9 @@ Welcome to Section 10: Code Explanation and Analysis. This section covers approx
 
 ---
 
-## Section Overview
-
-### What You'll Learn
-
-- 🔍 **Explaining unfamiliar code** using inline chat
-- 🔗 **Mapping call chains** and tracing dependencies
-- 🔒 **Identifying hidden coupling** between components
-- 📊 **Analyzing test coverage** to find gaps
-
-| Subsection | Topic | Time |
-|---|---|---|
-| 10.1 | Code Explanation | 01:28:20 – 01:30:05 |
-| 10.2 | Coverage Gap Analysis | 01:30:05 – 01:36:00 |
-
-::: notes
-Duration ~00:02
-
-**Key Points to Emphasize**:
-
-1. These four skills are used daily in professional development — they're not academic exercises
-2. GitHub Copilot dramatically reduces the time needed to understand foreign code
-3. Coverage gap analysis is a systematic approach, not guesswork
-
-**Audience Context**: Ask "How many of you regularly work with code you didn't write?" — most hands should go up. This establishes immediate relevance.
-
-**Transition**: "Let's start with the most immediate need — understanding code you've never seen before."
-:::
-
----
-
 ## 10.1: Code Explanation with Copilot
 
-### Two Ways to Explain Code
+Two Ways to Explain Code
 
 **Option 1: Inline Chat (Control+I)**
 
@@ -129,6 +96,7 @@ Duration ~00:04
 2. **Right-Click Explain**: Opens the Chat panel with a full explanation. Better for complex code that needs a longer response.
 
 **When to Use Each**:
+
 - Use Ctrl+I for quick, targeted questions ("What does this regex do?")
 - Use Right-click Explain for comprehensive understanding ("What is this entire function doing?")
 
@@ -140,28 +108,32 @@ Duration ~00:04
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Understanding Test Code
 
-### Why Test Code Is Hard to Read
+Why Test Code Is Hard to Read
 
 - Tests use **mocking**, **stubs**, and **spy patterns**
 - Setup and teardown logic can obscure intent
 - Assertion libraries have their own DSLs
 - Tests often reveal **implicit requirements** not in docs
 
-### Copilot Explains Tests Effectively
+Copilot Explains Tests Effectively
 
 ```plaintext
 Select test → Ctrl+I → "Explain what this test is verifying
 and what edge cases it covers"
 ```
 
+::: column
+
 ### What You Learn From Test Explanations
 
-- ✅ What behavior is being tested
-- ✅ What inputs trigger the test
-- ✅ What the expected output is
-- ✅ Where the gaps might be
+✅ What behavior is being tested
+✅ What inputs trigger the test
+✅ What the expected output is
+✅ Where the gaps might be
 
 ::: notes
 Duration ~00:03
@@ -171,6 +143,7 @@ Duration ~00:03
 **Real-World Scenario**: "Imagine you're asked to add a feature. The first thing you should do is read the existing tests to understand what behavior is expected. Copilot can explain those tests in plain English."
 
 **Live Demo Suggestion**:
+
 - Open a test file with mocking/stubbing
 - Select a complex test setup and use Ctrl+I
 - Ask: "What is this test verifying? What would cause it to fail?"
@@ -185,9 +158,7 @@ Duration ~00:03
 
 ---
 
-## 10.2: Coverage Gap Analysis
-
-### The Problem
+## Coverage Gap Analysis
 
 Most projects have **incomplete test coverage** that is hard to spot manually:
 
@@ -196,7 +167,7 @@ Most projects have **incomplete test coverage** that is hard to spot manually:
 - Integration between components untested
 - New features added without corresponding tests
 
-### The Solution: Copilot-Assisted Analysis
+The Solution: Copilot-Assisted Analysis
 
 Ask Copilot to analyze your test suite:
 
@@ -208,13 +179,14 @@ What scenarios are covered? What's missing?"
 ::: notes
 Duration ~00:02
 
-**Why This Matters**: Code coverage tools tell you *what percentage* is covered, but they don't tell you *whether the right things* are covered. A line can be executed by a test without that test actually verifying the behavior.
+**Why This Matters**: Code coverage tools tell you _what percentage_ is covered, but they don't tell you _whether the right things_ are covered. A line can be executed by a test without that test actually verifying the behavior.
 
 **Two Types of Coverage Gaps**:
+
 1. **Quantity gaps**: Code paths not reached by any test
 2. **Quality gaps**: Code paths reached but not meaningfully verified
 
-**Copilot's Advantage**: It understands the *intent* of the code and can identify gaps that line-coverage metrics would miss.
+**Copilot's Advantage**: It understands the _intent_ of the code and can identify gaps that line-coverage metrics would miss.
 
 **Example**: "You might have 95% line coverage but still be missing all error-path tests, all boundary conditions, and all integration scenarios."
 
@@ -225,33 +197,33 @@ Duration ~00:02
 
 ## Generating a Coverage Report
 
-### Example: Calculator Service Analysis
-
 **Prompt to Copilot**:
 
 ```plaintext
-"Analyze the calculator service test file. Explain the test suite
+"Analyze the service test file. Explain the test suite
 structure, what operations are covered, and generate a coverage
 report showing what's tested vs. what's missing."
 ```
 
 **Copilot's Response Includes**:
 
-- 📋 Test suite structure overview
-- ✅ Covered scenarios (e.g., basic operations: add, subtract, multiply, divide)
-- 📊 Coverage estimate: **95% for calculator service**
-- ❌ Missing coverage areas
+- Test suite structure overview
+- Covered scenarios (e.g., basic operations: add, subtract, multiply, divide)
+- Coverage estimate: **95% for service**
+- Missing coverage areas
 
 ::: notes
 Duration ~00:03
 
 **Live Demo Instructions**:
+
 1. Open a calculator service with its test file
 2. Select the entire test file
 3. Run the prompt shown on slide
 4. Walk through the generated report
 
 **Expected Output to Highlight**:
+
 - Copilot will categorize tests by operation/feature
 - Will note if error conditions are tested (e.g., division by zero)
 - Will identify if edge cases like floating point, negative numbers, or overflow are tested
@@ -270,23 +242,13 @@ Duration ~00:03
 
 ### Common Coverage Gaps Copilot Finds
 
-| Category | Examples |
-|---|---|
-| **Error conditions** | Division by zero, null inputs, overflow |
-| **Boundary values** | Min/max values, empty collections |
-| **Integration paths** | Multi-step operations, state transitions |
-| **Edge cases** | Floating point precision, negative numbers |
-| **Concurrency** | Race conditions, async operations |
-
-### Copilot Output Example
-
-```plaintext
-❌ Missing: Division by zero handling
-❌ Missing: Negative number operations
-❌ Missing: Floating point precision tests
-❌ Missing: Chained operation sequences
-⚠️  Partial: Error message validation
-```
+| Category              | Examples                                   |
+| --------------------- | ------------------------------------------ |
+| **Error conditions**  | Division by zero, null inputs, overflow    |
+| **Boundary values**   | Min/max values, empty collections          |
+| **Integration paths** | Multi-step operations, state transitions   |
+| **Edge cases**        | Floating point precision, negative numbers |
+| **Concurrency**       | Race conditions, async operations          |
 
 ::: notes
 Duration ~00:02
@@ -302,7 +264,7 @@ Duration ~00:02
 
 **Common Excuse**: "We have 90%+ coverage!" Counter: "Code coverage measures whether code was executed, not whether it was verified. Copilot goes deeper."
 
-**Important Nuance**: Copilot identifies *semantic* gaps, not just syntactic ones. It knows that a `divide` function without a zero-divisor test is semantically incomplete.
+**Important Nuance**: Copilot identifies _semantic_ gaps, not just syntactic ones. It knows that a `divide` function without a zero-divisor test is semantically incomplete.
 
 **Transition**: "Identifying gaps is only half the job. Copilot can also help you close them."
 :::
@@ -310,8 +272,6 @@ Duration ~00:02
 ---
 
 ## Recommended Test Implementation Plan
-
-### Copilot Generates an Actionable Plan
 
 After identifying gaps, ask:
 
@@ -332,18 +292,20 @@ Prioritize by risk and provide implementation order."
 Duration ~00:03
 
 **Why Prioritization Matters**: Teams can't add all missing tests at once. Copilot helps prioritize by:
+
 - Risk: What's most likely to cause a production incident?
 - Value: What behavior is most critical to the business?
 - Effort: What tests are quickest to write and maintain?
 
 **How to Read the Priority Levels**:
+
 - 🔴 Red: Production risk — these should be done in the current sprint
 - 🟡 Yellow: Technical debt — schedule for next sprint
 - 🟢 Green: Nice to have — add when time permits
 
 **Audience Engagement**: "How does your team currently prioritize which tests to write? Do you have a systematic approach?" — This positions Copilot as an improvement over gut-feeling prioritization.
 
-**Key Differentiator**: "This isn't just a list of things to do. Copilot explains *why* each test is important, giving you the context to defend the work to stakeholders."
+**Key Differentiator**: "This isn't just a list of things to do. Copilot explains _why_ each test is important, giving you the context to defend the work to stakeholders."
 
 **Transition**: "And here's where it gets really powerful — Copilot doesn't just plan, it can implement the tests for you."
 :::
@@ -351,8 +313,6 @@ Duration ~00:03
 ---
 
 ## Implementing Tests from Recommendations
-
-### Copilot Writes the Tests
 
 After reviewing the plan, ask Copilot to implement:
 
@@ -378,6 +338,7 @@ Explain → Analyze → Identify Gaps → Plan → Implement → Review
 Duration ~00:03
 
 **Live Demo Instructions**:
+
 1. With the coverage plan from the previous step visible
 2. Ask Copilot to implement the top 2-3 high-priority tests
 3. Show how it picks up on the existing test style (naming, assertion patterns, setup/teardown)
@@ -386,6 +347,7 @@ Duration ~00:03
 **Important Teaching Point**: "Copilot doesn't create tests in a vacuum — it learns from your existing test patterns. If you use `describe`/`it` blocks, it will too. If you use `[Test]` attributes, it matches that."
 
 **Quality Review**: Emphasize that AI-generated tests should always be reviewed:
+
 - Does the assertion actually verify the behavior?
 - Is the test isolated (no shared state)?
 - Will the test fail for the right reason if the code breaks?
@@ -395,99 +357,4 @@ Duration ~00:03
 **Time Savings**: "Writing these tests manually would take 30-60 minutes. With Copilot, 5 minutes. That time savings compounds across every feature in your codebase."
 
 **Transition**: "Let's wrap up with a summary of what we've covered and the key takeaways."
-:::
-
----
-
-## Key Takeaways
-
-### Code Explanation (10.1)
-
-- ✅ **Ctrl+I inline chat** for quick explanations
-- ✅ **Right-click → Explain** for comprehensive analysis
-- ✅ **Test code understanding** reveals implicit requirements
-- ✅ Works for **any language or framework**
-
-### Coverage Gap Analysis (10.2)
-
-- ✅ Copilot finds **semantic gaps**, not just line coverage
-- ✅ Generates **structured coverage reports**
-- ✅ Provides **prioritized implementation plans**
-- ✅ Can **implement** the missing tests automatically
-
-### The Bottom Line
-
-> GitHub Copilot transforms code understanding from a time-consuming manual process into a fast, systematic workflow.
-
-::: notes
-Duration ~00:02
-
-**Consolidation Message**: These two capabilities — explanation and coverage analysis — work together. Explanation builds the understanding needed to evaluate whether your tests are actually verifying the right things.
-
-**Key Habits to Reinforce**:
-1. When you encounter unfamiliar code: immediately use Ctrl+I
-2. When starting work on a feature: analyze existing test coverage first
-3. Before submitting a PR: ask Copilot to review test completeness
-4. After writing new code: generate a coverage gap analysis
-
-**Connection to Broader Course**: "Everything we've learned about GitHub Copilot — code generation, refactoring, documentation — applies here too. Copilot is not just a code writer; it's a thinking partner for every aspect of software development."
-
-**Q&A Prompt**: "What questions do you have about using Copilot for code explanation or test coverage analysis?"
-
-**What's Next**: Point to the next section in the course.
-
-**Closing**: "The goal isn't to replace your judgment — it's to give you better information faster so your judgment is based on understanding, not guesswork."
-:::
-
----
-
-## Practice Exercise
-
-### Try It Yourself
-
-**Exercise 10.1**: Code Explanation
-
-1. Open any unfamiliar file in your project
-2. Select a complex function (10+ lines)
-3. Press **Ctrl+I** and type `explain this function`
-4. Ask a follow-up: `What edge cases should this handle?`
-
-**Exercise 10.2**: Coverage Gap Analysis
-
-1. Open a test file in your project
-2. Select all test content
-3. Ask Copilot: `Analyze this test suite. What scenarios are covered and what's missing?`
-4. Request a prioritized plan for the gaps
-
-### Discussion
-
-> What surprised you about Copilot's analysis? Did it find gaps you knew about? Any you didn't?
-
-::: notes
-Duration ~00:15
-
-**Facilitation Tips**:
-
-**Exercise Setup**:
-- Have participants open their own projects or provide a sample project
-- Suggest using the calculator service example if available
-- Encourage participants to use code they actually work with — real context produces better results
-
-**During the Exercise**:
-- Walk the room (or virtual breakout rooms) to observe responses
-- Note interesting findings to share with the group
-- Help participants who get generic or unhelpful responses rephrase their prompts
-
-**After the Exercise — Discussion Points**:
-1. "What was the most surprising gap Copilot identified?"
-2. "Did Copilot's explanation match your understanding of the code?"
-3. "How long would this analysis have taken manually?"
-4. "What would you do differently in your next PR based on this?"
-
-**Common Findings**:
-- Most projects are missing error-path tests
-- Test naming is often inconsistent (Copilot will note this)
-- Many tests verify behavior but not error messages
-
-**Instructor Note**:  The discussion often surfaces insights that stick better than the lecture content.
 :::

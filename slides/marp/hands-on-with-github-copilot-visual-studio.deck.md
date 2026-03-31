@@ -25,12 +25,6 @@ source: "johnmillerATcodemag-com"
 
 ---
 
-marp: true
-theme: default
-paginate: true
-
----
-
 ## Hands-On with GitHub Copilot in Visual Studio 2026
 
 Enterprise-grade AI assistance for .NET developers
@@ -105,6 +99,8 @@ Ghost text suggestions as you type
 - **Next Edit Suggestions (NES)** predict follow-up edits anywhere in the file
 - **Navigation arrows** in gutter indicate suggested changes
 
+::: column
+
 **Use Cases:**
 
 - Completing method implementations
@@ -163,6 +159,8 @@ Multi-surface conversational AI
 - **Chat Pane** (View > Chat): Dedicated window for Q&A and research
 - **Inline Chat** (Alt+/): In-editor modifications and queries
 - **Context Menus**: Right-click code > Ask Copilot
+
+::: column
 
 **Key Capabilities:**
 
@@ -223,6 +221,8 @@ Automatic XML documentation
 - Copilot generates complete XML documentation
 - Includes `<summary>`, `<param>`, `<returns>`, `<exception>`
 - Learns from your existing documentation style
+
+::: column
 
 **Example:**
 
@@ -303,6 +303,8 @@ AI-powered IntelliSense enhancements
 - Copilot generates contextual summary and usage guidance
 - Temporary AI-generated help—not saved to code
 
+::: column
+
 **Use Cases:**
 
 - Understanding unfamiliar APIs
@@ -368,6 +370,8 @@ Access authoritative documentation when AI needs help
 - Automatically retrieves latest docs from Microsoft Learn
 - Provides authoritative, up-to-date answers
 - Cites sources for verification
+
+::: column
 
 **Covered Topics:**
 
@@ -443,6 +447,8 @@ AI-powered refactoring integration
 2. Right-click > Quick Actions (Ctrl+.)
 3. Select "Implement Interface" or "Implement Abstract Class"
 4. Copilot generates complete, context-aware implementation
+
+::: column
 
 **Advanced Features:**
 
@@ -540,6 +546,8 @@ Copilot understands your debugging context
 - **Call stack analysis** and troubleshooting
 - **Conditional breakpoint** expression suggestions
 - **LINQ query evaluation** and optimization
+
+::: column
 
 **Access Points:**
 
@@ -639,6 +647,8 @@ AI-guided performance analysis and optimization
 - Identifies bottlenecks and hot paths
 - Suggests optimization strategies
 - Generates benchmark code (BenchmarkDotNet)
+
+::: column
 
 **Optimization Workflow:**
 
@@ -761,6 +771,8 @@ Let Copilot work on your behalf
 - Manual approval and steering available
 - Cross-file changes and refactoring
 
+::: column
+
 **Example Tasks:**
 
 - "Implement user authentication with JWT"
@@ -861,6 +873,8 @@ Extend Copilot with external tools and services
 - Connect Copilot to databases, APIs, file systems, cloud services
 - Define custom tools for domain-specific workflows
 - Invoke tools automatically during agent mode
+
+::: column
 
 **MCP in Visual Studio:**
 
@@ -968,6 +982,8 @@ Extend Copilot with external tools and services
 
 ---
 
+<!-- layout: Comparison -->
+
 ## Visual Studio vs. VS Code: Feature Comparison
 
 Choosing the right IDE for your workflow
@@ -979,6 +995,8 @@ Choosing the right IDE for your workflow
 - Profiler agent for performance optimization
 - Enterprise project and solution management
 - Unified experience for .NET developers
+
+::: column
 
 **VS Code Strengths:**
 
@@ -1088,6 +1106,9 @@ Maximizing productivity and code quality
 
 - Always review generated code for correctness
 - Check security implications (input validation, auth, sensitive data)
+
+::: column
+
 - Verify performance characteristics
 - Test edge cases and error paths
 

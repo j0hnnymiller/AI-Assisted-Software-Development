@@ -7,9 +7,6 @@ paginate: true
 
 ## Collaborating on a Solution
 
-Project Setup
-Adding Features
-
 - Basic Arithmetic - Addition, subtraction, multiplication, division
 - Clear / Reset Function - Quickly resets the current input or entire calculation
 - Decimal Support - Allows entry and computation with decimal numbers
@@ -18,12 +15,12 @@ Adding Features
 - Memory Functions (M+, M–, MR, MC) - Store, recall, add to, or clear memory values
 - Error Handling - Displays errors such as division by zero
 - Simple, Intuitive Interface - Numeric keypad, operation buttons, and display screen
-  Test Automation
-- Code Coverage
-  Dependency Management
-  Comparing Implementations
-  Chat Management
-  Intro to Evergreen Software Development
+- Test Automation
+  - Code Coverage
+- Dependency Management
+- Comparing Implementations
+- Chat Management
+- Intro to Evergreen Software Development
 
 ::: notes
 This slide outlines the collaborative development process we'll follow for building our calculator application — and mob programming will be central to how we work together.

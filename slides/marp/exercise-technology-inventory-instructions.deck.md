@@ -23,49 +23,43 @@ marp: true
 theme: default
 paginate: true
 ---
+
+<!-- layout: Two Content -->
+
 # Exercise: Technology Inventory and Instruction Generation || Exercise: Take Stock Before You Start Spending Tokens
 
-## Exercise: Technology Inventory & Instruction Generation
-
 Objectives
-
-- Create a clear inventory of project technologies across the repository
-- Use background sessions to run concurrent analysis and drafting work
-- Generate multiple instruction files simultaneously from the inventory results
-- Practice session management interface workflows for parallel task control
+  - Create a clear inventory of project technologies across the repository
+  - Use background sessions to run concurrent analysis and drafting work
+  - Generate multiple instruction files simultaneously from the inventory results
+  - Practice session management interface workflows for parallel task control
 
 Activities
+  1. Technology Inventory Build:
+    - Scan the repository and list languages, frameworks, build tools, and test stacks
+    - Group technologies by folder ownership and lifecycle criticality
+    - Identify missing or outdated instruction coverage per technology area
+  2. Background Session Orchestration:
+    - Start parallel background sessions for discovery, drafting, and validation
+    - Assign one focused outcome per session (inventory, file generation, review)
+    - Capture each session's outputs and merge findings into one working backlog
 
-1. Technology Inventory Build:
+::: column
 
-- Scan the repository and list languages, frameworks, build tools, and test stacks
-- Group technologies by folder ownership and lifecycle criticality
-- Identify missing or outdated instruction coverage per technology area
-
-2. Background Session Orchestration:
-
-- Start parallel background sessions for discovery, drafting, and validation
-- Assign one focused outcome per session (inventory, file generation, review)
-- Capture each session's outputs and merge findings into one working backlog
-
-3. Simultaneous Instruction Generation:
-
-- Generate multiple instruction files for high-priority technology folders
-- Apply path-scoped patterns to each generated instruction file
-- Validate that each file is targeted, non-overlapping, and implementation-ready
-
-4. Session Management Interface Review:
-
-- Track session state, ownership, and completion status
-- Resolve collisions between concurrently generated instruction outputs
-- Close sessions with a summarized decision log and next-step actions
+  3. Simultaneous Instruction Generation:
+    - Generate multiple instruction files for high-priority technology folders
+    - Apply path-scoped patterns to each generated instruction file
+    - Validate that each file is targeted, non-overlapping, and implementation-ready
+  4. Session Management Interface Review:
+    - Track session state, ownership, and completion status
+    - Resolve collisions between concurrently generated instruction outputs
+    - Close sessions with a summarized decision log and next-step actions
 
 Success Criteria
-
-- Technology inventory includes stack, location, and risk/priority attributes
-- At least three instruction files are generated concurrently and scoped correctly
-- Background sessions are documented with clear responsibilities and outcomes
-- Session management process is repeatable for future multi-stream work
+  - Technology inventory includes stack, location, and risk/priority attributes
+  - At least three instruction files are generated concurrently and scoped correctly
+  - Background sessions are documented with clear responsibilities and outcomes
+  - Session management process is repeatable for future multi-stream work
 
 ::: notes
 Duration ~00:30

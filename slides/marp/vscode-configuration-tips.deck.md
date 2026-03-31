@@ -18,7 +18,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # VS Code Configuration Tips || The 30 Seconds That Save Hours
+
+---
 
 ## Why Customize VS Code?
 

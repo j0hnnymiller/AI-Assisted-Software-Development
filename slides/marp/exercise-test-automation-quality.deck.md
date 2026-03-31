@@ -49,39 +49,41 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Exercise: Test Automation and Quality || Exercise: The Tests You Always Meant to Write
+
+---
+
+<!-- layout: Two Content -->
 
 ## Exercise: Strengthening Test Automation & Code Quality
 
 Objectives
-
-- Identify gaps in test automation
-- Use AI to generate missing tests
-- Apply intelligent linting and quality gates
-- Validate test adequacy and architectural alignment
+  - Identify gaps in test automation
+  - Use AI to generate missing tests
+  - Apply intelligent linting and quality gates
+  - Validate test adequacy and architectural alignment
 
 Activities
-
-1. Select a brownfield module or function
-2. Review existing tests for:
-   - Coverage gaps
-   - Missing edge cases
-   - Redundant or brittle tests
+  1. Select a brownfield module or function
+  2. Review existing tests for:
+    - Coverage gaps
+    - Missing edge cases
+    - Redundant or brittle tests
 
 ::: column
 
-3. Ask AI to generate missing tests
-4. Run linting and architectural checks
-5. Propose quality gates to enforce improvements
-6. Add provenance metadata to all new artifacts
+  3. Ask AI to generate missing tests
+  4. Run linting and architectural checks
+  5. Propose quality gates to enforce improvements
+  6. Add provenance metadata to all new artifacts
 
 Success Criteria
-
-- Coverage gaps are identified and addressed
-- AI-generated tests are validated and correct
-- Linting and architectural issues are resolved
-- Proposed quality gates are actionable and safe
-- Provenance metadata is included
+  - Coverage gaps are identified and addressed
+  - AI-generated tests are validated and correct
+  - Linting and architectural issues are resolved
+  - Proposed quality gates are actionable and safe
+  - Provenance metadata is included
 
 ::: notes
 Duration ~00:20

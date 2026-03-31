@@ -3,9 +3,8 @@ marp: true
 theme: default
 paginate: true
 ---
-# Prompt Files || Prompts That Run, Not Just Chat
 
-## Prompt Files
+# Prompt Files || Prompts That Run, Not Just Chat
 
 ::: notes
 Duration ~00:01
@@ -18,16 +17,6 @@ Key points:
 - They're executable and reusable
 - Different from instruction files (which provide continuous guidance)
 - Part of the "prompt-first" development approach
-
-Transition: "Let's define what we mean by executable task templates..."
-:::
-
----
-
-## Executable Task Templates
-
-::: notes
-Duration ~00:02
 
 Define prompt files as "executable task templates." This framing helps participants understand their purpose and usage.
 
@@ -48,14 +37,16 @@ Transition: "So what exactly makes a prompt file?"
 
 ## What Are Prompt Files?
 
-Definition
-Structured templates for specific, repeatable tasks
-Contain detailed instructions for particular objectives
-Designed for execution in AI chat interfaces
+- Structured templates for specific, repeatable tasks
+- Contain detailed instructions for particular objectives
+- Designed for execution in AI chat interfaces
+
 Key Characteristics
-Scope: Single, focused task or workflow
-Execution: Run on-demand when needed
-Purpose: Define “what” to accomplish with specific steps
+
+- Scope: Single, focused task or workflow
+- Execution: Run on-demand when needed
+
+> Purpose: Define “what” to accomplish with specific steps
 
 ::: notes
 Duration ~00:03
@@ -84,34 +75,24 @@ Transition: "Let's look at the structure..."
 
 ---
 
-
-
-
-## Prompt File Structure
-
-- -- mode: agent model: "anthropic/claude-3.5-sonnet@2024-10-22" tools: ["create", "edit", "read"] description: Generate comprehensive API documentation prompt_metadata: id: generate-api-docs title: API Documentation Generator category: documentation output_format: markdown --- # Generate API Documentation ## Context Create comprehensive API documentation from code analysis... ## Requirements 1. Analyze existing API endpoints 2. Generate OpenAPI specifications 3. Create developer-friendly guides 4. Include example requests/responses ## Deliverable Generate `docs/api/` folder with complete documentation...
-
----
-
-
-
-
 ## Prompt Files: Use Cases
 
-Perfect For:
-Code Generation → Create specific components/features
-Documentation → Generate standardized docs
-Analysis Tasks → Code reviews, security audits
-Refactoring → Structured code improvements
-Examples:
-implement-user-authentication.prompt.md
-generate-test-suite.prompt.md
-create-deployment-pipeline.prompt.md
+Perfect For
+
+- Code Generation → Create specific components/features
+- Documentation → Generate standardized docs
+- Analysis Tasks → Code reviews, security audits
+- Refactoring → Structured code improvements
+
+Examples
+
+- implement-user-authentication.prompt.md
+- generate-test-suite.prompt.md
+- create-deployment-pipeline.prompt.md
 
 ---
 
-
-
+<!-- layout: Two Content -->
 
 ## Prompt Files Best Practices
 
@@ -120,6 +101,9 @@ Include comprehensive metadata
 Provide clear context and requirements
 Specify expected deliverables
 Include verification steps
+
+::: column
+
 ❌ Avoid This:
 Vague or ambiguous instructions
 Missing prerequisite information

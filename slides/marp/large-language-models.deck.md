@@ -20,6 +20,8 @@ paginate: true
 ---
 # Large Language Models || It's Not Magic. It's Calculus.
 
+---
+
 ## What Is a Large Language Model?
 
 > A statistical model trained to **predict the next token** given all preceding tokens.
@@ -29,9 +31,9 @@ paginate: true
 - Not a database — it doesn't store facts, it learns **weights**
 - Generates output one token at a time, probabilistically
 
-### Key insight
+**Key insight**
 
-**LLMs don't "know" things — they learn what text tends to follow other text.**
+LLMs don't "know" things — they learn what text tends to follow other text.
 
 ::: notes
 Duration ~00:02
@@ -52,7 +54,7 @@ Common misconception to address: "Does Copilot look up my code in a database?" �
 
 ## Tokenization — Breaking Text Apart
 
-### Text → Numbers (before the model sees anything)
+Text → Numbers (before the model sees anything)
 
 ```
 Input:  "Hello, world!"
@@ -210,15 +212,13 @@ Why developers care: The pre-training corpus determines what languages, framewor
 
 ## The Training Process
 
-### Phase 2: Fine-tuning & Alignment
+**Phase 2**: Fine-tuning & Alignment
 
 **Supervised Fine-Tuning (SFT)**
-
 - Train on curated prompt → ideal response pairs
 - Teaches the model to be helpful and follow instructions
 
 **Reinforcement Learning from Human Feedback (RLHF)**
-
 - Human raters rank model outputs
 - A reward model learns human preferences
 - The LLM is optimized to maximize reward score
@@ -251,13 +251,6 @@ Common question: "Can I fine-tune Copilot on my codebase?" — GitHub Enterprise
 
 ## Context Window — The Model's Working Memory
 
-| Model             | Context Window               |
-| ----------------- | ---------------------------- |
-| GPT-3.5           | 16k tokens (~12,000 words)   |
-| GPT-4o            | 128k tokens (~96,000 words)  |
-| Claude 3.5 Sonnet | 200k tokens (~150,000 words) |
-| Gemini 1.5 Pro    | 1M tokens (~750,000 words)   |
-
 - Everything the model "knows" during a conversation fits here
 - Once exceeded, **earlier content is forgotten**
 - GitHub Copilot uses the context window for: open files, cursor position, recent edits, instruction files
@@ -283,15 +276,6 @@ Practical tip: If Copilot seems to "forget" something you told it, it likely scr
 ## Temperature & Sampling
 
 ### How the model chooses its next token
-
-```
-Token probabilities after "def calculate_":
-  "tax"      → 35%
-  "total"    → 28%
-  "price"    → 18%
-  "discount" → 12%
-  other...   → 7%
-```
 
 | Temperature | Behavior                         | Use case           |
 | ----------- | -------------------------------- | ------------------ |

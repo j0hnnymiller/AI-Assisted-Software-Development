@@ -3,7 +3,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Hands-On with GitHub Copilot in VS Code || Getting Your Pair Programmer to Stop Guessing
+
+---
 
 ## Hands-On with GitHub Copilot
 
@@ -12,9 +15,9 @@ Installation and configuration
 - Installing the extension
 - Setting up authentication
 - Configuring settings
-  Sharing configuration across an organization
+  - Sharing configuration across an organization
 - Shared configuration templates (e.g., .copilot/settings.json) can be distributed across projects to standardize behavior.
-  https://www.codemag.com/Blog/AI/AIASD-install-guide
+  - https://www.codemag.com/Blog/AI/AIASD-install-guide
 
 ::: notes
 Walk through installation, auth, and a quick coding session; encourage participants to follow along.
@@ -57,56 +60,3 @@ This slide demonstrates the progression from terrible to excellent prompts—wal
 **Transition:** "Now let's practice this in a hands-on lab where you'll learn to add context using @ symbols..."
 :::
 
----
-
-## Using Copilot in different modes
-
-Ask Mode
-
-- Simple prompt completion and inline suggestions
-  Edit Mode
-- Automatic file edits
-  Agent Mode
-- Perform actions on your behalf
-  Custom Modes
-- Execute specific workflows
-
-::: notes
-Explain Ask vs Edit modes and when each is most useful. Speak to Agent Mode and Custom Chat Modes briefly. We'll work with those later.
-:::
-
----
-
-<!-- layout: Two Content -->
-
-## IDE Support for AI Assistance
-
-**Established IDEs**
-
-- **VS Code**
-  Deep extension ecosystem with strong Copilot, Cline, ChatGPT, and Gemini support.
-- **Visual Studio**
-  Strong .NET refactoring, debugging, and native Copilot integration.
-- **JetBrains IDEs**
-  Excellent static analysis and multi-language depth; AI features are strong but more subscription-driven.
-- **Cursor**
-  AI-first editing experience with strong multi-file reasoning, but less mature for some enterprise workflows.
-
-::: column
-
-**Lightweight and Specialized Options**
-
-- **Replit**
-  Browser-based and beginner-friendly for rapid prototyping.
-- **Builder.io / Builder Code Editor**
-  Web-focused environment with modern AI-native workflows.
-- **Code-B editors**
-  Fast AI-centric editing, but with a smaller ecosystem.
-- **Claude Code**
-  Terminal-first, repo-wide reasoning and patching; powerful, but not a GUI IDE.
-
-**Selection lens**
-
-- GUI IDEs favor structured refactoring and debugging.
-- AI-first tools favor conversational, agentic workflows.
-- Team choice depends on stack, governance, and workflow fit.

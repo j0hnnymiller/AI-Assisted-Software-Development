@@ -3,29 +3,30 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Evergreen Software Core Principles || Code That Doesn't Rot: A Love Story
+
+---
 
 <!-- layout: Two Content -->
 
-## Evergreen Software Development - Core Principles
+## Core Evergreen Principles
 
 **Design and interface principles**
-
-- **Intent-First Design**
-  Define purpose, invariants, and boundaries before writing code.
-- **Stable Interfaces, Evolving Internals**
-  Keep contracts predictable while implementations improve.
-- **Lifecycle Governance**
-  Maintain quality through tests, versioning, and human validation.
+  - **Intent-First Design**
+    Define purpose, invariants, and boundaries before writing code.
+  - **Stable Interfaces, Evolving Internals**
+    Keep contracts predictable while implementations improve.
+  - **Lifecycle Governance**
+    Maintain quality through tests, versioning, and human validation.
 
 ::: column
 
 **Regeneration principles**
-
-- **Continuous Regeneration with Guardrails**
-  Use AI safely with tests, specs, and architectural constraints.
-- **Modular, Replaceable Components**
-  Structure the system so parts can be regenerated or swapped without cascading breakage.
+  - **Continuous Regeneration with Guardrails**
+    Use AI safely with tests, specs, and architectural constraints.
+  - **Modular, Replaceable Components**
+    Structure the system so parts can be regenerated or swapped without cascading breakage.
 
 ::: notes
 Duration ~00:05
@@ -52,22 +53,20 @@ Transition: "Let's see why software fails to be evergreen..."
 ## Why Software Fails to Be Evergreen
 
 **Design failures**
-
 - **Intent Rot**
-  Purpose, constraints, and invariants are undocumented or lost.
+  - Purpose, constraints, and invariants are undocumented or lost.
 - **Unstable or Leaky Interfaces**
-  APIs and boundaries change unpredictably.
+  - APIs and boundaries change unpredictably.
 - **Tightly Coupled Architecture**
-  Components depend on each other's internals.
+  - Components depend on each other's internals.
 
 ::: column
 
 **Safety failures**
-
 - **Insufficient Guardrails**
-  Missing tests and validation make safe regeneration impossible.
+  - Missing tests and validation make safe regeneration impossible.
 - **One-Off Patches and Drift**
-  Ad-hoc fixes pull the system away from intended design.
+  - Ad-hoc fixes pull the system away from intended design.
 
 ::: notes
 Duration ~00:05

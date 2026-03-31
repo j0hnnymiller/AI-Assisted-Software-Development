@@ -53,7 +53,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Safety Measures and Best Practices || Code Review: The Last Line of Defense Against AI Overconfidence
+
+---
 
 ## Safety Measures & Best Practices
 
@@ -104,40 +107,14 @@ Use the "eager knowledgeable junior developer" analogy because it is memorable a
 - Do not confuse green dashboards with real confidence
 
 **High-signal tests usually check**
-
-- outcomes users care about
-- meaningful failure conditions
-- integration boundaries and contracts
+  - outcomes users care about
+  - meaningful failure conditions
+  - integration boundaries and contracts
 
 ::: notes
 Duration ~00:04
 
 Make it clear that code coverage is useful, but incomplete. A suite can report high coverage while still missing the exact regression that users will experience, especially if tests only exercise happy paths or assert implementation details instead of behavior. Transition by showing that one concrete place where high-signal validation matters is feature-flag retirement.
-:::
-
----
-
-## Safe Feature Flag Removal
-
-- Confirm the new path is stable before cleanup
-- Ask AI to locate all flag references and stale branches
-- Review generated deletions carefully for hidden dependencies
-- Update tests to match the post-flag reality
-- Remove dead code, config, and documentation together
-
-```mermaid
-flowchart TB
-    A[Flag enabled and stable] --> B[Find references]
-    B --> C[Review removal diff]
-    C --> D[Run focused tests]
-    D --> E[Delete obsolete paths]
-    E --> F[Update docs and rollout notes]
-```
-
-::: notes
-Duration ~00:03
-
-Explain that feature flags are valuable only if teams are disciplined about retiring them. AI is especially helpful here because it can search for scattered references, conditional branches, test toggles, and documentation mentions faster than a human can, but the human reviewer must still confirm that nothing still depends on the old path. Transition by noting that this workflow is safest when the diff is narrow enough for someone to reason about quickly.
 :::
 
 ---
@@ -151,10 +128,9 @@ Explain that feature flags are valuable only if teams are disciplined about reti
 - Large AI-generated diffs hide subtle mistakes
 
 **Good small-change patterns**
-
-1. separate refactor from behavior change
-2. ship one concern per pull request
-3. keep cleanup close to the related feature
+  1. separate refactor from behavior change
+  2. ship one concern per pull request
+  3. keep cleanup close to the related feature
 
 ::: notes
 Duration ~00:03
@@ -173,9 +149,8 @@ Position small change sets as a safety mechanism, not just a style preference. W
 - The best workflow combines speed, consistency, and accountability
 
 **Suggested review split**
-
-- **Automation**: lint, tests, policy checks, review hints
-- **Human reviewers**: architecture, behavior, domain correctness
+  - **Automation**: lint, tests, policy checks, review hints
+  - **Human reviewers**: architecture, behavior, domain correctness
 
 ::: notes
 Duration ~00:04

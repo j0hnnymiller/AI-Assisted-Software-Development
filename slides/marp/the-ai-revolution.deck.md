@@ -3,11 +3,8 @@ ai_generated: false
 operator: "johnmillerATcodemag-com"
 source: "johnmillerATcodemag-com"
 ---
+
 # The AI Revolution in Software Development || With Great Token Budget Comes Great Responsibility
-
-## The AI Revolution?
-
-What hasn't changed and what has.
 
 ---
 
@@ -212,35 +209,3 @@ Benefits
 “The end result is a system that's easier to maintain and adapt over time.”
 :::
 
----
-
-## Concrete Examples
-
-**Prompt-First Example**
-  - Promptfile for generating unit tests
-  - Instruction file for documentation
-  - Chat mode for brownfield developers
-
-**AI-First Example**
-  - Requirements → AI-generated scaffolds
-  - Code changes → AI-assisted reviews
-  - Docs → continuously AI-generated
-  - Modernization → AI-guided refactoring plans
-  - Provenance → enforced everywhere
-
-::: notes
-Use these examples to help teams visualize the difference.
-Prompt-First is about interfaces; AI-First is about the entire workflow.
-:::
-
----
-
-## Shortest Summary
-
-- **AI-First = philosophy + architecture + lifecycle integration**
-- **Prompt-First = structured, version-controlled interfaces for interacting with AI**
-
-::: notes
-End with this summary to reinforce the distinction.
-It's the cleanest way to remember the relationship.
-:::

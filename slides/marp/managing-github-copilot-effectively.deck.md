@@ -30,8 +30,9 @@ When unmanaged, it becomes unpredictable.
 
 - Copilot is fast, eager, and sometimes confidently wrong
 - Provide clear instructions, constraints, and examples
-- Review everything – trust its speed, not its judgment
-- Use iterative loops: instruct → generate → review → refine
+- Review everything - trust its speed, not its judgment
+- Use iterative loops:
+    instruct → generate → review → refine
 - Give Copilot ownership of tasks, not architecture
 
 ::: notes
@@ -65,4 +66,3 @@ Instruction files are especially powerful because they give Copilot a persistent
 
 Think of prompts as design briefs, not commands.
 :::
-

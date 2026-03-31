@@ -21,11 +21,8 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # AI-Assisted Pull Request Workflows || Pull Requests That Actually Get Reviewed
-
-## AI-Assisted GitHub Pull Requests
-
-## Faster, Better PRs with GitHub Copilot
 
 ::: notes
 Duration ~00:01
@@ -46,12 +43,6 @@ Welcome to this session on using AI to improve the pull request workflow. GitHub
 ---
 
 ## The Pull Request Lifecycle
-
-```
-Code Changes → PR Creation → Review → Merge
-```
-
-AI can assist at **every stage**:
 
 | Stage               | AI Assistance                  |
 | ------------------- | ------------------------------ |
@@ -91,7 +82,7 @@ GitHub Copilot can **draft your PR description** based on your diff:
 - Highlights **breaking changes**
 - Links related **issues and tickets**
 
-> 💡 Use `gh pr create` with Copilot in the CLI, or the **GitHub web editor** with AI suggestions
+> Use `gh pr create` with Copilot in the CLI, or the **GitHub web editor** with AI suggestions
 
 ::: notes
 Duration ~00:03
@@ -109,47 +100,6 @@ Duration ~00:03
 **Audience Interaction**: "How many of you write a detailed PR description every time? How many leave it mostly empty?"
 
 **Transition**: "Once the PR is open, AI continues to help on the review side."
-:::
-
----
-
-## Writing Effective PR Prompts
-
-Getting great AI output starts with **good context**:
-
-```markdown
-# AI-Assisted Pull Request Workflows || Pull Requests That Actually Get Reviewed
-
-## What changed
-
-- Brief bullet list of changes
-
-## Why it changed
-
-- Business context or issue reference
-
-## How to test
-
-- Step-by-step verification
-```
-
-Ask Copilot: _"Generate a PR description for these changes that explains the business impact"_
-
-::: notes
-Duration ~00:03
-
-**Key Points**:
-
-1. AI output quality is proportional to the context you provide
-2. Referencing the issue number or user story helps Copilot add business context
-3. Structuring the prompt mirrors the structure you want in the output
-
-**Template to Share**:
-Show the three-section template on screen. Encourage teams to add this as a PR template in `.github/pull_request_template.md` so Copilot has a consistent structure to fill.
-
-**Pro Tip**: Commit messages also feed into the PR description. Good commit messages mean better AI-generated PRs.
-
-**Transition**: "Let's look at how AI helps on the review side of the process."
 :::
 
 ---
@@ -248,182 +198,4 @@ Duration ~00:03
 **Audience Interaction**: "How many review cycles does a typical PR go through on your team? Could AI reduce that?"
 
 **Transition**: "Let's talk about automating the checks that run on every PR."
-:::
-
----
-
-## Automated PR Checks with AI
-
-Integrate AI into your **CI/CD pipeline**:
-
-```yaml
-# AI-Assisted Pull Request Workflows || Pull Requests That Actually Get Reviewed
-- name: Copilot Code Review
-  uses: github/copilot-code-review@v1
-
-- name: AI Security Scan
-  uses: github/advanced-security-action@v2
-```
-
-- Run AI review on **every PR automatically**
-- Block merges on **critical AI-flagged issues**
-- Post AI summary as a **PR comment**
-
-::: notes
-Duration ~00:03
-
-**Key Points**:
-
-1. Automating AI checks ensures consistency—every PR gets the same baseline review
-2. This is not a replacement for human review but a first pass that catches common issues
-3. Teams can configure severity thresholds to control which findings block merges
-
-**Architecture Note**: These actions run in GitHub Actions and post results as PR check statuses, integrating with existing branch protection rules.
-
-**Pro Tip**: Combine AI code review with conventional linting and testing so developers get a single, unified set of feedback.
-
-**Caution**: Avoid too many automated checks that create noise. Focus on high-signal rules.
-
-**Transition**: "Let's look at some real-world patterns teams are using today."
-:::
-
----
-
-## Real-World Patterns
-
-### Teams using AI for PRs report:
-
-- **40-60% reduction** in time-to-first-review
-- **Clearer PR descriptions** leading to fewer questions
-- **Faster onboarding** — new devs produce PR-ready code sooner
-- **Higher review quality** — reviewers catch logic issues, not style issues
-
-> Source: GitHub internal data, 2024–2025 Copilot usage studies
-
-::: notes
-Duration ~00:02
-
-**Key Points**:
-
-1. The biggest gains are in communication overhead, not code writing speed
-2. New team members benefit most because AI helps them match team standards faster
-3. Reviewers focus on what matters—architecture, correctness, maintainability—when AI handles style and common issues
-
-**Story to Share**: A team at a large enterprise reduced PR cycle time from 3 days to less than 1 day by combining AI-generated descriptions, automated checks, and Copilot Autofix. The change was primarily in the communication and iteration loop, not the code itself.
-
-**Transition**: "Before we wrap up, let's talk about best practices."
-:::
-
----
-
-## Best Practices
-
-✅ **Do**
-
-- Review and personalize AI-generated descriptions
-- Use Copilot Chat to ask questions during review
-- Enable Copilot Autofix for security alerts
-- Add a PR template to guide AI output
-
-❌ **Avoid**
-
-- Merging AI-generated descriptions without reading them
-- Treating AI review as a substitute for human judgment
-- Over-automating to the point of alert fatigue
-
-::: notes
-Duration ~00:03
-
-**Key Points**:
-
-1. AI is a collaborator, not an autopilot. Human oversight remains essential.
-2. The PR template acts as a contract between the author and the AI—providing structure improves output quality
-3. Alert fatigue is real. Configure automated checks to surface only actionable findings.
-
-**Common Mistakes**:
-
-- Teams that enable every available check end up ignoring them all
-- Developers who merge AI descriptions verbatim lose the "why" context that only they know
-- Over-reliance on AI review can erode human review skills over time
-
-**Audience Interaction**: "What guardrails does your team have around AI-generated content in PRs?"
-
-**Transition**: "Let's summarize what we covered and talk about next steps."
-:::
-
----
-
-## Getting Started
-
-### Start small, build habits:
-
-1. **Today**: Use Copilot to draft your next PR description
-2. **This week**: Try Copilot Chat during your next code review
-3. **This sprint**: Add a PR template to guide AI descriptions
-4. **This quarter**: Automate AI checks in your CI pipeline
-
-> 📖 Resources:
->
-> - [GitHub Copilot for PRs](https://docs.github.com/copilot)
-> - [GitHub Advanced Security](https://docs.github.com/en/code-security)
-> - [gh CLI](https://cli.github.com)
-
-::: notes
-Duration ~00:02
-
-**Key Points**:
-
-1. Gradual adoption works better than a big-bang rollout
-2. Starting with PR descriptions has no risk and immediate value
-3. As teams build confidence, they can layer in automated checks
-
-**Call to Action**: Encourage each attendee to write their next PR description with Copilot's help and note the difference.
-
-**Resources**: Point to the GitHub Copilot docs and the gh CLI documentation for hands-on exploration.
-
-**Transition**: "Let's open it up for questions."
-:::
-
----
-
-<!-- layout: Two Content -->
-
-## Summary
-
-### AI transforms the PR workflow
-
-**Without AI**
-
-- Manual PR descriptions
-- Line-by-line review only
-- Slow feedback loops
-- Inconsistent standards
-- Slower onboarding
-
-::: column
-
-**With AI**
-
-- Structured draft descriptions
-- AI summaries plus human logic review
-- Faster inline fix suggestions
-- Automated checks on every PR
-- Faster onboarding to team standards
-
-**Pull requests become a collaboration between humans and AI.**
-
-::: notes
-Duration ~00:02
-
-**Key Points**:
-
-1. The table reinforces the before/after contrast—anchor the value proposition
-2. The key insight: PRs shift from a documentation burden to a collaborative artifact
-3. The human role shifts from doing all the communication work to reviewing and approving AI-assisted communication
-
-**Closing Message**: AI doesn't change what a good PR looks like—it reduces the effort required to create one. The standards, the review culture, and the human judgment remain essential.
-
-**Final Question for Audience**: "What's one part of your PR workflow you'd like AI to help with first?"
-
-**Thank the audience and open for Q&A.**
 :::

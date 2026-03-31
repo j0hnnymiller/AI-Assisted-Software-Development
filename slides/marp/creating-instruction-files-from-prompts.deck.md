@@ -66,7 +66,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Creating Instruction Files from Prompts || The Prompt That Writes the Rules That Guide the Prompt
+
+---
 
 ## Creating Instruction Files from Prompts
 
@@ -83,7 +86,15 @@ Frame this as the payoff to the earlier prompt-authoring exercise. The class is 
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Prompt to Instruction Workflow
+
+- The prompt is the reusable source
+- The instruction file is the generated artifact
+- Review happens after generation, not instead of it
+
+::: column
 
 ```mermaid
 flowchart TB
@@ -94,10 +105,6 @@ flowchart TB
     E -- Yes --> F[Update prompt and regenerate]
     E -- No --> G[Keep or lightly edit artifact]
 ```
-
-- The prompt is the reusable source
-- The instruction file is the generated artifact
-- Review happens after generation, not instead of it
 
 ::: notes
 Duration ~00:01
@@ -114,14 +121,28 @@ Walk through the workflow from left to right and make the source-versus-artifact
 - Rich output is useful when the model understands the domain patterns already
 - Review trims, sharpens, and aligns the inferred detail to your actual standards
 
-> "Amazed at what it created. Architectural context. It's crazy."
->
-> Peter Goostree
-
 ::: notes
 Duration ~00:01
 
 This slide is about using the model's built-in knowledge deliberately instead of fighting it. Explain that a strong prompt does not need to spell out every sentence if the model already knows common structures like metadata blocks, validation sections, architecture guidance, and examples. The opportunity is speed: the model drafts broadly, and the human constrains the result to the team's true requirements.
+:::
+
+---
+
+## Inference Is Not Your Friend
+
+- AI can infer incorrectly or assume patterns that do not fit your domain
+- Broad inference may include outdated conventions or anti-patterns
+- Rich output requires careful review to catch subtle errors
+- Over-reliance on inference can lock you into assumptions you did not intend
+- Validation and testing still mandatory despite confident-sounding output
+
+**The catch**: inference saves time only if you actively curate the result.
+
+::: notes
+Duration ~00:01
+
+This slide balances the prior enthusiasm with healthy skepticism. Inference is powerful but not infallible. The model may confidently suggest structures, patterns, or details that sound plausible but do not match your actual requirements or constraints. Emphasize that comprehensive AI-generated content is a starting point, not a finished product. Teams must review, validate, and test to ensure the inferred details align with their standards and domain knowledge.
 :::
 
 ---
@@ -164,11 +185,13 @@ Make the tradeoff concrete. Direct edits are sometimes fine for quick cleanup, b
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Why Prompt Files Beat Simple Directives
 
 Simple directive:
 
-- "Create instruction file for Evergreen development"
+> Create instruction file for Evergreen development
 
 Prompt-file approach:
 
@@ -177,6 +200,8 @@ Prompt-file approach:
 - Requirements
 - Constraints
 - Expected deliverable
+
+::: column
 
 Benefits:
 

@@ -21,13 +21,14 @@ source: "johnmillerATcodemag-com"
 ---
 # Feature Flags and Test Suites || Ship It Behind a Flag and Pretend It's Not There Yet
 
+---
+
 ## Feature Flags & Test Suites
 
 Safe deployment strategies for brownfield modernization
-
-- Feature flags for managing work-in-progress
-- As-Is vs. To-Be test suites
-- Retiring flags with AI assistance
+  - Feature flags for managing work-in-progress
+  - As-Is vs. To-Be test suites
+  - Retiring flags with AI assistance
 
 ::: notes
 Introduce this section as a practical framework for deploying changes safely in existing codebases. The three pillars — feature flags, As-Is tests, and To-Be tests — work together to give teams confidence and control. Spend a moment framing the problem: production systems can't afford regressions, yet they must evolve. This is the solution. (~1 minute)
@@ -150,11 +151,11 @@ The two-phase pipeline is the operational heart of this strategy. Phase 1 is the
 
 Why this strategy pays off
 
-- ✅ Smaller To-Be suite keeps check-in procedures fast
-- ✅ Guides modernization efforts with clear milestones
-- ✅ Validates new practices and architectures incrementally
-- ✅ Safe continuous deployment throughout the project
-- ✅ Clear signal for when a feature is production-ready
+✅ Smaller To-Be suite keeps check-in procedures fast
+✅ Guides modernization efforts with clear milestones
+✅ Validates new practices and architectures incrementally
+✅ Safe continuous deployment throughout the project
+✅ Clear signal for when a feature is production-ready
 
 ::: notes
 Summarize the business value. The dual-suite approach isn't just a testing pattern — it's a delivery strategy. Teams can keep shipping to production while a large refactor is in progress. Stakeholders can see progress via To-Be test pass rates. Engineers get fast feedback on regressions. And when the feature is done, the flag flip is low-risk because everything has been validated. (~1 minute)
@@ -163,8 +164,6 @@ Summarize the business value. The dual-suite approach isn't just a testing patte
 ---
 
 ## Maintenance — After Production Release
-
-Completing the lifecycle
 
 **When a feature goes live:**
 
@@ -207,21 +206,3 @@ AI dramatically simplifies flag removal
 This is a great demonstration of AI as a force multiplier for brownfield work. Flag retirement used to be postponed because it was tedious — tracing every conditional, every test, every config reference. AI makes it fast. Encourage the audience to try this: pick an old flag in their codebase and ask Copilot to identify everything that needs to change to remove it. The results are often surprising in their completeness. (~2 minutes)
 :::
 
----
-
-## Key Takeaways
-
-The production-safe modernization playbook
-
-| Practice                      | Benefit                          |
-| ----------------------------- | -------------------------------- |
-| As-Is tests before changes    | Regression safety net            |
-| Feature flags for new code    | Zero bleed to production         |
-| To-Be tests with flags        | Track progress safely            |
-| Two-phase CI/CD               | Continuous deployment confidence |
-| Retire flags + graduate tests | Clean, maintainable codebase     |
-| AI-assisted flag retirement   | Low-effort, thorough removal     |
-
-::: notes
-Wrap up by connecting all the pieces. This isn't a collection of independent techniques — it's a system. Each element reinforces the others. As-Is tests make flag discipline meaningful. Flags make To-Be tests possible. The two-phase pipeline makes both visible. And AI makes the cleanup at the end practical. Leave the audience with a clear first step: pick one area of your codebase, write As-Is tests for it, and wrap your next change in a feature flag. (~1.5 minutes)
-:::
