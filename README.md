@@ -194,6 +194,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Uses the exercise template structure with objectives, activities, success criteria, and facilitator notes for each lab sequence
   - Provenance: [Chat log](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/summary.md)
 
+- **Tool Installation Exercise Deck** ([`slides/marp/exercise-tool-installation.deck.md`](slides/marp/exercise-tool-installation.deck.md))
+  - Five-slide exercise deck covering Git installation, GitHub account and CLI setup, VS Code installation, Copilot enablement, and markdown workflow verification
+  - Converts the long-form setup guide into hands-on labs with objectives, command checks, success criteria, and facilitator notes
+  - Provenance: [Chat log](ai-logs/2026/03/29/exercise-tool-installation-deck-20260329/conversation.md) | [Summary](ai-logs/2026/03/29/exercise-tool-installation-deck-20260329/summary.md)
+
 - **Evergreen Software Development Exercise Deck** ([`slides/marp/evergreen-software-development-exercise-deck.deck.md`](slides/marp/evergreen-software-development-exercise-deck.deck.md))
   - Two exercise slides covering evergreen core principles and common failure modes
   - Template-aligned structure with duration, objectives, activities, success criteria, and speaker notes
