@@ -9,6 +9,9 @@ sections:
       - slides\marp\about-code.deck.md
 
   - name: Repository
-      - slides\marp\exercise-fork-and-clone-repositories.deck.md
+    decks:
+      - slides\marp\20260323-aiasd-repos.deck.md
 
   - name: Tools
+    decks:
+      - slides\marp\exercise-tool-installation.deck.md

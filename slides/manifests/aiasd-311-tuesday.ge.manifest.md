@@ -5,7 +5,6 @@ sections:
     decks:
       - slides\marp\welcome-back.deck.md
       - slides\marp\copilot-pricing-licensing.deck.md
-      - slides\marp\vscode-configuration-tips.deck.md
 
   - name: LLM
     decks:
@@ -33,7 +32,6 @@ sections:
   - name: AI Assisted Documentation
     decks:
       - slides\marp\documentation-generation-code-analysis.deck.md
-      - slides\marp\exercise-c4-diagrams-from-code.deck.md
       - slides\marp\code-explanation-and-analysis.deck.md
 
   - name: Test Automation and Code Quality
