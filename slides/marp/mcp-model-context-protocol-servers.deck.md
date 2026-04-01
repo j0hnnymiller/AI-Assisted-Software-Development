@@ -54,9 +54,12 @@ Transition: "Let's start with what MCP actually is."
 
 ```mermaid
 flowchart LR
-    A[GitHub Copilot\nClient] -- MCP Protocol --> B[MCP Server]
+    A[GitHub Copilot\nClient]:::blue -- MCP Protocol --> B[MCP Server]:::green
     B -- Resources --> A
     B -- Tools --> A
+
+    classDef blue fill:#4A90E2,stroke:#333,color:#fff
+    classDef green fill:#50C878,stroke:#333,color:#fff
 ```
 
 ::: notes
@@ -83,7 +86,7 @@ Transition: "Let's look at the architecture in detail."
 ## Architecture: Five Components
 
 ```mermaid
-graph LR
+graph TB
   A[VS Code<br/>Copilot<br/>Client] <-->|JSON-RPC| B[MCP Server<br/>Transport Layer]
   B <-->|Protocol| C[Resources<br/>Files, APIs,<br/>Databases]
   style A fill:#0078d4,color:#fff
@@ -281,4 +284,3 @@ Common mistakes:
 
 Transition: "Let's put this into practice."
 :::
-

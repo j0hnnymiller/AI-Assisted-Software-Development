@@ -154,9 +154,8 @@ Clarify that skill loading is semantic rather than manual. If a prompt asks for 
 
 ::: column
 
-### 3. Context efficiency
-
-Only relevant skills load, keeping context smaller and more focused.
+3. Context efficiency
+  - Only relevant skills load, keeping context smaller and more focused.
 
 ::: notes
 Make the point that skills are operational playbooks, not style guides. They push Copilot away from open-ended reactive generation and toward more structured execution, especially when the task involves repeatable steps, tools, or examples. Spend about one minute here and explain that the context-efficiency angle matters because only the relevant capability modules are loaded instead of everything at once. Transition by comparing skills to other Copilot customization mechanisms.
@@ -208,4 +207,3 @@ Think of skills as operational recipes. The more deterministic and unambiguous t
 ::: notes
 Explain that skills are most valuable when a task is procedural, repeatable, and specific to a team's domain. These examples all share the property that there is a known workflow, supporting material, and a need for consistent execution, which is exactly where skills outperform generic chat guidance. Spend about one minute here and transition by closing with the main takeaways the audience should remember.
 :::
-
