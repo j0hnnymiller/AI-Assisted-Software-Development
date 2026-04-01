@@ -1,4 +1,4 @@
-﻿---
+---
 marp: true
 theme: default
 paginate: true
@@ -102,71 +102,4 @@ Provenance metadata
 
 ::: notes
 Remediation plans turn issues into action. They provide clarity, reduce risk, and ensure that modernization work is incremental and reversible.
-:::
-
----
-
-## Exercise: Generate Issues to Make the Codebase Evergreen
-
-Objectives
-Identify conformance gaps
-Convert gaps into actionable issues
-Apply consistent structure and provenance
-Prioritize issues based on risk and impact
-Activities
-Select a brownfield module or file.
-Compare it against the project's instruction file.
-Ask AI to identify conformance gaps.
-Convert each gap into a GitHub issue with:
-  - Title
-  - Description
-  - Violated rule
-  - Suggested remediation
-  - Acceptance criteria
-  - Provenance metadata
-Prioritize the issues.
-Success Criteria
-Issues are clear, actionable, and aligned with instruction files
-Provenance metadata is included
-Prioritization reflects real risk and effort
-Backlog is ready for team review
-
-::: notes
-Duration ~00:15
-
-Encourage participants to treat this as a real backlog-building session. The goal is clarity and actionability, not volume.
-:::
-
----
-
-## Exercise: Create an Implementation Plan
-
-Objectives
-Translate issues into a structured remediation plan
-Ensure changes are incremental and reversible
-Align modernization with evergreen principles
-Incorporate testing and rollback strategies
-Activities
-Select 2–3 issues from the previous exercise.
-For each issue, create a remediation plan including:
-  - Problem definition
-  - Root cause
-  - Proposed solution
-  - Step-by-step implementation
-  - Rollback plan
-  - Required test updates
-  - Documentation updates
-  - Provenance metadata
-Review plans with a partner.
-Success Criteria
-Plans are incremental, safe, and reversible
-Include clear steps and rollback strategies
-Align with evergreen development principles
-Include test and documentation updates
-Provenance metadata is present
-
-::: notes
-Duration ~00:20
-
-This exercise helps participants move from analysis to execution. The goal is to build modernization plans that are safe, thoughtful, and aligned with evergreen principles.
 :::

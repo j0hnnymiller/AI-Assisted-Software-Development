@@ -9,6 +9,8 @@ sections:
     decks:
       - slides\marp\getting-started-checklist.deck.md
       - slides\marp\starting-with-requirements.deck.md
+      - slides\marp\exercise-generate-business-requirements.deck.md
+      - slides\marp\exercise-generate-business-requirements-2.deck.md
       - slides\marp\exercise-business-requirements-generation.deck.md
 
   - name: Architecture Specification

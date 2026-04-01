@@ -21,27 +21,27 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Exercise: Create, Test, and Use an MCP Server || Exercise: Build the Bridge Between Copilot and Everything Else
+
+---
 
 ## Exercise: Create, Test, and Use a Local MCP Server
 
 **Objectives**
-
-- Create a minimal PowerShell MCP server that supports `initialize`, `tools/list`, and `tools/call`
-- Validate protocol behavior with an end-to-end smoke test script
-- Connect the server to VS Code and use the `echo` tool from Copilot
+  - Create a minimal PowerShell MCP server that supports `initialize`, `tools/list`, and `tools/call`
+  - Validate protocol behavior with an end-to-end smoke test script
+  - Connect the server to VS Code and use the `echo` tool from Copilot
 
 **Activities**
-
-- **Phase 1 - Create**: Build `scripts/mcp/simple-mcp-server.ps1` with JSON-RPC framing and MCP method routing
-- **Phase 2 - Test**: Run `scripts/mcp/test-simple-mcp-server.ps1` and verify initialize/tools/list/tools/call responses
-- **Phase 3 - Use**: Confirm `.mcp.json` points to the local server, then prompt Copilot to call the `echo` tool
+  1. **Create**: Build `scripts/mcp/simple-mcp-server.ps1` with JSON-RPC framing and MCP method routing
+  2. **Test**: Run `scripts/mcp/test-simple-mcp-server.ps1` and verify initialize/tools/list/tools/call responses
+  3. **Use**: Confirm `.mcp.json` points to the local server, then prompt Copilot to call the `echo` tool
 
 **Success Criteria**
-
-- Server starts without errors and responds with valid MCP JSON-RPC envelopes
-- Test output reports `MCP test passed.` and confirms all three checkpoints
-- Copilot can discover the `echo` tool and return the expected echoed text
+  - Server starts without errors and responds with valid MCP JSON-RPC envelopes
+  - Test output reports `MCP test passed.` and confirms all three checkpoints
+  - Copilot can discover the `echo` tool and return the expected echoed text
 
 ::: notes
 Duration ~00:30

@@ -1,4 +1,4 @@
-﻿---
+---
 marp: true
 theme: default
 paginate: true
@@ -169,70 +169,4 @@ Why cross-validate?
 Different models have different strengths.
 
 Cross-validation is a powerful guardrail for correctness, especially in brownfield systems.
-:::
-
----
-
-<!-- layout: Two Content -->
-
-## Exercise: Brownfield Code Documentation
-
-Objectives
-
-- Practice generating documentation for legacy code
-- Identify missing or unclear areas
-- Produce high-signal summaries
-
-Activities
-
-1. Select a brownfield module or file
-
-::: column
-
-2. Ask AI to generate:
-   - A summary
-   - Key responsibilities
-   - Inputs/outputs
-
-Success Criteria
-
-- Documentation is accurate and concise
-- Risks and gaps are clearly identified
-- Provenance is included
-
-::: notes
-Duration ~00:15
-
-This exercise helps participants build confidence in using AI to document unfamiliar code safely and quickly.
-:::
-
----
-
-## Exercise: Identifying Code Outside the Guardrails
-
-Objectives
-
-- Detect code that violates architectural rules
-- Identify patterns that contradict instruction files
-- Practice safe analysis workflows
-- Make a plan for remediation
-
-Activities
-
-1. Review the code
-2. Compare it against the instruction files
-3. Identify violations or risky patterns
-4. Propose safe remediation steps
-5. Document findings with provenance
-
-Success Criteria
-
-- Deviations are correctly identified
-- Remediation steps are safe and incremental
-- Documentation includes provenance
-
-::: notes
-Duration ~00:10
-
-This exercise reinforces the importance of guardrails and helps participants practice applying them to real code.
 :::

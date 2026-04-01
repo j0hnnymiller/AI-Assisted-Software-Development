@@ -23,7 +23,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Managing Instruction Files and Context Windows || You Only Have So Many Tokens - Use Them Wisely
+
+---
 
 ## Managing Instruction Files & Context Windows
 
@@ -45,7 +48,7 @@ Set expectations for a practical session focused on repeatable team workflows. E
 - Use reusable templates for recurring instruction patterns
 - Share proven prompts and instruction snippets through version control
 
-### Team Pattern
+**Team Pattern**
 
 Centralize policy, decentralize implementation guidance.
 
@@ -59,15 +62,13 @@ Explain that teams should avoid copy-paste drift by maintaining canonical files 
 
 Use scope to target behavior precisely with `applyTo` patterns.
 
+```yaml
 applyTo: "**/*"
-
 applyTo: "slides/marp/**"
-
 applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
+```
 
-### Rule of Thumb
-
-The narrower the scope, the lower the risk of unintended instruction collisions.
+**Rule of Thumb** The narrower the scope, the lower the risk of unintended instruction collisions.
 
 ::: notes
 Walk through broad-to-narrow scoping. Clarify that broad scopes are for policy and compliance, while narrow scopes are for stack-specific implementation rules.
@@ -82,11 +83,10 @@ Walk through broad-to-narrow scoping. Clarify that broad scopes are for policy a
 - Start fresh chats when switching goals or bounded contexts
 - Use lightweight check-ins: "What context are we currently using?"
 
-### Signals of Context Saturation
-
-- Repeated clarifying questions
-- Loss of earlier constraints
-- Increasingly generic responses
+Signals of Context Saturation
+  - Repeated clarifying questions
+  - Loss of earlier constraints
+  - Increasingly generic responses
 
 ::: notes
 Teach participants to recognize degradation early rather than trying to salvage overloaded context. A clean new chat is usually cheaper than continued correction loops.
@@ -101,11 +101,10 @@ Teach participants to recognize degradation early rather than trying to salvage 
 - Split large tasks into smaller, well-bounded sessions
 - Archive outcomes in files instead of keeping all context in-chat
 
-### Cost-Control Tactics
-
-- Reduce redundant restatement
-- Reuse instruction files over repeated long prompts
-- Move stable constraints into persistent instruction artifacts
+Cost-Control Tactics
+  - Reduce redundant restatement
+  - Reuse instruction files over repeated long prompts
+  - Move stable constraints into persistent instruction artifacts
 
 ::: notes
 Stress that token efficiency is not only cost control; it improves response quality by reducing noise. Show that structured prompts plus instruction files usually outperform long conversational buildup.
@@ -124,9 +123,8 @@ flowchart LR
   E --> F[Persist Output and Start Next Session]
 ```
 
-### Outcome
-
-Predictable outputs, lower token waste, and better team-level reuse.
+Outcome
+  - Predictable outputs, lower token waste, and better team-level reuse.
 
 ::: notes
 Use this as the operational model teams can adopt immediately. Recommend adding this flow to onboarding docs so new contributors learn instruction and context discipline from day one.

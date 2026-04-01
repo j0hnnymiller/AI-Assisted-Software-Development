@@ -1,0 +1,17 @@
+graph TD
+    A["1. File Being Edited<br/>(e.g., src/api.ts)"]
+    B["2. Instruction Files<br/>(applyTo pattern matching)"]
+    C["3. Active Agent<br/>(adds persona/context)"]
+    D["4. Prompt Files<br/>(reference additional instructions)"]
+    E["5. Manual @-mentions<br/>(explicit instruction references)"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+
+    style A fill:#e1f5ff
+    style B fill:#f3e5f5
+    style C fill:#ffe0b2
+    style D fill:#f1f8e9
+    style E fill:#ffe0e0

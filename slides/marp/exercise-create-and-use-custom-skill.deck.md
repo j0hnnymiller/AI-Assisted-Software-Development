@@ -21,27 +21,27 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Exercise: Create and Use a Custom Skill || Exercise: Teach Your AI a New Trick
+
+---
 
 ## Exercise: Create and Use a Custom Skill
 
 **Objectives**
-
-- Create a repository skill folder under `.github/skills/`
-- Author a `SKILL.md` file with a clear description and step-based procedure
-- Use Copilot with a matching prompt so the new skill can guide a real task
+  - Create a repository skill folder under `.github/skills/`
+  - Author a `SKILL.md` file with a clear description and step-based procedure
+  - Use Copilot with a matching prompt so the new skill can guide a real task
 
 **Activities**
-
-- **Phase 1 - Create**: Add `.github/skills/slide-quality-check/SKILL.md` with metadata (`name`, `description`) and a short procedure for reviewing Marp slides for provenance and speaker notes
-- **Phase 2 - Refine**: Improve the skill by adding strong trigger words such as `Marp`, `slide`, `speaker notes`, and `provenance`, then tighten the procedure so the output is deterministic
-- **Phase 3 - Use**: Prompt Copilot with a task such as `Review slides/marp/exercise-create-and-use-custom-agent.deck.md for slide metadata and ::: notes compliance` and compare the output to a normal untuned chat response
+  1. Create: Add `.github/skills/slide-quality-check/SKILL.md` with metadata (`name`, `description`) and a short procedure for reviewing Marp slides for provenance and speaker notes
+  2. Refine: Improve the skill by adding strong trigger words such as `Marp`, `slide`, `speaker notes`, and `provenance`, then tighten the procedure so the output is deterministic
+  3. Use: Prompt Copilot with a task such as `Review slides/marp/exercise-create-and-use-custom-agent.deck.md for slide metadata and ::: notes compliance` and compare the output to a normal untuned chat response
 
 **Success Criteria**
-
-- Skill folder and `SKILL.md` exist in `.github/skills/slide-quality-check/`
-- Copilot responds with a workflow aligned to the skill procedure instead of a generic answer
-- Student receives a structured review that checks metadata, notes coverage, and suggested fixes
+  - Skill folder and `SKILL.md` exist in `.github/skills/slide-quality-check/`
+  - Copilot responds with a workflow aligned to the skill procedure instead of a generic answer
+  - Student receives a structured review that checks metadata, notes coverage, and suggested fixes
 
 ::: notes
 Duration ~00:25

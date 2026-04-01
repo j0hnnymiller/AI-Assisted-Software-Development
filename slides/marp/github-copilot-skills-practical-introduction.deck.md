@@ -1,4 +1,4 @@
-﻿---
+---
 ai_generated: true
 model: "openai/gpt-5.4@unknown"
 operator: "johnmillerATcodemag-com"
@@ -25,13 +25,14 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # GitHub Copilot Skills: A Practical Introduction || Skills: The API for Telling Copilot How to Think
 
-<!-- _class: lead -->
+---
 
 ## GitHub Copilot Skills
 
-## What They Are, How to Define Them, and How They Change Copilot's Behavior
+>What They Are, How to Define Them, and How They Change Copilot's Behavior
 
 ::: notes
 Introduce this deck as a practical orientation to Copilot Skills rather than a deep internal architecture lecture. Explain that skills are useful because they turn repeated workflow knowledge into reusable repository assets that Copilot can load when a task matches. Spend about one minute here setting expectations that the session will cover what skills are, how they are structured, and why they meaningfully change Copilot behavior. Transition by defining the concept clearly before getting into authoring details.
@@ -48,11 +49,10 @@ Introduce this deck as a practical orientation to Copilot Skills rather than a d
 - Can be used across Copilot-compatible environments
 
 **Typical environments**
-
-- GitHub Copilot in VS Code
-- GitHub Copilot CLI
-- GitHub Copilot coding agent
-- other skills-compatible agents
+  - GitHub Copilot in VS Code
+  - GitHub Copilot CLI
+  - GitHub Copilot coding agent
+  - other skills-compatible agents
 
 ::: notes
 Explain that skills are best thought of as capability bundles rather than plain prompt snippets. Unlike generic instructions, they package the guidance, assets, and procedural knowledge needed for a repeatable class of work such as testing, migration, or auditing. Spend about one minute here and stress that automatic loading is the key feature because Copilot decides when the skill is relevant instead of requiring manual activation every time. Transition by showing why that matters operationally.
@@ -74,10 +74,11 @@ Frame this as a response to the institutional knowledge problem. Teams often rep
 
 ---
 
-## Skill FolderStructure
+## Skill Folder Structure
 
 A typical skill folder:
 
+```
 .github/
   skills/
     webapp-testing/
@@ -85,8 +86,9 @@ A typical skill folder:
       scripts/
       examples/
       resources/
+```
 
-SKILL.md is the required entry point.
+`SKILL.md` is the required entry point.
 
 ::: notes
 Explain that the structure is intentionally simple so teams can add skills without introducing a new toolchain. The folder name becomes the skill name, while `SKILL.md` acts as the main definition file that tells Copilot what the skill is for and how to execute it. Spend about one minute here and mention that the extra folders are optional but powerful because they let teams attach automation, examples, and reusable references. Transition by opening up the contents of `SKILL.md`.
@@ -106,13 +108,11 @@ description: >
   Use for topics related to testing, test, E2E.
 ---
 ```
-
 ```markdown
 ## Procedure
-
-1. Analyze the target code and determine testing strategy
-2. Create test files following the AAA pattern
-3. Run tests and verify results
+  1. Analyze the target code and determine testing strategy
+  2. Create test files following the AAA pattern
+  3. Run tests and verify results
 ```
 
 ::: notes
@@ -124,16 +124,14 @@ Walk through the two main parts of the file: metadata and procedure. The metadat
 ## How Copilot Loads Skills
 
 Copilot loads a skill when:
-
-- the prompt matches the skill name, keywords, or description
-- the task aligns with the defined procedure
-- the agent judges the skill to be relevant to the current goal
+  - the prompt matches the skill name, keywords, or description
+  - the task aligns with the defined procedure
+  - the agent judges the skill to be relevant to the current goal
 
 When loaded:
-
-- the instructions are injected into context
-- Copilot follows the procedure
-- scripts or resources can be used as part of the workflow
+  - the instructions are injected into context
+  - Copilot follows the procedure
+  - scripts or resources can be used as part of the workflow
 
 ::: notes
 Clarify that skill loading is semantic rather than manual. If a prompt asks for end-to-end testing, a testing-related skill may be loaded automatically because its metadata and procedure align with that request, and multiple skills may be combined when more than one is relevant. Spend about one minute here and emphasize that this selective loading improves focus while avoiding the cost of always including every possible instruction. Transition by showing how that changes Copilot's actual behavior.
@@ -145,18 +143,14 @@ Clarify that skill loading is semantic rather than manual. If a prompt asks for 
 
 ## How Skills Change Copilot's Behavior
 
-### 1. Procedural behavior
-
-Copilot follows the skill's steps to produce more consistent results.
-
-### 2. Expanded capabilities
-
-Skills can bring in:
-
-- scripts
-- templates
-- examples
-- domain-specific rules
+1. Procedural behavior
+  - Copilot follows the skill's steps to produce more consistent results.
+2. Expanded capabilities
+  - Skills can bring in:
+    - scripts
+    - templates
+    - examples
+    - domain-specific rules
 
 ::: column
 
@@ -181,37 +175,6 @@ Make the point that skills are operational playbooks, not style guides. They pus
 
 ::: notes
 Explain that skills complement the other instruction layers rather than replacing them. Custom instructions shape broad behavior, promptfiles package reusable requests, and chat modes define role-oriented interaction, while skills are the mechanism specifically designed for procedural workflows that need steps and attached resources. Spend about one minute here and transition by making the jump from concept to actual creation.
-:::
-
----
-
-<!-- layout: two-column -->
-
-## Creating Your First Skill
-
-### 1. Create the folder
-
-```bash
-mkdir -p .github/skills/my-skill
-```
-
-### 2. Add `SKILL.md`
-
-Include:
-
-- YAML metadata
-- Description
-- Procedure steps
-- Optional examples or scripts
-
-::: column
-
-### 3. Commit to your repository
-
-Copilot will automatically detect and load it when relevant.
-
-::: notes
-Skills are version-controlled like any other code artifact. This makes them auditable and reviewable-critical for team workflows and compliance. Spend about one minute here and present this as a low-friction authoring path: add a folder, write the skill, and let repository review processes improve it over time. Transition by showing what separates a good skill from a weak one.
 :::
 
 ---
@@ -246,17 +209,3 @@ Think of skills as operational recipes. The more deterministic and unambiguous t
 Explain that skills are most valuable when a task is procedural, repeatable, and specific to a team's domain. These examples all share the property that there is a known workflow, supporting material, and a need for consistent execution, which is exactly where skills outperform generic chat guidance. Spend about one minute here and transition by closing with the main takeaways the audience should remember.
 :::
 
----
-
-## Summary
-
-- Skills are **modular, procedural knowledge bundles** for Copilot
-- Defined via `.github/skills/<name>/SKILL.md`
-- Loaded **automatically** when relevant
-- Enable **repeatable**, **auditable**, **domain-specific** workflows
-- Work across Copilot agents and environments
-- Provide a powerful new layer of extensibility
-
-::: notes
-Skills represent a major evolution in Copilot's architecture-moving from reactive assistance to structured, agentic execution. They allow teams to encode institutional knowledge directly into the repository. Spend the final minute reinforcing that the practical value is repeatability: repository-scoped workflows that Copilot can discover and apply with less repeated prompting.
-:::

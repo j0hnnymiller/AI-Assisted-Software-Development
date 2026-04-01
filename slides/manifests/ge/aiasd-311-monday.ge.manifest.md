@@ -31,11 +31,18 @@ sections:
   - slides\marp\exercise-test-coverage-improvement.deck.md
   - slides\marp\exercise-test-driven-development.deck.md
   - slides\marp\multi-model-implementation-comparison.deck.md
+  - slides\marp\exercise-prompt-copilot-to-address-technical-debt.deck.md
+  - slides\marp\exercise-prompt-multiple-models-to-address-technical-debt.deck.md
   - slides\marp\evergreen-software-core-principles.deck.md
 
 - name: Adding AI Guardrails
   decks:
   - slides\marp\adding-ai-guardrails.deck.md
+  - slides\marp\exercise-copy-the-core-instructions.deck.md
+  - slides\marp\exercise-create-an-instruction-file-for-evergreen-development.deck.md
+  - slides\marp\exercise-context-related-issues.deck.md
+  - slides\marp\exercise-delegating-work-to-copilot.deck.md
+  - slides\marp\exercise-assigning-an-issue-to-copilot.deck.md
   - slides\marp\instruction-files.deck.md
   - slides\marp\scoped-nonscoped-instructions.deck.md
   - slides\marp\instruction-file-applyto-patterns.deck.md

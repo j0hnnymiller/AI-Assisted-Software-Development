@@ -1,4 +1,4 @@
-﻿---
+---
 marp: true
 theme: default
 paginate: true
@@ -101,39 +101,6 @@ Reduced risk of full-scale failures
 
 ::: notes
 Testing in production is not reckless when done correctly. With feature flags, observability, and controlled exposure, teams can validate changes under real conditions while minimizing risk.
-:::
-
----
-
-## Exercise: Implementing a Feature Flag
-
-Objectives
-Learn how to introduce a safe, reversible change
-Practice designing a feature flag workflow
-Understand As-Is and To-Be test implications
-Document rollout and retirement criteria
-Activities
-Select a small brownfield function or module.
-Identify a safe, incremental change to introduce.
-Design a feature flag with:
-
-- Name
-- Description
-- Rollout plan
-- Rollback plan
-- Retirement criteria
-  Write As-Is and To-Be test cases.
-  Document the change with provenance metadata.
-  Success Criteria
-  Feature flag is clearly defined and scoped
-  Rollout and rollback plans are explicit
-  As-Is and To-Be tests are correct and meaningful
-  Retirement criteria are documented
-
-::: notes
-Duration ~00:20
-
-Encourage participants to choose a real module from their brownfield system. The goal is to practice safe, reversible change — not to implement a large feature. Reinforce that feature flags are scaffolding, not permanent architecture.
 :::
 
 ---
@@ -413,35 +380,4 @@ Snapshot and contract tests
 
 ::: notes
 Test automation is the ultimate safety net. Without tests, AI-assisted development becomes guesswork. With tests, it becomes a controlled, predictable process.
-:::
-
----
-
-## Exercise: Building the Safety Nets
-
-Objectives
-Identify missing safety nets in a brownfield system
-Strengthen protection using AI and human review practices
-Apply test automation principles
-Produce actionable improvements
-Activities
-Select a brownfield module or file.
-Identify existing safety nets (tests, reviews, documentation).
-Ask AI to identify missing or weak safety nets.
-Strengthen the safety nets by:
-
-- Adding or updating tests
-- Drafting review checklists
-- Documenting architectural constraints
-  Share findings with a partner for validation.
-  Success Criteria
-  Missing safety nets are clearly identified
-  Proposed improvements are safe and incremental
-  Test coverage or clarity is improved
-  Review and documentation guardrails are strengthened
-
-::: notes
-Duration ~00:20
-
-Encourage participants to treat this as a real modernization planning session. The goal is not to fix everything — it's to identify gaps and build a roadmap for safer development.
 :::

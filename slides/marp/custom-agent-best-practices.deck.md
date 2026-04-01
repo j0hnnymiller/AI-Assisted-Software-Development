@@ -42,7 +42,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Custom Agent Best Practices || Your AI Agent Is Not a Swiss Army Knife
+
+---
 
 ## Start Simple
 
@@ -130,11 +133,10 @@ Make the point that real-world usage will reveal gaps that design-time reasoning
 - Team-wide agents should have stronger review and ownership
 
 **Typical shared scenarios**
-
-- security review
-- documentation updates
-- testing guidance
-- implementation planning
+  - security review
+  - documentation updates
+  - testing guidance
+  - implementation planning
 
 ::: notes
 Duration ~00:01
@@ -152,11 +154,10 @@ Explain that some workflows are too common to reinvent team by team. When an org
 - Roll out only after the team can predict how the agent responds
 
 **Validation checklist**
-
-1. prompt examples work as expected
-2. tool access matches intended scope
-3. outputs are useful and consistent
-4. failure cases are acceptable
+  [ ] prompt examples work as expected
+  [ ] tool access matches intended scope
+  [ ] outputs are useful and consistent
+  [ ] failure cases are acceptable
 
 ::: notes
 Duration ~00:01

@@ -1,4 +1,4 @@
-﻿---
+---
 marp: true
 theme: default
 paginate: true
@@ -147,33 +147,6 @@ The As-Is / To-Be pairing is a foundational technique for brownfield modernizati
 
 ::: notes
 No test suite in development can fully replicate production conditions. Shadow traffic — routing a copy of real requests to the new code path without affecting users — is the gold standard for validating AI-generated changes. Canary releases expose a small percentage of users to new behavior while monitoring error budgets. Emphasize that these techniques are layered: feature flags enable canaries; observability dashboards tell you when to stop. Ask: what does your current observability stack capture, and is it sufficient to detect a regression introduced by AI-generated code?
-:::
-
----
-
-## Exercise: Implementing a Feature Flag
-
-**Objectives**
-
-- Learn how to introduce a safe, reversible change
-- Practice designing a feature flag workflow
-- Understand As-Is and To-Be test implications
-- Document rollout and retirement criteria
-
-**Activities**
-
-1. Select a small brownfield function or module
-2. Identify a safe, incremental change to introduce
-3. Design a feature flag with name, description, rollout plan, rollback plan, and retirement criteria
-4. Write As-Is and To-Be test cases
-5. Document the change with provenance metadata
-
-**Success Criteria**: flag is scoped, rollout/rollback plans are explicit, tests are correct, retirement criteria are documented
-
-::: notes
-Duration ~00:20
-
-Give students 20 minutes. Encourage them to select something real from their own codebases if possible — the exercise is more meaningful with familiar code. The feature flag design is more important than the implementation: students should be able to articulate why the flag exists, who can see the new behavior, and what evidence will trigger retirement. Circulate and ask teams to describe their rollback plan. Debrief: what made the boundary hard to define? What surprised you about writing As-Is tests?
 :::
 
 ---
@@ -410,31 +383,4 @@ Human reviewers bring judgment that AI cannot: they know the business domain, th
 
 ::: notes
 Snapshot and contract tests deserve emphasis in brownfield contexts: snapshot tests capture the exact output of a function and fail if it changes; contract tests capture the API contract between services. Both are powerful as As-Is safety nets. AI is very good at generating unit and integration tests from existing code — but always verify that AI-generated tests actually detect the regressions they claim to detect by intentionally breaking the code and confirming the tests fail. A test that never fails provides false confidence.
-:::
-
----
-
-## Exercise: Building the Safety Nets
-
-**Objectives**
-
-- Identify missing safety nets in a brownfield system
-- Strengthen protection using AI and human review practices
-- Apply test automation principles
-- Produce actionable improvements
-
-**Activities**
-
-1. Select a brownfield module or file
-2. Identify existing safety nets (tests, reviews, documentation)
-3. Ask AI to identify missing or weak safety nets
-4. Strengthen by adding tests, drafting review checklists, documenting architectural constraints
-5. Share findings with a partner for validation
-
-**Success Criteria**: missing nets identified, improvements are safe and incremental, coverage or clarity improved, review and documentation guardrails are strengthened
-
-::: notes
-Duration ~00:20
-
-This exercise is the capstone of the combined module. Students apply all three sections simultaneously: they audit a real codebase, use AI to find gaps, and produce a concrete list of improvements. The partner validation step is important — it simulates the human-in-the-loop review process and often surfaces things one person missed. Debrief questions: what was missing that surprised you? How did AI's assessment of the safety nets compare to your own? What would you prioritize first? Encourage students to bring their findings back to their teams.
 :::

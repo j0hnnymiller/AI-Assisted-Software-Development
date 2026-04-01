@@ -21,29 +21,29 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Exercise: Create and Use a Custom Agent || Exercise: Build the AI That Does Your Job (Just This One Task)
+
+---
 
 ## Exercise: Create and Use a Custom Agent
 
 **Objectives**
-
-- Create a repository-scoped custom agent file in `.github/agents/`
-- Configure a clear agent role, description, and tool scope
-- Use the agent in Copilot Chat to complete a targeted task
+  - Create a repository-scoped custom agent file in `.github/agents/`
+  - Configure a clear agent role, description, and tool scope
+  - Use the agent in Copilot Chat to complete a targeted task
 
 **Activities**
-
-1. Create: Add `.github/agents/test-specialist.agent.md` with frontmatter (`name`, `description`, `tools`) and focused behavior instructions
-2. Refine: Tighten scope by clarifying what the agent should do and refuse, then save and re-open chat
-3. Use: Select the new custom agent in Copilot Chat and run a prompt such as “Review this feature and propose a test plan with unit and integration tests”
+  1. Create: Add `.github/agents/test-specialist.agent.md` with frontmatter (`name`, `description`, `tools`) and focused behavior instructions
+  2. Refine: Tighten scope by clarifying what the agent should do and refuse, then save and re-open chat
+  3. Use: Select the new custom agent in Copilot Chat and run a prompt such as “Review this feature and propose a test plan with unit and integration tests”
 
 ::: column
 
 **Success Criteria**
-
-- Agent appears in Copilot Chat agent picker after file creation
-- Agent responses stay within the declared role and tool boundaries
-- Student receives a usable, structured output aligned to the prompt goal
+  - Agent appears in Copilot Chat agent picker after file creation
+  - Agent responses stay within the declared role and tool boundaries
+  - Student receives a usable, structured output aligned to the prompt goal
 
 ::: notes
 Duration ~00:25

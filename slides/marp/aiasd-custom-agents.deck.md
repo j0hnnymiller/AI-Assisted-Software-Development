@@ -4,20 +4,457 @@ theme: default
 paginate: true
 ---
 
-# AIASD Custom Agents || Meet the squad
+# Custom Agents Overview || The Org Chart Your AI Actually Respects
+
+---
+
+## Where to Create Custom Agents
+
+GitHub.com
+  - Navigate to github.com/copilot/agents
+  - Available at repository, organization, or enterprise level
+  - Template-based creation process
+
+IDEs
+  - VS Code: Configure Custom Agents menu
+  - .github/agents/ directory for workspace agents
+
+::: notes
+Duration ~00:03
+
+Delivery Instructions:
+
+Show the GitHub.com interface if doing a live demo
+
+Emphasize that agents created on GitHub can be used across all environments
+
+IDE-based agents are more convenient for quick personal use
+
+Key Decision Point: Help audience understand when to use each approach:
+
+GitHub: For team-wide or shared agents
+
+Organization/Enterprise: For standardized agents across multiple repos
+
+IDE: For personal experimentation and workspace-specific agents
+
+Technical Detail:
+
+GitHub agents go in .github/agents/ directory
+
+Organization/enterprise agents go in root agents/ directory of .github-private repo
+
+IDE user profile agents are local to that machine
+
+Common Question: “Can I use the same agent in both GitHub and my IDE?” Answer: Yes! Agents created on GitHub are automatically available in supported IDEs.
+
+Transition: “Let's walk through creating an agent on GitHub, which is the most common workflow.”
+:::
+
+---
+
+## Creating in VS Code
+
+1. Open GitHub Copilot Chat
+2. Agents dropdown → Configure Custom Agents…
+3. Click Create new custom agent
+4. Choose location:
+  - Workspace: .github/agents/ (project-specific)
+  - User profile: Personal agents (all workspaces)
+5. Enter filename
+6. Configure in .agent.md file
+7. Use Configure Tools… button for tool selection
+8. Set model: property for AI model preference
+
+::: notes
+Duration ~00:04
+
+VS Code Advantages:
+
+Integrated tool configuration UI
+
+Immediate testing in the same environment
+
+Better for rapid iteration and experimentation
+
+User profile agents for personal productivity
+
+Workspace vs User Profile Decision:
+
+Workspace (.github/agents/):
+
+Shared with team when committed
+
+Project-specific context
+
+Version controlled
+
+Recommended for team agents
+
+User Profile:
+
+Available across all your projects
+
+Not version controlled
+
+Personal productivity tools
+
+Examples: personal note-taking agent, time tracker
+
+Configure Tools Button:
+
+Opens visual dialog showing all available tools
+
+Includes built-in tools (read, edit, search, etc.)
+
+Shows MCP server tools if configured
+
+Click OK to add selected tools to YAML
+
+Model Property:
+
+Override default model per agent
+
+Useful for cost/performance tradeoffs
+
+Example: Use faster model for simple tasks, advanced model for complex reasoning
+
+Live Demo Suggestion: Show the Configure Tools dialog and model dropdown
+
+Common Questions:
+
+“Do I need to restart VS Code?” - No, agents are detected automatically
+
+“Can I edit the YAML directly?” - Yes, the UI is just a helper
+
+Transition: “The process is similar in JetBrains, Eclipse, and Xcode with slight UI variations. Now let's focus on what matters most: the agent configuration itself.”
+:::
+
+---
+
+## Using Custom Agents
+
+On GitHub.com
+  - Agents panel/tab dropdown → Select your custom agent
+  - Assign custom agent to issues
+  - Noted in PR descriptions when used
+
+In IDEs
+  - Chat window dropdown → Select agent
+  - Switch agents mid-conversation
+  - Access specialized configurations per task
+
+GitHub Copilot CLI
+  - `/agent` command to select agent
+  - Reference agent in prompts
+  - Command-line argument support
+
+::: notes
+Duration ~00:05
+
+GitHub.com Usage:
+
+Agents Panel Workflow:
+
+Open Copilot agents panel or tab
+
+Click dropdown (currently shows “Coding Agent”)
+
+Select your custom agent from list
+
+Enter your prompt or task
+
+Agent works within its configured scope
+
+Issue Assignment:
+
+Assign Copilot to an issue
+
+Choose custom agent from dropdown
+
+Agent follows its specialized instructions
+
+Great for repetitive tasks (bug triage, documentation updates)
+
+PR Tracking:
+
+When Copilot creates a PR, it notes which agent was used
+
+Helps with attribution and understanding the approach
+
+Example: “This PR was created by @copilot using the test-specialist agent”
+
+IDE Usage Benefits:
+
+Mid-Conversation Switching:
+
+Start with planning agent
+
+Switch to implementation agent
+
+Switch to review agent
+
+Maintain conversation context
+
+Task-Specific Workflows:
+
+Use planning agent for architecture decisions
+
+Use coding agent for implementation
+
+Use test agent for test coverage
+
+Use security agent for vulnerability review
+
+Use doc agent for documentation
+
+Example IDE Workflow:
+
+User: "I need to add user authentication"
+[Select implementation-planner agent]
+Agent: Creates detailed plan with tasks
+
+User: "Now implement the first task"
+[Switch to coding agent]
+Agent: Implements based on plan
+
+User: "Add tests for this"
+[Switch to test-specialist agent]
+Agent: Creates comprehensive test suite
+
+CLI Usage (Advanced):
+
+Basic Agent Selection:
+
+gh copilot /agent test-specialist "add tests for authentication"
+
+In Prompts:
+
+gh copilot "using security-reviewer, check this PR for vulnerabilities"
+
+Via Arguments:
+
+gh copilot --agent=doc-writer "document the API endpoints"
+
+Best Practices:
+
+Choose the Right Agent:
+
+Match agent expertise to task
+
+Don't use generic agent when specialized one exists
+
+Provide Context:
+
+Custom agents still need context
+
+Reference files, requirements, constraints
+
+Iterate:
+
+Refine agent instructions based on results
+
+Agents improve as you tune them
+
+Document Usage:
+
+Tell team which agents to use for which tasks
+
+Include in CONTRIBUTING.md or team wiki
+
+Common Scenarios:
+
+Code Review: Use review agent on PRs
+
+Legacy Refactoring: Use planning agent first, then coding agent
+
+Documentation Sprint: Use doc agent across multiple files
+
+Security Audit: Use security agent on entire codebase
+
+Test Coverage Drive: Use test agent to fill coverage gaps
+
+Transition: “Let's wrap up with some best practices and resources to help you get started.”
+:::
+
+---
+
+## Best Practices
+
+- Start Simple: Create one agent for a specific pain point
+- Be Specific: Define clear boundaries and responsibilities
+- Restrict Tools: Only enable tools the agent needs
+- Iterate: Refine instructions based on real usage
+- Share: Create org/enterprise agents for common tasks
+- Document: Include usage examples in agent description
+- Test: Validate agent behavior before team rollout
+
+::: notes
+Duration ~00:04
+
+Detailed Best Practices:
+
+1. Start Simple:
+
+Don't try to create every agent at once
+
+Identify ONE repetitive task that's painful
+
+Create an agent for that specific task
+
+Validate it works before creating more
+
+Example: If code reviews always miss test coverage, start with test-specialist
+
+2. Be Specific:
+
+Vague: “Help with coding”
+
+Specific: “Write unit tests following Jest conventions for React components”
+
+Include examples of good behavior
+
+Specify what NOT to do
+
+Bad example: “Be helpful”
+
+Good example: “Focus only on test files in tests directories. Never modify source files in src/ directory.”
+
+3. Restrict Tools:
+
+More tools ≠ better agent
+
+Restrict to enforce boundaries
+
+Planning agent doesn't need “run” tool
+
+Doc agent doesn't need “debug” tool
+
+Security agent might only need “read” and “search”
+
+Benefits:
+
+Faster execution (fewer options to consider)
+
+Clear scope (can't do things outside role)
+
+Safer (can't accidentally deploy or delete)
+
+4. Iterate:
+
+Agents aren't “write once and forget”
+
+Monitor what they produce
+
+Collect feedback from team
+
+Refine instructions based on real usage
+
+Example iteration:
+
+V1: “Write tests”
+
+V2: “Write tests with descriptive names”
+
+V3: “Write tests with descriptive names following pattern: describe-context-behavior”
+
+V4: Add specific Jest matchers to prefer
+
+5. Share:
+
+Don't create duplicate agents across repos
+
+Use organization-level agents for standards
+
+Examples:
+
+Code style checker (enforces org conventions)
+
+Security reviewer (org security policies)
+
+Doc generator (org documentation standards)
+
+Benefits:
+
+Consistency across projects
+
+Single place to maintain
+
+Easier onboarding
+
+6. Document:
+
+Good description is crucial
+
+Include examples in the agent markdown
+
+Add usage instructions
+
+Example:
+
+## Usage Examples
+
+❌ Bad: "Fix the tests"
+✅ Good: "Add unit tests for the UserService class covering success and error cases"
+
+❌ Bad: "Make it better"
+✅ Good: "Increase test coverage for auth module to 80%"
+
+7. Test:
+
+Try agent on sample tasks before team rollout
+
+Test edge cases
+
+Verify it respects boundaries
+
+Check tool usage is appropriate
+
+Get feedback from 2-3 team members first
+
+Make it easy to rollback (version control!)
+
+Anti-Patterns to Avoid:
+
+Too Generic: “Help with everything” - defeats the purpose
+
+Too Narrow: “Only fix typos in README” - waste of an agent
+
+No Constraints: All tools enabled, no guidelines - unpredictable
+
+Copy-Paste: Duplicating built-in agents - adds confusion
+
+Set and Forget: Never updating based on experience
+
+No Testing: Rolling out to team without validation
+
+Success Metrics:
+
+Time saved on repetitive tasks
+
+Consistency in output quality
+
+Reduction in review comments for that area
+
+Team adoption rate
+
+Positive feedback from users
+
+Transition: “You now have everything you need to create your first custom agent. Here are resources to dive deeper.”
+:::
 
 ---
 
 ## AIASD Custom Agents
 
-Product Manager
-Solution Architect
-Senior Developer
-Technical Writer
-Security Reviewer
-DevOps Engineer
-DevTest Engineer
-SRE (Site Reliability Engineer)
+- Product Manager
+- Solution Architect
+- Senior Developer
+- Technical Writer
+- Security Reviewer
+- DevOps Engineer
+- DevTest Engineer
+- SRE (Site Reliability Engineer)
 
 ::: notes
 This presentation covers 8 critical roles in modern software development. Each persona has unique needs when working with GitHub Copilot Chat. We'll explore both the skills needed and responsibilities required. Focus on practical, actionable guidance for each role. Tables format allows easy comparison between skills and responsibilities.
@@ -157,16 +594,16 @@ SREs can leverage AI for faster incident response and resolution. Incident respo
 
 Prompt File | Description
 --- | ---
-architecture-design.prompt.md | Comprehensive system architecture designs
-pattern-analysis.prompt.md | Architectural pattern analysis and recommendations
-technology-evaluation.prompt.md | Technology evaluation and selection
-scalability-planning.prompt.md | Scalability and capacity planning
-integration-design.prompt.md | System integration and API design
-security-architecture.prompt.md | Security controls and threat mitigation
-performance-analysis.prompt.md | Performance analysis and bottleneck identification
-migration-strategy.prompt.md | System migration and modernization planning
-compliance-check.prompt.md | Compliance validation and standards alignment
-risk-assessment.prompt.md | Architectural risk assessment and mitigation
+`architecture-design.prompt.md` | Comprehensive system architecture designs
+`pattern-analysis.prompt.md` | Architectural pattern analysis and recommendations
+`technology-evaluation.prompt.md` | Technology evaluation and selection
+`scalability-planning.prompt.md` | Scalability and capacity planning
+`integration-design.prompt.md` | System integration and API design
+`security-architecture.prompt.md` | Security controls and threat mitigation
+`performance-analysis.prompt.md` | Performance analysis and bottleneck identification
+`migration-strategy.prompt.md` | System migration and modernization planning
+`compliance-check.prompt.md` | Compliance validation and standards alignment
+`risk-assessment.prompt.md` | Architectural risk assessment and mitigation
 
 ::: notes
 Prompt: create prompt files for the interactive commands in the #file:solution-architect.chatmode.md. call the prompt files when the interactive commands are triggered

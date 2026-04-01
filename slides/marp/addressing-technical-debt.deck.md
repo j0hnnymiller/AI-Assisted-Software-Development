@@ -1,4 +1,4 @@
-﻿---
+---
 marp: true
 theme: default
 paginate: true
@@ -75,93 +75,4 @@ Maintains traceability between issue → PR → commits
 
 ::: notes
 ::: notes**Overview**  When you assign an issue to GitHub Copilot on GitHub.com, Copilot behaves like a managed junior developer. It doesn't magically “solve” the issue — it follows a structured workflow grounded in the issue description and repository context.**Reads the Issue and Context**  Copilot parses the issue body, labels, linked discussions, and any referenced files. The quality and specificity of the issue strongly influence the quality of the output.**Generates a Work Plan**  Copilot drafts an implementation plan. This may include steps, architectural notes, or a breakdown of required changes. It uses repository code, patterns, and conventions to stay consistent.**Creates or Updates Pull Requests**  Copilot opens a PR with proposed changes. These changes often include code, tests, and documentation updates. It may also update an existing PR if the issue is already in progress.**Responds to Feedback**  When maintainers leave comments, Copilot can revise the PR. It treats comments as instructions, similar to how a junior developer would respond to review notes.**Maintains Traceability**  Copilot links the PR back to the issue, references commits properly, and ensures the work is tracked through GitHub's normal workflow. This supports auditability and provenance — something you and I both care about deeply.**Key Takeaway**  Copilot doesn't replace engineering judgment. It accelerates the mechanical parts of implementation while relying on humans for direction, review, and acceptance.:::
-:::
-
----
-
-## Exercise: Prompt Copilot to Address Technical Debt
-
-Objectives
-Practice writing high-signal prompts
-Apply architectural constraints
-Produce safe, incremental remediation requests
-Activities
-Select a small piece of technical debt.
-Write a prompt that includes:
-  - Description of the debt
-  - Constraints and rules
-  - Expected behavior
-  - Required tests and documentation
-Ask Copilot to propose a remediation.
-Review the output for correctness.
-Success Criteria
-Prompt is clear, scoped, and actionable
-Copilot produces a safe, incremental change
-Output aligns with architectural rules
-Provenance metadata is included
-
-::: notes
-Duration ~00:10
-
-Encourage participants to choose a real example from their brownfield system. The goal is clarity and safety, not complexity.
-:::
-
----
-
-## Exercise: Assigning an Issue to Copilot
-
-Objectives
-Convert technical debt into a structured issue
-Provide Copilot with actionable context
-Practice writing acceptance criteria
-Activities
-Select a technical debt item.
-Create a GitHub-style issue with:
-  - Title
-  - Description
-  - Impact and risk
-  - Acceptance criteria
-  - Provenance metadata
-Assign the issue to Copilot.
-Review Copilot's proposed remediation.
-Success Criteria
-Issue is clear and well-structured
-Acceptance criteria are testable
-Copilot produces a relevant draft
-Provenance metadata is present
-
-::: notes
-Duration ~00:10
-
-This exercise reinforces the workflow of treating Copilot as a junior developer who receives tasks and produces drafts.
-:::
-
----
-
-## Exercise: Delegating Work to Copilot
-
-Objectives
-Practice delegating multi-step tasks
-Ensure Copilot follows architectural rules
-Validate AI-generated remediation plans
-Activities
-Select a multi-step technical debt item.
-Ask Copilot to:
-  - Analyze the problem
-  - Propose a remediation plan
-  - Generate code changes
-  - Update tests
-  - Update documentation
-Review Copilot's output.
-Identify missing context or risks.
-Success Criteria
-Delegation prompt is complete and structured
-Copilot produces a multi-step plan
-Output is safe, incremental, and reversible
-Human review identifies any gaps
-
-::: notes
-Duration ~00:15
-
-This exercise builds confidence in delegating larger tasks while maintaining safety and architectural alignment. Emphasize that humans remain the final reviewers.
 :::

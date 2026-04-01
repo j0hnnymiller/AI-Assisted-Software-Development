@@ -34,6 +34,8 @@ sections:
 - name: AI Assisted Documentation
   decks:
   - slides\marp\documentation-generation-code-analysis.deck.md
+  - slides\marp\exercise-brownfield-code-documentation.deck.md
+  - slides\marp\exercise-create-a-prompt-file.deck.md
   - slides\marp\code-explanation-and-analysis.deck.md
 
 - name: Test Automation and Code Quality
@@ -41,5 +43,6 @@ sections:
   - slides\marp\test-automation-and-code-quality.deck.md
   - slides\marp\exercise-test-automation-quality.deck.md
   - slides\marp\creating-robust-testing-frameworks.deck.md
+  - slides\marp\exercise-strengthening-your-testing-framework.deck.md
   - slides\marp\feature-flags-and-test-suites.deck.md
   - slides\marp\testing-in-production.deck.md

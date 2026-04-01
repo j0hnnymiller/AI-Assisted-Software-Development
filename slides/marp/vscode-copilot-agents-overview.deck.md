@@ -18,11 +18,8 @@ total_duration: "00:10:00"
 ai_log: "ai-logs/2026/02/06/vscode-agents-slides-20260206/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+
 # VS Code Copilot Agents Overview || Agents: Copilot With a To-Do List
-
-## VS Code Copilot Agents Overview
-
-### Autonomous AI-Powered Coding Assistance
 
 ::: notes
 Welcome to this presentation on VS Code Copilot Agents. This session will introduce you to the revolutionary concept of autonomous AI agents that can handle complete coding tasks end-to-end.
@@ -41,7 +38,7 @@ Welcome to this presentation on VS Code Copilot Agents. This session will introd
 
 ## What Are Agents?
 
-**Agents handle complete coding tasks end-to-end, not just suggestions**
+Agents handle complete coding tasks end-to-end, not just suggestions
 
 - **Understand** your project context
 - **Make changes** across multiple files
@@ -100,23 +97,19 @@ This comparison table helps audience understand when to use each agent type.
 
 ## Local Agents: Interactive & Immediate
 
-**Best for:** Real-time collaboration and exploratory tasks
-
 ✅ **Strengths:**
-
-- Interactive chat interface
-- Full workspace access
-- All VS Code tools and extensions
-- Custom agent personas (reviewer, tester, etc.)
-- BYOK model support
+  - Interactive chat interface
+  - Full workspace access
+  - All VS Code tools and extensions
+  - Custom agent personas (reviewer, tester, etc.)
+  - BYOK model support
 
 ::: column
 
 ❌ **Limitations:**
-
-- No team collaboration
-- Direct workspace modification
-- Requires active interaction
+  - No team collaboration
+  - Direct workspace modification
+  - Requires active interaction
 
 ::: notes
 Duration ~00:04
@@ -150,23 +143,19 @@ Local agents are perfect for brainstorming and tasks requiring immediate feedbac
 
 ## Background Agents: Autonomous Execution
 
-**Best for:** Well-defined tasks without interruption
-
 ✅ **Strengths:**
-
-- Non-interactive autonomous operation
-- Git worktree isolation
-- No workspace conflicts
-- Custom agent personas
+  - Non-interactive autonomous operation
+  - Git worktree isolation
+  - No workspace conflicts
+  - Custom agent personas
 
 ::: column
 
 ❌ **Limitations:**
-
-- No real-time VS Code context
-- Limited to CLI-provided models
-- No MCP or extension tools
-- No team collaboration
+  - No real-time VS Code context
+  - Limited to CLI-provided models
+  - No MCP or extension tools
+  - No team collaboration
 
 ::: notes
 Duration ~00:04
@@ -202,23 +191,19 @@ Background agents excel at implementing well-defined plans without interrupting 
 
 ## Cloud Agents: Team Collaboration
 
-**Best for:** Team workflows and pull request integration
-
 ✅ **Strengths:**
-
-- GitHub integration
-- Pull request collaboration
-- Remote infrastructure scaling
-- Partner agent options (Claude, Codex)
-- MCP server access in cloud
+  - GitHub integration
+  - Pull request collaboration
+  - Remote infrastructure scaling
+  - Partner agent options (Claude, Codex)
+  - MCP server access in cloud
 
 ::: column
 
 ❌ **Limitations:**
-
-- No VS Code built-in tools
-- No local runtime context
-- Asynchronous only
+  - No VS Code built-in tools
+  - No local runtime context
+  - Asynchronous only
 
 ::: notes
 Duration ~00:05
@@ -305,7 +290,7 @@ The sessions management is what makes the multi-agent workflow practical and org
 4. **Direct Assignment** from TODO comments
 5. **GitHub Integration** via issues and mentions
 
-**Pro Tip:** Multiple sessions can run in parallel! 🚀
+**Pro Tip:** Multiple sessions can run in parallel!
 
 ::: notes
 Duration ~00:04
@@ -392,11 +377,11 @@ This slide addresses a critical concern: how to safely review and integrate agen
 
 **Leverage each agent type's strengths**
 
-Local Agent (Planning)
-    ⬇ Hand-off
-Background Agent (Implementation)
-    ⬇ Delegate
-Cloud Agent (Team Review)
+```mermaid
+graph TD
+    A["Local Agent<br/>(Planning)"] -->|Hand-off| B["Background Agent<br/>(Implementation)"]
+    B -->|Delegate| C["Cloud Agent<br/>(Team Review)"]
+```
 
 **Example:**
   Planning → Proof of Concept → Production Implementation
@@ -445,17 +430,15 @@ This slide demonstrates the power of agent collaboration and specialization.
 ## Key Takeaways & Next Steps
 
 **Getting Started:**
-
-- Enable agents in VS Code settings (`chat.agent.enabled`)
-- Start with local agents for exploration
-- Try background agents for focused tasks
-- Use cloud agents for team collaboration
+  - Enable agents in VS Code settings (`chat.agent.enabled`)
+  - Start with local agents for exploration
+  - Try background agents for focused tasks
+  - Use cloud agents for team collaboration
 
 **Resources:**
-
-- [Agents Tutorial](https://code.visualstudio.com/docs/copilot/agents/agents-tutorial)
-- [Custom Agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
-- [Background Agents Guide](https://code.visualstudio.com/docs/copilot/agents/background-agents)
+  - [Agents Tutorial](https://code.visualstudio.com/docs/copilot/agents/agents-tutorial)
+  - [Custom Agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
+  - [Background Agents Guide](https://code.visualstudio.com/docs/copilot/agents/background-agents)
 
 ::: notes
 Duration ~00:04
@@ -496,4 +479,3 @@ This closing slide provides clear next steps and resources for continued learnin
 - Schedule follow-up sessions for advanced topics
 - Create team guidelines for agent usage
 :::
-

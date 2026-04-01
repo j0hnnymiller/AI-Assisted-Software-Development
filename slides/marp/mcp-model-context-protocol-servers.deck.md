@@ -24,9 +24,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Model Context Protocol Servers || Giving Your AI a USB Hub
 
-<!-- _class: lead -->
+---
 
 ## MCP: Model Context Protocol Servers
 
@@ -93,7 +94,6 @@ graph LR
 ::: column
 
 **Components**
-
 - **Client** — VS Code / GitHub Copilot sends requests
 - **Server** — MCP server provides capabilities and data
 - **Protocol** — standard message format between both sides
@@ -115,19 +115,16 @@ Transition: "Let's see why you'd want MCP in your workflow."
 ## Use Cases
 
 **External Data Access**
-
-- Query live databases and include results in Copilot's context
-- Pull from internal APIs or documentation systems
+  - Query live databases and include results in Copilot's context
+  - Pull from internal APIs or documentation systems
 
 **Tool Integration**
-
-- Control infrastructure tools like Terraform or Kubernetes directly from the editor
-- Interact with cloud provider APIs without leaving VS Code
+  - Control infrastructure tools like Terraform or Kubernetes directly from the editor
+  - Interact with cloud provider APIs without leaving VS Code
 
 **Custom Solutions**
-
-- Build a server for proprietary internal systems
-- Expose institutional data that no public server covers
+  - Build a server for proprietary internal systems
+  - Expose institutional data that no public server covers
 
 ::: notes
 Duration ~00:01
@@ -175,17 +172,14 @@ Transition: "Now let's find the right server for your needs."
 ## Finding MCP Servers
 
 **VS Code Extension Gallery**
-
-- Search `MCP` in the extensions panel
-- Read the description to confirm what resources and tools are exposed
+  - Search `MCP` in the extensions panel
+  - Read the description to confirm what resources and tools are exposed
 
 **Model Context Protocol Website**
-
-- `modelcontextprotocol.io` — canonical registry and documentation
+  - `modelcontextprotocol.io` — canonical registry and documentation
 
 **GitHub Community Repository**
-
-- `github.com/modelcontextprotocol/servers` — community-maintained collection with usage examples
+  - `github.com/modelcontextprotocol/servers` — community-maintained collection with usage examples
 
 ::: notes
 Duration ~00:01
@@ -199,62 +193,14 @@ Transition: "Let's install your first MCP server."
 
 ---
 
-## Installing Your First MCP Server
-
-**Example: GitHub MCP Server**
-
-1. Install the server package:
-
-```bash
-npm install -g @modelcontextprotocol/server-github
-```
-
-2. Configure in VS Code `settings.json`:
-
-```json
-{
-  "mcp.servers": {
-    "github": {
-      "command": "mcp-server-github",
-      "env": { "GITHUB_TOKEN": "${env:GITHUB_TOKEN}" }
-    }
-  }
-}
-```
-
-3. Reload VS Code — the MCP server starts automatically
-
-> **Token budget**: each enabled server uses ~128 tokens of context window — enable only what you need
-
-::: notes
-Duration ~00:05
-
-Walk through the real example — emphasize it's just package installation. Install like any npm/pip package, configure with credentials and options, and servers start automatically with VS Code.
-
-Common issues:
-
-- Missing credentials: Set environment variables before starting VS Code
-- Package not found: Check npm registry or install from GitHub directly
-- Permission errors: Verify token scopes match what the server requires
-
-Available servers to mention: @modelcontextprotocol/server-filesystem, @modelcontextprotocol/server-postgres, @modelcontextprotocol/server-sqlite
-
-Token budget note: This is often overlooked. Each enabled MCP server occupies a slice of Copilot's context window even when not actively used — treat them like browser tabs: useful when open for a reason, wasteful if left open by default.
-
-Transition: "Now let's see Copilot use this context."
-:::
-
----
-
 <!-- layout: Two Content -->
 
 ## Copilot + MCP Integration
 
 **Enhanced capabilities**
-
-- **Context-aware completions** — access project-specific patterns
-- **Tool use** — Copilot can invoke server tools on your behalf
-- **Security boundaries** — controlled, audited resource access
+  - **Context-aware completions** — access project-specific patterns
+  - **Tool use** — Copilot can invoke server tools on your behalf
+  - **Security boundaries** — controlled, audited resource access
 
 ::: column
 
@@ -296,22 +242,20 @@ Transition: "Let's talk about configuring these safely."
 ## Configuring Servers Securely
 
 **Security checklist**
-
-- Use environment variables for credentials
-- Grant minimum necessary permissions
-- Review server source before installing
-- Configure allowed paths and resources explicitly
-- Never use admin credentials when reader access is sufficient
+  - Use environment variables for credentials
+  - Grant minimum necessary permissions
+  - Review server source before installing
+  - Configure allowed paths and resources explicitly
+  - Never use admin credentials when reader access is sufficient
 
 ::: column
 
 **Best practices**
-
-- Start with read-only servers
-- Use scoped tokens such as `repo:read`
-- Enable only the capabilities you actually need
-- Test in non-production first
-- Keep servers updated
+  - Start with read-only servers
+  - Use scoped tokens such as `repo:read`
+  - Enable only the capabilities you actually need
+  - Test in non-production first
+  - Keep servers updated
 
 ::: notes
 Duration ~00:04
@@ -338,74 +282,3 @@ Common mistakes:
 Transition: "Let's put this into practice."
 :::
 
----
-
-## Exercise: Using MCP Servers
-
-**Quick Start (30 minutes)**
-
-1. Install the MCP extension in VS Code (search "MCP" in marketplace)
-2. Pick **one** server to start: **GitHub** or **Filesystem**
-3. Set credentials in your environment variables
-4. Add server config to `settings.json`
-5. Reload VS Code and test with Copilot
-
-```bash
-# Model Context Protocol Servers || Giving Your AI a USB Hub
-npm install -g @modelcontextprotocol/server-filesystem
-```
-
-```json
-{
-  "mcp.servers": {
-    "filesystem": {
-      "command": "mcp-server-filesystem",
-      "args": ["${workspaceFolder}"]
-    }
-  }
-}
-```
-
-Ask Copilot: _"What files are in this project?"_
-
-**Resources:** `github.com/modelcontextprotocol/servers` | `modelcontextprotocol.io`
-
-::: notes
-Duration ~00:03
-
-Make it feel achievable — "you can do this today."
-
-Don't try to install all servers at once. Pick ONE that solves a current pain point. Test thoroughly before adding more.
-
-Recommended first server by use case:
-
-- Filesystem: if you want Copilot to understand your project structure
-- GitHub: if you want context from issues and PRs
-- Postgres: if you want schema-aware SQL generation
-
-Active community: Discord and GitHub Discussions are helpful for issues.
-
-Transition: "Questions about getting started?"
-:::
-
----
-
-## Summary
-
-- MCP gives Copilot a standardized way to reach **external data and tools**
-- Architecture: client ↔ protocol ↔ server exposing **resources** and **tools**
-- Pre-built servers cover most common integrations; custom servers handle the rest
-- Find servers via VS Code gallery, `modelcontextprotocol.io`, or GitHub
-- Install as extensions, **enable selectively** to manage token cost (~128 per server)
-
-::: notes
-Duration ~00:01
-
-Recap the key takeaways. The audience should leave with three things:
-
-1. An understanding of what MCP is and why it exists
-2. Knowledge of where to find servers for their specific tools
-3. Awareness of the token overhead so they configure their environment deliberately
-
-Invite questions or suggest exploring the VS Code gallery as a hands-on follow-up.
-:::

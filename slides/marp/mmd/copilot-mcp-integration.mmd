@@ -1,0 +1,12 @@
+sequenceDiagram
+  participant Dev as Developer
+  participant Copilot as GitHub Copilot
+  participant MCP as MCP Server
+  participant Res as Resources
+
+  Dev->>Copilot: "Create user auth"
+  Copilot->>MCP: Request context
+  MCP->>Res: Fetch schema, patterns
+  Res-->>MCP: Return context
+  MCP-->>Copilot: Structured context
+  Copilot-->>Dev: Code matching your patterns

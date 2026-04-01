@@ -1,21 +1,4 @@
-﻿---
-ai_generated: true
-model: "openai/gpt-5.3-codex@2026-03-15"
-operator: "johnmillerATcodemag-com"
-chat_id: "code-quality-analysis-exercise-20260315"
-prompt: |
-  create an exercise slide, using the #file:exercise-template.md, for "Code Quality Analysis".
-  Use AI to identify code in the @workspace that is not evergreen.
-started: "2026-03-15T21:06:00Z"
-ended: "2026-03-15T21:12:00Z"
-task_durations:
-  - task: "workspace analysis"
-    duration: "00:03:00"
-  - task: "slide authoring"
-    duration: "00:03:00"
-total_duration: "00:06:00"
-ai_log: "ai-logs/2026/03/15/code-quality-analysis-exercise-20260315/conversation.md"
-source: "johnmillerATcodemag-com"
+---
 marp: true
 theme: default
 paginate: true
@@ -88,7 +71,3 @@ Analyze the workspace for code or content that is not evergreen. Focus on date-c
 - At least 3 high-impact evergreen refactors proposed.
 - Clear justification connecting each fix to maintainability and future reuse.
 :::
-
----
-
-

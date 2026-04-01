@@ -3,7 +3,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Controlling Copilot Instruction Files || Who's Allowed at the AI Dinner Table?
+
+---
 
 ## Controlling GitHub Copilot Files
 
@@ -21,55 +24,13 @@ This session assumes you're familiar with basic GitHub Copilot usage and have wo
 
 ---
 
-## The applyTo Field: Pattern Matching
-
-Three Levels of Scope Control
-
-- Global - Everything
-
-applyTo: "**/*"
-
-- Directory-Specific - Slides only
-
-applyTo: "slides/marp/**"
-
-- Type-Specific - Code files only
-
-applyTo: "**/*.{cs,ts,js,py,java,go,rb}"
-
-Result: Only matching instruction files are included in context
-
-::: notes
-The applyTo field uses glob patterns, which give you three levels of granularity for controlling instruction scope.
-
-Level 1: Global patterns like “\*/” apply to every file in your repository. Use this sparingly for truly universal instructions like AI provenance requirements or company-wide coding standards. The ai-assisted-output.instructions.md file is a perfect example - it applies everywhere because every AI-generated output needs provenance metadata.
-
-Level 2: Directory-specific patterns like “slides/marp/\*\*” target a specific folder hierarchy. This is ideal for instructions that only make sense in certain parts of your codebase. Marp slide instructions only matter when you're creating slides, so they target that directory exclusively.
-
-Level 3: Type-specific patterns like “\*/.{cs,ts,js}” apply to specific file extensions regardless of location. This is perfect for language-specific instructions, architectural patterns, or technology-specific guidelines. Vertical slice architecture instructions might only apply to backend code files.
-
-The matching happens automatically when you:
-
-Open a file in the editor
-
-Reference a file in chat
-
-Run a command that targets specific files
-
-Pro tip: You can combine these patterns. For example, “src/\*/.test.{ts,js}” would only match test files in the src directory. This allows very precise control over which instructions apply where.
-
-One important caveat: If an instruction file has NO applyTo field, it won't be automatically included at all. You'd need to manually reference it with @-mentions.
-:::
-
----
-
 <!-- layout: Two Content -->
 
 ## Prompt Files: Reference, Don't Control
 
 Prompt files execute tasks, but they do not control automatic instruction inclusion.
 
-**CRITICAL**: All AI-generated artifacts MUST comply with .github/instructions/ai-assisted-output.instructions.md
+**CRITICAL**: All AI-generated artifacts MUST comply with `.github/instructions/ai-assisted-output.instructions.md`
 
 ::: column
 
@@ -115,7 +76,7 @@ The prompt metadata can specify output paths, which helps the system know what f
 
 Agents create specialized context, not instruction filters.
 
-.github/agents/security-analyzer.agent.md
+`.github/agents/security-analyzer.agent.md`
 
 Focus: Code security, vulnerability detection
 
@@ -170,15 +131,25 @@ One important note: If your agent references specific instruction files in its c
 
 Understanding the complete context assembly
 
-1. File Being Edited (e.g., src/api.ts)
-   ↓
-2. Instruction Files (applyTo pattern matching)
-   ↓
-3. Active Agent (if any - adds persona/context)
-   ↓
-4. Prompt Files (can reference additional instructions)
-   ↓
-5. Manual @-mentions (explicit instruction references)
+```mermaid
+graph TD
+    A["1. File Being Edited<br/>(e.g., src/api.ts)"]
+    B["2. Instruction Files<br/>(applyTo pattern matching)"]
+    C["3. Active Agent<br/>(adds persona/context)"]
+    D["4. Prompt Files<br/>(reference additional instructions)"]
+    E["5. Manual @-mentions<br/>(explicit instruction references)"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+
+    style A fill:#e1f5ff
+    style B fill:#f3e5f5
+    style C fill:#ffe0b2
+    style D fill:#f1f8e9
+    style E fill:#ffe0e0
+```
 
 ::: notes
 Now let's bring it all together with the complete control hierarchy. This shows the order in which different elements contribute to the context that gets submitted with your Copilot prompts.
@@ -211,6 +182,7 @@ Pro tip: Use levels 1-2 for 90% of your work (file-driven automatic inclusion), 
 ## Practical Control Strategies
 
 Four approaches to managing instruction context
+
 Strategy | Use Case | Example
 --- | --- | ---
 Specific Patterns | Domain-specific guidance | src/**/\*.ts for backend TypeScript
@@ -253,4 +225,3 @@ Implementation tip: Document your strategy in your repository's README so the te
 
 Remember: You can see which instructions are active by checking the Copilot context window or by asking Copilot “which instruction files are currently active?”
 :::
-
