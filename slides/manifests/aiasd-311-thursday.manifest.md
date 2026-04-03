@@ -13,8 +13,8 @@ sections:
     decks:
       - slides\marp\understanding-legacy-code.deck.md
       - slides\marp\safe-brownfield-coding.deck.md
-      - slides\marp\exercise-implementing-a-feature-flag.deck.md
-      - slides\marp\exercise-building-the-safety-nets.deck.md
+      - slides\marp\exercise\exercise-implementing-a-feature-flag.deck.md
+      - slides\marp\exercise\exercise-building-the-safety-nets.deck.md
 
   - name: AI Implementation Workflow
     decks:
@@ -24,23 +24,23 @@ sections:
   - name: Building a Backlog
     decks:
       - slides\marp\conformance-and-gap-analysis.deck.md
-      - slides\marp\exercise-create-project-requirement.deck.md
-      - slides\marp\exercise-create-an-implementation-plan.deck.md
+      - slides\marp\exercise\exercise-create-project-requirement.deck.md
+      - slides\marp\exercise\exercise-create-an-implementation-plan.deck.md
       - slides\marp\building-a-backlog.deck.md
-      - slides\marp\exercise-building-the-backlog.deck.md
+      - slides\marp\exercise\exercise-building-the-backlog.deck.md
       - slides\marp\implementation-plan-prioritization.deck.md
 
   - name: Addressing Technical Debt
     decks:
       - slides\marp\addressing-technical-debt.deck.md
-      - slides\marp\exercise-generate-instruction-files.deck.md
-      - slides\marp\exercise-generate-issues-to-make-the-codebase-evergreen.deck.md
-      - slides\marp\exercise-identifying-code-outside-the-guardrails.deck.md
-      - slides\marp\exercise-code-quality-analysis.deck.md
-      - slides\marp\exercise-addressing-technical-debt-with-copilot.deck.md
+      - slides\marp\exercise\exercise-generate-instruction-files.deck.md
+      - slides\marp\exercise\exercise-generate-issues-to-make-the-codebase-evergreen.deck.md
+      - slides\marp\exercise\exercise-identifying-code-outside-the-guardrails.deck.md
+      - slides\marp\exercise\exercise-code-quality-analysis.deck.md
+      - slides\marp\exercise\exercise-addressing-technical-debt-with-copilot.deck.md
 
   - name: Multi-Implementation Comparison
     decks:
       - slides\marp\multi-model-implementation-comparison.deck.md
-      - slides\marp\exercise-prompt-copilot-to-address-technical-debt.deck.md
-      - slides\marp\exercise-prompt-multiple-models-to-address-technical-debt.deck.md
+      - slides\marp\exercise\exercise-prompt-copilot-to-address-technical-debt.deck.md
+      - slides\marp\exercise\exercise-prompt-multiple-models-to-address-technical-debt.deck.md

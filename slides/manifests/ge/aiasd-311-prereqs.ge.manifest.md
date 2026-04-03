@@ -14,4 +14,4 @@ sections:
 
   - name: Tools
     decks:
-      - slides\marp\exercise-tool-installation.deck.md
+      - slides\marp\exercise\exercise-tool-installation.deck.md

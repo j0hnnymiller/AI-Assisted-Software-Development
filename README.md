@@ -113,22 +113,22 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes an operational workflow blueprint and implementation checklist
   - Provenance: [Chat log](ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/summary.md)
 
-- **Exercise: Technology Inventory & Instruction Generation** ([`slides/marp/exercise-technology-inventory-instruction-generation.deck.md`](slides/marp/exercise-technology-inventory-instruction-generation.deck.md))
+- **Exercise: Technology Inventory & Instruction Generation** ([`slides/marp/exercise/exercise-technology-inventory-instruction-generation.deck.md`](slides/marp/exercise/exercise-technology-inventory-instruction-generation.deck.md))
   - Exercise slide covering technology inventory creation, concurrent background sessions, simultaneous instruction generation, and session management workflows
   - Template-aligned with objectives, activities, success criteria, and facilitator notes
   - Provenance: [Chat log](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/summary.md)
 
-- **Exercise: Creating Prompt Files** ([`slides/marp/exercise-creating-prompt-files.deck.md`](slides/marp/exercise-creating-prompt-files.deck.md))
+- **Exercise: Creating Prompt Files** ([`slides/marp/exercise/exercise-creating-prompt-files.deck.md`](slides/marp/exercise/exercise-creating-prompt-files.deck.md))
   - Exercise slide covering baseline prompt execution, guided rerun with instruction files, and structured comparison of the resulting outputs
   - Emphasizes prompt structure, context isolation, reproducibility, and the impact of instruction files on output quality
   - Provenance: [Chat log](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/summary.md)
 
-- **Exercise: Create, Test, and Use a Local MCP Server** ([`slides/marp/exercise-mcp-server-create-test-use.deck.md`](slides/marp/exercise-mcp-server-create-test-use.deck.md))
+- **Exercise: Create, Test, and Use a Local MCP Server** ([`slides/marp/exercise/exercise-mcp-server-create-test-use.deck.md`](slides/marp/exercise/exercise-mcp-server-create-test-use.deck.md))
   - Hands-on exercise slide guiding students through building a PowerShell MCP server, validating it with an end-to-end test script, and invoking it through Copilot
   - Covers MCP JSON-RPC method flow (`initialize`, `tools/list`, `tools/call`), smoke-test validation, and local `.mcp.json` integration
   - Provenance: [Chat log](ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/summary.md)
 
-- **Exercise: Create and Use a Custom Agent** ([`slides/marp/exercise-create-and-use-custom-agent.deck.md`](slides/marp/exercise-create-and-use-custom-agent.deck.md))
+- **Exercise: Create and Use a Custom Agent** ([`slides/marp/exercise/exercise-create-and-use-custom-agent.deck.md`](slides/marp/exercise/exercise-create-and-use-custom-agent.deck.md))
   - Hands-on exercise slide guiding students through creating a repository-scoped custom agent, refining role boundaries, and running it in Copilot Chat
   - Covers agent file structure, tool-scope decisions, and practical output validation through a targeted prompt
   - Provenance: [Chat log](ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/summary.md)
@@ -138,7 +138,7 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Explains how Copilot agents differ from inline suggestions and when to use interactive, background, cloud, or third-party agent flows
   - Provenance: [Chat log](ai-logs/2026/02/06/vscode-agents-slides-20260206/conversation.md) | [Summary](ai-logs/2026/02/06/vscode-agents-slides-20260206/summary.md)
 
-- **Exercise: Create and Use a Custom Skill** ([`slides/marp/exercise-create-and-use-custom-skill.deck.md`](slides/marp/exercise-create-and-use-custom-skill.deck.md))
+- **Exercise: Create and Use a Custom Skill** ([`slides/marp/exercise/exercise-create-and-use-custom-skill.deck.md`](slides/marp/exercise/exercise-create-and-use-custom-skill.deck.md))
   - Hands-on exercise slide guiding students through creating a repository skill, refining trigger phrases, and using it with a matching Copilot prompt
   - Covers `.github/skills/<name>/SKILL.md`, description-driven relevance matching, and procedural output design for repeatable slide review workflows
   - Provenance: [Chat log](ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/summary.md)
@@ -179,22 +179,22 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes speaker notes and a reusable prompt template covering constraints, tests, docs, and provenance expectations
   - Provenance: [Chat log](ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/summary.md)
 
-- **Technical Debt Copilot Exercise Sequence** ([`slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md`](slides/marp/exercise-addressing-technical-debt-with-copilot.deck.md))
+- **Technical Debt Copilot Exercise Sequence** ([`slides/marp/exercise/exercise-addressing-technical-debt-with-copilot.deck.md`](slides/marp/exercise/exercise-addressing-technical-debt-with-copilot.deck.md))
   - Three-slide exercise set covering prompt authoring, GitHub issue assignment, and multi-step delegation for technical debt remediation with Copilot
   - Uses the exercise template structure with duration, objectives, activities, success criteria, and facilitator notes on every slide
   - Provenance: [Chat log](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/summary.md)
 
-- **Repository Fork and Clone Exercise Deck** ([`slides/marp/exercise-fork-and-clone-repositories.deck.md`](slides/marp/exercise-fork-and-clone-repositories.deck.md))
+- **Repository Fork and Clone Exercise Deck** ([`slides/marp/exercise/exercise-fork-and-clone-repositories.deck.md`](slides/marp/exercise/exercise-fork-and-clone-repositories.deck.md))
   - Three-slide exercise deck covering course repository forking, brownfield branch setup, PAT configuration, and multi-repo fork validation
   - Uses the exercise template structure with objectives, activities, success criteria, command examples, and facilitator notes for each exercise
   - Provenance: [Chat log](ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/summary.md)
 
-- **GitHub Copilot VS Code Workflows Exercise Deck** ([`slides/marp/exercise-github-copilot-vscode-workflows.deck.md`](slides/marp/exercise-github-copilot-vscode-workflows.deck.md))
+- **GitHub Copilot VS Code Workflows Exercise Deck** ([`slides/marp/exercise/exercise-github-copilot-vscode-workflows.deck.md`](slides/marp/exercise/exercise-github-copilot-vscode-workflows.deck.md))
   - Four-slide exercise deck covering Copilot onboarding, context management, chat workflow organization, and Ask/Edit/Agent mode selection
   - Uses the exercise template structure with objectives, activities, success criteria, and facilitator notes for each lab sequence
   - Provenance: [Chat log](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/summary.md)
 
-- **Tool Installation Exercise Deck** ([`slides/marp/exercise-tool-installation.deck.md`](slides/marp/exercise-tool-installation.deck.md))
+- **Tool Installation Exercise Deck** ([`slides/marp/exercise/exercise-tool-installation.deck.md`](slides/marp/exercise/exercise-tool-installation.deck.md))
   - Five-slide exercise deck covering Git installation, GitHub account and CLI setup, VS Code installation, Copilot enablement, and markdown workflow verification
   - Converts the long-form setup guide into hands-on labs with objectives, command checks, success criteria, and facilitator notes
   - Provenance: [Chat log](ai-logs/2026/03/29/exercise-tool-installation-deck-20260329/conversation.md) | [Summary](ai-logs/2026/03/29/exercise-tool-installation-deck-20260329/summary.md)
