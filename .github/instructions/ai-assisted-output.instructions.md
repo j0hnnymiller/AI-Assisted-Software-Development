@@ -192,7 +192,7 @@ All AI chat transcripts and key outputs must be saved under `ai-logs/` in a date
 - Base folder: `ai-logs/`
 - Structure: `ai-logs/yyyy/mm/dd/<chat-id>/`
 - Required files per chat:
-  - `conversation.md` — Full prompt/response transcript with timestamps (REQUIRED)
+  - `conversation.md` — Full prompt/response transcript with timestamps and explicit reasoning for both why each change was made and why the chosen implementation approach was used (REQUIRED)
   - `summary.md` — Session summary: objectives, key decisions, artifacts, outcomes (REQUIRED)
   - `artifacts/` — Generated files not committed elsewhere (OPTIONAL)
 
@@ -258,6 +258,11 @@ Implementation Requirements for Copilot:
 <!-- Repeat for each exchange -->
 
 ## Work Burst Closure
+
+**Reasoning (Required)**:
+
+- **Change Rationale**: Why this change was necessary (business, bug, compliance, usability, or technical driver)
+- **Implementation Rationale**: Why this implementation approach was selected over alternatives
 
 **Artifacts Produced**:
 
