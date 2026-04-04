@@ -7,7 +7,7 @@ sections:
 - name: Intro
   decks:
   - slides\marp\welcome-to-aiasd.deck.md
-  - slides\marp\john-michael-miller-intro.deck.md
+  - slides\marp\instructors\john-michael-miller-intro.deck.md
   - slides\marp\introductions.deck.md
   - slides\marp\about-code.deck.md
   - slides\marp\daily-themes.deck.md

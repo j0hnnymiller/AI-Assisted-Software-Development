@@ -170,3 +170,24 @@ Capture this warning as expected behavior in test notes.
 - Warning Expected: "layout 'Definitely Not A Real Layout' not found in template"
 - Behavior: Generator prints warning, falls back to standard title+content
   :::
+
+---
+
+<!-- _class: hide -->
+
+## Hidden Slide Branch
+
+This slide verifies that Phase 2 marks hide-class slides as hidden in the generated PPTX.
+
+::: notes
+This slide is the regression sentinel for hidden-slide behavior.
+Keep it in the deck to ensure Phase 2 still honors the hide class marker.
+
+**Expected PPTX Rendering:**
+
+- Layout: Title and Content
+- Title Placeholder: "Hidden Slide Branch"
+- Content Placeholder: Body paragraph text
+- Hidden: true (slide XML attribute show="0")
+- Notes: This notes block content
+  :::
