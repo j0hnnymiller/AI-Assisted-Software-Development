@@ -49,7 +49,17 @@ Set up the next slides where each risk is unpacked.
 
 ## Traceability Gaps
 
-- Missing lineage from requirements → design → code → tests
+```mermaid
+graph TB
+    A[Requirements] --> B[Design]
+    B --> C[Code]
+    C --> D[Tests]
+    style A fill:#01579b,color:#fff
+    style B fill:#e65100,color:#fff
+    style C fill:#4a148c,color:#fff
+    style D fill:#1b5e20,color:#fff
+```
+
 - No deterministic mapping from prompt to output
 - Difficulty reconstructing how code was produced
 - Weak auditability without additional controls
@@ -175,6 +185,8 @@ Explain that AI-generated code must still meet all lifecycle and risk requiremen
 
 ---
 
+<!-- _class: hide -->
+
 ## Enterprise & Financial Standards
 
 **SOC 2**
@@ -198,6 +210,8 @@ Explain that SOX and SOC 2 care deeply about change control and auditability.
 :::
 
 ---
+
+<!-- _class: hide -->
 
 ## Privacy Regulations
 

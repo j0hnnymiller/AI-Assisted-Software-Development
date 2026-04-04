@@ -31,5 +31,5 @@ Mention that we'll cover risks, standards, and concrete mitigations.
 ::: notes
 Walk through the agenda quickly.
 Highlight that the session builds from risk → standards → mitigations.
-Encourage attendees to jot down questions for the Q&A.
+Encourage attendees to jot down questions for the Q&A. 
 :::

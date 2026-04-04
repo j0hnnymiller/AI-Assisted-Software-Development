@@ -120,6 +120,8 @@ Assessment workflow, artifact demo, and AI guardrails
 
 ---
 
+<!-- _class: hide -->
+
 ## Phase 1 To 2: Clause Analysis Pipeline
 
 | Phase | What Happens | Main Output |
@@ -137,6 +139,8 @@ Assessment workflow, artifact demo, and AI guardrails
 :::
 
 ---
+
+<!-- _class: hide -->
 
 ## Phase 3 To 5: Synthesis And Decision Outputs
 
@@ -171,6 +175,28 @@ Assessment workflow, artifact demo, and AI guardrails
 - Position the artifact set as a documentation system, not a single report.
 - Each artifact has a distinct job and should be treated as part of the compliance evidence package.
 - Mention that the completion summary also documents the execution timeline and acceptance checks.
+:::
+
+---
+
+## Demo Slide: Decision Artifacts
+
+**Open in sequence:**
+
+- `assessments/assessment.1/D0003329_REV_03_Final.IEC62304_Executive_Summary.md`
+- `assessments/assessment.1/Gap_Analysis_and_Remediation_Recommendations.md`
+- `assessments/assessment.1/Projected_Compliance_Improvement_Analysis.md`
+
+What to show:
+
+- Executive summary for leadership framing and top-10 gap view
+- Remediation document for implementation detail and dependency mapping
+- Projection analysis for scenario planning: 73%, 82%, 92%
+
+::: notes
+- This sequence shows how the same assessment supports different decision horizons.
+- The executive summary is for prioritization, the remediation plan is for execution, and the projection analysis is for resource tradeoffs.
+- If time is short, at least show the recommended Scenario B audit-ready path.
 :::
 
 ---
@@ -213,29 +239,7 @@ Demo points:
 
 ---
 
-## Demo Slide: Decision Artifacts
-
-**Open in sequence:**
-
-- `assessments/assessment.1/D0003329_REV_03_Final.IEC62304_Executive_Summary.md`
-- `assessments/assessment.1/Gap_Analysis_and_Remediation_Recommendations.md`
-- `assessments/assessment.1/Projected_Compliance_Improvement_Analysis.md`
-
-What to show:
-
-- Executive summary for leadership framing and top-10 gap view
-- Remediation document for implementation detail and dependency mapping
-- Projection analysis for scenario planning: 73%, 82%, 92%
-
-::: notes
-- This sequence shows how the same assessment supports different decision horizons.
-- The executive summary is for prioritization, the remediation plan is for execution, and the projection analysis is for resource tradeoffs.
-- If time is short, at least show the recommended Scenario B audit-ready path.
-:::
-
----
-
-## AI Guardrails: Before And During Assessment
+## Before And During Assessment
 
 - Use standardized prompts rather than ad hoc prompting
 - Load the governing SOP and the standard text explicitly
@@ -243,7 +247,7 @@ What to show:
 - Require structured filenames and assessment folders
 - Capture exact prompt text, model, timestamps, and source references
 
-**Guardrail intent:** make the process reproducible before content quality is judged.
+**Intent:** make the process reproducible before content quality is judged.
 
 ::: notes
 - Frame these as process controls rather than preferences.
@@ -253,7 +257,7 @@ What to show:
 
 ---
 
-## AI Guardrails: Artifact-Level Controls
+## Artifact-Level
 
 | Guardrail | Evidence In Repo |
 | --- | --- |
@@ -277,9 +281,9 @@ What to show:
 
 **Open in sequence:**
 
-- `.github/instructions/ai-assisted-output.instructions.md`
-- `assessments/assessment.1/ASSESSMENT_COMPLETION.md`
-- `ai-logs/2026/04/01/assessment-1-comprehensive-20260401/conversation.md`
+`.github/instructions/ai-assisted-output.instructions.md`
+`assessments/assessment.1/ASSESSMENT_COMPLETION.md`
+`ai-logs/2026/04/01/assessment-1-comprehensive-20260401/conversation.md`
 
 What to show:
 

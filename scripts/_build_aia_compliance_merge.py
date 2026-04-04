@@ -1,123 +1,128 @@
-"""Temporary Phase 1 build script for aia-compliance merged deck."""
-import pathlib
+"""
+Phase 1 merge script for aia-compliance.manifest.md.
+Implements rules from .github/prompts/merge-marp-decks.prompt.md.
+"""
 import re
+import sys
+from pathlib import Path
 
-ROOT = pathlib.Path(r'c:\git\AIASD\AI-Assisted-Software-Development-Course')
+import yaml
 
-
-def read(rel):
-    return (ROOT / rel).read_text(encoding='utf-8')
-
+REPO = Path(".")
 
 def strip_front_matter(text):
-    """Remove leading YAML front matter block. Returns (fm_text, body_text)."""
-    if not text.startswith('---'):
-        return '', text
-    end = text.index('\n---', 3)
-    fm = text[:end + 4]
-    body = text[end + 4:].lstrip('\n')
+    text = text.replace("\r\n", "\n")
+    if not text.startswith("---\n"):
+        return "", text
+    idx = text.find("\n---\n", 3)
+    if idx == -1:
+        idx = text.find("\n---", 3)
+        if idx != -1 and idx + 4 >= len(text):
+            return text[: idx + 4], ""
+        return "", text
+    fm = text[: idx + 4]
+    body = text[idx + 4 :]
+    if body.startswith("\n"):
+        body = body[1:]
     return fm, body
 
-
 def strip_first_h1(body):
-    """Strip the first # H1 heading line and immediately following blank lines."""
-    lines = body.split('\n')
-    i = 0
-    while i < len(lines) and lines[i].strip() == '':
-        i += 1
-    if i < len(lines) and re.match(r'^# ', lines[i]):
-        lines.pop(i)
-        while i < len(lines) and lines[i].strip() == '':
-            lines.pop(i)
-    return '\n'.join(lines)
+    lines = body.split("\n")
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if re.match(r"^#\s", stripped) or stripped == "#":
+            del lines[i]
+            if i < len(lines) and re.match(r"^_Merged from:.*_$", lines[i].strip()):
+                del lines[i]
+            break
+    return "\n".join(lines)
 
-
-def strip_leading_separator(body):
-    """Strip one leading bare --- and surrounding blank lines."""
-    body = body.lstrip('\n')
-    if body.startswith('---\n') or body == '---':
-        body = body[4:].lstrip('\n') if body.startswith('---\n') else ''
+def strip_leading_sep(body):
+    body = body.lstrip("\n")
+    m = re.match(r"^---[ \t]*\n", body)
+    if m:
+        body = body[m.end():].lstrip("\n")
+    elif body.strip() == "---":
+        body = ""
     return body
 
-
-def strip_trailing_separator(body):
-    """Strip one trailing bare --- and surrounding blank lines."""
-    body = body.rstrip('\n')
-    if body.endswith('\n---'):
-        body = body[:-4].rstrip('\n')
-    elif body == '---':
-        body = ''
+def strip_trailing_sep(body):
+    body = body.rstrip("\n")
+    if re.search(r"\n---[ \t]*$", body):
+        body = re.sub(r"\n---[ \t]*$", "", body).rstrip("\n")
+    elif body.strip() == "---":
+        body = ""
     return body
 
+def rewrite_images(body):
+    return re.sub(r"(?<!marp/)images/", "marp/images/", body)
 
-def rewrite_image_paths(body):
-    return body.replace('images/', 'marp/images/')
-
-
-def module_list_slide(sections, current_idx):
-    bullets = []
-    for i, s in enumerate(sections):
-        name = s['name']
+def module_slide(section_names, current_idx):
+    lines = ["<!-- _class: lead -->", "", "## Course Modules", ""]
+    for i, name in enumerate(section_names):
         if i == current_idx:
-            bullets.append(f'- **\u25b6 {name}**')
+            lines.append(f"- **\u25b6 {name}**")
         else:
-            bullets.append(f'- {name}')
-    return '<!-- _class: lead -->\n\n## Course Modules\n\n' + '\n'.join(bullets)
+            lines.append(f"- {name}")
+    return "\n".join(lines)
 
+def count_slides(content):
+    # skip front matter
+    if content.startswith("---\n"):
+        idx = content.find("\n---\n", 3)
+        body = content[idx + 4:] if idx != -1 else ""
+    else:
+        body = content
+    in_fence = False
+    fence_char = None
+    seps = 0
+    for line in body.split("\n"):
+        s = line.strip()
+        if not in_fence:
+            if s.startswith("```") or s.startswith("~~~"):
+                in_fence = True
+                fence_char = "```" if s.startswith("```") else "~~~"
+            elif s == "---":
+                seps += 1
+        else:
+            if fence_char == "```" and s.startswith("```"):
+                in_fence = False
+            elif fence_char == "~~~" and s.startswith("~~~"):
+                in_fence = False
+    return 1 + seps
 
-SEP = '\n\n---\n\n'
+manifest = yaml.safe_load(Path("slides/manifests/aia-compliance.manifest.md").read_text(encoding="utf-8"))
+sections = manifest["sections"]
+section_names = [s["name"] for s in sections]
 
-sections = [
-    {'name': 'AI-Assisted Compliance Webinar',
-     'decks': ['slides/marp/aia/aia-compliance-welcome.md']},
-    {'name': 'Compliance Challenges',
-     'decks': ['slides/marp/aia/aia-compliance-challenges.slides.md']},
-    {'name': 'Compliance Assessments',
-     'decks': ['slides/marp/aia/aia-compliance-IEC62304-assessment-process.slides.md']},
-    {'name': 'Conclusions',
-     'decks': ['slides/marp/aia/aia-compliance-conclusion.slides.md']},
-]
-
-parts = []
-first_fm = ''
-front_matter_captured = False
+first_fm = None
+blocks = []
+SEP = "\n\n---\n\n"
 
 for sec_idx, section in enumerate(sections):
-    section_parts = []
-    for deck_path in section.get('decks', []):
-        raw = read(deck_path)
-        fm, body = strip_front_matter(raw)
-        if not front_matter_captured:
+    decks = section.get("decks") or []
+    if sec_idx > 0:
+        blocks.append(module_slide(section_names, sec_idx))
+    for raw_path in decks:
+        fpath = REPO / raw_path.replace("\\\\", "/").replace("\\", "/")
+        content = fpath.read_text(encoding="utf-8").replace("\r\n", "\n")
+        fm, body = strip_front_matter(content)
+        if first_fm is None and fm:
             first_fm = fm
-            front_matter_captured = True
         body = strip_first_h1(body)
-        body = strip_leading_separator(body)
-        body = strip_trailing_separator(body)
-        body = rewrite_image_paths(body)
-        section_parts.append(body.strip())
+        body = strip_leading_sep(body)
+        body = strip_trailing_sep(body)
+        body = rewrite_images(body)
+        body = body.strip("\n")
+        if body:
+            blocks.append(body)
 
-    if sec_idx == 0:
-        parts.extend(section_parts)
-    else:
-        ml = module_list_slide(sections, sec_idx)
-        parts.append(ml)
-        parts.extend(section_parts)
+if not first_fm:
+    sys.exit("ERROR: no front matter captured")
 
-merged_body = SEP.join(parts)
-merged = first_fm + '\n' + merged_body + '\n'
-
-out_path = ROOT / 'slides/merged/aia-compliance-draft.md'
-out_path.write_text(merged, encoding='utf-8')
-print(f'Written: {out_path}')
-
-# Count slides (bare --- outside fenced code blocks)
-in_fence = False
-sep_count = 0
-for line in merged_body.split('\n'):
-    stripped = line.strip()
-    if stripped.startswith('```') or stripped.startswith('~~~'):
-        in_fence = not in_fence
-    if not in_fence and stripped == '---':
-        sep_count += 1
-slide_count = 1 + sep_count
-print(f'Merged deck: {slide_count} slide(s) across {len(sections)} section(s).')
+merged_content = first_fm + "\n" + SEP.join(blocks) + "\n"
+out = Path("slides/merged/aia-compliance-draft.md")
+out.write_text(merged_content, encoding="utf-8")
+sc = count_slides(merged_content)
+print(f"Merged deck: {sc} slide(s) across {len(sections)} section(s).")
+print(f"Written: {out}")
