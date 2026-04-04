@@ -9,9 +9,9 @@ prompt_metadata:
   id: merge-marp-decks
   title: Merge Marp Slide Decks, Validate Sources, and Generate PPTX
   owner: johnmillerATcodemag-com
-  version: 3.4.0
+  version: 3.5.0
   created: 2026-03-12
-  updated: 2026-03-28
+  updated: 2026-04-02
   output_path: slides/<manifest-stem>-draft.md
   output_format: markdown
   category: slides
@@ -160,7 +160,7 @@ slides/manifests/aiasd-311-tuesday.manifest.md. This prompt must not run without
 - Resolve the manifest path first. Abort on any manifest error before reading slide files.
 - Resolve the execution mode before starting Phase 0.
 - Perform **Phase 0** directly in this agent run using the prompt logic in all modes.
-- Perform **Phase 1** and **Phase 2** only in `full` mode.
+- Perform **Phase 1**, **Phase 2**, and **Phase 3** only in `full` mode.
 - Do **not** call or rely on any script for Phase 0/1.
 - In `full` mode, read source files, validate them, build merged markdown in memory, and write the merged deck path.
 - In `validate-only` mode, stop after Phase 0 and report validation results only.
@@ -174,7 +174,7 @@ When mode is `validate-only`:
 - Validate the manifest path, YAML structure, and manifest slide entries
 - Run Phase 0 for every resolvable source slide
 - Report manifest issues, source warnings, and the validation summary
-- Do **not** run Phase 1 or Phase 2
+- Do **not** run Phase 1, Phase 2, or Phase 3
 - Do **not** create, edit, or overwrite the merged deck path
 - Do **not** create, edit, or overwrite the PPTX output path
 - Do **not** modify the manifest or any source file
@@ -291,22 +291,22 @@ do not repair them in-place.
 
 Apply this subsection only when the manifest path is exactly:
 
-`slides/manifests/regression-phase1-phase2.manifest.md`
+`slides/manifests/regression-test-01.manifest.md`
 
 For this regression harness, the following warnings are expected and should be reported
 as non-fatal:
 
 - Phase 0 warning: front matter YAML uses tab indentation in
-  `slides/marp/regression-phase12/phase12-02-h1-centered.deck.md`
+  `slides/marp/regression-tests/phase12-02-h1-centered.deck.md`
 - Phase 0 warning: front matter YAML uses tab indentation in
-  `slides/marp/regression-phase12/phase12-03-layout-and-columns.deck.md`
+  `slides/marp/regression-tests/phase12-03-layout-and-columns.deck.md`
 - Phase 0 warning: source ends with a bare `---` in
-  `slides/marp/regression-phase12/phase12-05-leading-trailing-separators.deck.md`
+  `slides/marp/regression-tests/phase12-05-leading-trailing-separators.deck.md`
 - Phase 2 warning: unknown layout name fallback from
   `<!-- layout: Definitely Not A Real Layout -->` in
-  `slides/marp/regression-phase12/phase12-03-layout-and-columns.deck.md`
+  `slides/marp/regression-tests/phase12-03-layout-and-columns.deck.md`
 - Phase 2 warning: Mermaid CLI may be unavailable for
-  `slides/marp/regression-phase12/phase12-04-table-mermaid-background.deck.md`
+  `slides/marp/regression-tests/phase12-04-table-mermaid-background.deck.md`
 
 These warnings are intentionally part of regression coverage and must not block merge
 or PPTX generation when all other required checks pass.
@@ -600,12 +600,55 @@ python scripts/generate_pptx.py <merged-draft-path> <manifest-path> <pptx-output
 
 Report any warnings (missing slide files) and confirm the output path on success.
 
-> **Agent verification (Issue 4)**: Run `python scripts/generate_pptx.py <merged-draft-path> <manifest-path> <pptx-output-path>`
+> **Agent verification (Issue 4)**: Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>`
 > and verify the PPTX is created at the PPTX output path.
 >
 > **Agent verification (Issue 5)**: Open the generated PPTX. For any source slide whose
 > `## heading` had no body content, confirm that slide uses the `Title Only` layout
 > (index `LAYOUT_TITLE_ONLY`), not `Title and Content`.
+
+---
+
+## Phase 3 — Finalize PPTX
+
+Run Phase 3 only in `full` mode. Skip it entirely in `validate-only` mode.
+
+Run the PowerShell finalization script (`scripts/finalize_pptx_local.ps1`) against the PPTX
+output path produced by Phase 2. This step invokes PowerPoint COM automation to apply
+shrink-to-fit behavior to overflowing text frames and table cells.
+
+### Environment constraint
+
+Phase 3 requires Windows with Microsoft PowerPoint installed. If the `pwsh` binary or
+PowerPoint COM automation is unavailable, report a clear blocker and skip this phase
+without failing the rest of the pipeline.
+
+### Preflight lock check (required)
+
+Before running the script, check for the PowerPoint lock file derived from the PPTX
+output path (same `~$<filename>` pattern as Phase 2). If the lock file exists, stop and
+report the same lock-error format before running anything.
+
+### Execution
+
+```powershell
+pwsh -File scripts/finalize_pptx_local.ps1 -Path "<pptx-output-path>"
+```
+
+Finalize the PPTX in place. Do not change the output filename.
+
+### Expected output
+
+After the script completes, report:
+
+- Finalized PPTX path
+- Updated text frames count
+- Fallback-adjusted text frames count
+- Skipped text frames count
+
+> **Agent verification (Issue 10)**: After Phase 3 completes, confirm the script reports
+> at least one updated or fallback-adjusted text frame count greater than zero, and the
+> PPTX file timestamp is newer than the Phase 2 output.
 
 ---
 
@@ -615,7 +658,8 @@ Report any warnings (missing slide files) and confirm the output path on success
 
 1. Merged deck path — merged Marp markdown deck (with injected module list slides only)
 2. PPTX output path — generated PPTX with named sections
-3. Issue report — validation warnings and manifest/source issues found during the run
+3. Finalized PPTX — same path, shrink-to-fit applied by PowerPoint COM automation
+4. Issue report — validation warnings and manifest/source issues found during the run
 
 ### Validate-only mode
 
@@ -646,14 +690,15 @@ Validate-only mode must not emit merged markdown or PPTX artifacts.
 
 Run all checks below after the pipeline completes to confirm spec conformance.
 
-| #   | Issue                         | Check                                                                    | Pass condition                                                                           |
-| --- | ----------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| V1  | Source validation             | Phase 0 summary printed before the merged deck path is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output          |
-| V2  | Code-fence `---` preserved    | Merge a source file that contains `---` inside a fenced code block       | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path  |
-| V3  | Output file named correctly   | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem       |
-| V4  | PPTX generated                | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                 |
-| V5  | `Title Only` layout used      | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content` |
-| V6  | Empty section logged          | YAML section with no `decks:` entries                                    | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase  |
-| V7  | Slide count reported          | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                           |
-| V8  | Validate-only stays read-only | Run with `Mode: validate-only`                                           | Validation summary and issues are reported, and no merged deck or PPTX file is written   |
-| V9  | PPTX lock preflight           | Before `generate_pptx.py`, check for `~$<output-filename>.pptx`          | If lock file exists, run stops with lock error and does not execute PPTX generation      |
+| #   | Issue                         | Check                                                                    | Pass condition                                                                            |
+| --- | ----------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| V1  | Source validation             | Phase 0 summary printed before the merged deck path is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output           |
+| V2  | Code-fence `---` preserved    | Merge a source file that contains `---` inside a fenced code block       | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path   |
+| V3  | Output file named correctly   | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem        |
+| V4  | PPTX generated                | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                  |
+| V5  | `Title Only` layout used      | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content`  |
+| V6  | Empty section logged          | YAML section with no `decks:` entries                                    | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase   |
+| V7  | Slide count reported          | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                            |
+| V8  | Validate-only stays read-only | Run with `Mode: validate-only`                                           | Validation summary and issues are reported, and no merged deck or PPTX file is written    |
+| V9  | PPTX lock preflight           | Before `generate_pptx.py`, check for `~$<output-filename>.pptx`          | If lock file exists, run stops with lock error and does not execute PPTX generation       |
+| V10 | Phase 3 finalize runs         | After Phase 2 succeeds, `finalize_pptx_local.ps1` is invoked             | Script reports updated/fallback frame counts; PPTX timestamp is newer than Phase 2 output |

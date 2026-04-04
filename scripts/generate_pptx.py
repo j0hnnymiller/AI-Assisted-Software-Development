@@ -520,8 +520,8 @@ def parse_markdown_table(body: str) -> list[list[str]]:
     return rows
 
 
-def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str, list[str], bool, str]:
-    """Return (title, body, background_image_path, speaker_notes, layout_name, inline_images, title_is_h1, matter_of_fact_title) parsed from a single markdown slide block.
+def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str, list[str], bool, str, bool]:
+    """Return (title, body, background_image_path, speaker_notes, layout_name, inline_images, title_is_h1, matter_of_fact_title, should_hide_slide) parsed from a single markdown slide block.
 
     title_is_h1 is True when the slide title was set from a bare `# H1` heading
     rather than a `## H2` heading.  The caller uses this flag to decide whether
@@ -542,6 +542,7 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str, list[s
     speaker_notes = ""
     layout_name = ""
     inline_images: list[str] = []
+    should_hide_slide = False
 
     # Pattern to match Marp background images: ![bg ...](path)
     bg_pattern = re.compile(r'!\[bg[^\]]*\]\(([^)]+)\)', re.IGNORECASE)
@@ -549,6 +550,7 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str, list[s
     inline_image_anywhere_pattern = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
     legacy_image_marker_pattern = re.compile(r'^!Slide\s+\d+\s+image:\s+(.+)$', re.IGNORECASE)
     layout_pattern = re.compile(r'^<!--\s*layout\s*:\s*(.*?)\s*-->$', re.IGNORECASE)
+    hide_pattern = re.compile(r'^<!--\s*_class\s*:\s*hide\s*-->$', re.IGNORECASE)
 
     for line in lines:
         if not title and line.startswith("# "):
@@ -599,6 +601,8 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str, list[s
                 if match:
                     inline_images.append(match.group(1).strip())
             elif stripped.startswith("<!--"):
+                if hide_pattern.match(stripped):
+                    should_hide_slide = True
                 match = layout_pattern.match(stripped)
                 if match:
                     layout_name = match.group(1).strip()
@@ -617,7 +621,12 @@ def parse_slide(md_content: str) -> tuple[str, str, str | None, str, str, list[s
     # Process markdown links according to rendering rules
     body = process_markdown_links(body)
 
-    return title, body, bg_image, speaker_notes, layout_name, inline_images, title_is_h1, matter_of_fact_title
+    return title, body, bg_image, speaker_notes, layout_name, inline_images, title_is_h1, matter_of_fact_title, should_hide_slide
+
+
+def mark_slide_hidden(slide) -> None:
+    """Mark a slide as hidden in PPTX output (equivalent to Hide Slide in PowerPoint)."""
+    slide._element.set("show", "0")
 
 
 def add_inline_images(slide, image_paths: list[str]) -> None:
@@ -1254,7 +1263,7 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
             md = slide_file.read_text(encoding="utf-8-sig")
             slide_blocks = split_marp_slides(md)
             for block in slide_blocks:
-                title, body, bg_image, speaker_notes, slide_layout_name, inline_image_refs, title_is_h1, matter_of_fact_title = parse_slide(block)
+                title, body, bg_image, speaker_notes, slide_layout_name, inline_image_refs, title_is_h1, matter_of_fact_title, should_hide_slide = parse_slide(block)
                 rendered_mermaid_path: str | None = None
 
                 body_without_mermaid, mermaid_blocks = extract_mermaid_blocks(body)
@@ -1309,6 +1318,8 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                                 title or slide_file.stem,
                                 note=combined_note,
                             )
+                        if should_hide_slide:
+                            mark_slide_hidden(prs.slides[-1])
                         continue
 
                 # Resolve background image path relative to source deck first,
@@ -1356,6 +1367,8 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                     bg_image=bg_image_path,
                     note=combined_note,
                 ):
+                    if should_hide_slide:
+                        mark_slide_hidden(prs.slides[-1])
                     continue
 
                 if body and should_use_two_column_layout(title or slide_file.stem, body):
@@ -1369,12 +1382,16 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                             inline_images=inline_image_paths,
                             note=combined_note,
                         )
+                        if should_hide_slide:
+                            mark_slide_hidden(prs.slides[-1])
                         continue
 
                 if contains_markdown_table(body):
                     # Parse and create table slide
                     table_data = parse_markdown_table(body)
                     add_table_slide(prs, title or slide_file.stem, table_data, note=combined_note)
+                    if should_hide_slide:
+                        mark_slide_hidden(prs.slides[-1])
                 elif body:
                     add_title_content_slide(
                         prs,
@@ -1383,6 +1400,8 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                         inline_images=inline_image_paths,
                         note=combined_note,
                     )
+                    if should_hide_slide:
+                        mark_slide_hidden(prs.slides[-1])
                 else:
                     add_title_only_slide(
                         prs,
@@ -1391,6 +1410,8 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                         inline_images=inline_image_paths,
                         note=combined_note,
                     )
+                    if should_hide_slide:
+                        mark_slide_hidden(prs.slides[-1])
 
         slide_end_idx = len(prs.slides)
         all_sld_ids = list(prs.slides._sldIdLst)

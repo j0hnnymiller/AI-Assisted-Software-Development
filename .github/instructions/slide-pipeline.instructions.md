@@ -25,8 +25,8 @@ using the Copilot agent prompt pipeline.
 
 The single pipeline entry point is `.github/copilot/Promptfiles/merge-marp-decks.prompt.md`, a
 Copilot agent-mode prompt that reads the YAML manifest, merges individual slide files
-into a single Marp deck, and generates an editable PPTX using python-pptx — all in one
-AI-driven run.
+into a single Marp deck, generates an editable PPTX using python-pptx, and finalizes the
+PPTX using PowerPoint COM automation — all in one AI-driven run.
 
 **🔒 CRITICAL INVARIANTS**: Any modifications to `scripts/generate_pptx.py` MUST preserve:
 
@@ -58,10 +58,12 @@ AI-driven run.
 5. [Merge phase — content slides](#5-merge-phase--content-slides)
 6. [Merge phase — full slide order per section](#6-merge-phase--full-slide-order-per-section)
 7. [PPTX generation phase](#7-pptx-generation-phase)
-8. [Agent prompt invocation](#8-agent-prompt-invocation)
-9. [File naming conventions](#9-file-naming-conventions)
-10. [Constraints and known limitations](#10-constraints-and-known-limitations)
-11. [Extension points](#11-extension-points)
+8. [PPTX finalization phase](#8-pptx-finalization-phase)
+9. [Agent prompt invocation](#9-agent-prompt-invocation)
+10. [File naming conventions](#10-file-naming-conventions)
+11. [Constraints and known limitations](#11-constraints-and-known-limitations)
+12. [Verification Checklist](#12-verification-checklist)
+13. [Extension points](#13-extension-points)
 
 ---
 
@@ -451,7 +453,60 @@ Default values:
 
 ---
 
-## 8. Agent prompt invocation
+## 8. PPTX finalization phase
+
+After the draft PPTX is generated it is finalized in place using PowerPoint COM
+automation to apply text shrink-to-fit and other formatting corrections.
+
+### 8.1 Script location
+
+```
+
+scripts/finalize_pptx_local.ps1 (PowerShell script, invoked by the agent)
+
+````
+
+### 8.2 Requirements
+
+- **Windows only**: Uses PowerPoint COM automation.
+- **Microsoft PowerPoint must be installed** on the machine running the script.
+- Script runs in-place: reads and overwrites `slides/output/*-draft.pptx`.
+
+### 8.3 What the script does
+
+- Opens the PPTX via PowerPoint COM.
+- Iterates all text frames on all slides.
+- Applies shrink-to-fit to text that overflows its placeholder.
+- Falls back to minimum font size when shrink-to-fit cannot fully resolve overflow.
+- Saves and closes the file in place.
+
+### 8.4 Lock file preflight
+
+Before running, the agent checks that no `~$<filename>.pptx` lock file exists in
+`slides/output/`. If a lock file is present the script will fail; the agent must
+stop, report the lock, and instruct the user to close PowerPoint before retrying.
+
+### 8.5 Execution
+
+```powershell
+pwsh -File scripts/finalize_pptx_local.ps1 -Path "slides/output/<name>-draft.pptx"
+````
+
+### 8.6 Expected output
+
+```
+Updated X text frames, Fallback-adjusted Y, Skipped Z
+```
+
+### 8.7 Outputs
+
+| File                              | Description                       |
+| --------------------------------- | --------------------------------- |
+| `slides/output/<name>-draft.pptx` | Finalized PPTX (updated in place) |
+
+---
+
+## 9. Agent prompt invocation
 
 ```
 
@@ -505,19 +560,29 @@ Default values:
 │ Editable text boxes, bullets, presenter notes │
 │ Named section groupings visible in PowerPoint │
 └──────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌──────────────────────────────────────────────────────────────┐
+│ Agent finalization phase                                     │
+│ Runs scripts/finalize_pptx_local.ps1                         │
+│ - Shrink-to-fit overflowing text frames                      │
+│ - Fallback font-size adjustment for overflow                 │
+│                                                              │
+│ → slides/output/aiasd-311-monday-draft.pptx (finalized)      │
+└──────────────────────────────────────────────────────────────┘
 
-````
+```
 
 ---
 
-## 9. File naming conventions
+## 10. File naming conventions
 
-| Pattern                              | Example                       | Description                |
-| ------------------------------------ | ----------------------------- | -------------------------- |
-| `<course>-<format>-<day>.manifest.md`       | `aiasd-311-monday.manifest.md`       | Manifest file              |
-| `<course>-<format>-<day>-draft.md`   | `aiasd-311-monday-draft.md`   | Merged Marp deck           |
-| `generate_pptx.py`                   | `scripts/generate_pptx.py`    | Existing PPTX build script |
-| `<course>-<format>-<day>-draft.pptx` | `aiasd-311-monday-draft.pptx` | Editable PPTX output       |
+| Pattern                               | Example                        | Description                |
+| ------------------------------------- | ------------------------------ | -------------------------- |
+| `<course>-<format>-<day>.manifest.md` | `aiasd-311-monday.manifest.md` | Manifest file              |
+| `<course>-<format>-<day>-draft.md`    | `aiasd-311-monday-draft.md`    | Merged Marp deck           |
+| `generate_pptx.py`                    | `scripts/generate_pptx.py`     | Existing PPTX build script |
+| `<course>-<format>-<day>-draft.pptx`  | `aiasd-311-monday-draft.pptx`  | Editable PPTX output       |
 
 `course` = identifier prefix (e.g. `aiasd`)
 `format` = numeric format code (e.g. `311` = 3-day, 1st delivery)
@@ -525,7 +590,7 @@ Default values:
 
 ---
 
-## 10. Constraints and known limitations
+## 11. Constraints and known limitations
 
 | Area                  | Constraint                                                                                                                                                                                                                         |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -534,12 +599,12 @@ Default values:
 | Module list highlight | Marp renders `**bold**` text using the theme's default bold style, not a custom colour. To use a custom highlight colour, apply a Marp theme with a styled `.highlight` span or adjust the reference PPTX master after generation. |
 | Slide title fallback  | If a source file has no `## H2` heading, the file stem is used as the agenda bullet. Ensure every content file has at least one `## H2` heading.                                                                                   |
 | Empty sections        | Sections with no source files produce only a module list slide and an empty PPTX section group.                                                                                                                                    |
-| Image paths           | Images referenced in individual slides must exist at `slides/marp/images/`; the merge step rewrites them to `marp/images/` so the merged deck still renders correctly.                                                  |
+| Image paths           | Images referenced in individual slides must exist at `slides/marp/images/`; the merge step rewrites them to `marp/images/` so the merged deck still renders correctly.                                                             |
 | Working directory     | Run the agent prompt from the repo root: `C:\git\AIASD\AI-Assisted-Software-Development-Course`.                                                                                                                                   |
 
 ---
 
-## 11. Verification Checklist
+## 12. Verification Checklist
 
 **⚠️ USE THIS CHECKLIST** when modifying `scripts/generate_pptx.py` or the merge logic to prevent regressions:
 
@@ -580,7 +645,7 @@ sections:
   - name: "Module 1 - Test"
     decks:
       - slides\marp\whats-the-big-deal.deck.md
-````
+```
 
 Expected PPTX slide order:
 
@@ -591,7 +656,7 @@ Expected PPTX slide order:
 
 ---
 
-## 12. Extension points
+## 13. Extension points
 
 | Scenario                              | Approach                                                                                                                                      |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |

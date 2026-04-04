@@ -1,7 +1,66 @@
 ---
 name: slide-master
 description: "Use when working with PPTX files, PowerPoint templates, Marp slide decks, Pandoc conversions, or slide pipeline prompt execution. Expert at running the merge-marp-decks and finalize-pptx-local prompt commands for repeatable slide automation workflows."
-tools: [vscode/extensions, vscode/askQuestions, vscode/getProjectSetupInfo, vscode/installExtension, vscode/memory, vscode/newWorkspace, vscode/resolveMemoryFileUri, vscode/runCommand, vscode/vscodeAPI, execute/getTerminalOutput, execute/awaitTerminal, execute/killTerminal, execute/createAndRunTask, execute/runInTerminal, execute/runTests, execute/runNotebookCell, execute/testFailure, read/terminalSelection, read/terminalLastCommand, read/getNotebookSummary, read/problems, read/readFile, read/viewImage, read/readNotebookCellOutput, agent/runSubagent, azure-mcp/search, microsoft/markitdown/convert_to_markdown, browser/openBrowserPage, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/searchResults, search/textSearch, search/usages, web/fetch, web/githubRepo, vscode.mermaid-chat-features/renderMermaidDiagram, github.vscode-pull-request-github/issue_fetch, github.vscode-pull-request-github/labels_fetch, github.vscode-pull-request-github/notification_fetch, github.vscode-pull-request-github/doSearch, github.vscode-pull-request-github/activePullRequest, github.vscode-pull-request-github/pullRequestStatusChecks, github.vscode-pull-request-github/openPullRequest, marp-team.marp-vscode/exportMarp, ms-python.python/getPythonEnvironmentInfo, ms-python.python/getPythonExecutableCommand, ms-python.python/installPythonPackage, ms-python.python/configurePythonEnvironment, todo]
+tools:
+  [
+    vscode/extensions,
+    vscode/askQuestions,
+    vscode/getProjectSetupInfo,
+    vscode/installExtension,
+    vscode/memory,
+    vscode/newWorkspace,
+    vscode/resolveMemoryFileUri,
+    vscode/runCommand,
+    vscode/vscodeAPI,
+    execute/getTerminalOutput,
+    execute/awaitTerminal,
+    execute/killTerminal,
+    execute/createAndRunTask,
+    execute/runInTerminal,
+    execute/runTests,
+    execute/runNotebookCell,
+    execute/testFailure,
+    read/terminalSelection,
+    read/terminalLastCommand,
+    read/getNotebookSummary,
+    read/problems,
+    read/readFile,
+    read/viewImage,
+    read/readNotebookCellOutput,
+    agent/runSubagent,
+    azure-mcp/search,
+    microsoft/markitdown/convert_to_markdown,
+    browser/openBrowserPage,
+    edit/createDirectory,
+    edit/createFile,
+    edit/createJupyterNotebook,
+    edit/editFiles,
+    edit/editNotebook,
+    edit/rename,
+    search/changes,
+    search/codebase,
+    search/fileSearch,
+    search/listDirectory,
+    search/searchResults,
+    search/textSearch,
+    search/usages,
+    web/fetch,
+    web/githubRepo,
+    vscode.mermaid-chat-features/renderMermaidDiagram,
+    github.vscode-pull-request-github/issue_fetch,
+    github.vscode-pull-request-github/labels_fetch,
+    github.vscode-pull-request-github/notification_fetch,
+    github.vscode-pull-request-github/doSearch,
+    github.vscode-pull-request-github/activePullRequest,
+    github.vscode-pull-request-github/pullRequestStatusChecks,
+    github.vscode-pull-request-github/openPullRequest,
+    marp-team.marp-vscode/exportMarp,
+    ms-python.python/getPythonEnvironmentInfo,
+    ms-python.python/getPythonExecutableCommand,
+    ms-python.python/installPythonPackage,
+    ms-python.python/configurePythonEnvironment,
+    todo,
+  ]
 argument-hint: "Describe the slide task, manifest path, PPTX path, template issue, or Pandoc conversion goal."
 ---
 
@@ -25,7 +84,10 @@ You are Slide Master, a workspace custom agent for PPTX production and repair wo
 ## Primary Commands
 
 - `/merge-marp-decks` via [.github/prompts/merge-marp-decks.prompt.md](../prompts/merge-marp-decks.prompt.md)
+  - Full mode runs all phases: Phase 0 (validate sources), Phase 1 (merge), Phase 1.5 (validate merged), Phase 2 (generate PPTX), Phase 3 (finalize PPTX).
+  - Validate-only mode stops after Phase 1.5.
 - `/finalize-pptx-local` via [.github/prompts/finalize-pptx-local.prompt.md](../prompts/finalize-pptx-local.prompt.md)
+  - Standalone command for re-running Phase 3 without regenerating the PPTX (e.g., after manual edits).
 
 ## Operating Rules
 
