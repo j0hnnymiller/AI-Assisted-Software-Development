@@ -1,4 +1,6 @@
 template: slides\jMM-CODE-Training-Slide-Template-clean.pptx
+title: "AI-Assisted Software Development"
+subtitle: "From Code to Copilot"
 
 sections:
   - name: Intro
