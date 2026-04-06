@@ -179,6 +179,24 @@ Assessment workflow, artifact demo, and AI guardrails
 
 ---
 
+## Demo Slide: Assessment Prompt execution
+
+Prompt: Run the prompt @file:execute-assessment.prompt.md. This is a Type B assessment.
+
+Demo points:
+
+- Show the prompt response
+- Show the execute-assessment prompt file in the repository
+- Show the clause-specific prompt files in the repository
+
+::: notes
+- This is the most direct demo of how the process works.
+- The execute-assessment prompt is the main entry point for clause analysis, and it references the clause-specific prompts, which are where the core analysis logic lives.
+- Emphasize that the prompts are standardized and stored in the repository, which is a key guardrail for consistency and reproducibility.
+:::
+
+---
+
 ## Demo Slide: Decision Artifacts
 
 **Open in sequence:**
