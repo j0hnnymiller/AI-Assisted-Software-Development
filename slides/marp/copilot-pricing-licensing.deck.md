@@ -19,11 +19,9 @@ theme: default
 paginate: true
 ---
 
+<!-- layout: Centered Two Titles -->
+
 # GitHub Copilot Pricing and Licensing || How Much Does an AI Pair Programmer Cost?
-
----
-
-### What you need to know for your organization
 
 ::: notes
 Duration ~00:01
@@ -34,8 +32,6 @@ Transition: "Let's start with an overview of what's available."
 :::
 
 ---
-
-<!-- layout: Two Content -->
 
 ## Copilot Plan Overview
 
@@ -138,6 +134,3 @@ Demo opportunity: Show a `.github/instructions/` file with a coding standard rul
 
 Transition: "Let's talk about how to get started..."
 :::
-
----
-

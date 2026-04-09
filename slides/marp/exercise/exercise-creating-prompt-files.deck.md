@@ -16,7 +16,7 @@ ai_log: "ai-logs/2026/03/17/exercise-creating-prompt-files-refactor-2026-03-17/c
 source: "johnmillerATcodemag-com"
 ---
 
-# Exercise: Creating Prompt Files || Exercise: The Prompt Engineering Gauntlet
+# Exercise: Creating Prompt Files || The Prompt Engineering Gauntlet
 
 ---
 

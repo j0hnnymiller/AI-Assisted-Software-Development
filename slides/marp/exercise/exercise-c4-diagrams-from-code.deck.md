@@ -21,7 +21,8 @@ marp: true
 theme: default
 paginate: true
 ---
-# Exercise: C4 Diagrams from Code || Exercise: Boxes, Arrows, and the Truth About Your Architecture
+
+# Exercise: C4 Diagrams from Code || Boxes, Arrows, and the Truth About Your Architecture
 
 ## Exercise: Generating C4 Diagrams from Code
 

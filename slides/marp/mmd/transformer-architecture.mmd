@@ -1,0 +1,11 @@
+graph TD
+    A["Input Tokens"]:::inputStyle -->|tokens → vectors| B["Embedding Layer"]:::embeddingStyle
+    B -->|what matters given what came before?| C["Attention Layers ×N"]:::attentionStyle
+    C -->|learn patterns and transformations| D["Feed-Forward Layers"]:::feedforwardStyle
+    D -->|probability over next token| E["Output Layer"]:::outputStyle
+
+    classDef inputStyle fill:#ff9999,stroke:#cc0000,stroke-width:2px
+    classDef embeddingStyle fill:#99ccff,stroke:#0066cc,stroke-width:2px
+    classDef attentionStyle fill:#99ff99,stroke:#00cc00,stroke-width:2px
+    classDef feedforwardStyle fill:#ffcc99,stroke:#ff9900,stroke-width:2px
+    classDef outputStyle fill:#ff99ff,stroke:#cc00cc,stroke-width:2px

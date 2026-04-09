@@ -19,7 +19,8 @@ marp: true
 theme: default
 paginate: true
 ---
-# Exercise: Test Coverage Improvement || Exercise: From "It Works on My Machine" to Actually Tested
+
+# Exercise: Test Coverage Improvement || From "It Works on My Machine" to Actually Tested
 
 ## Exercise: Test Coverage Improvement
 

@@ -80,6 +80,85 @@ The speaker notes should be combined with source metadata in PPTX.
 
 ---
 
+## Markdown Table Centering and Width
+
+| Aspect    | Expected Layout Behavior | Verification Target          |
+| --------- | ------------------------ | ---------------------------- |
+| Alignment | Centered horizontally    | Equal left and right margins |
+| Width     | 80% of slide width       | Matches spec and parser test |
+| Height    | Row-driven growth        | Expands with table rows      |
+
+::: notes
+This slide verifies the table placement rules introduced for markdown table rendering.
+Confirm the generated PowerPoint table is centered horizontally on the slide.
+Measure or inspect that table width is 80 percent of the slide width rather than filling the content placeholder.
+
+**Expected PPTX Rendering:**
+
+- Layout: Title and Content (table routing)
+- Title Placeholder: "Markdown Table Centering and Width"
+- Content Placeholder: Replaced by a PowerPoint table (3 columns x 4 rows including header)
+- Table Alignment: Centered horizontally on the slide
+- Table Width: 80% of total slide width
+- Table Height: Driven by row count using the table slide sizing logic
+- Notes: This notes block content + source file reference
+- Verification Focus: Left offset equals remaining horizontal margin after applying 80% width rule
+  :::
+
+---
+
+<!-- layout: Two Content -->
+
+## Explicit Layout Table Branch
+
+| Case                    | Input Condition                        | Expected Result                          |
+| ----------------------- | -------------------------------------- | ---------------------------------------- |
+| Named layout present    | `<!-- layout: Two Content -->` comment | Table still renders as native PPTX table |
+| Markdown table detected | Standard pipe table syntax             | Table branch takes precedence            |
+| Slide title retained    | H2 heading present                     | Title remains in title placeholder       |
+
+::: notes
+This slide verifies that explicit layout comments do not bypass markdown table detection.
+Confirm the generator still routes through the native table path even when a named layout comment is present.
+This protects the regression where explicit Two Content layout could otherwise suppress the table-specific rendering branch.
+
+**Expected PPTX Rendering:**
+
+- Layout: Title and Content with native table insertion
+- Title Placeholder: "Explicit Layout Table Branch"
+- Content Placeholder: Replaced by a PowerPoint table (3 columns x 4 rows including header)
+- Table Handling: Markdown table conversion takes precedence over generic named-layout body rendering
+- Notes: This notes block content + source file reference
+- Verification Focus: No plain body-text rendering of the markdown pipe syntax
+  :::
+
+---
+
+## **Bold Formatting Branch**
+
+This paragraph contains **bold text** alongside normal text.
+
+- **Bold bullet label** followed by normal explanation text
+- Normal bullet prefix with **bold emphasis** later in the line
+
+::: notes
+This slide verifies that markdown bold syntax is rendered as actual bold runs in the generated PPTX.
+Confirm that the title removes the literal asterisks and renders bold.
+Confirm that body text and bullet text preserve non-bold segments while rendering only the `**...**` sections in bold.
+
+**Expected PPTX Rendering:**
+
+- Layout: Title and Content
+- Title Placeholder: "Bold Formatting Branch" rendered in bold without literal `**`
+- Content Placeholder: Body paragraph and 2 bullet paragraphs
+- Body Rendering: Only "bold text" is bold in the first paragraph
+- Bullet Rendering: Only "Bold bullet label" and "bold emphasis" are bold within their respective bullets
+- Notes: This notes block content + source file reference
+- Verification Focus: No literal double asterisks remain in visible slide text
+  :::
+
+---
+
 ## Mermaid Rendering Branch
 
 ```mermaid

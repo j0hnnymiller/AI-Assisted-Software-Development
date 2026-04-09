@@ -22,7 +22,7 @@ theme: default
 paginate: true
 ---
 
-# Exercise: Create and Use a Custom Agent || Exercise: Build the AI That Does Your Job (Just This One Task)
+# Exercise: Create and Use a Custom Agent || Build the AI That Does Your Job (Just This One Task)
 
 ---
 

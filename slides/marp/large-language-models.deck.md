@@ -32,8 +32,7 @@ paginate: true
 - Generates output one token at a time, probabilistically
 
 **Key insight**
-
-LLMs don't "know" things — they learn what text tends to follow other text.
+> LLMs don't "know" things — they learn what text tends to follow other text.
 
 ::: notes
 Duration ~00:02
@@ -99,16 +98,18 @@ Interactive moment: Ask "How many tokens do you think this slide is?" — good e
 
 ### The breakthrough that made modern LLMs possible (2017)
 
-```
-Input Tokens
-     ↓
-[Embedding Layer]      ← tokens → vectors
-     ↓
-[Attention Layers] ×N  ← "what matters given what came before?"
-     ↓
-[Feed-Forward Layers]  ← learn patterns and transformations
-     ↓
-[Output Layer]         ← probability over next token
+```mermaid
+graph TD
+    A["Input Tokens"]:::inputStyle -->|tokens → vectors| B["Embedding Layer"]:::embeddingStyle
+    B -->|what matters given what came before?| C["Attention Layers ×N"]:::attentionStyle
+    C -->|learn patterns and transformations| D["Feed-Forward Layers"]:::feedforwardStyle
+    D -->|probability over next token| E["Output Layer"]:::outputStyle
+
+    classDef inputStyle fill:#ff9999,stroke:#cc0000,stroke-width:2px
+    classDef embeddingStyle fill:#99ccff,stroke:#0066cc,stroke-width:2px
+    classDef attentionStyle fill:#99ff99,stroke:#00cc00,stroke-width:2px
+    classDef feedforwardStyle fill:#ffcc99,stroke:#ff9900,stroke-width:2px
+    classDef outputStyle fill:#ff99ff,stroke:#cc00cc,stroke-width:2px
 ```
 
 - **Self-attention** lets every token "look at" every other token
@@ -174,18 +175,22 @@ Practical tip: When using Copilot, relevant context near your cursor gets higher
 
 ### Phase 1: Pre-training
 
-```
-Raw text (internet, books, code, papers)
-          ↓
-    Tokenize everything
-          ↓
-    For each token: predict next token
-          ↓
-    Compare prediction to actual → compute loss
-          ↓
-    Backpropagation → update billions of weights
-          ↓
-    Repeat trillions of times on thousands of GPUs
+```mermaid
+graph TD
+    A["Raw text<br/>(internet, books, code, papers)"]:::input
+    B["Tokenize everything"]:::process
+    C["For each token: predict next token"]:::process
+    D["Compare prediction to actual<br/>→ compute loss"]:::compute
+    E["Backpropagation<br/>→ update billions of weights"]:::update
+    F["Repeat trillions of times<br/>on thousands of GPUs"]:::repeat
+
+    A --> B --> C --> D --> E --> F
+
+    classDef input fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    classDef process fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef compute fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef update fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    classDef repeat fill:#fce4ec,stroke:#880e4f,stroke-width:2px
 ```
 
 - Months of training, millions of dollars in compute

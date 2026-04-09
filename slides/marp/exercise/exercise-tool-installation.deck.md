@@ -18,7 +18,7 @@ theme: default
 paginate: true
 ---
 
-# Exercise: AIASD Tool Installation || Exercise: Workstation Setup
+# Exercise: AIASD Tool Installation || Workstation Setup
 
 ## Exercise: Install Git and Verify Local Git Access
 

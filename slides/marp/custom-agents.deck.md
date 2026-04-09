@@ -8,6 +8,34 @@ paginate: true
 
 ---
 
+## What Are Custom Agents?
+
+Custom agents handle complete coding tasks end-to-end, not just suggestions
+
+- **Understand** your project context
+- **Make changes** across multiple files
+- **Execute commands** and run tests
+- **Adapt** based on results and feedback
+- **Self-correct** when errors occur
+
+::: notes
+Duration ~00:04
+
+This slide establishes the fundamental difference between custom agents and traditional AI assistance.
+
+**Key talking points:**
+
+- Traditional Copilot gives you code suggestions; custom agents perform complete workflows
+- Example: Instead of suggesting a fix for a failing test, a custom agent will read the error, identify the root cause across files, update code, re-run tests, and commit changes
+- Custom agents break down high-level tasks into actionable steps
+- They use various tools autonomously to achieve objectives
+
+**Audience engagement:** Ask "What's the most time-consuming coding task you do repeatedly?" to connect with real pain points.
+
+:::
+
+---
+
 ## Where to Create Custom Agents
 
 GitHub.com
@@ -276,4 +304,3 @@ Test Coverage Drive: Use test agent to fill coverage gaps
 
 Transition: “Let's wrap up with some best practices and resources to help you get started.”
 :::
-

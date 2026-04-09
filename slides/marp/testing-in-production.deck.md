@@ -68,7 +68,7 @@ ai_log: "ai-logs/2026/03/17/testing-in-production-20260317/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
 
-# Testing in Production || Testing in Production: Bravery or Strategy?
+# Testing in Production || Bravery or Strategy?
 
 ---
 
@@ -262,4 +262,3 @@ error_budget:
 ::: notes
 Automated rollback is the safety net. If error rates or latency exceed predefined thresholds, the system disables the feature automatically—no human in the loop. This is critical because production incidents escalate rapidly. The time between "something's wrong" and "customers are affected" is measured in seconds. Automated rollback limits the blast radius and ensures a consistent response. Define your thresholds ahead of time based on historical baselines and capacity planning. The example shows a YAML config: if payment processing v2 exceeds 1% error rate in any 5-minute window, disable it and alert the team. Ask: What's the cost of a two-minute delay in rollback?
 :::
-

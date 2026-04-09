@@ -44,6 +44,8 @@ Transition: "Let's start with what MCP actually is."
 
 ---
 
+<!-- layout: Two Content -->
+
 ## What Is MCP?
 
 - **Model Context Protocol** is a standardized communication layer between Copilot and external services
@@ -51,6 +53,8 @@ Transition: "Let's start with what MCP actually is."
 - Any tool or service that speaks MCP can be connected to Copilot
 - A large and growing library of community-built servers already exists
 - Key mindset: **configure and consume** — not build from scratch
+
+::: column
 
 ```mermaid
 flowchart LR
@@ -200,7 +204,7 @@ Transition: "Let's install your first MCP server."
 
 ## Copilot + MCP Integration
 
-**Enhanced capabilities**
+Enhanced capabilities
   - **Context-aware completions** — access project-specific patterns
   - **Tool use** — Copilot can invoke server tools on your behalf
   - **Security boundaries** — controlled, audited resource access

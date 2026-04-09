@@ -22,9 +22,11 @@ theme: default
 paginate: true
 ---
 
-# Exercise: Create and Use a Custom Skill || Exercise: Teach Your AI a New Trick
+# Exercise: Create and Use a Custom Skill || Teach Your AI a New Trick
 
 ---
+
+<!-- layout: Two Content -->
 
 ## Exercise: Create and Use a Custom Skill
 
@@ -38,6 +40,8 @@ paginate: true
   2. Refine: Improve the skill by adding strong trigger words such as `Marp`, `slide`, `speaker notes`, and `provenance`, then tighten the procedure so the output is deterministic
   3. Use: Prompt Copilot with a task such as `Review slides/marp/exercise-create-and-use-custom-agent.deck.md for slide metadata and ::: notes compliance` and compare the output to a normal untuned chat response
 
+::: column
+
 **Success Criteria**
   - Skill folder and `SKILL.md` exist in `.github/skills/slide-quality-check/`
   - Copilot responds with a workflow aligned to the skill procedure instead of a generic answer
@@ -48,11 +52,11 @@ Duration ~00:25
 
 Facilitate this as a procedural-workflow lab, not just a markdown-file exercise. Start by explaining that a skill is different from a custom agent: the agent shapes role behavior, while the skill packages a repeatable method Copilot can load when the prompt matches the description.
 
-In Phase 1, have learners create `.github/skills/slide-quality-check/SKILL.md` with a simple but concrete purpose. Encourage them to write a description that contains likely trigger phrases and a procedure with explicit steps such as inspect front matter, verify every slide has `::: notes`, and report missing or weak sections.
+In 1, have learners create `.github/skills/slide-quality-check/SKILL.md` with a simple but concrete purpose. Encourage them to write a description that contains likely trigger phrases and a procedure with explicit steps such as inspect front matter, and report missing or weak sections.
 
-In Phase 2, ask students to improve the skill after reading it once as if they were Copilot. Typical improvements are sharper trigger words, more deterministic steps, and output requirements such as `return findings as pass/fail bullets with suggested fixes`.
+In 2, ask students to improve the skill after reading it once as if they were Copilot. Typical improvements are sharper trigger words, more deterministic steps, and output requirements such as `return findings as pass/fail bullets with suggested fixes`.
 
-In Phase 3, students run a prompt against an existing slide file and see whether Copilot behaves like it has loaded the skill. If the response is too generic, coach them to adjust either the prompt wording or the skill description so the relevance match is stronger.
+In 3, students run a prompt against an existing slide file and see whether Copilot behaves like it has loaded the skill. If the response is too generic, coach them to adjust either the prompt wording or the skill description so the relevance match is stronger.
 
 Timing guidance: 8 minutes create, 7 minutes refine, 8 minutes use and compare, 2 minutes recap. Close by emphasizing that strong skills are concise, keyword-aware, and procedural enough to produce repeatable results without bloating every chat.
 :::

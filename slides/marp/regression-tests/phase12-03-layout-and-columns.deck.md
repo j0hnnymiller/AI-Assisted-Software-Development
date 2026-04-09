@@ -90,7 +90,7 @@ Use this as a baseline before testing separator-driven two-column behavior.
 
 ---
 
-## Separator Based Two Columns
+## Separator Based Two Content
 
 Left side keeps these bullets.
 
@@ -112,7 +112,7 @@ Check that both columns appear and ordering is preserved.
 **Expected PPTX Rendering:**
 
 - Layout: Two Content (auto-detected via ::: column separator)
-- Title Placeholder: "Separator Based Two Columns"
+- Title Placeholder: "Separator Based Two Content"
 - Left Column Placeholder: "Left side keeps these bullets." + 2 bullets ("alpha", "beta")
 - Right Column Placeholder: "Right side keeps these bullets." + 2 bullets ("gamma", "delta")
 - Notes: This notes block content

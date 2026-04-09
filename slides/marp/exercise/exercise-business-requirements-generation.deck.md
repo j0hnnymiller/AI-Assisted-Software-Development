@@ -54,7 +54,8 @@ marp: true
 theme: default
 paginate: true
 ---
-# Exercise: Business Requirements Generation || Exercise: Let the AI Write the Requirements for Once
+
+# Exercise: Business Requirements Generation || Let the AI Write the Requirements for Once
 
 ## Exercise: Business Requirements Generation
 

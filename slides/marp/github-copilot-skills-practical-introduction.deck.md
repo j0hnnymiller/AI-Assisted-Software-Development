@@ -26,13 +26,15 @@ theme: default
 paginate: true
 ---
 
-# GitHub Copilot Skills: A Practical Introduction || Skills: The API for Telling Copilot How to Think
+# GitHub Copilot Skills: A Practical Introduction || The API for Telling Copilot How to Think
 
 ---
 
+<!-- layout: Centered Two Titles -->
+
 ## GitHub Copilot Skills
 
->What They Are, How to Define Them, and How They Change Copilot's Behavior
+What They Are, How to Define Them, and How They Change Copilot's Behavior
 
 ::: notes
 Introduce this deck as a practical orientation to Copilot Skills rather than a deep internal architecture lecture. Explain that skills are useful because they turn repeated workflow knowledge into reusable repository assets that Copilot can load when a task matches. Spend about one minute here setting expectations that the session will cover what skills are, how they are structured, and why they meaningfully change Copilot behavior. Transition by defining the concept clearly before getting into authoring details.
@@ -108,11 +110,13 @@ description: >
   Use for topics related to testing, test, E2E.
 ---
 ```
+
 ```markdown
 ## Procedure
-  1. Analyze the target code and determine testing strategy
-  2. Create test files following the AAA pattern
-  3. Run tests and verify results
+
+1. Analyze the target code and determine testing strategy
+2. Create test files following the AAA pattern
+3. Run tests and verify results
 ```
 
 ::: notes
@@ -139,23 +143,27 @@ Clarify that skill loading is semantic rather than manual. If a prompt asks for 
 
 ---
 
-<!-- layout: two-column -->
+<!-- layout: Two Content -->
 
 ## How Skills Change Copilot's Behavior
 
 1. Procedural behavior
-  - Copilot follows the skill's steps to produce more consistent results.
+
+- Copilot follows the skill's steps to produce more consistent results.
+
 2. Expanded capabilities
-  - Skills can bring in:
-    - scripts
-    - templates
-    - examples
-    - domain-specific rules
+
+- Skills can bring in:
+  - scripts
+  - templates
+  - examples
+  - domain-specific rules
 
 ::: column
 
 3. Context efficiency
-  - Only relevant skills load, keeping context smaller and more focused.
+
+- Only relevant skills load, keeping context smaller and more focused.
 
 ::: notes
 Make the point that skills are operational playbooks, not style guides. They push Copilot away from open-ended reactive generation and toward more structured execution, especially when the task involves repeatable steps, tools, or examples. Spend about one minute here and explain that the context-efficiency angle matters because only the relevant capability modules are loaded instead of everything at once. Transition by comparing skills to other Copilot customization mechanisms.

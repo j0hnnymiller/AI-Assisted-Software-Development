@@ -80,9 +80,10 @@ Duration ~00:10
 :::
 
 ---
-# Exercise: Addressing Technical Debt with Copilot || Exercise: Ask Copilot to Clean Your Room
 
-# Exercise: Addressing Technical Debt with Copilot || Exercise: Ask Copilot to Clean Your Room
+# Exercise: Addressing Technical Debt with Copilot || Ask Copilot to Clean Your Room
+
+# Exercise: Addressing Technical Debt with Copilot || Ask Copilot to Clean Your Room
 
 15 minutes
 
@@ -99,7 +100,7 @@ Duration ~00:10
    - Analyze the problem
    - Propose a remediation plan
    - Generate code changes
-::: column
+     ::: column
    - Update tests
    - Update documentation
 3. Review Copilot's output.
@@ -151,7 +152,7 @@ Activities
 2. Write a prompt that includes:
    - Description of the debt
    - Constraints and rules
-::: column
+     ::: column
    - Expected behavior
    - Required tests and documentation
 3. Ask Copilot to propose a remediation.
@@ -191,7 +192,7 @@ Activities
    - Title
    - Description
    - Impact and risk
-::: column
+     ::: column
    - Acceptance criteria
    - Provenance metadata
 3. Assign the issue to Copilot.
@@ -231,7 +232,7 @@ Activities
    - Analyze the problem
    - Propose a remediation plan
    - Generate code changes
-::: column
+     ::: column
    - Update tests
    - Update documentation
 3. Review Copilot's output.

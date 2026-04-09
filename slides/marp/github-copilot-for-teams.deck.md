@@ -100,13 +100,12 @@ Summarize plan differences and pick considerations (control, audit, scale) for e
 
 ## Resources
 
-Copilot Documentation:
-
-- https://docs.github.com/en/copilot
-  Copilot for Business Overview
-- https://github.com/features/copilot-for-business
-  Security and Privacy FAQ
-- https://docs.github.com/en/copilot/security
+- Copilot Documentation:
+  https://docs.github.com/en/copilot
+- Copilot for Business Overview
+  https://github.com/features/copilot-for-business
+- Security and Privacy FAQ
+  https://docs.github.com/en/copilot/security
 
 ::: notes
 Point attendees to official docs and FAQs; recommend follow-up reading links on the slide.

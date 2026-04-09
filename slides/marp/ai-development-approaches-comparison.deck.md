@@ -76,6 +76,12 @@ graph TD
     C -->|Conversational Context| D["Result: Specialized Security Expert<br/>using standardized processes with<br/>consistent quality standards"]
 ```
 
+::: column
+
+- Instruction Files set the foundational rules and guardrails first.
+- Prompt Files then apply those rules to execute a specific task in a structured way.
+- Custom Agents add domain persona and context (like a Security Architect) during the interaction.
+- The combined effect is a specialized expert-like result that stays consistent, standardized, and high quality.
 ---
 
 ## Real-World Integration Example
@@ -90,6 +96,8 @@ Instruction Files provide:
 Prompt File executes:
   - “Implement OAuth2 Authentication System”
   - Step-by-step implementation guide
+
+::: column
 
 Custom Agents offers:
   - Security Architect expertise

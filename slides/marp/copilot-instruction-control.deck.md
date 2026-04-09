@@ -8,6 +8,8 @@ paginate: true
 
 ---
 
+<!-- layout: Centered Two Titles -->
+
 ## Controlling GitHub Copilot Files
 
 Understanding Context Submission in AI-Assisted Development

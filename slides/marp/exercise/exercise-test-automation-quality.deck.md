@@ -50,7 +50,7 @@ theme: default
 paginate: true
 ---
 
-# Exercise: Test Automation and Quality || Exercise: The Tests You Always Meant to Write
+# Exercise: Test Automation and Quality || The Tests You Always Meant to Write
 
 ---
 

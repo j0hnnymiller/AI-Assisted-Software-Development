@@ -4,33 +4,36 @@ theme: default
 paginate: true
 ---
 
-<!-- layout: two-column -->
+<!-- layout: Two Content -->
 
 ## Exercise: Prompt Multiple Models to Address Technical Debt
 
 Objectives
-  - Compare outputs from different models
-  - Identify strengths and weaknesses
-  - Evaluate risk and quality
+
+- Compare outputs from different models
+- Identify strengths and weaknesses
+- Evaluate risk and quality
 
 Activities
-  - Select a small technical debt item.
-  - Prompt two or more models to propose a fix.
+
+- Select a small technical debt item.
+- Prompt two or more models to propose a fix.
 
 ::: column
 
-  - Compare outputs for:
-    - Safety
-    - Clarity
-    - Test coverage
-    - Architectural alignment
-  - Synthesize the best elements into a final solution.
+- Compare outputs for:
+  - Safety
+  - Clarity
+  - Test coverage
+  - Architectural alignment
+- Synthesize the best elements into a final solution.
 
 Success Criteria
-  - Differences between models are clearly identified
-  - Risks and strengths are evaluated
-  - Final synthesized solution is safe and incremental
-  - Provenance metadata is included
+
+- Differences between models are clearly identified
+- Risks and strengths are evaluated
+- Final synthesized solution is safe and incremental
+- Provenance metadata is included
 
 ::: notes
 Duration ~00:15

@@ -57,29 +57,32 @@ repo: https://github.com/j0hnnymiller/20260330-aiasd-ge.git
 
 ---
 
-# Exercise: Fork and Clone Repositories || Exercise: Your First git clone of Many
+# Exercise: Fork and Clone Repositories || Your First git clone of Many
 
 ## Exercise: Clone the AI-Assisted-Software-Development Repository
 
 **Setup and Objectives**
 
 Prerequisites
-  - Git
-  - GitHub account
+
+- Git
+- GitHub account
 
 Objectives
-  - Fork the AI-Assisted-Software-Development repository
-  - Clone your fork to your local machine
-  - Switch to the brownfield branch to confirm branch navigation
+
+- Fork the AI-Assisted-Software-Development repository
+- Clone your fork to your local machine
+- Switch to the brownfield branch to confirm branch navigation
 
 **Activities and Success Criteria**
 
 Activities
-  1. Search GitHub for AI-Assisted-Software-Development.
-  2. Fork the repository into your GitHub account.
-  3. Clone your fork locally with SSH or HTTPS.
-  4. Open a terminal in the cloned repository.
-  5. Switch to the brownfield branch.
+
+1. Search GitHub for AI-Assisted-Software-Development.
+2. Fork the repository into your GitHub account.
+3. Clone your fork locally with SSH or HTTPS.
+4. Open a terminal in the cloned repository.
+5. Switch to the brownfield branch.
 
 ::: column
 
@@ -90,9 +93,10 @@ git checkout brownfield
 ```
 
 Success Criteria
-  - Repository is forked under your GitHub account
-  - Cloned repository exists locally
-  - Brownfield branch is checked out successfully
+
+- Repository is forked under your GitHub account
+- Cloned repository exists locally
+- Brownfield branch is checked out successfully
 
 ::: notes
 Duration ~00:10

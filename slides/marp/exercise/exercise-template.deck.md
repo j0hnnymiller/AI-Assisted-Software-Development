@@ -3,7 +3,8 @@ marp: true
 theme: default
 paginate: true
 ---
-# Exercise: Template || Exercise: Insert Wit Here
+
+# Exercise: Template || Insert Wit Here
 
 ## Exercise: {{Slide-Title}}
 
