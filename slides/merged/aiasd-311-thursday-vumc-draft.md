@@ -1,10 +1,4 @@
 ---
-marp: true
-theme: default
-paginate: true
----
-
-﻿---
 ai_generated: true
 model: "anthropic/claude-sonnet-4.6"
 operator: "johnmillerATcodemag-com"
@@ -23,7 +17,6 @@ marp: true
 theme: default
 paginate: true
 ---
-# Welcome Back || The Return of the Prompter
 
 ## Welcome Back to AI-Assisted Software Development
 
@@ -63,25 +56,6 @@ Transition: "Let's pick up right where we left off..."
 
 ---
 
-<!-- _class: lead -->
-
-# AI Practitioner Resources
-
----
-
-## AI Practitioner Resources
-
-- AI Practitioner Resources
-
----
-
-﻿---
-marp: true
-theme: default
-paginate: true
----
-# AI Practitioner Resources || The AI Practitioner's Cheat Sheet
-
 ## AI Practitioner Resources
 
 AI Practitioner Resources
@@ -106,42 +80,6 @@ AI Practitioner Resources
 - Multi-Implementation Comparison
 
 ---
-
-<!-- _class: lead -->
-
-# Brownfield Software Development
-
----
-
-## Brownfield Software Development
-
-- What is Legacy Code
-- Safe Brownfield Coding
-
----
-
-﻿---
-marp: true
-theme: default
-paginate: true
-ai_generated: true
-model: "anthropic/claude-sonnet-4.6"
-operator: "johnmillerATcodemag-com"
-chat_id: "understanding-legacy-code-20260322"
-prompt: |
-  create a marp deck explaining the following content:
-  What is legacy code, what is not legacy code, how codebases degrade over time,
-  what is evergreen code, and legacy code needs respect not fear.
-started: "2026-03-22T02:31:38Z"
-ended: "2026-03-22T02:34:00Z"
-task_durations:
-  - task: "slide creation"
-    duration: "00:02:30"
-total_duration: "00:02:30"
-ai_log: "ai-logs/2026/03/22/understanding-legacy-code-20260322/conversation.md"
-source: "johnmillerATcodemag-com"
----
-# Understanding Legacy Code || Legacy Code Deserves Respect, Not Fear
 
 ## What is Legacy Code
 
@@ -215,8 +153,6 @@ Emphasize the safety-first approach to legacy code. The most important word is "
 :::
 
 ---
-
-# Safe Brownfield Coding || Don't Break Production. Use a Flag.
 
 ## Safe Brownfield Coding
 
@@ -665,92 +601,6 @@ This exercise is the capstone of the combined module. Students apply all three s
 
 ---
 
-<!-- _class: lead -->
-
-# AI Implementation Workflow
-
----
-
-## AI Implementation Workflow
-
-- AI Implementation Workflow
-- Effective Prompts for Technical Debt
-
----
-
-﻿---
-marp: true
-theme: default
-paginate: true
-ai_generated: true
-model: "openai/gpt-5.4@2026-03-22"
-operator: "johnmillerATcodemag-com"
-chat_id: "ai-implementation-workflow-20260322"
-prompt: |
-  create a marp deck explaining the following content:
-
-  ## Section 8: AI Implementation Workflow (Duration: ~00:10:00)
-
-  **Time Range**: 01:11:51 - 01:21:50
-
-  ### Key Topics
-
-  - Getting AI implementation proposals
-  - Verifying AI understanding of issues
-  - Starting implementation execution
-  - Implementation monitoring
-
-  ### Subsection 8.1: Implementation Request Process
-
-  #### Best Practice Workflow
-
-  1. **Request Proposal First**: Don't execute immediately
-     - "Propose implementation to address issue"
-     - Review what AI thinks it will do
-     - Verify understanding before execution
-
-  2. **Review Proposed Fix**
-     - AI reads issue description
-     - AI proposes specific fix
-     - Human reviews for completeness
-
-  3. **Identify Gaps**
-     - Check for missing steps
-     - Example: JWT issue didn't include GitHub removal steps
-     - Add requirements before proceeding
-
-  4. **Proceed with Implementation**
-     - "Go ahead with the implementation"
-     - Can reference conversation on different machine later
-     - Save implementation plan as reference
-
-  ### Subsection 8.2: Multi-Tasking with AI
-
-  **Concurrent Work**:
-
-  - Can start implementation in one session
-  - Continue with other tasks
-  - Monitor progress via notifications
-  - AI works autonomously once started
-
-  ### Preview of Next Topic
-
-  **Instructor Note**: Will demonstrate multi-implementation comparison
-
-  - Technique for evaluating pros and cons
-  - Compare different solutions to problems
-  - Find and evaluate alternatives
-started: "2026-03-22T02:42:27Z"
-ended: "2026-03-22T02:47:10Z"
-task_durations:
-  - task: "slide authoring"
-    duration: "00:04:43"
-total_duration: "00:04:43"
-ai_log: "ai-logs/2026/03/22/ai-implementation-workflow-20260322/conversation.md"
-source: "johnmillerATcodemag-com"
----
-# AI Implementation Workflow || Don't Let the AI Drive Before You Check the Mirrors
-
 ## AI Implementation Workflow
 
 - Getting AI implementation proposals
@@ -839,121 +689,6 @@ Close by previewing the next teaching move: comparing multiple implementations i
 
 ---
 
-﻿---
-marp: true
-theme: default
-paginate: true
-ai_generated: true
-model: "openai/gpt-5.4"
-operator: "johnmillerATcodemag-com"
-chat_id: "effective-prompts-technical-debt-20260322"
-prompt: |
-  create a marp deck explaining the following content:
-
-  ## Section 9: Effective Prompts for Technical Debt (Duration: ~00:08:30)
-
-  **Time Range**: 01:22:35 - 01:31:05
-
-  ### Key Topics
-
-  - Crafting effective technical debt prompts
-  - GitHub issue management
-  - Copilot integration with GitHub
-  - Issue creation and assignment
-
-  ### Subsection 9.1: Prompt Components
-
-  #### Required Elements
-
-  - **Clear description of debt**: What problem exists
-  - **Constraints and architectural rules**: Beyond instruction files
-  - **Expected outcomes**: What success looks like
-  - **Required test updates**: Testing strategy
-  - **Documentation updates**: Required documentation
-  - **Provenance requirements**: Not in instruction files
-
-  #### Benefits
-
-  - Faster remediation
-  - Consistent application of fixes
-  - Reduced manual effort
-  - Standardized approach
-
-  ### Subsection 9.2: GitHub Integration
-
-  #### Issue Management via Copilot
-
-  **Method 1: Direct Issue Creation**
-
-  - Command: "Post issue #6 to the GitHub [repo]"
-  - Copilot creates issue in GitHub
-  - Can specify labels, assignees, etc.
-
-  **Challenges Encountered**:
-
-  - Wrong repository selected initially
-  - Required full repository name format: 'owner/repository'
-  - Need to enable issues in repository settings
-
-  **Resolution**:
-
-  - Provide explicit repository path
-  - Verify settings in GitHub
-  - Use format: 'owner/repository-name'
-
-  #### Assigning Issues to Copilot
-
-  **Paid Subscription Feature**:
-
-  1. Create issue in GitHub
-  2. Assign to @copilot
-  3. Copilot creates work-in-progress branch
-  4. Implements solution autonomously
-  5. Sends notifications on progress
-  6. Creates pull request when complete
-
-  **Requirements**:
-
-  - Enterprise license OR
-  - Pro Plus subscription
-  - Repository in appropriate organization (for Enterprise)
-
-  **Student Discussion**:
-
-  - Free plan users cannot access this feature
-  - Enterprise repos must be in enterprise org
-  - Chris Bishop confirmed org requirement
-
-  ### Subsection 9.3: Live Demonstration
-
-  **Example Workflow**:
-
-  1. Created issue from file content
-  2. Attempted to post to GitHub
-  3. Encountered repository selection issue
-  4. Corrected repository reference
-  5. Issue successfully created
-  6. Assigned to @copilot
-  7. Copilot began autonomous implementation
-
-  **Observations**:
-
-  - Parallel execution: Issue #5 implementation running simultaneously
-  - Notifications received as work progresses
-  - WIP (work-in-progress) branch created automatically
-started: "2026-03-22T03:53:23Z"
-ended: "2026-03-22T04:05:00Z"
-task_durations:
-  - task: "slide authoring"
-    duration: "00:09:00"
-  - task: "provenance and README updates"
-    duration: "00:03:00"
-total_duration: "00:12:00"
-ai_log: "ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md"
-source: "johnmillerATcodemag-com"
----
-# Effective Prompts for Technical Debt || The Art of Complaining Productively to Your AI
-
 ## Effective Prompts for Technical Debt
 
 Section 9 overview
@@ -1016,14 +751,14 @@ This is the business-value slide. Explain that structured prompts reduce rework 
 
 Copilot can help move prompt content into GitHub issues
 
-- Example command: '"Post issue #6 to the GitHub owner/repository-name"'
+- Example command: `"Post issue #6 to the GitHub owner/repository-name"`
 - Copilot can create the issue directly in GitHub
 - Labels, assignees, and metadata can be included
 
 **Common pitfalls**
 
 - Wrong repository selected
-- Missing full 'owner/repository' format
+- Missing full `owner/repository` format
 - Issues disabled in repo settings
 
 ::: notes
@@ -1041,7 +776,7 @@ Use explicit repository context to avoid failed issue creation
 
 1. Provide the full repository path
 2. Verify issues are enabled in repository settings
-3. Use the exact format: 'owner/repository-name'
+3. Use the exact format: `owner/repository-name`
 
 ```text
 Good: Post issue #6 to johnmillerATcodemag-com/AI-Assisted-Software-Development
@@ -1062,7 +797,7 @@ This slide turns the earlier problem into an operational rule. Show the contrast
 Paid plan workflow for autonomous implementation
 
 1. Create the issue in GitHub
-2. Assign the issue to '@copilot'
+2. Assign the issue to `@copilot`
 3. Copilot creates a work-in-progress branch
 4. Copilot implements the requested solution
 5. Notifications report ongoing progress
@@ -1156,7 +891,7 @@ Give the audience a concrete artifact they can copy into their own workflow. Exp
 
 - Strong prompts define the debt, constraints, outcomes, tests, docs, and provenance
 - GitHub issue creation works best with explicit repository targeting
-- Assigning to '@copilot' can automate branch, progress, and PR creation
+- Assigning to `@copilot` can automate branch, progress, and PR creation
 - Demo failures showed how prompt specificity improves execution
 - Technical debt becomes easier to manage when prompts and issues work together
 
@@ -1179,22 +914,6 @@ Close by tying prompt quality to execution quality. The audience should leave wi
 - Multi-Implementation Comparison
 
 ---
-
-<!-- _class: lead -->
-
-# Building a Backlog
-
----
-
-## Building a Backlog
-
-- Conformance & Gap Analysis
-- Building a Backlog
-- Finding the Gaps: Common Security Findings
-
----
-
-# Conformance and Gap Analysis || The Architectural Rules Lawyer Is In
 
 ## Conformance & Gap Analysis
 
@@ -1351,8 +1070,6 @@ This exercise helps participants move from analysis to execution. The goal is to
 
 ---
 
-# Building a Technical Debt Backlog || Finally, an Excuse to File All Those Issues
-
 ## Building a Backlog
 
 Identifying technical debt
@@ -1444,35 +1161,6 @@ Encourage participants to treat this as a real backlog-building session. The goa
 
 ---
 
-﻿---
-ai_generated: true
-model: "claude-sonnet-4.6@2026-03-21"
-operator: "johnmillerATcodemag-com"
-chat_id: "ai-prioritization-brownfield-protection-20260321"
-prompt: |
-  create a marp deck explaining the following content:
-
-  ## Section 7: Prioritization & Issue Management (Duration: 00:04:29)
-  Security issue identification, AI-assisted prioritization matrix, technical debt
-  visibility, Phase Zero security with infinite ROI.
-started: "2026-03-21T23:17:54Z"
-ended: "2026-03-21T23:35:00Z"
-task_durations:
-  - task: "slide outline"
-    duration: "00:03:00"
-  - task: "slide authoring"
-    duration: "00:11:00"
-  - task: "provenance and catalog updates"
-    duration: "00:03:00"
-total_duration: "00:17:00"
-ai_log: "ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/conversation.md"
-source: "johnmillerATcodemag-com"
-marp: true
-theme: default
-paginate: true
----
-# Implementation Plan Prioritization || Security First: The Only Priority With No Exceptions
-
 ## Finding the Gaps: Common Security Findings
 
 When AI audits a brownfield codebase, these issues surface first:
@@ -1524,7 +1212,7 @@ Explain that the impact/effort matrix is a practical tool for turning a long deb
 Visibility is the first step toward resolution:
 
 - Ask AI to generate a prioritized issue list from the audit findings
-- Represent priorities as GitHub Issues with labels ('P0', 'P1', 'P2')
+- Represent priorities as GitHub Issues with labels (`P0`, `P1`, `P2`)
 - Use Mermaid diagrams to visualize dependencies and sequencing
 - Update issue descriptions with AI-proposed implementation steps
 - Share the dashboard with the full team — debt is a shared problem
@@ -1599,20 +1287,6 @@ Frame Evergreen not as a destination you reach once but as an operating mode whe
 - Multi-Implementation Comparison
 
 ---
-
-<!-- _class: lead -->
-
-# Addressing Technical Debt
-
----
-
-## Addressing Technical Debt
-
-- Addressing Technical Debt
-
----
-
-# Addressing Technical Debt with Copilot || Your Technical Debt Has an AI Payment Plan
 
 ## Addressing Technical Debt
 
@@ -1788,8 +1462,6 @@ This exercise reinforces the importance of guardrails and helps participants pra
 
 ---
 
-# Code Quality Analysis Exercise || AI-Powered Code Shame Session
-
 ## Exercise: Code Quality Analysis
 
 Objectives
@@ -1859,51 +1531,6 @@ Analyze the workspace for code or content that is not evergreen. Focus on date-c
 
 ---
 
-﻿---
-ai_generated: true
-model: "openai/gpt-5.4@unknown"
-operator: "johnmillerATcodemag-com"
-chat_id: "exercise-technical-debt-copilot-workflows-20260322"
-prompt: |
-  create an exercise marp slide using the slides\exercise-template.pptx template for the following:
-
-
-  # **Exercise: Prompt Copilot to Address Technical Debt**
-
-  ### Duration
-
-  10 minutes
-
-  ### Objectives
-
-  - Practice writing high-signal prompts
-  - Apply architectural constraints
-  - Produce safe, incremental remediation requests
-
-  ### Activities
-
-  1. Select a small piece of technical debt.
-  2. Write a prompt that includes:
-     - Description of the debt
-     - Constraints and rules
-     - Expected behavior
-     - Required tests and documentation
-  3. Ask Copilot to propose a remediation.
-  4. Review the output for correctness.
-
-  ### Success Criteria
-
-  - Prompt is clear, scoped, and actionable
-  - Copilot produces a safe, incremental change
-  - Output aligns with architectural rules
-  - Provenance metadata is included
-
-  ::: notes
-  Encourage participants to choose a real example from their brownfield system. The goal is clarity and safety, not complexity.
-  :::
-
-  ---
-
   ## **Exercise: Assigning an Issue to Copilot**
 
   10 minutes
@@ -1941,9 +1568,7 @@ Duration ~00:10
 :::
 
 ---
-# Exercise: Addressing Technical Debt with Copilot || Exercise: Ask Copilot to Clean Your Room
 
-# Exercise: Addressing Technical Debt with Copilot || Exercise: Ask Copilot to Clean Your Room
 
 15 minutes
 
@@ -2131,22 +1756,6 @@ This final exercise is about controlled delegation, not blind trust. Ask partici
 
 ---
 
-<!-- _class: lead -->
-
-# Multi-Implementation Comparison
-
----
-
-## Multi-Implementation Comparison
-
-- Multi-Model Implementation Comparison
-
----
-
-# Multi-Model Implementation Comparison || Ask Three AIs, Get Four Opinions
-
----
-
 ## Multi-Model Implementation Comparison
 
 - Implementing changes with different AI models
@@ -2248,33 +1857,36 @@ Encourage participants to choose a real example from their brownfield system. Th
 
 ---
 
-<!-- layout: two-column -->
+<!-- layout: Two Content -->
 
 ## Exercise: Prompt Multiple Models to Address Technical Debt
 
 Objectives
-  - Compare outputs from different models
-  - Identify strengths and weaknesses
-  - Evaluate risk and quality
+
+- Compare outputs from different models
+- Identify strengths and weaknesses
+- Evaluate risk and quality
 
 Activities
-  - Select a small technical debt item.
-  - Prompt two or more models to propose a fix.
+
+- Select a small technical debt item.
+- Prompt two or more models to propose a fix.
 
 ::: column
 
-  - Compare outputs for:
-    - Safety
-    - Clarity
-    - Test coverage
-    - Architectural alignment
-  - Synthesize the best elements into a final solution.
+- Compare outputs for:
+  - Safety
+  - Clarity
+  - Test coverage
+  - Architectural alignment
+- Synthesize the best elements into a final solution.
 
 Success Criteria
-  - Differences between models are clearly identified
-  - Risks and strengths are evaluated
-  - Final synthesized solution is safe and incremental
-  - Provenance metadata is included
+
+- Differences between models are clearly identified
+- Risks and strengths are evaluated
+- Final synthesized solution is safe and incremental
+- Provenance metadata is included
 
 ::: notes
 Duration ~00:15

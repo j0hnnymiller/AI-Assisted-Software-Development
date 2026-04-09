@@ -7,18 +7,23 @@ sections:
     decks:
       - slides\marp\welcome-back.deck.md
 
+  - name: Test Automation and Code Quality
+    decks:
+    - slides\marp\test-automation-and-code-quality.deck.md
+    - slides\marp\exercise\exercise-test-automation-quality.deck.md
+    - slides\marp\creating-robust-testing-frameworks.deck.md
+    - slides\marp\exercise\exercise-strengthening-your-testing-framework.deck.md
+    - slides\marp\feature-flags-and-test-suites.deck.md
+    - slides\marp\testing-in-production.deck.md
+
   - name: Instructions vs Prompts vs Custom Agents
     decks:
       - slides\marp\ai-development-approaches-comparison.deck.md
 
-  - name: Managing Context
-    decks:
-      - slides\marp\managing-github-copilot-effectively.deck.md
-
   - name: Custom Agents
     decks:
-      - slides\marp\custom-agents.deck.md
       - slides\marp\vscode-copilot-agents-overview.deck.md
+      - slides\marp\custom-agents.deck.md
       - slides\marp\exercise\exercise-create-and-use-custom-agent.deck.md
       - slides\marp\custom-agent-best-practices.deck.md
       - slides\marp\copilot-instruction-control.deck.md

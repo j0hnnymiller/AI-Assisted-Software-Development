@@ -20,6 +20,8 @@ title: Phase 1 and Phase 2 Regression Harness
 subtitle: Merge and PPTX branch coverage
 ---
 
+# Phase 1 and Phase 2 Regression Harness
+
 ::: notes
 Open the regression suite and explain that this deck is intentionally synthetic.
 Mention that the first H1 in the first deck should remain a title-only slide in PPTX.
@@ -73,6 +75,8 @@ The merged markdown should keep that line verbatim.
 
 ---
 
+# Architecture Truth || But Make It Memorable
+
 ::: notes
 This slide should trigger the centered two titles branch because it is H1-only with matter-of-fact and witty parts.
 Confirm the title and subtitle placeholders are both populated in the generated PPTX.
@@ -90,6 +94,8 @@ Point out that the provenance line exists to test Phase 1 stripping behavior.
   :::
 
 ---
+
+# Plain Divider Title
 
 ::: notes
 This H1-only slide should route to the centered title branch after the first deck-level H1 has been seen.
@@ -139,6 +145,20 @@ The provenance line after the first H1 is included to exercise merge stripping b
 - Phase12 Empty Section
 
 ---
+
+<!-- _class: lead -->
+
+# Phase12 Layout Paths
+
+---
+
+## Phase12 Layout Paths
+
+- Explicit Title Slide Layout
+
+---
+
+# Layout and Column Branches
 
 ::: notes
 Introduce this deck as the explicit layout-routing test set.
@@ -210,7 +230,7 @@ Use this as a baseline before testing separator-driven two-column behavior.
 
 ---
 
-## Separator Based Two Columns
+## Separator Based Two Content
 
 Left side keeps these bullets.
 
@@ -232,7 +252,7 @@ Check that both columns appear and ordering is preserved.
 **Expected PPTX Rendering:**
 
 - Layout: Two Content (auto-detected via ::: column separator)
-- Title Placeholder: "Separator Based Two Columns"
+- Title Placeholder: "Separator Based Two Content"
 - Left Column Placeholder: "Left side keeps these bullets." + 2 bullets ("alpha", "beta")
 - Right Column Placeholder: "Right side keeps these bullets." + 2 bullets ("gamma", "delta")
 - Notes: This notes block content
@@ -293,6 +313,27 @@ Capture this warning as expected behavior in test notes.
 
 ---
 
+<!-- _class: hide -->
+
+## Hidden Slide Branch
+
+This slide verifies that Phase 2 marks hide-class slides as hidden in the generated PPTX.
+
+::: notes
+This slide is the regression sentinel for hidden-slide behavior.
+Keep it in the deck to ensure Phase 2 still honors the hide class marker.
+
+**Expected PPTX Rendering:**
+
+- Layout: Title and Content
+- Title Placeholder: "Hidden Slide Branch"
+- Content Placeholder: Body paragraph text
+- Hidden: true (slide XML attribute show="0")
+- Notes: This notes block content
+  :::
+
+---
+
 <!-- _class: lead -->
 
 ## Course Modules
@@ -303,6 +344,21 @@ Capture this warning as expected behavior in test notes.
 - Phase12 Empty Section
 
 ---
+
+<!-- _class: lead -->
+
+# Phase12 Content Paths
+
+---
+
+## Phase12 Content Paths
+
+- Background Image Title Only
+- Starts After Leading Separator
+
+---
+
+# Table Mermaid and Background Branches
 
 ::: notes
 Introduce this deck as the content-feature branch coverage set.
@@ -360,6 +416,60 @@ The speaker notes should be combined with source metadata in PPTX.
 - Table Content: Headers "Branch", "Trigger", "Expected" + 2 data rows
 - Notes: This notes block content + source file reference
 - Table Handling: Markdown table converted to native PPTX table object
+  :::
+
+---
+
+## Markdown Table Centering and Width
+
+| Aspect    | Expected Layout Behavior | Verification Target          |
+| --------- | ------------------------ | ---------------------------- |
+| Alignment | Centered horizontally    | Equal left and right margins |
+| Width     | 80% of slide width       | Matches spec and parser test |
+| Height    | Row-driven growth        | Expands with table rows      |
+
+::: notes
+This slide verifies the table placement rules introduced for markdown table rendering.
+Confirm the generated PowerPoint table is centered horizontally on the slide.
+Measure or inspect that table width is 80 percent of the slide width rather than filling the content placeholder.
+
+**Expected PPTX Rendering:**
+
+- Layout: Title and Content (table routing)
+- Title Placeholder: "Markdown Table Centering and Width"
+- Content Placeholder: Replaced by a PowerPoint table (3 columns x 4 rows including header)
+- Table Alignment: Centered horizontally on the slide
+- Table Width: 80% of total slide width
+- Table Height: Driven by row count using the table slide sizing logic
+- Notes: This notes block content + source file reference
+- Verification Focus: Left offset equals remaining horizontal margin after applying 80% width rule
+  :::
+
+---
+
+<!-- layout: Two Content -->
+
+## Explicit Layout Table Branch
+
+| Case                    | Input Condition                        | Expected Result                          |
+| ----------------------- | -------------------------------------- | ---------------------------------------- |
+| Named layout present    | '<!-- layout: Two Content -->' comment | Table still renders as native PPTX table |
+| Markdown table detected | Standard pipe table syntax             | Table branch takes precedence            |
+| Slide title retained    | H2 heading present                     | Title remains in title placeholder       |
+
+::: notes
+This slide verifies that explicit layout comments do not bypass markdown table detection.
+Confirm the generator still routes through the native table path even when a named layout comment is present.
+This protects the regression where explicit Two Content layout could otherwise suppress the table-specific rendering branch.
+
+**Expected PPTX Rendering:**
+
+- Layout: Title and Content with native table insertion
+- Title Placeholder: "Explicit Layout Table Branch"
+- Content Placeholder: Replaced by a PowerPoint table (3 columns x 4 rows including header)
+- Table Handling: Markdown table conversion takes precedence over generic named-layout body rendering
+- Notes: This notes block content + source file reference
+- Verification Focus: No plain body-text rendering of the markdown pipe syntax
   :::
 
 ---
@@ -441,6 +551,8 @@ Use this to validate the V5 check in the merge prompt verification list.
 
 ---
 
+# Leading and Trailing Separator Coverage
+
 ::: notes
 Explain that this file intentionally stresses separator normalization logic.
 The leading separator after the deck heading should not create duplicate joins in merged output.
@@ -509,3 +621,9 @@ Confirm merged output does not end with duplicate separators from this source fi
 - Phase12 Layout Paths
 - Phase12 Content Paths
 - **▶ Phase12 Empty Section**
+
+---
+
+<!-- _class: lead -->
+
+# Phase12 Empty Section
