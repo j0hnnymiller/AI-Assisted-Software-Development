@@ -130,9 +130,9 @@ Explain each goal briefly. Provenance ensures we can trace AI-assisted work back
 ### Usage guidelines
 
 - Use `**double asterisks**` around text that should appear bold in the PPTX output
-- Bold formatting works in headings, body text, and bullet lists
+- Bold formatting works in headings, title placeholders, body text, bullet lists, and markdown table cells
 - Multiple bold sections on one line are supported
-- The PPTX generator (`scripts/generate_pptx.py`) automatically parses bold syntax and applies `font.bold = True` to the appropriate text runs
+- The PPTX generator (`scripts/generate_pptx.py`) automatically parses bold syntax, removes the literal markers, and applies `font.bold = True` to the appropriate text runs
 
 ### Example slide with formatting
 
@@ -156,6 +156,26 @@ Contact: [john.miller@codemag.com](john.miller@codemag.com)
 ```
 
 This produces a slide where "John Michael Miller", "Principal Software Engineer at CODE", "15+ years", "AI/ML Enthusiast", and "DevOps engineer" all appear in bold font in the final PowerPoint presentation.
+
+## Markdown tables in slides
+
+Markdown tables are converted into native PowerPoint tables during PPTX generation.
+
+- Tables are centered horizontally on the slide
+- Tables render at 80% of the slide width
+- Table height expands based on the number of rows
+- Use standard markdown table syntax
+
+Example:
+
+```markdown
+## Comparison Matrix
+
+| Aspect  | Instruction Files  | Prompt Files           | Custom Agents                 |
+| ------- | ------------------ | ---------------------- | ----------------------------- |
+| Scope   | Repository-wide    | Single task/workflow   | Conversational context        |
+| Purpose | Define AI behavior | Execute specific tasks | Provide specialized expertise |
+```
 
 ## Speaker Notes Requirements
 

@@ -395,6 +395,13 @@ def apply_markdown_formatting(text_frame, line_text: str, paragraph=None, force_
         run.font.name = "Consolas"
         return
 
+    h3_match = re.match(r"^(\s*)###\s+(.*)$", line_text)
+    is_h3_heading = h3_match is not None
+    if is_h3_heading:
+        line_text = f"{h3_match.group(1)}{h3_match.group(2)}"
+        p.space_before = Pt(8)
+        p.space_after = Pt(4)
+
     # Handle blockquote lines: render as italic, strip the '> ' prefix
     is_blockquote = line_text.startswith("> ")
     if is_blockquote:
@@ -466,10 +473,12 @@ def apply_markdown_formatting(text_frame, line_text: str, paragraph=None, force_
     for seg_text, seg_bold, seg_italic, seg_underline, seg_strike, seg_code in segments:
         run = p.add_run()
         run.text = seg_text
-        run.font.bold = seg_bold
+        run.font.bold = seg_bold or is_h3_heading
         run.font.italic = seg_italic or is_blockquote
         run.font.underline = seg_underline
         run.font.strike = seg_strike
+        if is_h3_heading:
+            run.font.size = Pt(22)
         if seg_strike:
             # Ensure reliable strike rendering across PowerPoint clients.
             run._r.get_or_add_rPr().set("strike", "sngStrike")
@@ -811,6 +820,24 @@ def populate_table_cell_markdown(cell, text: str, font_size: int = 16) -> None:
             run.font.size = Pt(font_size)
 
 
+def populate_single_paragraph_markdown(text_frame, text: str) -> None:
+    """Populate a single-paragraph placeholder using inline markdown formatting."""
+    text_frame.clear()
+    if not text:
+        return
+    apply_markdown_formatting(text_frame, text, paragraph=text_frame.paragraphs[0])
+
+
+def populate_shape_markdown_text(shape, text: str) -> None:
+    """Populate a shape or placeholder with markdown-aware inline formatting."""
+    if not text:
+        return
+    if getattr(shape, "has_text_frame", False):
+        populate_single_paragraph_markdown(shape.text_frame, text)
+    else:
+        shape.text = text
+
+
 def split_two_column_body(body: str) -> tuple[str, str]:
     """Split slide body into left/right column text.
 
@@ -898,7 +925,7 @@ def add_title_content_slide(prs: Presentation, title: str, body: str, inline_ima
     layout = get_slide_layout(prs, ["Title and Content"], LAYOUT_TITLE_CONTENT)
     slide = prs.slides.add_slide(layout)
     if slide.shapes.title:
-        slide.shapes.title.text = title
+        populate_shape_markdown_text(slide.shapes.title, title)
 
     for shape in slide.placeholders:
         if shape.placeholder_format.idx == 1:
@@ -952,7 +979,7 @@ def add_named_layout_slide(
     add_background_image(slide, bg_image)
 
     if slide.shapes.title:
-        slide.shapes.title.text = title
+        populate_shape_markdown_text(slide.shapes.title, title)
 
     title_placeholder_idx = slide.shapes.title.placeholder_format.idx if slide.shapes.title else None
     content_placeholders = []
@@ -990,7 +1017,7 @@ def add_two_column_slide(
     layout = get_slide_layout(prs, ["Two Column", "Two Columns", "Two Content"], LAYOUT_TWO_COLUMN)
     slide = prs.slides.add_slide(layout)
     if slide.shapes.title:
-        slide.shapes.title.text = title
+        populate_shape_markdown_text(slide.shapes.title, title)
 
     for shape in slide.placeholders:
         idx = shape.placeholder_format.idx
@@ -1011,7 +1038,7 @@ def add_table_slide(prs: Presentation, title: str, table_data: list[list[str]], 
     slide = prs.slides.add_slide(layout)
 
     if slide.shapes.title:
-        slide.shapes.title.text = title
+        populate_shape_markdown_text(slide.shapes.title, title)
 
     # Remove the content placeholder to make room for the table
     for shape in slide.placeholders:
@@ -1025,10 +1052,10 @@ def add_table_slide(prs: Presentation, title: str, table_data: list[list[str]], 
     cols = max(len(row) for row in table_data) if table_data else 0
 
     if rows > 0 and cols > 0:
-        # Position and size the table
-        left = Inches(0.5)
+        # Center tables horizontally at 80% of slide width for consistent layout.
+        width = int(prs.slide_width * 0.8)
+        left = int((prs.slide_width - width) / 2)
         top = Inches(2.0)
-        width = Inches(9.0)
         height = Inches(0.5 * rows)  # Dynamic height based on number of rows
 
         # Add table
@@ -1061,7 +1088,7 @@ def add_title_only_slide(prs: Presentation, title: str, bg_image: str | None = N
 
     # Set title after adding background image
     if slide.shapes.title:
-        slide.shapes.title.text = title
+        populate_shape_markdown_text(slide.shapes.title, title)
 
     add_inline_images(slide, inline_images or [])
 
@@ -1082,9 +1109,9 @@ def add_title_slide(prs: Presentation, title: str, subtitle: str = "", note: str
     for shape in slide.placeholders:
         idx = shape.placeholder_format.idx
         if idx == 0:
-            shape.text = title
+            populate_shape_markdown_text(shape, title)
         elif idx == 1 and subtitle:
-            shape.text = subtitle
+            populate_shape_markdown_text(shape, subtitle)
 
     if note:
         set_slide_notes(slide, note)
@@ -1124,7 +1151,7 @@ def add_centered_title_slide(prs: Presentation, title: str, note: str = "") -> N
     layout = get_slide_layout(prs, ["Section Header", "Section Title"], LAYOUT_SECTION_HEADER)
     slide = prs.slides.add_slide(layout)
     if slide.shapes.title:
-        slide.shapes.title.text = title
+        populate_shape_markdown_text(slide.shapes.title, title)
     if note:
         set_slide_notes(slide, note)
 
@@ -1139,11 +1166,11 @@ def add_centered_two_titles_slide(prs: Presentation, title: str, subtitle: str, 
     layout = get_slide_layout(prs, ["Centered Two Titles"], LAYOUT_CENTERED_TWO_TITLES)
     slide = prs.slides.add_slide(layout)
     if slide.shapes.title:
-        slide.shapes.title.text = title
+        populate_shape_markdown_text(slide.shapes.title, title)
     # Write the witty portion into the subtitle placeholder (idx=1)
     for ph in slide.placeholders:
         if ph.placeholder_format.idx == 1:
-            ph.text = subtitle
+            populate_shape_markdown_text(ph, subtitle)
             break
     if note:
         set_slide_notes(slide, note)
@@ -1151,10 +1178,12 @@ def add_centered_two_titles_slide(prs: Presentation, title: str, subtitle: str, 
 
 def build_presentation(yaml_path: Path, output_path: Path) -> None:
     yaml_path = yaml_path.resolve()
-    # Calculate repo_root: if manifest is in slides/manifests/, go up 3 levels
-    # If manifest is in slides/, go up 2 levels (backward compatible)
+    # Handles: slides/manifests/<file>, slides/manifests/<subdir>/<file>, slides/<file>
     if yaml_path.parent.name == "manifests":
         repo_root = yaml_path.parent.parent.parent
+    elif yaml_path.parent.parent.name == "manifests":
+        # manifest is in a subdirectory of manifests/ (e.g. slides/manifests/vumc/)
+        repo_root = yaml_path.parent.parent.parent.parent
     else:
         repo_root = yaml_path.parent.parent
 
@@ -1194,9 +1223,9 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
         for shape in title_slide.placeholders:
             idx = shape.placeholder_format.idx
             if idx == 0 and prs_title:
-                shape.text = prs_title
+                populate_shape_markdown_text(shape, prs_title)
             elif idx == 1 and prs_subtitle:
-                shape.text = prs_subtitle
+                populate_shape_markdown_text(shape, prs_subtitle)
 
     # Populate the template Agenda slide (slide 1) with section names.
     if len(prs.slides) > 1:
@@ -1357,6 +1386,15 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                     inline_image_paths.append(rendered_mermaid_path)
 
                 requested_layout_name = slide_layout_name
+                has_markdown_table = contains_markdown_table(body)
+
+                if has_markdown_table:
+                    # Parse and create table slide
+                    table_data = parse_markdown_table(body)
+                    add_table_slide(prs, title or slide_file.stem, table_data, note=combined_note)
+                    if should_hide_slide:
+                        mark_slide_hidden(prs.slides[-1])
+                    continue
 
                 if requested_layout_name and add_named_layout_slide(
                     prs,
@@ -1386,8 +1424,8 @@ def build_presentation(yaml_path: Path, output_path: Path) -> None:
                             mark_slide_hidden(prs.slides[-1])
                         continue
 
-                if contains_markdown_table(body):
-                    # Parse and create table slide
+                if has_markdown_table:
+                    # Defensive fallback; currently handled above.
                     table_data = parse_markdown_table(body)
                     add_table_slide(prs, title or slide_file.stem, table_data, note=combined_note)
                     if should_hide_slide:

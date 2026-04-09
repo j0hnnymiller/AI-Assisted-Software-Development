@@ -410,6 +410,8 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
 - Text outside bold markers is rendered as normal text
 - Multiple bold sections on one line are supported
 - Works with bulleted lists (the bullet prefix `- ` is handled correctly)
+- Applies to markdown-aware title, subtitle, body, bullet-list, and table-cell rendering paths
+- Literal `**` markers must not appear in the visible PPTX output
 
 **Example transformations**:
 
@@ -423,7 +425,31 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
 
 1. Create a slide with markdown bold syntax in the source markdown
 2. Generate the PPTX using `generate_pptx.py`
-3. Open the PPTX and verify bold text appears with actual bold formatting (not literal asterisks)
+3. Open the PPTX and verify bold text appears with actual bold formatting in titles, body text, bullets, and table cells (not literal asterisks)
+
+### 7.4.6 Markdown Table Rendering
+
+**REQUIRED BEHAVIOR**: Slides whose body contains a markdown table are rendered as native PowerPoint tables on a Title and Content slide.
+
+**Layout rules**:
+
+- The content placeholder is removed before inserting the table.
+- The table is centered horizontally on the slide.
+- The table width is fixed to **80% of the slide width**.
+- Table height remains dynamic based on row count.
+
+**Implementation** in `generate_pptx.py`:
+
+```python
+width = int(prs.slide_width * 0.8)
+left = int((prs.slide_width - width) / 2)
+```
+
+**Testing verification**: When testing modifications:
+
+1. Create a slide containing a markdown table.
+2. Generate the PPTX using `generate_pptx.py`.
+3. Open the PPTX and verify the table is horizontally centered and occupies 80% of slide width.
 
 ### 7.5 Execution
 
