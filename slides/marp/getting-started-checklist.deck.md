@@ -21,25 +21,22 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Getting Started Checklist || The Recipe Before the Meal
+
+---
 
 ## High Level AI Assisted Workflow
 
 ### From Requirements to a Solution
 
-Stakeholders such as SMEs, architects, SREs, and DBAs define the requirements with AI assistance.
-
-AI transforms the requirements into implementation instruction files that guide the work.
-
+- Stakeholders such as SMEs, architects, SREs, and DBAs define the requirements with AI assistance.
+  - AI transforms the requirements into implementation instruction files that guide the work.
 - Stakeholders review, improve, and approve the instruction files.
-
-AI uses those instruction files to create prompts that implement the business requirements.
-
-- Implementation prompts explain how the feature should be built and how acceptance criteria should be verified.
+  - AI uses those instruction files to create prompts that implement the business requirements.
+  - Implementation prompts explain how the feature should be built and how acceptance criteria should be verified.
 - Stakeholders review, improve, and approve the implementation prompts.
-
-Submitting the implementation prompts produces an implementation that conforms to the instruction files and meets the acceptance criteria.
-
+  - Submitting the implementation prompts produces an implementation that conforms to the instruction files and meets the acceptance criteria.
 - Stakeholders review and approve the resulting implementation.
 
 ![Slide 3 image](images/_Getting_Started_Checklist_slide03_5.png)

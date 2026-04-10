@@ -82,13 +82,8 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Vertical Slicing Architecture Introduction || Features Go Vertical. Layers Go Home.
-
-## Vertical Slicing Architecture Introduction
-
-### Organizing software around features instead of layers
-
-*AI-Assisted Software Development*
 
 ::: notes
 Duration ~00:01
@@ -103,9 +98,6 @@ Transition with: "Let's define the pattern first, then compare it to the layered
 :::
 
 ---
-
-
-
 
 ## What is a vertical slice?
 
@@ -168,18 +160,16 @@ Transition with: "Once the structure changes, the day-to-day developer experienc
 
 ## Why developers like this approach
 
-### Developer experience
+Developer experience
+  - Faster feature development
+  - All related code in one location
+  - Less folder jumping during implementation
+  - New features are less likely to disturb existing ones
 
-- Faster feature development
-- All related code in one location
-- Less folder jumping during implementation
-- New features are less likely to disturb existing ones
-
-### Maintainability
-
-- Localized changes
-- Clear boundaries reduce accidental bugs
-- Refactoring happens inside the feature more often than across the whole app
+Maintainability
+  - Localized changes
+  - Clear boundaries reduce accidental bugs
+  - Refactoring happens inside the feature more often than across the whole app
 
 ::: notes
 Duration ~00:03
@@ -195,23 +185,18 @@ Transition with: "Those same boundaries also help teams collaborate and test mor
 
 ---
 
-
-
-
 ## Collaboration and testing benefits
 
-### Team collaboration
+Team collaboration
+  - Teams can build features in parallel
+  - Clear boundaries mean fewer merge conflicts
+  - Ownership and responsibility are easier to assign
 
-- Teams can build features in parallel
-- Clear boundaries mean fewer merge conflicts
-- Ownership and responsibility are easier to assign
-
-### Testing approach
-
-- Test complete features, not isolated layers
-- Mock at feature boundaries
-- Integration becomes more straightforward
-- Independent development is easier with mocked dependencies
+Testing approach
+  - Test complete features, not isolated layers
+  - Mock at feature boundaries
+  - Integration becomes more straightforward
+  - Independent development is easier with mocked dependencies
 
 ::: notes
 Use about two to three minutes on this slide. Explain that feature folders create natural seams for parallel work, so two developers can often build different slices without changing the same files.

@@ -111,11 +111,12 @@ total_duration: "00:12:00"
 ai_log: "ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+
 # Effective Prompts for Technical Debt || The Art of Complaining Productively to Your AI
 
-## Effective Prompts for Technical Debt
+---
 
-Section 9 overview
+## Effective Prompts for Technical Debt
 
 - Focus: prompts, issues, and Copilot workflow
 - Goal: turn vague cleanup into executable work
@@ -127,9 +128,6 @@ Open by explaining that technical debt work often fails because requests are too
 :::
 
 ---
-
-
-
 
 ## What a Strong Technical Debt Prompt Includes
 
@@ -148,9 +146,6 @@ Walk through each component as part of a checklist, not as optional advice. The 
 
 ---
 
-
-
-
 ## Why Structured Prompts Matter
 
 Better prompts create better remediation workflows
@@ -168,9 +163,6 @@ This is the business-value slide. Explain that structured prompts reduce rework 
 
 ---
 
-
-
-
 ## GitHub Integration - Direct Issue Creation
 
 Copilot can help move prompt content into GitHub issues
@@ -179,113 +171,31 @@ Copilot can help move prompt content into GitHub issues
 - Copilot can create the issue directly in GitHub
 - Labels, assignees, and metadata can be included
 
-**Common pitfalls**
-
-- Wrong repository selected
-- Missing full `owner/repository` format
-- Issues disabled in repo settings
-
 ::: notes
 Present this as the first automation step after prompt authoring. The audience should understand that Copilot can bridge from local artifact or prompt text into the GitHub issue system, but repository targeting must be explicit. Stress the practical lesson from the demo: natural language is often not enough when multiple repositories are in play. Encourage attendees to always state the full repository name to avoid misrouting work. (~1.25 minutes)
 :::
 
 ---
 
-
-
-
-## Resolving Repository Targeting Problems
-
-Use explicit repository context to avoid failed issue creation
-
-1. Provide the full repository path
-2. Verify issues are enabled in repository settings
-3. Use the exact format: `owner/repository-name`
-
-```text
-Good: Post issue #6 to johnmillerATcodemag-com/AI-Assisted-Software-Development
-Weak: Post issue #6 to the GitHub repo
-```
-
-::: notes
-This slide turns the earlier problem into an operational rule. Show the contrast between a strong repository reference and an ambiguous one so the audience sees how small wording changes affect outcome quality. Mention that this is especially important in enterprise environments, where users often have access to many repositories and organizations. Transition by noting that once the issue exists, the next step is assigning the work to Copilot. (~1 minute)
-:::
-
----
-
-
-
-
 ## Assigning an Issue to @copilot
 
 Paid plan workflow for autonomous implementation
-
-1. Create the issue in GitHub
-2. Assign the issue to `@copilot`
-3. Copilot creates a work-in-progress branch
-4. Copilot implements the requested solution
-5. Notifications report ongoing progress
-6. Copilot opens a pull request when complete
+  1. Create the issue in GitHub
+  2. Assign the issue to `@copilot`
+  3. Copilot creates a work-in-progress branch
+  4. Copilot implements the requested solution
+  5. Notifications report ongoing progress
+  6. Copilot opens a pull request when complete
 
 **Requirements**
-
-- Enterprise license or Pro Plus subscription
-- Enterprise workflow requires the repository in the correct org
+  - Enterprise license or Pro Plus subscription
+  - Enterprise workflow requires the repository in the correct org
 
 ::: notes
 Describe this as the jump from assisted drafting to autonomous execution. The value is not just code generation; it is the full workflow of branch creation, progress updates, and PR delivery. Be clear that this is a paid capability and that organizational placement matters for enterprise scenarios. This helps the audience distinguish between what everyone can do and what requires higher-tier licensing. (~1.25 minutes)
 :::
 
 ---
-
-
-
-
-## Live Demo Workflow
-
-What happened in the demonstration
-
-```mermaid
-flowchart LR
-    A[Create issue from file content] --> B[Attempt GitHub posting]
-    B --> C[Repo selection problem]
-    C --> D[Correct repo reference]
-    D --> E[Issue created successfully]
-    E --> F[Assign issue to @copilot]
-    F --> G[Autonomous implementation starts]
-```
-
-::: notes
-Use the flowchart to retell the demo as a sequence of decisions and corrections. The important teaching point is that failure was not the end of the workflow; it was a signal to improve context and retry with better specificity. Explain that this is exactly how teams should treat prompt failures in practice: inspect the ambiguity, refine the prompt, and rerun. This slide also helps students remember the workflow as a reusable playbook rather than a one-off demo. (~1 minute)
-:::
-
----
-
-
-
-
-## Operational Observations from the Demo
-
-What the audience saw in real time
-
-- Another issue implementation was running in parallel
-- Notifications arrived as work progressed
-- A WIP branch was created automatically
-- Copilot behaved like a tracked background teammate
-
-**Student takeaway**
-
-- Track work in GitHub, not just in chat
-- Let automation handle branch and PR scaffolding
-
-::: notes
-This slide helps the audience move from feature awareness to workflow intuition. Explain that the visible notifications and parallel work demonstrate why GitHub-backed flows are more scalable than copy-paste prompt execution alone. The WIP branch is important because it gives teams traceability and a concrete artifact to review. Emphasize that GitHub becomes the control surface for AI work, while prompts become the specification language. (~1 minute)
-:::
-
----
-
-
-
 
 ## Reusable Prompt Template for Technical Debt
 
@@ -308,15 +218,10 @@ Give the audience a concrete artifact they can copy into their own workflow. Exp
 
 ---
 
-
-
-
 ## Key Takeaways
 
 - Strong prompts define the debt, constraints, outcomes, tests, docs, and provenance
-- GitHub issue creation works best with explicit repository targeting
 - Assigning to `@copilot` can automate branch, progress, and PR creation
-- Demo failures showed how prompt specificity improves execution
 - Technical debt becomes easier to manage when prompts and issues work together
 
 ::: notes

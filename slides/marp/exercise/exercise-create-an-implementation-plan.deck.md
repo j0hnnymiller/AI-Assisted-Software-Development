@@ -4,16 +4,18 @@ theme: default
 paginate: true
 ---
 
+<!-- layout: Two Content -->
+
 ## Exercise: Create an Implementation Plan
 
 Objectives
-Translate issues into a structured remediation plan
-Ensure changes are incremental and reversible
-Align modernization with evergreen principles
-Incorporate testing and rollback strategies
+- Translate issues into a structured remediation plan
+- Ensure changes are incremental and reversible
+- Align modernization with evergreen principles
+- Incorporate testing and rollback strategies
 Activities
-Select 2–3 issues from the previous exercise.
-For each issue, create a remediation plan including:
+1. Select 2–3 issues from the previous exercise.
+2. For each issue, create a remediation plan including:
   - Problem definition
   - Root cause
   - Proposed solution
@@ -21,14 +23,16 @@ For each issue, create a remediation plan including:
   - Rollback plan
   - Required test updates
   - Documentation updates
-  - Provenance metadata
-Review plans with a partner.
+
+::: column
+
+3. Review plan.
+
 Success Criteria
-Plans are incremental, safe, and reversible
-Include clear steps and rollback strategies
-Align with evergreen development principles
-Include test and documentation updates
-Provenance metadata is present
+- Plans are incremental, safe, and reversible
+- Include clear steps and rollback strategies
+- Align with evergreen development principles
+- Include test and documentation updates
 
 ::: notes
 Duration ~00:20

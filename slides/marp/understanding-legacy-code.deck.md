@@ -19,7 +19,7 @@ total_duration: "00:02:30"
 ai_log: "ai-logs/2026/03/22/understanding-legacy-code-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
-# Understanding Legacy Code || Legacy Code Deserves Respect, Not Fear
+# Understanding Legacy Code || Legacy Code Deserves Respect
 
 ## What is Legacy Code
 
@@ -79,15 +79,3 @@ Discuss each driver of decay with a brief example. Technology: the framework you
 Describe evergreen goals: maintainability, minimal debt, and consistent patterns that still align with modern practices. The defining characteristic is that evergreen code is intentional — it doesn't happen by accident. Teams invest in keeping it current. The quote on the slide is the ultimate test: if you'd make the same decisions today, the code is evergreen. If you'd do it differently, it has started to decay. Use this as a reflective question for the audience: can they point to any part of their codebase that passes this test? (~2 minutes)
 :::
 
----
-
-## Legacy Code Needs Respect, Not Fear
-
-- It works — Don't break it!
-- It works — Well-tested (by users)
-- It works — It is what it is
-  - _"You get what you get and you don't throw a fit"_
-
-::: notes
-Emphasize the safety-first approach to legacy code. The most important word is "works" — legacy code, by definition, is running in production and delivering value. That earns respect. User testing over years is the most comprehensive test suite imaginable; it just isn't automated. Fear leads to avoidance, and avoidance leads to the code getting worse. Respect leads to careful, incremental improvement. Before making any large change: back up, write characterization tests, and validate behavior. The quote is a reminder to accept the code as it is before trying to change it. (~2 minutes)
-:::

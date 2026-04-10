@@ -4,24 +4,31 @@ theme: default
 paginate: true
 ---
 
+<!-- layout: Two Content -->
+
 ## Exercise: Implementing a Feature Flag
 
 **Objectives**
-
-- Learn how to introduce a safe, reversible change
-- Practice designing a feature flag workflow
-- Understand As-Is and To-Be test implications
-- Document rollout and retirement criteria
+  - Learn how to introduce a safe, reversible change
+  - Practice designing a feature flag workflow
+  - Understand As-Is and To-Be test implications
+  - Document rollout and retirement criteria
 
 **Activities**
+  1. Select a small brownfield function or module
+  2. Identify a safe, incremental change to introduce
+  3. Design a feature flag with name, description, rollout plan, rollback plan, and retirement criteria
 
-1. Select a small brownfield function or module
-2. Identify a safe, incremental change to introduce
-3. Design a feature flag with name, description, rollout plan, rollback plan, and retirement criteria
-4. Write As-Is and To-Be test cases
-5. Document the change with provenance metadata
+::: column
 
-**Success Criteria**: flag is scoped, rollout/rollback plans are explicit, tests are correct, retirement criteria are documented
+  4. Write As-Is and To-Be test cases
+  5. Document the change with provenance metadata
+
+**Success Criteria**:
+  - Feature flag is scoped
+  - Rollout/rollback plans are explicit
+  - Tests are correct
+  - Retirement criteria are documented
 
 ::: notes
 Duration ~00:20

@@ -69,7 +69,10 @@ total_duration: "00:04:43"
 ai_log: "ai-logs/2026/03/22/ai-implementation-workflow-20260322/conversation.md"
 source: "johnmillerATcodemag-com"
 ---
+
 # AI Implementation Workflow || Don't Let the AI Drive Before You Check the Mirrors
+
+---
 
 ## AI Implementation Workflow
 
@@ -110,7 +113,6 @@ Explain that the best first prompt is not "implement this now" but "propose impl
 
 3. **Identify Gaps**
    - Check for missing steps
-   - Example: JWT issue did not include GitHub removal steps
    - Add requirements before proceeding
 
 4. **Proceed with Implementation**
@@ -126,26 +128,7 @@ Walk through the idea that a proposal can be directionally right and still incom
 
 ---
 
-## Multi-Tasking with AI
-
-### Concurrent Work
-
-- Start implementation in one session
-- Continue with other tasks
-- Monitor progress via notifications
-- AI works autonomously once started
-
-::: notes
-Duration ~00:02
-
-Describe this as one of the most practical productivity benefits of modern AI tooling. Once the implementation task is well-scoped and approved, you can let the AI work while you continue with documentation, reviews, or another investigation. Emphasize that autonomy is not the same as abandonment; the human still monitors progress, watches notifications, and steps in if the task drifts or new information appears.
-:::
-
----
-
-## Next: Compare Multiple Implementations
-
-**Preview of Next Topic**
+## Compare Multiple Implementations
 
 - Evaluate pros and cons of different approaches
 - Compare different solutions to the same problem

@@ -24,12 +24,13 @@ Introduce this module as a way to help teams understand how different AI models 
 
 ## Implementing Changes With Different AI Models
 
-- Why use multiple models?
-- Different reasoning styles
-- Different strengths (refactoring, documentation, architecture)
-- Cross-validation reduces risk
-- Helps detect missing context or contradictions
-- Typical use cases
+Why use multiple models?
+  - Different reasoning styles
+  - Different strengths (refactoring, documentation, architecture)
+  - Cross-validation reduces risk
+  - Helps detect missing context or contradictions
+
+Typical use cases
   - Refactoring comparisons
   - Documentation consistency checks
   - Architecture proposal validation

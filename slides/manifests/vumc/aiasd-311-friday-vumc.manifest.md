@@ -40,8 +40,3 @@ sections:
     decks:
       - slides\marp\basic-vertical-slice-workflow.deck.md
 
-  - name: Code Review with GitHub Copilot
-    decks:
-      - slides\marp\pull-request-code-review.deck.md
-      - slides\marp\github-code-review-with-copilot.deck.md
-      - slides\marp\github-cli-pr-management.deck.md

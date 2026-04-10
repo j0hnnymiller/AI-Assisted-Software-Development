@@ -70,9 +70,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Implementation Prompts and Verification || The Prompt That Does the Implementation (With a Checklist)
 
-<!-- _class: lead -->
+---
 
 ## Implementation Prompts and Verification
 

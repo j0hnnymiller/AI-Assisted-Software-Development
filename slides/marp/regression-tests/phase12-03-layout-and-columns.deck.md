@@ -38,9 +38,9 @@ Explain that each slide is crafted to force a unique branch in the PPTX generato
 
 <!-- layout: Title Slide -->
 
-## Explicit Title Slide Layout
+## **Explicit Title Slide Layout**
 
-This content validates named layout resolution for a known layout.
+This content validates named layout resolution for a known layout with **bold subtitle placeholder text**.
 
 ::: notes
 This slide should use add_named_layout_slide with a valid layout name.
@@ -50,8 +50,8 @@ Confirm body placement in the expected placeholder.
 **Expected PPTX Rendering:**
 
 - Layout: Title Slide (explicit via comment directive)
-- Title Placeholder: "Explicit Title Slide Layout"
-- Subtitle Placeholder: "This content validates named layout resolution for a known layout."
+- Title Placeholder: "Explicit Title Slide Layout" rendered in bold
+- Subtitle Placeholder: "This content validates named layout resolution for a known layout with bold subtitle placeholder text." with only the marked phrase rendered in bold
 - Content Placeholder: (empty - title slide layout has no body frame)
 - Notes: This notes block content
 - Routing: Explicit layout comment takes precedence

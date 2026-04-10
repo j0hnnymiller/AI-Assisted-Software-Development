@@ -58,14 +58,15 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Technology Stack Instruction Files || Teaching Your AI the House Rules for Every Room
 
-<!-- _class: lead -->
+---
 
 ## Technology Stack Instruction Files
 
-- Section focus: turning requirements into tech-specific guidance
-- Outcome: show how teams generate, review, and improve instruction files for HTML5, CSS3, and JavaScript work
+- Turning requirements into tech-specific guidance
+- Show how teams generate, review, and improve instruction files
 
 ::: notes
 Duration ~00:17
@@ -79,7 +80,7 @@ Frame this section as part of the greenfield foundation work rather than a docum
 
 - Review the requirements document before generating any instruction file
 - Identify the front-end and implementation technologies explicitly in scope
-- Decide whether the stack is HTML5, CSS3, vanilla JavaScript, or a TypeScript variant
+- Decide on the tech stack
 - Use the requirements to anchor standards, constraints, accessibility, and security expectations
 
 ```mermaid
@@ -100,7 +101,7 @@ Explain that instruction files are most valuable when they reflect the actual te
 ## Generate the First Draft Quickly
 
 - Use a direct prompt such as: **Create instruction files for the following technologies**
-- Name the stack clearly: HTML5, CSS, vanilla JavaScript, or TypeScript
+- Name the stack clearly
 - Ask for guidance on:
   - semantic markup
   - accessibility
@@ -117,37 +118,6 @@ Make the point that the initial prompt does not need to be elaborate to be usefu
 
 ---
 
-## What a Strong Instruction File Covers
-
-**HTML5**
-
-- semantic structure
-- accessible forms and landmarks
-
-**CSS3**
-
-- maintainable selectors
-- layout standards and responsive design
-
-**JavaScript or TypeScript**
-
-- safe DOM interaction
-- modularity, validation, and performance guardrails
-
-**Cross-cutting concerns**
-
-- security considerations
-- performance expectations
-- links to related repository guidance
-
-::: notes
-Duration ~00:03
-
-Walk through the content categories rather than reading the bullets verbatim. The core idea is that each technology file should move beyond syntax tips and instead define operational expectations for how code should be written in this repository. Transition by describing how the team reviews the generated file before relying on it.
-:::
-
----
-
 ## Review the Generated File Critically
 
 - Check the file structure, scope, and clarity
@@ -158,10 +128,13 @@ Walk through the content categories rather than reading the bullets verbatim. Th
 
 ```mermaid
 flowchart TB
-    A[Generated instruction file] --> B[Structure review]
-    A --> C[Checklist review]
-    A --> D[Security and performance review]
-    A --> E[Reference validation]
+    A[Generated instruction file]:::primary --> B[Structure review]:::review
+    A --> C[Checklist review]:::review
+    A --> D[Security and performance review]:::review
+    A --> E[Reference validation]:::review
+
+    classDef primary fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    classDef review fill:#7ED321,stroke:#4A7A1A,color:#fff
 ```
 
 ::: notes

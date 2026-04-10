@@ -38,9 +38,10 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Dependency Analysis and Planning || Everything Depends on This Slide (Literally)
 
-<!-- _class: lead -->
+---
 
 ## Dependency Analysis and Planning
 

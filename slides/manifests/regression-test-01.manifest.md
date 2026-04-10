@@ -17,6 +17,7 @@ sections:
     decks:
     - slides\\marp\\regression-tests\\phase12-04-table-mermaid-background.deck.md
     - slides\\marp\\regression-tests\\phase12-05-leading-trailing-separators.deck.md
+    - slides\\marp\\regression-tests\\phase12-06-bold-coverage.deck.md
 
   - name: Phase12 Empty Section
     decks: []

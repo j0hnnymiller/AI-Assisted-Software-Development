@@ -57,29 +57,33 @@ paginate: true
 
 # Exercise: Business Requirements Generation || Let the AI Write the Requirements for Once
 
+---
+
+<!-- Layout: Two Content -->
+
 ## Exercise: Business Requirements Generation
 
 Objectives
-
-- Create a business requirements document for the calculator project
-- Use the Product Manager agent with existing instruction files
-- Apply the expected branch and repository workflow for Greenfield work
-- Validate the requirements draft through review, clarification, and independent iteration
+  - Create a business requirements document for the calculator project
+  - Use the Product Manager agent with existing instruction files
+  - Apply the expected branch and repository workflow for Greenfield work
+  - Validate the requirements draft through review, clarification, and independent iteration
 
 Activities
+  1. Create a personal branch from the Greenfield branch in the class repository.
+  2. Use the Product Manager agent to generate a calculator requirements document.
+  3. Apply the existing instruction files to improve scope, structure, and consistency.
 
-1. Create a personal branch from the Greenfield branch in the class repository.
-2. Use the Product Manager agent to generate a calculator requirements document.
-3. Apply the existing instruction files to improve scope, structure, and consistency.
-4. Confirm repository choice, branching strategy, and how to handle any existing PRD content before continuing.
-5. Work independently on the requirements document while the instructor provides check-ins and support.
+::: column
+
+  4. Confirm repository choice, branching strategy, and how to handle any existing PRD content before continuing.
+  5. Work independently on the requirements document while the instructor provides check-ins and support.
 
 Success Criteria
-
-- A calculator business requirements document exists on the correct personal branch
-- The Product Manager agent and instruction files are both used effectively
-- Repository and branching decisions are applied correctly and consistently
-- Participants can explain what changed after clarifications and independent refinement
+  - A calculator business requirements document exists on the correct personal branch
+  - The Product Manager agent and instruction files are both used effectively
+  - Repository and branching decisions are applied correctly and consistently
+  - Participants can explain what changed after clarifications and independent refinement
 
 ::: notes
 Duration ~00:17

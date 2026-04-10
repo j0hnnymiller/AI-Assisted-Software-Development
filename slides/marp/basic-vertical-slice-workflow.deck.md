@@ -22,7 +22,10 @@ size: 16:9
 title: "Basic Vertical Slice Implementation Workflow"
 description: "A practical workflow for planning and implementing an application with vertical slices, including parallel slice execution."
 ---
+
 # Basic Vertical Slice Workflow || Thin Slices, Big Results
+
+---
 
 ## Basic Vertical Slice Implementation Workflow
 

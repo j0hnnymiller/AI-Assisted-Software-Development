@@ -15,7 +15,6 @@ sections:
     decks:
       - slides\marp\understanding-legacy-code.deck.md
       - slides\marp\safe-brownfield-coding.deck.md
-      - slides\marp\exercise\exercise-implementing-a-feature-flag.deck.md
       - slides\marp\exercise\exercise-building-the-safety-nets.deck.md
 
   - name: AI Implementation Workflow

@@ -18,7 +18,7 @@ theme: default
 paginate: true
 ---
 
-# Architecture Truth || But Make It Memorable
+# **Architecture Truth** || **But Make It Memorable**
 
 _Merged from: slides/marp/regression-phase12/source-a.deck.md_
 
@@ -30,8 +30,8 @@ Point out that the provenance line exists to test Phase 1 stripping behavior.
 **Expected PPTX Rendering:**
 
 - Layout: Centered Two Titles
-- Title Placeholder: "Architecture Truth"
-- Subtitle Placeholder: "But Make It Memorable"
+- Title Placeholder: "Architecture Truth" rendered in bold
+- Subtitle Placeholder: "But Make It Memorable" rendered in bold
 - Content Placeholder: (empty - H1-only slide)
 - Notes: This notes block content
 - Phase 1 Behavior: H1 and provenance line stripped during merge
@@ -62,7 +62,9 @@ Move to the next content slide to verify normal flow resumes.
 
 ## Content After H1 Dividers
 
-This slide confirms normal title and content flow after H1-only blocks.
+This slide confirms normal title and content flow after H1-only blocks with **bold placeholder text** preserved.
+
+- Placeholder bullet with **bold emphasis** later in the line
 
 ::: notes
 This deck intentionally begins with H1-only slides.
@@ -73,7 +75,7 @@ The provenance line after the first H1 is included to exercise merge stripping b
 
 - Layout: Title and Content
 - Title Placeholder: "Content After H1 Dividers"
-- Content Placeholder: Body paragraph text
+- Content Placeholder: Body paragraph text with inline bold + bullet text with inline bold
 - Notes: This notes block content
 - Behavior: Normal H2 + body routing after H1-only dividers
   :::

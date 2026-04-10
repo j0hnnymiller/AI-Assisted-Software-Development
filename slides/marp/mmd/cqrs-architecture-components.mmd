@@ -1,0 +1,16 @@
+graph TB
+    A["Command API"] -->|Write requests| B["Command Handler<br/>(Domain Logic)"]
+    B -->|Success| C["Write Store<br/>(OLTP)"]
+    C -->|Events| D["Publisher"]
+    D -->|Events| E["Projection Updater"]
+    E -->|Update| F["Read Store<br/>(OLAP)"]
+    G["Query API"] -->|Read requests| F
+    A -.->|Events| D
+
+    style A fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    style B fill:#7B68EE,stroke:#5A4BA0,stroke-width:2px,color:#fff
+    style C fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
+    style D fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    style E fill:#50C878,stroke:#3FA061,stroke-width:2px,color:#fff
+    style F fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
+    style G fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff

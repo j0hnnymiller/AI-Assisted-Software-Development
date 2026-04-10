@@ -78,11 +78,13 @@ size: 16:9
 title: "Creating Vertical Slice Implementation Plans"
 description: "Section 7 deck on slice planning guidance, AI-generated plans, and multi-model review."
 ---
+
 # Vertical Slice Implementation Plans || The Blueprint Before the Blueprint
+
+---
 
 ## Creating Vertical Slice Implementation Plans
 
-- 16-minute teaching segment
 - Focus: how to plan before implementation
 - Goal: turn requirements into executable slices
 
@@ -114,7 +116,7 @@ Transition by saying the first step is understanding the instruction file that d
 
 ---
 
-## 7.1 Review the planning instructions
+## Review the planning instructions
 
 Reference point:
 
@@ -190,7 +192,17 @@ Ask these questions first:
 
 Decision aid:
 
-`flow -> dependencies -> size check -> sequence`
+```mermaid
+graph TB
+    A["flow"] --> B["dependencies"]
+    B --> C["size check"]
+    C --> D["sequence"]
+
+    style A fill:#e1f5ff
+    style B fill:#fff9c4
+    style C fill:#f0f4c3
+    style D fill:#c8e6c9
+```
 
 ::: notes
 Explain that slicing is not just naming features. It requires examining data dependencies and service dependencies before locking in the plan.
@@ -202,19 +214,18 @@ This is a good moment to remind the audience that planning errors often come fro
 
 ---
 
-## 7.2 Generate plans with AI
+## Generate plans with AI
 
 Example prompt:
 
 > Using vertical slice planning instructions and web calculator requirements, create implementation plan using vertical slices.
 
 AI can generate:
-
-- Requirements summary
-- Slice decomposition
-- Dependency diagram
-- Implementation order
-- Sprint organization
+  - Requirements summary
+  - Slice decomposition
+  - Dependency diagram
+  - Implementation order
+  - Sprint organization
 
 ::: notes
 Explain that the prompt works because it combines two inputs: the planning instructions and the actual feature requirements. Without both, the output is usually too generic.
@@ -234,11 +245,10 @@ Also note that the prompt is intentionally simple. The quality comes from the in
 4. Proposed implementation sequence
 5. Sprint or milestone grouping
 
-### Watch for model differences
-
-- More detail vs. more concise output
-- Different naming and grouping choices
-- Different sequencing assumptions
+Watch for model differences
+  - More detail vs. more concise output
+  - Different naming and grouping choices
+  - Different sequencing assumptions
 
 ::: notes
 Use this slide to define evaluation criteria for AI-generated plans. The audience should leave knowing what "good" looks like, not just that AI can produce something.
@@ -252,13 +262,12 @@ Encourage the audience to compare outputs rather than assuming the first plan is
 
 ## Example planning flow
 
-### Web calculator example
-
-1. Summarize calculator requirements
-2. Identify slices such as input, operations, history, validation
-3. Map data and service dependencies
-4. Sequence foundational slices before enhancements
-5. Group slices into sprints
+Web calculator example
+  1. Summarize calculator requirements
+  2. Identify slices such as input, operations, history, validation
+  3. Map data and service dependencies
+  4. Sequence foundational slices before enhancements
+  5. Group slices into sprints
 
 ::: notes
 Translate the abstract process into a concrete example. Use the calculator scenario because it is simple enough to understand quickly while still showing real decomposition choices.
@@ -270,16 +279,15 @@ Reinforce that the output is not just a list of tasks. It is a roadmap with orde
 
 ---
 
-## 7.3 Multi-model evaluation
+## Multi-model evaluation
 
-Gemini 2.5 Pro reviewed Claude Sonnet's planning file and found six gaps:
-
-1. Missing task duration metadata
-2. Incomplete decomposition examples
-3. Incomplete dependency strategy examples
-4. Unfinished implementation sequencing examples
-5. Incomplete roadmap template
-6. Incomplete slice specification template
+Review planning file for gaps:
+  1. Missing task duration metadata
+  2. Incomplete decomposition examples
+  3. Incomplete dependency strategy examples
+  4. Unfinished implementation sequencing examples
+  5. Incomplete roadmap template
+  6. Incomplete slice specification template
 
 ::: notes
 Present this as a quality-improvement exercise, not a competition between models. The value comes from using one model to review the blind spots of another.
@@ -293,9 +301,27 @@ Highlight that evaluation uncovered missing completeness in examples and templat
 
 ## Key takeaway
 
-### Recommended workflow
+Recommended workflow
 
-`instructions -> AI draft -> review -> refine -> implement`
+```mermaid
+graph TB
+    A["Instructions"]:::instructStyle
+    B["AI Draft"]:::aiStyle
+    C["Review"]:::reviewStyle
+    D["Refine"]:::refineStyle
+    E["Implement"]:::implementStyle
+
+    A -->|strong planning| B
+    B -->|initial slice plan| C
+    C -->|multi-model compare| D
+    D -->|improve templates| E
+
+    classDef instructStyle fill:#4A90E2,stroke:#2E5C8A,color:#fff,stroke-width:2px
+    classDef aiStyle fill:#7ED321,stroke:#5A9D1C,color:#fff,stroke-width:2px
+    classDef reviewStyle fill:#F5A623,stroke:#C77D1A,color:#fff,stroke-width:2px
+    classDef refineStyle fill:#BD10E0,stroke:#8B0BA8,color:#fff,stroke-width:2px
+    classDef implementStyle fill:#50E3C2,stroke:#35A692,color:#fff,stroke-width:2px
+```
 
 - Start with a strong planning instruction file
 - Generate an initial vertical slice plan

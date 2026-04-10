@@ -3,37 +3,38 @@ marp: true
 theme: default
 paginate: true
 ---
-# Code Quality Analysis Exercise || AI-Powered Code Shame Session
+
+<!-- Layout: Two Content -->
 
 ## Exercise: Code Quality Analysis
 
 Objectives
-
-- Use AI to detect non-evergreen code patterns in the workspace.
-- Distinguish temporary artifacts from long-lived maintainable assets.
-- Propose practical evergreen refactors with clear priority.
+  - Use AI to detect non-evergreen code patterns in the workspace.
+  - Distinguish temporary artifacts from long-lived maintainable assets.
+  - Propose practical evergreen refactors with clear priority.
 
 Activities
+  1. AI Baseline Scan
+    - Run an AI prompt to identify files that look date-bound, draft-only, or placeholder-heavy.
+    - Collect at least 8 candidate findings across docs, prompts, and slides.
+  2. Evidence and Classification
+    - Classify each finding as one type: date-bound metadata, draft artifact, stale placeholder, duplicated policy, or legacy process text.
+    - Validate each candidate with one concrete file location.
 
-- Activity 1: AI Baseline Scan
-  - Run an AI prompt to identify files that look date-bound, draft-only, or placeholder-heavy.
-  - Collect at least 8 candidate findings across docs, prompts, and slides.
-- Activity 2: Evidence and Classification
-  - Classify each finding as one type: date-bound metadata, draft artifact, stale placeholder, duplicated policy, or legacy process text.
-  - Validate each candidate with one concrete file location.
-- Activity 3: Evergreen Refactor Plan
-  - Select top 3 high-impact findings.
-  - Write a before/after recommendation focused on longevity, clarity, and reduced maintenance.
-- Activity 4: Share and Defend
-  - Present one finding and explain why it is not evergreen.
-  - Defend your proposed fix with expected impact.
+::: column
+
+  3. Evergreen Refactor Plan
+    - Select top 3 high-impact findings.
+    - Write a before/after recommendation focused on longevity, clarity, and reduced maintenance.
+  4. Share and Defend
+    - Present one finding and explain why it is not evergreen.
+    - Defend your proposed fix with expected impact.
 
 Success Criteria
-
-- 8 or more non-evergreen findings identified with evidence.
-- Findings are correctly categorized by non-evergreen pattern.
-- Top 3 recommendations are specific, actionable, and evergreen-focused.
-- Team can explain why each proposed change improves long-term maintainability.
+  - 8 or more non-evergreen findings identified with evidence.
+  - Findings are correctly categorized by non-evergreen pattern.
+  - Top 3 recommendations are specific, actionable, and evergreen-focused.
+  - Team can explain why each proposed change improves long-term maintainability.
 
 ::: notes
 Duration ~00:20

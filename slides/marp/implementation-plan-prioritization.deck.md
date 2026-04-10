@@ -25,17 +25,20 @@ marp: true
 theme: default
 paginate: true
 ---
+
 # Implementation Plan Prioritization || Security First: The Only Priority With No Exceptions
+
+---
 
 ## Finding the Gaps: Common Security Findings
 
 When AI audits a brownfield codebase, these issues surface first:
 
-- 🔑 **Exposed secrets** — credentials or tokens committed to source control
-- 🔒 **Missing HTTPS** — data in transit unencrypted
-- 📋 **No test coverage** — changes cannot be validated safely
-- 🚫 **No CI/CD pipeline** — deployment is manual and inconsistent
-- 📝 **Missing AI provenance metadata** — AI-generated changes are untracked
+- **Exposed secrets** — credentials or tokens committed to source control
+- **Missing HTTPS** — data in transit unencrypted
+- **No test coverage** — changes cannot be validated safely
+- **No CI/CD pipeline** — deployment is manual and inconsistent
+- **Missing AI provenance metadata** — AI-generated changes are untracked
 
 ::: notes
 Duration ~00:01
@@ -122,12 +125,19 @@ Introduce "Phase Zero" as a deliberate pre-sprint focused entirely on security h
 Low-effort, high-impact fixes accumulate into a significantly healthier codebase:
 
 ```mermaid
-flowchart LR
-    A[Audit findings] --> B[Prioritize matrix]
-    B --> C[Phase Zero\nsecurity fixes]
-    C --> D[Add CI/CD\n& tests]
-    D --> E[Automate\ndebt detection]
-    E --> F[Evergreen\nstate]
+flowchart TB
+    A[Audit findings]:::orange --> B[Prioritize matrix]:::yellow
+    B --> C[Phase Zero\nsecurity fixes]:::red
+    C --> D[Add CI/CD\n& tests]:::blue
+    D --> E[Automate\ndebt detection]:::purple
+    E --> F[Evergreen\nstate]:::green
+
+    classDef orange fill:#ff9999
+    classDef yellow fill:#ffff99
+    classDef red fill:#ff6b6b
+    classDef blue fill:#6b9eff
+    classDef purple fill:#c99eff
+    classDef green fill:#99ff99
 ```
 
 **Evergreen state** = debt is continuously detected, tracked, and paid down

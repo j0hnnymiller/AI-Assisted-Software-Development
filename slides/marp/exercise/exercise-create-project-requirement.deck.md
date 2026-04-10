@@ -4,22 +4,29 @@ theme: default
 paginate: true
 ---
 
-
-
+<!-- layout: Two Content -->
 
 ## Exercise: Create Project Requirement
 
-Objective: Create project requirement instructions, some project-specific, some generic, using both manual and Copilot-assisted methods.
-Manually create a business requirements.md file and add:
-  - Business rules
-  - Workflows
-  - Purpose
-  - Tech stack
-  - Architecture
-Use Copilot to generate instruction files using the copilot-instructions.md and the codebase for context.
-Bonus:
-Review instruction files for errors and omissions.
-Ask Copilot to suggest changes based on evolving tech and practices.
+Objective:
+  - Create project requirement instructions, some project-specific, some generic, using both manual and Copilot-assisted methods.
+
+Activities:
+  1. Create a project-requirements.md file that includes:
+    - Business rules
+    - Workflows
+    - Purpose
+    - Tech stack
+    - Architecture
+
+::: column
+
+  2. Use Copilot to generate instruction files using the project-requirements.md file and the codebase for context.
+
+Success Criteria:
+  - Instructions are clear and actionable
+  - Both manual and AI-assisted methods are used
+  - Instruction files are generated successfully
 
 ::: notes
 Author requirement docs, then use Copilot to generate scaffolding and validate alignment.
