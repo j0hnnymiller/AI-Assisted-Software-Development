@@ -141,26 +141,12 @@ Describe evergreen goals: maintainability, minimal debt, and consistent patterns
 
 ---
 
-## Legacy Code Needs Respect, Not Fear
-
-- It works — Don't break it!
-- It works — Well-tested (by users)
-- It works — It is what it is
-  - _"You get what you get and you don't throw a fit"_
-
-::: notes
-Emphasize the safety-first approach to legacy code. The most important word is "works" — legacy code, by definition, is running in production and delivering value. That earns respect. User testing over years is the most comprehensive test suite imaginable; it just isn't automated. Fear leads to avoidance, and avoidance leads to the code getting worse. Respect leads to careful, incremental improvement. Before making any large change: back up, write characterization tests, and validate behavior. The quote is a reminder to accept the code as it is before trying to change it. (~2 minutes)
-:::
-
----
-
 ## Safe Brownfield Coding
 
 Using feature flags to minimize risk
 As-Is and To-Be test suites
 Testing in production
 Retiring feature flags
-Exercise: Implementing a feature flag
 
 ::: notes
 Introduce this module as a practical guide to modifying brownfield systems safely. Emphasize that the goal is not speed — it's controlled, observable, reversible change. Feature flags, test suites, and production-safe practices form the backbone of safe modernization.
@@ -168,99 +154,11 @@ Introduce this module as a practical guide to modifying brownfield systems safel
 
 ---
 
-
-
-
-## Using Feature Flags
-
-Why feature flags matter
-Enable incremental rollout
-Allow instant rollback
-Reduce blast radius
-Support A/B testing and shadow traffic
-Decouple deployment from release
-Best practices
-Keep flags short-lived
-Name flags clearly
-Document intent and retirement criteria
-
-::: notes
-Feature flags are one of the most powerful tools for brownfield modernization. They allow teams to introduce changes gradually, observe behavior, and roll back instantly if needed. Stress that flags must be managed intentionally to avoid long-term complexity.
-:::
-
----
-
-
-
-
-## Retiring Feature Flags
-
-Why retirement matters
-Prevents flag bloat
-Reduces cognitive load
-Simplifies code paths
-Ensures long-term maintainability
-Retirement workflow
-Validate stability
-Remove old code paths
-Update documentation
-Add provenance to the change
-
-::: notes
-Feature flags are temporary scaffolding. If not retired, they become technical debt. Encourage teams to treat flag retirement as a first-class engineering task.
-:::
-
----
-
-
-
-
-## As-Is and To-Be Test Suites
-
-As-Is tests
-Capture current behavior
-Protect against regressions
-Document legacy expectations
-To-Be tests
-Define desired future behavior
-Guide modernization
-Validate new patterns and architecture
-
-::: notes
-Explain that As-Is tests freeze the current system's behavior, while To-Be tests define the target state. This dual-suite approach allows teams to modernize safely without losing critical legacy behavior.
-:::
-
----
-
-
-
-
-## Testing in Production
-
-Safe production testing techniques
-Feature-flag-controlled exposure
-Shadow traffic
-Canary releases
-Observability dashboards
-Error-budget-based rollout
-Benefits
-Real-world validation
-Early detection of edge cases
-Reduced risk of full-scale failures
-
-::: notes
-Testing in production is not reckless when done correctly. With feature flags, observability, and controlled exposure, teams can validate changes under real conditions while minimizing risk.
-:::
-
----
-
-
-
-
 ## Essential Safety Measures
 
-AI accelerates development, but it also accelerates mistakes
-Strong safety nets must be in place before introducing AI into a brownfield codebase
+- AI accelerates development, but it also accelerates mistakes
+- Strong safety nets must be in place before introducing AI into a brownfield codebase
+
 These practices reduce risk, increase confidence, and protect production systems
 
 ::: notes
@@ -275,16 +173,13 @@ Think of them as the foundation that keeps modernization from turning into accid
 
 ---
 
-
-
-
 ## Backup & Rollback Strategies
 
-Use branching strategies that isolate AI-generated changes
-Commit early and often to create natural rollback points
-Archive snapshots of critical modules before modernization
-Ensure you can revert any AI-assisted change without drama
-Use feature flags to separate release from deployment
+- Use branching strategies that isolate AI-generated changes
+- Commit early and often to create natural rollback points
+- Archive snapshots of critical modules before modernization
+- Ensure you can revert any AI-assisted change without drama
+- Use feature flags to separate release from deployment
 
 ::: notes
 AI can produce large changes quickly.
@@ -300,16 +195,13 @@ Rollback confidence is what enables experimentation
 
 ---
 
-
-
-
 ## Confidence Frameworks
 
-Strong tests are the backbone of safe AI-assisted refactoring
-Unit, integration, and behavioral tests validate AI output
-Coverage matters less than signal quality
-Tests should detect regressions, not just assert happy paths
-If all of the test automation passes, how confident are you to deploy to production?
+- Strong tests are the backbone of safe AI-assisted refactoring
+  - Unit, integration, and behavioral tests validate AI output
+  - Coverage matters less than signal quality
+  - Tests should detect regressions, not just assert happy paths
+  - If all of the test automation passes, how confident are you to deploy to production?
 
 ::: notes
 AI can help generate tests, but you need a baseline first.
@@ -325,16 +217,12 @@ This is what makes modernization safe instead of risky
 
 ---
 
-
-
-
 ## Change Review Processes
 
-Treat AI as a junior developer: everything gets reviewed
-Use human-in-the-loop validation for correctness and intent
-Require architectural review for structural changes
-Enforce standards through linters, static analysis, and policy checks
-Leverage AI to reduce the review burden
+- Use human-in-the-loop validation for correctness and intent
+- Require architectural review for structural changes
+- Enforce standards through linters, static analysis, and policy checks
+- Leverage AI to reduce the review burden
 
 ::: notes
 AI is fast, but it's not authoritative.
@@ -350,15 +238,13 @@ Together, they create a multi-layered review process that keeps quality high.
 
 ---
 
-
-
-
 ## Incremental Change Methodology
 
-Break modernization into small, safe, reversible steps
-Avoid “big bang” refactors – they're brittle and risky
-Use iterative loops: propose → validate → refine → commit
-Let AI assist with each step rather than entire subsystems at once
+- Break modernization into small, safe, reversible steps
+- Avoid “big bang” refactors – they're brittle and risky
+- Use iterative loops: propose → validate → refine → commit
+- Let AI assist with each step rather than entire subsystems at once
+
 Working Effectively with Legacy Code | Hacker News Books
 
 ::: notes
@@ -379,16 +265,13 @@ This is how evergreen systems emerge.
 
 ---
 
-
-
-
 ## Keeping Change Sets Small
 
-Small diffs are easier to review and validate
-Small changes reduce merge conflicts and regression risk
-AI should be instructed to limit scope intentionally
-Small changes accumulate into large improvements over time
-Beware: AI can produce huge amounts of code quickly
+- Small diffs are easier to review and validate
+- Small changes reduce merge conflicts and regression risk
+- AI should be instructed to limit scope intentionally
+- Small changes accumulate into large improvements over time
+- Beware: AI can produce huge amounts of code quickly
 
 ::: notes
 AI tends to produce large outputs unless constrained.
@@ -404,40 +287,12 @@ This is how you maintain control while still benefiting from AI's speed
 
 ---
 
-
-
-
-## Respecting Brownfield Code
-
-Brownfield systems are valuable – they run the business
-Avoid assumptions that “old” means “wrong”
-Understand the constraints that shaped the existing design
-Modernize with empathy, not aggression
-
-::: notes
-Respect is a core principle.
-
-Brownfield systems have survived real-world conditions.
-
-They contain institutional knowledge and business logic that may not be documented anywhere else.
-
-AI can help modernize them, but only if we approach them with humility.
-
-The goal is not to erase the past – it's to evolve it safely.
-:::
-
----
-
-
-
-
 ## Building Safety Nets
 
-Protecting brownfield codebases
-Leveraging AI code reviews
-Effective human code reviews
-The role of test automation
-Exercise: Building safety nets in practice
+- Protecting brownfield codebases
+- Leveraging AI code reviews
+- Effective human code reviews
+- The role of test automation
 
 ::: notes
 Introduce this module as the backbone of safe AI-assisted development. Safety nets ensure that modernization efforts do not destabilize working systems. Emphasize that brownfield systems deserve respect, and safety nets are how we honor that reality.
@@ -445,21 +300,19 @@ Introduce this module as the backbone of safe AI-assisted development. Safety ne
 
 ---
 
-
-
-
 ## Protecting Brownfield Codebases
 
 Key Practices
-Preserve existing behavior unless intentionally changed
-Avoid large, risky refactors
-Use incremental modernization
-Maintain architectural boundaries
-Document every AI-assisted change
+  - Preserve existing behavior unless intentionally changed
+  - Avoid large, risky refactors
+  - Use incremental modernization
+  - Maintain architectural boundaries
+  - Document every AI-assisted change
+
 Why it matters
-Brownfield systems run the business
-Stability is more important than novelty
-Safety nets reduce fear and increase confidence
+  - Brownfield systems run the business
+  - Stability is more important than novelty
+  - Safety nets reduce fear and increase confidence
 
 ::: notes
 Reinforce that brownfield systems are valuable assets, not liabilities. Protection means minimizing risk, maintaining continuity, and ensuring that modernization is deliberate rather than accidental.
@@ -467,21 +320,19 @@ Reinforce that brownfield systems are valuable assets, not liabilities. Protecti
 
 ---
 
-
-
-
 ## Leveraging AI Code Reviews
 
 AI can assist by:
-Highlighting risky changes
-Detecting missing tests
-Identifying architectural violations
-Suggesting safer alternatives
-Surfacing potential regressions
+  - Highlighting risky changes
+  - Detecting missing tests
+  - Identifying architectural violations
+  - Suggesting safer alternatives
+  - Surfacing potential regressions
+
 Benefits
-Faster feedback loops
-More consistent review quality
-Early detection of drift
+  - Faster feedback loops
+  - More consistent review quality
+  - Early detection of drift
 
 ::: notes
 AI code reviews are not replacements for human reviews — they are accelerators. They help catch issues early and provide a second set of eyes that never gets tired.
@@ -489,21 +340,18 @@ AI code reviews are not replacements for human reviews — they are accelerators
 
 ---
 
-
-
-
 ## Effective Human Code Reviews
 
 Human reviewers focus on:
-Intent and correctness
-Architectural alignment
-Business logic validation
-Risk assessment
-Ensuring changes are incremental and reversible
-Best practices
-Review small change sets
-Ask for context when missing
-Validate AI-generated code with skepticism and curiosity
+  - Intent and correctness
+  - Architectural alignment
+  - Business logic validation
+  - Risk assessment
+  - Ensuring changes are incremental and reversible
+  - Best practices
+  - Review small change sets
+  - Ask for context when missing
+  - Validate AI-generated code with skepticism and curiosity
 
 ::: notes
 Humans bring judgment, domain knowledge, and intuition — things AI cannot replicate. The combination of AI and human review creates a multi-layered safety net.
@@ -511,51 +359,22 @@ Humans bring judgment, domain knowledge, and intuition — things AI cannot repl
 
 ---
 
-
-
-
 ## The Role of Test Automation
 
 Test automation provides:
-Behavioral guarantees
-Regression detection
-Confidence for modernization
-Guardrails for AI-assisted refactoring
+  - Behavioral guarantees
+  - Regression detection
+  - Confidence for modernization
+  - Guardrails for AI-assisted refactoring
+
 Types of tests
-Unit tests
-Integration tests
-End-to-end tests
-Snapshot and contract tests
+  - Unit tests
+  - Integration tests
+  - End-to-end tests
+  - Snapshot and contract tests
 
 ::: notes
 Test automation is the ultimate safety net. Without tests, AI-assisted development becomes guesswork. With tests, it becomes a controlled, predictable process.
-:::
-
----
-
-## Exercise: Implementing a Feature Flag
-
-**Objectives**
-
-- Learn how to introduce a safe, reversible change
-- Practice designing a feature flag workflow
-- Understand As-Is and To-Be test implications
-- Document rollout and retirement criteria
-
-**Activities**
-
-1. Select a small brownfield function or module
-2. Identify a safe, incremental change to introduce
-3. Design a feature flag with name, description, rollout plan, rollback plan, and retirement criteria
-4. Write As-Is and To-Be test cases
-5. Document the change with provenance metadata
-
-**Success Criteria**: flag is scoped, rollout/rollback plans are explicit, tests are correct, retirement criteria are documented
-
-::: notes
-Duration ~00:20
-
-Give students 20 minutes. Encourage them to select something real from their own codebases if possible — the exercise is more meaningful with familiar code. The feature flag design is more important than the implementation: students should be able to articulate why the flag exists, who can see the new behavior, and what evidence will trigger retirement. Circulate and ask teams to describe their rollback plan. Debrief: what made the boundary hard to define? What surprised you about writing As-Is tests?
 :::
 
 ---
@@ -640,7 +459,6 @@ Explain that the best first prompt is not "implement this now" but "propose impl
 
 3. **Identify Gaps**
    - Check for missing steps
-   - Example: JWT issue did not include GitHub removal steps
    - Add requirements before proceeding
 
 4. **Proceed with Implementation**
@@ -656,26 +474,7 @@ Walk through the idea that a proposal can be directionally right and still incom
 
 ---
 
-## Multi-Tasking with AI
-
-### Concurrent Work
-
-- Start implementation in one session
-- Continue with other tasks
-- Monitor progress via notifications
-- AI works autonomously once started
-
-::: notes
-Duration ~00:02
-
-Describe this as one of the most practical productivity benefits of modern AI tooling. Once the implementation task is well-scoped and approved, you can let the AI work while you continue with documentation, reviews, or another investigation. Emphasize that autonomy is not the same as abandonment; the human still monitors progress, watches notifications, and steps in if the task drifts or new information appears.
-:::
-
----
-
-## Next: Compare Multiple Implementations
-
-**Preview of Next Topic**
+## Compare Multiple Implementations
 
 - Evaluate pros and cons of different approaches
 - Compare different solutions to the same problem
@@ -691,8 +490,6 @@ Close by previewing the next teaching move: comparing multiple implementations i
 
 ## Effective Prompts for Technical Debt
 
-Section 9 overview
-
 - Focus: prompts, issues, and Copilot workflow
 - Goal: turn vague cleanup into executable work
 
@@ -703,9 +500,6 @@ Open by explaining that technical debt work often fails because requests are too
 :::
 
 ---
-
-
-
 
 ## What a Strong Technical Debt Prompt Includes
 
@@ -724,9 +518,6 @@ Walk through each component as part of a checklist, not as optional advice. The 
 
 ---
 
-
-
-
 ## Why Structured Prompts Matter
 
 Better prompts create better remediation workflows
@@ -744,9 +535,6 @@ This is the business-value slide. Explain that structured prompts reduce rework 
 
 ---
 
-
-
-
 ## GitHub Integration - Direct Issue Creation
 
 Copilot can help move prompt content into GitHub issues
@@ -755,42 +543,11 @@ Copilot can help move prompt content into GitHub issues
 - Copilot can create the issue directly in GitHub
 - Labels, assignees, and metadata can be included
 
-**Common pitfalls**
-
-- Wrong repository selected
-- Missing full `owner/repository` format
-- Issues disabled in repo settings
-
 ::: notes
 Present this as the first automation step after prompt authoring. The audience should understand that Copilot can bridge from local artifact or prompt text into the GitHub issue system, but repository targeting must be explicit. Stress the practical lesson from the demo: natural language is often not enough when multiple repositories are in play. Encourage attendees to always state the full repository name to avoid misrouting work. (~1.25 minutes)
 :::
 
 ---
-
-
-
-
-## Resolving Repository Targeting Problems
-
-Use explicit repository context to avoid failed issue creation
-
-1. Provide the full repository path
-2. Verify issues are enabled in repository settings
-3. Use the exact format: `owner/repository-name`
-
-```text
-Good: Post issue #6 to johnmillerATcodemag-com/AI-Assisted-Software-Development
-Weak: Post issue #6 to the GitHub repo
-```
-
-::: notes
-This slide turns the earlier problem into an operational rule. Show the contrast between a strong repository reference and an ambiguous one so the audience sees how small wording changes affect outcome quality. Mention that this is especially important in enterprise environments, where users often have access to many repositories and organizations. Transition by noting that once the issue exists, the next step is assigning the work to Copilot. (~1 minute)
-:::
-
----
-
-
-
 
 ## Assigning an Issue to @copilot
 
@@ -814,21 +571,26 @@ Describe this as the jump from assisted drafting to autonomous execution. The va
 
 ---
 
-
-
-
 ## Live Demo Workflow
 
 What happened in the demonstration
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[Create issue from file content] --> B[Attempt GitHub posting]
     B --> C[Repo selection problem]
     C --> D[Correct repo reference]
     D --> E[Issue created successfully]
     E --> F[Assign issue to @copilot]
     F --> G[Autonomous implementation starts]
+
+    style A fill:#e1f5ff
+    style B fill:#fff3e0
+    style C fill:#ffebee
+    style D fill:#f3e5f5
+    style E fill:#e8f5e9
+    style F fill:#fce4ec
+    style G fill:#e0f2f1
 ```
 
 ::: notes
@@ -836,32 +598,6 @@ Use the flowchart to retell the demo as a sequence of decisions and corrections.
 :::
 
 ---
-
-
-
-
-## Operational Observations from the Demo
-
-What the audience saw in real time
-
-- Another issue implementation was running in parallel
-- Notifications arrived as work progressed
-- A WIP branch was created automatically
-- Copilot behaved like a tracked background teammate
-
-**Student takeaway**
-
-- Track work in GitHub, not just in chat
-- Let automation handle branch and PR scaffolding
-
-::: notes
-This slide helps the audience move from feature awareness to workflow intuition. Explain that the visible notifications and parallel work demonstrate why GitHub-backed flows are more scalable than copy-paste prompt execution alone. The WIP branch is important because it gives teams traceability and a concrete artifact to review. Emphasize that GitHub becomes the control surface for AI work, while prompts become the specification language. (~1 minute)
-:::
-
----
-
-
-
 
 ## Reusable Prompt Template for Technical Debt
 
@@ -884,15 +620,10 @@ Give the audience a concrete artifact they can copy into their own workflow. Exp
 
 ---
 
-
-
-
 ## Key Takeaways
 
 - Strong prompts define the debt, constraints, outcomes, tests, docs, and provenance
-- GitHub issue creation works best with explicit repository targeting
 - Assigning to `@copilot` can automate branch, progress, and PR creation
-- Demo failures showed how prompt specificity improves execution
 - Technical debt becomes easier to manage when prompts and issues work together
 
 ::: notes
@@ -917,11 +648,11 @@ Close by tying prompt quality to execution quality. The audience should leave wi
 
 ## Conformance & Gap Analysis
 
-Comparing implementations against instruction files
-Automated issue generation from conformance gaps
-Prioritizing technical debt remediation
-Creating actionable remediation plans
-Exercises for hands-on practice
+- Comparing implementations against instruction files
+- Automated issue generation from conformance gaps
+- Prioritizing technical debt remediation
+- Creating actionable remediation plans
+- Exercises for hands-on practice
 
 ::: notes
 Introduce this module as the bridge between architectural intent and real code. Conformance analysis ensures that AI-assisted and human-written code stays aligned with the rules defined in instruction files. This is how teams maintain evergreen quality in brownfield systems.
@@ -929,21 +660,19 @@ Introduce this module as the bridge between architectural intent and real code. 
 
 ---
 
-
-
-
 ## Comparing Implementations Against Instruction Files
 
 What to compare
-Coding standards
-Architectural boundaries
-Allowed/disallowed patterns
-Domain rules
-Documentation and provenance requirements
+- Coding standards
+- Architectural boundaries
+- Allowed/disallowed patterns
+- Domain rules
+- Documentation and provenance requirements
+
 Why it matters
-Prevents drift
-Ensures consistency
-Enables safe modernization
+- Prevents drift
+- Ensures consistency
+- Enables safe modernization
 
 ::: notes
 Instruction files define the “north star” for your codebase. Conformance checks ensure that every change — AI-generated or human — aligns with those rules. This is essential for maintaining predictability in brownfield systems.
@@ -951,22 +680,20 @@ Instruction files define the “north star” for your codebase. Conformance che
 
 ---
 
-
-
-
 ## Automated Issue Generation From Conformance Gaps
 
 AI can generate:
-Issue titles
-Detailed descriptions
-Violated rules
-Suggested fixes
-Acceptance criteria
-Provenance metadata
+- Issue titles
+- Detailed descriptions
+- Violated rules
+- Suggested fixes
+- Acceptance criteria
+- Provenance metadata
+
 Benefits
-Faster backlog creation
-Consistent issue structure
-Reduced manual review effort
+- Faster backlog creation
+- Consistent issue structure
+- Reduced manual review effort
 
 ::: notes
 Automation accelerates the conformance workflow. Instead of manually writing issues, AI can draft them instantly, leaving humans to validate and prioritize.
@@ -974,21 +701,19 @@ Automation accelerates the conformance workflow. Instead of manually writing iss
 
 ---
 
-
-
-
 ## Prioritizing Technical Debt Remediation
 
 Prioritization factors
-Risk to stability
-Frequency of use
-Security implications
-Architectural importance
-Effort vs. impact
+- Risk to stability
+- Frequency of use
+- Security implications
+- Architectural importance
+- Effort vs. impact
+
 Approaches
-Impact/effort matrix
-Risk scoring
-Dependency analysis
+- Impact/effort matrix
+- Risk scoring
+- Dependency analysis
 
 ::: notes
 Not all technical debt is equal. Prioritization ensures that teams focus on the highest-value remediation work first, rather than chasing low-impact issues.
@@ -996,19 +721,16 @@ Not all technical debt is equal. Prioritization ensures that teams focus on the 
 
 ---
 
-
-
-
 ## Creating Actionable Remediation Plans
 
 A strong remediation plan includes:
-Clear problem definition
-Root cause analysis
-Proposed solution
-Step-by-step implementation plan
-Rollback strategy
-Test updates
-Provenance metadata
+- Clear problem definition
+- Root cause analysis
+- Proposed solution
+- Step-by-step implementation plan
+- Rollback strategy
+- Test updates
+- Provenance metadata
 
 ::: notes
 Remediation plans turn issues into action. They provide clarity, reduce risk, and ensure that modernization work is incremental and reversible.
@@ -1016,19 +738,29 @@ Remediation plans turn issues into action. They provide clarity, reduce risk, an
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Exercise: Create Project Requirement
 
-Objective: Create project requirement instructions, some project-specific, some generic, using both manual and Copilot-assisted methods.
-Manually create a business requirements.md file and add:
-  - Business rules
-  - Workflows
-  - Purpose
-  - Tech stack
-  - Architecture
-Use Copilot to generate instruction files using the copilot-instructions.md and the codebase for context.
-Bonus:
-Review instruction files for errors and omissions.
-Ask Copilot to suggest changes based on evolving tech and practices.
+Objective:
+  - Create project requirement instructions, some project-specific, some generic, using both manual and Copilot-assisted methods.
+
+Activities:
+  1. Create a project-requirements.md file that includes:
+    - Business rules
+    - Workflows
+    - Purpose
+    - Tech stack
+    - Architecture
+
+::: column
+
+  2. Use Copilot to generate instruction files using the copilot-instructions.md and the codebase for context.
+
+Success Criteria:
+  - Instructions are clear and actionable
+  - Both manual and AI-assisted methods are used
+  - Instruction files are generated successfully
 
 ::: notes
 Author requirement docs, then use Copilot to generate scaffolding and validate alignment.
@@ -1036,16 +768,18 @@ Author requirement docs, then use Copilot to generate scaffolding and validate a
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Exercise: Create an Implementation Plan
 
 Objectives
-Translate issues into a structured remediation plan
-Ensure changes are incremental and reversible
-Align modernization with evergreen principles
-Incorporate testing and rollback strategies
+- Translate issues into a structured remediation plan
+- Ensure changes are incremental and reversible
+- Align modernization with evergreen principles
+- Incorporate testing and rollback strategies
 Activities
-Select 2–3 issues from the previous exercise.
-For each issue, create a remediation plan including:
+1. Select 2–3 issues from the previous exercise.
+2. For each issue, create a remediation plan including:
   - Problem definition
   - Root cause
   - Proposed solution
@@ -1053,14 +787,16 @@ For each issue, create a remediation plan including:
   - Rollback plan
   - Required test updates
   - Documentation updates
-  - Provenance metadata
-Review plans with a partner.
+
+::: column
+
+3. Review plan.
+
 Success Criteria
-Plans are incremental, safe, and reversible
-Include clear steps and rollback strategies
-Align with evergreen development principles
-Include test and documentation updates
-Provenance metadata is present
+- Plans are incremental, safe, and reversible
+- Include clear steps and rollback strategies
+- Align with evergreen development principles
+- Include test and documentation updates
 
 ::: notes
 Duration ~00:20
@@ -1072,9 +808,9 @@ This exercise helps participants move from analysis to execution. The goal is to
 
 ## Building a Backlog
 
-Identifying technical debt
-Automating the creation of GitHub issues
-Exercise: Building the backlog
+- Identifying technical debt
+- Automating the creation of GitHub issues
+- Exercise: Building the backlog
 
 ::: notes
 Introduce this module as the bridge between analysis and action. Once AI identifies risks, gaps, and modernization opportunities, teams need a structured backlog to manage the work. Emphasize that backlog creation is not just administrative — it is a core governance mechanism for safe AI-assisted modernization.
@@ -1082,22 +818,20 @@ Introduce this module as the bridge between analysis and action. Once AI identif
 
 ---
 
-
-
-
 ## Identifying Technical Debt
 
 AI can surface:
-Outdated patterns
-High-complexity functions
-Duplicate logic
-Missing tests
-Security vulnerabilities
-Architectural drift
+- Outdated patterns
+- High-complexity functions
+- Duplicate logic
+- Missing tests
+- Security vulnerabilities
+- Architectural drift
+
 Benefits
-Faster discovery
-More consistent classification
-Prioritized modernization roadmap
+- Faster discovery
+- More consistent classification
+- Prioritized modernization roadmap
 
 ::: notes
 Explain that AI excels at scanning large brownfield systems and surfacing hotspots. This reduces the manual effort required to understand legacy code and helps teams focus on the highest-impact areas first.
@@ -1105,22 +839,20 @@ Explain that AI excels at scanning large brownfield systems and surfacing hotspo
 
 ---
 
-
-
-
 ## Automating the Creation of GitHub Issues
 
 AI can help generate:
-Issue titles
-Detailed descriptions
-Acceptance criteria
-Labels and metadata
-Suggested remediation steps
+- Issue titles
+- Detailed descriptions
+- Acceptance criteria
+- Labels and metadata
+- Suggested remediation steps
+
 Why automate?
-Ensures consistency
-Reduces manual backlog grooming
-Produces actionable, high-signal issues
-Accelerates modernization planning
+- Ensures consistency
+- Reduces manual backlog grooming
+- Produces actionable, high-signal issues
+- Accelerates modernization planning
 
 ::: notes
 Highlight that automation doesn't replace human judgment — it accelerates it. Humans still validate, refine, and prioritize issues, but AI handles the heavy lifting of drafting them.
@@ -1128,30 +860,37 @@ Highlight that automation doesn't replace human judgment — it accelerates it. 
 
 ---
 
+<!-- layout: Two Content -->
+
 ## Exercise: Building the Backlog
 
 Objectives
-Practice identifying technical debt
-Convert findings into actionable GitHub issues
-Apply consistent structure
-Prioritize issues based on risk and impact
+  - Practice identifying technical debt
+  - Convert findings into actionable GitHub issues
+  - Apply consistent structure
+  - Prioritize issues based on risk and impact
+
 Activities
-Select a brownfield module or file.
-Use AI to identify:
-  - Technical debt
-  - Risks
-  - Test confidence
-  - Architectural issues
-Convert each finding into a GitHub issue with:
-  - Title
-  - Description
-  - Acceptance criteria
-  - Labels
-Prioritize the issues using impact vs. effort.
+  1. Select a brownfield module or file.
+  2. Use AI to identify:
+    - Technical debt
+    - Risks
+    - Test confidence
+    - Architectural issues
+
+::: column
+
+  3. Convert each finding into a GitHub issue with:
+    - Title
+    - Description
+    - Acceptance criteria
+    - Labels
+  4. Prioritize the issues using impact vs. effort.
+
 Success Criteria
-Issues are clear, actionable, and well-structured
-Prioritization reflects real risk and effort
-Backlog is ready for implementation
+  - Issues are clear, actionable, and well-structured
+  - Prioritization reflects real risk and effort
+  - Backlog is ready for implementation
 
 ::: notes
 Duration ~00:20
@@ -1165,11 +904,11 @@ Encourage participants to treat this as a real backlog-building session. The goa
 
 When AI audits a brownfield codebase, these issues surface first:
 
-- 🔑 **Exposed secrets** — credentials or tokens committed to source control
-- 🔒 **Missing HTTPS** — data in transit unencrypted
-- 📋 **No test coverage** — changes cannot be validated safely
-- 🚫 **No CI/CD pipeline** — deployment is manual and inconsistent
-- 📝 **Missing AI provenance metadata** — AI-generated changes are untracked
+- **Exposed secrets** — credentials or tokens committed to source control
+- **Missing HTTPS** — data in transit unencrypted
+- **No test coverage** — changes cannot be validated safely
+- **No CI/CD pipeline** — deployment is manual and inconsistent
+- **Missing AI provenance metadata** — AI-generated changes are untracked
 
 ::: notes
 Duration ~00:01
@@ -1256,12 +995,19 @@ Introduce "Phase Zero" as a deliberate pre-sprint focused entirely on security h
 Low-effort, high-impact fixes accumulate into a significantly healthier codebase:
 
 ```mermaid
-flowchart LR
-    A[Audit findings] --> B[Prioritize matrix]
-    B --> C[Phase Zero\nsecurity fixes]
-    C --> D[Add CI/CD\n& tests]
-    D --> E[Automate\ndebt detection]
-    E --> F[Evergreen\nstate]
+flowchart TB
+    A[Audit findings]:::orange --> B[Prioritize matrix]:::yellow
+    B --> C[Phase Zero\nsecurity fixes]:::red
+    C --> D[Add CI/CD\n& tests]:::blue
+    D --> E[Automate\ndebt detection]:::purple
+    E --> F[Evergreen\nstate]:::green
+
+    classDef orange fill:#ff9999
+    classDef yellow fill:#ffff99
+    classDef red fill:#ff6b6b
+    classDef blue fill:#6b9eff
+    classDef purple fill:#c99eff
+    classDef green fill:#99ff99
 ```
 
 **Evergreen state** = debt is continuously detected, tracked, and paid down
@@ -1290,10 +1036,10 @@ Frame Evergreen not as a destination you reach once but as an operating mode whe
 
 ## Addressing Technical Debt
 
-Prompting Copilot to address debt
-Assigning issues to Copilot
-What Copilot does with assigned issues
-Exercises for hands-on practice
+- Prompting Copilot to address debt
+- Assigning issues to Copilot
+- What Copilot does with assigned issues
+- Exercises for hands-on practice
 
 ::: notes
 Introduce this module as the moment where AI becomes an active contributor to modernization. Technical debt is inevitable in brownfield systems, but AI can help teams address it safely, incrementally, and with strong guardrails.
@@ -1301,21 +1047,18 @@ Introduce this module as the moment where AI becomes an active contributor to mo
 
 ---
 
-
-
-
 ## Prompting Copilot to Address Technical Debt
 
 Effective prompts include:
-Clear description of the debt
-Constraints and architectural rules
-Expected outcomes
-Required tests and documentation updates
-Provenance requirements
+  - Clear description of the debt
+  - Constraints and architectural rules
+  - Expected outcomes
+  - Required tests and documentation updates
+  - Provenance requirements
 Benefits
-Faster remediation
-Consistent application of patterns
-Reduced manual effort
+  - Faster remediation
+  - Consistent application of patterns
+  - Reduced manual effort
 
 ::: notes
 Explain that Copilot responds best to structured, high-signal prompts. The more explicit the constraints, the safer and more predictable the remediation.
@@ -1323,20 +1066,18 @@ Explain that Copilot responds best to structured, high-signal prompts. The more 
 
 ---
 
-
-
-
 ## Assigning Issues to Copilot
 
 How assignment works
-Convert technical debt into GitHub issues
-Provide context, constraints, and acceptance criteria
-Use Copilot to draft remediation steps
-Let Copilot propose code changes in PRs
+  - Convert technical debt into GitHub issues
+  - Provide context, constraints, and acceptance criteria
+  - Use Copilot to draft remediation steps
+  - Let Copilot propose code changes in PRs
+
 Why assign issues?
-Creates a repeatable workflow
-Keeps humans in the reviewer role
-Ensures traceability and provenance
+  - Creates a repeatable workflow
+  - Keeps humans in the reviewer role
+  - Ensures traceability and provenance
 
 ::: notes
 Assigning issues to Copilot formalizes the workflow. It treats Copilot like a junior developer who receives tasks, produces drafts, and awaits review.
@@ -1344,20 +1085,23 @@ Assigning issues to Copilot formalizes the workflow. It treats Copilot like a ju
 
 ---
 
-
-
-
 ## What Copilot Does With Assigned Issues
 
-Copilot reads the issue description and linked context
-Generates a proposed plan or implementation approach
-Creates or updates pull requests with code changes
-Adds explanations, tests, and documentation as needed
-Iterates based on review comments
-Maintains traceability between issue → PR → commits
+- Copilot reads the issue description and linked context
+- Generates a proposed plan or implementation approach
+- Creates or updates pull requests with code changes
+- Adds explanations, tests, and documentation as needed
+- Iterates based on review comments
+- Maintains traceability between issue → PR → commits
 
 ::: notes
-::: notes**Overview**  When you assign an issue to GitHub Copilot on GitHub.com, Copilot behaves like a managed junior developer. It doesn't magically “solve” the issue — it follows a structured workflow grounded in the issue description and repository context.**Reads the Issue and Context**  Copilot parses the issue body, labels, linked discussions, and any referenced files. The quality and specificity of the issue strongly influence the quality of the output.**Generates a Work Plan**  Copilot drafts an implementation plan. This may include steps, architectural notes, or a breakdown of required changes. It uses repository code, patterns, and conventions to stay consistent.**Creates or Updates Pull Requests**  Copilot opens a PR with proposed changes. These changes often include code, tests, and documentation updates. It may also update an existing PR if the issue is already in progress.**Responds to Feedback**  When maintainers leave comments, Copilot can revise the PR. It treats comments as instructions, similar to how a junior developer would respond to review notes.**Maintains Traceability**  Copilot links the PR back to the issue, references commits properly, and ensures the work is tracked through GitHub's normal workflow. This supports auditability and provenance — something you and I both care about deeply.**Key Takeaway**  Copilot doesn't replace engineering judgment. It accelerates the mechanical parts of implementation while relying on humans for direction, review, and acceptance.:::
+**Overview**  When you assign an issue to GitHub Copilot on GitHub.com, Copilot behaves like a managed junior developer. It doesn't magically “solve” the issue — it follows a structured workflow grounded in the issue description and repository context.
+**Reads the Issue and Context**  Copilot parses the issue body, labels, linked discussions, and any referenced files. The quality and specificity of the issue strongly influence the quality of the output.
+**Generates a Work Plan**  Copilot drafts an implementation plan. This may include steps, architectural notes, or a breakdown of required changes. It uses repository code, patterns, and conventions to stay consistent.
+**Creates or Updates Pull Requests**  Copilot opens a PR with proposed changes. These changes often include code, tests, and documentation updates. It may also update an existing PR if the issue is already in progress.
+**Responds to Feedback**  When maintainers leave comments, Copilot can revise the PR. It treats comments as instructions, similar to how a junior developer would respond to review notes.
+**Maintains Traceability**  Copilot links the PR back to the issue, references commits properly, and ensures the work is tracked through GitHub's normal workflow. This supports auditability and provenance — something you and I both care about deeply.
+**Key Takeaway**  Copilot doesn't replace engineering judgment. It accelerates the mechanical parts of implementation while relying on humans for direction, review, and acceptance.
 :::
 
 ---
@@ -1398,30 +1142,37 @@ Create instruction files for the front-end technologies
 
 ---
 
+<!-- Layout: Two Content -->
+
 ## Exercise: Generate Issues to Make the Codebase Evergreen
 
 Objectives
-Identify conformance gaps
-Convert gaps into actionable issues
-Apply consistent structure and provenance
-Prioritize issues based on risk and impact
+  - Identify conformance gaps
+  - Convert gaps into actionable issues
+  - Apply consistent structure and provenance
+  - Prioritize issues based on risk and impact
+
 Activities
-Select a brownfield module or file.
-Compare it against the project's instruction file.
-Ask AI to identify conformance gaps.
-Convert each gap into a GitHub issue with:
-  - Title
-  - Description
-  - Violated rule
-  - Suggested remediation
-  - Acceptance criteria
-  - Provenance metadata
-Prioritize the issues.
+  1. Select a brownfield module or file.
+  2. Compare it against the project's instruction file.
+  3. Ask AI to identify conformance gaps.
+
+::: column
+
+  4. Convert each gap into a GitHub issue with:
+    - Title
+    - Description
+    - Violated rule
+    - Suggested remediation
+    - Acceptance criteria
+    - Provenance metadata
+  5. Prioritize the issues.
+
 Success Criteria
-Issues are clear, actionable, and aligned with instruction files
-Provenance metadata is included
-Prioritization reflects real risk and effort
-Backlog is ready for team review
+- Issues are clear, actionable, and aligned with instruction files
+- Provenance metadata is included
+- Prioritization reflects real risk and effort
+- Backlog is ready for team review
 
 ::: notes
 Duration ~00:15
@@ -1431,28 +1182,27 @@ Encourage participants to treat this as a real backlog-building session. The goa
 
 ---
 
+<!-- Layout: Two Content -->
+
 ## Exercise: Identifying Code Outside the Guardrails
 
 Objectives
-
-- Detect code that violates architectural rules
-- Identify patterns that contradict instruction files
-- Practice safe analysis workflows
-- Make a plan for remediation
+  - Detect code that violates architectural rules
+  - Identify patterns that contradict instruction files
+  - Practice safe analysis workflows
+  - Make a plan for remediation
 
 Activities
-
-1. Review the code
-2. Compare it against the instruction files
-3. Identify violations or risky patterns
-4. Propose safe remediation steps
-5. Document findings with provenance
+  1. Review the code
+  2. Compare it against the instruction files
+  3. Identify violations or risky patterns
+  4. Propose safe remediation steps
+  5. Document findings with provenance
 
 Success Criteria
-
-- Deviations are correctly identified
-- Remediation steps are safe and incremental
-- Documentation includes provenance
+  - Deviations are correctly identified
+  - Remediation steps are safe and incremental
+  - Documentation includes provenance
 
 ::: notes
 Duration ~00:10
@@ -1465,32 +1215,29 @@ This exercise reinforces the importance of guardrails and helps participants pra
 ## Exercise: Code Quality Analysis
 
 Objectives
-
-- Use AI to detect non-evergreen code patterns in the workspace.
-- Distinguish temporary artifacts from long-lived maintainable assets.
-- Propose practical evergreen refactors with clear priority.
+  - Use AI to detect non-evergreen code patterns in the workspace.
+  - Distinguish temporary artifacts from long-lived maintainable assets.
+  - Propose practical evergreen refactors with clear priority.
 
 Activities
-
-- Activity 1: AI Baseline Scan
+1. AI Baseline Scan
   - Run an AI prompt to identify files that look date-bound, draft-only, or placeholder-heavy.
   - Collect at least 8 candidate findings across docs, prompts, and slides.
-- Activity 2: Evidence and Classification
+2. Evidence and Classification
   - Classify each finding as one type: date-bound metadata, draft artifact, stale placeholder, duplicated policy, or legacy process text.
   - Validate each candidate with one concrete file location.
-- Activity 3: Evergreen Refactor Plan
+3. Evergreen Refactor Plan
   - Select top 3 high-impact findings.
   - Write a before/after recommendation focused on longevity, clarity, and reduced maintenance.
-- Activity 4: Share and Defend
+4. Share and Defend
   - Present one finding and explain why it is not evergreen.
   - Defend your proposed fix with expected impact.
 
 Success Criteria
-
-- 8 or more non-evergreen findings identified with evidence.
-- Findings are correctly categorized by non-evergreen pattern.
-- Top 3 recommendations are specific, actionable, and evergreen-focused.
-- Team can explain why each proposed change improves long-term maintainability.
+  - 8 or more non-evergreen findings identified with evidence.
+  - Findings are correctly categorized by non-evergreen pattern.
+  - Top 3 recommendations are specific, actionable, and evergreen-focused.
+  - Team can explain why each proposed change improves long-term maintainability.
 
 ::: notes
 Duration ~00:20
@@ -1531,133 +1278,38 @@ Analyze the workspace for code or content that is not evergreen. Focus on date-c
 
 ---
 
-  ## **Exercise: Assigning an Issue to Copilot**
-
-  10 minutes
-
-  ### Objectives
-
-  - Convert technical debt into a structured issue
-  - Provide Copilot with actionable context
-  - Practice writing acceptance criteria
-
-  ### Activities
-
-  1. Select a technical debt item.
-  2. Create a GitHub-style issue with:
-     - Title
-     - Description
-     - Impact and risk
-::: column
-     - Acceptance criteria
-     - Provenance metadata
-  3. Assign the issue to Copilot.
-  4. Review Copilot's proposed remediation.
-
-  ### Success Criteria
-
-  - Issue is clear and well-structured
-  - Acceptance criteria are testable
-  - Copilot produces a relevant draft
-  - Provenance metadata is present
-
-::: notes
-Duration ~00:10
-
-  This exercise reinforces the workflow of treating Copilot as a junior developer who receives tasks and produces drafts.
-:::
-
----
-
-
-15 minutes
-
-### Objectives
-
-- Practice delegating multi-step tasks
-- Ensure Copilot follows architectural rules
-- Validate AI-generated remediation plans
-
-### Activities
-
-1. Select a multi-step technical debt item.
-2. Ask Copilot to:
-   - Analyze the problem
-   - Propose a remediation plan
-   - Generate code changes
-::: column
-   - Update tests
-   - Update documentation
-3. Review Copilot's output.
-4. Identify missing context or risks.
-
-### Success Criteria
-
-- Delegation prompt is complete and structured
-- Copilot produces a multi-step plan
-- Output is safe, incremental, and reversible
-- Human review identifies any gaps
-
-::: notes
-Duration ~00:15
-
-This exercise builds confidence in delegating larger tasks while maintaining safety and architectural alignment. Emphasize that humans remain the final reviewers.
-:::
-
-started: "2026-03-22T12:35:12.0096510-07:00"
-ended: "2026-03-22T12:38:26.6899826-07:00"
-task_durations:
-
-- task: "template review"
-  duration: "00:01:00"
-- task: "exercise slide authoring"
-  duration: "00:01:30"
-- task: "provenance and catalog updates"
-  duration: "00:00:44"
-  total_duration: "00:03:14"
-  ai_log: "ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md"
-  source: "johnmillerATcodemag-com"
-  marp: true
-  theme: default
-  paginate: true
-
----
+<!-- Layout: Two Content -->
 
 ## Exercise: Prompt Copilot to Address Technical Debt
 
 Objectives
-
-- Practice writing high-signal prompts
-- Apply architectural constraints
-- Produce safe, incremental remediation requests
+  - Practice writing high-signal prompts
+  - Apply architectural constraints
+  - Produce safe, incremental remediation requests
 
 Activities
+  1. Select a small piece of technical debt.
+  2. Write a prompt that includes:
+    - Description of the debt
+    - Constraints and rules
+    - Expected behavior
+    - Required tests and documentation
 
-1. Select a small piece of technical debt.
-2. Write a prompt that includes:
-   - Description of the debt
-   - Constraints and rules
 ::: column
-   - Expected behavior
-   - Required tests and documentation
-3. Ask Copilot to propose a remediation.
-4. Review the output for correctness.
+
+  3. Ask Copilot to propose a remediation.
+  4. Review the output for correctness.
 
 Success Criteria
-
-- Prompt is clear, scoped, and actionable
-- Copilot produces a safe, incremental change
-- Output aligns with architectural rules
-- Provenance metadata is included
+  - Prompt is clear, scoped, and actionable
+  - Copilot produces a safe, incremental change
+  - Output aligns with architectural rules
+  - Provenance metadata is included
 
 ::: notes
 Duration ~00:10
 
-## Prompt Copilot to Address Technical Debt Exercise Instructions
-
-**Prerequisites:** Access to a brownfield example, the relevant repository guardrails or instruction files, and GitHub Copilot Chat
-
-Use this first exercise to make participants slow down and specify the work before they ask for code. Encourage them to choose a small but real technical debt item from their own system, because realistic context exposes whether the prompt includes enough architecture, testing, and documentation guidance to keep the change safe. During the review step, ask them to inspect whether Copilot stayed incremental, respected the stated constraints, and requested or updated tests instead of only proposing a code edit. Transition to the next slide by explaining that a strong prompt is useful, but durable team workflows usually need the same clarity captured in a structured issue.
+Use this first exercise to make participants slow down and specify the work before they ask for code. Encourage them to choose a small but real technical debt item from their own system, because realistic context exposes whether the prompt includes enough architecture, testing, and documentation guidance to keep the change safe. During the review step, ask them to inspect whether Copilot stayed incremental, respected the stated constraints, and requested or updated tests instead of only proposing a code edit. Transition by explaining that a strong prompt is useful, but durable team workflows usually need the same clarity captured in a structured issue.
 :::
 
 ---
@@ -1677,7 +1329,7 @@ Activities
    - Title
    - Description
    - Impact and risk
-::: column
+     ::: column
    - Acceptance criteria
    - Provenance metadata
 3. Assign the issue to Copilot.
@@ -1693,49 +1345,42 @@ Success Criteria
 ::: notes
 Duration ~00:10
 
-## Assigning an Issue to Copilot Exercise Instructions
-
-**Prerequisites:** Access to a repository with GitHub issue workflows or a comparable issue template, plus enough project context to describe impact and acceptance criteria
-
 Frame this exercise as the handoff from ad hoc prompting to a repeatable engineering process. Participants should write the issue as if they were briefing a junior developer: the title should be specific, the problem statement should identify impact and risk, and the acceptance criteria should make review straightforward and testable. When they evaluate Copilot's draft, focus on whether the output follows the issue rather than whether it merely looks polished, because a clean-looking response can still drift from the requested scope. Transition by noting that once the issue is strong, teams can delegate larger units of work with more confidence, as long as they keep the plan reviewable and reversible.
 :::
 
 ---
 
+<!-- Layout: Two Content -->
+
 ## Exercise: Delegating Work to Copilot
 
 Objectives
-
-- Practice delegating multi-step tasks
-- Ensure Copilot follows architectural rules
-- Validate AI-generated remediation plans
+  - Practice delegating multi-step tasks
+  - Ensure Copilot follows architectural rules
+  - Validate AI-generated remediation plans
 
 Activities
+  1. Select a multi-step technical debt item.
+  2. Ask Copilot to:
+    - Analyze the problem
+    - Propose a remediation plan
+    - Generate code changes
 
-1. Select a multi-step technical debt item.
-2. Ask Copilot to:
-   - Analyze the problem
-   - Propose a remediation plan
-   - Generate code changes
 ::: column
-   - Update tests
-   - Update documentation
-3. Review Copilot's output.
-4. Identify missing context or risks.
+
+    - Update tests
+    - Update documentation
+  3. Review Copilot's output.
+  4. Identify missing context or risks.
 
 Success Criteria
-
-- Delegation prompt is complete and structured
-- Copilot produces a multi-step plan
-- Output is safe, incremental, and reversible
-- Human review identifies any gaps
+  - Delegation prompt is complete and structured
+  - Copilot produces a multi-step plan
+  - Output is safe, incremental, and reversible
+  - Human review identifies any gaps
 
 ::: notes
 Duration ~00:15
-
-## Delegating Work to Copilot Exercise Instructions
-
-**Prerequisites:** A technical debt item with enough scope to require planning, code changes, tests, and documentation updates
 
 This final exercise is about controlled delegation, not blind trust. Ask participants to evaluate the output in layers: first the analysis, then the proposed sequence of changes, then whether the generated edits remain small enough to review and roll back safely. If Copilot skips tests, documentation, or architecture rules, treat that as a signal that the delegation prompt still needs sharper boundaries or missing context. Close by reinforcing that Copilot can accelerate larger remediation efforts, but humans remain responsible for approving the plan, spotting risk, and deciding whether the generated work is actually ready to merge.
 :::
@@ -1772,12 +1417,13 @@ Introduce this module as a way to help teams understand how different AI models 
 
 ## Implementing Changes With Different AI Models
 
-- Why use multiple models?
-- Different reasoning styles
-- Different strengths (refactoring, documentation, architecture)
-- Cross-validation reduces risk
-- Helps detect missing context or contradictions
-- Typical use cases
+Why use multiple models?
+  - Different reasoning styles
+  - Different strengths (refactoring, documentation, architecture)
+  - Cross-validation reduces risk
+  - Helps detect missing context or contradictions
+
+Typical use cases
   - Refactoring comparisons
   - Documentation consistency checks
   - Architecture proposal validation
@@ -1828,26 +1474,33 @@ Reinforce that risk assessment is essential in brownfield systems. Even if a mod
 
 ---
 
+<!-- Layout: Two Content -->
+
 ## Exercise: Prompt Copilot to Address Technical Debt
 
 Objectives
-Practice writing high-signal prompts
-Apply architectural constraints
-Produce safe, incremental remediation requests
+  - Practice writing high-signal prompts
+  - Apply architectural constraints
+  - Produce safe, incremental remediation requests
+
 Activities
-Select a small piece of technical debt.
-Write a prompt that includes:
-  - Description of the debt
-  - Constraints and rules
-  - Expected behavior
-  - Required tests and documentation
-Ask Copilot to propose a remediation.
-Review the output for correctness.
+  1. Select a small piece of technical debt.
+  2. Write a prompt that includes:
+    - Description of the debt
+    - Constraints and rules
+    - Expected behavior
+    - Required tests and documentation
+
+::: column
+
+  3. Ask Copilot to propose a remediation.
+  4. Review the output for correctness.
+
 Success Criteria
-Prompt is clear, scoped, and actionable
-Copilot produces a safe, incremental change
-Output aligns with architectural rules
-Provenance metadata is included
+  - Prompt is clear, scoped, and actionable
+  - Copilot produces a safe, incremental change
+  - Output aligns with architectural rules
+  - Provenance metadata is included
 
 ::: notes
 Duration ~00:10
@@ -1862,31 +1515,28 @@ Encourage participants to choose a real example from their brownfield system. Th
 ## Exercise: Prompt Multiple Models to Address Technical Debt
 
 Objectives
-
-- Compare outputs from different models
-- Identify strengths and weaknesses
-- Evaluate risk and quality
+  - Compare outputs from different models
+  - Identify strengths and weaknesses
+  - Evaluate risk and quality
 
 Activities
-
-- Select a small technical debt item.
-- Prompt two or more models to propose a fix.
+  1. Select a small technical debt item.
+  2. Prompt two or more models to propose a fix.
 
 ::: column
 
-- Compare outputs for:
-  - Safety
-  - Clarity
-  - Test coverage
-  - Architectural alignment
-- Synthesize the best elements into a final solution.
+  3. Compare outputs for:
+    - Safety
+    - Clarity
+    - Test coverage
+    - Architectural alignment
+  4. Synthesize the best elements into a final solution.
 
 Success Criteria
-
-- Differences between models are clearly identified
-- Risks and strengths are evaluated
-- Final synthesized solution is safe and incremental
-- Provenance metadata is included
+  - Differences between models are clearly identified
+  - Risks and strengths are evaluated
+  - Final synthesized solution is safe and incremental
+  - Provenance metadata is included
 
 ::: notes
 Duration ~00:15
