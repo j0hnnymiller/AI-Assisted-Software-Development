@@ -703,37 +703,55 @@ def populate_text_placeholder(shape, body: str) -> None:
     tf.margin_left = Inches(0.1)
     tf.margin_right = Inches(0.1)
 
-    # Save run-level font names (including None/inherited) before any prefit.
-    # fit_text() can stamp a single font across all runs; we must restore each
-    # run's original font intent so only explicitly marked code remains monospace.
-    font_names_by_run: dict[tuple[int, int], str | None] = {}
+    def get_run_strike_value(run):
+        r_pr = run._r.rPr
+        if r_pr is None:
+            return None
+        return r_pr.get("strike")
+
+    # Save run-level formatting before any prefit.
+    # fit_text() can stamp a single style across all runs; restore the markdown-derived
+    # emphasis afterwards so bold/italic/code formatting survives into the PPTX.
+    run_format_overrides: dict[tuple[int, int], dict[str, object | None]] = {}
     for pi, para in enumerate(tf.paragraphs):
         for ri, run in enumerate(para.runs):
-            font_names_by_run[(pi, ri)] = run.font.name
+            run_format_overrides[(pi, ri)] = {
+                "name": run.font.name,
+                "bold": run.font.bold,
+                "italic": run.font.italic,
+                "underline": run.font.underline,
+                "strike": get_run_strike_value(run),
+            }
 
-    def restore_font_overrides() -> None:
+    def restore_run_format_overrides() -> None:
         for pi, para in enumerate(tf.paragraphs):
             for ri, run in enumerate(para.runs):
-                if (pi, ri) in font_names_by_run:
-                    run.font.name = font_names_by_run[(pi, ri)]
+                if (pi, ri) in run_format_overrides:
+                    overrides = run_format_overrides[(pi, ri)]
+                    run.font.name = overrides["name"]
+                    run.font.bold = overrides["bold"]
+                    run.font.italic = overrides["italic"]
+                    run.font.underline = overrides["underline"]
+                    if overrides["strike"]:
+                        run._r.get_or_add_rPr().set("strike", overrides["strike"])
 
     # Pre-fit once so slides open already fitted without requiring manual
     # toggle/reflow in PowerPoint. Use Consolas metrics when code runs exist
     # because it is wider than Arial and gives a safer initial fit.
-    if font_names_by_run:
-        has_consolas = any((name or "").lower() == "consolas" for name in font_names_by_run.values())
+    if run_format_overrides:
+        has_consolas = any((overrides["name"] or "").lower() == "consolas" for overrides in run_format_overrides.values())
         prefit_family = "Consolas" if has_consolas else "Arial"
         prefit_max_size = 18 if has_consolas else 28
         try:
             tf.fit_text(font_family=prefit_family, max_size=prefit_max_size)
         except Exception:
             pass
-        restore_font_overrides()
+        restore_run_format_overrides()
 
     finalize_text_frame(tf)
 
     # Restore run-level font overrides (e.g. Consolas for code blocks/spans).
-    restore_font_overrides()
+    restore_run_format_overrides()
 
 
 def populate_paragraph_lines(text_frame, lines: list[str]) -> None:

@@ -411,6 +411,7 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
 - Multiple bold sections on one line are supported
 - Works with bulleted lists (the bullet prefix `- ` is handled correctly)
 - Applies to markdown-aware title, subtitle, body, bullet-list, and table-cell rendering paths
+- Placeholder pre-fit/autofit must preserve run-level emphasis after markdown parsing; fitting logic must not collapse bold text back to a single normal-weight run
 - Literal `**` markers must not appear in the visible PPTX output
 
 **Example transformations**:
@@ -420,12 +421,14 @@ def apply_markdown_formatting(text_frame, line_text: str) -> None:
 | `**Principal Software Engineer at CODE**` | **Principal Software Engineer at CODE** (bold) |
 | `This is **important text** and normal`   | This is **important text** (bold) and normal   |
 | `- **Key Point**: explanation text`       | • **Key Point** (bold): explanation text       |
+| `- **Questions are always welcome — ask anytime!**` | • **Questions are always welcome — ask anytime!** (bold) |
 
 **Testing verification**: When testing modifications:
 
 1. Create a slide with markdown bold syntax in the source markdown
 2. Generate the PPTX using `generate_pptx.py`
 3. Open the PPTX and verify bold text appears with actual bold formatting in titles, body text, bullets, and table cells (not literal asterisks)
+4. Confirm bold text in content placeholders is still bold after any placeholder pre-fit or finalization step
 
 ### 7.4.6 Markdown Table Rendering
 
@@ -649,6 +652,11 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 - [ ] **Speaker Notes Test**: Open PPTX and verify EVERY slide has speaker notes
   - [ ] Module list slides: Note says "Auto-generated course navigation slide..."
   - [ ] Content slides: Note says "Source: slides\\marp\\<filename>.md"
+
+- [ ] **Markdown Bold Test**: Open PPTX and verify markdown emphasis survives in content placeholders
+  - [ ] `**bold**` text renders as actual bold font, not literal asterisks
+  - [ ] Bullets such as `- **Questions are always welcome — ask anytime!**` remain bold in the final PPTX
+  - [ ] Bold formatting still exists after running `finalize_pptx_local.ps1`
 
 - [ ] **Code Verification**: Confirm the following patterns exist in `generate_pptx.py`
   - [ ] Loop uses `enumerate(sections_cfg)` to get section index

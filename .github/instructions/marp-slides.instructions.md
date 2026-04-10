@@ -88,6 +88,12 @@ Detailed speaker notes for slide 2. Explain each bullet point, provide examples,
 ---
 ```
 
+## Markdown Formatting
+
+- Use `**double asterisks**` for text that must render bold in the final PPTX
+- Bold markdown must survive export in titles, body placeholders, bullet lists, and table cells
+- Canonical regression example: `- **Questions are always welcome — ask anytime!**` must render as a bold bullet without literal `**`
+
 ## Speaker Notes Requirements
 
 **MANDATORY**: Every slide MUST include comprehensive speaker notes using pandoc syntax.

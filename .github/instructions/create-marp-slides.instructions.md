@@ -133,6 +133,15 @@ Explain each goal briefly. Provenance ensures we can trace AI-assisted work back
 - Bold formatting works in headings, title placeholders, body text, bullet lists, and markdown table cells
 - Multiple bold sections on one line are supported
 - The PPTX generator (`scripts/generate_pptx.py`) automatically parses bold syntax, removes the literal markers, and applies `font.bold = True` to the appropriate text runs
+- Placeholder autofit/finalization must preserve that emphasis in the final PPTX; bold markdown in bullets must stay bold after export
+
+Regression example:
+
+```markdown
+- **Questions are always welcome — ask anytime!**
+```
+
+Expected PPTX rendering: the bullet text appears without literal `**` markers and the full phrase remains bold in the exported slide.
 
 ### Example slide with formatting
 

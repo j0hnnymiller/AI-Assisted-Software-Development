@@ -1,7 +1,6 @@
 import os
-import sys
-import yaml
-from pathlib import Path
+
+from phase1_merge_marp_decks import derive_manifest_output_path
 
 manifests = [
     "slides/manifests/vmc/aiasd-311-monday.vmc.manifest.md",
@@ -12,20 +11,18 @@ manifests = [
 ]
 
 for manifest_path in manifests:
-    # Derive output paths (strip .manifest.md, keep .vmc, add -draft)
-    basename = Path(manifest_path).stem  # Gets 'aiasd-311-monday.vmc'
-    merged_path = f"slides/merged/{basename}-draft.md"
-    pptx_path = f"slides/output/{basename}-draft.pptx"
-    
+    merged_path = str(derive_manifest_output_path(manifest_path, "slides/merged", ".md"))
+    pptx_path = str(derive_manifest_output_path(manifest_path, "slides/output", ".pptx"))
+
     print(f"\n{'='*60}")
     print(f"Processing: {manifest_path}")
     print(f"Merged:     {merged_path}")
     print(f"PPTX:       {pptx_path}")
     print(f"{'='*60}\n")
-    
+
     # For now, just validate paths
     if not os.path.exists(manifest_path):
         print(f"ERROR: Manifest not found: {manifest_path}")
         continue
-    
-    print(f"✓ Manifest exists")
+
+    print("✓ Manifest exists")

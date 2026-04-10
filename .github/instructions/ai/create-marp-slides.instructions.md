@@ -126,6 +126,9 @@ Duration ~00:XX
 - Capture exact prompt verbatim
 - Use ISO8601 timestamps
 - Use `::: column` in every exercise slide to create the left/right layout
+- Use `**double asterisks**` for text that must render bold in PPTX output
+- Assume bold markdown must survive placeholder autofit in body bullets, body text, titles, and table cells
+- Canonical regression example: `- **Questions are always welcome — ask anytime!**` must render as a bold bullet without literal asterisks
 
 **Prohibited**:
 

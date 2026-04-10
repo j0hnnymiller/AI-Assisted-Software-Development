@@ -17,6 +17,25 @@ MERGE_CHAR_REPLACEMENTS = {
     # Backticks are handled by normalize_backticks() to preserve code fences
 }
 
+
+def derive_manifest_output_path(manifest_path: Path | str, target_root: Path | str, extension: str) -> Path:
+    """Map a manifest to a generated artifact path, preserving subfolders under manifests/."""
+    manifest_path = Path(manifest_path)
+    target_root = Path(target_root)
+
+    if manifest_path.name.endswith('.manifest.md'):
+        manifest_stem = manifest_path.name[:-len('.manifest.md')]
+    else:
+        manifest_stem = manifest_path.stem
+
+    relative_subdir = Path()
+    manifest_parts = manifest_path.parts
+    if 'manifests' in manifest_parts:
+        manifests_index = manifest_parts.index('manifests')
+        relative_subdir = Path(*manifest_parts[manifests_index + 1:-1])
+
+    return target_root / relative_subdir / f'{manifest_stem}-draft{extension}'
+
 def normalize_backticks(body: str) -> str:
     """
     Replace single backticks with single quotes for inline code,
@@ -441,9 +460,7 @@ if __name__ == '__main__':
     else:
         manifest_path = sys.argv[1]
 
-    # Derive output filename
-    manifest_stem = Path(manifest_path).stem
-    output_path = f'slides/{manifest_stem}-draft.md'
+    output_path = str(derive_manifest_output_path(manifest_path, 'slides/merged', '.md'))
 
     if len(sys.argv) >= 3:
         output_path = sys.argv[2]

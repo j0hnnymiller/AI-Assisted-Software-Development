@@ -11,8 +11,8 @@ prompt_metadata:
   owner: johnmillerATcodemag-com
   version: 3.5.0
   created: 2026-03-12
-  updated: 2026-04-02
-  output_path: slides/<manifest-stem>-draft.md
+  updated: 2026-04-09
+  output_path: slides/merged/<manifest-subdir>/<manifest-stem>-draft.md
   output_format: markdown
   category: slides
   tags: [marp, slides, merge, presentation, markdown, pptx, python-pptx]
@@ -87,10 +87,12 @@ If an explicit mode is provided but is not one of the supported values, abort im
 
 After resolving the manifest path, derive these runtime paths automatically:
 
-- `Merged deck path`: strip `.yaml`, get basename, prepend `slides/merged/` and append `-draft.md`
+- `Merged deck path`: strip `.manifest.md`, preserve any subfolder under `slides/manifests/`, prepend `slides/merged/`, and append `-draft.md`
   (e.g. `slides/manifests/aiasd-311-tuesday.manifest.md` → `slides/merged/aiasd-311-tuesday-draft.md`)
-- `PPTX output path`: strip `.yaml`, get basename, prepend `slides/output/` and append `-draft.pptx`
+  (e.g. `slides/manifests/vmc/aiasd-311-tuesday.vmc.manifest.md` → `slides/merged/vmc/aiasd-311-tuesday.vmc-draft.md`)
+- `PPTX output path`: strip `.manifest.md`, preserve any subfolder under `slides/manifests/`, prepend `slides/output/`, and append `-draft.pptx`
   (e.g. `slides/manifests/aiasd-311-tuesday.manifest.md` → `slides/output/aiasd-311-tuesday-draft.pptx`)
+  (e.g. `slides/manifests/vmc/aiasd-311-tuesday.vmc.manifest.md` → `slides/output/vmc/aiasd-311-tuesday.vmc-draft.pptx`)
 
 Fixed path:
 
@@ -107,6 +109,7 @@ Front matter note:
 - `prompt_metadata.output_path` is a documentation pattern, not a fixed runtime destination.
 - The actual merged deck path must always be derived from the manifest path supplied in the invocation.
 - Example: `Manifest: slides/manifests/aiasd-311-tuesday.manifest.md` produces `slides/merged/aiasd-311-tuesday-draft.md`.
+- Example: `Manifest: slides/manifests/vmc/aiasd-311-tuesday.vmc.manifest.md` produces `slides/merged/vmc/aiasd-311-tuesday.vmc-draft.md`.
 
 > **🚫 CRITICAL — DO NOT EDIT MERGED FILES**:
 >
@@ -550,7 +553,8 @@ Run the PPTX script path (`scripts/generate_pptx.py`) to produce the PPTX output
 - Text wrapped in `**double asterisks**` is rendered with `font.bold = True`
 - Text outside bold markers appears as normal text
 - Multiple bold sections per line are supported
-- Works correctly with bulleted lists
+- Works correctly with titles, body placeholders, bulleted lists, and table cells
+- Placeholder pre-fit and finalization must preserve run-level emphasis; they must not flatten bold markdown back to normal text
 
 **Example transformations**:
 
@@ -561,6 +565,11 @@ Run the PPTX script path (`scripts/generate_pptx.py`) to produce the PPTX output
 | `Experience: **15+ years** in development` | Experience: **15+ years** (bold) in development     |
 
 This ensures that markdown bold syntax in source slides (e.g., `slides/marp/*.deck.md`) is properly rendered as visual bold formatting when viewed in PowerPoint, improving readability and emphasis.
+
+**Required verification example**:
+
+- Source: `- **Questions are always welcome — ask anytime!**`
+- Expected PPTX result: the visible bullet text is `Questions are always welcome — ask anytime!` and the corresponding text run remains bold in the generated PPTX
 
 ### Execution
 
@@ -606,6 +615,10 @@ Report any warnings (missing slide files) and confirm the output path on success
 > **Agent verification (Issue 5)**: Open the generated PPTX. For any source slide whose
 > `## heading` had no body content, confirm that slide uses the `Title Only` layout
 > (index `LAYOUT_TITLE_ONLY`), not `Title and Content`.
+>
+> **Agent verification (Issue 11)**: For any source slide containing markdown bold in body text or a bullet list,
+> confirm the generated PPTX preserves bold runs after placeholder autofit. Use the bullet
+> `- **Questions are always welcome — ask anytime!**` as a canonical regression check when available.
 
 ---
 
@@ -690,15 +703,16 @@ Validate-only mode must not emit merged markdown or PPTX artifacts.
 
 Run all checks below after the pipeline completes to confirm spec conformance.
 
-| #   | Issue                         | Check                                                                    | Pass condition                                                                            |
-| --- | ----------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| V1  | Source validation             | Phase 0 summary printed before the merged deck path is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output           |
-| V2  | Code-fence `---` preserved    | Merge a source file that contains `---` inside a fenced code block       | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path   |
-| V3  | Output file named correctly   | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem        |
-| V4  | PPTX generated                | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                  |
-| V5  | `Title Only` layout used      | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content`  |
-| V6  | Empty section logged          | YAML section with no `decks:` entries                                    | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase   |
-| V7  | Slide count reported          | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                            |
-| V8  | Validate-only stays read-only | Run with `Mode: validate-only`                                           | Validation summary and issues are reported, and no merged deck or PPTX file is written    |
-| V9  | PPTX lock preflight           | Before `generate_pptx.py`, check for `~$<output-filename>.pptx`          | If lock file exists, run stops with lock error and does not execute PPTX generation       |
-| V10 | Phase 3 finalize runs         | After Phase 2 succeeds, `finalize_pptx_local.ps1` is invoked             | Script reports updated/fallback frame counts; PPTX timestamp is newer than Phase 2 output |
+| #   | Issue                          | Check                                                                    | Pass condition                                                                            |
+| --- | ------------------------------ | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| V1  | Source validation              | Phase 0 summary printed before the merged deck path is written           | `Validation complete: N file(s) checked, M warning(s) found.` appears in output           |
+| V2  | Code-fence `---` preserved     | Merge a source file that contains `---` inside a fenced code block       | No unexpected extra slides; the embedded `---` appears verbatim in the merged deck path   |
+| V3  | Output file named correctly    | Inspect the merged deck path                                             | Filename matches `<course>-<format>-<day>-draft.md` derived from the manifest stem        |
+| V4  | PPTX generated                 | Run `python scripts/generate_pptx.py <manifest-path> <pptx-output-path>` | PPTX file created at the PPTX output path without errors                                  |
+| V5  | `Title Only` layout used       | Source file with `## heading` and no body content                        | PPTX slide uses `Title Only` layout (`LAYOUT_TITLE_ONLY` index), not `Title and Content`  |
+| V6  | Empty section logged           | YAML section with no `decks:` entries                                    | `INFO: Section '...' is empty — only module list slide added` printed during PPTX phase   |
+| V7  | Slide count reported           | Any successful merge run                                                 | Output includes `Merged deck: N slide(s) across M section(s).`                            |
+| V8  | Validate-only stays read-only  | Run with `Mode: validate-only`                                           | Validation summary and issues are reported, and no merged deck or PPTX file is written    |
+| V9  | PPTX lock preflight            | Before `generate_pptx.py`, check for `~$<output-filename>.pptx`          | If lock file exists, run stops with lock error and does not execute PPTX generation       |
+| V10 | Phase 3 finalize runs          | After Phase 2 succeeds, `finalize_pptx_local.ps1` is invoked             | Script reports updated/fallback frame counts; PPTX timestamp is newer than Phase 2 output |
+| V11 | Markdown bold survives autofit | Source slide contains `**bold**` in body text or bullets                 | Generated PPTX shows bold runs without literal `**`, including in content placeholders    |

@@ -10,8 +10,30 @@ from scripts.generate_pptx import (
     build_presentation,
     mark_slide_hidden,
     parse_slide,
+    populate_text_placeholder,
     split_marp_slides,
 )
+from scripts.phase1_merge_marp_decks import derive_manifest_output_path
+
+
+class ManifestOutputPathTests(unittest.TestCase):
+    def test_top_level_manifest_outputs_to_flat_generated_paths(self):
+        manifest_path = Path("slides/manifests/aiasd-311-monday.manifest.md")
+
+        merged_path = derive_manifest_output_path(manifest_path, "slides/merged", ".md")
+        pptx_path = derive_manifest_output_path(manifest_path, "slides/output", ".pptx")
+
+        self.assertEqual(Path("slides/merged/aiasd-311-monday-draft.md"), merged_path)
+        self.assertEqual(Path("slides/output/aiasd-311-monday-draft.pptx"), pptx_path)
+
+    def test_subfolder_manifest_preserves_relative_generated_subfolders(self):
+        manifest_path = Path("slides/manifests/vmc/aiasd-311-monday.vmc.manifest.md")
+
+        merged_path = derive_manifest_output_path(manifest_path, "slides/merged", ".md")
+        pptx_path = derive_manifest_output_path(manifest_path, "slides/output", ".pptx")
+
+        self.assertEqual(Path("slides/merged/vmc/aiasd-311-monday.vmc-draft.md"), merged_path)
+        self.assertEqual(Path("slides/output/vmc/aiasd-311-monday.vmc-draft.pptx"), pptx_path)
 
 
 class SplitMarpSlidesTests(unittest.TestCase):
@@ -115,6 +137,82 @@ Body text
         self.assertIn("Markdown Table Centering and Width", slide_titles)
         self.assertIn("Explicit Layout Table Branch", slide_titles)
         self.assertIn("Bold Formatting Branch", slide_titles)
+        self.assertIn("Dedicated Bold Title Slide", slide_titles)
+        self.assertIn("Dedicated Bold Placeholder Slide", slide_titles)
+
+    def test_regression_manifest_preserves_bold_in_title_subtitle_and_placeholder_content(self):
+        repo_root = Path(__file__).resolve().parent
+        manifest_path = repo_root / "slides" / "manifests" / "regression-test-01.manifest.md"
+
+        with TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "regression-test-01-draft.pptx"
+            build_presentation(manifest_path, output_path)
+
+            prs = Presentation(output_path)
+
+            centered_two_titles_slide = next(
+                slide
+                for slide in prs.slides
+                if slide.shapes.title and slide.shapes.title.text.strip() == "Bold Regression Coverage"
+            )
+            centered_title_paragraph = centered_two_titles_slide.shapes.title.text_frame.paragraphs[0]
+            centered_subtitle_shape = next(
+                shape for shape in centered_two_titles_slide.placeholders if shape.placeholder_format.idx == 1
+            )
+            centered_subtitle_paragraph = centered_subtitle_shape.text_frame.paragraphs[0]
+
+            self.assertEqual("Bold Regression Coverage", "".join(run.text for run in centered_title_paragraph.runs))
+            self.assertTrue(any(run.font.bold for run in centered_title_paragraph.runs if run.text))
+            self.assertEqual(
+                "Subtitle Placeholder Bold Coverage",
+                "".join(run.text for run in centered_subtitle_paragraph.runs),
+            )
+            self.assertTrue(any(run.font.bold for run in centered_subtitle_paragraph.runs if run.text))
+
+            explicit_title_slide = next(
+                slide
+                for slide in prs.slides
+                if slide.shapes.title and slide.shapes.title.text.strip() == "Dedicated Bold Title Slide"
+            )
+            explicit_title_paragraph = explicit_title_slide.shapes.title.text_frame.paragraphs[0]
+            explicit_subtitle_shape = next(
+                shape for shape in explicit_title_slide.placeholders if shape.placeholder_format.idx == 1
+            )
+            explicit_subtitle_paragraph = explicit_subtitle_shape.text_frame.paragraphs[0]
+
+            self.assertTrue(any(run.font.bold for run in explicit_title_paragraph.runs if run.text))
+            self.assertEqual(
+                "This subtitle placeholder contains bold subtitle text for regression coverage.",
+                "".join(run.text for run in explicit_subtitle_paragraph.runs),
+            )
+            self.assertIn(
+                "bold subtitle text",
+                [run.text for run in explicit_subtitle_paragraph.runs if run.font.bold],
+            )
+
+            content_slide = next(
+                slide
+                for slide in prs.slides
+                if slide.shapes.title and slide.shapes.title.text.strip() == "Dedicated Bold Placeholder Slide"
+            )
+            content_shape = next(
+                shape for shape in content_slide.shapes if getattr(shape, "has_text_frame", False) and shape != content_slide.shapes.title
+            )
+            content_title_paragraph = content_slide.shapes.title.text_frame.paragraphs[0]
+            body_paragraph = content_shape.text_frame.paragraphs[0]
+            bullet_paragraph = content_shape.text_frame.paragraphs[2]
+
+            self.assertTrue(any(run.font.bold for run in content_title_paragraph.runs if run.text))
+            self.assertEqual(
+                "This placeholder contains bold placeholder text in the body paragraph.",
+                "".join(run.text for run in body_paragraph.runs),
+            )
+            self.assertIn("bold placeholder text", [run.text for run in body_paragraph.runs if run.font.bold])
+            self.assertEqual(
+                "This bullet includes bold bullet text for placeholder coverage",
+                "".join(run.text for run in bullet_paragraph.runs),
+            )
+            self.assertIn("bold bullet text", [run.text for run in bullet_paragraph.runs if run.font.bold])
 
     def test_h3_body_lines_render_as_styled_subheadings(self):
         prs = Presentation()
@@ -246,6 +344,28 @@ Body text
             self.assertEqual("Bold Cell", "".join(run.text for run in paragraph.runs))
             self.assertTrue(paragraph.runs)
             self.assertTrue(any(run.font.bold for run in paragraph.runs if run.text))
+
+    def test_markdown_bold_in_body_bullet_survives_placeholder_prefit(self):
+        prs = Presentation()
+        slide = prs.slides.add_slide(prs.slide_layouts[1])
+        shape = slide.placeholders[1]
+
+        body = (
+            "- Ready to continue where we left off\n"
+            "- Today's session builds on what we've covered\n"
+            "- We're all in this together — participation welcome\n"
+            "- **Questions are always welcome — ask anytime!**"
+        )
+
+        populate_text_placeholder(shape, body)
+
+        paragraph = shape.text_frame.paragraphs[3]
+        self.assertEqual(
+            "Questions are always welcome — ask anytime!",
+            "".join(run.text for run in paragraph.runs),
+        )
+        self.assertTrue(paragraph.runs)
+        self.assertTrue(any(run.font.bold for run in paragraph.runs if run.text))
 
     def test_explicit_layout_table_still_renders_as_powerpoint_table(self):
         with TemporaryDirectory() as tmp_dir:

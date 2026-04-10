@@ -72,6 +72,8 @@ python .\scripts\generate_pptx.py slides\manifests\aiasd-311-monday.manifest.md 
 .\scripts\finalize_pptx_local.ps1 -Path slides\output\aiasd-311-monday-draft.pptx
 ```
 
+If a manifest lives in a subfolder under `slides/manifests/`, keep the same relative subfolder under `slides/merged/` and `slides/output/` for generated artifacts.
+
 ### Bash Script (Linux/Mac/WSL)
 
 **File:** `check_unmerged_branches.sh`
