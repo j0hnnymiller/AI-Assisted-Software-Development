@@ -248,6 +248,11 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Preserves the extracted workflow visual and adds speaker notes for presentation use in the course slide pipeline
   - Provenance: [Chat log](ai-logs/2026/03/26/convert-getting-started-checklist-20260326/conversation.md) | [Summary](ai-logs/2026/03/26/convert-getting-started-checklist-20260326/summary.md)
 
+- **GitHub Copilot Memory Feature** ([`slides/marp/copilot-memory-feature.deck.md`](slides/marp/copilot-memory-feature.deck.md))
+  - Marp deck explaining the Copilot memory feature, including user, session, and repository memory scopes
+  - Covers memory workflow, memory hygiene, and a slide-authoring example for practical application
+  - Provenance: [Chat log](ai-logs/2026/04/10/copilot-memory-feature-deck-20260410/conversation.md) | [Summary](ai-logs/2026/04/10/copilot-memory-feature-deck-20260410/summary.md)
+
 - **Vertical Slicing Architecture Introduction** ([`slides/marp/vertical-slicing-architecture-introduction.deck.md`](slides/marp/vertical-slicing-architecture-introduction.deck.md))
   - 7-slide Marp deck introducing feature-based architecture, layered versus slice-oriented structure, and the maintainability benefits of localized change
   - Covers developer experience improvements, team collaboration, testing strategy, and the introductory CQRS relationship
