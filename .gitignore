@@ -189,15 +189,12 @@ Desktop.ini
 *.swo
 *~
 
-obj
-~$*
+.clockwork.json
 
 # VTT files (except sample files)
 # Keep small sample files but ignore large recordings
 past-class-recordings/**/*.vtt
 !past-class-recordings/**/AI-Assisted*.vtt
-
-Labs/lab1-3-csharp/obj/
 
 Slides/output/_scan_tblstyles/
 Slides/output/_style_source/

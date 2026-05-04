@@ -14,7 +14,7 @@ Create specialized instruction file to guide AI assistants (GitHub Copilot, Chat
 
 ### Primary Deliverables
 
-1. **AI Vertical Slice Implementation Instructions** (`.github/instructions/ai-vertical-slice-implementation.instructions.md`)
+1. **AI Vertical Slice Implementation Instructions** (`.github/instructions/vertical-slice-implementation.instructions.md`)
    - Comprehensive AI-specific guidance for vertical slice code generation
    - 13 major sections with actionable rules and templates
    - Language-specific patterns for C#, TypeScript, Python, Java
@@ -113,9 +113,9 @@ Create specialized instruction file to guide AI assistants (GitHub Copilot, Chat
 
 | Artifact                                                                       | Type             | Purpose                                              |
 | ------------------------------------------------------------------------------ | ---------------- | ---------------------------------------------------- |
-| `.github/instructions/ai-vertical-slice-implementation.instructions.md`        | Instruction File | AI-specific guide for generating vertical slice code |
+| `.github/instructions/vertical-slice-implementation.instructions.md`           | Instruction File | AI-specific guide for generating vertical slice code |
 | `ai-logs/2025/10/22/ai-vertical-slice-implementation-20251022/conversation.md` | AI Log           | Complete conversation transcript for provenance      |
-| `ai-logs/2025/10/22/ai-vertical-slice-implementation-20251022/summary.md`      | Summary          | This session summary for resumability                |
+| `ai-logs/2025/10/22/ai-vertical-slice-implementation-20251022/summary.md`      | Summary          | This chat summary for resumability                |
 
 ## Lessons Learned
 
@@ -172,10 +172,10 @@ Create specialized instruction file to guide AI assistants (GitHub Copilot, Chat
 - Can improve prompts based on instruction structure
 - Can customize instructions for project needs
 
-## Session Metadata
+## Chat Metadata
 
 ```yaml
-session_id: ai-vertical-slice-implementation-20251022
+chat_id: ai-vertical-slice-implementation-20251022
 started: 2025-10-22T14:00:00Z
 ended: 2025-10-22T14:45:00Z
 total_duration: 00:45:00

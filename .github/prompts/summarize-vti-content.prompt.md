@@ -1,174 +1,141 @@
 ---
 name: summarize-vti-content
-description: Analyze VTI or VTT transcript files and generate a structured outline with section durations and content summary
+description: Analyze VTT (Video Text Track) files and generate structured outlines with section durations and key topics
+
+# Arguments
 arguments:
-  transcript_file:
+  vti_file:
     type: string
-    description: Path to the VTI (Video Training Index) or VTT (WebVTT) transcript file to analyze
-tags: ["documentation", "analysis", "transcript", "summary"]
+    description: Path to the VTT file to analyze (e.g., "past-class-recordings/2026-02/recording.vtt")
+
+# Tags
+tags: ["analysis", "video", "transcription", "documentation"]
+
+# AI Provenance Metadata
 ai_generated: true
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
-operator: "johnmillerATcodemag-com"
-chat_id: "create-vti-summarizer-20260217"
+operator: "github-copilot-assistant"
+chat_id: "create-vtt-summarizer-20260217"
 prompt: |
-  Create a prompt that takes a VTI filename as a parameter that creates an outline that summarizes the content presented. Include the duration of each section.
-started: "2026-02-17T18:36:14Z"
-ended: "2026-02-17T18:50:00Z"
+  Create a promptfile that can summarize VTT (Video Text Track) content files.
+  The prompt should accept a vti_file argument and generate an outline with section durations.
+started: "2026-02-17T20:20:00Z"
+ended: "2026-02-17T20:25:00Z"
 task_durations:
-  - task: "repository exploration"
-    duration: "00:08:00"
-  - task: "prompt design and creation"
-    duration: "00:06:00"
-total_duration: "00:14:00"
-ai_log: "ai-logs/2026/02/17/create-vti-summarizer-20260217/conversation.md"
-source: "johnmillerATcodemag-com"
+  - task: "design and implementation"
+    duration: "00:05:00"
+total_duration: "00:05:00"
+ai_log: "ai-logs/2026/02/17/create-vtt-summarizer-20260217/conversation.md"
+source: "github-copilot-assistant"
+owner: "Documentation Team"
+version: "1.0.0"
+created: "2026-02-17"
+updated: "2026-02-17"
 ---
 
-# Summarize VTI/VTT Content
+# VTT Content Summarizer
 
-Read and analyze the file at `{{transcript_file}}` and generate a comprehensive structured outline.
+Analyze the VTT (Video Text Track) file at `{{vti_file}}` and generate a comprehensive outline with timing information.
 
-## Your Task
+## Analysis Requirements
 
-1. **Read the file** from the provided path
-2. **Identify the format**:
-   - **VTT (WebVTT)**: Video caption format with timestamps (e.g., `00:00:12.340 --> 00:00:15.430`)
-   - **VTI (Video Training Index)**: Structured training content with section markers and durations
-3. **Extract structure**:
-   - Document title/overview
-   - Main sections and subsections (hierarchical)
-   - Duration information for each section
-   - Key points and topics covered
-4. **Generate output** in the format specified below
-5. **Create a markdown file**:
-   - Generate the output filename by replacing the transcript file extension with `-summary.md`
-   - Save the file in the same directory as the input transcript file
-   - Example: `transcript.vti` → `transcript-summary.md`
+1. **Parse VTT Structure**
+   - Read the VTT file format (WebVTT)
+   - Extract timestamps and associated text
+   - Identify speaker changes (if indicated)
+   - Note any cue identifiers or metadata
+
+2. **Content Segmentation**
+   - Group related content into logical sections
+   - Identify topic transitions
+   - Detect major themes or discussion points
+   - Note any Q&A segments or breaks
+
+3. **Timing Analysis**
+   - Calculate duration of each section
+   - Identify the total video length
+   - Note significant pauses or gaps
+   - Track pacing patterns
 
 ## Output Format
 
-Produce a well-structured Markdown outline:
+Generate a structured outline with the following sections:
 
-```markdown
-# [Document Title]
+### Executive Summary
+- Total video duration
+- Number of major topics covered
+- Overall content type (lecture, discussion, demo, etc.)
+- Key takeaways (3-5 bullet points)
 
-## Overview
-- **Total Duration**: [HH:MM:SS or MM:SS]
-- **Sections**: [count]
-- **Format**: [VTT/VTI]
+### Detailed Outline
 
+For each section, provide:
+
+```
+## Section N: [Topic Title] (MM:SS - MM:SS, Duration: MM:SS)
+
+**Key Points:**
+- Main point 1
+- Main point 2
+- Main point 3
+
+**Notable Quotes or Examples:**
+- Relevant excerpts
+
+**Transitions:**
+- How this section connects to the next
+```
+
+### Timeline Reference
+
+Provide a quick-reference timeline:
+
+```
+00:00 - 05:30 | Introduction and Setup
+05:31 - 15:45 | Topic 1: [Name]
+15:46 - 28:20 | Topic 2: [Name]
+...
+```
+
+### Content Analysis
+
+- **Difficulty Level**: Beginner/Intermediate/Advanced
+- **Primary Topics**: List of main subjects covered
+- **Prerequisites Mentioned**: Any assumed knowledge
+- **Resources Referenced**: URLs, books, tools mentioned
+- **Action Items**: Any homework or follow-up activities suggested
+
+## Processing Instructions
+
+1. Read the entire VTT file first to understand overall structure
+2. Identify natural breaks and topic shifts
+3. Group timestamps into logical sections (typically 5-15 minutes each)
+4. Extract key vocabulary and technical terms
+5. Note any visual demonstrations mentioned in the transcript
+6. Flag any audio quality issues noted in the text
+7. Identify questions from participants (if present)
+
+## Quality Checks
+
+- Ensure all sections have accurate timestamps
+- Verify total duration matches file length
+- Check that no content gaps exist
+- Confirm logical flow between sections
+- Validate that key points accurately represent the content
+
+## Output File
+
+Save the analysis as a markdown file following this naming convention:
+- Original file: `[name].vtt`
+- Output file: `[name]-summary.md`
+- Location: Same directory as source VTT file
+
+Include metadata at the top:
+```yaml
 ---
-
-## Section 1: [Section Name] (Duration: [HH:MM:SS])
-
-### Key Topics
-- [Topic 1]
-- [Topic 2]
-- [Topic 3]
-
-### Subsections (if present)
-
-### Subsection 1.1: [Name] (Duration: [MM:SS])
-- [Key point 1]
-- [Key point 2]
-
-### Subsection 1.2: [Name] (Duration: [MM:SS])
-- [Key point 1]
-- [Key point 2]
-
+source_file: {{vti_file}}
+analyzed_date: [Current Date]
+total_duration: [HH:MM:SS]
+section_count: [Number]
 ---
-
-## Section 2: [Section Name] (Duration: [HH:MM:SS])
-
-[... continue for all sections ...]
-
----
-
-## Summary Statistics
-- **Total sections**: [count]
-- **Average section length**: [MM:SS]
-- **Longest section**: [Section name] - [duration]
-- **Shortest section**: [Section name] - [duration]
 ```
-
-## Processing Guidelines
-
-### For VTT Files (WebVTT format)
-- Parse timestamps to identify time spans
-- Group content by logical topics based on content similarity
-- Calculate durations from timestamp differences
-- Extract speaker names if present (after timestamps)
-- Preserve hierarchical relationships based on content patterns
-
-### For VTI Files (Training Index format)
-- Identify section markers (##, headers, or explicit section labels)
-- Extract explicit duration information (e.g., "Duration: 8:30", "(12:15)", "45:00")
-- Maintain document hierarchy as specified
-- Extract topic lists and bullet points
-
-### Duration Format Handling
-Support multiple duration formats:
-- **HH:MM:SS** (e.g., 01:23:45)
-- **MM:SS** (e.g., 12:30)
-- **Minutes** (e.g., "45 minutes", "8:30")
-- **Seconds** (e.g., "90 seconds")
-
-If duration is missing or cannot be determined:
-- Note as `Duration: Not specified`
-- Calculate from timestamps if VTT format
-- Do not fabricate duration data
-
-## Quality Requirements
-
-- ✅ Preserve all hierarchical structure from source
-- ✅ Include all major topics and subtopics
-- ✅ Calculate accurate durations where possible
-- ✅ Use consistent formatting throughout
-- ✅ Provide complete summary statistics
-- ✅ Handle missing duration data gracefully
-- ✅ Identify and handle both VTT and VTI formats correctly
-
-## Example Recognition Patterns
-
-### VTT Format Recognition
-```
-WEBVTT
-
-00:00:12.340 --> 00:00:15.430
-Hello and welcome to this training session.
-
-00:00:15.430 --> 00:00:20.120
-Today we'll cover GitHub Copilot features.
-```
-
-### VTI Format Recognition
-```
-## Section 1: Introduction (8:30)
-
-### What are Custom Agents?
-- Custom agents extend GitHub Copilot
-- Available across multiple environments
-```
-
-## File Creation Instructions
-
-1. **Determine output path**:
-   - Extract the directory path from `{{transcript_file}}`
-   - Extract the base filename (without extension) from `{{transcript_file}}`
-   - Create output filename: `[base-filename]-summary.md`
-   - Full output path: `[directory]/[base-filename]-summary.md`
-
-2. **Create the markdown file**:
-   - Use the `create_file` tool to save the generated outline
-   - Save to the calculated output path
-   - Ensure proper markdown formatting
-
-3. **Confirm completion**:
-   - Report the full path of the created summary file
-   - Include a brief confirmation message
-
-**Example Path Transformation**:
-- Input: `c:\git\AIASD\past-class-recordings\2026-02\session1.vti`
-- Output: `c:\git\AIASD\past-class-recordings\2026-02\session1-summary.md`
-
-Parse the file, generate the structured outline, and create the markdown file following these guidelines.

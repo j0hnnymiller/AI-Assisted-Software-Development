@@ -10,7 +10,7 @@ prompt_metadata:
   version: "1.0.0"
   created: "2025-02-05"
   updated: "2025-02-05"
-  output_path: .github/copilot/Promptfiles/create-prompt-file-instructions-file.prompt.md
+  output_path: .github/prompts/create-prompt-file-instructions-file.prompt.md
   category: meta-documentation
   tags: [meta-prompts, documentation, prompt-engineering]
   output_format: markdown
@@ -22,7 +22,7 @@ Create prompt for generating Markdown guidelines to help create effective, well-
 
 ## Output Target
 
-`.github/copilot/Promptfiles/create-prompt-file-instructions-file.prompt.md` → creates → `.github/instructions/prompt-file.instructions.md`
+`.github/prompts/create-prompt-file-instructions-file.prompt.md` → creates → `.github/instructions/prompt-file.instructions.md`
 
 ## Generated Prompt Must Include:
 

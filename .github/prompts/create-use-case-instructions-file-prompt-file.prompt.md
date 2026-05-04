@@ -10,7 +10,7 @@ prompt_metadata:
   version: "1.0.0"
   created: "2025-02-05"
   updated: "2025-02-05"
-  output_path: .github/copilot/Promptfiles/create-use-case-instructions.prompt.md
+  output_path: .github/prompts/create-use-case-instructions.prompt.md
   category: meta-documentation
   tags: [meta-prompts, use-cases, documentation]
   output_format: markdown
@@ -22,7 +22,7 @@ Create prompt that generates use case authoring guidelines.
 
 ## Output Target
 
-`.github/copilot/Promptfiles/create-use-case-instructions.prompt.md` → creates → `.github/instructions/create-use-case.instructions.md`
+`.github/prompts/create-use-case-instructions.prompt.md` → creates → `.github/instructions/create-use-case.instructions.md`
 
 ## Generated Prompt Specs:
 

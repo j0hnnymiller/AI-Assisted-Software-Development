@@ -27,6 +27,7 @@ This directory contains standardized AI prompts for various development and anal
 | [`create-use-case-instructions.prompt.md`](create-use-case-instructions.prompt.md)                     | Use Case Instructions Generator | Guidelines for use case documentation    |
 | [`derive-use-cases-from-conceptual-model.prompt.md`](derive-use-cases-from-conceptual-model.prompt.md) | Use Case Derivation             | Extract use cases from conceptual models |
 | [`generate-instructions.prompt.md`](generate-instructions.prompt.md)                                   | Instruction File Generator      | Comprehensive instruction files          |
+| [`summarize-vti-content.prompt.md`](summarize-vti-content.prompt.md)                                   | VTI Content Summarizer          | Outline with section durations from VTI files |
 
 ### Quality & Compliance
 
@@ -40,14 +41,20 @@ This directory contains standardized AI prompts for various development and anal
 | ------------------------------------------------------------------------ | ------------------------ | ------------------------------------------ |
 | [`update-application-c4-diagrams.md`](update-application-c4-diagrams.md) | C4 Architecture Diagrams | Updated C4 model diagrams for applications |
 
-### Slides & Presentation Pipeline
+#### Solution Architect Specialized Prompts
 
-| File                                                                                     | Purpose                             | Output                                         |
-| ---------------------------------------------------------------------------------------- | ----------------------------------- | ---------------------------------------------- |
-| [`merge-marp-decks.prompt.md`](merge-marp-decks.prompt.md)                               | Single Manifest Deck Merge Pipeline | One merged Marp deck and one PPTX per manifest |
-| [`run-aiasd-weekly-slide-pipeline.prompt.md`](run-aiasd-weekly-slide-pipeline.prompt.md) | Weekly AIASD Batch Deck Pipeline    | Monday-Friday merged decks and PPTX outputs    |
-
-Current manifest schema note: day manifests list source deck files under `sections[].decks`.
+| File                                                                                                 | Purpose                                 | Output                                              |
+| ---------------------------------------------------------------------------------------------------- | --------------------------------------- | --------------------------------------------------- |
+| [`solution-architect/architecture-design.prompt.md`](solution-architect/architecture-design.prompt.md)         | System Architecture Design              | Comprehensive architectural blueprints              |
+| [`solution-architect/compliance-check.prompt.md`](solution-architect/compliance-check.prompt.md)               | Compliance Validation                   | Standards and regulatory compliance analysis        |
+| [`solution-architect/integration-design.prompt.md`](solution-architect/integration-design.prompt.md)           | System Integration and APIs             | Integration strategies and API contracts            |
+| [`solution-architect/migration-strategy.prompt.md`](solution-architect/migration-strategy.prompt.md)           | System Migration Planning               | Migration and modernization plans                   |
+| [`solution-architect/pattern-analysis.prompt.md`](solution-architect/pattern-analysis.prompt.md)               | Architectural Pattern Analysis          | Pattern recommendations with detailed justification |
+| [`solution-architect/performance-analysis.prompt.md`](solution-architect/performance-analysis.prompt.md)       | Performance Analysis                    | Performance characteristics and optimization plans  |
+| [`solution-architect/risk-assessment.prompt.md`](solution-architect/risk-assessment.prompt.md)                 | Architectural Risk Assessment           | Risk identification and mitigation strategies       |
+| [`solution-architect/scalability-planning.prompt.md`](solution-architect/scalability-planning.prompt.md)       | Scalability Planning                    | Scalability strategies and capacity plans           |
+| [`solution-architect/security-architecture.prompt.md`](solution-architect/security-architecture.prompt.md)     | Security Architecture                   | Security controls and threat mitigation             |
+| [`solution-architect/technology-evaluation.prompt.md`](solution-architect/technology-evaluation.prompt.md)     | Technology Evaluation                   | Technology assessment and selection guidance        |
 
 ## Meta Prompts
 

@@ -64,169 +64,149 @@ This repository enforces provenance and logging for any AI-assisted outputs (cod
 ### Guidance & Instructions
 
 - [`.github/instructions/ai-assisted-output.instructions.md`](.github/instructions/ai-assisted-output.instructions.md) — How to generate AI-assisted outputs with required metadata, logging, and CI enforcement
-- [`.github/instructions/ai-business-rules-to-slices.instructions.md`](.github/instructions/ai-business-rules-to-slices.instructions.md) — **AI Assistants**: Explicit procedures for analyzing business rules, extracting use cases, and designing vertical slices ([chat log](ai-logs/2025/10/22/business-rules-vertical-slices-20251022/conversation.md))
-- [`.github/instructions/ai-vertical-slice-implementation.instructions.md`](.github/instructions/ai-vertical-slice-implementation.instructions.md) — **AI Assistants**: Comprehensive guide for generating vertical slice code with rules, templates, and validation checklists ([chat log](ai-logs/2025/10/22/ai-vertical-slice-implementation-20251022/conversation.md))
+- [`.github/instructions/business-rules-to-slices.instructions.md`](.github/instructions/business-rules-to-slices.instructions.md) — **AI Assistants**: Explicit procedures for analyzing business rules, extracting use cases, and designing vertical slices ([chat log](ai-logs/2025/10/22/business-rules-vertical-slices-20251022/conversation.md))
+- [`.github/instructions/vertical-slice.instructions.md`](.github/instructions/vertical-slice.instructions.md) — **AI Assistants**: Comprehensive guide for generating vertical slice code with rules, templates, and validation checklists ([chat log](ai-logs/2025/10/22/ai-vertical-slice-implementation-20251022/conversation.md))
 - [`.github/instructions/business-rules-to-vertical-slices.instructions.md`](.github/instructions/business-rules-to-vertical-slices.instructions.md) — **Developers**: Guide for analyzing business requirements, extracting rules, and designing implementable vertical slices ([chat log](ai-logs/2025/10/22/business-rules-vertical-slices-20251022/conversation.md))
 - [`.github/instructions/copilot-instructions.md`](.github/instructions/copilot-instructions.md) — **GitHub Copilot Users Start Here** - Comprehensive Copilot-specific guidance for model format, conversation logging, and quality standards ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
-- [`.github/instructions/create-chatmode.instructions.md`](.github/instructions/create-chatmode.instructions.md) — Comprehensive authoring guidelines for creating custom GitHub Copilot chat modes ([chat log](ai-logs/2025/10/21/create-chatmode-instructions-20251021/conversation.md))
+- [`.github/instructions/github-cli.instructions.md`](.github/instructions/github-cli.instructions.md) — Comprehensive guidance for using GitHub CLI effectively in development workflows, including authentication, repository operations, PR management, and automation ([chat log](ai-logs/2026/02/06/github-cli-instructions-20260206/conversation.md))
+- [`.github/instructions/cqrs-architecture.instructions.md`](.github/instructions/cqrs-architecture.instructions.md) — CQRS architecture guidance for command/query separation, consistency, and implementation checklists ([chat log](ai-logs/2026/02/07/cqrs-architecture-instructions-20260207/conversation.md))
+- [`.github/instructions/chatmode-file.instructions.md`](.github/instructions/chatmode-file.instructions.md) — Comprehensive authoring guidelines for creating custom GitHub Copilot chat modes ([chat log](ai-logs/2025/10/21/create-chatmode-instructions-20251021/conversation.md))
 - [`.github/instructions/create-prompt.instructions.md`](.github/instructions/create-prompt.instructions.md) — Comprehensive guidelines for authoring effective repository prompts ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
-- [`.github/instructions/instruction-prompt.instructions.md`](.github/instructions/instruction-prompt.instructions.md) — Requirements for prompts that generate instruction files ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
+- [`.github/instructions/instruction-prompt-files.instructions.md`](.github/instructions/instruction-prompt-files.instructions.md) — Requirements for creating prompts that generate instruction files ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
 - [`.github/instructions/vertical-slice-architecture.instructions.md`](.github/instructions/vertical-slice-architecture.instructions.md) — Comprehensive guide for implementing vertical slice architecture with feature-centric code organization ([chat log](ai-logs/2025/10/22/vertical-slice-instructions-20251022/conversation.md))
 
 ### Custom GitHub Copilot Chat Modes
 
 Custom chat modes are specialized AI assistants that extend GitHub Copilot's capabilities for specific domains and workflows. Activate with `@<modename>` in GitHub Copilot chat.
 
-- [`.github/chatmodes/DocumentationUpdater.chatmode.md`](.github/chatmodes/DocumentationUpdater.chatmode.md) — Documentation maintenance, accuracy verification, and continuous improvement ([chat log](ai-logs/2025/10/22/create-documentation-updater-chatmode-20251022/conversation.md))
-- [`.github/chatmodes/DocDesignArchitect.chatmode.md`](.github/chatmodes/DocDesignArchitect.chatmode.md) — Technical documentation, diagramming with Mermaid, and readability improvements
-- [`.github/chatmodes/SecurityAnalyzer.chatmode.md`](.github/chatmodes/SecurityAnalyzer.chatmode.md) — Code security analysis, vulnerability detection, and automated issue creation
+#### Role-Based Chat Modes (Generated from Personas)
+
+- [`.github/chatmodes/product-manager.chatmode.md`](.github/chatmodes/product-manager.chatmode.md) — Requirements translation, stakeholder communication, and business alignment for product management workflows
+- [`.github/chatmodes/solution-architect.chatmode.md`](.github/chatmodes/solution-architect.chatmode.md) — System design, architecture patterns, and technology evaluation for enterprise solutions
+- [`.github/chatmodes/senior-developer.chatmode.md`](.github/chatmodes/senior-developer.chatmode.md) — Advanced code generation, debugging expertise, performance optimization, and technical mentorship
+- [`.github/chatmodes/technical-writer.chatmode.md`](.github/chatmodes/technical-writer.chatmode.md) — Documentation creation, content organization, and multi-format publishing for user-focused technical content
+- [`.github/chatmodes/security-reviewer.chatmode.md`](.github/chatmodes/security-reviewer.chatmode.md) — Comprehensive security analysis, vulnerability detection, and compliance validation for secure systems
+- [`.github/chatmodes/devops-engineer.chatmode.md`](.github/chatmodes/devops-engineer.chatmode.md) — Infrastructure automation, CI/CD pipeline optimization, and cloud resource management
+- [`.github/chatmodes/devtest-engineer.chatmode.md`](.github/chatmodes/devtest-engineer.chatmode.md) — Test automation, quality assurance, and comprehensive performance testing strategies
+- [`.github/chatmodes/site-reliability-engineer.chatmode.md`](.github/chatmodes/site-reliability-engineer.chatmode.md) — System reliability, incident response, performance monitoring, and service level management
+
+#### Utility Chat Modes
+
+- [`.github/chatmodes/technical-writer.chatmode.md`](.github/chatmodes/technical-writer.chatmode.md) — Documentation maintenance, accuracy verification, and continuous improvement ([chat log](ai-logs/2025/10/22/create-documentation-updater-chatmode-20251022/conversation.md))
+- [`.github/chatmodes/documentation-visualizer.chatmode.md`](.github/chatmodes/documentation-visualizer.chatmode.md) — Technical documentation, diagramming with Mermaid, and readability improvements
+- [`.github/chatmodes/security-expert.chatmode.md`](.github/chatmodes/security-expert.chatmode.md) — Code security analysis, vulnerability detection, and automated issue creation
 - [`.github/chatmodes/codebase-explorer.chatmode.md`](.github/chatmodes/codebase-explorer.chatmode.md) — Rapid codebase understanding and evaluation
-- [`.github/chatmodes/GitFlowStrategist.chatmode.md`](.github/chatmodes/GitFlowStrategist.chatmode.md) — Branching policies, merge style enforcement, and CI/CD hygiene
+- [`.github/chatmodes/git-expert.chatmode.md`](.github/chatmodes/git-expert.chatmode.md) — Branching policies, merge style enforcement, and CI/CD hygiene
+
+### Custom GitHub Copilot Agents
+
+- [`.github/agents/product-manager.agent.md`](.github/agents/product-manager.agent.md) — Product strategy, requirements analysis, and stakeholder alignment ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
+- [`.github/agents/solution-architect.agent.md`](.github/agents/solution-architect.agent.md) — System design, architecture patterns, and decision support ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
+- [`.github/agents/senior-developer.agent.md`](.github/agents/senior-developer.agent.md) — Code quality, best practices, and implementation guidance ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
+- [`.github/agents/technical-writer.agent.md`](.github/agents/technical-writer.agent.md) — Documentation, API references, and user guidance ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
+- [`.github/agents/security-reviewer.agent.md`](.github/agents/security-reviewer.agent.md) — Security analysis, vulnerability detection, and compliance review ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
+- [`.github/agents/devops-engineer.agent.md`](.github/agents/devops-engineer.agent.md) — CI/CD, infrastructure automation, and deployment strategy ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
+- [`.github/agents/devtest-engineer.agent.md`](.github/agents/devtest-engineer.agent.md) — Test automation, QA strategy, and coverage guidance ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
+- [`.github/agents/sre-engineer.agent.md`](.github/agents/sre-engineer.agent.md) — Site reliability, monitoring, and incident response ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
 
 ### Meta-Prompts (Prompt Generators)
 
-- [`.github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md`](.github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md) — Generates new instruction-generating prompts with AI provenance built-in ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
+- [`.github/prompts/meta/create-instruction-files-prompt-file.prompt.md`](.github/prompts/meta/create-instruction-files-prompt-file.prompt.md) — Generates new instruction-generating prompts with AI provenance built-in ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
 
 ### Instruction-Generating Prompts
 
-- [`.github/copilot/Promptfiles/create-chatmode-instructions.prompt.md`](.github/copilot/Promptfiles/create-chatmode-instructions.prompt.md) — Generates comprehensive authoring guidelines for creating custom GitHub Copilot chat modes
+- [`.github/prompts/create-chatmode-instructions-file.prompt.md`](.github/prompts/create-chatmode-instructions-file.prompt.md) — Generates comprehensive authoring guidelines for creating custom GitHub Copilot chat modes
+- [`.github/prompts/merge-marp-decks.prompt.md`](.github/prompts/merge-marp-decks.prompt.md) — Merges individual Marp slide decks from `slides/marp/` into a single combined presentation ([chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md))
 
 ### Notable Artifacts
 
-- **Slide Master Agent** ([`.github/agents/slide-master.agent.md`](.github/agents/slide-master.agent.md))
-  - Workspace custom agent specialized in PPTX files, PowerPoint templates, Marp pipelines, and Pandoc-adjacent slide workflows
-  - Routes slide automation through the `/merge-marp-decks` and `/finalize-pptx-local` prompt commands for repeatable merge, export, and local cleanup tasks
-  - Provenance: [Chat log](ai-logs/2026/03/28/slide-master-agent-20260328/conversation.md) | [Summary](ai-logs/2026/03/28/slide-master-agent-20260328/summary.md)
+- **VTT Content Summarizer Promptfile** ([`.github/prompts/summarize-vti-content.prompt.md`](.github/prompts/summarize-vti-content.prompt.md))
+  - Analyzes VTT (Video Text Track) files from class recordings and generates structured summaries
+  - Extracts timing information, section breakdowns, key topics, and action items
+  - Includes sample files: [VTT input](past-class-recordings/2026-02/AI-Assisted%20Software%20Development%20with%20GitHub%20Copilot%20(Mon%20Afternoon).vtt) | [Generated summary](past-class-recordings/2026-02/AI-Assisted%20Software%20Development%20with%20GitHub%20Copilot%20(Mon%20Afternoon)-summary.md)
+  - Documentation: [Usage Guide](past-class-recordings/USAGE.md) | [Live Demo](past-class-recordings/DEMO.md)
+  - Provenance: [Chat log](ai-logs/2026/02/17/create-vtt-summarizer-20260217/conversation.md)
 
-- **Finalize PPTX Local Prompt** ([`.github/prompts/finalize-pptx-local.prompt.md`](.github/prompts/finalize-pptx-local.prompt.md))
-  - Prompt wrapper for `scripts/finalize_pptx_local.ps1` that finalizes a generated PPTX in place or to a separate output path using local PowerPoint COM automation
-  - Intended for post-export cleanup when overflowing text frames or table cells need shrink-to-fit handling before delivery
-  - Provenance: [Chat log](ai-logs/2026/03/28/slide-master-agent-20260328/conversation.md) | [Summary](ai-logs/2026/03/28/slide-master-agent-20260328/summary.md)
-
-- **Commit Workspace Changes in Logical Groups Prompt** ([`.github/prompts/commit-workspace-changes-logical-groups.prompt.md`](.github/prompts/commit-workspace-changes-logical-groups.prompt.md))
-  - Reusable operational prompt that inspects workspace diffs, creates intent-based commit groupings, stages each group safely, and emits focused commit messages
-  - Includes guardrails for non-destructive Git usage, staged-file validation steps, and a standardized completion report format
-  - Provenance: [Chat log](ai-logs/2026/03/24/commit-workspace-changes-logical-groups-20260324/conversation.md) | [Summary](ai-logs/2026/03/24/commit-workspace-changes-logical-groups-20260324/summary.md)
-
-- **Managing Instruction Files & Context Windows** ([`slides/marp/managing-instruction-files-context-windows.deck.md`](slides/marp/managing-instruction-files-context-windows.deck.md))
-  - 7-slide Marp deck covering instruction sharing strategy, scoped application patterns, context monitoring, and token tracking
-  - Includes an operational workflow blueprint and implementation checklist
-  - Provenance: [Chat log](ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/managing-instruction-files-context-windows-20260317/summary.md)
-
-- **Exercise: Technology Inventory & Instruction Generation** ([`slides/marp/exercise/exercise-technology-inventory-instruction-generation.deck.md`](slides/marp/exercise/exercise-technology-inventory-instruction-generation.deck.md))
-  - Exercise slide covering technology inventory creation, concurrent background sessions, simultaneous instruction generation, and session management workflows
-  - Template-aligned with objectives, activities, success criteria, and facilitator notes
-  - Provenance: [Chat log](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/exercise-technology-inventory-instruction-generation-20260317/summary.md)
-
-- **Exercise: Creating Prompt Files** ([`slides/marp/exercise/exercise-creating-prompt-files.deck.md`](slides/marp/exercise/exercise-creating-prompt-files.deck.md))
-  - Exercise slide covering baseline prompt execution, guided rerun with instruction files, and structured comparison of the resulting outputs
-  - Emphasizes prompt structure, context isolation, reproducibility, and the impact of instruction files on output quality
-  - Provenance: [Chat log](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/exercise-creating-prompt-files-20260319/summary.md)
-
-- **Exercise: Create, Test, and Use a Local MCP Server** ([`slides/marp/exercise/exercise-mcp-server-create-test-use.deck.md`](slides/marp/exercise/exercise-mcp-server-create-test-use.deck.md))
-  - Hands-on exercise slide guiding students through building a PowerShell MCP server, validating it with an end-to-end test script, and invoking it through Copilot
-  - Covers MCP JSON-RPC method flow (`initialize`, `tools/list`, `tools/call`), smoke-test validation, and local `.mcp.json` integration
-  - Provenance: [Chat log](ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-mcp-server-create-test-use-20260321/summary.md)
-
-- **Exercise: Create and Use a Custom Agent** ([`slides/marp/exercise/exercise-create-and-use-custom-agent.deck.md`](slides/marp/exercise/exercise-create-and-use-custom-agent.deck.md))
-  - Hands-on exercise slide guiding students through creating a repository-scoped custom agent, refining role boundaries, and running it in Copilot Chat
-  - Covers agent file structure, tool-scope decisions, and practical output validation through a targeted prompt
-  - Provenance: [Chat log](ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-create-and-use-custom-agent-20260321/summary.md)
-
-- **VS Code Copilot Agents Overview** ([`slides/marp/_vscode-copilot-agents-overview.deck.md`](slides/marp/_vscode-copilot-agents-overview.deck.md))
-  - Multi-slide Marp deck covering the agent model in VS Code, agent types, local versus cloud workflows, and practical task selection guidance
-  - Explains how Copilot agents differ from inline suggestions and when to use interactive, background, cloud, or third-party agent flows
+- **VS Code Copilot Agents Overview Slides** ([`slides/marp/vscode-copilot-agents-overview.deck.md`](slides/marp/vscode-copilot-agents-overview.deck.md))
+  - Comprehensive Marp slide deck covering VS Code Copilot Agents ecosystem with interactive workflows
+  - 12 slides with detailed speaker notes covering local, background, cloud, and third-party agents
+  - Includes decision matrices, hand-off workflows, and practical implementation guidance
   - Provenance: [Chat log](ai-logs/2026/02/06/vscode-agents-slides-20260206/conversation.md) | [Summary](ai-logs/2026/02/06/vscode-agents-slides-20260206/summary.md)
 
-- **Exercise: Create and Use a Custom Skill** ([`slides/marp/exercise/exercise-create-and-use-custom-skill.deck.md`](slides/marp/exercise/exercise-create-and-use-custom-skill.deck.md))
-  - Hands-on exercise slide guiding students through creating a repository skill, refining trigger phrases, and using it with a matching Copilot prompt
-  - Covers `.github/skills/<name>/SKILL.md`, description-driven relevance matching, and procedural output design for repeatable slide review workflows
-  - Provenance: [Chat log](ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/exercise-create-and-use-custom-skill-20260321/summary.md)
+- **GitHub Worktrees Guide Slides** ([`slides/marp/github-worktrees-guide.deck.md`](slides/marp/github-worktrees-guide.deck.md))
+  - Comprehensive Marp slide deck teaching parallel development with Git worktrees
+  - 12 slides covering introduction, essential commands, practical workflows, hands-on exercises, and best practices
+  - Includes detailed speaker notes, troubleshooting guidance, and resources for continued learning
+  - Provenance: [Chat log](ai-logs/2026/02/06/github-worktrees-slides-20260206/conversation.md) | [Summary](ai-logs/2026/02/06/github-worktrees-slides-20260206/summary.md)
 
-- **Creating Instruction Files from Prompts** ([`slides/marp/creating-instruction-files-from-prompts.deck.md`](slides/marp/creating-instruction-files-from-prompts.deck.md))
-  - 7-slide Marp deck covering prompt execution, generated instruction review, inference as a drafting accelerator, and prompt-first refinement strategy
-  - Emphasizes regenerating from the prompt to preserve source control history, reproducibility, and provenance quality
-  - Provenance: [Chat log](ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/conversation.md) | [Summary](ai-logs/2026/03/20/creating-instruction-files-from-prompts-20260320/summary.md)
+- **Creating Custom Agents Slides** ([`slides/marp/creating-custom-agents.deck.md`](slides/marp/creating-custom-agents.deck.md))
+  - Comprehensive Marp slide deck teaching how to create specialized GitHub Copilot custom agents
+  - 12 slides covering overview, creation workflows across platforms (GitHub, VS Code, JetBrains, Eclipse, Xcode), configuration, examples, usage, and best practices
+  - Includes extensive speaker notes with timing guidance, delivery instructions, audience interaction points, and Q&A preparation
+  - Provenance: [Chat log](ai-logs/2026/02/12/create-custom-agents-marp-20260212/conversation.md) | [Summary](ai-logs/2026/02/12/create-custom-agents-marp-20260212/summary.md)
 
-- **Technology Stack Instruction Files** ([`slides/marp/technology-stack-instruction-files.deck.md`](slides/marp/technology-stack-instruction-files.deck.md))
-  - 7-slide Marp deck covering requirements-based instruction generation, review checklists, and multi-model evaluation for HTML5, CSS3, and JavaScript guidance
-  - Explains how teams draft standards quickly, critique them systematically, and use multiple models to improve quality during the foundation phase
-  - Provenance: [Chat log](ai-logs/2026/03/21/technology-stack-instruction-files-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/technology-stack-instruction-files-20260321/summary.md)
+- **Code Explanation and Analysis Slides** ([`slides/marp/code-explanation-and-analysis.deck.md`](slides/marp/code-explanation-and-analysis.deck.md))
+  - Marp slide deck for Section 10 of the AI-Assisted Software Development course covering code explanation and test coverage gap analysis
+  - 11 slides covering inline chat (Ctrl+I), right-click explain, test code understanding, coverage report generation (calculator service example), gap identification, prioritized implementation plans, and hands-on exercises
+  - Includes comprehensive speaker notes with timing guidance, live demo instructions, audience interaction points, and exercise facilitation tips
+  - Provenance: [Chat log](ai-logs/2026/03/18/code-explanation-analysis-marp-20260318/conversation.md)
+- **Merge Marp Decks Promptfile** ([`.github/prompts/merge-marp-decks.prompt.md`](.github/prompts/merge-marp-decks.prompt.md))
+  - Defines the discover→strip→assemble workflow for merging `slides/marp/*.deck.md` into a combined presentation
+  - Includes acceptance criteria: all decks represented, section dividers, speaker notes on every slide, valid front matter
+  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md) | [Summary](ai-logs/2026/03/18/merge-marp-decks-20260318/summary.md)
 
-- **Organizational vs. Repository Instruction Files Deck** ([`slides/marp/organizational-vs-repository-instruction-files.deck.md`](slides/marp/organizational-vs-repository-instruction-files.deck.md))
-  - 7-slide Marp deck covering enterprise-tier capabilities, path-scoped instruction files, and folder-level technology-specific rules
-  - Includes layering and precedence guidance for multi-level instruction governance
-  - Provenance: [Chat log](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/conversation.md) | [Summary](ai-logs/2026/03/17/organizational-vs-repository-instruction-files-20260317/summary.md)
+- **AI-Assisted Output Slides** ([`slides/marp/ai-assisted-output.deck.md`](slides/marp/ai-assisted-output.deck.md))
+  - 10-slide Marp deck on provenance metadata, placement policy, logging workflow, quality gates, and CI enforcement
+  - Sourced from `.github/instructions/ai-assisted-output.instructions.md`
+  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md)
 
-- **Hands-On with GitHub Copilot in Visual Studio 2026** ([`slides/marp/hands-on-with-github-copilot-visual-studio.deck.md`](slides/marp/hands-on-with-github-copilot-visual-studio.deck.md))
-  - 15-slide comprehensive Marp deck covering GitHub Copilot features exclusive to Visual Studio 2026 for enterprise .NET developers
-  - Includes installation, core features, VS-exclusive capabilities (doc comments, QuickInfo AI, Microsoft Learn integration, profiler agent), debugging integration, MCP support, feature comparison with VS Code, best practices, and hands-on lab exercises
-  - Detailed speaker notes provide demos, timing, troubleshooting, and teaching points for each slide
-  - Provenance: [Chat log](ai-logs/2026/03/27/vs2026-copilot-deck-20260327/conversation.md) | [Summary](ai-logs/2026/03/27/vs2026-copilot-deck-20260327/summary.md)
+- **CQRS Architecture Slides** ([`slides/marp/cqrs-architecture.deck.md`](slides/marp/cqrs-architecture.deck.md))
+  - 12-slide Marp deck on when to use CQRS, core principles, architecture components, consistency strategies, anti-patterns, and migration
+  - Sourced from `.github/instructions/cqrs-architecture.instructions.md`
+  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md)
 
-- **Feature Flags and Test Suites** ([`slides/marp/feature-flags-and-test-suites.deck.md`](slides/marp/feature-flags-and-test-suites.deck.md))
-  - Marp deck covering feature flags for work-in-progress, As-Is vs. To-Be test suites, safe deployment gates, and AI-assisted flag retirement
-  - Includes speaker notes for delivery and operational guidance for CI pipeline separation
-  - Provenance: [Chat log](ai-logs/2026/03/19/feature-flags-test-suites-20260319/conversation.md) | [Summary](ai-logs/2026/03/19/feature-flags-test-suites-20260319/summary.md)
+- **Dependency Management Policy Slides** ([`slides/marp/dependency-management-policy.deck.md`](slides/marp/dependency-management-policy.deck.md))
+  - 12-slide Marp deck on risk classification, selection criteria, approval workflow, vulnerability SLAs, license compliance, and supply chain security
+  - Sourced from `.github/instructions/dependency-management-policy.instructions.md`
+  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md)
 
-- **Safety Measures & Best Practices** ([`slides/marp/safety-measures-best-practices.deck.md`](slides/marp/safety-measures-best-practices.deck.md))
-  - 7-slide Marp deck covering safety nets, review discipline for AI-generated code, signal-vs-coverage testing guidance, safe feature-flag removal, small change sets, and Azure DevOps MCP-assisted PR review support
-  - Frames AI as an eager knowledgeable junior developer and closes with an actionable safety checklist for teams
-  - Provenance: [Chat log](ai-logs/2026/03/22/safety-measures-best-practices-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/safety-measures-best-practices-20260322/summary.md)
+- **GitHub CLI Slides** ([`slides/marp/github-cli.deck.md`](slides/marp/github-cli.deck.md))
+  - 10-slide Marp deck on issue management, PR workflows, Actions monitoring, code review, and CI/CD integration
+  - Sourced from `.github/instructions/github-cli.instructions.md`
+  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md)
 
-- **Effective Prompts for Technical Debt** ([`slides/marp/effective-prompts-for-technical-debt.deck.md`](slides/marp/effective-prompts-for-technical-debt.deck.md))
-  - Marp deck covering structured technical debt prompts, GitHub issue workflow, Copilot-assisted issue handling, and prompt components for safe remediation
-  - Includes speaker notes and a reusable prompt template covering constraints, tests, docs, and provenance expectations
-  - Provenance: [Chat log](ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/effective-prompts-technical-debt-20260322/summary.md)
+- **Business Rules to Vertical Slices** ([`slides/marp/business-rules-to-slices.deck.md`](slides/marp/business-rules-to-slices.deck.md))
+  - 10-slide Marp deck on analysis workflow, rule types, use case identification, feature boundary tests, and vertical slice design
+  - Sourced from `.github/instructions/business-rules-to-slices.instructions.md`
+  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md)
 
-- **Technical Debt Copilot Exercise Sequence** ([`slides/marp/exercise/exercise-addressing-technical-debt-with-copilot.deck.md`](slides/marp/exercise/exercise-addressing-technical-debt-with-copilot.deck.md))
-  - Three-slide exercise set covering prompt authoring, GitHub issue assignment, and multi-step delegation for technical debt remediation with Copilot
-  - Uses the exercise template structure with duration, objectives, activities, success criteria, and facilitator notes on every slide
-  - Provenance: [Chat log](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-technical-debt-copilot-workflows-20260322/summary.md)
+- **AI-Assisted Dev Overview** ([`slides/marp/ai-assisted-dev-overview.deck.md`](slides/marp/ai-assisted-dev-overview.deck.md))
+  - 62-slide combined Marp deck merging all 6 individual module presentations with section divider slides
+  - Modules: AI Output · CQRS · Dependency Management · GitHub CLI · Business Rules to Slices · Custom Agents
+  - Usable as a full-day course or per-module standalone; every slide has comprehensive speaker notes
+  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md) | [Summary](ai-logs/2026/03/18/merge-marp-decks-20260318/summary.md)
 
-- **Repository Fork and Clone Exercise Deck** ([`slides/marp/exercise/exercise-fork-and-clone-repositories.deck.md`](slides/marp/exercise/exercise-fork-and-clone-repositories.deck.md))
-  - Three-slide exercise deck covering course repository forking, brownfield branch setup, PAT configuration, and multi-repo fork validation
-  - Uses the exercise template structure with objectives, activities, success criteria, command examples, and facilitator notes for each exercise
-  - Provenance: [Chat log](ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-repository-fork-clone-deck-20260322/summary.md)
+- **AIASD Class 311 Monday** ([`slides/marp/aiasd-311-monday.deck.md`](slides/marp/aiasd-311-monday.deck.md))
+  - Combined Marp deck for the Monday session of Class 311; ~30 slides across 5 modules with section dividers
+  - Modules: AI Output · Vertical Slice Architecture · Creating Prompt Files · Dependency Management · Custom Chat Modes
+  - Every slide has comprehensive speaker notes; section dividers allow standalone per-module delivery
+  - Manifest: [`slides/aiasd-311-monday.yaml`](slides/aiasd-311-monday.yaml)
+  - Provenance: [Chat log](ai-logs/2026/03/20/merge-marp-decks-monday-20260320/conversation.md) | [Summary](ai-logs/2026/03/20/merge-marp-decks-monday-20260320/summary.md)
+- **AIASD Class 311 — Tuesday Session** ([`slides/marp/aiasd-311-tuesday.deck.md`](slides/marp/aiasd-311-tuesday.deck.md))
+  - Combined Marp deck for Class 311 Tuesday, generated from manifest `slides/aiasd-311-tuesday.yaml`
+  - Modules: AI Output Standards · CQRS Architecture · GitHub CLI · Business Rules to Vertical Slices · Custom Agents
+  - ~35 slides with section dividers and comprehensive speaker notes on every slide
+  - Provenance: [Chat log](ai-logs/2026/03/20/merge-marp-decks-aiasd-311-tuesday-20260320/conversation.md) | [Summary](ai-logs/2026/03/20/merge-marp-decks-aiasd-311-tuesday-20260320/summary.md)
 
-- **GitHub Copilot VS Code Workflows Exercise Deck** ([`slides/marp/exercise/exercise-github-copilot-vscode-workflows.deck.md`](slides/marp/exercise/exercise-github-copilot-vscode-workflows.deck.md))
-  - Four-slide exercise deck covering Copilot onboarding, context management, chat workflow organization, and Ask/Edit/Agent mode selection
-  - Uses the exercise template structure with objectives, activities, success criteria, and facilitator notes for each lab sequence
-  - Provenance: [Chat log](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/exercise-github-copilot-vscode-workflows-20260322/summary.md)
+- **Code Explanation and Analysis Slides** ([`slides/marp/code-explanation-and-analysis.deck.md`](slides/marp/code-explanation-and-analysis.deck.md))
+  - Marp slide deck for Section 10 of the AI-Assisted Software Development course covering code explanation and test coverage gap analysis
+  - 11 slides covering inline chat (Ctrl+I), right-click explain, test code understanding, coverage report generation (calculator service example), gap identification, prioritized implementation plans, and hands-on exercises
+  - Includes comprehensive speaker notes with timing guidance, live demo instructions, audience interaction points, and exercise facilitation tips
+  - Provenance: [Chat log](ai-logs/2026/03/18/code-explanation-analysis-marp-20260318/conversation.md)
 
-- **Tool Installation Exercise Deck** ([`slides/marp/exercise/exercise-tool-installation.deck.md`](slides/marp/exercise/exercise-tool-installation.deck.md))
-  - Five-slide exercise deck covering Git installation, GitHub account and CLI setup, VS Code installation, Copilot enablement, and markdown workflow verification
-  - Converts the long-form setup guide into hands-on labs with objectives, command checks, success criteria, and facilitator notes
-  - Provenance: [Chat log](ai-logs/2026/03/29/exercise-tool-installation-deck-20260329/conversation.md) | [Summary](ai-logs/2026/03/29/exercise-tool-installation-deck-20260329/summary.md)
-
-- **Evergreen Software Development Exercise Deck** ([`slides/marp/evergreen-software-development-exercise-deck.deck.md`](slides/marp/evergreen-software-development-exercise-deck.deck.md))
-  - Two exercise slides covering evergreen core principles and common failure modes
-  - Template-aligned structure with duration, objectives, activities, success criteria, and speaker notes
-  - Provenance: [Chat log](ai-logs/2026/03/16/evergreen-exercise-deck-20260316/conversation.md) | [Summary](ai-logs/2026/03/16/evergreen-exercise-deck-20260316/summary.md)
-
-- **GitHub Copilot Skills: A Practical Introduction** ([`slides/marp/github-copilot-skills-practical-introduction.deck.md`](slides/marp/github-copilot-skills-practical-introduction.deck.md))
-  - 12-slide Marp deck covering skill structure, `SKILL.md` anatomy, loading behavior, authoring practices, and common enterprise use cases
-  - Explains how Copilot Skills differ from promptfiles, custom instructions, and chat modes while positioning them as procedural workflow modules
-  - Provenance: [Chat log](ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/github-copilot-skills-practical-introduction-20260321/summary.md)
-
-- **Best Practices and Q&A: Custom Agents** ([`slides/marp/best-practices-and-qa-custom-agents.deck.md`](slides/marp/best-practices-and-qa-custom-agents.deck.md))
-  - 7-slide Marp deck covering agent design best practices, least-privilege tool strategy, team sharing, examples, and rollout validation
-  - Explains how to keep agents narrowly scoped, iteratively improved, and safe to share across teams or organizations
-  - Provenance: [Chat log](ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/best-practices-and-qa-custom-agents-20260321/summary.md)
-
-- **Implementation Plan Prioritization** ([`slides/marp/implementation-plan-prioritization.deck.md`](slides/marp/implementation-plan-prioritization.deck.md))
-  - Marp deck covering security audit findings, impact/effort prioritization, visible technical-debt tracking, and Phase Zero security planning
-  - Frames prioritization as the bridge between backlog generation and safe implementation sequencing for brownfield work
-  - Provenance: [Chat log](ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/ai-prioritization-brownfield-protection-20260321/summary.md)
-
-- **Vertical Slice Implementation** ([`slides/marp/vertical-slice-implementation-webcat.deck.md`](slides/marp/vertical-slice-implementation-webcat.deck.md))
-  - Marp deck covering first-slice setup, prompt-versus-issue scope checks, Copilot-assisted live coding, and verification strategy for the "Implement Foundational WebCat" slice
-  - Highlights `webcat-frontend` organization decisions and the shift from manual verification toward automated testing
-  - Provenance: [Chat log](ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/conversation.md) | [Summary](ai-logs/2026/03/22/vertical-slice-implementation-webcat-20260322/summary.md)
-
-- **Prompt Authoring Instructions** ([`.github/instructions/create-prompt.instructions.md`](.github/instructions/create-prompt.instructions.md))
+- **Prompt Authoring Instructions** ([`.github/instructions/prompt-file.instructions.md`](.github/instructions/prompt-file.instructions.md))
   - Comprehensive guidelines for creating effective, well-structured repository prompts
-  - Generated from: [`.github/copilot/Promptfiles/prompt-file.instructions.prompt.md`](.github/copilot/Promptfiles/prompt-file.instructions.prompt.md)
+  - Generated from: [`.github/prompts/create-prompt-file-instructions-file.prompt.md`](.github/prompts/create-prompt-file-instructions-file.prompt.md)
   - Provenance: [Chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md)
 
 - **Instruction Validation Report** ([`validation-report-20251015-212137.md`](validation-report-20251015-212137.md))
@@ -299,10 +279,26 @@ Scripts for managing GitHub security issues:
 - `close_resolved_security_issues.ps1` - Close resolved security issues
 - `emergency_security_cleanup.ps1` - Emergency security cleanup
 
-### Local MCP Server (PowerShell)
+## Document Conversion
 
-- `scripts/mcp/simple-mcp-server.ps1` - Simple local MCP server exposing an `echo` tool over stdio
-- `scripts/mcp/test-simple-mcp-server.ps1` - End-to-end test script that validates initialize, tools/list, and tools/call
-- `.mcp.json` - Workspace MCP configuration that launches the PowerShell MCP server
+### Pandoc Configuration Files
 
-For run and test commands, see [`scripts/README.md`](scripts/README.md).
+Standardized document conversion configurations for slides, documentation, and presentations:
+
+- **[`slides-to-pptx.yaml`](slides-to-pptx.yaml)** - Optimized for converting Marp slides to PowerPoint presentations
+- **[`to-pdf.yaml`](to-pdf.yaml)** - Professional PDF output for slides and documentation
+- **[`pandoc-defaults.yaml`](pandoc-defaults.yaml)** - Comprehensive multi-format configuration
+- **[`PANDOC.md`](PANDOC.md)** - Complete usage guide with examples and customization options
+- **[`templates/`](templates/)** - PowerPoint reference templates for professional formatting
+
+**Quick Examples:**
+
+```bash
+# Convert slide deck to PowerPoint with template support
+pandoc --defaults=slides-to-pptx slides/marp/github-worktrees-guide.deck.md -o github-worktrees.pptx
+
+# Convert documentation to PDF
+pandoc --defaults=to-pdf README.md -o project-overview.pdf
+```
+
+**Note**: For professional PowerPoint formatting, create a reference template in the `templates/` directory. See [`templates/README.md`](templates/README.md) for instructions.
