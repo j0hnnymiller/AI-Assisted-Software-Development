@@ -20,6 +20,7 @@ By the end of this guide, you'll have a complete AI-assisted software developmen
 - **GitHub Copilot Chat Extension** - AI chat features powered by Copilot
 - **Mermaid Preview** - Mermaid diagram previewer for Visual Studio Code
 - **multi-command** - Used for a multi-step keybinding to preview markdown and open in a new window.
+- **Chat Customizations Evaluations** - A Language Server Protocol implementation for analyzing and improving AI prompt files
 
 ## Your Journey Ahead
 
@@ -687,3 +688,42 @@ To set up a multi-command keybinding, you need to add a configuration to your `s
 - If the multi-command doesn't execute, ensure that both the `multi-command` extension is installed and that your `settings.json` and `keybindings.json` configurations are correct.
 - Make sure that the commands in the sequence are valid and available in your version of VS Code.
 - If you encounter issues with specific commands in the sequence, try testing them individually to identify any potential conflicts or errors.
+
+---
+
+## Chat Customizations Evaluations Extension
+
+### Why Chat Customizations Evaluations?
+
+The Chat Customizations Evaluations extension provides a Language Server Protocol (LSP) implementation for analyzing and improving AI prompt files. It helps you evaluate and customize chat prompts for better AI-assisted development workflows, ensuring your prompts are optimized and follow best practices.
+
+### Official Resources
+
+- Extension: [https://marketplace.visualstudio.com/items?itemName=Chat-Customizations-Evaluations.chat-customizations-evaluations](https://marketplace.visualstudio.com/items?itemName=Chat-Customizations-Evaluations.chat-customizations-evaluations)
+
+### Installation
+
+1. Open Visual Studio Code
+2. Go to the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`)
+3. Search for "Chat Customizations Evaluations"
+4. Click "Install"
+
+### Usage
+
+Once installed, the extension will automatically analyze prompt files and provide:
+
+- **Real-time analysis** of AI prompt files
+- **Suggestions** for improving prompt clarity and effectiveness
+- **Validation** to ensure prompts follow best practices
+- **Linting** for common issues in custom chat prompts
+
+The extension works with prompt files and provides feedback directly in your editor.
+
+### Troubleshooting
+
+- If the extension doesn't activate, ensure it's enabled in the Extensions view.
+- Make sure you have prompt files open in the editor (typically `.prompt`, `.md`, or similar prompt-related files).
+- Check that the Language Server is running by looking for any error messages in the VS Code Output panel (select "Chat Customizations Evaluations" from the dropdown).
+- Try reloading VS Code (`Ctrl+R` or `Cmd+R`) if you don't see analysis results.
+
+
