@@ -120,6 +120,17 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Notable Artifacts
 
+- **AI-Assisted MFC to WPF Conversions Slides** ([`slides/marp/ai-assisted-mfc-to-wpf-conversions.deck.md`](slides/marp/ai-assisted-mfc-to-wpf-conversions.deck.md))
+  - Marp slide deck for planning and executing MFC-to-WPF migration using AI-assisted workflows
+  - Covers both whole-application conversion and module-by-module migration patterns
+  - Includes architecture mapping, quality gates, estimation heuristics, and presenter notes on every slide
+  - Provenance: [Chat log](ai-logs/2026/05/04/mfc-to-wpf-conversion-deck-20260504/conversation.md) | [Summary](ai-logs/2026/05/04/mfc-to-wpf-conversion-deck-20260504/summary.md)
+
+- **Thursday GE Merged Course Deck** ([`slides/merged/ge/aiasd-311-thursday.ge-draft.md`](slides/merged/ge/aiasd-311-thursday.ge-draft.md))
+  - Manifest-driven combined Marp deck assembled from `slides/manifests/ge/aiasd-311-thursday.ge.manifest.md`
+  - Includes section divider slides, module progression context, and speaker notes coverage across all slide blocks
+  - Provenance: [Chat log](ai-logs/2026/05/04/merge-marp-thursday-ge-20260504/conversation.md) | [Summary](ai-logs/2026/05/04/merge-marp-thursday-ge-20260504/summary.md)
+
 - **VTT Content Summarizer Promptfile** ([`.github/prompts/summarize-vti-content.prompt.md`](.github/prompts/summarize-vti-content.prompt.md))
   - Analyzes VTT (Video Text Track) files from class recordings and generates structured summaries
   - Extracts timing information, section breakdowns, key topics, and action items

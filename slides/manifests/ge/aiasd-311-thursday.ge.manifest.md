@@ -5,10 +5,6 @@ sections:
     decks:
       - slides\marp\welcome-back.deck.md
 
-  - name: AI Practitioner Resources
-    decks:
-      - slides\marp\ai-practitioner-resources.deck.md
-
   - name: Brownfield Software Development
     decks:
       - slides\marp\understanding-legacy-code.deck.md
@@ -39,8 +35,6 @@ sections:
       - slides\marp\exercise\exercise-code-quality-analysis.deck.md
       - slides\marp\exercise\exercise-addressing-technical-debt-with-copilot.deck.md
 
-  - name: Multi-Implementation Comparison
+  - name: MFC to WPF - Legacy Conversion
     decks:
-      - slides\marp\multi-model-implementation-comparison.deck.md
-      - slides\marp\exercise\exercise-prompt-copilot-to-address-technical-debt.deck.md
-      - slides\marp\exercise\exercise-prompt-multiple-models-to-address-technical-debt.deck.md
+      - slides\marp\ai-assisted-mfc-to-wpf-conversions.deck.md
