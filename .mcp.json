@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "powershell-mcp": {
+      "command": "pwsh",
+      "args": [
+        "-NoLogo",
+        "-NoProfile",
+        "-File",
+        "scripts/mcp/simple-mcp-server.ps1"
+      ]
+    }
+  }
+}

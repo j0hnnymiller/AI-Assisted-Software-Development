@@ -15,7 +15,6 @@ Create comprehensive prompt authoring instructions and establish a governance sy
 ### Primary Deliverables
 
 1. **Prompt Authoring Instructions** (`.github/instructions/create-prompt.instructions.md`)
-
    - Comprehensive guidelines for creating effective repository prompts
    - Field-by-field documentation of YAML front matter
    - Tool selection methodologies
@@ -24,13 +23,11 @@ Create comprehensive prompt authoring instructions and establish a governance sy
    - Post-creation requirements for AI logs and README updates
 
 2. **Instruction Prompt Requirements** (`.github/instructions/instruction-prompt.instructions.md`)
-
    - Governance layer ensuring instruction-generating prompts include AI provenance
    - Automatic application via `applyTo: "**/*.instructions.prompt.md"`
    - Complete template and validation checklist
 
-3. **Meta-Prompt Generator** (`.github/prompts/meta/create-instruction-prompt.prompt.md`)
-
+3. **Meta-Prompt Generator** (`.github/copilot/Promptfiles/meta/create-instruction-prompt.prompt.md`)
    - Interactive chat-mode prompt for creating new instruction-generating prompts
    - Built-in AI provenance requirements
    - Step-by-step guidance with validation

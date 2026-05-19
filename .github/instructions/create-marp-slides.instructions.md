@@ -1,0 +1,366 @@
+---
+ai_generated: true
+model: "openai/gpt-4o@unknown"
+operator: "johnmillerATcodemag-com"
+chat_id: "create-marp-slides-instructions-<timestamp>"
+prompt: |
+  Create instructions and templates for producing Marp slide files for this
+  repository. Slides must be placed in slides/marp and every
+  generated slide file must include AI provenance metadata that conforms to
+  `.github/instructions/ai-assisted-output.instructions.md` and follow
+  Copilot guidance in `.github/instructions/copilot-instructions.md`.
+started: "<auto>"
+ended: "<auto>"
+task_durations:
+  - task: "authoring"
+    duration: "00:00:00"
+total_duration: "00:00:00"
+ai_log: "ai-logs/<yyyy>/<mm>/<dd>/create-marp-slides-instructions-<timestamp>/conversation.md"
+source: "johnmillerATcodemag-com"
+applyTo: "slides/marp/**"
+---
+
+# Create Marp Slides Instructions
+
+Purpose: guidance, templates and required metadata for creating Marp (Markdown) slides
+for this repository. Generated slides should be placed under `slides/marp`.
+
+These instructions ensure every AI-assisted slide file includes the required
+provenance metadata defined in `.github/instructions/ai-assisted-output.instructions.md`
+and follows the Copilot-specific rules in `.github/instructions/copilot-instructions.md`.
+
+## Where to put slides
+
+- All Marp slide files must be created in: `slides/marp/`
+- Filenames should be lowercase and kebab-case, e.g. `intro-to-aiasd.md`.
+
+## Required front matter (template)
+
+Every generated Marp Markdown slide file MUST start with embedded YAML front matter
+that includes the AI provenance metadata. Use the template below and fill in the
+values exactly as produced by the chat that generated the file.
+
+```yaml
+---
+ai_generated: true
+model: "<provider>/<model-name>@<version>"
+operator: "<github-username>"
+chat_id: "<chat-id>"
+prompt: |
+  <exact prompt text used to generate this slide file>
+started: "<ISO8601-timestamp>"
+ended: "<ISO8601-timestamp>"
+task_durations:
+  - task: "draft"
+    duration: "<hh:mm:ss>"
+total_duration: "<hh:mm:ss>"
+ai_log: "ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md"
+source: "<source-identifier>"
+---
+```
+
+Notes:
+
+- `ai_generated` must be boolean true.
+- `model` must identify the underlying AI model in the format `provider/model@version`.
+- `operator` must be the GitHub username (not the literal `USER`).
+- `chat_id` and `ai_log` must point to the conversation log created for the chat that produced the file.
+- Do not use sidecar `.meta.md` files for Markdown: embed YAML front matter.
+
+## Marp slide skeleton (example)
+
+After the front matter, add Marp directives and slide content. Minimal example:
+
+```markdown
+---
+ai_generated: true
+model: "openai/gpt-4o@2024-11-20"
+operator: "john-doe"
+chat_id: "a1b2c3d4"
+prompt: |
+  Draft a 5-slide introduction to the AI-Assisted Software Development course.
+started: "2025-10-15T14:30:00Z"
+ended: "2025-10-15T14:35:00Z"
+task_durations:
+  - task: "draft"
+    duration: "00:03:00"
+total_duration: "00:03:00"
+ai_log: "ai-logs/2025/10/15/a1b2c3d4/conversation.md"
+source: "johnmillerATcodemag-com"
+---
+
+<!-- slide: data-background-color="#ffffff" -->
+
+# AI-Assisted Software Development
+
+Welcome to the course. Use Marp features (--- for new slide) below.
+
+::: notes
+Welcome participants and set the tone for the session. Emphasize the hands-on nature of the course and encourage questions throughout. Timing: 1 minute.
+:::
+
+---
+
+## Slide 2: Goals
+
+- Understand provenance
+- Learn tools and patterns
+
+::: notes
+Explain each goal briefly. Provenance ensures we can trace AI-assisted work back to its source. Tools like GitHub Copilot will be demonstrated throughout. Emphasize that patterns are reusable approaches. Timing: 2 minutes.
+:::
+
+---
+
+<!-- Additional slides -->
+```
+
+## Markdown formatting in slides
+
+**IMPORTANT**: When authoring slide content, use standard markdown formatting syntax. The PPTX generation pipeline automatically renders these formats in PowerPoint:
+
+### Supported formatting
+
+| Markdown Syntax   | Example                                   | PPTX Rendering                                             |
+| ----------------- | ----------------------------------------- | ---------------------------------------------------------- |
+| **Bold text**     | `**Principal Software Engineer at CODE**` | **Principal Software Engineer at CODE** (actual bold font) |
+| **Bold in lists** | `- **Key Point**: explanation`            | • **Key Point** (bold): explanation                        |
+| **Multiple bold** | `This is **bold** and **also bold**`      | This is **bold** (bold) and **also bold** (bold)           |
+
+### Usage guidelines
+
+- Use `**double asterisks**` around text that should appear bold in the PPTX output
+- Bold formatting works in headings, title placeholders, body text, bullet lists, and markdown table cells
+- Multiple bold sections on one line are supported
+- The PPTX generator (`scripts/generate_pptx.py`) automatically parses bold syntax, removes the literal markers, and applies `font.bold = True` to the appropriate text runs
+- Placeholder autofit/finalization must preserve that emphasis in the final PPTX; bold markdown in bullets must stay bold after export
+
+Regression example:
+
+```markdown
+- **Questions are always welcome — ask anytime!**
+```
+
+Expected PPTX rendering: the bullet text appears without literal `**` markers and the full phrase remains bold in the exported slide.
+
+### Example slide with formatting
+
+```markdown
+---
+marp: true
+---
+
+## About the Instructor
+
+**John Michael Miller**
+**Principal Software Engineer at CODE**
+
+Experience:
+
+- **15+ years** in software development
+- **AI/ML Enthusiast** and practitioner
+- Multiple roles: developer, architect, **DevOps engineer**
+
+Contact: [john.miller@codemag.com](john.miller@codemag.com)
+```
+
+This produces a slide where "John Michael Miller", "Principal Software Engineer at CODE", "15+ years", "AI/ML Enthusiast", and "DevOps engineer" all appear in bold font in the final PowerPoint presentation.
+
+## Markdown tables in slides
+
+Markdown tables are converted into native PowerPoint tables during PPTX generation.
+
+- Tables are centered horizontally on the slide
+- Tables render at 80% of the slide width
+- Table height expands based on the number of rows
+- Use standard markdown table syntax
+
+Example:
+
+```markdown
+## Comparison Matrix
+
+| Aspect  | Instruction Files  | Prompt Files           | Custom Agents                 |
+| ------- | ------------------ | ---------------------- | ----------------------------- |
+| Scope   | Repository-wide    | Single task/workflow   | Conversational context        |
+| Purpose | Define AI behavior | Execute specific tasks | Provide specialized expertise |
+```
+
+## Speaker Notes Requirements
+
+**MANDATORY**: Every slide MUST include comprehensive speaker notes using pandoc syntax.
+
+**REQUIRED SYNTAX** (exact format):
+
+```markdown
+::: notes
+Speaker notes content here
+:::
+```
+
+**PROHIBITED FORMATS** (these will FAIL CI validation):
+
+```markdown
+❌ WRONG: Note:
+❌ WRONG: Speaker notes:
+❌ WRONG: <!-- Speaker: ... -->
+❌ WRONG: Notes: ...
+❌ WRONG: Any format other than ::: notes
+```
+
+**CORRECT vs INCORRECT Examples**:
+
+```markdown
+# Slide Title
+
+Content here
+
+❌ WRONG:
+Note:
+Speaker: Explain this concept
+
+✅ CORRECT:
+::: notes
+Speaker: Explain this concept with timing and context
+:::
+```
+
+**Speaker Notes Content Guidelines**:
+
+- **Delivery Instructions**: How to present the content effectively
+- **Timing Guidance**: Suggested time allocation for each slide
+- **Key Points**: Essential messages to emphasize
+- **Examples**: Real-world illustrations or case studies
+- **Transitions**: How to connect to the next slide
+- **Audience Interaction**: Questions, polls, or discussion points
+- **Background Context**: Additional details not shown on slide
+
+**Placement**: Speaker notes MUST be placed immediately after each slide's content, before the next slide separator (`---`).
+
+## Exercise Slides
+
+**REQUIRED**: All exercise slides MUST use the `Two Content` PowerPoint layout.
+
+An exercise slide has a **left column** (setup/objectives) and a **right column** (activities and success criteria), separated by a `::: column` divider.
+
+### Body Structure
+
+````markdown
+## Exercise: <Title>
+
+**Setup and Objectives**
+
+Prerequisites
+
+- <prerequisite 1>
+- <prerequisite 2>
+
+Objectives
+
+- <objective 1>
+- <objective 2>
+
+::: column
+
+**Activities and Success Criteria**
+
+Activities
+
+1. <step 1>
+2. <step 2>
+
+```bash
+# Example command
+<command>
+```
+````
+
+Success Criteria
+
+- <criterion 1>
+- <criterion 2>
+
+::: notes
+Duration ~00:XX
+
+<Speaker delivery notes: context, timing, facilitation tips, transitions>
+:::
+
+```
+
+### Rules
+
+- Exercise slides do not need an explicit `<!-- layout: Two Content -->` directive when they use `::: column`; the slide pipeline infers the `Two Content` layout automatically.
+- If you include `<!-- layout: Two Content -->`, the layout name is resolved against the PowerPoint template and must match the template layout name exactly.
+- The `::: column` divider marks the boundary between left and right columns. Everything before it is the left column, and everything after it until `::: notes` or `---` is the right column.
+- Do NOT close the column block with `:::`. The `::: notes` block or the next slide separator (`---`) closes it implicitly.
+- **Left column** content: heading, prerequisites, objectives.
+- **Right column** content: activities (numbered steps, code blocks), and success criteria.
+- Exercise slide filenames MUST follow the pattern `exercise-<kebab-case-description>.deck.md`.
+
+### Checklist (Exercise Slides)
+
+- [ ] Filename starts with `exercise-`
+- [ ] Body uses `::: column` to split left/right columns
+- [ ] Left column: prerequisites and objectives
+- [ ] Right column: numbered activities, code blocks, and success criteria
+- [ ] `::: notes` block present with duration and facilitation guidance
+
+## Authoring rules and checklist
+
+Before committing or generating slides, ensure:
+
+- [ ] The file is created under `slides/marp/`.
+- [ ] YAML front matter includes all required fields from the template above.
+- [ ] `ai_log` path exists in the repository under `ai-logs/` and contains `conversation.md` for the chat.
+- [ ] `operator` is a GitHub username.
+- [ ] Prompt is captured verbatim in the `prompt` field.
+- [ ] Timestamps use ISO8601.
+- [ ] **CRITICAL: Every slide MUST have a `::: notes` block (search file for "::: notes" to verify)**
+- [ ] **CRITICAL: NO plain "Note:" paragraphs, HTML comments, or non-standard formats for speaker notes**
+- [ ] **CRITICAL: Speaker notes MUST include delivery guidance, timing, key points, examples, and transitions**
+- [ ] **CRITICAL: Speaker notes MUST be comprehensive (minimum 3-4 sentences per slide)**
+- [ ] **CRITICAL: Every exercise slide MUST include a `::: column` divider so the slide pipeline can infer `Two Content`**
+- [ ] README.md updated with an entry for notable AI-generated slides where applicable.
+
+**ENFORCEMENT**: PRs with slides missing speaker notes will be rejected automatically by CI validation.
+
+## Copilot-specific guidance
+
+Follow the rules in `.github/instructions/copilot-instructions.md` when generating
+slides via Copilot (model identification, chat scoping, new conversation file per chat,
+and operator naming). In particular:
+
+- Use the underlying model name in `model` (do not use `github/copilot`).
+- Each new chat must create a new `ai-logs/yyyy/mm/dd/<chat-id>/conversation.md` and `summary.md`.
+- Do not create AI-generated artifacts without an active chat context.
+
+## README update requirement
+
+When creating a notable slide deck or single slide intended for long-term use,
+add a one-line bullet in the repo `README.md` under a `Guidance & Instructions` or
+`Notable Artifacts` section that links to the slide file and the corresponding
+`ai_log` chat folder.
+
+Example README entry:
+
+- **AIASD Intro Slides** (`slides/marp/aiasd-intro.deck.md`) — 5-slide intro to the course. Provenance: `ai-logs/2025/10/15/<chat-id>/`.
+
+## Examples and templates
+
+Include common patterns or helper snippets here (e.g., slide with speaker notes,
+code block slides, image inclusion). Keep examples short and focused.
+
+## CI and enforcement suggestions (optional)
+
+Teams may add a CI job to verify front matter on changed Markdown files. The
+existing `.github/instructions/ai-assisted-output.instructions.md` contains a
+Linux/Mac example; adapt it for PowerShell or the project's CI runner to enforce
+that files with `ai_generated: true` include `chat_id` and `ai_log` and that
+the referenced `ai_log` path exists.
+
+## Next steps
+
+- If you'd like, I can add a sample slide file in `slides/marp/` and
+  a small PowerShell-based CI validation script to this repo.
+```

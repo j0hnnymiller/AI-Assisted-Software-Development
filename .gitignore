@@ -1,14 +1,17 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+.clockwork.json
 
+obj/
+
+
+# VTT files (except sample files)
 # C extensions
 *.so
 
 # Distribution / packaging
+Labs/lab1-3-csharp/obj/
+Slides/output/
 .Python
-build/
+Slides/output/_style_source/
 develop-eggs/
 dist/
 downloads/
@@ -45,10 +48,15 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
+*.py[cod]
+*.pyc.*
+*.pyd
+*$py.class
 *.cover
 *.py,cover
 .hypothesis/
 .pytest_cache/
+__pycache__/
 cover/
 
 # Translations

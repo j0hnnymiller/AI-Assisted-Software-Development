@@ -1,0 +1,3563 @@
+WEBVTT
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/62-0
+00:00:00.000 --> 00:00:03.134
+right,
+so let's talk about our agenda for today.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/62-1
+00:00:03.134 --> 00:00:08.186
+So I want to start off talking about what
+it is and isn't legacy code and just
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/62-2
+00:00:08.186 --> 00:00:13.175
+getting a sense of of what that means.
+Then we'll talk a bit about, you know,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/62-3
+00:00:13.175 --> 00:00:18.164
+before we actually start working with
+Copilot to change code, what we should.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/63-0
+00:00:18.244 --> 00:00:23.113
+Think about doing with our hand.
+We'll talk more about managing Copilot
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/63-1
+00:00:23.113 --> 00:00:26.427
+contexts.
+I have some interesting information on
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/63-2
+00:00:26.427 --> 00:00:29.199
+that.
+Then we'll get into some read-only
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/63-3
+00:00:29.199 --> 00:00:33.324
+techniques since we're working in a
+legacy code environment.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/64-0
+00:00:33.604 --> 00:00:37.653
+And the rules are are quite a bit
+different than what we were doing
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/64-1
+00:00:37.653 --> 00:00:38.844
+yesterday by coding.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/66-0
+00:00:40.244 --> 00:00:43.615
+Isn't as a excuse me,
+isn't it a effective in a legacy
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/66-1
+00:00:43.615 --> 00:00:48.702
+environment because you know your code is
+running in production and you don't want
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/66-2
+00:00:48.702 --> 00:00:53.851
+to do anything that would affect that. So.
+So we want to go through a bunch of read
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/66-3
+00:00:53.851 --> 00:00:55.444
+only techniques that will.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/67-0
+00:00:56.084 --> 00:01:01.959
+Help us understand the understand the
+code better and you know plan what we're
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/67-1
+00:01:01.959 --> 00:01:07.611
+going to be doing and you know create
+things like tests and stuff like that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/67-2
+00:01:07.611 --> 00:01:11.404
+which don't affect the production
+application but.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/68-0
+00:01:11.764 --> 00:01:17.160
+Allow us to move the code base forward.
+Then we'll talk about modifying that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/68-1
+00:01:17.160 --> 00:01:22.276
+legacy code with AI and then we'll and
+then managing some change for us.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/68-2
+00:01:22.276 --> 00:01:26.972
+How do we deal with, for example,
+when techniques change or as the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/68-3
+00:01:26.972 --> 00:01:28.724
+technology moves forward?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/69-0
+00:01:28.884 --> 00:01:35.162
+Just that fact alone by not not keeping
+up with the with the current technologies
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/69-1
+00:01:35.162 --> 00:01:41.209
+our our our code can you know our our
+code can decay just just for the for the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/69-2
+00:01:41.209 --> 00:01:44.884
+fact that we don't actually keep it up to
+date.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/70-0
+00:01:45.364 --> 00:01:48.594
+For working legacy code,
+I would recommend this.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/70-1
+00:01:48.594 --> 00:01:53.011
+Did you take a look at this book?
+It's been out for quite a while.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/70-2
+00:01:53.011 --> 00:01:57.692
+Here it's in thearchive.org.
+You can get an E pub version of it and it
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/70-3
+00:01:57.692 --> 00:02:00.724
+it goes through a whole series of steps
+that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/71-0
+00:02:00.804 --> 00:02:06.384
+Or strategies that you can use to take a
+legacy code base and modernize it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/71-1
+00:02:06.384 --> 00:02:12.331
+I'm not going to go into into the the the
+techniques and strategies that that he
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/71-2
+00:02:12.331 --> 00:02:18.204
+recommends outside of the the first one,
+which is you know you need more tests.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/73-0
+00:02:18.564 --> 00:02:24.892
+But but this the techniques in this book
+are are implementable using the AI
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/73-1
+00:02:24.892 --> 00:02:31.469
+technique that can help you actually move
+forward more quickly in implementing
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/73-2
+00:02:31.469 --> 00:02:32.884
+these strategies.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/74-0
+00:02:35.684 --> 00:02:40.576
+All right then.
+So we talked about forking the repos.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/74-1
+00:02:40.576 --> 00:02:46.555
+I think we'll skip that.
+And for let's let's talk a bit about the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/74-2
+00:02:46.555 --> 00:02:52.263
+target repo I have.
+We can work in basically two target repos.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/74-3
+00:02:52.263 --> 00:02:55.524
+One I have is a repo that I've used.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/75-0
+00:02:55.524 --> 00:03:01.411
+For quite for a little while on this
+topic that I created in an early stage of
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/75-1
+00:03:01.411 --> 00:03:06.926
+development of an application for
+internal use of code and it has I would
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/75-2
+00:03:06.926 --> 00:03:12.664
+consider it a target rich environment for
+improvement as well as we have our
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/75-3
+00:03:12.664 --> 00:03:13.484
+calculator.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/76-0
+00:03:13.924 --> 00:03:17.317
+An example.
+So we can probably bounce back and forth
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/76-1
+00:03:17.317 --> 00:03:22.376
+between those two and demonstrate most of
+the techniques I'll be talking about
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/76-2
+00:03:22.376 --> 00:03:25.769
+using them.
+But if you're looking for something that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/76-3
+00:03:25.769 --> 00:03:28.906
+you can actually use that's different
+from this,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/76-4
+00:03:28.906 --> 00:03:33.644
+you can basically use a prompt like I'm
+pointing out here that says I go.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/77-0
+00:03:33.764 --> 00:03:39.924
+Go ahead and get me a a GitHub coding
+project that has a lot of open issues.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/77-1
+00:03:39.924 --> 00:03:42.804
+Did anybody get a chance to do that?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/78-0
+00:03:44.364 --> 00:03:48.164
+Uh, that's fine. All right, so.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/79-0
+00:03:47.924 --> 00:03:50.164
+Thing I I forked where the Zeus.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/80-0
+00:03:51.204 --> 00:03:52.124
+Oh, did you?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/81-0
+00:03:52.244 --> 00:03:53.204
+Yeah.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/82-0
+00:03:53.324 --> 00:03:54.964
+All right, cool.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/83-0
+00:03:56.204 --> 00:03:56.284
+Um.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/84-0
+00:03:58.084 --> 00:04:05.205
+So no universally accepted definition.
+It's sometimes easier to find,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/84-1
+00:04:05.205 --> 00:04:09.884
+but is not legacy code.
+Let's switch over to.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/85-0
+00:04:12.284 --> 00:04:15.004
+This guy, yeah.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/86-0
+00:04:17.044 --> 00:04:22.011
+And I think this is kind of an
+interesting exercise.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/86-1
+00:04:22.011 --> 00:04:26.884
+We can go into our quick chat here and
+say give me.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/87-0
+00:04:27.844 --> 00:04:29.724
+Uh, the three definitions.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/88-0
+00:04:31.884 --> 00:04:32.044
+Oh.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/89-0
+00:04:35.844 --> 00:04:36.844
+Legacy code.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/90-0
+00:04:50.164 --> 00:04:56.172
+So there's our three definitions.
+Code without test, outdated code,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/90-1
+00:04:56.172 --> 00:04:58.204
+inherited code. We can.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/91-0
+00:05:01.244 --> 00:05:04.380
+Say, well,
+I don't want just three to give me 10
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/91-1
+00:05:04.380 --> 00:05:06.364
+definitions of legacy code and.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/92-0
+00:05:08.804 --> 00:05:13.541
+Now it's added under maintainable code,
+hard to understand code,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/92-1
+00:05:13.541 --> 00:05:17.185
+business critical code,
+code with technical debt,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/92-2
+00:05:17.185 --> 00:05:22.724
+non-standard code, code with poor design,
+code dependent on legacy systems.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/93-0
+00:05:25.124 --> 00:05:27.844
+25 definitions of legacy code.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/95-0
+00:05:32.604 --> 00:05:39.013
+And that will expand more,
+more reasons why code can become a legacy.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/95-1
+00:05:39.013 --> 00:05:46.521
+We can see that there's lots of different
+aspects to a legacy code that we're and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/95-2
+00:05:46.521 --> 00:05:49.084
+from these definitions have.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/96-0
+00:05:49.324 --> 00:05:52.044
+And and you worked in a legacy code base.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/97-0
+00:05:56.764 --> 00:05:58.484
+Yes, I have for a few.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/98-0
+00:05:59.604 --> 00:06:00.044
+Yes.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/101-0
+00:06:00.924 --> 00:06:04.969
+I'm sure,
+I'm sure we all have at some point worked
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/100-0
+00:06:02.004 --> 00:06:02.164
+Y Yes.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/99-0
+00:06:02.084 --> 00:06:02.204
+And.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/101-1
+00:06:04.969 --> 00:06:08.624
+in legacy to code because as we saw
+yesterday,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/101-2
+00:06:08.624 --> 00:06:13.991
+it's very easy for code to to to go to go
+from Greenfield to legacy.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/101-3
+00:06:13.991 --> 00:06:16.324
+It doesn't take long for that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/102-0
+00:06:16.524 --> 00:06:22.386
+To for that to happen.
+So let's turn the question around and say
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/102-1
+00:06:22.386 --> 00:06:26.084
+OK, give me 3 difference of code of code.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/103-0
+00:06:27.884 --> 00:06:28.564
+That is.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/104-0
+00:06:31.844 --> 00:06:32.044
+No.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/105-0
+00:06:33.844 --> 00:06:34.124
+Legacy.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/106-0
+00:06:42.084 --> 00:06:46.434
+And so,
+so it's come back with modern code,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/106-1
+00:06:46.434 --> 00:06:54.540
+tested code and a well documented code.
+And we're going to see that this is going
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/106-2
+00:06:54.540 --> 00:06:57.604
+to be largely the inverse, but.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/107-0
+00:06:57.964 --> 00:07:03.419
+The the idea is on not legacy code is
+that we want to make sure that the code
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/107-1
+00:07:03.419 --> 00:07:07.825
+is basically up to date,
+well and well documented and has good
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/107-2
+00:07:07.825 --> 00:07:09.084
+tests. So this is.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/108-0
+00:07:10.644 --> 00:07:15.943
+What we are interested and then we can do
+something very similar and say, OK,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/108-1
+00:07:15.943 --> 00:07:18.524
+what are the definitions of Evergreen?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/109-0
+00:07:21.684 --> 00:07:22.324
+Code.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/114-0
+00:07:29.444 --> 00:07:34.526
+So this is continuously updated.
+It's future proof in a well documented,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/114-1
+00:07:34.526 --> 00:07:38.354
+well tested.
+So we we can see that testing is a common
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/114-2
+00:07:38.354 --> 00:07:42.113
+theme here.
+Either you don't have enough of it or you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/114-3
+00:07:42.113 --> 00:07:47.542
+are you have well tested code or and
+that's something that we we want to make
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/114-4
+00:07:47.542 --> 00:07:49.004
+sure that we we keep.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/115-0
+00:07:49.164 --> 00:07:55.164
+Take advantage of.
+So let's go back to our slides.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/116-0
+00:07:57.404 --> 00:08:01.723
+So not like you see code think think
+about is they all started,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/116-1
+00:08:01.723 --> 00:08:05.434
+you know all code starts as Greenfield,
+but few codes,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/116-2
+00:08:05.434 --> 00:08:09.348
+code bases are able to maintain that
+server green status.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/116-3
+00:08:09.348 --> 00:08:13.802
+And the reason for that is that code
+bases can degrade over time.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/116-4
+00:08:13.802 --> 00:08:15.084
+They can basically.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/117-0
+00:08:15.164 --> 00:08:18.934
+Changes in technology.
+The technology moves forward. It was,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/117-1
+00:08:18.934 --> 00:08:22.086
+you know,
+at once it was a Greenfield project in a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/117-2
+00:08:22.086 --> 00:08:25.239
+particular technology using particular
+techniques,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/117-3
+00:08:25.239 --> 00:08:29.565
+but now those that are old and no longer
+considered state-of-the-art.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/117-4
+00:08:29.565 --> 00:08:34.324
+And so your code base is just by atrophy
+has turned into a legacy code base.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/118-0
+00:08:34.444 --> 00:08:40.241
+The practices and standards for code
+change tend to change over time as new
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/118-1
+00:08:40.241 --> 00:08:46.419
+concepts are introduced and new new ways
+of coding are are are and that can also
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/118-2
+00:08:46.419 --> 00:08:52.444
+affect the the quality of the code base
+and again those practices will change.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/119-0
+00:08:52.644 --> 00:08:56.161
+Independently of the code.
+This is not actually the code degrading
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/119-1
+00:08:56.161 --> 00:08:58.471
+itself,
+but it's just becoming out of date.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/119-2
+00:08:58.471 --> 00:09:01.095
+The people that actually are working on
+the code,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/119-3
+00:09:01.095 --> 00:09:05.347
+they come and go and they have different
+techniques that they bring to the table
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/119-4
+00:09:05.347 --> 00:09:08.444
+and then so that can also degrade the
+code base over time.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/120-0
+00:09:08.524 --> 00:09:13.522
+If they don't completely understand how
+the original writers of the code intended
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/120-1
+00:09:13.522 --> 00:09:17.727
+for it to be to maintained,
+business rules will change and make code
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/120-2
+00:09:17.727 --> 00:09:21.871
+obsolete. The workflows will change,
+the architectures will change.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/120-3
+00:09:21.871 --> 00:09:25.650
+These are all just different ways that
+that code can degrade.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/120-4
+00:09:25.650 --> 00:09:27.844
+And if we go back to that, you know.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/121-0
+00:09:28.044 --> 00:09:32.925
+List of 25 different ways that code can
+be considered legacy. Those are all,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/121-1
+00:09:32.925 --> 00:09:36.284
+you know,
+those are all ways they degrade over time.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/122-0
+00:09:40.004 --> 00:09:43.849
+So we mentioned Evergreen code.
+Evergreen code is actually resist
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/122-1
+00:09:43.849 --> 00:09:47.170
+technical debt.
+So that's one of the the the major ideas
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/122-2
+00:09:47.170 --> 00:09:50.200
+here is that we don't want to incur
+technical debt.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/122-3
+00:09:50.200 --> 00:09:54.686
+We want to address technical debt at the
+time that well and we don't want to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/122-4
+00:09:54.686 --> 00:09:57.308
+create it.
+We want to we want to address the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/122-5
+00:09:57.308 --> 00:09:58.764
+technical issues as they.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/123-0
+00:09:59.084 --> 00:10:04.728
+They come up and not allow that to bog us
+down and becomes and degrade the code
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/123-1
+00:10:04.728 --> 00:10:08.678
+early. Evergreen is not legacy,
+but everything else is.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/123-2
+00:10:08.678 --> 00:10:14.463
+And one way of thinking about it is if we
+were to write this code all over again,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/123-3
+00:10:14.463 --> 00:10:18.484
+it would turn out pretty much just like
+it is right now.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/124-0
+00:10:18.684 --> 00:10:23.509
+And as I mentioned,
+very few code bases are maintained as
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/124-1
+00:10:23.509 --> 00:10:30.248
+evergreen because it's very difficult to
+do because you have all of those change
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/124-2
+00:10:30.248 --> 00:10:36.987
+factors that are affecting the code base
+in causing it to become more legacy and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/124-3
+00:10:36.987 --> 00:10:38.484
+you have to fight.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/125-0
+00:10:38.684 --> 00:10:44.723
+All of them in order for you to be able
+to maintain a code that's evergreen.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/125-1
+00:10:44.723 --> 00:10:50.919
+But I think AI assistance gives us a tool
+that we need in order for us to move
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/125-2
+00:10:50.919 --> 00:10:54.684
+faster and address these technical debt
+issues.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/126-0
+00:10:55.164 --> 00:10:55.244
+Um.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/127-0
+00:10:57.724 --> 00:11:03.356
+Right off the bat and keep the code
+Evergreen as we go forward or move the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/127-1
+00:11:03.356 --> 00:11:09.289
+move a legacy code base more towards
+Evergreen in an effective way and in a in
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/127-2
+00:11:09.289 --> 00:11:14.846
+a way that we've we you know we don't
+neglect new features but we're just
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/127-3
+00:11:14.846 --> 00:11:17.324
+moving the code base back into a.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/128-0
+00:11:17.404 --> 00:11:21.564
+A place where it's easier to maintain.
+Any questions on Evergreen?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/129-0
+00:11:23.604 --> 00:11:29.632
+Now we did a the exercise that the I a
+bit of a confession to make in the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/129-1
+00:11:29.632 --> 00:11:36.230
+exercise yesterday where we ended up with
+you know legacy code at the end of it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/129-2
+00:11:36.230 --> 00:11:39.244
+I deliberately chose the the the GPT.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/130-0
+00:11:39.324 --> 00:11:46.602
+50 mini model I want as as as the model
+because I I deliberately wanted to make
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/130-1
+00:11:46.602 --> 00:11:53.970
+sure that we ended up with something that
+was not Evergreen if I go to that same
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/130-2
+00:11:53.970 --> 00:11:55.244
+exercise with.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/131-0
+00:11:55.524 --> 00:12:01.793
+Claude Sonnet 5 or 451, sorry,
+you'll get a lot closer to Evergreen
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/131-1
+00:12:01.793 --> 00:12:08.153
+Evergreen code using that model because
+it's it has I think a better
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/131-2
+00:12:08.153 --> 00:12:11.564
+understanding of what a good code is.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/132-0
+00:12:11.964 --> 00:12:16.158
+The code is good,
+so that's just something to consider and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/132-1
+00:12:16.158 --> 00:12:19.428
+I'll talk a little bit later about,
+you know,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/132-2
+00:12:19.428 --> 00:12:25.258
+the differences in the model and why some
+models are better than other models for
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/132-3
+00:12:25.258 --> 00:12:26.324
+certain things.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/133-0
+00:12:28.524 --> 00:12:32.699
+But another point is that legacy code
+should instill respect, not fear.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/133-1
+00:12:32.699 --> 00:12:37.453
+This is something I've always felt about
+legacy code is that, you know, it works,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/133-2
+00:12:37.453 --> 00:12:40.816
+it's in production,
+it's doing something valuable for the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/133-3
+00:12:40.816 --> 00:12:43.425
+business and therefore we should respect
+it,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/133-4
+00:12:43.425 --> 00:12:47.484
+but we should not fear making changes to
+it and trying to improve it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/134-0
+00:12:47.564 --> 00:12:50.630
+So you know it works. Don't break it.
+You know it works.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/134-1
+00:12:50.630 --> 00:12:53.212
+It's well tested typically by the users,
+right?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/134-2
+00:12:53.212 --> 00:12:57.085
+I mean you can one assumption that you
+can make for something that's in
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/134-3
+00:12:57.085 --> 00:13:01.173
+production and being used is that it,
+you know there it may have still have
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/134-4
+00:13:01.173 --> 00:13:04.346
+some bugs in it,
+but it is essentially well tested and you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/134-5
+00:13:04.346 --> 00:13:04.884
+can start.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/135-0
+00:13:05.164 --> 00:13:07.870
+Your regressor testing with that
+assumption,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/135-1
+00:13:07.870 --> 00:13:12.379
+and you can move faster by just creating
+tests for the changes that you're
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/135-2
+00:13:12.379 --> 00:13:15.325
+introducing,
+as opposed to having to worry about
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/135-3
+00:13:15.325 --> 00:13:19.653
+having regression testing for the entire
+application. It is what it is.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/135-4
+00:13:19.653 --> 00:13:23.140
+You get what you get and you don't throw
+a fit, you know,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/135-5
+00:13:23.140 --> 00:13:25.004
+going back to raising children.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/136-0
+00:13:25.084 --> 00:13:30.720
+And you know, you kind of have to take it,
+take it for what it is and and then try
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/136-1
+00:13:30.720 --> 00:13:33.164
+to do what you can to to improve it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/137-0
+00:13:33.804 --> 00:13:37.044
+Any questions on these concepts or?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/138-0
+00:13:38.204 --> 00:13:39.364
+Any thoughts on this?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/139-0
+00:13:39.964 --> 00:13:43.355
+Yeah,
+I have a question just sort of about.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/139-1
+00:13:43.355 --> 00:13:47.980
+I'm not sure I like fully understand what
+you mean by like.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/139-2
+00:13:47.980 --> 00:13:52.604
+So when you say Evergreen code,
+do you mean like this code?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/142-0
+00:13:54.044 --> 00:13:58.472
+Is so when you say green,
+you mean like Greenfield, right?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/141-0
+00:13:58.364 --> 00:13:59.924
+Yes, right.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/142-1
+00:13:58.472 --> 00:14:03.425
+It's like it's new code.
+So like Evergreen code is basically just
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/142-2
+00:14:03.425 --> 00:14:08.453
+like the practice of like continually
+making sure that it's green.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/144-0
+00:14:07.484 --> 00:14:11.557
+Right, that's right, right.
+And that's what it's referred to as
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/142-3
+00:14:08.453 --> 00:14:09.804
+Is that right? OK.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/143-0
+00:14:10.084 --> 00:14:10.484
+So bye.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/144-1
+00:14:11.557 --> 00:14:14.802
+Evergreen, right. And you know it takes,
+it takes,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/144-2
+00:14:14.802 --> 00:14:20.084
+you know typically without ASI assistance,
+I think it takes a lot of dedication to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/144-3
+00:14:20.084 --> 00:14:24.284
+keep it, to keep it green.
+You have to have buy in for management
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/144-4
+00:14:24.284 --> 00:14:27.084
+that you're not going to take on
+technical.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/145-0
+00:14:27.164 --> 00:14:32.690
+That if you find that you need to
+implement something and you need to do
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/145-1
+00:14:32.690 --> 00:14:37.384
+additional technology,
+whether that be adding tests or adding
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/145-2
+00:14:37.384 --> 00:14:43.364
+monitoring or any of the things that
+typically don't show up as features on a.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/146-0
+00:14:43.804 --> 00:14:48.404
+On a user screen that you're going to
+take the time to do that implementation.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/149-0
+00:14:49.764 --> 00:14:53.664
+OK, so like the I I guess in my mind,
+like the idea is that like you don't,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/147-0
+00:14:49.884 --> 00:14:51.204
+Good.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/149-1
+00:14:53.664 --> 00:14:57.308
+you don't write Evergreen code,
+you write green code and then you like
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/149-2
+00:14:57.308 --> 00:15:00.182
+keep it green.
+And then that's sort of what you mean by
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/148-0
+00:14:59.804 --> 00:15:01.604
+That's right. That's correct.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/149-3
+00:15:00.182 --> 00:15:03.004
+like Evergreen code. OK, OK,
+that makes sense. Thanks.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/150-0
+00:15:06.764 --> 00:15:11.564
+So let's just talk about some things
+before we get into engaging with with
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/150-1
+00:15:11.564 --> 00:15:14.636
+copilot.
+We want to have a strategy for backing
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/150-2
+00:15:14.636 --> 00:15:19.756
+out of changes, you know, branching,
+tagging, you know, recording a a a commit,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/150-3
+00:15:19.756 --> 00:15:24.812
+archiving something, zipping something,
+anything that will do allows you to go
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/150-4
+00:15:24.812 --> 00:15:25.644
+back because.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/151-0
+00:15:25.964 --> 00:15:29.435
+Because code generation is non
+deterministic,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/151-1
+00:15:29.435 --> 00:15:35.245
+there's no guarantee that what you're
+gonna get is something that's gonna be
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/151-2
+00:15:35.245 --> 00:15:40.752
+suitable for what you need to do,
+and you may decide that it's no longer
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/151-3
+00:15:40.752 --> 00:15:45.204
+worth the effort to go down a particular
+strategy or path.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/152-0
+00:15:45.364 --> 00:15:52.103
+You'll wanna go back and go back to a
+previous iteration of it and try a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/152-1
+00:15:52.103 --> 00:15:59.395
+different technique or a different model
+or a different way of approaching the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/152-2
+00:15:59.395 --> 00:16:02.164
+problem. I once had a copilot.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/153-0
+00:16:02.244 --> 00:16:08.247
+Dissay a little bit because I was trying
+to drive towards a particular outcome and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/153-1
+00:16:08.247 --> 00:16:11.502
+it kept suggesting a strategy that I
+didn't,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/153-2
+00:16:11.502 --> 00:16:17.360
+I didn't really approve of and and so I
+kept modifying the prompt and I kept not
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/153-3
+00:16:17.360 --> 00:16:21.844
+getting what I want and I kept undoing it
+and undoing it and.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/154-0
+00:16:21.924 --> 00:16:26.013
+And undoing it.
+And then eventually Copilot comes back
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/154-1
+00:16:26.013 --> 00:16:31.811
+and says I've noticed that you've been,
+you've not been accepting my changes.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/154-2
+00:16:31.811 --> 00:16:37.164
+Perhaps I should try a different approach,
+which I thought was amazing.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/156-0
+00:16:37.524 --> 00:16:41.992
+So have a strategy for testing that code.
+No matter who or what wrote it,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/156-1
+00:16:41.992 --> 00:16:46.582
+you need to have confidence that your
+test automation will catch the issues
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/156-2
+00:16:46.582 --> 00:16:50.506
+before it reach production.
+So you know this is and there's many
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/156-3
+00:16:50.506 --> 00:16:53.284
+different techniques for for this one of
+the.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/157-0
+00:16:53.844 --> 00:17:00.093
+Ones that I like is a feature flagging
+and that allows you to essentially deploy
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/157-1
+00:17:00.093 --> 00:17:05.801
+code into production and test it in
+production without actually having to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/157-2
+00:17:05.801 --> 00:17:10.276
+expose it to end users.
+That's I think a really effective
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/157-3
+00:17:10.276 --> 00:17:13.284
+approach of moving a code base forward.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/158-0
+00:17:13.684 --> 00:17:15.004
+And not.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/159-0
+00:17:16.244 --> 00:17:20.231
+And not actually exposing yourself to too
+much risk,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/159-1
+00:17:20.231 --> 00:17:26.099
+but the idea is that you really need to
+have solid tests in order for you to,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/159-2
+00:17:26.099 --> 00:17:32.343
+I think, engage with a legacy code base.
+So that would be and David Feathers talks
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/159-3
+00:17:32.343 --> 00:17:35.804
+about this in his book that that's
+something.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/160-0
+00:17:36.044 --> 00:17:38.727
+The first thing that you need to do and
+and that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/160-1
+00:17:38.727 --> 00:17:43.074
+But basically what that allows you to do
+is to feel confident that if you make a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/160-2
+00:17:43.074 --> 00:17:45.918
+change that you can you you stop.
+You don't have to.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/160-3
+00:17:45.918 --> 00:17:49.942
+If you don't have that confidence,
+you have to stop and and build it first
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/160-4
+00:17:49.942 --> 00:17:53.484
+because you want to make sure that you
+have that that confidence.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/161-0
+00:17:53.684 --> 00:18:00.062
+One of the techniques that I've seen used
+very effectively for adding tests to to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/161-1
+00:18:00.062 --> 00:18:04.495
+the legacy code.
+It's something that was called approval
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/161-2
+00:18:04.495 --> 00:18:08.540
+test, but now it's called.
+I forget the name of it,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/161-3
+00:18:08.540 --> 00:18:13.284
+but the idea is it's a simple test
+framework that says that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/162-0
+00:18:13.604 --> 00:18:17.485
+You know,
+if you're looking at a particular output
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/162-1
+00:18:17.485 --> 00:18:21.823
+of of a method,
+you can save the entire contents of that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/162-2
+00:18:21.823 --> 00:18:27.911
+output as a test and then just validate
+that the code continues to produce that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/162-3
+00:18:27.911 --> 00:18:28.444
+output.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/163-0
+00:18:29.244 --> 00:18:33.995
+You don't don't need to specify
+individually every single property or
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/163-1
+00:18:33.995 --> 00:18:37.864
+field's value.
+You just you just just make the assertion
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/163-2
+00:18:37.864 --> 00:18:43.090
+that the entire the entire output is
+correct and then that will allow you to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/163-3
+00:18:43.090 --> 00:18:46.484
+create a simple test.
+You can do it very quickly.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/164-0
+00:18:46.884 --> 00:18:51.375
+And Llewellyn Falco did a demonstration
+where he had a timer that would go off
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/164-1
+00:18:51.375 --> 00:18:56.093
+every two minutes and he would commit the
+code changes with test passing as he was
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/164-2
+00:18:56.093 --> 00:18:59.106
+going through and doing the legacy code
+refactoring.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/164-3
+00:18:59.106 --> 00:19:03.654
+It was a really effective technique in
+the sense that you could create the test
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/164-4
+00:19:03.654 --> 00:19:06.724
+very quickly,
+you could then verify that you haven't.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/165-0
+00:19:06.844 --> 00:19:12.257
+Broken anything as you're doing a
+refactoring very efficiently and move
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/165-1
+00:19:12.257 --> 00:19:16.016
+forward.
+So that's a technique that I've found to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/165-2
+00:19:16.016 --> 00:19:21.504
+be very useful is using a testing
+frameworks that don't require a lot of
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/165-3
+00:19:21.504 --> 00:19:23.684
+effort in order to implement.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/166-0
+00:19:23.764 --> 00:19:26.932
+You know,
+AI can can take a lot of that place.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/166-1
+00:19:26.932 --> 00:19:31.112
+It doesn't, you know,
+AI doesn't care how many properties you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/166-2
+00:19:31.112 --> 00:19:35.965
+have to test in order to to assert that
+something is working correctly.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/166-3
+00:19:35.965 --> 00:19:40.684
+So that can that can be another way of
+approaching that same problem.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/167-0
+00:19:41.124 --> 00:19:44.364
+And then you need a strategy for
+reviewing those changes.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/168-0
+00:19:46.004 --> 00:19:51.241
+You know the the thing that that that it
+will strike you early on is that you are
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/168-1
+00:19:51.241 --> 00:19:56.414
+generating a lot of code and now you have
+a lot of code to review and you need a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/168-2
+00:19:56.414 --> 00:20:01.204
+plan to be able to do that effectively
+and that plan may include using AI.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/169-0
+00:20:01.284 --> 00:20:09.174
+To actually do a do an initial code
+review and you can have a part of your
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/169-1
+00:20:09.174 --> 00:20:16.644
+your PR hygiene that it must it must pass
+an AI code review before it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/170-0
+00:20:17.404 --> 00:20:21.343
+Before you pass it on to a developer to
+actually review it,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/170-1
+00:20:21.343 --> 00:20:26.659
+and that can be effective if we do it,
+if we implement the the context correctly
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/170-2
+00:20:26.659 --> 00:20:30.204
+so that the AI reviewer knows what to
+what to expect.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/171-0
+00:20:31.364 --> 00:20:35.114
+And then you want to keep your change
+sets as small as possible.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/171-1
+00:20:35.114 --> 00:20:39.153
+I I mentioned this yesterday.
+Don't make those changes incremental as
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/171-2
+00:20:39.153 --> 00:20:42.037
+you saw,
+you know you can easily build up a large
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/171-3
+00:20:42.037 --> 00:20:46.364
+number of changes very quickly if you if
+you don't keep stay on top of it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/172-0
+00:20:46.564 --> 00:20:50.004
+Any any comments or questions here?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/173-0
+00:20:51.204 --> 00:20:55.805
+I have a question about the AI code
+review. What does that look like?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/173-1
+00:20:55.805 --> 00:21:00.932
+Is it copilot reviewing copilot generated
+code or some other AI reviewing the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/173-2
+00:21:00.932 --> 00:21:02.444
+copilot generated code?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/175-0
+00:21:02.324 --> 00:21:08.230
+It's usually copilot generate reviewing,
+you know, copilot generated code.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/175-1
+00:21:08.230 --> 00:21:13.348
+You can kind of mitigate for that by
+choosing a different model.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/174-0
+00:21:11.004 --> 00:21:11.284
+And.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/175-2
+00:21:13.348 --> 00:21:19.884
+You could say I wrote the code in Cloud 4.
+5 but I want to review it with ChatGPT.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/176-0
+00:21:20.164 --> 00:21:22.604
+ChatGPT file file.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/177-0
+00:21:21.044 --> 00:21:27.724
+And how how exactly do you implement this
+to make it automatic in a pull request?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/178-0
+00:21:28.324 --> 00:21:32.333
+Well,
+what you would do is you basically there
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/178-1
+00:21:32.333 --> 00:21:39.071
+there's a, there's a CLI for copilot,
+so you can use the CLI to actually run a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/178-2
+00:21:39.071 --> 00:21:45.724
+a prompt that contains an instruction
+that it should use a particular bottle.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/180-0
+00:21:46.164 --> 00:21:49.768
+And then that will cause that to to
+produce that model.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/180-1
+00:21:49.768 --> 00:21:54.788
+Then you could have the AI review the
+review to make sure there's nothing out
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/180-2
+00:21:54.788 --> 00:21:59.744
+of or have the since they have the review
+produce a thumbs up or thumbs down
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/180-3
+00:21:59.744 --> 00:22:03.284
+message that would then allow the
+pipeline to proceed.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/179-0
+00:22:00.364 --> 00:22:00.444
+Is.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/182-0
+00:22:02.484 --> 00:22:08.284
+Is is this something you are going to
+demonstrate today or another day?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/183-0
+00:22:07.764 --> 00:22:10.804
+No, we can look at it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/184-0
+00:22:12.604 --> 00:22:16.721
+It's not something I've I've implemented
+up to this point, but anyway,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/184-1
+00:22:16.721 --> 00:22:21.244
+now that I have a PRS working in our repo,
+we can take a shot at trying to do
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/184-2
+00:22:21.244 --> 00:22:22.404
+something like that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/186-0
+00:22:22.884 --> 00:22:25.693
+Yeah,
+I would be really curious to see how how
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/186-1
+00:22:25.693 --> 00:22:29.219
+effective that is and what it looks like.
+You know, is it?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/185-0
+00:22:26.844 --> 00:22:28.964
+Sure, sure.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/186-2
+00:22:29.219 --> 00:22:32.804
+Is it like a PR decoration with comments
+or something more?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/188-0
+00:22:33.844 --> 00:22:38.033
+Sure. Yeah,
+we'll take a look at maybe maybe tomorrow
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/187-0
+00:22:35.404 --> 00:22:35.524
+OK.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/188-1
+00:22:38.033 --> 00:22:38.964
+or Thursday.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/189-0
+00:22:39.724 --> 00:22:40.844
+OK. Thanks.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/190-0
+00:22:42.044 --> 00:22:42.284
+Sure.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/191-0
+00:22:43.524 --> 00:22:48.856
+OK, so moving on then.
+One thing I'd like to to to emphasize I
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/191-1
+00:22:48.856 --> 00:22:55.628
+think is that we want to treat copilot as
+a highly skilled junior developer who
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/191-2
+00:22:55.628 --> 00:22:58.844
+needs effective management, right? So.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/192-0
+00:22:59.484 --> 00:23:03.918
+You know, copilot can do, you know,
+do quite a lot of things. In fact,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/192-1
+00:23:03.918 --> 00:23:08.413
+many times it it'll it'll try and
+introduce techniques that I wouldn't.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/192-2
+00:23:08.413 --> 00:23:13.346
+I'm not really aware of and I have to
+actually educate myself on its output in
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/192-3
+00:23:13.346 --> 00:23:15.844
+order for me to understand what it does.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/193-0
+00:23:16.644 --> 00:23:23.188
+But it's still in a sense constrained by
+the context that it's been given and its
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/193-1
+00:23:23.188 --> 00:23:26.779
+ability to produce output,
+because remember,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/193-2
+00:23:26.779 --> 00:23:32.524
+it doesn't really understand the code in
+in the same way that we do so.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/194-0
+00:23:32.804 --> 00:23:38.926
+It so it understands that at a much lower
+level and the code that it's generating
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/194-1
+00:23:38.926 --> 00:23:42.808
+is just is.
+It's a prediction of what it thinks you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/194-2
+00:23:42.808 --> 00:23:46.839
+you're expecting,
+but it's no guarantee that it will.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/194-3
+00:23:46.839 --> 00:23:47.884
+So we need to.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/195-0
+00:23:48.004 --> 00:23:52.969
+We need to both provide it with clear and
+direct instructions on what it what we're
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/195-1
+00:23:52.969 --> 00:23:57.403
+expecting and we saw some of that
+yesterday I think in our in our exercise
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/195-2
+00:23:57.403 --> 00:24:02.309
+where we would ask for something but not
+get not get it back close to what we need
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/195-3
+00:24:02.309 --> 00:24:06.978
+and have to modify our prompts or change
+our our our approach to get something
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/195-4
+00:24:06.978 --> 00:24:07.924
+that was closer.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/196-0
+00:24:08.084 --> 00:24:11.976
+And you know the the formula where you
+know clear instructions and careful
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/196-1
+00:24:11.976 --> 00:24:13.844
+review will give us better outcomes.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/197-0
+00:24:15.724 --> 00:24:21.391
+So context is really important in in this
+aspect in that if it's not in the context,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/197-1
+00:24:21.391 --> 00:24:26.657
+it's not the A I doesn't know about it
+and doesn't, it can't, it can't use it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/197-2
+00:24:26.657 --> 00:24:31.191
+So there's two aspects to it.
+There's having too little context and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/197-3
+00:24:31.191 --> 00:24:32.924
+then it's having too much.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/198-0
+00:24:33.524 --> 00:24:37.818
+Too little contents context means that
+the A I is open to doing the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/198-1
+00:24:37.818 --> 00:24:42.932
+implementation in any way that it sees
+fit or any way that it thinks it might be
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/198-2
+00:24:42.932 --> 00:24:47.731
+the most appropriate solution that may
+not coincide coincide with what your
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/198-3
+00:24:47.731 --> 00:24:48.804
+expectations are.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/199-0
+00:24:50.244 --> 00:24:56.004
+And too much is that you've got so much
+context that the IT can't hold the the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/199-1
+00:24:56.004 --> 00:25:01.326
+entire context in its token window and
+then something and then it has to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/199-2
+00:25:01.326 --> 00:25:06.867
+basically get rid of some context in
+order for it to be able to process and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/199-3
+00:25:06.867 --> 00:25:09.564
+you don't have control about what it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/200-0
+00:25:09.804 --> 00:25:14.522
+Decides to get rid of.
+So I'll talk a little bit about how we
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/200-1
+00:25:14.522 --> 00:25:20.078
+can manage that and some techniques that
+we have for understanding that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/200-2
+00:25:20.078 --> 00:25:24.948
+But that whole process is getting better
+in two different ways.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/200-3
+00:25:24.948 --> 00:25:27.764
+One is that the tooling is improving.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/201-0
+00:25:28.004 --> 00:25:34.324
+There's a enhancement question and we
+might even see something next week on
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/201-1
+00:25:34.324 --> 00:25:41.225
+this in that we're expecting that copilot
+will be able to give us more information
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/201-2
+00:25:41.225 --> 00:25:44.884
+about how we're utilizing that context
+and.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/203-0
+00:25:45.644 --> 00:25:51.581
+Whether and helping us know when we've
+got too much context and therefore we can
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/203-1
+00:25:51.581 --> 00:25:55.906
+start working on paring that down.
+And the other thing is,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/203-2
+00:25:55.906 --> 00:26:00.964
+is that the as the AI models improve,
+they increase the size of the.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/204-0
+00:26:01.364 --> 00:26:08.204
+The token window and therefore you can,
+you know, put more context into it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/204-1
+00:26:08.204 --> 00:26:12.704
+In fact,
+one of the reasons that Claude saw it is
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/204-2
+00:26:12.704 --> 00:26:16.484
+favored for large scale AI implementation.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/205-0
+00:26:17.124 --> 00:26:23.607
+Code generation is that it has a larger
+context window than ChatGPT 5 or many
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/205-1
+00:26:23.607 --> 00:26:28.262
+other models,
+and we'll talk a bit more about that in a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/205-2
+00:26:28.262 --> 00:26:32.168
+second.
+You can manage context with prompts by
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/205-3
+00:26:32.168 --> 00:26:36.324
+crafting effective prompts and using good
+prompt.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/206-0
+00:26:36.604 --> 00:26:40.191
+Engineering techniques.
+You can minimize the amount of context
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/206-1
+00:26:40.191 --> 00:26:44.688
+that you're providing and having the
+models focus on only the context that you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/206-2
+00:26:44.688 --> 00:26:49.015
+think is the most important for that task,
+and we'll talk a bit about that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/206-3
+00:26:49.015 --> 00:26:51.804
+We'll show some examples and build some
+prompts.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/207-0
+00:26:51.964 --> 00:26:56.294
+For to that effort. But you know,
+the thing about the context is right now
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/207-1
+00:26:56.294 --> 00:26:59.355
+it's pretty opaque. It's it's kind of hit,
+you know,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/207-2
+00:26:59.355 --> 00:27:03.974
+you're kind of guessing and you're kind
+of you don't have any precise tools for
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/207-3
+00:27:03.974 --> 00:27:07.900
+measuring the entire context.
+But I'll show you some techniques for
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/207-4
+00:27:07.900 --> 00:27:11.364
+actually getting a sense,
+at least a sense of what it what.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/208-0
+00:27:11.564 --> 00:27:15.799
+What your context looks like.
+You can add add context with you know
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/208-1
+00:27:15.799 --> 00:27:20.033
+instructions and markdown instruction
+files. We'll go through that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/208-2
+00:27:20.033 --> 00:27:23.708
+Those are very useful.
+So those are things like file based
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/208-3
+00:27:23.708 --> 00:27:27.444
+custom instructions which does automatic
+context injection.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/209-0
+00:27:28.364 --> 00:27:33.670
+Instruction scopes the the structure and
+authoring of best practices and structure
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/209-1
+00:27:33.670 --> 00:27:37.059
+and author structuring and authoring best
+practices.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/209-2
+00:27:37.059 --> 00:27:42.109
+Again the chat modes and then chat modes
+are also effective in that sense that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/209-3
+00:27:42.109 --> 00:27:43.004
+they are like.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/210-0
+00:27:43.244 --> 00:27:48.806
+They're like prompts that are workflows
+and focused on accomplishing a particular
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/210-1
+00:27:48.806 --> 00:27:51.995
+task, and you can,
+in those custom chat modes,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/210-2
+00:27:51.995 --> 00:27:57.557
+specify what what additional things that
+you want to bring into your context when
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/210-3
+00:27:57.557 --> 00:27:59.524
+you're actually in that mode.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/211-0
+00:27:59.884 --> 00:28:03.581
+And what that allows you to do is to say,
+OK,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/211-1
+00:28:03.581 --> 00:28:08.563
+I have all of these different
+instructions with some of these
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/211-2
+00:28:08.563 --> 00:28:12.903
+instructions.
+Since instruction files are essentially
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/211-3
+00:28:12.903 --> 00:28:17.644
+global in scope,
+they basically can you can be you can be.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/212-0
+00:28:18.244 --> 00:28:23.521
+Filling up your context with instructions
+that are not applicable to the task at
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/212-1
+00:28:23.521 --> 00:28:26.192
+hand.
+The custom chat modes allow you to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/212-2
+00:28:26.192 --> 00:28:30.296
+specify specifically what context that
+you do want to include,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/212-3
+00:28:30.296 --> 00:28:34.204
+and then you can take on a persona of a
+particular type of.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/213-0
+00:28:34.484 --> 00:28:41.108
+Change agent like a like a tester or an
+architect or a reviewer or some other
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/213-1
+00:28:41.108 --> 00:28:47.561
+persona and then this will allows you to
+focus the AI on only that specific
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/213-2
+00:28:47.561 --> 00:28:49.684
+context and it helps you.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/214-0
+00:28:50.164 --> 00:28:53.684
+Keep your context a little bit more under
+control.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/215-0
+00:28:57.324 --> 00:29:02.407
+So in terms of awareness of context,
+Copilot has a limited context window.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/215-1
+00:29:02.407 --> 00:29:07.016
+It's called a token budget.
+But each each A I has a different token
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/215-2
+00:29:07.016 --> 00:29:12.234
+budget and as I mentioned and I'll go,
+there's a slide coming up about that,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/215-3
+00:29:12.234 --> 00:29:15.284
+about how big these are on different
+models.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/216-0
+00:29:15.564 --> 00:29:19.999
+So long prompt files can push the useful
+information out of scope.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/216-1
+00:29:19.999 --> 00:29:25.029
+So we This is why we want to try to
+manage context and and premium uses can
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/216-2
+00:29:25.029 --> 00:29:30.457
+be tracked with the the multi dashboard,
+but that's a slightly different sense of
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/216-3
+00:29:30.457 --> 00:29:32.244
+context in the in terms of.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/217-0
+00:29:33.204 --> 00:29:38.439
+You can essentially if you run out of
+premium usage tokens, it will.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/217-1
+00:29:38.439 --> 00:29:44.811
+You'll effectively either have to pay for
+them or you cannot use those models until
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/217-2
+00:29:44.811 --> 00:29:46.404
+the end of the month.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/218-0
+00:29:47.244 --> 00:29:52.294
+So in terms of prompt design,
+you want to keep your prompts as shorter
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/218-1
+00:29:52.294 --> 00:29:55.851
+and modular as you can use step-by-step
+requests,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/218-2
+00:29:55.851 --> 00:30:00.830
+reuse prompt files and templates,
+and reset the chat if you feel like
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/218-3
+00:30:00.830 --> 00:30:02.324
+you're having issues.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/219-0
+00:30:02.524 --> 00:30:07.102
+Your answer's drifting and it's not.
+If you've noticed that, for example,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/219-1
+00:30:07.102 --> 00:30:11.804
+the prompt response is slowing down,
+you can just go up and clear the chat.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/219-2
+00:30:11.804 --> 00:30:16.630
+The issue with that is that it's not
+specifying what context you're gonna get
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/219-3
+00:30:16.630 --> 00:30:19.599
+rid of.
+You're just getting all the context and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/219-4
+00:30:19.599 --> 00:30:21.084
+now you have to come up.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/220-0
+00:30:22.124 --> 00:30:28.952
+Up with the strategy for rebuilding that
+context and and prompt files can help you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/220-1
+00:30:28.952 --> 00:30:33.313
+with that.
+Chat modes can help you with that and and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/220-2
+00:30:33.313 --> 00:30:38.084
+so and we'll talk about some of those
+things as well, so.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/221-0
+00:30:38.404 --> 00:30:44.976
+And also talk about how do we save
+context and basically resume that context
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/221-1
+00:30:44.976 --> 00:30:51.718
+either at a later date or on a different
+machine or just you want to clear out
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/221-2
+00:30:51.718 --> 00:30:58.204
+your context and reestablish it in order
+to make things to reduce the size.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/222-0
+00:30:58.204 --> 00:31:01.953
+The the context window and to get
+everything working again you can.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/222-1
+00:31:01.953 --> 00:31:06.364
+There are techniques that you can use
+that can accomplish and help you do that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/223-0
+00:31:08.364 --> 00:31:13.476
+And so in terms of management,
+you can use those hashtag mentioned to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/223-1
+00:31:13.476 --> 00:31:16.835
+pull in specific files or folders or
+symbols.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/223-2
+00:31:16.835 --> 00:31:22.458
+This is our something that we can do in
+chat modes and in prompt files to to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/223-3
+00:31:22.458 --> 00:31:24.284
+restrict context you can.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/224-0
+00:31:24.364 --> 00:31:30.426
+There's a feature called Spaces.
+I haven't really worked with a copilot
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/224-1
+00:31:30.426 --> 00:31:34.215
+since I'm primarily working alone on
+things,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/224-2
+00:31:34.215 --> 00:31:40.697
+but you can actually go into into the
+copilot UI and you can then specify in
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/224-3
+00:31:40.697 --> 00:31:43.644
+the UI instruction files and other.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/225-0
+00:31:44.244 --> 00:31:51.031
+Documents for to define a context and
+then go into the chat window in the IDE
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/225-1
+00:31:51.031 --> 00:31:57.905
+and then go use the the GitHub tool to
+actually recall that space and use that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/225-2
+00:31:57.905 --> 00:32:02.604
+that context in your current chat window,
+which is a.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/226-0
+00:32:02.964 --> 00:32:08.129
+An interesting way that you could share
+essentially A context between multiple
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/226-1
+00:32:08.129 --> 00:32:12.574
+developers so that each one of them is
+not rebuilding that context.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/226-2
+00:32:12.574 --> 00:32:17.738
+But there's two limitations to that,
+or at least one limitation that's I think
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/226-3
+00:32:17.738 --> 00:32:20.484
+makes it a little a little useful is that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/227-0
+00:32:20.684 --> 00:32:26.965
+While in the spaces you can use it to,
+you can add a repository into that space
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/227-1
+00:32:26.965 --> 00:32:31.833
+and include that context.
+When you reference that in the IDE,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/227-2
+00:32:31.833 --> 00:32:35.444
+that repository is no longer in that
+context.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/228-0
+00:32:35.804 --> 00:32:40.977
+And but you're in so you could use in
+addition to that like like the code base
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/228-1
+00:32:40.977 --> 00:32:45.168
+tag to include the context of what you're
+currently working on.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/228-2
+00:32:45.168 --> 00:32:50.144
+But what I would but in my my mind it's
+like you know just by defining them
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/228-3
+00:32:50.144 --> 00:32:55.120
+within the project and saving them with
+the project itself inside of GitHub
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/228-4
+00:32:55.120 --> 00:32:55.644
+Copiler.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/229-0
+00:32:55.724 --> 00:33:02.179
+Essentially they can accomplish the same
+thing and then this is what it's easy to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/229-1
+00:33:02.179 --> 00:33:08.633
+do is that essentially your contact is it
+infers from the files that you actually
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/229-2
+00:33:08.633 --> 00:33:15.324
+have open and you can by just keeping the
+number of tabs you have open in the IE to.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/230-0
+00:33:15.564 --> 00:33:21.698
+As few as possible can reduce the noise
+that can can clutter up your context.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/230-1
+00:33:21.698 --> 00:33:24.844
+So any questions so far on this context?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/234-0
+00:33:27.324 --> 00:33:32.489
+Not on the context,
+but what is the GitHub copilot UI?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/231-0
+00:33:28.324 --> 00:33:28.444
+The.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/234-1
+00:33:32.489 --> 00:33:38.124
+Can you give us? Oh, oh,
+that's what you meant. OK, thanks.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/232-0
+00:33:32.924 --> 00:33:35.684
+That's the github.com. It's github.com.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/233-0
+00:33:37.084 --> 00:33:38.724
+Yeah, yeah.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/235-0
+00:33:40.044 --> 00:33:43.733
+All right,
+so just a couple of ways of dealing with
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/235-1
+00:33:43.733 --> 00:33:46.855
+it.
+Premium request dashboard for the usage
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/235-2
+00:33:46.855 --> 00:33:50.403
+tokens.
+We showed you that and talked about that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/235-3
+00:33:50.403 --> 00:33:56.149
+You keep an eye on on your usage tokens
+and token estimation tools like the open
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/235-4
+00:33:56.149 --> 00:33:59.484
+AI tokenizer. If you search for that,
+you can.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/236-0
+00:33:59.884 --> 00:34:05.515
+You can basically give it a a file and it
+will tell you how many tokens that it
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/236-1
+00:34:05.515 --> 00:34:10.793
+would need or produced to to load that
+file, which is a a interesting way.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/236-2
+00:34:10.793 --> 00:34:16.705
+And there's a watch for off topic replies.
+That could be a sign that it's that your
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/236-3
+00:34:16.705 --> 00:34:18.324
+context is overflowing.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/237-0
+00:34:18.924 --> 00:34:22.374
+It'll be nice.
+It'll be nice if the next week they they
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/237-1
+00:34:22.374 --> 00:34:27.179
+they announced that there there's more
+tools for managing context coming into
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/237-2
+00:34:27.179 --> 00:34:32.230
+copilot because that's something that is
+I I think a a really useful feature that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/237-3
+00:34:32.230 --> 00:34:33.524
+would be nice to see.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/238-0
+00:34:34.204 --> 00:34:40.543
+I did some work with this yesterday after
+class and and I have a a a Python a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/238-1
+00:34:40.543 --> 00:34:46.801
+little bit of Python code to show you
+that takes takes advantage of a Python
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/238-2
+00:34:46.801 --> 00:34:52.084
+library that can do some context analysis
+and tell you how many.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/239-0
+00:34:52.444 --> 00:34:52.924
+How much?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/240-0
+00:34:54.804 --> 00:35:00.465
+How much context you you're you're
+currently using using a rough estimate.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/240-1
+00:35:00.465 --> 00:35:04.088
+It's not, it's not,
+it's not entirely accurate,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/240-2
+00:35:04.088 --> 00:35:10.051
+but it gives you a rough estimation.
+So we talked about this coming soon would
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/240-3
+00:35:10.051 --> 00:35:12.164
+be real-time token counters.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/241-0
+00:35:12.844 --> 00:35:17.027
+And contents usage indicators would be
+very nice.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/241-1
+00:35:17.027 --> 00:35:23.552
+So here's a slide that just talks about
+did a couple of different models here
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/241-2
+00:35:23.552 --> 00:35:30.244
+that and how how many tokens they how
+they they provide in their token windows.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/242-0
+00:35:30.524 --> 00:35:35.959
+So Cloud Sonnet 4.5 you know 200,
+000 plus you know they don't publish
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/242-1
+00:35:35.959 --> 00:35:40.552
+exactly how many how side what the size
+of their window is,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/242-2
+00:35:40.552 --> 00:35:45.604
+but it's it can it's it's considered to
+be over the over 200,000.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/243-0
+00:35:45.644 --> 00:35:50.341
+200,000 chat to GB5 is 128,
+000 for input and 16,000 for output.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/243-1
+00:35:50.341 --> 00:35:55.906
+So the idea between the difference this
+is what you're providing in terms of
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/243-2
+00:35:55.906 --> 00:35:59.519
+context.
+This is the number of tokens that it can
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/243-3
+00:35:59.519 --> 00:36:00.964
+use to produce code.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/245-0
+00:36:01.564 --> 00:36:07.504
+Then Chat TB40 was 64K.
+So if you can see here in the progression
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/245-1
+00:36:07.504 --> 00:36:14.704
+just in one iteration it's doubled the
+number of tokens and the benefit of Chat
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/245-2
+00:36:14.704 --> 00:36:19.924
+TBT 40 and five is that they are tuned
+for IEE workflows.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/246-0
+00:36:20.284 --> 00:36:25.315
+So there there are there's some, you know,
+some benefits for using Tacky B55,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/246-1
+00:36:25.315 --> 00:36:30.218
+even though it has a smaller window,
+it's better at step-by-step operations
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/246-2
+00:36:30.218 --> 00:36:34.281
+and things like that.
+Where cloud son it is better for all you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/246-3
+00:36:34.281 --> 00:36:39.248
+know when you have big context and you
+want to be able to do a lot with that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/246-4
+00:36:39.248 --> 00:36:39.764
+context.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/247-0
+00:36:39.964 --> 00:36:43.704
+And the basic,
+it's a the trade off is basically the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/247-1
+00:36:43.704 --> 00:36:46.879
+size of your content versus reasoning
+style.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/247-2
+00:36:46.879 --> 00:36:51.324
+So you know each of them have their own
+particular approaches.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/248-0
+00:36:52.524 --> 00:36:54.204
+Uh, any questions on this?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/249-0
+00:36:55.604 --> 00:36:58.604
+All right, let's talk about. Oh, go ahead.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/250-0
+00:36:55.964 --> 00:37:01.009
+If I I have a quick question,
+if you give it some free text context and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/250-1
+00:37:01.009 --> 00:37:06.684
+there is a word that repeats 25 times,
+is that 25 tokens or just a single token?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/253-0
+00:37:08.724 --> 00:37:12.215
+Yeah, I'm going.
+I don't know for sure on that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/253-1
+00:37:12.215 --> 00:37:18.106
+My guess is that it's the single token
+and it may break that that word down into
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/253-2
+00:37:18.106 --> 00:37:23.924
+multiple tokens, right? It's tokens.
+It's not one to one correspondence, right?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/251-0
+00:37:19.684 --> 00:37:19.804
+OK.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/252-0
+00:37:23.804 --> 00:37:25.364
+OK. Thanks.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/254-0
+00:37:29.124 --> 00:37:32.945
+So MCP servers,
+so these are they've only come out you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/254-1
+00:37:32.945 --> 00:37:37.530
+know earlier in the year.
+This is something that Egenics proposed
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/254-2
+00:37:37.530 --> 00:37:43.158
+and implemented and all of the other and
+there's been a lot of adoption on this.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/254-3
+00:37:43.158 --> 00:37:46.284
+This is part of the the move towards
+Egenic.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/255-0
+00:37:46.764 --> 00:37:52.242
+Agenic models and being able to actually
+do things with it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/255-1
+00:37:52.242 --> 00:37:59.819
+And what this MCP server and tools do is
+they provide you with the ability to do a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/255-2
+00:37:59.819 --> 00:38:02.284
+lot more functional things.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/256-0
+00:38:03.124 --> 00:38:08.667
+Inside of the when using the chat model.
+So the idea when when these first models
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/256-1
+00:38:08.667 --> 00:38:12.182
+came out,
+the only thing that you could do was ask.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/256-2
+00:38:12.182 --> 00:38:17.725
+So if you you asked you know can you can
+you create a a method that would do this
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/256-3
+00:38:17.725 --> 00:38:18.604
+and it would.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/257-0
+00:38:18.804 --> 00:38:23.473
+Output that method into the chat window
+and if the ID was sophisticated enough,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/257-1
+00:38:23.473 --> 00:38:28.258
+you could actually say insert that piece
+of code into your code base and it would
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/257-2
+00:38:28.258 --> 00:38:31.001
+move it over into your code.
+Then we get into.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/257-3
+00:38:31.001 --> 00:38:35.611
+Then we got the feature to do edits and
+then that would allow us to to do this
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/257-4
+00:38:35.611 --> 00:38:38.004
+essentially automatic insertion in which.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/258-0
+00:38:38.364 --> 00:38:44.558
+And the other benefit of that is that it
+could tell you what code was removed and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/258-1
+00:38:44.558 --> 00:38:48.334
+what code was added and that was a great
+feature.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/258-2
+00:38:48.334 --> 00:38:53.244
+And then now they've come up with
+basically the idea of Agentec.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/259-0
+00:38:53.564 --> 00:38:57.496
+We're having agents and this agents have
+agency to do that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/259-1
+00:38:57.496 --> 00:39:02.607
+We saw quite a bit of that yesterday
+where we were granting it permissions to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/259-2
+00:39:02.607 --> 00:39:07.783
+to tools in order for it to do certain
+operations so that we would not have to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/259-3
+00:39:07.783 --> 00:39:12.829
+continually approve those operations.
+So you know for for read only commands
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/259-4
+00:39:12.829 --> 00:39:13.484
+there's a.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/260-0
+00:39:13.564 --> 00:39:20.645
+There's an option that you can put in
+your your visual code settings that would
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/260-1
+00:39:20.645 --> 00:39:27.461
+indicate that all read operations are
+permitted and then you can cherry pick
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/260-2
+00:39:27.461 --> 00:39:31.444
+the right operations that you want to
+allow.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/261-0
+00:39:32.404 --> 00:39:38.388
+And that can make it working energetic
+mode much much easier in in a sense that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/261-1
+00:39:38.388 --> 00:39:42.128
+it will take take on more of the work on
+its own,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/261-2
+00:39:42.128 --> 00:39:47.364
+do more of the the execution and then
+only stop to ask for direction.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/262-0
+00:39:47.804 --> 00:39:53.022
+Or approval when it encounters a command
+that you haven't given an explicit
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/262-1
+00:39:53.022 --> 00:39:56.935
+permission to run.
+So what you then has are MCP servers,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/262-2
+00:39:56.935 --> 00:40:02.495
+and it's always a good idea to try to
+keep up on what new servers are available,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/262-3
+00:40:02.495 --> 00:40:07.644
+particularly in your problem space.
+So there are things that can help you.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/263-0
+00:40:07.644 --> 00:40:13.004
+You improve your coding experience.
+You can often find an MCP server that can
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/263-1
+00:40:13.004 --> 00:40:18.365
+help you with doing that. For example,
+this one is referring to the Microsoft
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/263-2
+00:40:18.365 --> 00:40:21.595
+Docs.
+There's an MCP server for Microsoft Docs
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/263-3
+00:40:21.595 --> 00:40:25.924
+and that would allow you to do searches
+of the Microsoft Docs.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/264-0
+00:40:26.644 --> 00:40:32.732
+For information and the main benefit of
+something like that is it keeps you from
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/264-1
+00:40:32.732 --> 00:40:37.542
+having to leave the IDE.
+You can stay within Visual Studio Code
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/264-2
+00:40:37.542 --> 00:40:43.254
+and you can do all of your lookups in
+Microsoft Docs and use it to help you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/264-3
+00:40:43.254 --> 00:40:45.884
+write your code and then those MCC.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/265-0
+00:40:45.964 --> 00:40:48.913
+TCP servers then expose different kinds
+of tools.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/265-1
+00:40:48.913 --> 00:40:53.218
+So you see here that three different
+tools are outlined in this diagram.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/265-2
+00:40:53.218 --> 00:40:57.170
+One is to search the documentation,
+one is to fetch a full page of
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/265-3
+00:40:57.170 --> 00:41:00.414
+documentation,
+and one is to search for code examples.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/265-4
+00:41:00.414 --> 00:41:04.955
+So you can specifically say search the
+Microsoft docs for a code sample on a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/265-5
+00:41:04.955 --> 00:41:05.604
+particular.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/266-0
+00:41:06.244 --> 00:41:10.444
+Or technique and it will return that for
+you.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/267-0
+00:41:12.444 --> 00:41:16.259
+Questions on MCP.
+We kind of went over that which was I had
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/267-1
+00:41:16.259 --> 00:41:19.502
+installed.
+One of the things to be aware of is the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/267-2
+00:41:19.502 --> 00:41:24.334
+number of tools that you install is that
+there is actually a limit on that,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/267-3
+00:41:24.334 --> 00:41:28.212
+and if you exceed that limit,
+you'll see an icon in the IDE.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/267-4
+00:41:28.212 --> 00:41:29.484
+Let me see if I can.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/268-0
+00:41:30.164 --> 00:41:35.525
+Point down here, this tool icon,
+you'll get a little warning symbol in it
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/268-1
+00:41:35.525 --> 00:41:40.451
+when you start to exceed that.
+You can see here that I've currently
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/268-2
+00:41:40.451 --> 00:41:45.015
+selected the tools. In fact,
+if I go down and select this one,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/268-3
+00:41:45.015 --> 00:41:49.724
+which is the Azure one,
+you can see that it jumps up from 52 to.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/269-0
+00:41:49.764 --> 00:41:55.004
+So adding quite a bit of different 112.
+Let me just.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/270-0
+00:41:56.044 --> 00:42:01.414
+This should we need to do one more.
+Now it tells me I've that I have 130
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/270-1
+00:42:01.414 --> 00:42:06.857
+enabled and and an experience may be
+degraded from calling more than what
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/270-2
+00:42:06.857 --> 00:42:10.535
+those 80s.
+So that's something to keep in mind of
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/270-3
+00:42:10.535 --> 00:42:13.404
+mind up because you that's essentially.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/271-0
+00:42:14.004 --> 00:42:18.404
+Stealing from your contact window.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/272-0
+00:42:20.204 --> 00:42:26.884
+That's what I wanted. I wanted BARP,
+Python, no SQL Server, no Azure.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/273-0
+00:42:28.244 --> 00:42:32.324
+And no highlands back to my 52.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/274-0
+00:42:35.164 --> 00:42:39.284
+Any questions on MCP servers and tools?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/275-0
+00:42:40.604 --> 00:42:47.058
+And this is a the specification for this
+is open so you can you can you can use
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/275-1
+00:42:47.058 --> 00:42:53.673
+copilot to help you create an MCP server
+and deploy that and use that within your
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/275-2
+00:42:53.673 --> 00:42:59.884
+IDE if you have a specific need where you
+do you have some sort of internal.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/276-0
+00:43:00.404 --> 00:43:02.967
+Resource that you want to be able to
+access,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/276-1
+00:43:02.967 --> 00:43:06.156
+but you can't do that directly through
+the chat window.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/276-2
+00:43:06.156 --> 00:43:10.713
+You can actually run an MCP server to do
+that for you and allow you to retrieve
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/276-3
+00:43:10.713 --> 00:43:15.440
+information from some back end service or
+system that you would like to be able to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/276-4
+00:43:15.440 --> 00:43:17.604
+incorporate into your code generation.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/277-0
+00:43:22.444 --> 00:43:23.844
+All right, so um.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/278-0
+00:43:25.164 --> 00:43:30.335
+Any questions? All right,
+so I I I showed you the QQ manual we
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/278-1
+00:43:30.335 --> 00:43:36.984
+talked to yesterday about built in and
+not built any custom ones and then I just
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/278-2
+00:43:36.984 --> 00:43:39.364
+mentioned the 128 tool limit.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/279-0
+00:43:40.484 --> 00:43:44.182
+So let's move on and talk about
+instruction files.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/279-1
+00:43:44.182 --> 00:43:49.909
+So this is the 1st place where we can
+start to add add a substantial amount of
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/279-2
+00:43:49.909 --> 00:43:55.637
+context and and allow that preserve that
+context across all of our prompts and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/279-3
+00:43:55.637 --> 00:43:57.884
+since instruction files can be.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/280-0
+00:43:59.524 --> 00:44:00.484
+Uh um.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/281-0
+00:44:02.084 --> 00:44:05.799
+Get committed into source control.
+That means that when you pull you when
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/281-1
+00:44:05.799 --> 00:44:09.764
+you change an instruction file the next
+time another developer pulls that from
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/281-2
+00:44:09.764 --> 00:44:12.325
+that repo,
+those instruction files will be updated
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/281-3
+00:44:12.325 --> 00:44:16.240
+and and it can be used and and will be
+used for prompts going forward in that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/281-4
+00:44:16.240 --> 00:44:17.244
+project. So this is.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/282-0
+00:44:17.564 --> 00:44:24.663
+Really effective way of of providing a
+great deal of context to to to copilot
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/282-1
+00:44:24.663 --> 00:44:31.488
+and it is it's a great tool for for
+controlling what the output looks like
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/282-2
+00:44:31.488 --> 00:44:37.404
+because you're giving very, very specific,
+very context related.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/283-0
+00:44:37.484 --> 00:44:42.267
+Instructions so that you can do things
+like project specific instructions where
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/283-1
+00:44:42.267 --> 00:44:45.376
+you describe what the project actually
+consists of.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/283-2
+00:44:45.376 --> 00:44:50.039
+You can do text specific instructions,
+which means that whenever you're using
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/283-3
+00:44:50.039 --> 00:44:54.164
+this particular technology,
+I want you to follow these instructions.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/284-0
+00:44:54.604 --> 00:44:58.993
+Things like standards and practices,
+like what your coding standards are.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/284-1
+00:44:58.993 --> 00:45:03.383
+If you have a specific way that you want
+to write code as a organization,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/284-2
+00:45:03.383 --> 00:45:08.247
+you can you can encapsulate those into a
+into an instruction file and then the AI
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/284-3
+00:45:08.247 --> 00:45:10.204
+will use these instruction files.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/285-0
+00:45:11.724 --> 00:45:17.968
+When it's preparing output for you and it
+will help you maintain consistency within
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/285-1
+00:45:17.968 --> 00:45:22.948
+your code base. But you have to.
+One caveat is that you need to be
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/285-2
+00:45:22.948 --> 00:45:27.631
+consistent with how they're implemented
+and not contradictory,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/285-3
+00:45:27.631 --> 00:45:31.124
+and I'll show you a technique for
+determining.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/286-0
+00:45:31.564 --> 00:45:38.841
+Whether or not your your instruction
+files are consistent and which is a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/286-1
+00:45:38.841 --> 00:45:44.324
+really effective way of of managing
+instruction files.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/287-0
+00:45:46.524 --> 00:45:52.120
+All right, so let's talk about locations.
+So there is a a personal file which is in
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/287-1
+00:45:52.120 --> 00:45:57.716
+your home directory in in a GitHub folder.
+In your home directory you can put a a a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/287-2
+00:45:57.716 --> 00:46:02.979
+a copilot instruction file there and
+provide instruction files that only apply
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/287-3
+00:46:02.979 --> 00:46:05.644
+to you. The benefit of the the personal.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/288-0
+00:46:05.684 --> 00:46:11.129
+Instruction files is that it applies to
+all projects on your machine or that you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/288-1
+00:46:11.129 --> 00:46:14.153
+have this personal instruction file
+located.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/288-2
+00:46:14.153 --> 00:46:19.531
+So I tend to use this for things that are
+specific to the way I like Copilot to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/288-3
+00:46:19.531 --> 00:46:22.959
+operate,
+though it may not be something that needs
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/288-4
+00:46:22.959 --> 00:46:25.244
+to be shared among the whole team.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/289-0
+00:46:25.404 --> 00:46:33.799
+But you know it's it's it's useful for
+setting up how you want it to reply.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/289-1
+00:46:33.799 --> 00:46:42.525
+Yesterday you were asking about how to
+control the output in terms of how much
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/289-2
+00:46:42.525 --> 00:46:44.844
+verbage it gives you.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/291-0
+00:46:45.124 --> 00:46:51.170
+A personal you could set up instructions
+for that in our personal instruction file.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/291-1
+00:46:51.170 --> 00:46:56.855
+That way you could say I just give me
+very very terse responses and don't give
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/291-2
+00:46:56.855 --> 00:47:01.965
+you and don't give me a lot of
+explanation and it will then reduce the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/291-3
+00:47:01.965 --> 00:47:04.124
+amount of output it gives you.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/292-0
+00:47:04.804 --> 00:47:08.641
+Specifically that,
+and that might be that might be a good
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/292-1
+00:47:08.641 --> 00:47:13.867
+use of the copilot instruction file,
+because you may want other people may not
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/292-2
+00:47:13.867 --> 00:47:16.844
+want that same instruction to be to be
+used.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/293-0
+00:47:18.164 --> 00:47:21.828
+When you're dealing with a project level
+instructions,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/293-1
+00:47:21.828 --> 00:47:26.825
+these as I mentioned are committed into
+git. They go into a GitHub folder,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/293-2
+00:47:26.825 --> 00:47:30.622
+typically put them in an instructions
+folder under that,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/293-3
+00:47:30.622 --> 00:47:35.952
+and then I've also used a folder under
+the instruction folder called generated,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/293-4
+00:47:35.952 --> 00:47:38.084
+which I I put instruction files.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/294-0
+00:47:38.164 --> 00:47:46.115
+That are generated by Copilot in
+comparison to instruction files that I've
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/294-1
+00:47:46.115 --> 00:47:52.688
+created personally,
+and you should include like a suffix here
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/294-2
+00:47:52.688 --> 00:47:57.564
+on your instruction files that indicate
+that.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/295-0
+00:47:57.684 --> 00:48:00.484
+They are instruction files dot MD files.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/296-0
+00:48:01.724 --> 00:48:02.604
+All right.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/297-0
+00:48:04.484 --> 00:48:08.962
+Now let's talk about meta instructions
+that I've listed for what I would deal
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/297-1
+00:48:08.962 --> 00:48:13.554
+with meta instruction files that we'll
+we'll talk about in some depth because I
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/297-2
+00:48:13.554 --> 00:48:18.032
+think these are really useful and they
+are applicable across any project that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/297-3
+00:48:18.032 --> 00:48:19.524
+you might be working with.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/298-0
+00:48:20.084 --> 00:48:24.617
+The first one is important or actually
+the first two work together.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/298-1
+00:48:24.617 --> 00:48:28.217
+The the first one is AI assisted output
+instructions.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/298-2
+00:48:28.217 --> 00:48:33.551
+These are instructions that are to guide
+how the AI creates the output and I'll
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/298-3
+00:48:33.551 --> 00:48:38.684
+get into the in depth about this,
+but this is very powerful way of defining.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/299-0
+00:48:40.604 --> 00:48:45.553
+When the AI creates an output,
+what it should include in that output
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/299-1
+00:48:45.553 --> 00:48:51.363
+over and above what the prompt is asking
+for and the copilot instruction file or
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/299-2
+00:48:51.363 --> 00:48:55.165
+instruction files are for using copilot
+effectively.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/299-3
+00:48:55.165 --> 00:48:59.684
+So you have a specific way that you want
+copilot to behave or.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/300-0
+00:48:59.764 --> 00:49:05.410
+That you want Copilot to be aware of,
+you can put it there.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/300-1
+00:49:05.410 --> 00:49:10.774
+The third one is an instruction prompt
+instruction file.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/300-2
+00:49:10.774 --> 00:49:16.044
+So this is instructions for creating
+effective prompts.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/301-0
+00:49:16.244 --> 00:49:19.327
+So,
+so the idea here is that if I if I
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/301-1
+00:49:19.327 --> 00:49:25.414
+execute this or I put this into my
+project, whenever I create a prompt file,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/301-2
+00:49:25.414 --> 00:49:26.284
+I actually.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/302-0
+00:49:27.444 --> 00:49:30.434
+Yeah,
+then it will follow these instructions
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/302-1
+00:49:30.434 --> 00:49:35.284
+and make sure that prompt file conforms
+to a particular standard and has
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/302-2
+00:49:35.284 --> 00:49:40.666
+particular particular aspects about it.
+It allows you to standardize the the the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/302-3
+00:49:40.666 --> 00:49:46.180
+way in which instructions are built or a
+prop files are built and it allows you to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/302-4
+00:49:46.180 --> 00:49:47.044
+to to define.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/303-0
+00:49:47.444 --> 00:49:53.251
+What every prop file should have in terms
+of its structure and the 4th one here is
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/303-1
+00:49:53.251 --> 00:49:57.519
+a prompt file instruction and it's
+instructions for prompts.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/303-2
+00:49:57.519 --> 00:50:03.396
+It's a little bit more targeted than this
+that actually generate instruction files.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/303-3
+00:50:03.396 --> 00:50:06.964
+So this helps you define what you would
+create or.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/304-0
+00:50:07.044 --> 00:50:12.851
+Have in your instruction.
+So I wanna switch now to the AI assisted
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/304-1
+00:50:12.851 --> 00:50:14.844
+and this is the test 1.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/305-0
+00:50:21.924 --> 00:50:22.724
+Yeah, OK.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/308-0
+00:50:35.284 --> 00:50:41.779
+All right, so this has a bunch of.
+This is the the the one of the one of the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/308-1
+00:50:41.779 --> 00:50:47.683
+repositories that I suggested that you
+would fork. It has chat modes,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/308-2
+00:50:47.683 --> 00:50:53.924
+instruction files, prompts in it.
+It has some scripts and some workflows.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/309-0
+00:50:54.404 --> 00:50:57.284
+Um defined in it and um.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/310-0
+00:50:58.804 --> 00:51:04.500
+So let's talk about the instruction files,
+and let's talk specifically about these
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/310-1
+00:51:04.500 --> 00:51:08.138
+instruction files here.
+The instruction file output.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/310-2
+00:51:08.138 --> 00:51:12.324
+It's just an output one is, I think,
+a very interesting one.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/311-0
+00:51:14.724 --> 00:51:20.284
+And let me open that a new window so we
+can see the whole thing.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/312-0
+00:51:22.924 --> 00:51:30.290
+So notice that this file has a a header
+assigned to it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/312-1
+00:51:30.290 --> 00:51:38.444
+This is a metadata and it specifies a
+number of things about.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/313-0
+00:51:38.644 --> 00:51:44.429
+How it is how AI assisted output should
+be created and one of the things that it
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/313-1
+00:51:44.429 --> 00:51:50.071
+it specifies is that it should that all
+your AI generated output should have a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/313-2
+00:51:50.071 --> 00:51:54.284
+header that describes what was the prompt
+that created it.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/314-0
+00:51:55.364 --> 00:52:02.417
+How long it took to execute that there
+should be an A I log with the with that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/314-1
+00:52:02.417 --> 00:52:09.381
+conversation so that you record what the
+actual conversation was and what the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/314-2
+00:52:09.381 --> 00:52:11.524
+output was from the A I.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/315-0
+00:52:11.804 --> 00:52:18.300
+What was the source of this,
+which is the the prompt file that was
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/315-1
+00:52:18.300 --> 00:52:23.244
+actually executed and what it should
+apply to and.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/316-0
+00:52:24.364 --> 00:52:25.964
+So these uh.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/317-0
+00:52:27.924 --> 00:52:32.809
+So some some of the benefits.
+So this is a we want clear provenance for
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/317-1
+00:52:32.809 --> 00:52:35.862
+this.
+We want to be able to have actually an
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/317-2
+00:52:35.862 --> 00:52:40.814
+audit trail that will allow us to
+understand how AI was actually used to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/317-3
+00:52:40.814 --> 00:52:43.324
+create the artifacts in a repository.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/318-0
+00:52:43.764 --> 00:52:50.201
+And notice it has a a whole list of
+things that it wants to have included and
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/318-1
+00:52:50.201 --> 00:52:55.235
+you know things like enforcement within
+the C CICD pipeline,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/318-2
+00:52:55.235 --> 00:53:00.764
+the copilot implementation requirements
+and here it's referencing.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/319-0
+00:53:01.164 --> 00:53:06.985
+Some GitHub Copilot implementation.
+These are all different sections that we
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/319-1
+00:53:06.985 --> 00:53:11.294
+can view the chocolate.
+There's a chat logging workflow,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/319-2
+00:53:11.294 --> 00:53:16.284
+and it's the placement and naming of
+things, the implementations.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/320-0
+00:53:16.644 --> 00:53:21.494
+The scope, the terminology,
+a whole range of things that we want to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/320-1
+00:53:21.494 --> 00:53:24.918
+have in the output that's created.
+Like I said,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/320-2
+00:53:24.918 --> 00:53:30.624
+the main benefit of this I think is 2
+things is it it it requires that you have
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/320-3
+00:53:30.624 --> 00:53:32.764
+some metadata here about this.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/321-0
+00:53:33.244 --> 00:53:37.952
+In all the files that that can support it
+in line, and if it doesn't,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/321-1
+00:53:37.952 --> 00:53:42.593
+if it if it doesn't support it,
+like say it's an artifact which is a
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/321-2
+00:53:42.593 --> 00:53:46.225
+binary file,
+it will it'll create a sidecar file that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/321-3
+00:53:46.225 --> 00:53:51.404
+contains this metadata about that file
+and and so that way you'll have this.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/322-0
+00:53:52.044 --> 00:53:55.378
+this metadata that describes the content
+of the file.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/322-1
+00:53:55.378 --> 00:53:59.885
+And then the other thing I think is
+important about this is that it will
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/322-2
+00:53:59.885 --> 00:54:03.652
+create this AI log,
+which actually allows you to do a couple
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/322-3
+00:54:03.652 --> 00:54:06.862
+of different things.
+One is that it does record the
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/322-4
+00:54:06.862 --> 00:54:09.764
+conversation history for that particular
+chat.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/323-0
+00:54:10.844 --> 00:54:17.204
+A session and it also creates a summary
+file of that chat session which is
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/323-1
+00:54:17.204 --> 00:54:22.631
+suitable for renewing.
+So you can essentially once that summary
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/323-2
+00:54:22.631 --> 00:54:28.822
+file is committed to source code,
+some other developer or you at a later
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/323-3
+00:54:28.822 --> 00:54:29.924
+time can add.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/324-0
+00:54:30.244 --> 00:54:36.150
+Add that summary file to your context and
+it will allow you to resume that process
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/324-1
+00:54:36.150 --> 00:54:41.415
+at the point that it left off and it will
+keep track in the session file.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/324-2
+00:54:41.415 --> 00:54:46.324
+If you're in a multi step operation,
+what step was the current step?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/325-0
+00:54:46.924 --> 00:54:51.272
+What the context was of that of that
+current step and then it will allow you
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/325-1
+00:54:51.272 --> 00:54:55.506
+to actually resume that session,
+which is a really handy feature if you're
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/325-2
+00:54:55.506 --> 00:54:59.854
+you're in a if you're in a chat session
+that is going to be lengthy and it's
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/325-3
+00:54:59.854 --> 00:55:03.524
+going to involve a lot of back and forth
+between you and the AI.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/326-0
+00:55:03.924 --> 00:55:12.955
+Is to be able to essentially update that
+summary file and then you can clear your
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/326-1
+00:55:12.955 --> 00:55:20.884
+chat window to clear up your context
+window and then just add that one.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/327-0
+00:55:21.364 --> 00:55:25.774
+That one summary file back into your
+context and you can then resume that
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/327-1
+00:55:25.774 --> 00:55:27.204
+operation at that point.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/328-0
+00:55:29.684 --> 00:55:32.324
+So any questions on that?
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/329-0
+00:55:33.524 --> 00:55:37.204
+Let me let me show you some.
+We've seen examples of that go ahead.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/330-0
+00:55:36.924 --> 00:55:40.717
+John, I I hate to interrupt,
+but I think we have another meeting
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/330-1
+00:55:40.717 --> 00:55:43.284
+starting in like 3 minutes,
+like all of us.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/331-0
+00:55:42.844 --> 00:55:46.794
+Oh, yeah, sure. All right, great. Well,
+this is a good place to stop.
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/331-1
+00:55:46.794 --> 00:55:50.519
+We've gone through these,
+the AI and system one. We'll come back,
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/331-2
+00:55:50.519 --> 00:55:54.638
+we'll talk about the the copilot
+instructions and some of the things for
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/331-3
+00:55:54.638 --> 00:55:59.266
+generating prompts and instruction files
+and the the guidance that we're going to
+
+674e1938-d3f6-408e-b77e-2ac0de3e401a/331-4
+00:55:59.266 --> 00:56:00.000
+give AI about

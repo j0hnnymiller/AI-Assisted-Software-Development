@@ -1,0 +1,15 @@
+graph TD
+    A["Raw text<br/>(internet, books, code, papers)"]:::input
+    B["Tokenize everything"]:::process
+    C["For each token: predict next token"]:::process
+    D["Compare prediction to actual<br/>→ compute loss"]:::compute
+    E["Backpropagation<br/>→ update billions of weights"]:::update
+    F["Repeat trillions of times<br/>on thousands of GPUs"]:::repeat
+
+    A --> B --> C --> D --> E --> F
+
+    classDef input fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    classDef process fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef compute fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef update fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    classDef repeat fill:#fce4ec,stroke:#880e4f,stroke-width:2px

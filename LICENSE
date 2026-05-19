@@ -1,21 +1,62 @@
-MIT License
+Copyright © 2025 The Code Group. All Rights Reserved.
 
-Copyright (c) 2025 johnmillerATcodemag-com
+This repository and all files contained within are protected by copyright law.
+No part of this repository may be copied, reproduced, modified, distributed,
+publicly displayed, or otherwise used in whole or in part without the prior
+written permission of the copyright holder.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permissions and Requests
+- Requests for permission to use, distribute, or adapt this work must be
+  submitted in writing to: john.miller@codestaffing.com
+- Permission may be granted at the sole discretion of the copyright holder
+  and may be subject to terms, fees, or conditions.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Prohibited Actions Without Prior Written Permission
+- Reproduction, distribution, or public display in any medium.
+- Creation of derivative works, adaptations, translations, or compilations.
+- Commercial use, sale, or sublicensing of the content.
+- Inclusion of the content in other repositories, products, or services.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Limited Exceptions
+- Fair use, de minimis uses, and uses required by applicable law are not
+  restricted by this license, but users relying on such exceptions assume
+  responsibility for demonstrating that the exception applies.
+
+Attribution and Notices
+- If explicit permission is granted, the copyright holder may require
+  attribution, version identification, and inclusion of this license text
+  or a custom notice in redistributed copies.
+
+DMCA and Takedown
+- If you believe your rights have been infringed, contact the copyright holder
+  at the address above with a detailed claim and supporting evidence. The
+  copyright holder will respond and may require removal or other remedial
+  action.
+
+Disclaimer of Warranty and Liability
+- This repository is provided "as is" and without warranty of any kind. The
+  copyright holder disclaims all warranties, express or implied, including
+  but not limited to merchantability, fitness for a particular purpose,
+  and noninfringement.
+- In no event will the copyright holder be liable for any incidental,
+  consequential, special, punitive, or other damages arising out of the use
+  or inability to use this repository.
+
+Governing Law and Jurisdiction
+- This license and any disputes arising from it are governed by the laws of
+  the State of California, United States. Exclusive jurisdiction and venue
+  for disputes are the federal and state courts located in Orange County,
+  California.
+
+Termination
+- Any use of the repository that fails to comply with the terms above will
+  terminate any granted permission immediately. Termination does not affect
+  accrued rights or remedies.
+
+Effective Date
+- Effective date: 16 October 2025.
+
+Notes for Maintainers
+- To allow limited sharing without negotiation, consider adding a separate
+  permission file or contributor guidelines that specify allowed uses, or
+  maintain a small set of explicit license exceptions in a PERMISSIONS.md file.

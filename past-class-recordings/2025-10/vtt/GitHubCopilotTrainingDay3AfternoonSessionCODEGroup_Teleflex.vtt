@@ -1,0 +1,5154 @@
+WEBVTT
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/52-0
+00:00:02.148 --> 00:00:08.628
+<v John Miller>So what I did was create a new class that
+demonstrates the new param feature in.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/52-1
+00:00:08.628 --> 00:00:12.068
+<v John Miller>net 9.
+So this is explicitly asking for to</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/52-2
+00:00:12.068 --> 00:00:18.068
+<v John Miller>implement this into the calculator.
+So when it goes ahead and creates that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/52-3
+00:00:18.068 --> 00:00:18.388
+<v John Miller>and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/56-0
+00:00:18.508 --> 00:00:24.440
+<v John Miller>And that new feature OK it upgrades the
+programs dot CS file to actually call it</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/56-1
+00:00:24.440 --> 00:00:30.372
+<v John Miller>and when it was finished I said just the
+the instruction file which I I attached</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/56-2
+00:00:30.372 --> 00:00:33.668
+<v John Miller>the project one project instructions dot
+MD.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/60-0
+00:00:34.188 --> 00:00:40.615
+<v John Miller>Explicitly says do not use dot DET 9 and
+I asked it to explain why it added this</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/60-1
+00:00:40.615 --> 00:00:46.646
+<v John Miller>dot DET 9 SIC text and how to enforce
+that constraint and it apologized for</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/60-2
+00:00:46.646 --> 00:00:48.868
+<v John Miller>having made the mistake and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/63-0
+00:00:49.228 --> 00:00:52.820
+<v John Miller>Then went into how to enforce the
+constraint. Well,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/63-1
+00:00:52.820 --> 00:00:58.000
+<v John Miller>first we need to delete the non compliant
+file of course and then add some</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/63-2
+00:00:58.000 --> 00:01:00.348
+<v John Miller>additional enforcement strategies.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/68-0
+00:01:02.188 --> 00:01:06.549
+<v John Miller>For example,
+in the CS project file we can specify the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/68-1
+00:01:06.549 --> 00:01:12.417
+<v John Miller>language version that we're using and
+also talked about adding a global a</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/68-2
+00:01:12.417 --> 00:01:17.333
+<v John Miller>global JSON file to lock to to a specific
+version of the SDK,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/68-3
+00:01:17.333 --> 00:01:20.188
+<v John Miller>update our CICD to enforce that SDK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/69-0
+00:01:20.708 --> 00:01:22.868
+<v John Miller>Version right, which was fine.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/77-0
+00:01:27.388 --> 00:01:32.659
+<v John Miller>And they apologized again for making that
+error. And then I asked how do you,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/77-1
+00:01:32.659 --> 00:01:38.269
+<v John Miller>how do I keep this from happening again?
+I'm concerned that other instructions may</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/77-2
+00:01:38.269 --> 00:01:43.405
+<v John Miller>be ignored and it went through and
+analyzed all of that and it came up with</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/77-3
+00:01:43.405 --> 00:01:46.108
+<v John Miller>a multi-layer defense strategy for that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/81-0
+00:01:46.188 --> 00:01:50.915
+<v John Miller>One is to improve the instruction
+availability.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/81-1
+00:01:50.915 --> 00:01:58.203
+<v John Miller>It liked our instruction files it had.
+We had clear apply to patterns and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/81-2
+00:01:58.203 --> 00:02:01.748
+<v John Miller>critical markers in the file saying.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/86-0
+00:02:02.508 --> 00:02:07.072
+<v John Miller>That this is a critical instruction,
+but what was interesting is that it added</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/86-1
+00:02:07.072 --> 00:02:11.579
+<v John Miller>this. I had deleted some steps here,
+but it added a critical instruction that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/86-2
+00:02:11.579 --> 00:02:15.392
+<v John Miller>must use.net 8 instead of.
+net 9 to all of the instruction files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/86-3
+00:02:15.392 --> 00:02:20.130
+<v John Miller>And then I ran it again and it added the
+code right back in again and ignored the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/86-4
+00:02:20.130 --> 00:02:22.268
+<v John Miller>instructions completely and that was.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/90-0
+00:02:22.628 --> 00:02:26.640
+<v John Miller>Is really what prompted me to ask it
+about these,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/90-1
+00:02:26.640 --> 00:02:33.139
+<v John Miller>how to enforce them across the board.
+So it had in the project instruction file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/90-2
+00:02:33.139 --> 00:02:36.268
+<v John Miller>It's saying before generating any code.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/92-0
+00:02:37.708 --> 00:02:42.868
+<v John Miller>Read these critical constraints first.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/96-0
+00:02:44.588 --> 00:02:49.306
+<v John Miller>And then if they add a dot N 9 feature
+and pile,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/96-1
+00:02:49.306 --> 00:02:53.735
+<v John Miller>you know back away from that and don't do
+it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/96-2
+00:02:53.735 --> 00:03:00.668
+<v John Miller>It also suggested you verify the
+constraint file that you could easily.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/101-0
+00:03:00.948 --> 00:03:06.641
+<v John Miller>Execute to verify that none of the
+constraints are that we've been</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/101-1
+00:03:06.641 --> 00:03:13.185
+<v John Miller>describing are being invalidated and
+added this verifying constraints to our</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/101-2
+00:03:13.185 --> 00:03:18.708
+<v John Miller>CICD pipeline so that it would verify
+those constraints when it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/102-0
+00:03:18.828 --> 00:03:21.028
+<v John Miller>And whenever we committed some code.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/107-0
+00:03:23.628 --> 00:03:31.444
+<v John Miller>There's a it created a pre code checklist
+which is something I thought I hadn't</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/107-1
+00:03:31.444 --> 00:03:38.673
+<v John Miller>considered and what it basically says
+before you before creating any code</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/107-2
+00:03:38.673 --> 00:03:39.748
+<v John Miller>generation.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/111-0
+00:03:40.108 --> 00:03:45.694
+<v John Miller>And in asserting here that AI assistance
+will read this file before creating or</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/111-1
+00:03:45.694 --> 00:03:49.324
+<v John Miller>modifying any code,
+verify the project constraints,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/111-2
+00:03:49.324 --> 00:03:53.165
+<v John Miller>which is the project uses.net only no.
+net 9 features.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/111-3
+00:03:53.165 --> 00:03:55.748
+<v John Miller>The features are compatible with the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/117-0
+00:03:55.868 --> 00:04:00.115
+<v John Miller>C# but not C# 13.
+No preview or experimental features are</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/117-1
+00:04:00.115 --> 00:04:03.922
+<v John Miller>are required.
+There's a a checklist that it created</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/117-2
+00:04:03.922 --> 00:04:07.363
+<v John Miller>common.
+net features to avoid and it lists out</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/117-3
+00:04:07.363 --> 00:04:11.390
+<v John Miller>what those are.
+Validate after changes by running that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/117-4
+00:04:11.390 --> 00:04:12.708
+<v John Miller>verify constraint.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/118-0
+00:04:13.948 --> 00:04:14.068
+<v John Miller>File.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/122-0
+00:04:16.428 --> 00:04:22.995
+<v John Miller>When it then it tells you what to do if
+you somebody actually asks for a specific.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/122-1
+00:04:22.995 --> 00:04:27.268
+<v John Miller>net 9 feature and what the correct
+response would be.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/124-0
+00:04:29.028 --> 00:04:32.936
+<v John Miller>And then some reference links and a quick
+constraint summary.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/124-1
+00:04:32.936 --> 00:04:35.268
+<v John Miller>And so that was that was interesting.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/125-0
+00:04:37.268 --> 00:04:37.348
+<v John Miller>Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/127-0
+00:04:40.388 --> 00:04:42.988
+<v John Miller>Here is a um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/132-0
+00:04:45.908 --> 00:04:54.510
+<v John Miller>A quick setup guide and and a pre-commit
+hook which would basically run before any</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/132-1
+00:04:54.510 --> 00:04:57.308
+<v John Miller>commit is actually allowed.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/136-0
+00:04:58.828 --> 00:05:06.099
+<v John Miller>And this would run that verify
+constraints PS1 file and if that returns</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/136-1
+00:05:06.099 --> 00:05:13.068
+<v John Miller>an an exit code that's not equal to 0 it
+then blocks the the commit.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/138-0
+00:05:15.548 --> 00:05:20.148
+<v John Miller>Yeah, I created a constraint informant.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/140-0
+00:05:21.308 --> 00:05:27.148
+<v John Miller>A setup guide to actually implement these
+constraints.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/142-0
+00:05:28.668 --> 00:05:34.348
+<v John Miller>Global modified the create a global GSN.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/146-0
+00:05:35.308 --> 00:05:41.278
+<v John Miller>And then a summary of the protections
+that it tried to implement.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/146-1
+00:05:41.278 --> 00:05:45.348
+<v John Miller>So these are some of the strategies I
+think.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/149-0
+00:05:46.268 --> 00:05:51.868
+<v John Miller>What's what's interesting is is the ones
+that we would put into the instruction</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/149-1
+00:05:51.868 --> 00:05:57.468
+<v John Miller>file to do constraint enforcement and
+basically call out what needs to be done.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/151-0
+00:05:58.908 --> 00:06:03.748
+<v John Miller>When it finds a a a constraint violation.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/156-0
+00:06:04.988 --> 00:06:08.487
+<v John Miller>I think we could, we could also ask it to,
+you know,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/156-1
+00:06:08.487 --> 00:06:11.854
+<v John Miller>make sure that it invokes those
+instruction files,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/156-2
+00:06:11.854 --> 00:06:16.542
+<v John Miller>because that was what happened here
+primarily was that it just skipped</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/156-3
+00:06:16.542 --> 00:06:21.428
+<v John Miller>bringing in the instruction files and
+ignored those critical constraints.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/158-0
+00:06:24.908 --> 00:06:27.308
+<v John Miller>All right. Any questions on that?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/162-0
+00:06:32.068 --> 00:06:36.478
+<v Majernik, Peter>I just have one question.
+When we are done with this training,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/162-1
+00:06:36.478 --> 00:06:38.508
+<v Majernik, Peter>can we clone your repo as is?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/164-0
+00:06:39.468 --> 00:06:43.628
+<v John Miller>Um, which one? The one with all the?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/168-0
+00:06:43.068 --> 00:06:45.914
+<v Majernik, Peter>Oh,
+the one where you are doing all this</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/168-1
+00:06:45.914 --> 00:06:49.177
+<v Majernik, Peter>practice.
+So are are you gonna like push these</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/171-0
+00:06:46.868 --> 00:06:50.329
+<v John Miller>Oh yeah, yeah, yeah, yeah.
+So this is a private repo.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/168-2
+00:06:49.177 --> 00:06:51.468
+<v Majernik, Peter>changes and we can come clone it?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/171-1
+00:06:50.329 --> 00:06:54.367
+<v John Miller>All I need to do is add you as a
+contributor. So just send me.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/171-2
+00:06:54.367 --> 00:06:58.982
+<v John Miller>You'll need to have a GitHub account,
+and if you have a GitHub account,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/171-3
+00:06:58.982 --> 00:07:03.148
+<v John Miller>send me your e-mail address that you used
+to set up the account.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/173-0
+00:07:03.148 --> 00:07:07.108
+<v John Miller>And I'll add you as a contributor and
+you'll be able to clone this repo.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/174-0
+00:07:08.028 --> 00:07:08.828
+<v Majernik, Peter>OK. Thanks.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/176-0
+00:07:13.988 --> 00:07:14.428
+<v Majernik, Peter>Yes.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/178-0
+00:07:17.108 --> 00:07:19.708
+<v John Miller>All right, so let's go ahead and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/180-0
+00:07:21.548 --> 00:07:25.748
+<v John Miller>Add all of that work to the repo.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/188-0
+00:07:42.308 --> 00:07:43.348
+<v John Miller>OK, so.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/189-0
+00:07:46.708 --> 00:07:46.988
+<v John Miller>It's.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/195-0
+00:07:48.708 --> 00:07:54.352
+<v John Miller>Pick up where we left off on the slides
+just to make sure we cover everything.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/195-1
+00:07:54.352 --> 00:08:00.067
+<v John Miller>So we we did this before and I want to do
+a couple of things related to our our</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/195-2
+00:08:00.067 --> 00:08:05.068
+<v John Miller>Evergreen coding and our instruction
+files that we've created so far.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/198-0
+00:08:05.708 --> 00:08:09.762
+<v John Miller>I I think the first one would be let's
+clear this and let's create an</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/198-1
+00:08:09.762 --> 00:08:13.468
+<v John Miller>instruction file for Evergreen coding or
+Evergreen development.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/199-0
+00:08:14.668 --> 00:08:15.748
+<v John Miller>close all of our.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/202-0
+00:08:17.748 --> 00:08:25.788
+<v John Miller>Editors and let's I create instruction.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/205-0
+00:08:30.548 --> 00:08:35.348
+<v John Miller>File for every name doctor.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/206-0
+00:08:37.588 --> 00:08:38.828
+<v John Miller>Development.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/215-0
+00:08:53.148 --> 00:08:58.439
+<v John Miller>We'll let this think what I what I want
+to do first is it would be a step that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/215-1
+00:08:58.439 --> 00:09:01.988
+<v John Miller>you would you want to take consistently
+as you were.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/219-0
+00:09:04.668 --> 00:09:08.567
+<v John Miller>As you were adding instructions into your
+project,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/219-1
+00:09:08.567 --> 00:09:12.084
+<v John Miller>I I kind of I covered this briefly
+yesterday,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/219-2
+00:09:12.084 --> 00:09:18.353
+<v John Miller>but I want to actually execute it and and
+go over the the outcome and the results</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/219-3
+00:09:18.353 --> 00:09:20.188
+<v John Miller>of this and that is the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/220-0
+00:09:20.428 --> 00:09:20.548
+<v John Miller>Uh.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/223-0
+00:09:23.748 --> 00:09:27.345
+<v John Miller>Let's make this a little bigger.
+Let's go back in here,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/223-1
+00:09:27.345 --> 00:09:31.906
+<v John Miller>look at our instruction files,
+and the instruction file I want to look</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/223-2
+00:09:31.906 --> 00:09:32.548
+<v John Miller>at is the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/226-0
+00:09:34.868 --> 00:09:38.452
+<v John Miller>WPF style testing instructions is 1 from
+the other one,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/226-1
+00:09:38.452 --> 00:09:41.908
+<v John Miller>so let me drag that over into the other
+this project.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/227-0
+00:09:43.348 --> 00:09:43.708
+<v John Miller>And.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/229-0
+00:09:45.348 --> 00:09:48.828
+<v John Miller>That is the context check instruction.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/231-0
+00:09:50.988 --> 00:09:54.228
+<v John Miller>So let's just put that in the main
+instruction file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/237-0
+00:09:55.988 --> 00:10:00.705
+<v John Miller>And once it gets done creating this
+Evergreen instruction file,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/237-1
+00:10:00.705 --> 00:10:06.306
+<v John Miller>I want to run this against all the
+instruction files in the project and and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/237-2
+00:10:06.306 --> 00:10:12.423
+<v John Miller>the reason I want to do this is partly I
+think one of the reasons that we saw that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/237-3
+00:10:12.423 --> 00:10:14.708
+<v John Miller>it wasn't able to detect these.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/241-0
+00:10:14.828 --> 00:10:20.770
+<v John Miller>Changes that were conflicting against the
+instruction file for not putting in</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/241-1
+00:10:20.770 --> 00:10:26.865
+<v John Miller>dotnet 9 features and that is that there
+are inconsistencies in the instruction</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/241-2
+00:10:26.865 --> 00:10:29.988
+<v John Miller>files themselves that we need to resolve.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/245-0
+00:10:31.228 --> 00:10:35.850
+<v John Miller>Before we can use them,
+and it's kind of like a a compiling or</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/245-1
+00:10:35.850 --> 00:10:41.719
+<v John Miller>linting process that it will look at the
+instruction files and point out places</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/245-2
+00:10:41.719 --> 00:10:46.268
+<v John Miller>where there are things that could become
+confusing to the AI.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/249-0
+00:10:46.268 --> 00:10:52.980
+<v John Miller>Or to asset for that matter when we're
+actually implementing or or using the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/249-1
+00:10:52.980 --> 00:10:59.518
+<v John Miller>file to actually do some implementation.
+So this do we we should get a new</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/249-2
+00:10:59.518 --> 00:11:02.308
+<v John Miller>instruction file here someplace.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/252-0
+00:11:04.028 --> 00:11:09.208
+<v John Miller>And let's see. No, here it is.
+Evergreen development.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/252-1
+00:11:09.208 --> 00:11:13.908
+<v John Miller>It's it didn't put it into our
+instruction file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/254-0
+00:11:15.388 --> 00:11:18.628
+<v John Miller>Did I I did I ask one for one?
+I think I did.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/255-0
+00:11:20.708 --> 00:11:20.948
+<v John Miller>Right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/257-0
+00:11:23.148 --> 00:11:26.468
+<v John Miller>So let's go up and put that in our
+instruction folder.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/266-0
+00:11:47.708 --> 00:11:51.668
+<v John Miller>And so now that we have that check
+constraint in place.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/269-0
+00:11:53.668 --> 00:11:57.668
+<v John Miller>So check contents context we can say.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/271-0
+00:12:03.628 --> 00:12:06.626
+<v John Miller>Yeah,
+check context prompt and I'm believe it's</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/271-1
+00:12:06.626 --> 00:12:07.188
+<v John Miller>a scoped.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/274-0
+00:12:11.948 --> 00:12:16.428
+<v John Miller>That's good. It's it's.
+It'll consider everything it has in.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/276-0
+00:12:17.788 --> 00:12:19.308
+<v John Miller>In in the context.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/281-0
+00:12:21.228 --> 00:12:27.386
+<v John Miller>And then tell us if it if it finds any
+problems with any of these issues.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/281-1
+00:12:27.386 --> 00:12:33.628
+<v John Miller>So it'll be looking for conflicting
+instructions where we're telling it in</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/281-2
+00:12:33.628 --> 00:12:38.788
+<v John Miller>two different instruction files to to to
+do different things.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/283-0
+00:12:38.988 --> 00:12:45.628
+<v John Miller>Factual inconsistencies.
+Are there any logical contradictions?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/285-0
+00:12:47.548 --> 00:12:49.140
+<v John Miller>Uh,
+are there differences in scope and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/285-1
+00:12:49.140 --> 00:12:49.508
+<v John Miller>priority?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/287-0
+00:12:53.548 --> 00:12:55.348
+<v John Miller>Technical incompatibilities.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/291-0
+00:12:57.948 --> 00:13:05.008
+<v John Miller>The communication gaps and duplication
+and redundancy and then here's the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/291-1
+00:13:05.008 --> 00:13:08.348
+<v John Miller>response that we would get back so.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/294-0
+00:13:10.708 --> 00:13:15.259
+<v John Miller>So here we're getting a.
+The second one is a duplication and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/294-1
+00:13:15.259 --> 00:13:20.108
+<v John Miller>redundancy problem. Here we have a.
+net 8 constraint repetition.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/301-0
+00:13:30.988 --> 00:13:35.521
+<v John Miller>A number of different one critical issue
+found, which is the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/301-1
+00:13:35.521 --> 00:13:39.543
+<v John Miller>net version conflict between the project
+requirements.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/301-2
+00:13:39.543 --> 00:13:43.126
+<v John Miller>net 8 and an Evergreen recommendation of.
+net 9.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/301-3
+00:13:43.126 --> 00:13:48.683
+<v John Miller>So there's a inconsistency there that we
+we would have to make sure that we</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/301-4
+00:13:48.683 --> 00:13:49.268
+<v John Miller>resolve.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/305-0
+00:13:49.628 --> 00:13:53.816
+<v John Miller>And obviously,
+I think if you're particularly pinned</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/305-1
+00:13:53.816 --> 00:13:59.663
+<v John Miller>down to a specific.net version,
+then you're going to be dealing with just</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/305-2
+00:13:59.663 --> 00:14:05.748
+<v John Miller>having to change the Evergreen portion to
+allow you to do.net 8 development.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/308-0
+00:14:06.348 --> 00:14:10.728
+<v John Miller>And then you can add back in the
+constraint to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/308-1
+00:14:10.728 --> 00:14:15.108
+<v John Miller>NET 9 once you've done the migration to.
+NET 9.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/310-0
+00:14:23.348 --> 00:14:23.748
+<v John Miller>So um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/315-0
+00:14:25.068 --> 00:14:31.157
+<v John Miller>It's not integrated instruction system,
+so I think that moving it up into the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/315-1
+00:14:31.157 --> 00:14:35.217
+<v John Miller>instructions folder would help.
+What else it found?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/315-2
+00:14:35.217 --> 00:14:41.228
+<v John Miller>So it's just it found just that's a
+summary, so it's gonna go through these.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/318-0
+00:14:44.188 --> 00:14:48.712
+<v Carter, Jake>I think it's calling out the fact that
+the Evergreen development markdown file</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/318-1
+00:14:48.712 --> 00:14:52.148
+<v Carter, Jake>doesn't have the instructions dot MD like
+at the end of it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/321-0
+00:14:52.268 --> 00:14:55.915
+<v John Miller>Oh yeah, yeah, you're right about that.
+You're right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/321-1
+00:14:55.915 --> 00:15:00.440
+<v John Miller>It it seemed like when I created it,
+it it it didn't pick up those</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/321-2
+00:15:00.440 --> 00:15:01.588
+<v John Miller>instructions and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/322-0
+00:15:02.748 --> 00:15:04.988
+<v John Miller>Maybe we don't. We have a.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/325-0
+00:15:05.948 --> 00:15:11.300
+<v John Miller>We have instructions for that,
+so for creating instructions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/325-1
+00:15:11.300 --> 00:15:14.108
+<v John Miller>Do we project instructions here?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/326-0
+00:15:15.748 --> 00:15:16.788
+<v John Miller>Practices.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/329-0
+00:15:19.788 --> 00:15:22.708
+<v John Miller>I'm not seeing it. Must be here somewhere.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/331-0
+00:15:27.388 --> 00:15:30.388
+<v John Miller>But anyway,
+so we're just going back to this.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/335-0
+00:15:32.988 --> 00:15:37.287
+<v John Miller>The the conflicting instructions.
+It's pointing out where those conflicting</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/335-1
+00:15:37.287 --> 00:15:40.002
+<v John Miller>instructions are and what file that
+they're in,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/335-2
+00:15:40.002 --> 00:15:42.548
+<v John Miller>and that we really need to address this
+one.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/340-0
+00:15:43.948 --> 00:15:49.855
+<v John Miller>The duplication and redundancy coverage
+code coverage standard duplication.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/340-1
+00:15:49.855 --> 00:15:55.450
+<v John Miller>So it's telling us within the testing
+instructions and the practice and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/340-2
+00:15:55.450 --> 00:16:01.668
+<v John Miller>instructions reference detailed coverage
+standards and we need to resolve that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/343-0
+00:16:01.948 --> 00:16:06.756
+<v John Miller>Impact is low severity and it says it's
+an acceptable redundancy for clarity to</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/343-1
+00:16:06.756 --> 00:16:11.624
+<v John Miller>have that between in both files and the
+cross reference ensures and consistency,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/343-2
+00:16:11.624 --> 00:16:14.148
+<v John Miller>so it doesn't recommend any modifications.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/346-0
+00:16:16.828 --> 00:16:21.194
+<v John Miller>We've got the constraint replication
+across multiple files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/346-1
+00:16:21.194 --> 00:16:23.668
+<v John Miller>It's basically what I asked it to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/348-0
+00:16:24.988 --> 00:16:29.560
+<v John Miller>Enforce the.net 8 constraints.
+It added that constraint to all the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/348-1
+00:16:29.560 --> 00:16:30.788
+<v John Miller>instruction files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/351-0
+00:16:32.028 --> 00:16:39.487
+<v John Miller>It considers this a positive redundancy
+and that we should keep it at is</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/351-1
+00:16:39.487 --> 00:16:41.428
+<v John Miller>communication gaps.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/353-0
+00:16:42.748 --> 00:16:46.348
+<v John Miller>It's not integrated into the instruction
+files, it's and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/357-0
+00:16:47.748 --> 00:16:52.359
+<v John Miller>It has no apply to or triggers.
+It's not filing the established naming</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/357-1
+00:16:52.359 --> 00:16:55.671
+<v John Miller>pattern,
+so we would try to that's medium severity</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/357-2
+00:16:55.671 --> 00:16:58.788
+<v John Miller>and add the appropriate formatter to that
+file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/359-0
+00:17:03.628 --> 00:17:05.788
+<v John Miller>And add it to the in the readme file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/364-0
+00:17:07.308 --> 00:17:12.751
+<v John Miller>Scope and priority conflicts.
+There's no no conflicts detected in that,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/364-1
+00:17:12.751 --> 00:17:17.437
+<v John Miller>no conflicts in incompatibilities,
+no logical contradictions,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/364-2
+00:17:17.437 --> 00:17:22.275
+<v John Miller>no factual inconsistency. So by and large,
+this is pretty good.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/364-3
+00:17:22.275 --> 00:17:25.828
+<v John Miller>We just need to kind of fix up this
+Evergreen.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/366-0
+00:17:26.108 --> 00:17:30.228
+<v John Miller>One,
+I just want to find that instruction file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/368-0
+00:17:35.828 --> 00:17:37.468
+<v John Miller>Uh, project instructions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/372-0
+00:17:48.188 --> 00:17:48.388
+<v John Miller>Yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/374-0
+00:17:50.268 --> 00:17:52.148
+<v John Miller>Interesting, so.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/376-0
+00:17:54.868 --> 00:17:56.948
+<v John Miller>Maybe I should get it from the other
+project?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/384-0
+00:18:00.628 --> 00:18:04.876
+<v Carter, Jake>But I I have a question.
+So in the instructions directory you you</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/379-0
+00:18:01.468 --> 00:18:02.948
+<v John Miller>Yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/384-1
+00:18:04.876 --> 00:18:09.575
+<v Carter, Jake>have something like the you also have
+like this checklist thing as well.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/384-2
+00:18:09.575 --> 00:18:13.437
+<v Carter, Jake>Actually I thought it was there,
+maybe it's somewhere else.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/384-3
+00:18:13.437 --> 00:18:17.428
+<v Carter, Jake>But I guess my question is does it?
+How does it know when to?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/389-0
+00:18:17.548 --> 00:18:22.406
+<v Carter, Jake>Like bring in something like I think I
+saw somewhere that it it sort of looks</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/389-1
+00:18:22.406 --> 00:18:27.451
+<v Carter, Jake>specifically for these like instructions
+dot in these as like instruction files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/389-2
+00:18:27.451 --> 00:18:30.877
+<v Carter, Jake>This checklist kind of also seems like an
+instruction.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/389-3
+00:18:30.877 --> 00:18:35.548
+<v Carter, Jake>Is checklist like another like built in
+identifiers? Is it something that?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/390-0
+00:18:35.948 --> 00:18:40.117
+<v Carter, Jake>The copilot would like automatically know
+that it needs to run every time you do</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/390-1
+00:18:40.117 --> 00:18:42.691
+<v Carter, Jake>something.
+Like how does that one fit into all of</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/390-2
+00:18:42.691 --> 00:18:42.948
+<v Carter, Jake>this?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/392-0
+00:18:44.348 --> 00:18:47.868
+<v Carter, Jake>I don't I don't remember exactly where
+this checklist file was located.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/396-0
+00:18:48.748 --> 00:18:53.386
+<v John Miller>Yeah,
+let me finish copying this instruction</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/396-1
+00:18:53.386 --> 00:18:56.788
+<v John Miller>file over and instruction prompt.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/394-0
+00:18:53.628 --> 00:18:53.748
+<v Carter, Jake>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/398-0
+00:19:03.988 --> 00:19:05.988
+<v John Miller>Let me do this one.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/400-0
+00:19:11.708 --> 00:19:13.148
+<v John Miller>That's not what I want.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/416-0
+00:19:47.428 --> 00:19:48.988
+<v John Miller>Sorry from there.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/419-0
+00:19:50.348 --> 00:19:53.759
+<v John Miller>Delay. I'm just.
+I seem to be missing an instruction file</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/419-1
+00:19:53.759 --> 00:19:58.228
+<v John Miller>that I wanted to show you and I'm trying
+to figure out what happened to it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/435-0
+00:20:31.188 --> 00:20:33.708
+<v John Miller>All right, well, let's just recreate it.
+How about that?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/443-0
+00:20:51.748 --> 00:20:53.228
+<v John Miller>And let's go.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/445-0
+00:20:54.428 --> 00:20:56.684
+<v John Miller>Over here,
+we'll copy that and we'll bring it over</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/445-1
+00:20:56.684 --> 00:20:57.348
+<v John Miller>to our project.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/447-0
+00:21:02.868 --> 00:21:04.308
+<v John Miller>And we'll put this in prompts.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/451-0
+00:21:06.908 --> 00:21:14.179
+<v John Miller>So this this is the prompt to give an
+instruction file or to create an</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/451-1
+00:21:14.179 --> 00:21:18.788
+<v John Miller>instruction file.
+So I think I do this here.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/454-0
+00:21:22.188 --> 00:21:25.908
+<v John Miller>Let's clear the context. Those are.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/455-0
+00:21:28.948 --> 00:21:31.548
+<v John Miller>Our windows and let's go ahead and run
+this.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/461-0
+00:21:32.828 --> 00:21:38.541
+<v John Miller>OK, now back to the the checklist. It can.
+It understands what a checklist is and it</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/461-1
+00:21:38.541 --> 00:21:43.784
+<v John Miller>can iterate through that checklist.
+So if you create an instruction file that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/461-2
+00:21:43.784 --> 00:21:46.809
+<v John Miller>has a set of steps that you want to
+execute,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/461-3
+00:21:46.809 --> 00:21:50.708
+<v John Miller>you can put a checklist in the markdown
+file and it will.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/465-0
+00:21:50.828 --> 00:21:55.395
+<v John Miller>And and if you tell it to update the
+checklist as it proceeds,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/465-1
+00:21:55.395 --> 00:22:01.339
+<v John Miller>it will then be able to basically in the
+chat window show you the the the current</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/465-2
+00:22:01.339 --> 00:22:05.108
+<v John Miller>instruction that it's executing and check
+them off.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/469-0
+00:22:06.468 --> 00:22:11.220
+<v John Miller>So it's a kind of.
+It's a feature that mark markdown that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/469-1
+00:22:11.220 --> 00:22:15.398
+<v John Miller>the copilot understands and can and can
+interpret.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/469-2
+00:22:15.398 --> 00:22:20.068
+<v John Miller>You don't have to add anything to the IDE
+or everything.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/472-0
+00:22:18.508 --> 00:22:22.558
+<v Carter, Jake>Yeah, so like specific specifically,
+I think you had a a file that was.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/472-1
+00:22:22.558 --> 00:22:26.046
+<v Carter, Jake>I'm talking more specifically about the
+the name of the file,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/472-2
+00:22:26.046 --> 00:22:30.378
+<v Carter, Jake>although I didn't see it last time you
+opened up the instructions directory.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/472-3
+00:22:30.378 --> 00:22:34.428
+<v Carter, Jake>Maybe you were in a different project,
+but I think sort of like how it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/474-0
+00:22:34.828 --> 00:22:35.988
+<v Carter, Jake>Created this like Evergreen.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/482-0
+00:22:37.628 --> 00:22:42.388
+<v Carter, Jake>like instruction file. Yes,
+see this like pre-code checklist on MD.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/475-0
+00:22:39.948 --> 00:22:40.548
+<v John Miller>Mhm.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/482-1
+00:22:42.388 --> 00:22:47.848
+<v Carter, Jake>Is the fact that this one doesn't have
+dot instruction dot MD at the end also</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/482-2
+00:22:47.848 --> 00:22:53.098
+<v Carter, Jake>going to be an issue or will the copilot
+actually know because it's in the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/482-3
+00:22:53.098 --> 00:22:55.828
+<v Carter, Jake>instructions directory that this should</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/483-0
+00:22:56.428 --> 00:22:59.123
+<v Carter, Jake>You know,
+because it looks like it has the front</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/481-0
+00:22:57.228 --> 00:22:58.828
+<v John Miller>Yeah, it will pick it up.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/483-1
+00:22:59.123 --> 00:22:59.508
+<v Carter, Jake>matter.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/485-0
+00:23:00.108 --> 00:23:03.108
+<v John Miller>Yeah, you know,
+some of them do and some of them don't.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/490-0
+00:23:05.468 --> 00:23:11.513
+<v John Miller>But the instructions is more of a
+convention than it is a requirement.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/490-1
+00:23:11.513 --> 00:23:15.259
+<v John Miller>I tend to do that because I'd like to
+know,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/490-2
+00:23:15.259 --> 00:23:20.708
+<v John Miller>you know what both what the instruction
+file is for as well as.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/493-0
+00:23:23.028 --> 00:23:27.578
+<v John Miller>As well as you know what it's actually
+trying to produce, right? So,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/493-1
+00:23:27.578 --> 00:23:32.325
+<v John Miller>so that's how how I've been trying to
+organize these instruction files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/493-2
+00:23:32.325 --> 00:23:33.908
+<v John Miller>So here we've created a.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/496-0
+00:23:35.068 --> 00:23:39.030
+<v John Miller>Where was an instruction standards
+instruction file?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/496-1
+00:23:39.030 --> 00:23:44.188
+<v John Miller>So this has the instruction standards for
+creating instruction file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/498-0
+00:23:48.388 --> 00:23:51.068
+<v John Miller>And have some examples of what those
+should look like.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/502-0
+00:23:53.148 --> 00:23:57.840
+<v John Miller>And I think we're we're not getting a lot
+of the front manner material because I</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/502-1
+00:23:57.840 --> 00:24:02.475
+<v John Miller>don't think we have the instruction file
+here for actually managing the A I any</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/502-2
+00:24:02.475 --> 00:24:03.228
+<v John Miller>interactions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/505-0
+00:24:06.188 --> 00:24:10.392
+<v John Miller>Which is something I I I showed you at
+first simply because I wanted to make</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/505-1
+00:24:10.392 --> 00:24:14.978
+<v John Miller>sure that those are that we could see how
+those are followed as we move forward and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/505-2
+00:24:14.978 --> 00:24:17.708
+<v John Miller>it looks like I never added them to this
+project.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/507-0
+00:24:18.788 --> 00:24:19.268
+<v John Miller>So.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/508-0
+00:24:21.948 --> 00:24:24.668
+<v John Miller>What we can do now is we can say um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/510-0
+00:24:26.908 --> 00:24:28.308
+<v John Miller>With this as our.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/512-0
+00:24:29.428 --> 00:24:32.108
+<v John Miller>Let's go ahead and keep that instruction
+file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/515-0
+00:24:34.148 --> 00:24:42.445
+<v John Miller>And focus on just this file.
+So looking at that we could say apply</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/515-1
+00:24:42.445 --> 00:24:43.188
+<v John Miller>these.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/517-0
+00:24:44.748 --> 00:24:45.748
+<v John Miller>Standards.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/518-0
+00:24:47.508 --> 00:24:48.668
+<v John Miller>Team Uh.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/520-0
+00:24:49.868 --> 00:24:52.348
+<v John Miller>To this instruction file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/535-0
+00:25:20.588 --> 00:25:23.108
+<v John Miller>No, didn't. That was a mistake.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/538-0
+00:25:29.628 --> 00:25:34.148
+<v John Miller>It's undo not.
+It applied the instruction file to itself.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/540-0
+00:25:37.468 --> 00:25:40.068
+<v John Miller>So let's do this. Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/543-0
+00:25:41.628 --> 00:25:45.228
+<v John Miller>Be more a little more explicit about this
+saying we want to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/545-0
+00:25:48.508 --> 00:25:52.388
+<v John Miller>Apply. Oh, it's still working.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/547-0
+00:25:54.108 --> 00:25:58.388
+<v John Miller>Go ahead and stop that imply these imply
+the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/549-0
+00:26:01.348 --> 00:26:05.068
+<v John Miller>Standards to the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/551-0
+00:26:05.788 --> 00:26:06.708
+<v John Miller>The hashtag.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/555-0
+00:26:18.868 --> 00:26:21.348
+<v John Miller>The Evergreen developments standards.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/557-0
+00:26:27.228 --> 00:26:29.628
+<v John Miller>And let's see what this does.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/561-0
+00:26:36.108 --> 00:26:42.220
+<v John Miller>So when I'm working on a project,
+I I tend to not create them all at one</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/561-1
+00:26:42.220 --> 00:26:43.308
+<v John Miller>time. I I um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/566-0
+00:26:46.428 --> 00:26:51.925
+<v John Miller>I I add them one at a time and then then
+go ahead and and check for any any issues</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/566-1
+00:26:51.925 --> 00:26:57.489
+<v John Miller>with that those combinations because what
+it's trying to do is actually look at all</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/566-2
+00:26:57.489 --> 00:27:02.258
+<v John Miller>of the instruction files that are
+currently in context and compare them</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/566-3
+00:27:02.258 --> 00:27:02.788
+<v John Miller>against.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/570-0
+00:27:03.068 --> 00:27:08.371
+<v John Miller>And evaluate them against each other and
+doing them in a more iterative fashion</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/570-1
+00:27:08.371 --> 00:27:11.421
+<v John Miller>produces less, produces issues,
+fewer issues,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/570-2
+00:27:11.421 --> 00:27:16.923
+<v John Miller>and then you can fix those issues as you
+go along so they don't all show up at the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/570-3
+00:27:16.923 --> 00:27:17.188
+<v John Miller>end.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/573-0
+00:27:18.588 --> 00:27:24.993
+<v John Miller>So here it's going through and it looks
+like it applied some additional scope</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/573-1
+00:27:24.993 --> 00:27:29.428
+<v John Miller>definitions of what Evergreen development
+looks like.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/575-0
+00:27:30.908 --> 00:27:35.933
+<v John Miller>What some of the prerequisites are,
+what some of the output instruction upper</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/575-1
+00:27:35.933 --> 00:27:37.028
+<v John Miller>requirements are.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/578-0
+00:27:43.068 --> 00:27:44.748
+<v John Miller>And.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/583-0
+00:27:55.308 --> 00:27:58.908
+<v John Miller>Well, let's see how it's doing there.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/586-0
+00:28:08.828 --> 00:28:12.228
+<v John Miller>And now it's cleaning up,
+cleaning up his work.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/592-0
+00:28:26.588 --> 00:28:32.188
+<v John Miller>So it's defined, assess the current state,
+establish automation infrastructure,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/592-1
+00:28:32.188 --> 00:28:35.548
+<v John Miller>define the update cadence and
+responsibilities.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/594-0
+00:28:36.908 --> 00:28:39.388
+<v John Miller>Uh, implement some core principles.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/596-0
+00:28:44.548 --> 00:28:46.628
+<v John Miller>Execute updates safely.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/600-0
+00:28:57.948 --> 00:29:00.948
+<v John Miller>And Dave wants to put it in a different
+folder.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/602-0
+00:29:06.548 --> 00:29:08.468
+<v John Miller>Go ahead and keep those changes.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/605-0
+00:29:15.628 --> 00:29:19.148
+<v John Miller>All right,
+so now we have a a more consistent.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/611-0
+00:29:20.188 --> 00:29:24.093
+<v John Miller>A set of instruction files that we can
+apply and now we can start to work with</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/611-1
+00:29:24.093 --> 00:29:27.651
+<v John Miller>those instruction files. So you know,
+thinking of it in terms of legacy</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/611-2
+00:29:27.651 --> 00:29:30.370
+<v John Miller>development,
+we and without having to make any changes</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/611-3
+00:29:30.370 --> 00:29:33.138
+<v John Miller>to the code,
+we can do some of that documentation work.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/611-4
+00:29:33.138 --> 00:29:36.548
+<v John Miller>What I want to get to next is actually
+implementing some more tasks.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/614-0
+00:29:36.908 --> 00:29:40.486
+<v John Miller>Um,
+but we can create these instruction files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/614-1
+00:29:40.486 --> 00:29:46.348
+<v John Miller>We can use these instruction files to
+then say look at the code and tell me.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/617-0
+00:29:47.308 --> 00:29:51.860
+<v John Miller>How we how the code,
+the implementation actually deviates from</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/617-1
+00:29:51.860 --> 00:29:55.833
+<v John Miller>the instructions.
+So I have a a prompt like that I can</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/617-2
+00:29:55.833 --> 00:29:56.628
+<v John Miller>bring over.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/618-0
+00:29:58.628 --> 00:30:00.188
+<v John Miller>Which is the?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/620-0
+00:30:03.908 --> 00:30:04.108
+<v John Miller>2.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/629-0
+00:30:27.188 --> 00:30:28.388
+<v John Miller>That's here.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/633-0
+00:30:33.228 --> 00:30:37.603
+<v John Miller>So what this one does is analyzes the
+report repository and reports any</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/633-1
+00:30:37.603 --> 00:30:41.978
+<v John Miller>deviation from the rules and guidance to
+find in our data instructions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/633-2
+00:30:41.978 --> 00:30:44.348
+<v John Miller>So we can take that and copy this over.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/634-0
+00:30:46.028 --> 00:30:46.308
+<v John Miller>Into.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/637-0
+00:30:50.668 --> 00:30:54.228
+<v John Miller>A project we can put this into our
+instruction folder.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/639-0
+00:30:57.548 --> 00:31:01.148
+<v John Miller>And then we can say, uh,
+let's close all of our windows.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/642-0
+00:31:03.548 --> 00:31:11.268
+<v John Miller>That's a new scope and then say go ahead
+and run the code base review.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/645-0
+00:31:12.588 --> 00:31:18.019
+<v John Miller>And this will now that we have
+established some of the instructions that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/645-1
+00:31:18.019 --> 00:31:20.548
+<v John Miller>we want the the project to follow.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/649-0
+00:31:22.028 --> 00:31:27.191
+<v John Miller>It will then produce some.
+It will look at it and see what issues we</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/649-1
+00:31:27.191 --> 00:31:32.428
+<v John Miller>actually need to do in order for us to
+align with those instructions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/651-0
+00:31:36.228 --> 00:31:39.268
+<v John Miller>O Now it's going to read the actual
+roject.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/657-0
+00:31:42.588 --> 00:31:45.583
+<v John Miller>And again,
+what we're doing here is creating a</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/657-1
+00:31:45.583 --> 00:31:50.107
+<v John Miller>technical debt backlog, right?
+We're finding things that that exist in</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/657-2
+00:31:50.107 --> 00:31:55.077
+<v John Miller>the code base that we need to be able.
+We should we would want to remove from</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/657-3
+00:31:55.077 --> 00:31:59.664
+<v John Miller>the code base. This is, you know,
+obviously a good idea for legacy code</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/657-4
+00:31:59.664 --> 00:32:02.468
+<v John Miller>bases,
+but this also applies to Greenfield.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/659-0
+00:32:02.508 --> 00:32:06.481
+<v John Miller>Field 'cause we're defining,
+we would want our Greenfield development</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/659-1
+00:32:06.481 --> 00:32:08.468
+<v John Miller>to follow these same standards and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/660-0
+00:32:09.628 --> 00:32:12.268
+<v John Miller>That's what we'll be working on tomorrow.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/664-0
+00:32:23.868 --> 00:32:25.028
+<v John Miller>Any questions on this process?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/670-0
+00:32:40.428 --> 00:32:42.388
+<v John Miller>What is it doing?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/673-0
+00:32:51.348 --> 00:32:53.988
+<v John Miller>Yeah, I think I know what this is doing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/676-0
+00:32:58.428 --> 00:33:01.028
+<v John Miller>Yes, it was in the wrong folder.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/677-0
+00:33:02.628 --> 00:33:04.268
+<v John Miller>So it was.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/680-0
+00:33:06.068 --> 00:33:11.395
+<v John Miller>Pulling in the wrong all the basically
+all the projects that I have on my on any</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/680-1
+00:33:11.395 --> 00:33:12.908
+<v John Miller>of my git repositories.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/683-0
+00:33:14.428 --> 00:33:20.428
+<v John Miller>So it now focus that down to just the
+projects that we're interested in.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/684-0
+00:33:21.188 --> 00:33:23.868
+<v John Miller>And that's creating our audit report.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/695-0
+00:33:50.348 --> 00:33:51.988
+<v John Miller>I wish I could type that fast.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/701-0
+00:34:05.748 --> 00:34:10.836
+<v John Miller>So that was a part prioritize these in
+terms of which ones gives us the biggest</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/701-1
+00:34:10.836 --> 00:34:13.508
+<v John Miller>value for with the least amount of effort.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/704-0
+00:34:15.348 --> 00:34:20.751
+<v John Miller>Bigger issues that we would have to
+possibly create a a plan for or a project</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/704-1
+00:34:20.751 --> 00:34:21.028
+<v John Miller>for.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/708-0
+00:34:34.588 --> 00:34:36.348
+<v John Miller>So 17 seconds total.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/714-0
+00:34:41.668 --> 00:34:46.803
+<v John Miller>So positive findings,
+constraint enforcement, version control,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/714-1
+00:34:46.803 --> 00:34:51.204
+<v John Miller>test coverage, 77%,
+not bad error handling and naming</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/714-2
+00:34:51.204 --> 00:34:56.013
+<v John Miller>conventions that likes our CICD and our
+XML documentation.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/714-3
+00:34:56.013 --> 00:35:01.148
+<v John Miller>Technical dead items that it it flagged
+that to do commenting.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/718-0
+00:35:01.428 --> 00:35:05.260
+<v John Miller>Again,
+low documented technical debt that's</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/718-1
+00:35:05.260 --> 00:35:11.532
+<v John Miller>already been done and conclusion that
+it's well structured and a strong</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/718-2
+00:35:11.532 --> 00:35:16.148
+<v John Miller>instruction compliance.
+So just identified 7 issues.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/723-0
+00:35:16.668 --> 00:35:20.676
+<v John Miller>That we should think about addressing and
+of course we can,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/723-1
+00:35:20.676 --> 00:35:26.154
+<v John Miller>we can tell it now if we want to go ahead
+and create issues for this and as we've</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/723-2
+00:35:26.154 --> 00:35:29.494
+<v John Miller>discussed,
+we can have those issues automatically</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/723-3
+00:35:29.494 --> 00:35:34.437
+<v John Miller>posted into the work item tracking system
+that we're using and that would</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/723-4
+00:35:34.437 --> 00:35:36.308
+<v John Miller>automatically add it to our.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/725-0
+00:35:36.508 --> 00:35:40.628
+<v John Miller>Backlog and we could and then prioritize
+those and get those addressed.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/730-0
+00:35:43.188 --> 00:35:46.186
+<v John Miller>So any any questions on on this this
+process?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/730-1
+00:35:46.186 --> 00:35:51.139
+<v John Miller>So it basically was first we create the
+instruction files that apply to the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/730-2
+00:35:51.139 --> 00:35:54.789
+<v John Miller>project itself.
+We use the generate instructions prompt</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/730-3
+00:35:54.789 --> 00:35:59.677
+<v John Miller>to do that and that identified all of the
+technology and the standards and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/730-4
+00:35:59.677 --> 00:36:01.828
+<v John Miller>practices that we were following.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/734-0
+00:36:01.948 --> 00:36:05.565
+<v John Miller>And then we use that those instruction
+files we did,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/734-1
+00:36:05.565 --> 00:36:10.751
+<v John Miller>we were able to use those to do a
+comparison against the existing code base</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/734-2
+00:36:10.751 --> 00:36:16.143
+<v John Miller>and produce a a list of issues that we
+would want to address in order to to be</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/734-3
+00:36:16.143 --> 00:36:19.828
+<v John Miller>compliant with the instruction files that
+we created.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/735-0
+00:36:23.428 --> 00:36:23.468
+<v John Miller>Oh.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/741-0
+00:36:27.308 --> 00:36:30.402
+<v John Miller>All right,
+so in terms of keeping everything green,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/741-1
+00:36:30.402 --> 00:36:33.972
+<v John Miller>we've got the, you know,
+those instruction files that we've</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/741-2
+00:36:33.972 --> 00:36:38.613
+<v John Miller>created and as long as we keep invoking
+those construction files and applying</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/741-3
+00:36:38.613 --> 00:36:41.231
+<v John Miller>that the the code base will stay,
+you know,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/741-4
+00:36:41.231 --> 00:36:45.991
+<v John Miller>and once we fix those issues and it will
+help us keep that code in an Evergreen</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/741-5
+00:36:45.991 --> 00:36:46.348
+<v John Miller>state.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/745-0
+00:36:47.628 --> 00:36:53.869
+<v John Miller>So we've seen kind of how this is lint
+linting works and how we're using it</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/745-1
+00:36:53.869 --> 00:37:00.356
+<v John Miller>basically going beyond static linting
+tools and and and and kind of looking at</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/745-2
+00:37:00.356 --> 00:37:03.148
+<v John Miller>A at the the the code in a higher.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/750-0
+00:37:03.228 --> 00:37:08.965
+<v John Miller>Level way by having it correspond to
+these instruction roles that we've</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/750-1
+00:37:08.965 --> 00:37:12.949
+<v John Miller>created.
+So that really gives us I think a better</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/750-2
+00:37:12.949 --> 00:37:18.447
+<v John Miller>control over the code that we're actually
+doing. So test automation,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/750-3
+00:37:18.447 --> 00:37:23.068
+<v John Miller>let's what I want to do is focus our next
+bit of time on.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/754-0
+00:37:23.228 --> 00:37:27.410
+<v John Miller>Improving our test coverage with unit
+tests,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/754-1
+00:37:27.410 --> 00:37:32.708
+<v John Miller>integration tests and end to end tests
+and performances,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/754-2
+00:37:32.708 --> 00:37:39.028
+<v John Miller>all kinds of different kinds of tests,
+we can generate those tests.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/758-0
+00:37:39.228 --> 00:37:44.942
+<v John Miller>Very easily through through the prompts
+that we've talked about already.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/758-1
+00:37:44.942 --> 00:37:51.282
+<v John Miller>We can also do a comparison and say you
+know what is our test coverage look like</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/758-2
+00:37:51.282 --> 00:37:51.908
+<v John Miller>now and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/761-0
+00:37:51.988 --> 00:37:58.291
+<v John Miller>What does our test coverage look like now
+and where do we need to to to have more</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/761-1
+00:37:58.291 --> 00:38:02.595
+<v John Miller>tests created?
+We did some work like that earlier if we</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/761-2
+00:38:02.595 --> 00:38:03.748
+<v John Miller>go back to our.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/763-0
+00:38:06.468 --> 00:38:11.908
+<v John Miller>Our projects we can.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/766-0
+00:38:19.988 --> 00:38:21.948
+<v John Miller>There's a a prompt like that here.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/768-0
+00:38:24.868 --> 00:38:27.988
+<v John Miller>Which is a test gap analysis prompt.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/771-0
+00:38:29.388 --> 00:38:31.828
+<v John Miller>And what it does is um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/773-0
+00:38:34.708 --> 00:38:35.988
+<v John Miller>No problem.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/776-0
+00:38:45.108 --> 00:38:48.468
+<v John Miller>Let's preview that and then move it into
+a new window.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/782-0
+00:38:53.468 --> 00:38:58.170
+<v John Miller>So it's look at the current code base of
+what tests are needed and missing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/782-1
+00:38:58.170 --> 00:39:02.935
+<v John Miller>So it performs like a read only audit of
+the repository to identify what the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/782-2
+00:39:02.935 --> 00:39:07.947
+<v John Miller>existing tests are and it what critical
+functionalities it surfaces with missing</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/782-3
+00:39:07.947 --> 00:39:09.308
+<v John Miller>or insufficient tests.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/786-0
+00:39:10.028 --> 00:39:15.633
+<v John Miller>And recommend concrete test cases and
+priorities and example scaffolds,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/786-1
+00:39:15.633 --> 00:39:20.849
+<v John Miller>proposed realistic coverage goals and
+step wise plan to get there.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/786-2
+00:39:20.849 --> 00:39:26.844
+<v John Miller>So this is at a I think at a much more
+much it's a it's a better approach to</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/786-3
+00:39:26.844 --> 00:39:28.868
+<v John Miller>doing a test gap analysis.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/791-0
+00:39:29.148 --> 00:39:33.468
+<v John Miller>Then just using code coverage because
+code coverage is you know,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/791-1
+00:39:33.468 --> 00:39:38.785
+<v John Miller>really just determining you know a line
+by line whether that line is executing,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/791-2
+00:39:38.785 --> 00:39:43.969
+<v John Miller>it's not really telling us is and is are
+the test actually really testing the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/791-3
+00:39:43.969 --> 00:39:46.628
+<v John Miller>functionality of the application itself.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/795-0
+00:39:46.908 --> 00:39:52.479
+<v John Miller>And this kind of a coverage will
+eliminate eliminate code that actually</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/795-1
+00:39:52.479 --> 00:39:58.747
+<v John Miller>isn't effectively part of the behavior.
+It's more structural and really focus on</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/795-2
+00:39:58.747 --> 00:40:02.538
+<v John Miller>the behavior of the code itself.
+So the impedes,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/795-3
+00:40:02.538 --> 00:40:05.788
+<v John Miller>it would be all the code in the code base.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/799-0
+00:40:05.868 --> 00:40:10.780
+<v John Miller>It's looking for the unit test,
+integration test, and test, etcetera.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/799-1
+00:40:10.780 --> 00:40:14.008
+<v John Miller>What and what kind of tools that we're
+using.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/799-2
+00:40:14.008 --> 00:40:18.358
+<v John Miller>It excludes a bunch of other files from
+the from the process.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/799-3
+00:40:18.358 --> 00:40:22.428
+<v John Miller>It goes through some steps to discover
+the testing setup.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/803-0
+00:40:22.708 --> 00:40:26.970
+<v John Miller>Inventory the existing tasks,
+map the critical functionality,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/803-1
+00:40:26.970 --> 00:40:30.133
+<v John Miller>identify the gaps and risks,
+recommend tests,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/803-2
+00:40:30.133 --> 00:40:35.014
+<v John Miller>provide a prioritized list of missing
+tests with the type, the target,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/803-3
+00:40:35.014 --> 00:40:38.108
+<v John Miller>the scenario, the rationale,
+establish them.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/808-0
+00:40:38.268 --> 00:40:42.870
+<v John Miller>Basic code coverage goals or and then
+summarize that and produce a report.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/808-1
+00:40:42.870 --> 00:40:47.533
+<v John Miller>The report would look like an executive
+summary with the detective testing,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/808-2
+00:40:47.533 --> 00:40:50.233
+<v John Miller>the test inventory,
+the gaps and the risks,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/808-3
+00:40:50.233 --> 00:40:53.854
+<v John Miller>and then the list of the tests it wants,
+sources it scans,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/808-4
+00:40:53.854 --> 00:40:56.308
+<v John Miller>how long it took to do each one of them.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/811-0
+00:40:56.748 --> 00:41:02.331
+<v John Miller>All right, so that's pretty good.
+So if we took that test gas analysis</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/811-1
+00:41:02.331 --> 00:41:05.948
+<v John Miller>prompt and we bring it over into our
+project.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/812-0
+00:41:09.108 --> 00:41:10.628
+<v John Miller>Oh, that's this one.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/815-0
+00:41:14.548 --> 00:41:16.988
+<v John Miller>And we add that to our instruction file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/817-0
+00:41:19.468 --> 00:41:22.148
+<v John Miller>We can then clear our context again.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/819-0
+00:41:25.308 --> 00:41:28.388
+<v John Miller>And have it and do that test gap analysis.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/827-0
+00:41:49.588 --> 00:41:51.468
+<v John Miller>10 files that look like test files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/830-0
+00:41:53.548 --> 00:41:58.281
+<v John Miller>It's it's found the test project.
+It's searching for files that match those</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/830-1
+00:41:58.281 --> 00:41:58.468
+<v John Miller>20.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/844-0
+00:42:37.428 --> 00:42:39.941
+<v John Miller>All right,
+so now it's working on creating that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/844-1
+00:42:39.941 --> 00:42:40.308
+<v John Miller>report.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/856-0
+00:42:55.788 --> 00:42:58.738
+<v John Miller>So,
+so when I'm working at code and they put</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/856-1
+00:42:58.738 --> 00:43:02.672
+<v John Miller>me on a new project,
+if it's existing code, I've run a lot,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/856-2
+00:43:02.672 --> 00:43:06.409
+<v John Miller>I've run all of these prompts and I use
+it to, you know,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/856-3
+00:43:06.409 --> 00:43:11.654
+<v John Miller>to to fill up their backlog to try to
+basically make the technical debt visible</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/856-4
+00:43:11.654 --> 00:43:15.588
+<v John Miller>because that's the first step in getting
+it resolved is to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/859-0
+00:43:16.308 --> 00:43:21.885
+<v John Miller>Is to get it identified and prioritized
+and then we can have a discussion about</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/859-1
+00:43:21.885 --> 00:43:27.392
+<v John Miller>when we think we need to resolve those
+kinds of technical data issues and that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/859-2
+00:43:27.392 --> 00:43:30.668
+<v John Miller>goes a long way towards getting them
+actually.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/864-0
+00:43:31.148 --> 00:43:35.787
+<v John Miller>And getting the resources available to
+actually address them. And that's,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/864-1
+00:43:35.787 --> 00:43:38.922
+<v John Miller>you know,
+I've just been working on a new project</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/864-2
+00:43:38.922 --> 00:43:43.498
+<v John Miller>for the last two or three weeks and I
+added about 30 or 40 things to the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/864-3
+00:43:43.498 --> 00:43:47.260
+<v John Miller>backlog just to surface.
+Some of them were security issues,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/864-4
+00:43:47.260 --> 00:43:48.388
+<v John Miller>some of them were.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/869-0
+00:43:49.668 --> 00:43:55.757
+<v John Miller>Changes that needed to be made just to
+improve the maintainability of the code</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/869-1
+00:43:55.757 --> 00:43:59.457
+<v John Miller>base,
+but I find this to be a a useful exercise</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/869-2
+00:43:59.457 --> 00:44:03.620
+<v John Miller>to both both basically in terms of making,
+making it,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/869-3
+00:44:03.620 --> 00:44:07.628
+<v John Miller>helping us make it make sure that the
+code is more.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/870-0
+00:44:07.708 --> 00:44:08.548
+<v John Miller>Evergreen.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/871-0
+00:44:10.348 --> 00:44:12.868
+<v John Miller>All right,
+so so we should see that report soon.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/889-0
+00:44:58.108 --> 00:44:59.628
+<v John Miller>All right, there we go.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/892-0
+00:45:00.988 --> 00:45:06.948
+<v John Miller>So let's open our preview.
+Let's move it into the new window.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/898-0
+00:45:09.708 --> 00:45:13.844
+<v John Miller>All right,
+so it tells us what repository that we</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/898-1
+00:45:13.844 --> 00:45:20.295
+<v John Miller>looked at when we did this report and
+then with the current code coverages of</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/898-2
+00:45:20.295 --> 00:45:24.679
+<v John Miller>both by line and by branch,
+solid test coverage 77%,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/898-3
+00:45:24.679 --> 00:45:27.988
+<v John Miller>but there are significant gaps existing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/899-0
+00:45:28.428 --> 00:45:31.788
+<v John Miller>The mathematical functions are only um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/904-0
+00:45:32.748 --> 00:45:36.794
+<v John Miller>Only square root is tested of the new
+functions that we added.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/904-1
+00:45:36.794 --> 00:45:39.941
+<v John Miller>The use of UI interaction coverage is
+about 48%.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/904-2
+00:45:39.941 --> 00:45:43.023
+<v John Miller>Error handling in edge cases could be
+improved.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/904-3
+00:45:43.023 --> 00:45:48.097
+<v John Miller>Boundary conditions and precise limits.
+You know integration scenarios between</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/904-4
+00:45:48.097 --> 00:45:51.308
+<v John Miller>the components. Overall risk is medium,
+which is.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/908-0
+00:45:51.308 --> 00:45:56.652
+<v John Miller>Which is good.
+I get our medium and so it's well tested,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/908-1
+00:45:56.652 --> 00:46:02.839
+<v John Miller>but critical features lack like those
+functions and error states.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/908-2
+00:46:02.839 --> 00:46:06.308
+<v John Miller>Framework is in its test test runner.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/911-0
+00:46:06.508 --> 00:46:11.626
+<v John Miller>The the coverage report generator,
+what the test structures look like,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/911-1
+00:46:11.626 --> 00:46:13.428
+<v John Miller>the test naming patterns.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/912-0
+00:46:15.388 --> 00:46:20.268
+<v John Miller>The code coverage configuration,
+the CICD workflow steps.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/918-0
+00:46:21.708 --> 00:46:26.884
+<v John Miller>The test inventory where which?
+So we have 14 unit tests,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/918-1
+00:46:26.884 --> 00:46:33.221
+<v John Miller>5 integration tests, 7 feature tests,
+one command line test and one UI</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/918-2
+00:46:33.221 --> 00:46:38.308
+<v John Miller>components test and then it breaks it
+down by component.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/921-0
+00:46:40.308 --> 00:46:48.324
+<v John Miller>But so here we can see in the evaluator
+what what tests are being executed by in</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/921-1
+00:46:48.324 --> 00:46:53.668
+<v John Miller>the program dot CS file in the main
+window XAML file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/926-0
+00:46:55.788 --> 00:47:00.763
+<v John Miller>And there are no tests for the app WPL
+application.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/926-1
+00:47:00.763 --> 00:47:08.608
+<v John Miller>So here we go for the area and the target.
+So it's looking for unit tests for the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/926-2
+00:47:08.608 --> 00:47:09.948
+<v John Miller>evaluator for.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/930-0
+00:47:11.148 --> 00:47:15.526
+<v John Miller>For all of the functions that we had
+implemented but actually hadn't created</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/930-1
+00:47:15.526 --> 00:47:18.767
+<v John Miller>any tests for,
+the reason those tests weren't created is</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/930-2
+00:47:18.767 --> 00:47:23.372
+<v John Miller>that we didn't have an instruction file
+that demanded them and we didn't ask for</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/930-3
+00:47:23.372 --> 00:47:25.988
+<v John Miller>them in our prompt,
+so it didn't create them.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/933-0
+00:47:26.588 --> 00:47:31.341
+<v John Miller>The main window dot error display is a UI
+integration test,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/933-1
+00:47:31.341 --> 00:47:36.253
+<v John Miller>a UI unit test for the clear button and
+the backspace button.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/933-2
+00:47:36.253 --> 00:47:38.788
+<v John Miller>The history of the double click.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/937-0
+00:47:40.108 --> 00:47:45.426
+<v John Miller>These are all considered to be high risk
+items to test.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/937-1
+00:47:45.426 --> 00:47:53.404
+<v John Miller>Then there's a whole range of medium risk
+items to test and some minor gaps that it</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/937-2
+00:47:53.404 --> 00:47:55.588
+<v John Miller>wants us to to look at.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/941-0
+00:47:56.188 --> 00:47:59.491
+<v John Miller>So immediate tests,
+it says we want to close that the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/941-1
+00:47:59.491 --> 00:48:04.447
+<v John Miller>critical functioning testing gap in on
+those essential UI paths and get our test</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/941-2
+00:48:04.447 --> 00:48:07.506
+<v John Miller>coverage.
+It's predicting that we could get it up</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/941-3
+00:48:07.506 --> 00:48:11.788
+<v John Miller>to 85% of line coverage asking for these
+mathematical function tests.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/947-0
+00:48:12.028 --> 00:48:17.886
+<v John Miller>And the WPF error handling test,
+the keyboard input test and clear back</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/947-1
+00:48:17.886 --> 00:48:24.476
+<v John Miller>clear the clear and backspace key test
+and nested functionality that where we're</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/947-2
+00:48:24.476 --> 00:48:28.788
+<v John Miller>using parentheses.
+It wants to see some tests there.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/951-0
+00:48:29.588 --> 00:48:32.900
+<v John Miller>So this is I I think a a pretty good look
+at what we got,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/951-1
+00:48:32.900 --> 00:48:37.582
+<v John Miller>what's going on in the project. You know,
+we've been working in this code for two</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/951-2
+00:48:37.582 --> 00:48:42.264
+<v John Miller>or three days now and I think we kind of
+had a sense for what some of the gaps we</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/951-3
+00:48:42.264 --> 00:48:44.548
+<v John Miller>had in in the covers as we were working.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/953-0
+00:48:45.108 --> 00:48:53.757
+<v John Miller>But this is giving us a clear set of
+targets and a plan for actually how to</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/953-1
+00:48:53.757 --> 00:48:54.668
+<v John Miller>achieve.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/956-0
+00:48:58.948 --> 00:49:01.828
+<v John Miller>All right. So any questions are on this?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/957-0
+00:49:03.908 --> 00:49:04.548
+<v John Miller>So far.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/960-0
+00:49:09.108 --> 00:49:12.329
+<v John Miller>All right,
+then why don't we quote it and just ask</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/960-1
+00:49:12.329 --> 00:49:12.708
+<v John Miller>it to?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/962-0
+00:49:15.148 --> 00:49:19.428
+<v John Miller>Fix all the phase one critical gaps.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/964-0
+00:49:22.668 --> 00:49:26.188
+<v John Miller>So let's go ahead and select that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/967-0
+00:49:27.468 --> 00:49:32.108
+<v John Miller>We can go back to our to our our project.
+close that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/971-0
+00:49:35.148 --> 00:49:40.531
+<v John Miller>And we have this file open.
+Let's keep that file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/971-1
+00:49:40.531 --> 00:49:45.268
+<v John Miller>That's a good report and clear our
+context.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/972-0
+00:49:48.028 --> 00:49:49.748
+<v John Miller>Looks like we're good there.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/975-0
+00:49:54.428 --> 00:49:56.988
+<v John Miller>And then, uh, let's just say uh.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/977-0
+00:50:02.828 --> 00:50:06.148
+<v John Miller>A phase one critical gap test.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/984-0
+00:50:20.468 --> 00:50:24.068
+<v John Miller>So so we should see a new test files show
+up.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/987-0
+00:50:30.188 --> 00:50:33.948
+<v John Miller>Uh, you created those uh, six to do's.
+So let's take a look at those.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/989-0
+00:50:35.548 --> 00:50:39.628
+<v John Miller>So here we get a a kind of a peek into
+what it's actually doing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/991-0
+00:50:46.188 --> 00:50:46.468
+<v John Miller>Yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/992-0
+00:50:47.988 --> 00:50:48.108
+<v John Miller>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/998-0
+00:51:03.868 --> 00:51:06.632
+<v John Miller>Right. Well,
+we switch back to the slides and see if</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/998-1
+00:51:06.632 --> 00:51:10.388
+<v John Miller>there's something we can get caught up on
+there while this is thinking.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1003-0
+00:51:13.108 --> 00:51:18.156
+<v John Miller>So here we're going to exercise 5 in
+generating some tests we're identifying.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1003-1
+00:51:18.156 --> 00:51:23.205
+<v John Miller>We've also looked at identifying those
+instruction compliance gaps and we got</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1003-2
+00:51:23.205 --> 00:51:27.800
+<v John Miller>some output on there in terms of things
+that we would like to improve.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1003-3
+00:51:27.800 --> 00:51:29.548
+<v John Miller>So we we did that exercise.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1007-0
+00:51:29.948 --> 00:51:34.827
+<v John Miller>What we haven't done is having it address
+one of those compliance gaps,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1007-1
+00:51:34.827 --> 00:51:39.231
+<v John Miller>so we can try that then.
+We did this yesterday where we compared</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1007-2
+00:51:39.231 --> 00:51:42.822
+<v John Miller>the implementations of two different,
+two different,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1007-3
+00:51:42.822 --> 00:51:45.668
+<v John Miller>two different implementations of the same.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1011-0
+00:51:45.948 --> 00:51:50.994
+<v John Miller>Feature and got the pros and cons of each
+one of those and pointed out some</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1011-1
+00:51:50.994 --> 00:51:56.239
+<v John Miller>interesting biases in the models that we
+might have to take into consideration</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1011-2
+00:51:56.239 --> 00:51:59.028
+<v John Miller>when we're thinking about generating code.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1012-0
+00:52:00.628 --> 00:52:02.748
+<v John Miller>And so we did that exercise.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1014-0
+00:52:03.748 --> 00:52:07.068
+<v John Miller>Alright,
+so we talked about creating instructions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1018-0
+00:52:08.108 --> 00:52:12.329
+<v John Miller>And how to use AI to help us generate or
+create those instruction files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1018-1
+00:52:12.329 --> 00:52:16.551
+<v John Miller>And so that'll be the last bit.
+What I what I think since we're going to</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1018-2
+00:52:16.551 --> 00:52:19.789
+<v John Miller>have some time,
+why don't we take a stab after the test</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1018-3
+00:52:19.789 --> 00:52:23.548
+<v John Miller>implementation to see if we can get this
+into a pre-commit hook?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1021-0
+00:52:24.508 --> 00:52:31.508
+<v John Miller>Or or and to update PRS and into the
+pipeline.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1025-0
+00:52:35.068 --> 00:52:38.786
+<v John Miller>So it's it's having that directory
+problem. Again,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1025-1
+00:52:38.786 --> 00:52:42.869
+<v John Miller>this is happens when it opens up a new
+terminal window.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1025-2
+00:52:42.869 --> 00:52:48.628
+<v John Miller>The terminal window always starts in the
+git folder because that's my default.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1028-0
+00:52:49.868 --> 00:52:55.766
+<v John Miller>So it has to figure out that it needs to
+change into that directory in order to do</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1028-1
+00:52:55.766 --> 00:52:56.548
+<v John Miller>that build.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1031-0
+00:53:02.188 --> 00:53:06.388
+<v John Miller>All right, so here it wants to create a.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1032-0
+00:53:06.428 --> 00:53:06.948
+<v John Miller>Pretty.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1034-0
+00:53:08.348 --> 00:53:13.348
+<v John Miller>You want to edit the calculator CS file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1037-0
+00:53:18.908 --> 00:53:21.588
+<v John Miller>Which is not something we let it do on
+its own.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1047-0
+00:53:37.948 --> 00:53:44.722
+<v John Miller>So the the the project file was one of
+the things that had had popped up in the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1047-1
+00:53:44.722 --> 00:53:49.887
+<v John Miller>compliance analysis.
+So this effort is going to address that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1047-2
+00:53:49.887 --> 00:53:50.988
+<v John Miller>item as well.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1049-0
+00:53:56.148 --> 00:53:59.096
+<v John Miller>Now it's running some tests.
+The build has succeeded.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1049-1
+00:53:59.096 --> 00:54:00.788
+<v John Miller>It's like the test have passed.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1052-0
+00:54:06.628 --> 00:54:10.228
+<v John Miller>Adding the test project to the solution.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1080-0
+00:55:12.868 --> 00:55:21.510
+<v John Miller>So give us 15 warnings but no issues.
+So I have 61 tests passed out of 63 two</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1080-1
+00:55:21.510 --> 00:55:25.388
+<v John Miller>failures do a bug in the evaluator.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1083-0
+00:55:36.788 --> 00:55:37.268
+<v John Miller>So.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1092-0
+00:55:52.428 --> 00:55:55.284
+<v John Miller>So my question is,
+let's see if two failures do,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1092-1
+00:55:55.284 --> 00:56:00.181
+<v John Miller>it thinks there's a bug in the evaluator.
+It's rejecting the E character for math E</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1092-2
+00:56:00.181 --> 00:56:03.328
+<v John Miller>when converting to a string with
+scientific notation,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1092-3
+00:56:03.328 --> 00:56:06.068
+<v John Miller>but then it's saying it wants to fix the
+test.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1093-0
+00:56:07.668 --> 00:56:07.828
+<v John Miller>So.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1095-0
+00:56:10.348 --> 00:56:13.028
+<v John Miller>Um, did it change here?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1104-0
+00:56:27.148 --> 00:56:33.125
+<v John Miller>So this is I would you know I would have
+what I'm questioning is is this a valid</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1104-1
+00:56:33.125 --> 00:56:38.806
+<v John Miller>bug and we're then changing the test to
+fix the the the way to which the bug</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1104-2
+00:56:38.806 --> 00:56:42.348
+<v John Miller>operates which is a a real danger I've
+seen in.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1105-0
+00:56:42.428 --> 00:56:42.508
+<v John Miller>Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1110-0
+00:56:44.268 --> 00:56:49.400
+<v John Miller>And and you and AI generated tests is
+that sometimes it it likes to make</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1110-1
+00:56:49.400 --> 00:56:54.814
+<v John Miller>assumptions to change the test rather
+than identifying that that is an issue</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1110-2
+00:56:54.814 --> 00:57:00.228
+<v John Miller>that it actually have to change the
+implementation that the test is correct.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1114-0
+00:57:08.868 --> 00:57:12.951
+<v John Miller>So in this case, if um,
+if we had decided that this is actually</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1114-1
+00:57:12.951 --> 00:57:16.268
+<v John Miller>is a bug,
+we would I would go back here and say um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1115-0
+00:57:17.228 --> 00:57:19.748
+<v John Miller>And it still has those two failed tests.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1118-0
+00:57:24.508 --> 00:57:28.148
+<v John Miller>I would go back and say no,
+we did the the that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1122-0
+00:57:29.388 --> 00:57:36.215
+<v John Miller>That the E character is a valid character
+and that you need to fix the test to fail</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1122-1
+00:57:36.215 --> 00:57:42.148
+<v John Miller>in that case and then fix the
+implementation so that it passes the test.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1140-0
+00:58:36.268 --> 00:58:41.017
+<v John Miller>It says the evaluator validates against
+letters after the functions should have</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1140-1
+00:58:41.017 --> 00:58:41.908
+<v John Miller>been converted.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1150-0
+00:59:06.428 --> 00:59:10.708
+<v John Miller>Interesting is notice the same problem in
+a different function.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1158-0
+00:59:28.828 --> 00:59:33.264
+<v John Miller>So it's now recognized that it's not the
+it's not the test that needs to be fixed,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1158-1
+00:59:33.264 --> 00:59:35.028
+<v John Miller>it's actually the implementation.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1178-0
+01:00:27.068 --> 01:00:31.689
+<v John Miller>So now the tests are passing,
+it's just doing the code coverage</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1178-1
+01:00:31.689 --> 01:00:32.628
+<v John Miller>analysis and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1181-0
+01:00:37.548 --> 01:00:41.628
+<v John Miller>We should be close to being finished with
+all of these high priority.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1183-0
+01:00:45.228 --> 01:00:47.628
+<v John Miller>Test that it identified.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1192-0
+01:01:13.908 --> 01:01:14.388
+<v John Miller>Mhm.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1195-0
+01:01:17.548 --> 01:01:19.228
+<v John Miller>And now this would be the correct file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1197-0
+01:01:25.468 --> 01:01:28.548
+<v John Miller>So our line coverage did go back up to
+90%.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1202-0
+01:01:40.948 --> 01:01:41.108
+<v John Miller>And.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1206-0
+01:01:48.748 --> 01:01:51.748
+<v John Miller>I'm just looking at the complexity score
+here.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1208-0
+01:01:52.908 --> 01:01:55.388
+<v John Miller>So it's telling us that the replace
+functions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1209-0
+01:01:57.988 --> 01:01:58.028
+<v John Miller>Uh.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1213-0
+01:02:00.588 --> 01:02:04.931
+<v John Miller>Method has a has the highest complexity
+score of of the in the project and so</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1213-1
+01:02:04.931 --> 01:02:09.440
+<v John Miller>that might be something that we have AI
+take a look at and see if it can come up</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1213-2
+01:02:09.440 --> 01:02:12.948
+<v John Miller>with a implementation that's low that has
+the less complexity.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1219-0
+01:02:18.508 --> 01:02:23.746
+<v Carter, Jake>In that screen you were just on where
+it's prompting you to upgrade to pro</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1219-1
+01:02:23.746 --> 01:02:27.308
+<v Carter, Jake>version,
+is this is this something that's produced</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1219-2
+01:02:27.308 --> 01:02:31.428
+<v Carter, Jake>by the AI like entirely or is it using
+some tool for this?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1221-0
+01:02:31.868 --> 01:02:39.028
+<v John Miller>It's using a a tool that it installed
+when we first started to look at the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1228-0
+01:02:40.428 --> 01:02:46.613
+<v John Miller>At at the test coverage and it picked and
+it picked this tool and and it did a an</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1223-0
+01:02:44.148 --> 01:02:46.028
+<v Carter, Jake>OK, yeah, I think I remember that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1228-1
+01:02:46.613 --> 01:02:51.892
+<v John Miller>install so that we could use it.
+Obviously you know you could specify</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1228-2
+01:02:51.892 --> 01:02:57.851
+<v John Miller>whatever tool that you wanted to run and
+it would be able to take advantage of</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1228-3
+01:02:57.851 --> 01:02:58.228
+<v John Miller>that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1227-0
+01:02:58.308 --> 01:02:58.468
+<v Carter, Jake>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1235-0
+01:03:11.788 --> 01:03:16.527
+<v John Miller>So here it's just basically trying to get
+the XML from the coverage report so I can</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1235-1
+01:03:16.527 --> 01:03:19.348
+<v John Miller>tell us the same thing we just saw on the
+screen.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1248-0
+01:03:42.748 --> 01:03:45.879
+<v John Miller>So this is good.
+So we've improved our coverage quite a</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1248-1
+01:03:45.879 --> 01:03:48.172
+<v John Miller>bit.
+We've also tackled some of the more</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1248-2
+01:03:48.172 --> 01:03:51.918
+<v John Miller>critical bugs. So we've been,
+I think increased the quality of the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1248-3
+01:03:51.918 --> 01:03:54.602
+<v John Miller>application substantially as well.
+So you know,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1248-4
+01:03:54.602 --> 01:03:58.348
+<v John Miller>I think that was a a worthwhile effort
+and it didn't take us long.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1249-0
+01:03:59.028 --> 01:03:59.948
+<v John Miller>To do that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1250-0
+01:04:02.508 --> 01:04:03.908
+<v John Miller>Any questions on this?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1257-0
+01:04:14.148 --> 01:04:19.442
+<v Tarrants, Seth>Yeah, I have a quick question.
+I did notice when I was doing some work</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1257-1
+01:04:19.442 --> 01:04:24.364
+<v Tarrants, Seth>on my own simple project,
+it seems to sometimes round up a number</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1257-2
+01:04:24.364 --> 01:04:26.228
+<v Tarrants, Seth>and sometimes it doesn't.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1259-0
+01:04:29.028 --> 01:04:31.788
+<v Tarrants, Seth>Is there any rhyme or reason to that or
+is it?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1260-0
+01:04:32.748 --> 01:04:32.948
+<v Tarrants, Seth>Like why?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1266-0
+01:04:32.868 --> 01:04:37.648
+<v John Miller>Yeah, I could.
+I think it it could be model differences</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1266-1
+01:04:37.648 --> 01:04:43.879
+<v John Miller>or versus the model difference.
+There could be a number of reasons I can</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1263-0
+01:04:41.908 --> 01:04:42.028
+<v Tarrants, Seth>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1266-2
+01:04:43.879 --> 01:04:50.708
+<v John Miller>think of for that if you give it more
+explicit instructions on how you want the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1266-3
+01:04:50.708 --> 01:04:51.988
+<v John Miller>data presented.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1269-0
+01:04:52.268 --> 01:04:57.143
+<v John Miller>There's a that could improve that
+situation. Yeah, I'd say that, you know,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1267-0
+01:04:55.908 --> 01:04:56.028
+<v Tarrants, Seth>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1269-1
+01:04:57.143 --> 01:04:59.548
+<v John Miller>that's about how I would approach it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1270-0
+01:04:59.868 --> 01:05:01.188
+<v Tarrants, Seth>OK. Thank you.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1274-0
+01:05:02.748 --> 01:05:05.782
+<v John Miller>I mean,
+we could ask us to add another decimal</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1274-1
+01:05:05.782 --> 01:05:09.268
+<v John Miller>precision onto the line coverage and see
+if it could.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1276-0
+01:05:10.508 --> 01:05:13.908
+<v John Miller>It'll adjust the output.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1294-0
+01:05:55.148 --> 01:05:59.988
+<v John Miller>So here line coverage is now expressed to
+two decimal points.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1297-0
+01:06:10.468 --> 01:06:11.268
+<v John Miller>All right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1300-0
+01:06:14.788 --> 01:06:19.142
+<v John Miller>OK, then if there's no other questions,
+let's move forward.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1300-1
+01:06:19.142 --> 01:06:22.988
+<v John Miller>Let's get our code committed.
+So let's go ahead and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1314-0
+01:06:49.628 --> 01:06:53.170
+<v John Miller>Yeah,
+so this is the behavior I've been seeing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1314-1
+01:06:53.170 --> 01:06:58.778
+<v John Miller>It can it's wants to create the new
+terminal windows and every time it does</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1314-2
+01:06:58.778 --> 01:07:01.508
+<v John Miller>that it goes back to the root folder.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1322-0
+01:07:20.708 --> 01:07:22.988
+<v John Miller>All right, so it's composed uh.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1324-0
+01:07:26.788 --> 01:07:27.828
+<v John Miller>Commit message.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1327-0
+01:07:33.708 --> 01:07:36.308
+<v John Miller>And it's now pushed those changes in for
+us.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1330-0
+01:07:41.748 --> 01:07:44.987
+<v John Miller>All right,
+so let's see what we we were talking</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1330-1
+01:07:44.987 --> 01:07:47.888
+<v John Miller>about.
+I think it was yesterday or the day</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1330-2
+01:07:47.888 --> 01:07:49.508
+<v John Miller>before about wanting to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1334-0
+01:07:59.148 --> 01:08:00.828
+<v John Miller>Uh, was it one of these?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1339-0
+01:08:10.108 --> 01:08:12.259
+<v John Miller>Well,
+how about we can we can use this one?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1339-1
+01:08:12.259 --> 01:08:13.628
+<v John Miller>I think it's a good example.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1344-0
+01:08:14.828 --> 01:08:21.118
+<v John Miller>I think we were talking about Evergreen
+at the time, but we we can use this one.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1344-1
+01:08:21.118 --> 01:08:24.613
+<v John Miller>Well,
+what we want to say is we want to have</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1344-2
+01:08:24.613 --> 01:08:29.428
+<v John Miller>this style instruction execute when a
+when a PR is submitted.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1346-0
+01:08:30.828 --> 01:08:36.988
+<v John Miller>And if it finds,
+if it finds errors in that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1349-0
+01:08:38.588 --> 01:08:43.265
+<v John Miller>When it evaluates those instructions or
+result, they want to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1349-1
+01:08:43.265 --> 01:08:48.924
+<v John Miller>I want to add a commit message into the
+PR. So we did something like that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1349-2
+01:08:48.924 --> 01:08:50.508
+<v John Miller>I said well, we said.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1351-0
+01:08:52.308 --> 01:08:52.548
+<v John Miller>Uh.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1353-0
+01:08:57.668 --> 01:08:59.108
+<v John Miller>It says.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1355-0
+01:09:01.348 --> 01:09:05.908
+<v John Miller>The uh dot CS files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1357-0
+01:09:10.468 --> 01:09:10.548
+<v John Miller>Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1359-0
+01:09:13.188 --> 01:09:15.588
+<v John Miller>Against the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1361-0
+01:09:18.148 --> 01:09:19.628
+<v John Miller>The style instructions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1362-0
+01:09:21.308 --> 01:09:22.948
+<v John Miller>In the park.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1364-0
+01:09:24.988 --> 01:09:26.348
+<v John Miller>Any issues?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1378-0
+01:09:59.788 --> 01:10:02.028
+<v John Miller>Uh, it's looking at the code and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1392-0
+01:10:31.228 --> 01:10:36.788
+<v John Miller>Now it's putting this report and that'll
+be the first step towards the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1394-0
+01:10:38.108 --> 01:10:41.588
+<v John Miller>Getting this into a PR comments.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1419-0
+01:11:37.188 --> 01:11:38.308
+<v John Miller>What did it do?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1421-0
+01:11:39.468 --> 01:11:44.028
+<v John Miller>It didn't do what I wanted.
+It's already committed to changes.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1423-0
+01:11:45.468 --> 01:11:46.468
+<v John Miller>Well, let's see.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1425-0
+01:11:50.188 --> 01:11:52.291
+<v John Miller>And that was the code coverage commit
+that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1425-1
+01:11:52.291 --> 01:11:54.108
+<v John Miller>So maybe we're just finishing that up.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1429-0
+01:11:56.028 --> 01:12:00.026
+<v John Miller>Here we evaluate it.
+It searched it for those files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1429-1
+01:12:00.026 --> 01:12:03.948
+<v John Miller>That's good.
+Did its work credit evaluation report.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1430-0
+01:12:08.068 --> 01:12:09.908
+<v John Miller>That's what we asked for.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1432-0
+01:12:13.308 --> 01:12:14.708
+<v John Miller>Detailed findings.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1434-0
+01:12:16.348 --> 01:12:20.908
+<v John Miller>So it looks like it's it's happy with our
+code coverage or I mean our code style.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1437-0
+01:12:24.868 --> 01:12:29.548
+<v John Miller>Did have one thing to standardize in the
+test file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1439-0
+01:12:31.228 --> 01:12:33.108
+<v John Miller>Grade is an A.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1441-0
+01:12:35.468 --> 01:12:40.534
+<v John Miller>So that's good. So what I want,
+what I want to do is modify this prompt</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1441-1
+01:12:40.534 --> 01:12:41.308
+<v John Miller>now to say.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1443-0
+01:12:42.308 --> 01:12:42.628
+<v John Miller>And.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1444-0
+01:12:45.828 --> 01:12:46.068
+<v John Miller>Report.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1446-0
+01:12:50.548 --> 01:12:50.748
+<v John Miller>Weather.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1448-0
+01:12:53.548 --> 01:12:53.828
+<v John Miller>Yes.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1450-0
+01:12:55.748 --> 01:12:58.468
+<v John Miller>Passes or fails.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1454-0
+01:13:02.588 --> 01:13:08.850
+<v Skrzeszewski, Tom>So what's the criteria for passing or
+failing and and how come in the previous</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1454-1
+01:13:08.850 --> 01:13:14.796
+<v Skrzeszewski, Tom>round you were surprised that here that
+that the changes were committed as</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1454-2
+01:13:14.796 --> 01:13:15.668
+<v Skrzeszewski, Tom>opposed to?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1456-0
+01:13:15.708 --> 01:13:18.659
+<v John Miller>Well,
+what was confusing me was that it was</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1456-1
+01:13:18.659 --> 01:13:20.068
+<v John Miller>asking me to approve.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1457-0
+01:13:20.548 --> 01:13:20.788
+<v Skrzeszewski, Tom>Hmm.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1461-0
+01:13:21.188 --> 01:13:25.121
+<v John Miller>Not a commit on the previous work that we
+did and I that that confused me.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1461-1
+01:13:25.121 --> 01:13:29.473
+<v John Miller>I thought it was asking me to commit some
+changes that had done in this prompt and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1461-2
+01:13:29.473 --> 01:13:31.308
+<v John Miller>that wasn't was what was happening.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1465-0
+01:13:32.548 --> 01:13:35.754
+<v John Miller>So,
+so this is what I did and and here we</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1465-1
+01:13:35.754 --> 01:13:41.633
+<v John Miller>have a final version that it passes and
+it has excellent errors with a minor</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1465-2
+01:13:41.633 --> 01:13:45.068
+<v John Miller>inconsistency, right?
+So that's pretty good.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1466-0
+01:13:46.028 --> 01:13:48.668
+<v John Miller>Go ahead, question.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1470-0
+01:13:50.988 --> 01:13:55.504
+<v John Miller>All right,
+so now we have the ability to have a do a</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1470-1
+01:13:55.504 --> 01:13:59.851
+<v John Miller>pass fail,
+which is what we what we're gonna need.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1470-2
+01:13:59.851 --> 01:14:00.788
+<v John Miller>So it says.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1473-0
+01:14:04.348 --> 01:14:09.348
+<v John Miller>Um, let's say I want to run.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1474-0
+01:14:11.988 --> 01:14:13.308
+<v John Miller>This prompt.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1477-0
+01:14:16.268 --> 01:14:19.108
+<v John Miller>when a PR is created.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1478-0
+01:14:22.308 --> 01:14:22.988
+<v John Miller>And.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1480-0
+01:14:24.668 --> 01:14:25.708
+<v John Miller>Yes.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1482-0
+01:14:29.548 --> 01:14:31.988
+<v John Miller>The code fails.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1485-0
+01:14:34.748 --> 01:14:37.788
+<v John Miller>To add a comment.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1486-0
+01:14:39.508 --> 01:14:40.188
+<v John Miller>To the dial.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1487-0
+01:14:42.148 --> 01:14:43.748
+<v John Miller>PR.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1489-0
+01:14:48.148 --> 01:14:48.668
+<v John Miller>Describing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1493-0
+01:14:57.028 --> 01:14:58.948
+<v John Miller>Um, only.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1496-0
+01:15:04.228 --> 01:15:05.428
+<v John Miller>Evaluate.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1498-0
+01:15:07.308 --> 01:15:11.228
+<v John Miller>The code that was changed.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1500-0
+01:15:13.948 --> 01:15:16.454
+<v John Miller>All right,
+so that's a that's a pretty happy ask.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1500-1
+01:15:16.454 --> 01:15:18.108
+<v John Miller>Let's see what it does with that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1502-0
+01:15:21.308 --> 01:15:24.148
+<v John Miller>So it wants to create a GitHub actions
+workflow.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1505-0
+01:15:28.588 --> 01:15:33.428
+<v John Miller>Which is essentially a a ACI,
+something like a CI pipeline.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1508-0
+01:15:39.428 --> 01:15:42.988
+<v John Miller>Yeah, I think now let's see how that does.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1517-0
+01:15:59.948 --> 01:16:08.348
+<v John Miller>Any push to main or pull request to main.
+This is our basic RPI CI process.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1520-0
+01:16:11.228 --> 01:16:17.896
+<v John Miller>And now it's gonna create a PRS a
+workflow specifically for style checking,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1520-1
+01:16:17.896 --> 01:16:19.388
+<v John Miller>which is the sky.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1523-0
+01:16:23.628 --> 01:16:26.634
+<v John Miller>So here we're saying on a on a pull
+request which is open,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1523-1
+01:16:26.634 --> 01:16:27.908
+<v John Miller>synchronized or reopened.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1524-0
+01:16:29.468 --> 01:16:31.308
+<v John Miller>You need to be able to read.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1527-0
+01:16:34.828 --> 01:16:38.388
+<v John Miller>And check out the repository.
+Get the changed files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1529-0
+01:16:43.508 --> 01:16:46.388
+<v John Miller>Evaluate the C# style compliance.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1532-0
+01:16:50.748 --> 01:16:52.668
+<v John Miller>So how's it doing this?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1534-0
+01:16:59.308 --> 01:17:00.988
+<v John Miller>It's doing rejectors.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1536-0
+01:17:01.948 --> 01:17:04.148
+<v John Miller>That's not what we want, right?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1541-0
+01:17:07.308 --> 01:17:14.212
+<v John Miller>Triggers on a PR only checks the CS files
+and it what it checks for is the name</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1541-1
+01:17:14.212 --> 01:17:19.217
+<v John Miller>spacing, Pascal case,
+private fields without underscores,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1541-2
+01:17:19.217 --> 01:17:24.049
+<v John Miller>public methods,
+classes that are not using Pascal case,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1541-3
+01:17:24.049 --> 01:17:24.308
+<v John Miller>so.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1544-0
+01:17:24.788 --> 01:17:27.606
+<v John Miller>Autumn,
+we post a comment with major violations,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1544-1
+01:17:27.606 --> 01:17:31.633
+<v John Miller>minor violations and length of the styles
+groups by severity updates,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1544-2
+01:17:31.633 --> 01:17:32.668
+<v John Miller>existing comments.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1545-0
+01:17:34.708 --> 01:17:36.268
+<v John Miller>Fails to check.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1547-0
+01:17:37.548 --> 01:17:39.508
+<v John Miller>So the problem is.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1549-0
+01:17:42.068 --> 01:17:45.268
+<v John Miller>It's is that I want to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1551-0
+01:17:48.788 --> 01:17:49.188
+<v John Miller>Run.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1552-0
+01:17:52.908 --> 01:17:53.268
+<v John Miller>Yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1554-0
+01:17:54.708 --> 01:17:54.988
+<v John Miller>What?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1555-0
+01:17:56.868 --> 01:17:58.028
+<v John Miller>Not use.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1557-0
+01:17:59.308 --> 01:17:59.628
+<v John Miller>Rejects.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1561-0
+01:18:07.148 --> 01:18:09.560
+<v John Miller>So this is almost always a iterator
+process.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1561-1
+01:18:09.560 --> 01:18:13.206
+<v John Miller>You try a prompt and you see what it does.
+Sometimes you, you know,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1561-2
+01:18:13.206 --> 01:18:14.868
+<v John Miller>undo and go back and try again.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1565-0
+01:18:25.868 --> 01:18:28.468
+<v Skrzeszewski, Tom>John, what is Rejax?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1564-0
+01:18:26.948 --> 01:18:27.188
+<v John Miller>Right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1571-0
+01:18:29.228 --> 01:18:34.941
+<v John Miller>It's a regular expression.
+It's a it's a it's like a pattern</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1571-1
+01:18:34.941 --> 01:18:42.152
+<v John Miller>recognition language that can evaluate
+strings of characters and and produce</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1571-2
+01:18:42.152 --> 01:18:48.426
+<v John Miller>other strings of characters,
+including logical values like true or</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1571-3
+01:18:48.426 --> 01:18:48.988
+<v John Miller>false.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1576-0
+01:18:49.148 --> 01:18:54.006
+<v John Miller>It's a very terse language,
+but we don't want to use it here because</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1576-1
+01:18:54.006 --> 01:18:58.372
+<v John Miller>the problem is it's encoding in the
+pipeline the exact rules,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1576-2
+01:18:58.372 --> 01:19:03.090
+<v John Miller>and we don't want to do that.
+We want to have the instruction file</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1576-3
+01:19:03.090 --> 01:19:07.948
+<v John Miller>actually be used to guide this so as we
+change the instruction file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1580-0
+01:19:08.268 --> 01:19:14.300
+<v John Miller>It will then use that instruction file
+when it does the C style evaluation.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1580-1
+01:19:14.300 --> 01:19:20.967
+<v John Miller>That makes it much easier to maintain and
+you don't have to go back and essentially</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1580-2
+01:19:20.967 --> 01:19:23.428
+<v John Miller>recreate the work that you did.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1582-0
+01:19:23.708 --> 01:19:29.548
+<v John Miller>In order to create the the infrastructure
+to support the comparison.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1584-0
+01:19:32.668 --> 01:19:35.348
+<v John Miller>So it's modifying the Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1587-0
+01:19:36.668 --> 01:19:44.723
+<v John Miller>The workflow to use the GitHub Pilot API,
+GitHub Copilot AI and it's using YAML</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1587-1
+01:19:44.723 --> 01:19:45.428
+<v John Miller>syntax.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1591-0
+01:19:46.908 --> 01:19:51.606
+<v John Miller>And adding an optional step to use GitHub
+Copilot other than the AI.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1591-1
+01:19:51.606 --> 01:19:54.737
+<v John Miller>So let's take a look at what it's doing
+here.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1591-2
+01:19:54.737 --> 01:20:00.388
+<v John Miller>It's not quite finished adding the prompt
+file as an artifact so we can review it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1596-0
+01:20:09.468 --> 01:20:13.047
+<v John Miller>And a read me file.
+So let's take a look at this guy.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1596-1
+01:20:13.047 --> 01:20:17.953
+<v John Miller>So this is where all the real work is
+being done, or at least some of it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1596-2
+01:20:17.953 --> 01:20:21.068
+<v John Miller>It's the same PR style check on pull
+requests.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1598-0
+01:20:23.748 --> 01:20:26.668
+<v John Miller>Here we get the same change files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1600-0
+01:20:28.668 --> 01:20:32.308
+<v John Miller>Now it's creating the style evaluation
+reports.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1603-0
+01:20:37.348 --> 01:20:41.188
+<v John Miller>Reading it's it's creating a style
+evaluation prompt.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1605-0
+01:20:42.908 --> 01:20:45.388
+<v John Miller>Yeah, stop doing that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1608-0
+01:20:55.028 --> 01:20:57.428
+<v John Miller>But here it's getting the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1609-0
+01:20:59.468 --> 01:21:01.308
+<v John Miller>Instruction MD file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1612-0
+01:21:04.628 --> 01:21:08.628
+<v John Miller>And it's get for the styles and also the
+C shar styles instructions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1614-0
+01:21:10.668 --> 01:21:13.068
+<v John Miller>It's building a prompt from those
+instructions.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1618-0
+01:21:21.188 --> 01:21:27.588
+<v John Miller>Just by concatenating strings,
+then here is going to evaluate that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1620-0
+01:21:29.028 --> 01:21:31.428
+<v John Miller>So now it's reading in that prompt text
+file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1622-0
+01:21:34.588 --> 01:21:37.268
+<v John Miller>And here is the AI integration pieces of
+it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1625-0
+01:21:42.308 --> 01:21:46.348
+<v John Miller>It's running a a GitHub copilot CLI
+command.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1626-0
+01:21:48.308 --> 01:21:49.308
+<v John Miller>With that prompt.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1632-0
+01:21:52.268 --> 01:21:57.574
+<v Majernik, Peter>Can can I ask a question here about the
+authentication?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1628-0
+01:21:55.588 --> 01:21:56.788
+<v John Miller>Yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1632-1
+01:21:57.574 --> 01:22:04.965
+<v Majernik, Peter>When this thing runs in the pipeline,
+whose identity does GitHub Copilot chat</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1632-2
+01:22:04.965 --> 01:22:05.628
+<v Majernik, Peter>assume?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1636-0
+01:22:07.108 --> 01:22:11.833
+<v John Miller>So it this is a workflow.
+So in in GitHub these workflows you have</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1636-1
+01:22:11.833 --> 01:22:17.544
+<v John Miller>to provide them with an authentication
+token so it can run this on the back end.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1636-2
+01:22:17.544 --> 01:22:23.468
+<v John Miller>So you would create that token in GitHub
+and and it would then you put that into a.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1637-0
+01:22:23.508 --> 01:22:23.588
+<v John Miller>Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1638-0
+01:22:24.188 --> 01:22:27.908
+<v Majernik, Peter>So it's gonna need to impersonate someone,
+right? One of us.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1642-0
+01:22:27.588 --> 01:22:32.419
+<v John Miller>Yeah,
+well it it it also I I believe it can run</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1642-1
+01:22:32.419 --> 01:22:40.068
+<v John Miller>under more of a a system context that you
+provide instead of a single user.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1648-0
+01:22:41.468 --> 01:22:45.744
+<v Majernik, Peter>OK, we can, yeah,
+we can work that out later. Yeah,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1643-0
+01:22:41.788 --> 01:22:42.028
+<v John Miller>But.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1645-0
+01:22:43.548 --> 01:22:45.588
+<v John Miller>We'll see how, yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1648-1
+01:22:45.744 --> 01:22:51.088
+<v Majernik, Peter>the other question I had,
+I saw you concatenating strings there.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1648-2
+01:22:51.088 --> 01:22:56.268
+<v Majernik, Peter>Why doesn't it just grab the contents of
+the instruction file?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1652-0
+01:22:58.148 --> 01:23:03.287
+<v John Miller>But it did grab the content of the
+instruction file up here before it's</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1652-1
+01:23:03.287 --> 01:23:06.998
+<v John Miller>built the prompt that was right in these
+two lines.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1652-2
+01:23:06.998 --> 01:23:12.708
+<v John Miller>It it gathered 2 instruction files and
+then it what it did is created a prompt.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1654-0
+01:23:13.428 --> 01:23:15.908
+<v John Miller>Which well, which we um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1657-0
+01:23:17.468 --> 01:23:22.095
+<v John Miller>That actually execute the and it rebus
+this evaluation using those two</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1655-0
+01:23:17.908 --> 01:23:18.468
+<v Majernik, Peter>So, so.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1657-1
+01:23:22.095 --> 01:23:23.268
+<v John Miller>instruction files.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1662-0
+01:23:24.268 --> 01:23:28.417
+<v Majernik, Peter>Yeah, that's the part that confused me.
+All that string concatenation,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1662-1
+01:23:28.417 --> 01:23:32.391
+<v Majernik, Peter>like the content of that.
+Is that something that's just dynamically</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1662-2
+01:23:32.391 --> 01:23:36.657
+<v Majernik, Peter>constructed here or is is are those lines
+actually sitting in one of the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1662-3
+01:23:36.657 --> 01:23:39.988
+<v Majernik, Peter>instruction files already and it pulled
+it out of there?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1663-0
+01:23:40.428 --> 01:23:43.028
+<v Majernik, Peter>Did the string concatenation with that?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1667-0
+01:23:40.548 --> 01:23:45.915
+<v John Miller>The string concatenation is actually a
+part of the pipeline or the workflow that</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1667-1
+01:23:45.915 --> 01:23:49.757
+<v John Miller>it's created that's going to run when the
+check in occur,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1667-2
+01:23:49.757 --> 01:23:54.793
+<v John Miller>I mean the PR creation has occurred.
+So this becomes a static definition of</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1667-3
+01:23:54.793 --> 01:23:55.588
+<v John Miller>that prompt.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1672-0
+01:23:56.188 --> 01:24:00.363
+<v John Miller>Right,
+which is I I think I I I don't like as</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1672-1
+01:24:00.363 --> 01:24:04.537
+<v John Miller>well.
+What I would like to do is give it a an</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1672-2
+01:24:04.537 --> 01:24:11.707
+<v John Miller>actual prompt file that we've created
+which is you know we don't have one here</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1672-3
+01:24:11.707 --> 01:24:13.068
+<v John Miller>for evaluating.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1676-0
+01:24:13.628 --> 01:24:17.768
+<v John Miller>And the style specifically,
+so we might want to create that ahead of</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1674-0
+01:24:17.508 --> 01:24:17.628
+<v Majernik, Peter>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1676-1
+01:24:17.768 --> 01:24:20.468
+<v John Miller>time,
+but if we wanted to substitute the gap</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1676-2
+01:24:20.468 --> 01:24:23.588
+<v John Miller>analysis,
+have it read and use this prompt instead.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1678-0
+01:24:25.308 --> 01:24:25.868
+<v Majernik, Peter>Alright, so I.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1682-0
+01:24:32.748 --> 01:24:35.111
+<v Majernik, Peter>I mean,
+it's essentially writing a lot of</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1682-1
+01:24:35.111 --> 01:24:36.068
+<v Majernik, Peter>PowerShell there.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1686-0
+01:24:36.988 --> 01:24:41.268
+<v Majernik, Peter>So partial invokes the GitHub chat API.
+Is that how it works?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1684-0
+01:24:39.668 --> 01:24:40.308
+<v John Miller>Mhm.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1687-0
+01:24:42.708 --> 01:24:42.868
+<v John Miller>Right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1689-0
+01:24:42.908 --> 01:24:49.026
+<v Majernik, Peter>So YAML to PowerShell to GitHub,
+compile the chat API, something like that,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1689-1
+01:24:49.026 --> 01:24:49.268
+<v Majernik, Peter>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1691-0
+01:24:50.668 --> 01:24:54.108
+<v John Miller>And here it modifies the PR and uploads
+the results.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1696-0
+01:24:58.308 --> 01:25:03.509
+<v Majernik, Peter>OK, so as long as we have a valid token,
+this should actually work in an Azure</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1694-0
+01:25:01.988 --> 01:25:04.388
+<v John Miller>That's right. Mm-hmm.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1696-1
+01:25:03.509 --> 01:25:05.748
+<v Majernik, Peter>Azure hosted pipeline. OK, thanks.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1697-0
+01:25:06.708 --> 01:25:07.588
+<v John Miller>Right. Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1699-0
+01:25:10.508 --> 01:25:14.156
+<v John Miller>Right,
+but the the thing I uh let me see if I</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1699-1
+01:25:14.156 --> 01:25:15.108
+<v John Miller>have one to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1702-0
+01:25:18.908 --> 01:25:22.570
+<v John Miller>Oh,
+we an improvement we could could make is</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1702-1
+01:25:22.570 --> 01:25:23.628
+<v John Miller>a a create a.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1705-0
+01:25:25.948 --> 01:25:33.068
+<v John Miller>Prompt file that evaluates.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1706-0
+01:25:35.068 --> 01:25:37.668
+<v John Miller>Uh C#.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1708-0
+01:25:39.188 --> 01:25:40.068
+<v John Miller>Call me.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1709-0
+01:25:41.228 --> 01:25:42.468
+<v John Miller>For style.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1711-0
+01:25:45.588 --> 01:25:46.428
+<v John Miller>Compliance.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1725-0
+01:26:16.588 --> 01:26:22.567
+<v John Miller>With the idea that we could then ask,
+we could ask a copilot to update the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1725-1
+01:26:22.567 --> 01:26:28.068
+<v John Miller>workflow to use this prompt file instead
+of creating one on the fly.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1739-0
+01:27:01.388 --> 01:27:04.243
+<v John Miller>All right,
+so now we have a new prompt which is</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1739-1
+01:27:04.243 --> 01:27:06.028
+<v John Miller>evaluate the C# style prompts.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1740-0
+01:27:06.868 --> 01:27:08.388
+<v John Miller>You're a code reviewer.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1743-0
+01:27:10.588 --> 01:27:14.388
+<v John Miller>It it's specifying cases and types
+methods.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1745-0
+01:27:18.108 --> 01:27:20.228
+<v John Miller>Which is good.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1747-0
+01:27:22.308 --> 01:27:25.188
+<v John Miller>So that's a good file. Let's keep that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1748-0
+01:27:26.268 --> 01:27:29.188
+<v John Miller>Um, this is the workflow.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1753-0
+01:27:30.708 --> 01:27:35.828
+<v John Miller>We haven't changed that,
+so let's keep that and make it updated</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1753-1
+01:27:35.828 --> 01:27:40.548
+<v John Miller>and then we have a readme file that says
+how it all works.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1753-2
+01:27:40.548 --> 01:27:43.188
+<v John Miller>So let's say update the workflow.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1755-0
+01:27:48.228 --> 01:27:51.508
+<v John Miller>To use the new product.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1780-0
+01:28:43.468 --> 01:28:46.388
+<v John Miller>Now GitHub already has a feature. Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1785-0
+01:28:48.668 --> 01:28:53.241
+<v John Miller>That's like this.
+It's called the AI code review and it</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1785-1
+01:28:53.241 --> 01:28:59.365
+<v John Miller>will you can. When you turn it on,
+every single PR that you create will be</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1785-2
+01:28:59.365 --> 01:29:04.428
+<v John Miller>reviewed and updated with any issues that
+that copilot finds.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1788-0
+01:29:05.468 --> 01:29:10.237
+<v John Miller>I haven't worked with it too much.
+I don't know how configurable it is in</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1788-1
+01:29:10.237 --> 01:29:15.392
+<v John Miller>terms of this the rules that it applies,
+but this will apply our rules from our</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1788-2
+01:29:15.392 --> 01:29:15.908
+<v John Miller>project.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1793-0
+01:29:18.428 --> 01:29:23.691
+<v John Miller>Directly. So here's the workflow.
+You want to notice that it's it's taking</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1793-1
+01:29:23.691 --> 01:29:26.778
+<v John Miller>out all of the prompt string
+concatenation,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1793-2
+01:29:26.778 --> 01:29:31.480
+<v John Miller>the building of the prompt file,
+and instead it's just getting the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1793-3
+01:29:31.480 --> 01:29:34.708
+<v John Miller>contents of that prompt file that we
+created.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1795-0
+01:29:36.028 --> 01:29:40.932
+<v John Miller>Which is what we asked it to do.
+So we should see all of this</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1795-1
+01:29:40.932 --> 01:29:42.988
+<v John Miller>concatenation disappeared.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1797-0
+01:29:49.028 --> 01:29:49.988
+<v Majernik, Peter>That's better. Thank you.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1799-0
+01:29:52.548 --> 01:29:52.788
+<v John Miller>Yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1803-0
+01:30:00.828 --> 01:30:05.907
+<v Majernik, Peter>Just YAML is really sensitive and I would
+like to put as little in there as</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1803-1
+01:30:05.907 --> 01:30:06.508
+<v Majernik, Peter>possible.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1804-0
+01:30:07.668 --> 01:30:08.868
+<v John Miller>Yes, that's it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1807-0
+01:30:10.268 --> 01:30:14.522
+<v John Miller>Really, we always want it to be, you know,
+you get this and do that with it,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1807-1
+01:30:14.522 --> 01:30:19.108
+<v John Miller>get this file and do something else with
+it, but not a lot of manipulation itself.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1810-0
+01:30:23.788 --> 01:30:26.948
+<v John Miller>So it's updated the README files down
+here.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1813-0
+01:30:37.948 --> 01:30:42.908
+<v John Miller>And it wants to add the workflow or
+update the workflow.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1820-0
+01:31:02.548 --> 01:31:03.948
+<v John Miller>It's now.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1822-0
+01:31:05.668 --> 01:31:07.748
+<v John Miller>Update the style checking.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1827-0
+01:31:21.668 --> 01:31:21.908
+<v John Miller>Right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1831-0
+01:31:32.588 --> 01:31:34.548
+<v John Miller>All right, so um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1834-0
+01:31:37.948 --> 01:31:40.308
+<v John Miller>Let's go into our calculator.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1838-0
+01:31:55.468 --> 01:31:57.588
+<v John Miller>And let's um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1839-0
+01:31:58.548 --> 01:31:59.148
+<v John Miller>Oops.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1843-0
+01:32:08.548 --> 01:32:11.068
+<v John Miller>We'll turn the whole thing into lowercase.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1847-0
+01:32:14.108 --> 01:32:20.476
+<v Majernik, Peter>So what you're doing now is creating a
+commit that's gonna violate some of those</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1847-1
+01:32:20.476 --> 01:32:20.948
+<v Majernik, Peter>rules.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1848-0
+01:32:21.868 --> 01:32:23.828
+<v John Miller>Yeah, that's the idea.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1850-0
+01:32:23.668 --> 01:32:26.148
+<v Majernik, Peter>And it should stop us in some way.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1851-0
+01:32:27.148 --> 01:32:29.428
+<v John Miller>That would be the hope. So um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1854-0
+01:32:31.068 --> 01:32:35.708
+<v John Miller>Let's go ahead and keep our changes and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1856-0
+01:32:38.508 --> 01:32:40.908
+<v John Miller>Let's go ahead and um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1858-0
+01:32:43.668 --> 01:32:48.868
+<v John Miller>Create a PR for these changes.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1870-0
+01:33:19.228 --> 01:33:19.388
+<v John Miller>Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1873-0
+01:33:26.388 --> 01:33:29.348
+<v John Miller>So it doesn't look like it's gonna let us
+get that far.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1877-0
+01:33:32.588 --> 01:33:37.297
+<v Majernik, Peter>You mean it's gonna fix it before it
+would validate anything? I mean,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1876-0
+01:33:37.028 --> 01:33:37.348
+<v John Miller>Right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1877-1
+01:33:37.297 --> 01:33:39.988
+<v Majernik, Peter>that's not a bad problem to have, right?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1882-0
+01:33:40.588 --> 01:33:45.357
+<v John Miller>Well, yeah, just like security, right?
+This is a, you know, defense in depth.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1882-1
+01:33:45.357 --> 01:33:48.720
+<v John Miller>It's multiple ways in which it can catch
+this problem.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1882-2
+01:33:48.720 --> 01:33:52.388
+<v John Miller>It's good that it's doing it before it
+even creates the PR.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1884-0
+01:33:59.468 --> 01:34:02.588
+<v John Miller>We notice it just put everything right
+back to where it was.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1892-0
+01:34:07.868 --> 01:34:10.788
+<v Majernik, Peter>Well,
+you could just try to do it manually,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1892-1
+01:34:10.788 --> 01:34:15.963
+<v Majernik, Peter>like create a bad commit and try to push
+it and then ask it to create the PR,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1892-2
+01:34:15.963 --> 01:34:19.414
+<v Majernik, Peter>see what happens.
+Or or if I even if I created a PR</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1889-0
+01:34:18.308 --> 01:34:18.468
+<v John Miller>Right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1892-3
+01:34:19.414 --> 01:34:22.068
+<v Majernik, Peter>manually, it should still trigger right?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1891-0
+01:34:22.348 --> 01:34:25.348
+<v John Miller>Yes, so um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1895-0
+01:34:31.308 --> 01:34:34.508
+<v John Miller>Well, it's still working,
+so let's let it finish what it's doing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1897-0
+01:34:36.388 --> 01:34:40.948
+<v John Miller>And then we'll go ahead and try see if we
+can brute force it.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1905-0
+01:34:50.868 --> 01:34:55.646
+<v Majernik, Peter>And and John, I didn't see you do that,
+but what about that token or the security</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1905-1
+01:34:55.646 --> 01:34:58.268
+<v Majernik, Peter>key?
+Like did you actually set it or does it</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1905-2
+01:34:58.268 --> 01:35:00.948
+<v Majernik, Peter>automagically put in something that's
+usable?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1908-0
+01:35:01.588 --> 01:35:04.308
+<v John Miller>We're we're not running it in a pipeline
+right now.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1908-1
+01:35:04.308 --> 01:35:08.388
+<v John Miller>So it's we're it's basically kind of
+running under our context at this stage.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1912-0
+01:35:09.068 --> 01:35:14.437
+<v Majernik, Peter>You're not running it in the pipeline. OK,
+so so what's running it?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1909-0
+01:35:09.908 --> 01:35:10.108
+<v John Miller>So I.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1912-1
+01:35:14.437 --> 01:35:18.148
+<v Majernik, Peter>Is it the pre-commit hook?
+Is that what it is?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1914-0
+01:35:19.468 --> 01:35:24.801
+<v John Miller>Yes, that's what. Well, let's see.
+We're defining our workflows.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1914-1
+01:35:24.801 --> 01:35:27.508
+<v John Miller>We have a style checker workflow.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1916-0
+01:35:31.228 --> 01:35:34.228
+<v John Miller>It's executing on a pull request.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1918-0
+01:35:35.628 --> 01:35:37.548
+<v John Miller>Against the main branch.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1922-0
+01:35:44.748 --> 01:35:48.913
+<v Majernik, Peter>Style checker OK,
+I'm not familiar with the GitHub</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1922-1
+01:35:48.913 --> 01:35:52.588
+<v Majernik, Peter>workflows.
+Can you please elaborate on that?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1924-0
+01:35:54.668 --> 01:35:57.668
+<v Majernik, Peter>So if it's not a pipeline, what is this?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1932-0
+01:36:03.548 --> 01:36:06.441
+<v Majernik, Peter>Or if it's not a GitHub action,
+when I say pipeline,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1926-0
+01:36:04.308 --> 01:36:04.548
+<v John Miller>Alright.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1932-1
+01:36:06.441 --> 01:36:08.951
+<v Majernik, Peter>you know I'm thinking Azure DevOps
+pipelines,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1932-2
+01:36:08.951 --> 01:36:11.353
+<v Majernik, Peter>the GitHub actions is an equivalent,
+right?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1928-0
+01:36:10.388 --> 01:36:10.668
+<v John Miller>What?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1932-3
+01:36:11.353 --> 01:36:14.628
+<v Majernik, Peter>So what is the difference between a
+workflow and an action?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1930-0
+01:36:12.628 --> 01:36:12.948
+<v John Miller>Yep.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1933-0
+01:36:14.828 --> 01:36:17.503
+<v John Miller>They're the test.
+They're the really the same thing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1933-1
+01:36:17.503 --> 01:36:19.068
+<v John Miller>They just trigger on different.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1938-0
+01:36:20.508 --> 01:36:26.028
+<v Majernik, Peter>So the workflow triggers before the PR
+gets created.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1935-0
+01:36:21.788 --> 01:36:22.868
+<v John Miller>On different things.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1936-0
+01:36:25.508 --> 01:36:26.068
+<v John Miller>This all.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1940-0
+01:36:26.908 --> 01:36:29.674
+<v John Miller>Right,
+so here we're saying that trigger on any</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1940-1
+01:36:29.674 --> 01:36:31.748
+<v John Miller>any pull request to the branch main.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1942-0
+01:36:33.548 --> 01:36:39.428
+<v John Miller>Which is which is either the PR is opened
+or that it's synchronized or reopened.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1944-0
+01:36:40.948 --> 01:36:43.628
+<v John Miller>For any CS file.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1949-0
+01:36:44.308 --> 01:36:49.628
+<v Majernik, Peter>OK, so before actually creating the PR,
+it will run the check.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1946-0
+01:36:47.508 --> 01:36:47.828
+<v John Miller>Right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1947-0
+01:36:50.148 --> 01:36:50.388
+<v John Miller>Right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1951-0
+01:36:52.428 --> 01:36:55.788
+<v John Miller>So here we go.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1950-0
+01:36:52.868 --> 01:36:52.988
+<v Majernik, Peter>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1954-0
+01:37:00.348 --> 01:37:01.668
+<v John Miller>So let's see if we can.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1955-0
+01:37:03.188 --> 01:37:04.108
+<v John Miller>Get it to fail.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1957-0
+01:37:06.028 --> 01:37:07.428
+<v John Miller>Where was our code?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1968-0
+01:37:29.788 --> 01:37:31.348
+<v John Miller>And let's execute the.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1969-0
+01:37:33.588 --> 01:37:33.828
+<v John Miller>Mm.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1971-0
+01:37:39.068 --> 01:37:40.708
+<v John Miller>The bad style.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1973-0
+01:37:42.988 --> 01:37:45.748
+<v John Miller>And then we'll say here.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1975-0
+01:37:48.988 --> 01:37:50.708
+<v John Miller>Oh yeah, I guess I'll add both of them.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1977-0
+01:37:52.948 --> 01:37:55.948
+<v John Miller>And then we'll say create a commit
+message.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1979-0
+01:37:58.828 --> 01:37:58.948
+<v John Miller>But.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1982-0
+01:38:04.308 --> 01:38:08.948
+<v John Miller>Yeah, that's not it's it still wants to.
+We sort of finished up this year.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1987-0
+01:38:19.228 --> 01:38:22.188
+<v John Miller>Alright,
+so now we go back to our change we.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1989-0
+01:38:23.668 --> 01:38:25.948
+<v John Miller>Got a little ahead of ourselves. Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1991-0
+01:38:26.588 --> 01:38:30.188
+<v John Miller>And let's submit our code change that's
+in the already there.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1991-1
+01:38:30.188 --> 01:38:31.988
+<v John Miller>So let's go ahead and fix this.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1995-0
+01:38:42.348 --> 01:38:44.948
+<v John Miller>Um, we're already on a branch.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/1997-0
+01:38:47.708 --> 01:38:50.588
+<v John Miller>So we'll we can push to that branch.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2002-0
+01:39:01.668 --> 01:39:04.868
+<v John Miller>So then we would need to to go to GitHub.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2004-0
+01:39:11.188 --> 01:39:12.068
+<v John Miller>For our projects.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2007-0
+01:39:19.468 --> 01:39:21.068
+<v John Miller>And pull requests.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2009-0
+01:39:25.308 --> 01:39:27.148
+<v John Miller>You see that this is our.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2011-0
+01:39:31.508 --> 01:39:34.468
+<v John Miller>Well, I think it's a new power quest,
+right?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2013-0
+01:39:37.188 --> 01:39:38.308
+<v Majernik, Peter>I think so.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2017-0
+01:39:47.788 --> 01:39:50.708
+<v John Miller>It's got a bunch of things in here,
+but do we see our?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2018-0
+01:39:52.948 --> 01:39:54.228
+<v John Miller>CS file that we just changed.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2020-0
+01:39:57.428 --> 01:39:58.468
+<v John Miller>The evaluator.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2023-0
+01:40:06.348 --> 01:40:09.268
+<v John Miller>And it looks like, yes,
+that's got our change in it, right?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2025-0
+01:40:10.908 --> 01:40:12.628
+<v John Miller>So it's like.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2027-0
+01:40:14.628 --> 01:40:14.988
+<v John Miller>Good.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2035-0
+01:40:33.228 --> 01:40:34.548
+<v Majernik, Peter>So did you create it already?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2038-0
+01:40:34.788 --> 01:40:37.913
+<v John Miller>No,
+I was I I was selecting the branch and I</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2038-1
+01:40:37.913 --> 01:40:41.108
+<v John Miller>think what it does when I choose this
+branch.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2042-0
+01:40:43.788 --> 01:40:47.550
+<v John Miller>It sees that there's already a pull
+request for it, but we should be.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2042-1
+01:40:47.550 --> 01:40:50.237
+<v John Miller>Since we made that change and it's been
+included,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2042-2
+01:40:50.237 --> 01:40:54.321
+<v John Miller>it's telling us that I think when we
+looked at all the files that it wasn't</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2042-3
+01:40:54.321 --> 01:40:56.148
+<v John Miller>included in that pull request, so.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2043-0
+01:40:57.228 --> 01:40:58.308
+<v John Miller>We look at the pull request.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2047-0
+01:41:03.508 --> 01:41:06.757
+<v Majernik, Peter>Yeah, I don't know what.
+I don't know what was in the previous</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2045-0
+01:41:03.828 --> 01:41:04.068
+<v John Miller>Then.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2047-1
+01:41:06.757 --> 01:41:07.428
+<v Majernik, Peter>pull request.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2049-0
+01:41:08.828 --> 01:41:12.988
+<v John Miller>Well,
+let's see if we can edit the pull request.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2054-0
+01:41:15.268 --> 01:41:21.323
+<v Majernik, Peter>So what I'm one concern I have here is if
+if that original YAML wasn't in the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2054-1
+01:41:21.323 --> 01:41:26.136
+<v Majernik, Peter>wasn't merged into main yet,
+then there is nothing to trigger</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2054-2
+01:41:26.136 --> 01:41:27.068
+<v Majernik, Peter>technically.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2053-0
+01:41:28.028 --> 01:41:29.348
+<v John Miller>You're right, right.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2056-0
+01:41:28.828 --> 01:41:33.196
+<v Majernik, Peter>We kinda need to have that in right
+before it can trigger and then make the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2056-1
+01:41:33.196 --> 01:41:33.828
+<v Majernik, Peter>bad change.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2057-0
+01:41:34.908 --> 01:41:36.628
+<v Majernik, Peter>So I'm not sure.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2059-0
+01:41:38.348 --> 01:41:40.419
+<v John Miller>Alright,
+well let's go ahead and let's see if we</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2059-1
+01:41:40.419 --> 01:41:40.588
+<v John Miller>can.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2061-0
+01:41:42.388 --> 01:41:44.348
+<v John Miller>Approve this pull request.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2067-0
+01:42:00.668 --> 01:42:02.828
+<v John Miller>It looks like it's failing RCI.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2069-0
+01:42:06.788 --> 01:42:08.468
+<v Majernik, Peter>Does it say why?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2074-0
+01:42:22.828 --> 01:42:25.588
+<v John Miller>It looks like it's failing on all the
+changes that we made.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2077-0
+01:42:31.068 --> 01:42:33.826
+<v John Miller>You know,
+we converted everything to lower class</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2077-1
+01:42:33.826 --> 01:42:34.108
+<v John Miller>that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2080-0
+01:42:34.868 --> 01:42:37.988
+<v John Miller>So yeah, so I think we have.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2079-0
+01:42:37.548 --> 01:42:37.748
+<v Majernik, Peter>Yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2082-0
+01:42:39.068 --> 01:42:41.348
+<v John Miller>It's kind of stepped on our PR.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2081-0
+01:42:39.508 --> 01:42:40.148
+<v Majernik, Peter>Is this?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2084-0
+01:42:41.548 --> 01:42:44.668
+<v Majernik, Peter>Yeah, it's this. Uh,
+this looks like a build failure.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2087-0
+01:42:46.588 --> 01:42:50.284
+<v John Miller>That's what could be out.
+That's because we changed the casing of</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2087-1
+01:42:50.284 --> 01:42:54.148
+<v John Miller>things that were were important.
+So let's go ahead and approve this.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2089-0
+01:42:55.868 --> 01:42:59.988
+<v John Miller>Just to get the workflow into the
+pipeline.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2091-0
+01:43:02.148 --> 01:43:05.108
+<v John Miller>Or into the into the our domain.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2093-0
+01:43:07.628 --> 01:43:08.988
+<v John Miller>So we'll merge that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2096-0
+01:43:08.108 --> 01:43:13.782
+<v Majernik, Peter>I I would I I would probably undo those
+bad changes and then then complete it,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2096-1
+01:43:13.782 --> 01:43:17.948
+<v Majernik, Peter>let it succeed and then then I would redo
+the bad change.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2097-0
+01:43:19.468 --> 01:43:21.668
+<v John Miller>OK, let's go ahead and finish.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2099-0
+01:43:20.028 --> 01:43:23.335
+<v Majernik, Peter>You know what I mean?
+Just to make sure we have a stable base</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2099-1
+01:43:23.335 --> 01:43:25.148
+<v Majernik, Peter>to start with and actually builds.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2101-0
+01:43:26.028 --> 01:43:31.308
+<v Majernik, Peter>Maybe it doesn't matter in this case,
+but it's just probably cleaner that way.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2104-0
+01:43:35.668 --> 01:43:39.656
+<v John Miller>Well, let's look at the commits.
+I think that'll be the easiest way to get</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2104-1
+01:43:39.656 --> 01:43:40.028
+<v John Miller>it out.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2115-0
+01:44:02.788 --> 01:44:04.828
+<v John Miller>So this is the this is this one.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2117-0
+01:44:08.788 --> 01:44:10.828
+<v John Miller>There's not those changes.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2120-0
+01:44:17.028 --> 01:44:20.668
+<v John Miller>Let me see the build error. So let's see,
+can we?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2122-0
+01:44:26.748 --> 01:44:29.668
+<v John Miller>How do I get rid of this?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2128-0
+01:44:37.748 --> 01:44:45.052
+<v Majernik, Peter>I mean one way would be on on your local
+PC to the undo the changes and do another</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2128-1
+01:44:45.052 --> 01:44:47.868
+<v Majernik, Peter>push into the same pull request.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2130-0
+01:44:49.308 --> 01:44:50.028
+<v John Miller>All right, let's try that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2150-0
+01:45:41.988 --> 01:45:42.428
+<v Majernik, Peter>Yes.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2152-0
+01:45:42.068 --> 01:45:45.108
+<v John Miller>Uh, need to go back to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2159-0
+01:46:03.068 --> 01:46:04.908
+<v John Miller>So now we have our commits.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2162-0
+01:46:13.428 --> 01:46:15.748
+<v John Miller>So we should be able to.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2166-0
+01:46:26.708 --> 01:46:28.468
+<v John Miller>Merge that from request.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2168-0
+01:46:36.748 --> 01:46:38.268
+<v John Miller>And then go back.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2171-0
+01:46:40.748 --> 01:46:44.228
+<v John Miller>On that same branch and do the same.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2172-0
+01:46:46.348 --> 01:46:47.228
+<v John Miller>Bad change.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2177-0
+01:46:57.668 --> 01:47:02.292
+<v Majernik, Peter>Do you don't?
+Don't you have to rebase that branch or</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2177-1
+01:47:02.292 --> 01:47:03.748
+<v Majernik, Peter>does that happen?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2178-0
+01:47:03.028 --> 01:47:06.828
+<v John Miller>It should happen automatically when we.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2179-0
+01:47:05.308 --> 01:47:07.068
+<v Majernik, Peter>Automatically, OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2182-0
+01:47:12.588 --> 01:47:16.108
+<v John Miller>And we set the workflow to fire.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2184-0
+01:47:24.388 --> 01:47:24.428
+<v Majernik, Peter>I.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2187-0
+01:47:27.388 --> 01:47:29.988
+<v John Miller>So if we go back.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2190-0
+01:47:41.148 --> 01:47:43.068
+<v John Miller>It looks like it's still thinking about
+this.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2199-0
+01:48:06.708 --> 01:48:09.988
+<v John Miller>But here's the change so we can create a
+pull request on that.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2215-0
+01:48:46.388 --> 01:48:51.108
+<v John Miller>So here it's got that PR style check that
+it's running.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2216-0
+01:48:50.508 --> 01:48:54.374
+<v Majernik, Peter>Yeah, that's what we are testing, right?
+The other one was already there and</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2216-1
+01:48:54.374 --> 01:48:55.228
+<v Majernik, Peter>working, correct?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2220-0
+01:48:55.908 --> 01:48:58.902
+<v John Miller>Right,
+so here we can see it's getting the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2218-0
+01:48:57.068 --> 01:48:57.188
+<v Majernik, Peter>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2220-1
+01:48:58.902 --> 01:49:01.548
+<v John Miller>change files. It's doing the the work.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2222-0
+01:49:07.468 --> 01:49:09.068
+<v John Miller>It said the style check passed.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2229-0
+01:49:23.668 --> 01:49:28.281
+<v Majernik, Peter>So if it passed,
+does that mean it did not catch the lower</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2229-1
+01:49:28.281 --> 01:49:28.828
+<v Majernik, Peter>casing?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2231-0
+01:49:31.108 --> 01:49:36.108
+<v John Miller>Yeah, that's what it looks like.
+So here's the Jason results.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2234-0
+01:49:42.068 --> 01:49:43.428
+<v John Miller>Results. No violations.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2236-0
+01:49:47.188 --> 01:49:50.588
+<v Majernik, Peter>What about the build? Did that fail also?</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2249-0
+01:50:20.308 --> 01:50:21.708
+<v John Miller>No, it failed.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2251-0
+01:50:22.828 --> 01:50:23.148
+<v Majernik, Peter>OK.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2253-0
+01:50:25.788 --> 01:50:29.094
+<v Majernik, Peter>So,
+so the style checker did not catch what</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2253-1
+01:50:29.094 --> 01:50:31.348
+<v Majernik, Peter>we were expecting it to catch.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2254-0
+01:50:31.668 --> 01:50:32.988
+<v John Miller>That's correct.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2257-0
+01:50:32.308 --> 01:50:38.028
+<v Majernik, Peter>But the fact that it triggered,
+that's already a positive thing. Oh yeah.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2258-0
+01:50:37.268 --> 01:50:40.588
+<v John Miller>Mm-hmm.
+And it triggered at the right time.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2264-0
+01:50:45.268 --> 01:50:48.941
+<v John Miller>All right, well, I'll,
+I'll do some a little bit more</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2264-1
+01:50:48.941 --> 01:50:54.450
+<v John Miller>investigation before tomorrow and I'll
+see if I can come up with a reason why it</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2264-2
+01:50:54.450 --> 01:51:00.027
+<v John Miller>didn't quite do what we wanted it to do
+and I'll look at a little bit deeper into</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2264-3
+01:51:00.027 --> 01:51:02.748
+<v John Miller>what actually happened and see if I can.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2266-0
+01:51:03.228 --> 01:51:04.348
+<v John Miller>Figure it out.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2271-0
+01:51:05.988 --> 01:51:08.368
+<v John Miller>All right,
+so that's a this is a good point.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2265-0
+01:51:06.428 --> 01:51:06.508
+<v Majernik, Peter>Oh.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2271-1
+01:51:08.368 --> 01:51:11.383
+<v John Miller>This is the end.
+Let's talk a bit about what we're going</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2271-2
+01:51:11.383 --> 01:51:13.975
+<v John Miller>to start into tomorrow.
+Tomorrow's a Greenfield,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2271-3
+01:51:13.975 --> 01:51:18.259
+<v John Miller>which means we're going to do a bit like
+what we did on the first day at the end</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2271-4
+01:51:18.259 --> 01:51:22.543
+<v John Miller>where we actually started with a blank
+slate and and build up a project from the</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2271-5
+01:51:22.543 --> 01:51:23.548
+<v John Miller>from the beginning.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2272-0
+01:51:23.828 --> 01:51:23.908
+<v John Miller>Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2275-0
+01:51:26.068 --> 01:51:31.273
+<v John Miller>So the the key with that, with the green,
+with this green field is that we'd wanna</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2275-1
+01:51:31.273 --> 01:51:35.788
+<v John Miller>be able to provide those instruction
+files up front as well as provide.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2276-0
+01:51:37.388 --> 01:51:37.628
+<v John Miller>Um.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2281-0
+01:51:39.268 --> 01:51:44.384
+<v John Miller>We want to provide a business context.
+We want to be able to say what we want to</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2281-1
+01:51:44.384 --> 01:51:49.184
+<v John Miller>build in more detail and we want to
+define some business rules that we want</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2281-2
+01:51:49.184 --> 01:51:52.531
+<v John Miller>to see enforced as as it's as we
+implement the code.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2281-3
+01:51:52.531 --> 01:51:57.773
+<v John Miller>So this will be a little bit bigger of an
+effort than I can the calculator will be</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2281-4
+01:51:57.773 --> 01:51:58.468
+<v John Miller>or was and.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2285-0
+01:51:59.068 --> 01:52:03.335
+<v John Miller>We'll get into some new concepts and some
+things that you might not be familiar</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2285-1
+01:52:03.335 --> 01:52:05.895
+<v John Miller>with in terms of describing the business
+rules.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2285-2
+01:52:05.895 --> 01:52:10.108
+<v John Miller>So I think you'll find it interesting,
+an interesting exercise to try to carry</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2285-3
+01:52:10.108 --> 01:52:12.881
+<v John Miller>that through.
+We may not be able to get all the way</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2285-4
+01:52:12.881 --> 01:52:15.228
+<v John Miller>through the complete implementation in
+one.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2290-0
+01:52:15.908 --> 01:52:18.434
+<v John Miller>You know in one session,
+but we'll we'll get,</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2290-1
+01:52:18.434 --> 01:52:22.772
+<v John Miller>we'll take it as far as we can get it
+towards an implementation and I can show</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2290-2
+01:52:22.772 --> 01:52:27.110
+<v John Miller>you one that I've I've taken through to
+completion and which is along the same</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2290-3
+01:52:27.110 --> 01:52:31.228
+<v John Miller>lines that will demonstrate what it's
+what we're capable of accomplishing.</v>
+
+4fc81b81-bc77-4d0a-a5c5-83e179a8acc2/2291-0
+01:52:31.908 --> 01:52:36.000
+<v John Miller>So that's it for today and have have a
+good rest of your day and we'll see you</v>

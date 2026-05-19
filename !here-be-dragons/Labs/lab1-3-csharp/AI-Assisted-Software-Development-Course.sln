@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labs", "Labs", "{908A2AE8-7277-8D33-5900-B70622523C2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lab1-3-csharp", "lab1-3-csharp", "{A1AFD6FE-1FE3-D113-5441-0CDDC42750A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary", "BookLibrary.csproj", "{30058389-9577-FF3F-EBA4-048B0EA0BE87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30058389-9577-FF3F-EBA4-048B0EA0BE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30058389-9577-FF3F-EBA4-048B0EA0BE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30058389-9577-FF3F-EBA4-048B0EA0BE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30058389-9577-FF3F-EBA4-048B0EA0BE87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1AFD6FE-1FE3-D113-5441-0CDDC42750A5} = {908A2AE8-7277-8D33-5900-B70622523C2F}
+		{30058389-9577-FF3F-EBA4-048B0EA0BE87} = {A1AFD6FE-1FE3-D113-5441-0CDDC42750A5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B41FF36-9692-4A19-99F4-396BDB76B5A9}
+	EndGlobalSection
+EndGlobal

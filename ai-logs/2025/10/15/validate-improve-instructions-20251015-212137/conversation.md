@@ -8,7 +8,7 @@
 
 ## Session Objective
 
-Execute the validation and improvement workflow defined in `.github/prompts/meta/validate-and-improve-instructions.prompt.md` to:
+Execute the validation and improvement workflow defined in `.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md` to:
 
 1. Analyze instruction files for conflicts and inconsistencies
 2. Identify root causes in source prompts
@@ -140,7 +140,7 @@ CRITICAL FIXES APPLIED:
 ✅ Issue #2: Incorrect Model Provenance
    - Fixed metadata in create-prompt.instructions.md
    - Changed: "github/copilot@2025-10-15" → "openai/gpt-4o@2024-11-20"
-   - Added source field: ".github/prompts/prompt-file.instructions.prompt.md"
+   - Added source field: ".github/copilot/Promptfiles/prompt-file.instructions.prompt.md"
 
 ADDITIONAL FIXES:
 ✅ Issue #7: Missing Source Fields
@@ -167,18 +167,15 @@ PLANNED FOR FUTURE (not fixing now per Option C):
 ## Key Decisions
 
 1. **Workflow Adaptation**: Modified meta-prompt execution from multi-prompt orchestration to direct analysis due to system limitations
-
    - Rationale: No multi-prompt execution coordinator exists
    - Benefit: Still achieves core objective (identify issues)
    - Trade-off: Cannot perform regeneration/validation cycle
 
 2. **Issue Categorization**: Used 7-category taxonomy from check-context.prompt.md
-
    - Ensures consistency with repository standards
    - Enables clear communication of issue types
 
 3. **Severity Rating**: Applied 3-tier severity model (High/Medium/Low)
-
    - High: Conflicts that cause confusion or incorrect implementations
    - Medium: Duplication and maintenance burdens
    - Low: Minor inconsistencies with low impact
@@ -295,8 +292,8 @@ provenance tracking.
 
 ## References
 
-- Meta-prompt: `.github/prompts/meta/validate-and-improve-instructions.prompt.md`
-- Validation taxonomy: `.github/prompts/check-context.prompt.md`
+- Meta-prompt: `.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md`
+- Validation taxonomy: `.github/copilot/Promptfiles/check-context.prompt.md`
 - Policy compliance: `.github/instructions/ai-assisted-output.instructions.md`
 - Copilot standards: `.github/instructions/copilot-instructions.md`
 

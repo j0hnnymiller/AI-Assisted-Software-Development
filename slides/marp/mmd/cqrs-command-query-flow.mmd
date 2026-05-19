@@ -1,0 +1,10 @@
+flowchart TB
+    A[Command API] --> B["Command Handler\n(Domain Logic)"]
+    B --> C["Write Store\n(OLTP)"]
+
+    B -->|Events| E[Projection Updater]
+    F[Publisher] --> E
+    E --> D[Query API]
+
+    D --> G["Read Store\n(OLAP)"]
+    F --> G

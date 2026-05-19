@@ -1,0 +1,4530 @@
+WEBVTT
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/11-0
+00:00:06.385 --> 00:00:07.545
+<v John Miller>So I um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/16-0
+00:00:09.185 --> 00:00:14.277
+<v John Miller>I I did that comparison query in just
+regular copilot and it came up with an</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/16-1
+00:00:14.277 --> 00:00:19.369
+<v John Miller>interesting list of differences between
+Visual Studio Code and Visual Studio</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/16-2
+00:00:19.369 --> 00:00:24.328
+<v John Miller>implementations of of Copilot and
+similarities similarities that they both</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/16-3
+00:00:24.328 --> 00:00:27.105
+<v John Miller>support agent mode and inline suggestions.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/19-0
+00:00:27.625 --> 00:00:33.647
+<v John Miller>Next set of suggestions and the chat,
+but there are some key differences.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/19-1
+00:00:33.647 --> 00:00:39.425
+<v John Miller>Performance and responsiveness that
+Visual Studio's implementation is.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/25-0
+00:00:40.385 --> 00:00:46.571
+<v John Miller>Slower and large solutions has limited
+context awareness as opposed to strong</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/25-1
+00:00:46.571 --> 00:00:52.280
+<v John Miller>project wild contact awareness.
+It's a good thing is it's optimized for</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/25-2
+00:00:52.280 --> 00:00:53.945
+<v John Miller>the.net stack and C#.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/29-0
+00:00:55.265 --> 00:01:00.969
+<v John Miller>The ecosystem is not as big and it's
+heavier and slower to adopt new copilot</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/29-1
+00:01:00.969 --> 00:01:04.599
+<v John Miller>features.
+I have seen incidents where things are</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/29-2
+00:01:04.599 --> 00:01:10.525
+<v John Miller>showing up in copilot and then and then
+they trickle in from into Visual Studio</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/29-3
+00:01:10.525 --> 00:01:11.265
+<v John Miller>over time.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/34-0
+00:01:11.745 --> 00:01:16.096
+<v John Miller>Their implementation of MCP is still
+maturing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/34-1
+00:01:16.096 --> 00:01:22.946
+<v John Miller>The UIUX customizations are more rigid
+and it and it requires more setup,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/34-2
+00:01:22.946 --> 00:01:29.425
+<v John Miller>better for requires more setup,
+but it's better for deep dot network.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/38-0
+00:01:29.745 --> 00:01:35.481
+<v John Miller>I think the point that I was interesting,
+many developers report needing to switch</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/38-1
+00:01:35.481 --> 00:01:41.010
+<v John Miller>between to VS code to fully utilize the
+chat aware and context or capabilities.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/38-2
+00:01:41.010 --> 00:01:46.400
+<v John Miller>This is my experience as well as when
+I've been working on solutions that are</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/38-3
+00:01:46.400 --> 00:01:47.505
+<v John Miller>built in visual.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/43-0
+00:01:47.905 --> 00:01:53.635
+<v John Miller>Studio that usually I find an occasion
+where it's easier to switch over to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/43-1
+00:01:53.635 --> 00:01:59.746
+<v John Miller>Visual Studio code in the same code base
+and do some work there and then switch</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/43-2
+00:01:59.746 --> 00:02:04.330
+<v John Miller>back to Visual Studio for the things that
+are better there.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/43-3
+00:02:04.330 --> 00:02:07.385
+<v John Miller>So you might find yourself in that same.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/44-0
+00:02:07.505 --> 00:02:08.105
+<v John Miller>Situation.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/45-0
+00:02:10.025 --> 00:02:11.585
+<v John Miller>All right, so um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/49-0
+00:02:12.545 --> 00:02:15.876
+<v John Miller>Let's see,
+we were talking about this is not the</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/49-1
+00:02:15.876 --> 00:02:19.207
+<v John Miller>right project. Yeah,
+the code that we generated.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/49-2
+00:02:19.207 --> 00:02:24.442
+<v John Miller>We want to take a look at some of the
+changes that were made in terms of the</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/49-3
+00:02:24.442 --> 00:02:24.985
+<v John Miller>testing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/52-0
+00:02:26.225 --> 00:02:31.385
+<v John Miller>I see that test summary total is 7 and
+does.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/55-0
+00:02:33.505 --> 00:02:40.322
+<v John Miller>Code coverage was is now 3031%,
+which is an improvement,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/55-1
+00:02:40.322 --> 00:02:45.105
+<v John Miller>but that's not great, so we asked it to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/57-0
+00:02:46.425 --> 00:02:49.931
+<v John Miller>Do what?
+We asked it to add more tests for corner</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/57-1
+00:02:49.931 --> 00:02:52.385
+<v John Miller>cases, divide by zero and the like.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/59-0
+00:02:53.465 --> 00:02:56.705
+<v John Miller>And we can see here in our test file.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/66-0
+00:03:02.745 --> 00:03:11.090
+<v Skrzeszewski, Tom>Is it smart enough to respond to a prompt
+that would specify to add test to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/66-1
+00:03:11.090 --> 00:03:17.677
+<v Skrzeszewski, Tom>increase coverage,
+whatever the coverage to certain percent</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/66-2
+00:03:17.677 --> 00:03:18.665
+<v Skrzeszewski, Tom>and just?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/67-0
+00:03:18.865 --> 00:03:21.065
+<v Skrzeszewski, Tom>Don't let her run with that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/69-0
+00:03:22.545 --> 00:03:26.265
+<v John Miller>Um, you see something like um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/72-0
+00:03:37.065 --> 00:03:37.545
+<v John Miller>Uh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/76-0
+00:03:38.425 --> 00:03:42.403
+<v Skrzeszewski, Tom>Yeah,
+we want to add add test to increase code</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/76-1
+00:03:42.403 --> 00:03:49.427
+<v Skrzeszewski, Tom>coverage to let's say 50% as an example.
+So I think right now it's at 30 and would</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/76-2
+00:03:49.427 --> 00:03:50.865
+<v Skrzeszewski, Tom>it run somewhere?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/81-0
+00:03:53.505 --> 00:03:57.790
+<v John Miller>Yeah, that's very doable.
+That's something that, you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/81-1
+00:03:57.790 --> 00:04:02.945
+<v John Miller>something I do on a regular basis is,
+you know, to and if you get the.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/79-0
+00:03:58.945 --> 00:04:00.385
+<v Skrzeszewski, Tom>Mm-hmm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/82-0
+00:04:04.425 --> 00:04:04.505
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/88-0
+00:04:06.825 --> 00:04:12.927
+<v John Miller>If you get the the the the GitHub
+integration working properly it will or</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/88-1
+00:04:12.927 --> 00:04:19.193
+<v John Miller>or for that matter and and Azure Azure
+DevOps it will actually can actually</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/88-2
+00:04:19.193 --> 00:04:22.985
+<v John Miller>create the issues for you so but here we
+see.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/86-0
+00:04:22.505 --> 00:04:23.025
+<v Skrzeszewski, Tom>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/90-0
+00:04:24.465 --> 00:04:30.985
+<v John Miller>The add unit tests for evaluate or
+arithmetic in edge cases.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/93-0
+00:04:32.465 --> 00:04:37.532
+<v John Miller>I can bring this up,
+additional arithmetic cases, etcetera,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/93-1
+00:04:37.532 --> 00:04:40.065
+<v John Miller>acceptance criteria and notes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/95-0
+00:04:41.345 --> 00:04:44.465
+<v Skrzeszewski, Tom>So is it some sort of convention that you
+call it issues?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/97-0
+00:04:45.385 --> 00:04:49.314
+<v John Miller>No, I just,
+I think that I think GitHub understands</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/97-1
+00:04:49.314 --> 00:04:53.545
+<v John Miller>what issues are. You could call it,
+you know, you know.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/99-0
+00:04:54.825 --> 00:04:55.305
+<v John Miller>Tas.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/102-0
+00:04:56.625 --> 00:05:00.025
+<v John Miller>Or the like and and it puts,
+let's see then um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/100-0
+00:04:57.465 --> 00:04:57.985
+<v Skrzeszewski, Tom>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/103-0
+00:05:01.465 --> 00:05:04.105
+<v John Miller>A GitHub issues folder.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/108-0
+00:05:06.705 --> 00:05:11.799
+<v Tarrants, Seth>I think and I may be incorrect,
+but I think what you are showing us, John,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/108-1
+00:05:11.799 --> 00:05:15.534
+<v Tarrants, Seth>is how copilot can guide us to get to
+better coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/108-2
+00:05:15.534 --> 00:05:21.103
+<v Tarrants, Seth>And I think what Tom was asking was how
+can we ask it to generate enough tests to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/108-3
+00:05:21.103 --> 00:05:22.665
+<v Tarrants, Seth>get us to 50% coverage?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/109-0
+00:05:23.185 --> 00:05:24.345
+<v Tarrants, Seth>Is that correct?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/115-0
+00:05:24.065 --> 00:05:28.598
+<v Skrzeszewski, Tom>Yes, yeah, that was my intent. I'm lazy,
+so I'm just, you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/111-0
+00:05:26.865 --> 00:05:28.105
+<v Skrzeszewski, Tom>Yeah, so.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/115-1
+00:05:28.598 --> 00:05:33.059
+<v Skrzeszewski, Tom>I I want it to work for me.
+It's just like, hey, ideally 100%,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/112-0
+00:05:29.825 --> 00:05:30.105
+<v John Miller>Yeah.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/115-2
+00:05:33.059 --> 00:05:37.025
+<v Skrzeszewski, Tom>but I just want to get there, you know,
+maybe in steps.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/120-0
+00:05:36.945 --> 00:05:40.896
+<v John Miller>Sure.
+I mean we could we have this issues file</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/120-1
+00:05:40.896 --> 00:05:47.705
+<v John Miller>now, so we could we could say pound sign.
+You can see the list of issues here to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/117-0
+00:05:42.305 --> 00:05:42.505
+<v Skrzeszewski, Tom>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/120-2
+00:05:47.705 --> 00:05:48.545
+<v John Miller>implement.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/121-0
+00:05:51.185 --> 00:05:52.905
+<v John Miller>These tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/124-0
+00:05:58.705 --> 00:06:02.105
+<v John Miller>And he will go about and do that
+implementation for you.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/125-0
+00:06:02.905 --> 00:06:03.385
+<v Skrzeszewski, Tom>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/130-0
+00:06:03.505 --> 00:06:07.157
+<v John Miller>Creating the issues is not a bad thing
+because one you can,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/130-1
+00:06:07.157 --> 00:06:12.026
+<v John Miller>you can review what you're being asked,
+asking it to do in a little more detail</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/130-2
+00:06:12.026 --> 00:06:14.765
+<v John Miller>and see if it meets your expectations
+there.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/130-3
+00:06:14.765 --> 00:06:19.269
+<v John Miller>And it also gives you something to bounce
+this back on and say, you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/130-4
+00:06:19.269 --> 00:06:20.425
+<v John Miller>does this actually.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/135-0
+00:06:20.865 --> 00:06:25.781
+<v John Miller>Test the functionality that it you're
+expecting it to test because you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/135-1
+00:06:25.781 --> 00:06:30.823
+<v John Miller>remember that first set of tests we did
+did not actually test anything that we</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/135-2
+00:06:30.823 --> 00:06:33.760
+<v John Miller>did. It was it was a a false positive,
+right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/133-0
+00:06:31.785 --> 00:06:32.465
+<v Skrzeszewski, Tom>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/135-3
+00:06:33.760 --> 00:06:36.185
+<v John Miller>So now it's gonna run those tests and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/136-0
+00:06:38.785 --> 00:06:41.265
+<v John Miller>And run our coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/138-0
+00:06:42.945 --> 00:06:45.305
+<v John Miller>So it's now adding some um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/140-0
+00:06:46.705 --> 00:06:49.585
+<v John Miller>Is that about the test?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/142-0
+00:06:50.985 --> 00:06:55.585
+<v John Miller>And now we're going from 7 passing tests
+to to to 12 passing tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/146-0
+00:07:02.185 --> 00:07:04.988
+<v John Miller>So I guess, you know, in both cases,
+you know it,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/146-1
+00:07:04.988 --> 00:07:07.679
+<v John Miller>it will help you move in that direction,
+right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/146-2
+00:07:07.679 --> 00:07:10.145
+<v John Miller>That's where you want to go and we can
+see.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/148-0
+00:07:12.665 --> 00:07:12.905
+<v John Miller>Here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/149-0
+00:07:15.225 --> 00:07:15.385
+<v John Miller>No.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/152-0
+00:07:16.625 --> 00:07:24.265
+<v John Miller>Line rate is 82% and 50% so on on that
+just on the evaluator test.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/155-0
+00:07:29.065 --> 00:07:34.065
+<v John Miller>Overall, we only increased it by,
+you know, a couple of percentage points.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/160-0
+00:07:35.065 --> 00:07:39.956
+<v John Miller>So we would want to you know follow
+through and and do the and do these one</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/160-1
+00:07:39.956 --> 00:07:43.045
+<v John Miller>by one.
+The other thing I I would say is asking</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/160-2
+00:07:43.045 --> 00:07:48.258
+<v John Miller>it to say I just implement tests for the
+whole project and bring me up to 50% is</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/160-3
+00:07:48.258 --> 00:07:51.347
+<v John Miller>going to generate a whole bunch of code,
+right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/160-4
+00:07:51.347 --> 00:07:53.985
+<v John Miller>It's going to produce a lot of tests and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/163-0
+00:07:54.065 --> 00:07:59.202
+<v John Miller>Now your job is to to feel confident that
+those tests are actually testing what</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/163-1
+00:07:59.202 --> 00:08:02.605
+<v John Miller>it's supposed to be testing, and it's not,
+you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/163-2
+00:08:02.605 --> 00:08:07.550
+<v John Miller>that has not created something that's
+gonna that doesn't actually meet up to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/163-3
+00:08:07.550 --> 00:08:08.705
+<v John Miller>your expectations.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/168-0
+00:08:09.105 --> 00:08:13.092
+<v John Miller>By doing it this way,
+we can keep our change sets down to a</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/168-1
+00:08:13.092 --> 00:08:17.810
+<v John Miller>smaller set of files that we need to
+review and that would be I think,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/168-2
+00:08:17.810 --> 00:08:21.930
+<v John Miller>and that makes it easier for us to to
+move forward. You know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/168-3
+00:08:21.930 --> 00:08:25.185
+<v John Miller>use an iterative approach,
+implement some tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/170-0
+00:08:25.505 --> 00:08:29.198
+<v John Miller>Validate them, commit them,
+move on to the next set of tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/170-1
+00:08:29.198 --> 00:08:30.985
+<v John Miller>It would be my recommendation.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/175-0
+00:08:34.545 --> 00:08:38.438
+<v John Miller>So now it's suggesting the next steps,
+add integration tests, refactor,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/175-1
+00:08:38.438 --> 00:08:42.277
+<v John Miller>evaluator processing, etcetera.
+So what do we want to do next? I mean,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/175-2
+00:08:42.277 --> 00:08:46.710
+<v John Miller>we basically what I have planned for the
+rest of the day is to continue iterating</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/175-3
+00:08:46.710 --> 00:08:49.305
+<v John Miller>on this project and see how far we can
+take it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/178-0
+00:08:55.025 --> 00:08:57.925
+<v John Miller>Do we want to continue on the code
+coverage path and try to get code</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/178-1
+00:08:57.925 --> 00:09:01.119
+<v John Miller>coverage up to where it needs to be?
+Or do we want to try to implement some</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/178-2
+00:09:01.119 --> 00:09:01.665
+<v John Miller>new features?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/180-0
+00:09:03.265 --> 00:09:06.396
+<v Tarrants, Seth>Is it possible,
+and I don't know if anyone else wants to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/180-1
+00:09:06.396 --> 00:09:09.307
+<v Tarrants, Seth>go this real,
+is it possible to ask it to generate a</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/180-2
+00:09:09.307 --> 00:09:10.185
+<v Tarrants, Seth>build YAML file?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/182-0
+00:09:11.265 --> 00:09:13.305
+<v Tarrants, Seth>To be introduced within the CI CD
+pipeline.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/183-0
+00:09:14.385 --> 00:09:16.865
+<v John Miller>Sure, yeah, you can do that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/185-0
+00:09:17.265 --> 00:09:19.305
+<v Tarrants, Seth>Like how to build it and then test it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/189-0
+00:09:24.625 --> 00:09:29.138
+<v Skrzeszewski, Tom>So Seth, what is it for?
+So educate me just so I understand what</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/189-1
+00:09:29.138 --> 00:09:30.665
+<v Skrzeszewski, Tom>you're just asked for.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/188-0
+00:09:29.865 --> 00:09:30.025
+<v Tarrants, Seth>Sure.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/194-0
+00:09:31.105 --> 00:09:35.338
+<v Tarrants, Seth>So the general workflow is you define a a
+thing to be done,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/194-1
+00:09:35.338 --> 00:09:40.980
+<v Tarrants, Seth>you do the necessary deeds to create,
+and then you test it to make sure that it</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/194-2
+00:09:40.980 --> 00:09:44.860
+<v Tarrants, Seth>runs as you expect it to and meet
+acceptance criteria.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/194-3
+00:09:44.860 --> 00:09:46.905
+<v Tarrants, Seth>In the end you still have to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/198-0
+00:09:47.425 --> 00:09:50.957
+<v Tarrants, Seth>Deliver that product consistently the
+same way over and over again through</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/198-1
+00:09:50.957 --> 00:09:54.443
+<v Tarrants, Seth>multiple iterations going forward.
+So what you should define is the build</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/198-2
+00:09:54.443 --> 00:09:56.797
+<v Tarrants, Seth>process. How do I build it?
+What does it produce?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/198-3
+00:09:56.797 --> 00:09:59.340
+<v Tarrants, Seth>What do I do with that artifact?
+How do I deliver it?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/198-4
+00:09:59.340 --> 00:10:02.825
+<v Tarrants, Seth>And then ultimately keeping track of your
+historical records for testing?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/203-0
+00:10:02.865 --> 00:10:06.374
+<v Tarrants, Seth>It's for testing.
+So a build pipeline within the CICD</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/203-1
+00:10:06.374 --> 00:10:11.378
+<v Tarrants, Seth>process would be the next logical step
+after the initial iteration to ensure</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/203-2
+00:10:11.378 --> 00:10:16.121
+<v Tarrants, Seth>that you are refining an iterative
+approach to the initial creation that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/203-3
+00:10:16.121 --> 00:10:17.745
+<v Tarrants, Seth>you're trying to deliver.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/202-0
+00:10:19.265 --> 00:10:19.745
+<v John Miller>Alright.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/209-0
+00:10:19.465 --> 00:10:25.483
+<v Skrzeszewski, Tom>So what it means if if somebody edits the
+file, the source code,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/209-1
+00:10:25.483 --> 00:10:32.611
+<v Skrzeszewski, Tom>in this particular case a calculator,
+then the rest happens automatically in</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/205-0
+00:10:28.025 --> 00:10:28.185
+<v Tarrants, Seth>M.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/209-2
+00:10:32.611 --> 00:10:35.665
+<v Skrzeszewski, Tom>terms of building, verifying and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/210-0
+00:10:36.465 --> 00:10:40.185
+<v Skrzeszewski, Tom>Within your uh uh DevOps is.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/216-0
+00:10:40.425 --> 00:10:42.855
+<v Tarrants, Seth>Yeah, exactly.
+All you have to do is access the repo,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/211-0
+00:10:41.825 --> 00:10:43.985
+<v Skrzeszewski, Tom>That's that's fine, OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/216-1
+00:10:42.855 --> 00:10:45.150
+<v Tarrants, Seth>clone it,
+and then you should be pointed to a file</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/216-2
+00:10:45.150 --> 00:10:48.795
+<v Tarrants, Seth>to run and it would get you up to running
+up to a point where you could actually</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/216-3
+00:10:48.795 --> 00:10:50.145
+<v Tarrants, Seth>start working in the building.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/215-0
+00:10:51.785 --> 00:10:53.065
+<v Skrzeszewski, Tom>OK, cool. Thanks.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/221-0
+00:10:54.145 --> 00:10:57.564
+<v John Miller>Yeah,
+and you know when I have my DevOps DevOps</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/221-1
+00:10:57.564 --> 00:11:00.841
+<v John Miller>hat on,
+the pipeline is one of the very first</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/221-2
+00:11:00.841 --> 00:11:06.753
+<v John Miller>things I want to see working because then
+you know from the very beginning you can</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/221-3
+00:11:06.753 --> 00:11:11.811
+<v John Miller>you can deploy into into an environment
+that's independent of your dev</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/221-4
+00:11:11.811 --> 00:11:12.665
+<v John Miller>workstation.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/225-0
+00:11:12.945 --> 00:11:18.351
+<v John Miller>And show people that it's running, right?
+So I think that, you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/225-1
+00:11:18.351 --> 00:11:24.383
+<v John Miller>even if it's only doing hello world,
+it's great to have that pipeline up and</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/225-2
+00:11:24.383 --> 00:11:28.065
+<v John Miller>running and executing.
+So here it's created a.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/226-0
+00:11:28.505 --> 00:11:30.985
+<v John Miller>Uh, let's see where. Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/233-0
+00:11:33.505 --> 00:11:37.025
+<v John Miller>Oh,
+so we have a a code over the threshold.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/233-1
+00:11:37.025 --> 00:11:43.265
+<v John Miller>Here's our YAML file for building.
+Now this is a a a GitHub actions pipeline,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/233-2
+00:11:43.265 --> 00:11:47.185
+<v John Miller>but you could do just the same for Azure
+DevOps,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/233-3
+00:11:47.185 --> 00:11:52.705
+<v John Miller>but it's basically defining when you push
+a push to the branch main.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/236-0
+00:11:52.785 --> 00:11:58.014
+<v John Miller>Or or pull from the do a pull request on
+the main.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/236-1
+00:11:58.014 --> 00:12:05.907
+<v John Miller>Then you're going to do a build and test
+cycle where you check out the code,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/236-2
+00:12:05.907 --> 00:12:08.265
+<v John Miller>set up the.net actions.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/238-0
+00:12:10.265 --> 00:12:12.105
+<v John Miller>Restore the the project.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/244-0
+00:12:14.105 --> 00:12:17.739
+<v John Miller>Build the project,
+run the tests and see here we're doing</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/244-1
+00:12:17.739 --> 00:12:20.308
+<v John Miller>the.
+net test calculator and running our</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/244-2
+00:12:20.308 --> 00:12:23.065
+<v John Miller>actual tests.
+Install the report generator,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/244-3
+00:12:23.065 --> 00:12:26.949
+<v John Miller>generate a coverage report,
+upload that coverage report as an</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/244-4
+00:12:26.949 --> 00:12:32.150
+<v John Miller>artifact, enforce the coverage threshold.
+So it's actually going to do some coding</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/244-5
+00:12:32.150 --> 00:12:33.465
+<v John Miller>here in the pipeline.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/245-0
+00:12:33.745 --> 00:12:36.425
+<v John Miller>To actually verify that we've got 50%
+coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/247-0
+00:12:38.105 --> 00:12:40.985
+<v John Miller>So that's a good start, right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/248-0
+00:12:42.865 --> 00:12:43.465
+<v John Miller>Sorry about that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/250-0
+00:12:46.105 --> 00:12:49.345
+<v John Miller>All right,
+so we want to install the report</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/250-1
+00:12:49.345 --> 00:12:51.185
+<v John Miller>generator tool so we can.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/252-0
+00:12:52.985 --> 00:12:56.145
+<v John Miller>And it looks like we're having some of
+the same issues we had earlier.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/256-0
+00:13:06.625 --> 00:13:08.185
+<v John Miller>We're tour setting and built it locally.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/258-0
+00:13:12.625 --> 00:13:16.185
+<v John Miller>So the next steps would be on this to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/262-0
+00:13:17.665 --> 00:13:21.117
+<v John Miller>On GitHub actions,
+the full workflow should run and generate</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/262-1
+00:13:21.117 --> 00:13:24.116
+<v John Miller>coverage report and enforce that coverage
+threshold.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/262-2
+00:13:24.116 --> 00:13:27.681
+<v John Miller>If you want the local smoke test to also
+produce HTML reports,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/262-3
+00:13:27.681 --> 00:13:29.265
+<v John Miller>we can adjust it to do that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/265-0
+00:13:30.745 --> 00:13:36.548
+<v John Miller>And and it wants to now push these
+changes and and generate a PR.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/265-1
+00:13:36.548 --> 00:13:38.745
+<v John Miller>So let's keep everything.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/268-0
+00:13:40.585 --> 00:13:46.905
+<v John Miller>Here we still got a lot of changes that
+we got stored up here so.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/269-0
+00:13:48.665 --> 00:13:52.785
+<v John Miller>Why don't we go ahead and create a PR?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/282-0
+00:14:12.625 --> 00:14:16.185
+<v John Miller>So one thing I haven't shown is the ask
+and the edit modes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/282-1
+00:14:16.185 --> 00:14:20.515
+<v John Miller>I got a little bit ahead of myself,
+so I'm going to switch back and just</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/282-2
+00:14:20.515 --> 00:14:25.320
+<v John Miller>demonstrate some of that and how it works
+so that you're so that you're a little</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/282-3
+00:14:25.320 --> 00:14:26.625
+<v John Miller>more familiar with it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/284-0
+00:14:28.145 --> 00:14:35.385
+<v John Miller>So it wants to know what branch name.
+We'll just call this the CICD.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/298-0
+00:14:56.545 --> 00:15:01.450
+<v John Miller>So what do you want to do here?
+You want to just create the branch called</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/298-1
+00:15:01.450 --> 00:15:06.620
+<v John Miller>CICD or create a branch called feature
+CICD or just create the branch locally</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/298-2
+00:15:06.620 --> 00:15:07.945
+<v John Miller>and don't do a push?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/300-0
+00:15:10.585 --> 00:15:12.665
+<v Tarrants, Seth>I'll be feature.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/299-0
+00:15:11.185 --> 00:15:12.305
+<v John Miller>Any idea?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/301-0
+00:15:12.385 --> 00:15:13.625
+<v Majernik, Peter>Feature, yeah.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/303-0
+00:15:13.665 --> 00:15:15.385
+<v John Miller>All right, let's do that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/316-0
+00:15:39.465 --> 00:15:41.785
+<v John Miller>That's all good. Get check out.
+That should be fine.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/318-0
+00:15:43.345 --> 00:15:47.065
+<v John Miller>We're seeing that I've had this issue
+quite often.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/321-0
+00:15:49.625 --> 00:15:53.119
+<v John Miller>In that it doesn't know it.
+It ends up in the wrong directory and it</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/321-1
+00:15:53.119 --> 00:15:56.865
+<v John Miller>tries things in the wrong directory and
+eventually it'll figure that out.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/326-0
+00:16:11.785 --> 00:16:12.505
+<v John Miller>Oh, let's see.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/338-0
+00:16:41.265 --> 00:16:45.145
+<v John Miller>And go ahead and begin to go ahead and
+run those commands now in the terminal.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/346-0
+00:16:57.745 --> 00:17:00.585
+<v John Miller>Mm-hmm. Looks like it had some problems.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/350-0
+00:17:11.225 --> 00:17:15.545
+<v John Miller>And we can see we can see this command
+terminal last command.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/353-0
+00:17:17.065 --> 00:17:22.145
+<v John Miller>Now we've added the contents of the
+terminal window into the chat.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/362-0
+00:17:43.425 --> 00:17:46.665
+<v John Miller>I like this. It was an accidental paste.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/366-0
+00:17:57.825 --> 00:18:01.185
+<v John Miller>So we can let's add it to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/368-0
+00:18:04.385 --> 00:18:06.905
+<v John Miller>Go ahead and create the R.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/378-0
+00:18:31.385 --> 00:18:31.465
+<v John Miller>So.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/384-0
+00:18:45.945 --> 00:18:47.265
+<v John Miller>And we'll execute the second batch.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/387-0
+00:18:55.945 --> 00:18:59.665
+<v John Miller>Still having problems with that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/391-0
+00:19:09.785 --> 00:19:12.145
+<v John Miller>It looks like it's still trying to treat.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/393-0
+00:19:14.225 --> 00:19:15.865
+<v John Miller>The summary of changes here and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/395-0
+00:19:17.265 --> 00:19:22.025
+<v John Miller>It's a,
+but it's not recognized in the the syntax.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/398-0
+00:19:28.385 --> 00:19:31.905
+<v John Miller>So let's try the terminal again,
+see if we can get it to fix that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/402-0
+00:19:39.745 --> 00:19:44.685
+<v John Miller>So this is a fairly typical workflow
+where you try something but it doesn't</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/402-1
+00:19:44.685 --> 00:19:45.465
+<v John Miller>have enough.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/408-0
+00:20:01.105 --> 00:20:05.465
+<v John Miller>So what it wants to do is to aste the R
+body.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/432-0
+00:21:22.465 --> 00:21:24.932
+<v Majernik, Peter>John,
+are you are you just trying to create a</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/432-1
+00:21:24.932 --> 00:21:27.505
+<v Majernik, Peter>pull request?
+Is that what's what the issue is?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/436-0
+00:21:25.745 --> 00:21:28.035
+<v John Miller>Yeah,
+that's that's what that's what we're</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/436-1
+00:21:28.035 --> 00:21:30.963
+<v John Miller>stuck on right now is just creating this
+pull request.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/436-2
+00:21:30.963 --> 00:21:33.465
+<v John Miller>We can kind of skip that part and and
+move on.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/439-0
+00:21:31.905 --> 00:21:34.659
+<v Majernik, Peter>You could just make the body simpler,
+right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/439-1
+00:21:34.659 --> 00:21:39.616
+<v Majernik, Peter>You don't need all that text in there.
+Or we can just go to the portal maybe and</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/437-0
+00:21:38.505 --> 00:21:38.665
+<v John Miller>Right.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/439-2
+00:21:39.616 --> 00:21:41.145
+<v Majernik, Peter>create it there manually.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/440-0
+00:21:41.905 --> 00:21:43.305
+<v John Miller>We could do that too.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/443-0
+00:21:43.745 --> 00:21:45.950
+<v Majernik, Peter>So,
+so the purpose is to demonstrate how</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/443-1
+00:21:45.950 --> 00:21:49.123
+<v Majernik, Peter>through copilot we can do everything
+automatically, right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/443-2
+00:21:49.123 --> 00:21:51.865
+<v Majernik, Peter>That's why we are trying to do it through
+copilot.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/446-0
+00:21:51.665 --> 00:21:54.823
+<v John Miller>Yeah,
+we're just trying to show that we can do</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/446-1
+00:21:54.823 --> 00:21:57.980
+<v John Miller>that. So here it says that we could,
+you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/446-2
+00:21:57.980 --> 00:22:00.465
+<v John Miller>we have a PR body that we'd paste in.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/447-0
+00:22:01.665 --> 00:22:04.825
+<v John Miller>and it's still not not liking that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/451-0
+00:22:07.785 --> 00:22:10.515
+<v Majernik, Peter>Yeah, I mean,
+I can't tell why it doesn't like that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/451-1
+00:22:10.515 --> 00:22:14.583
+<v Majernik, Peter>If it's some kind of an escape character
+or something missing or something not</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/451-2
+00:22:14.583 --> 00:22:16.385
+<v Majernik, Peter>initialized properly, I don't know.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/453-0
+00:22:16.145 --> 00:22:22.745
+<v John Miller>Yeah, yeah, I'd have to figure that out.
+So let's just, uh, we'll we'll um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/455-0
+00:22:25.185 --> 00:22:28.305
+<v John Miller>We'll see.
+We'll skip on that for now or go into.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/458-0
+00:22:30.385 --> 00:22:33.225
+<v John Miller>Um, let me see if I can bring up GitHub.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/475-0
+00:23:07.225 --> 00:23:12.825
+<v John Miller>So reason pushes that looks about right.
+So we could here do a a pull request.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/477-0
+00:23:19.505 --> 00:23:22.025
+<v John Miller>We could go back here and grab the body.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/480-0
+00:23:28.625 --> 00:23:30.305
+<v John Miller>I think that was right here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/483-0
+00:23:38.985 --> 00:23:40.985
+<v John Miller>And create that poll request.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/492-0
+00:23:59.265 --> 00:24:01.870
+<v John Miller>close. All right.
+What do you want to do next?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/492-1
+00:24:01.870 --> 00:24:03.865
+<v John Miller>Do you want to see the pipeline run?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/494-0
+00:24:05.105 --> 00:24:08.345
+<v Majernik, Peter>Yeah, I would like to see it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/496-0
+00:24:11.545 --> 00:24:13.545
+<v John Miller>Let's see. Uh, we've merged that back.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/500-0
+00:24:26.865 --> 00:24:30.025
+<v John Miller>So it looks like it didn't quite work.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/510-0
+00:24:56.305 --> 00:24:57.945
+<v John Miller>So let's see if we can.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/521-0
+00:25:21.865 --> 00:25:26.585
+<v John Miller>So I just got a notice from GitHub,
+GitHub that our our pipeline failed.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/524-0
+00:25:32.305 --> 00:25:35.025
+<v Majernik, Peter>I would be really impressed if it worked
+the first time.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/525-0
+00:25:36.305 --> 00:25:37.385
+<v John Miller>Yeah.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/527-0
+00:25:39.625 --> 00:25:39.945
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/531-0
+00:25:51.345 --> 00:25:52.625
+<v John Miller>So it says update the CI.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/537-0
+00:26:06.145 --> 00:26:07.465
+<v John Miller>Let's say let's we'll fix.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/539-0
+00:26:09.985 --> 00:26:13.185
+<v Majernik, Peter>It's still just a bad results.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/541-0
+00:26:16.865 --> 00:26:18.505
+<v John Miller>So it's just like it's just a pathing
+issue.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/544-0
+00:26:23.265 --> 00:26:25.865
+<v John Miller>Turn my fix into a list.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/548-0
+00:26:34.865 --> 00:26:37.745
+<v Majernik, Peter>But what is that list about?
+I I missed that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/549-0
+00:26:38.825 --> 00:26:39.865
+<v John Miller>So um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/554-0
+00:26:41.425 --> 00:26:47.202
+<v John Miller>So when I I you type in fix,
+it looks like there's a a conflict here</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/554-1
+00:26:47.202 --> 00:26:53.229
+<v John Miller>between two different MCP providers and
+tools. One is in the workspace,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/554-2
+00:26:53.229 --> 00:26:56.745
+<v John Miller>it's got a fix and Ms. SQL also has a fix.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/558-0
+00:26:57.905 --> 00:27:03.770
+<v John Miller>And so I keep getting the MSSQL version
+which causes me a problem.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/558-1
+00:27:03.770 --> 00:27:10.597
+<v John Miller>So we select this and then we get at
+workspace fix and we already have CI dot</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/558-2
+00:27:10.597 --> 00:27:12.785
+<v John Miller>YAML in the context here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/562-0
+00:27:14.025 --> 00:27:19.286
+<v John Miller>So we can go ahead and run that and that
+should be enough to tell copilot that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/562-1
+00:27:19.286 --> 00:27:24.681
+<v John Miller>we're trying to fix the pipeline and it
+already knows or made recommendations on</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/562-2
+00:27:24.681 --> 00:27:26.545
+<v John Miller>what we should do to fix it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/567-0
+00:27:38.825 --> 00:27:41.585
+<v John Miller>So ask the user to write the exact source
+file.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/568-0
+00:27:43.665 --> 00:27:46.345
+<v John Miller>Uh, it's doesn't seems like um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/570-0
+00:27:47.345 --> 00:27:49.665
+<v John Miller>It's a little confused here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/572-0
+00:27:54.265 --> 00:27:55.945
+<v John Miller>So let's let's give it this command.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/577-0
+00:28:11.265 --> 00:28:14.425
+<v John Miller>And so now it's making the changes to the
+pipeline.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/580-0
+00:28:23.345 --> 00:28:26.065
+<v John Miller>And it's fixing the report generator as
+well.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/585-0
+00:28:40.745 --> 00:28:44.705
+<v John Miller>And it test did a smoke test that looks
+like that's working.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/593-0
+00:29:04.425 --> 00:29:06.905
+<v John Miller>All right, so um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/596-0
+00:29:09.265 --> 00:29:12.187
+<v John Miller>No, we don't.
+We try to create another file.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/596-1
+00:29:12.187 --> 00:29:14.265
+<v John Miller>Let's keep our changes here and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/599-0
+00:29:22.145 --> 00:29:26.107
+<v John Miller>And we'll go ahead and see if we can
+create that VR and my glutton for</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/599-1
+00:29:26.107 --> 00:29:26.665
+<v John Miller>punishing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/606-0
+00:29:45.145 --> 00:29:47.905
+<v John Miller>So it's going to create a.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/609-0
+00:29:48.905 --> 00:29:52.865
+<v John Miller>A list of commands to execute as it did
+before.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/635-0
+00:31:11.665 --> 00:31:11.865
+<v John Miller>Yes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/641-0
+00:31:22.625 --> 00:31:26.905
+<v John Miller>All right, so we can go back to the top.
+We can then run the get checkout.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/647-0
+00:31:39.265 --> 00:31:41.625
+<v John Miller>And we're already on that branch,
+so we're good.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/651-0
+00:31:49.665 --> 00:31:53.865
+<v John Miller>Here we do the get add now we add the CML
+file.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/653-0
+00:31:57.025 --> 00:31:59.625
+<v Majernik, Peter>So did you do the checkout after you made
+changes?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/655-0
+00:32:01.145 --> 00:32:01.545
+<v Majernik, Peter>Locally.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/656-0
+00:32:01.745 --> 00:32:04.505
+<v John Miller>Yeah, the changes. Yeah,
+the changes are here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/657-0
+00:32:06.105 --> 00:32:06.225
+<v Majernik, Peter>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/660-0
+00:32:09.545 --> 00:32:11.462
+<v Majernik, Peter>Yeah,
+I'm just used to creating the branch</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/660-1
+00:32:11.462 --> 00:32:12.665
+<v Majernik, Peter>first, then making changes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/661-0
+00:32:13.745 --> 00:32:15.745
+<v John Miller>Yeah, it works either way.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/662-0
+00:32:15.545 --> 00:32:15.665
+<v Majernik, Peter>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/664-0
+00:32:16.745 --> 00:32:20.425
+<v John Miller>So we're gonna do a a a commit then.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/667-0
+00:32:28.345 --> 00:32:30.745
+<v John Miller>And we're going to push the branch.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/670-0
+00:32:39.825 --> 00:32:43.865
+<v John Miller>And this is the one that we've had issues
+and it says I think afterwards.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/673-0
+00:32:48.665 --> 00:32:50.785
+<v John Miller>So here it's going to try to create a
+file.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/674-0
+00:32:52.025 --> 00:32:52.905
+<v John Miller>Are there changes?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/677-0
+00:33:00.865 --> 00:33:04.505
+<v John Miller>And it looked like it was able to create
+a PR.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/680-0
+00:33:06.785 --> 00:33:11.225
+<v John Miller>Here we're going to open up the PR and
+see if we can see it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/688-0
+00:33:32.185 --> 00:33:35.545
+<v Majernik, Peter>So did you say it succeeded in creating
+the PR?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/690-0
+00:33:36.785 --> 00:33:38.945
+<v John Miller>I think it's exceeded. Oh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/691-0
+00:33:40.185 --> 00:33:40.265
+<v Majernik, Peter>So.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/692-0
+00:33:41.145 --> 00:33:41.625
+<v John Miller>Yeah, it looks like.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/695-0
+00:33:44.065 --> 00:33:48.185
+<v John Miller>It says it could not resolve to a
+repository, so this command.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/698-0
+00:33:48.905 --> 00:33:53.392
+<v Majernik, Peter>Yeah, that's what surprised me.
+Like if it if it succeeded in creating,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/696-0
+00:33:49.065 --> 00:33:50.545
+<v John Miller>It doesn't look like your work.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/698-1
+00:33:53.392 --> 00:33:54.825
+<v Majernik, Peter>why can it not view it?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/701-0
+00:33:58.065 --> 00:34:02.985
+<v John Miller>Well, we can.
+We can go to GitHub and ask see what.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/703-0
+00:34:07.665 --> 00:34:09.465
+<v John Miller>So it didn't create the PR.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/711-0
+00:34:20.945 --> 00:34:25.921
+<v Majernik, Peter>I I think there may be something
+misconfigured between VS code and GitHub.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/711-1
+00:34:25.921 --> 00:34:29.040
+<v Majernik, Peter>I'm just guessing here.
+I don't know for sure,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/711-2
+00:34:29.040 --> 00:34:32.025
+<v Majernik, Peter>but it looks like something's missing
+there.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/709-0
+00:34:29.945 --> 00:34:30.105
+<v John Miller>Right.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/718-0
+00:34:49.425 --> 00:34:51.465
+<v John Miller>So we could go and say, um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/720-0
+00:34:52.345 --> 00:34:54.705
+<v John Miller>A new pull request like we did last time.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/750-0
+00:36:03.865 --> 00:36:05.865
+<v John Miller>So now we'll get to see if this.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/767-0
+00:36:39.025 --> 00:36:43.038
+<v Majernik, Peter>So, so I don't know about everybody else,
+but to me personally,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/767-1
+00:36:43.038 --> 00:36:46.737
+<v Majernik, Peter>it's actually not that important that we
+get this working.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/767-2
+00:36:46.737 --> 00:36:50.185
+<v Majernik, Peter>I'm more interested in the concepts of
+what it can do.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/769-0
+00:36:53.025 --> 00:36:56.265
+<v Majernik, Peter>'Cause I I'm not specifically familiar
+with all the GitHub insurance and out.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/770-0
+00:36:58.665 --> 00:36:58.905
+<v John Miller>Yeah.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/776-0
+00:37:05.425 --> 00:37:10.325
+<v Majernik, Peter>So what I'm trying to say here is that,
+you know, getting a pipeline working,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/776-1
+00:37:10.325 --> 00:37:14.785
+<v Majernik, Peter>sometimes there's a lot of tinkering
+involved with or without copilot.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/778-0
+00:37:16.145 --> 00:37:20.630
+<v Majernik, Peter>In terms of, you know,
+aligning the environment, authentication,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/778-1
+00:37:20.630 --> 00:37:21.665
+<v Majernik, Peter>relative paths.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/782-0
+00:37:23.145 --> 00:37:26.340
+<v Majernik, Peter>Correct. YAML all these things.
+So I I don't know.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/779-0
+00:37:23.745 --> 00:37:23.905
+<v John Miller>2.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/782-1
+00:37:26.340 --> 00:37:31.100
+<v Majernik, Peter>I'm just saying to me it's not that
+important that this this actually turns</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/782-2
+00:37:31.100 --> 00:37:32.665
+<v Majernik, Peter>green. I I get the ideas.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/783-0
+00:37:33.825 --> 00:37:36.625
+<v John Miller>Yeah. So let's continue on and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/787-0
+00:37:40.585 --> 00:37:46.145
+<v John Miller>And some new capabilities.
+So let's look at our readme file and see.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/788-0
+00:37:47.785 --> 00:37:48.065
+<v John Miller>What?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/790-0
+00:37:51.905 --> 00:37:55.305
+<v John Miller>I was gonna commit our changes here that
+we have.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/792-0
+00:37:58.665 --> 00:38:00.825
+<v John Miller>Let's get a commit message.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/795-0
+00:38:06.825 --> 00:38:09.265
+<v John Miller>All right, so let's clean that U.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/797-0
+00:38:13.825 --> 00:38:16.305
+<v John Miller>And then let me go back to our file list.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/799-0
+00:38:18.865 --> 00:38:22.545
+<v John Miller>Uh, read me as an error right there.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/803-0
+00:38:32.385 --> 00:38:34.585
+<v John Miller>Uh, that's a different read me.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/811-0
+00:38:52.585 --> 00:38:55.065
+<v John Miller>All right, well, let's do this.
+Let's run the tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/830-0
+00:39:39.345 --> 00:39:42.185
+<v John Miller>And see where it's in the same place we
+were before.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/834-0
+00:39:56.305 --> 00:39:57.865
+<v John Miller>Yeah, it's about the same.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/838-0
+00:39:59.345 --> 00:40:04.515
+<v John Miller>So we have these instruction file or
+these files over here for issues that we</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/838-1
+00:40:04.515 --> 00:40:07.563
+<v John Miller>wanted to go through.
+We've done one of them.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/838-2
+00:40:07.563 --> 00:40:10.545
+<v John Miller>Why don't we go ahead and do the second
+one?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/840-0
+00:40:14.185 --> 00:40:19.305
+<v John Miller>So let's open that file U #2.
+Let's close everything else down.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/842-0
+00:40:23.065 --> 00:40:25.105
+<v John Miller>And then say uh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/845-0
+00:40:30.745 --> 00:40:33.705
+<v John Miller>The integration tests? Yeah, sure.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/860-0
+00:41:07.065 --> 00:41:11.520
+<v John Miller>Alright, So what do we change?
+Program dot CS we've made a modification</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/860-1
+00:41:11.520 --> 00:41:11.705
+<v John Miller>to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/868-0
+00:41:27.545 --> 00:41:34.549
+<v John Miller>And in our unit test file we've added
+some more tests to the bottom integration,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/868-1
+00:41:34.549 --> 00:41:36.105
+<v John Miller>evaluate and rint.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/869-0
+00:41:39.025 --> 00:41:40.625
+<v John Miller>Print it and print error.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/872-0
+00:41:46.545 --> 00:41:49.305
+<v John Miller>And voila, we've got.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/874-0
+00:41:51.305 --> 00:41:54.865
+<v John Miller>54% touch coverage now.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/876-0
+00:41:56.065 --> 00:41:56.705
+<v John Miller>So that's cool.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/882-0
+00:42:01.865 --> 00:42:07.495
+<v Skrzeszewski, Tom>So how does how the integration testing
+is different from the tests that we've</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/882-1
+00:42:07.495 --> 00:42:10.987
+<v Skrzeszewski, Tom>run previously without consider like unit
+tests?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/882-2
+00:42:10.987 --> 00:42:14.123
+<v Skrzeszewski, Tom>So since we don't have for this
+calculator,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/882-3
+00:42:14.123 --> 00:42:18.185
+<v Skrzeszewski, Tom>at least I haven't seen the kind of
+overall environment.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/885-0
+00:42:18.425 --> 00:42:23.700
+<v Skrzeszewski, Tom>That this calculator would interface with,
+so I'm just trying to understand the</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/883-0
+00:42:22.545 --> 00:42:22.705
+<v John Miller>See.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/885-1
+00:42:23.700 --> 00:42:24.425
+<v Skrzeszewski, Tom>difference.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/890-0
+00:42:25.625 --> 00:42:33.627
+<v John Miller>So this is also something that's I I it's
+useful is that if you go into a piece of</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/887-0
+00:42:26.105 --> 00:42:26.665
+<v Skrzeszewski, Tom>Yes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/890-1
+00:42:33.627 --> 00:42:35.265
+<v John Miller>code and you say.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/892-0
+00:42:36.505 --> 00:42:42.185
+<v John Miller>Control I it will bring up this prompt
+inside of the.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/899-0
+00:42:43.505 --> 00:42:48.566
+<v John Miller>Editor itself and then you can type a
+command that and also also let's go ahead</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/899-1
+00:42:48.566 --> 00:42:53.881
+<v John Miller>explain this test and this will give us a
+a better sense of what this actually does</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/895-0
+00:42:49.785 --> 00:42:50.385
+<v Skrzeszewski, Tom>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/899-2
+00:42:53.881 --> 00:42:58.625
+<v John Miller>and then we can ask it to you know how is
+this different from a unit test.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/897-0
+00:42:58.425 --> 00:42:59.465
+<v Skrzeszewski, Tom>Mm-hmm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/900-0
+00:43:01.185 --> 00:43:01.945
+<v John Miller>So it's.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/903-0
+00:43:03.705 --> 00:43:08.385
+<v John Miller>So Ms.
+test suite exercise to the calculator</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/903-1
+00:43:08.385 --> 00:43:09.425
+<v John Miller>evaluator.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/904-0
+00:43:11.345 --> 00:43:12.545
+<v John Miller>Few notes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/907-0
+00:43:13.545 --> 00:43:20.265
+<v John Miller>Very basic integer precedence and
+fraction test divide by zero.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/911-0
+00:43:29.265 --> 00:43:31.185
+<v John Miller>It's giving us some help there.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/931-0
+00:44:15.265 --> 00:44:16.785
+<v John Miller>So it looks like it added.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/942-0
+00:44:36.105 --> 00:44:41.031
+<v John Miller>So what I'm reading out this is what it's
+saying is that it's this test is does not</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/942-1
+00:44:41.031 --> 00:44:45.839
+<v John Miller>will not do any mocking of any other sub
+dependencies that we would have here and</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/942-2
+00:44:45.839 --> 00:44:50.412
+<v John Miller>would just call those dependencies and
+expect those to execute whereas a unit</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/942-3
+00:44:50.412 --> 00:44:50.705
+<v John Miller>test.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/946-0
+00:44:51.345 --> 00:44:56.154
+<v John Miller>Would mock out any dependencies.
+I don't think we've gotten to the point</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/943-0
+00:44:54.945 --> 00:44:54.985
+<v Skrzeszewski, Tom>Oh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/946-1
+00:44:56.154 --> 00:45:00.105
+<v John Miller>where we've actually needed that.
+So I think at this point.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/945-0
+00:44:57.665 --> 00:44:58.185
+<v Skrzeszewski, Tom>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/952-0
+00:45:01.665 --> 00:45:05.881
+<v John Miller>And we would,
+I think we would want our integration</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/952-1
+00:45:05.881 --> 00:45:12.366
+<v John Miller>test to you know to actually do follow an
+actual deployment into an environment</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/952-2
+00:45:12.366 --> 00:45:18.932
+<v John Miller>that can be tested independently or just
+what I've seen also is that the that we</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/950-0
+00:45:14.665 --> 00:45:15.145
+<v Skrzeszewski, Tom>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/952-3
+00:45:18.932 --> 00:45:19.985
+<v John Miller>can stand up.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/955-0
+00:45:20.705 --> 00:45:29.385
+<v John Miller>We can we can we can run this locally and
+then test an test an API from that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/956-0
+00:45:31.185 --> 00:45:32.985
+<v John Miller>It's through like a rest call.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/958-0
+00:45:35.225 --> 00:45:36.145
+<v John Miller>OK, um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/962-0
+00:45:40.025 --> 00:45:46.945
+<v John Miller>What I Yeah, let me show you this example.
+Let's see. Let's say using.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/964-0
+00:45:51.385 --> 00:45:52.865
+<v John Miller>Test alright.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/989-0
+00:46:49.705 --> 00:46:54.612
+<v John Miller>So here I'm saying I want to I want to
+use test development to actually create</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/989-1
+00:46:54.612 --> 00:46:56.785
+<v John Miller>the test before the implementation.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/992-0
+00:46:58.025 --> 00:47:01.305
+<v John Miller>And then say do not implement.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/990-0
+00:46:58.545 --> 00:46:59.025
+<v Skrzeszewski, Tom>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/994-0
+00:47:07.225 --> 00:47:07.785
+<v John Miller>The future.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/997-0
+00:47:16.145 --> 00:47:19.985
+<v John Miller>So here are the expectation is that we're
+going to get some failing tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1005-0
+00:47:40.105 --> 00:47:41.585
+<v John Miller>I hear it saying.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1006-0
+00:47:43.305 --> 00:47:43.865
+<v John Miller>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1010-0
+00:47:46.105 --> 00:47:50.576
+<v John Miller>Sharing saying he's gonna add some
+failing tests and then he's gonna run</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1010-1
+00:47:50.576 --> 00:47:55.658
+<v John Miller>this test suite to show the failing tests.
+So here we have a memory test file that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1010-2
+00:47:55.658 --> 00:47:57.985
+<v John Miller>it's created that has these new tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1013-0
+00:48:04.585 --> 00:48:08.345
+<v John Miller>And now it's running the test and it says
+failed with four errors.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1016-0
+00:48:11.545 --> 00:48:15.760
+<v John Miller>And if we look at these tests,
+we can see the evaluator remembers the</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1016-1
+00:48:15.760 --> 00:48:17.145
+<v John Miller>last results as answer.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1020-0
+00:48:24.865 --> 00:48:30.169
+<v John Miller>And here it's calling the.
+Here's it showing a test where it's</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1020-1
+00:48:30.169 --> 00:48:33.705
+<v John Miller>checking the the previous answer plus one.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1021-0
+00:48:35.745 --> 00:48:36.145
+<v John Miller>And.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1025-0
+00:48:39.065 --> 00:48:44.329
+<v John Miller>And then if you use this answer operator
+before you have have an actual answer of</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1025-1
+00:48:44.329 --> 00:48:47.025
+<v John Miller>a calculation, it will throw an exception.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1026-0
+00:48:48.385 --> 00:48:50.945
+<v John Miller>And it looks like all of those tests have
+failed.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1028-0
+00:48:53.865 --> 00:48:57.105
+<v John Miller>So then we could say, OK,
+let's keep those changes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1030-0
+00:49:00.465 --> 00:49:02.145
+<v John Miller>And let's go ahead and say.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1032-0
+00:49:06.785 --> 00:49:07.105
+<v John Miller>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1034-0
+00:49:08.465 --> 00:49:10.545
+<v John Miller>Implement the memory.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1036-0
+00:49:12.225 --> 00:49:14.105
+<v John Miller>feature.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1047-0
+00:49:33.705 --> 00:49:36.822
+<v John Miller>So now it's working on the actual
+implementation,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1047-1
+00:49:36.822 --> 00:49:41.745
+<v John Miller>which is the evaluator dot CS file.
+You can see that it's made a change there.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1050-0
+00:49:48.545 --> 00:49:52.865
+<v John Miller>Here we see if it doesn't have a value
+that it goes to our exception.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1055-0
+00:50:00.425 --> 00:50:04.105
+<v John Miller>And here it stores it to remember the
+last results.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1061-0
+00:50:16.985 --> 00:50:19.385
+<v John Miller>Looks like poor tests are still failing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1071-0
+00:50:45.625 --> 00:50:50.641
+<v John Miller>All right, so it's trying again,
+and now all the tests are passed. No,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1071-1
+00:50:50.641 --> 00:50:52.265
+<v John Miller>No one test is failing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1082-0
+00:51:19.705 --> 00:51:23.025
+<v John Miller>And now looks like we're all good.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1088-0
+00:51:37.745 --> 00:51:39.505
+<v John Miller>Then let's um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1090-0
+00:51:43.945 --> 00:51:45.785
+<v John Miller>Show the code coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1101-0
+00:52:14.065 --> 00:52:14.305
+<v John Miller>Yeah.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1106-0
+00:52:18.745 --> 00:52:24.163
+<v John Miller>And it's telling us a good way.
+So now we're at 54% is to suggesting that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1106-1
+00:52:24.163 --> 00:52:26.505
+<v John Miller>we add additional code coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1110-0
+00:52:40.305 --> 00:52:43.145
+<v John Miller>Let's add more tests to raise the
+coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1131-0
+00:53:32.985 --> 00:53:35.898
+<v John Miller>And this is a common pattern where like I
+said,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1131-1
+00:53:35.898 --> 00:53:40.814
+<v John Miller>it writes the test and it doesn't pass
+and then it it will eventually figure out</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1131-2
+00:53:40.814 --> 00:53:43.545
+<v John Miller>what it needs to do to get the test to
+pass.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1141-0
+00:54:09.745 --> 00:54:10.385
+<v John Miller>Like 89%.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1148-0
+00:54:22.185 --> 00:54:26.642
+<v John Miller>So here it's gonna wants us to install
+the report generator tool.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1148-1
+00:54:26.642 --> 00:54:28.465
+<v John Miller>Let's go ahead and do that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1150-0
+00:54:29.865 --> 00:54:33.425
+<v John Miller>And see if we can get a HTML report out
+of this.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1155-0
+00:54:49.425 --> 00:54:50.585
+<v John Miller>So we should see.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1178-0
+00:55:47.665 --> 00:55:50.585
+<v John Miller>So OK, so here's the coverage report now.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1180-0
+00:55:51.585 --> 00:55:56.152
+<v John Miller>And it could show us, you know,
+where we have good coverage and where</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1180-1
+00:55:56.152 --> 00:55:57.065
+<v John Miller>we're lacking.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1182-0
+00:56:00.705 --> 00:56:03.865
+<v John Miller>It's giving us a little bit of a warning
+about cyclomatic complexity.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1187-0
+00:56:13.345 --> 00:56:15.105
+<v John Miller>All right. Any questions on this?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1190-0
+00:56:22.745 --> 00:56:24.985
+<v John Miller>All right, what's next?
+What do you want to do next?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1194-0
+00:56:31.185 --> 00:56:36.134
+<v Majernik, Peter>Well, if we have no new ideas,
+then what is your next idea?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1194-1
+00:56:36.134 --> 00:56:37.865
+<v Majernik, Peter>What's on the agenda?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1196-0
+00:56:37.585 --> 00:56:44.265
+<v John Miller>Why don't we add a log of the
+calculations that we're performing?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1199-0
+00:56:48.105 --> 00:56:51.545
+<v John Miller>That way we can list the calculations.
+That makes sense.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1200-0
+00:56:54.185 --> 00:56:54.345
+<v Majernik, Peter>Sure.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1202-0
+00:56:56.825 --> 00:57:00.185
+<v John Miller>So let's see using KED.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1221-0
+00:57:39.985 --> 00:57:42.880
+<v John Miller>Alright,
+so I'm saying using TDD create test for a</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1221-1
+00:57:42.880 --> 00:57:45.945
+<v John Miller>new log feature that can list the prior
+calculations.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1224-0
+00:57:56.345 --> 00:57:57.105
+<v John Miller>That looks like guys.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1229-0
+00:58:01.425 --> 00:58:04.141
+<v John Miller>Oh,
+here's a this is a new feature that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1229-1
+00:58:04.141 --> 00:58:07.196
+<v John Miller>showed up.
+It's called a restore checkpoint.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1229-2
+00:58:07.196 --> 00:58:11.881
+<v John Miller>It's a way of backing up or going back to
+a previous set of changes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1229-3
+00:58:11.881 --> 00:58:13.985
+<v John Miller>So you'll see in our list here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1231-0
+00:58:17.905 --> 00:58:21.145
+<v John Miller>There'll be other checkpoints.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1233-0
+00:58:22.905 --> 00:58:25.465
+<v John Miller>And you can go back to any of these
+checkpoints.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1234-0
+00:58:26.345 --> 00:58:28.145
+<v John Miller>That's a great new feature.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1237-0
+00:58:33.505 --> 00:58:35.145
+<v John Miller>All right, So what is it doing now?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1240-0
+00:58:44.425 --> 00:58:46.065
+<v John Miller>All right, it's failed with two errors.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1241-0
+00:58:47.825 --> 00:58:48.825
+<v John Miller>What test have failed?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1245-0
+00:58:54.145 --> 00:58:59.745
+<v John Miller>The log test CS history records usage as
+an expression.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1246-0
+00:59:01.585 --> 00:59:04.265
+<v John Miller>Fails and I think one before that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1249-0
+00:59:09.025 --> 00:59:11.727
+<v John Miller>Uh,
+is it a test for invoking it with no</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1249-1
+00:59:11.727 --> 00:59:12.385
+<v John Miller>arguments?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1259-0
+00:59:32.625 --> 00:59:36.276
+<v John Miller>So I think we want to do both of these.
+Let's go ahead and update it and then</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1259-1
+00:59:36.276 --> 00:59:37.025
+<v John Miller>rerun the tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1276-0
+01:00:09.185 --> 01:00:13.865
+<v John Miller>So over here there's a a chat sessions
+icon.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1279-0
+01:00:15.265 --> 01:00:19.902
+<v John Miller>And here we have a individual chat
+session that you can actually rename and</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1279-1
+01:00:19.902 --> 01:00:23.745
+<v John Miller>this will keep a history of what you did
+in that chat as well.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1284-0
+01:00:34.225 --> 01:00:38.845
+<v John Miller>So it looks like it wrote an
+implementation that the tests are now</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1284-1
+01:00:38.845 --> 01:00:41.465
+<v John Miller>passing and we have a coverage report.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1285-0
+01:00:44.585 --> 01:00:46.425
+<v John Miller>So I think if we went back to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1288-0
+01:00:52.505 --> 01:00:55.465
+<v John Miller>What did find that index file here?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1290-0
+01:00:57.745 --> 01:00:59.505
+<v John Miller>Doesn't look like.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1292-0
+01:01:00.545 --> 01:01:05.145
+<v John Miller>It changed that. What? What did it change?
+Change the test?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1295-0
+01:01:13.345 --> 01:01:14.585
+<v John Miller>And the calculator.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1299-0
+01:01:26.585 --> 01:01:27.905
+<v John Miller>Alright, so let's uh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1301-0
+01:01:34.745 --> 01:01:35.985
+<v John Miller>Run the test and report back.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1321-0
+01:02:19.585 --> 01:02:22.505
+<v John Miller>Um, it's reading the coverage file now.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1328-0
+01:02:36.225 --> 01:02:37.865
+<v John Miller>Coverage has increased to 90%.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1330-0
+01:02:42.785 --> 01:02:44.585
+<v John Miller>Why don't we run the app?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1348-0
+01:03:15.505 --> 01:03:19.805
+<v John Miller>All right,
+so I ran it once with the passing in 2 +</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1348-1
+01:03:19.805 --> 01:03:24.105
+<v John Miller>3 and got 5 and now we're in the in the
+calculator.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1350-0
+01:03:25.825 --> 01:03:25.905
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1352-0
+01:03:31.145 --> 01:03:32.745
+<v John Miller>O How do we see the memory?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1354-0
+01:03:36.985 --> 01:03:38.745
+<v Majernik, Peter>Just type in ANS.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1357-0
+01:03:44.305 --> 01:03:45.825
+<v John Miller>So ANS.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1359-0
+01:03:47.625 --> 01:03:49.705
+<v John Miller>Lus 4.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1363-0
+01:03:55.265 --> 01:03:59.131
+<v Majernik, Peter>Wait, did you?
+You need to perform a calculation first,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1361-0
+01:03:55.305 --> 01:03:55.465
+<v John Miller>Oh, so.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1364-0
+01:03:58.985 --> 01:03:59.305
+<v John Miller>Right, right.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1363-1
+01:03:59.131 --> 01:03:59.545
+<v Majernik, Peter>right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1367-0
+01:04:06.385 --> 01:04:08.665
+<v John Miller>The alias times 8.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1371-0
+01:04:17.345 --> 01:04:20.585
+<v Majernik, Peter>What about capital A lower case NS?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1375-0
+01:04:25.305 --> 01:04:27.385
+<v Majernik, Peter>OK, good.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1377-0
+01:04:26.705 --> 01:04:30.286
+<v John Miller>No, that's didn't show. No,
+that's not what we were asking for.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1377-1
+01:04:30.286 --> 01:04:32.971
+<v John Miller>I was asking for a list.
+I would wanted to see.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1377-2
+01:04:32.971 --> 01:04:34.425
+<v John Miller>I would want to see 9 + 4.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1379-0
+01:04:36.825 --> 01:04:41.345
+<v John Miller>And then ants plot times 8 in a list.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1388-0
+01:05:03.945 --> 01:05:04.865
+<v John Miller>Let's, uh, ask.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1399-0
+01:05:27.305 --> 01:05:32.727
+<v John Miller>So here here's a good example.
+Now it it interpreted us that we want to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1399-1
+01:05:32.727 --> 01:05:37.470
+<v John Miller>see this in the output.
+So it has created an output transcript</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1399-2
+01:05:37.470 --> 01:05:41.385
+<v John Miller>now that shows us all the calculations
+that we did.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1401-0
+01:05:42.625 --> 01:05:48.865
+<v John Miller>Which was different than what I was
+expecting. So it shows I think how.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1406-0
+01:05:49.825 --> 01:05:56.037
+<v John Miller>Are what we ask it to do may not be what
+we get because we weren't more specific</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1406-1
+01:05:56.037 --> 01:06:00.408
+<v John Miller>enough about what we asked,
+what we're asking for, says.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1406-2
+01:06:00.408 --> 01:06:04.625
+<v John Miller>So what we can do is say that's fine to
+see this, but.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1408-0
+01:06:05.625 --> 01:06:06.065
+<v John Miller>Let's.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1410-0
+01:06:10.465 --> 01:06:10.545
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1412-0
+01:06:17.145 --> 01:06:20.705
+<v John Miller>What we want to do is for a new log.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1413-0
+01:06:23.505 --> 01:06:23.945
+<v John Miller>Command.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1415-0
+01:06:26.785 --> 01:06:30.225
+<v John Miller>That can list the prior calculations.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1422-0
+01:06:36.265 --> 01:06:42.272
+<v John Miller>Another interesting thing about working
+with AI assistance is that it's</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1422-1
+01:06:42.272 --> 01:06:47.360
+<v John Miller>non-deterministic,
+which means every time I ask it to create</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1422-2
+01:06:47.360 --> 01:06:53.616
+<v John Miller>this solution, I get a different answer.
+I get a different implementation.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1422-3
+01:06:53.616 --> 01:06:55.785
+<v John Miller>Sometimes it will it will.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1424-0
+01:06:56.105 --> 01:07:00.460
+<v John Miller>Add the commands automatically and
+sometimes it it it waits for you to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1424-1
+01:07:00.460 --> 01:07:01.625
+<v John Miller>prompt it to do so.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1428-0
+01:07:06.985 --> 01:07:10.385
+<v John Miller>So now we have a new test and it's
+failing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1435-0
+01:07:30.585 --> 01:07:33.705
+<v John Miller>All right,
+so go ahead and imlement the log commands.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1443-0
+01:07:52.745 --> 01:07:55.305
+<v John Miller>So here we can see the new lock command.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1446-0
+01:08:06.225 --> 01:08:08.425
+<v John Miller>And we can see that it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1448-0
+01:08:10.785 --> 01:08:13.345
+<v John Miller>Ran the tests and all the tests are now
+passing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1452-0
+01:08:18.185 --> 01:08:22.716
+<v John Miller>We just and and also notice it inferred
+from that we would want a clear command</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1452-1
+01:08:22.716 --> 01:08:23.905
+<v John Miller>to clear the history.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1454-0
+01:08:31.505 --> 01:08:33.545
+<v John Miller>And if we run the.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1457-0
+01:08:42.265 --> 01:08:43.825
+<v John Miller>We'll just.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1459-0
+01:08:47.785 --> 01:08:49.105
+<v John Miller>Let's do.net run.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1463-0
+01:08:56.105 --> 01:09:00.825
+<v John Miller>Here's our calculator.
+We can give it an info calculation.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1465-0
+01:09:06.465 --> 01:09:08.985
+<v John Miller>We can use the answer.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1467-0
+01:09:09.945 --> 01:09:11.905
+<v John Miller>Multiply that by three.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1469-0
+01:09:15.865 --> 01:09:19.705
+<v John Miller>And we can then say log.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1471-0
+01:09:20.665 --> 01:09:24.305
+<v John Miller>And see that it's remembered our our
+calculations.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1473-0
+01:09:27.105 --> 01:09:28.345
+<v John Miller>And not too bad.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1475-0
+01:09:32.105 --> 01:09:35.225
+<v John Miller>Any other ideas you want to try?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1480-0
+01:09:48.145 --> 01:09:50.185
+<v John Miller>All right. Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1485-0
+01:09:55.545 --> 01:10:02.945
+<v Majernik, Peter>I I don't have an idea for features for
+the calculator, but I have questions like.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1484-0
+01:10:03.065 --> 01:10:03.985
+<v John Miller>Go ahead.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1489-0
+01:10:03.785 --> 01:10:09.643
+<v Majernik, Peter>Did you pick GPT 5 mini intentionally or
+is that automatically picked for you</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1489-1
+01:10:09.643 --> 01:10:11.745
+<v Majernik, Peter>based on the ecosystem here?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1491-0
+01:10:11.705 --> 01:10:15.905
+<v John Miller>I picked it intentionally because it was
+listed as one of those.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1494-0
+01:10:17.065 --> 01:10:21.225
+<v John Miller>Free ones and I thought I'd give it a try,
+see what it did.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1493-0
+01:10:18.945 --> 01:10:19.065
+<v Majernik, Peter>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1497-0
+01:10:22.185 --> 01:10:25.271
+<v Majernik, Peter>So what?
+What about like let's say you ask it a</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1497-1
+01:10:25.271 --> 01:10:30.477
+<v Majernik, Peter>difficult question and then you say ask
+the exact same question 5 minutes later.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1497-2
+01:10:30.477 --> 01:10:33.305
+<v Majernik, Peter>Does that cost you one token or two
+tokens?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1500-0
+01:10:33.465 --> 01:10:37.905
+<v John Miller>And that would be two cocons or two
+requests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1499-0
+01:10:35.785 --> 01:10:37.305
+<v Majernik, Peter>The tokens, OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1501-0
+01:10:38.945 --> 01:10:39.505
+<v Majernik, Peter>Got it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1503-0
+01:10:44.705 --> 01:10:45.705
+<v Majernik, Peter>And um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1508-0
+01:10:47.225 --> 01:10:50.740
+<v Majernik, Peter>I don't know.
+I don't know how familiar everyone is</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1508-1
+01:10:50.740 --> 01:10:56.214
+<v Majernik, Peter>with Git and pending changes and you know,
+GitHub, Copilot, like GitHub actions,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1508-2
+01:10:56.214 --> 01:11:00.067
+<v Majernik, Peter>all that stuff.
+And I don't know if we should talk about</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1508-3
+01:11:00.067 --> 01:11:02.905
+<v Majernik, Peter>that as part of this training at all, but.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1513-0
+01:11:02.985 --> 01:11:05.809
+<v Majernik, Peter>Maybe useful if we got into that a little
+bit.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1513-1
+01:11:05.809 --> 01:11:09.233
+<v Majernik, Peter>Like see when I'm when I'm coding like on
+the left side,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1513-2
+01:11:09.233 --> 01:11:14.159
+<v Majernik, Peter>we have those things turning brown and
+green. This is all pending changes, right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1513-3
+01:11:14.159 --> 01:11:18.183
+<v Majernik, Peter>So you run a let's say you start with
+nothing, you ask a question,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1513-4
+01:11:18.183 --> 01:11:19.865
+<v Majernik, Peter>it changes a bunch of stuff.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1517-0
+01:11:20.585 --> 01:11:26.878
+<v Majernik, Peter>I I'm I'm kind of trying to get at the
+strategy of how to operate as a developer</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1517-1
+01:11:26.878 --> 01:11:32.627
+<v Majernik, Peter>when you have to context switch.
+How do you handle like context switching</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1517-2
+01:11:32.627 --> 01:11:38.065
+<v Majernik, Peter>and maybe generating an answer with one
+model then another model and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1519-0
+01:11:38.505 --> 01:11:43.187
+<v Majernik, Peter>Comparing them quickly,
+do you create like separate branches or</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1519-1
+01:11:43.187 --> 01:11:46.185
+<v Majernik, Peter>do you do it within the same branch or I?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1525-0
+01:11:44.145 --> 01:11:49.645
+<v John Miller>What I what I've done and I we can do an
+example of this tomorrow is that you</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1525-1
+01:11:49.645 --> 01:11:53.945
+<v John Miller>create you create.
+What I do then is create 2 branches right</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1522-0
+01:11:51.345 --> 01:11:53.345
+<v Majernik, Peter>Oh, OK. It's a while. Sorry.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1525-2
+01:11:53.945 --> 01:11:59.586
+<v John Miller>and then use one model to implement the
+solution on that on one branch and then</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1525-3
+01:11:59.586 --> 01:12:03.745
+<v John Miller>another model to implement the solution
+on another branch.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1530-0
+01:12:04.105 --> 01:12:10.287
+<v John Miller>And then potentially a third model to
+compare the two branches and tell you</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1530-1
+01:12:10.287 --> 01:12:14.354
+<v John Miller>what the pros and cons of each
+implementation is.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1530-2
+01:12:14.354 --> 01:12:20.536
+<v John Miller>And it's interesting cuz I run this
+comparison occasionally and the model I</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1530-3
+01:12:20.536 --> 01:12:23.545
+<v John Miller>usually typically use ChatGTP versus.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1534-0
+01:12:23.545 --> 01:12:29.389
+<v John Miller>Claude and it goes back and forth.
+They've been implementing the same</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1534-1
+01:12:29.389 --> 01:12:36.152
+<v John Miller>feature using basically the same basic
+instructions and each one of them kind of</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1534-2
+01:12:36.152 --> 01:12:39.825
+<v John Miller>leapfrogs each other in terms of
+producing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1537-0
+01:12:40.585 --> 01:12:44.084
+<v John Miller>Better results.
+So it's kind of a test that's fun to do</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1537-1
+01:12:44.084 --> 01:12:47.082
+<v John Miller>on a regular basis to to in order to,
+you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1537-2
+01:12:47.082 --> 01:12:51.705
+<v John Miller>see if you're using the the the model
+that's giving you the best results.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1538-0
+01:12:53.585 --> 01:12:54.745
+<v John Miller>And um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1539-0
+01:12:53.905 --> 01:12:54.185
+<v Majernik, Peter>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1541-0
+01:12:55.905 --> 01:12:59.025
+<v John Miller>Let me let me while we're thinking about
+that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1544-0
+01:13:04.905 --> 01:13:04.985
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1570-0
+01:14:05.705 --> 01:14:06.145
+<v John Miller>All right.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1576-0
+01:14:15.145 --> 01:14:18.459
+<v Majernik, Peter>OK.
+And I have a similar general question on,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1576-1
+01:14:18.459 --> 01:14:21.845
+<v Majernik, Peter>you know this is a copilot training
+primarily,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1576-2
+01:14:21.845 --> 01:14:27.609
+<v Majernik, Peter>but are there other tools that are kind
+of like copilot and which one would you</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1576-3
+01:14:27.609 --> 01:14:28.545
+<v Majernik, Peter>pick and why?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1580-0
+01:14:29.385 --> 01:14:35.256
+<v John Miller>I I yeah, there are other tools.
+I'm trying to remember the names of them,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1580-1
+01:14:35.256 --> 01:14:41.675
+<v John Miller>but I know that like ChatGPT has one and
+there's a a couple of other ones that if</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1580-2
+01:14:41.675 --> 01:14:45.745
+<v John Miller>you search for them you'll find them
+pretty easily.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1585-0
+01:14:45.865 --> 01:14:49.394
+<v John Miller>But I spend my whole day working.
+You know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1585-1
+01:14:49.394 --> 01:14:55.408
+<v John Miller>my day job is actually writing code and
+finding solutions for our clients.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1585-2
+01:14:55.408 --> 01:15:00.219
+<v John Miller>So I spend most of my time in Visual
+Studio Code as my IDE,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1585-3
+01:15:00.219 --> 01:15:02.945
+<v John Miller>so it's more convenient for me to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1588-0
+01:15:03.465 --> 01:15:09.579
+<v John Miller>To focus on that right now.
+So here at the top performance it says</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1588-1
+01:15:09.579 --> 01:15:15.510
+<v John Miller>Chat TV4 Turbo with Open AI.
+It's it's very capable Cloud 3 Opus</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1588-2
+01:15:15.510 --> 01:15:18.065
+<v John Miller>strong reasoning Gemini 1.5.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1595-0
+01:15:28.585 --> 01:15:35.628
+<v John Miller>Copilot remains the dominant dominant IDE.
+So these kinds of questions that I think</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1591-0
+01:15:29.825 --> 01:15:30.505
+<v Majernik, Peter>OK. Thanks.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1595-1
+01:15:35.628 --> 01:15:39.904
+<v John Miller>are pretty pretty easy to get answers to
+nowadays,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1595-2
+01:15:39.904 --> 01:15:43.425
+<v John Miller>you know the without having to go through.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1596-0
+01:15:43.705 --> 01:15:45.505
+<v John Miller>I think um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1601-0
+01:15:48.105 --> 01:15:50.643
+<v Majernik, Peter>Well,
+it sounds like if I have unlimited</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1601-1
+01:15:50.643 --> 01:15:54.295
+<v Majernik, Peter>questions then I can just start asking
+copilot everything.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1601-2
+01:15:54.295 --> 01:15:57.265
+<v Majernik, Peter>I don't actually need to talk to people,
+right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1599-0
+01:15:55.425 --> 01:15:55.985
+<v John Miller>Well.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1604-0
+01:16:11.065 --> 01:16:11.585
+What?
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1606-0
+01:16:11.625 --> 01:16:16.625
+<v Majernik, Peter>How can we add the UI to this calculator
+quickly? Is that feasible?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1608-0
+01:16:19.225 --> 01:16:21.665
+<v John Miller>Yeah, sure. I had one here. I was.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1609-0
+01:16:19.945 --> 01:16:21.985
+<v Majernik, Peter>Like other than the console.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1611-0
+01:16:24.265 --> 01:16:24.465
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1614-0
+01:16:24.425 --> 01:16:27.410
+<v Harding, Mike>Yeah,
+I was gonna say you could get into higher</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1614-1
+01:16:27.410 --> 01:16:30.705
+<v Harding, Mike>level functions like trig or log or stuff
+like that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1613-0
+01:16:29.425 --> 01:16:29.905
+<v John Miller>Right, I was.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1621-0
+01:16:44.985 --> 01:16:46.745
+<v John Miller>So that would be easy to do.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1624-0
+01:16:53.545 --> 01:16:56.905
+<v John Miller>So take a minute.
+So let's jump back to our.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1626-0
+01:16:59.265 --> 01:17:01.385
+<v John Miller>Overview of the models.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1629-0
+01:17:02.505 --> 01:17:05.763
+<v John Miller>And you know,
+this is something that I'm interested in</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1629-1
+01:17:05.763 --> 01:17:07.065
+<v John Miller>keeping up on in that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1632-0
+01:17:08.385 --> 01:17:11.586
+<v John Miller>You know, things are always,
+things are always changing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1632-1
+01:17:11.586 --> 01:17:14.506
+<v John Miller>So from the different models, everything,
+you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1632-2
+01:17:14.506 --> 01:17:17.425
+<v John Miller>there's new releases coming out and
+tweaks on them.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1638-0
+01:17:20.385 --> 01:17:23.920
+<v John Miller>So occasionally hallucinates APIs.
+You know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1638-1
+01:17:23.920 --> 01:17:29.810
+<v John Miller>if you don't provide enough context,
+it's definitely a case where where it</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1638-2
+01:17:29.810 --> 01:17:36.330
+<v John Miller>will assume that there's a function that
+exists that doesn't actually exist in the</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1638-3
+01:17:36.330 --> 01:17:39.785
+<v John Miller>API and it'll have to go back and fix
+that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1639-0
+01:17:39.785 --> 01:17:42.785
+<v John Miller>I was working on a project where.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1640-0
+01:17:43.545 --> 01:17:44.105
+<v John Miller>The.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1645-0
+01:17:45.545 --> 01:17:51.637
+<v John Miller>The code for the UI was in one repository
+and the code for the back end API was in</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1645-1
+01:17:51.637 --> 01:17:55.895
+<v John Miller>another repository,
+so they it was difficult to have them</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1645-2
+01:17:55.895 --> 01:18:00.665
+<v John Miller>both In Sync and they would fall out of
+sync on a regular basis.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1649-0
+01:18:00.985 --> 01:18:08.623
+<v John Miller>So if I found a defect for example in the
+UI and I would ask the the UI chat,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1649-1
+01:18:08.623 --> 01:18:16.554
+<v John Miller>what is the root cause of this problem?
+And if it pointed the finger to the back</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1649-2
+01:18:16.554 --> 01:18:16.945
+<v John Miller>end.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1653-0
+01:18:17.385 --> 01:18:20.241
+<v John Miller>I would say,
+well create a prompt that I can give to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1653-1
+01:18:20.241 --> 01:18:24.658
+<v John Miller>the back end that will allow to debug and
+troubleshoot and fix the problem and it</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1653-2
+01:18:24.658 --> 01:18:28.914
+<v John Miller>would spit out a documentation that I
+could take and paste that into the other</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1653-3
+01:18:28.914 --> 01:18:29.345
+<v John Miller>project.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1656-0
+01:18:33.305 --> 01:18:37.791
+<v John Miller>And then that would give it enough
+conference to be able to actually verify</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1656-1
+01:18:37.791 --> 01:18:40.742
+<v John Miller>that the defect existed there and and and
+fix it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1656-2
+01:18:40.742 --> 01:18:45.345
+<v John Miller>And I even had an occasion where it
+looked at the prompt and said this is not</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1656-3
+01:18:45.345 --> 01:18:48.473
+<v John Miller>our problem,
+this is actually a problem on the front</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1656-4
+01:18:48.473 --> 01:18:48.945
+<v John Miller>end and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1658-0
+01:18:49.145 --> 01:18:53.905
+<v John Miller>Pointed the finger back to the the AI to
+the front end API. That was interesting.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1660-0
+01:18:57.745 --> 01:19:00.585
+<v John Miller>All right, so it's.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1663-0
+01:19:04.825 --> 01:19:10.065
+<v John Miller>So it's made a assumption here about what
+we said about logs.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1665-0
+01:19:11.265 --> 01:19:13.665
+<v John Miller>Oh, what is? What did it do?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1675-0
+01:19:26.385 --> 01:19:33.190
+<v John Miller>So we got a a bunch of stuff here,
+so looks like it's trying trying to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1675-1
+01:19:33.190 --> 01:19:36.065
+<v John Miller>figure out what log means now.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1677-0
+01:19:37.545 --> 01:19:44.905
+<v John Miller>So here we added a comment that we're
+supporting sines, cosines, trans,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1677-1
+01:19:44.905 --> 01:19:45.825
+<v John Miller>etcetera.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1679-0
+01:19:47.305 --> 01:19:47.825
+<v John Miller>We've.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1681-0
+01:19:49.545 --> 01:19:53.914
+<v John Miller>Added string functions that represent
+those in the calculator since we don't</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1681-1
+01:19:53.914 --> 01:19:55.105
+<v John Miller>have buttons to push.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1684-0
+01:20:00.105 --> 01:20:06.625
+<v John Miller>We've added support in our tests for some
+of these new.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1685-0
+01:20:07.905 --> 01:20:09.065
+<v John Miller>Features.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1688-0
+01:20:18.065 --> 01:20:18.545
+<v John Miller>Mhm.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1690-0
+01:20:21.865 --> 01:20:23.545
+<v John Miller>Alright, so let's um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1694-0
+01:20:30.025 --> 01:20:33.465
+<v John Miller>Generate a generate the coverage report.
+Do we get to see that?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1695-0
+01:20:37.505 --> 01:20:38.785
+<v John Miller>That's here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1699-0
+01:20:48.545 --> 01:20:49.585
+<v John Miller>So we're still around.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1702-0
+01:20:51.225 --> 01:20:56.985
+<v John Miller>90% for the actual calculator function
+and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1705-0
+01:21:03.865 --> 01:21:08.825
+<v John Miller>Eighty-eight percent in the evaluator and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1708-0
+01:21:14.265 --> 01:21:16.385
+<v John Miller>All right, so that seemed to go well.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1709-0
+01:21:17.905 --> 01:21:20.625
+<v John Miller>Keep those changes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1711-0
+01:21:22.145 --> 01:21:22.425
+<v John Miller>That's um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1713-0
+01:21:24.545 --> 01:21:27.025
+<v John Miller>Let's push these changes in. So let's uh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1715-0
+01:21:29.425 --> 01:21:31.785
+<v John Miller>Create a commit message.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1725-0
+01:21:51.465 --> 01:21:58.067
+<v John Miller>And let's push those changes.
+So the next suggestion was to try to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1725-1
+01:21:58.067 --> 01:22:00.825
+<v John Miller>create a UI for this, right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1728-0
+01:22:01.225 --> 01:22:05.688
+<v Majernik, Peter>Oh, it's just an idea.
+I don't know if it's a good one, though.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1728-1
+01:22:05.688 --> 01:22:06.385
+<v Majernik, Peter>We'll see.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1729-0
+01:22:08.545 --> 01:22:09.025
+<v John Miller>We'll see.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1731-0
+01:22:11.225 --> 01:22:13.585
+<v John Miller>Any technology you want to write it in?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1732-0
+01:22:16.785 --> 01:22:16.825
+<v Majernik, Peter>Oh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1734-0
+01:22:20.105 --> 01:22:21.545
+<v Majernik, Peter>I don't know WPF.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1742-0
+01:22:42.385 --> 01:22:43.185
+<v John Miller>This might take a a little bit.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1748-0
+01:22:59.425 --> 01:23:01.625
+<v John Miller>Maybe wants to create the new project.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1751-0
+01:23:08.025 --> 01:23:12.185
+<v John Miller>We see here we've created a new WPF
+project.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1753-0
+01:23:15.425 --> 01:23:16.185
+<v John Miller>And.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1765-0
+01:23:36.425 --> 01:23:42.503
+<v John Miller>It'll be interesting to see to to see
+what the UI looks like when it actually</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1765-1
+01:23:42.503 --> 01:23:48.736
+<v John Miller>if it actually shows up because we we've
+not given given it any any guidance in</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1765-2
+01:23:48.736 --> 01:23:51.385
+<v John Miller>terms of what it should look like.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1766-0
+01:23:54.345 --> 01:23:55.745
+<v Carter, Jake>While we're waiting for.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1768-0
+01:23:54.385 --> 01:23:58.305
+<v Majernik, Peter>Well, I'm expecting it. I'm sorry, Jake.
+Go ahead.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1771-0
+01:23:59.505 --> 01:24:03.105
+<v Carter, Jake>Oh yeah, I just had a question about.
+So like, this is a pretty small.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1776-0
+01:24:04.345 --> 01:24:07.720
+<v Carter, Jake>Like amount of code that we're working
+with right now,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1776-1
+01:24:07.720 --> 01:24:12.567
+<v Carter, Jake>is there like if you start working with
+like much much larger like sections of</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1776-2
+01:24:12.567 --> 01:24:16.064
+<v Carter, Jake>code, does that start becoming a problem?
+Like how, how,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1776-3
+01:24:16.064 --> 01:24:19.745
+<v Carter, Jake>like how should you like limit how much
+code that you know?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1777-0
+01:24:19.905 --> 01:24:22.105
+<v Carter, Jake>Language model has to process.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1778-0
+01:24:24.185 --> 01:24:24.305
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1783-0
+01:24:26.705 --> 01:24:31.179
+<v John Miller>Yeah, I know that there's limits.
+I don't know exactly what those limits</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1783-1
+01:24:31.179 --> 01:24:33.691
+<v John Miller>are,
+but I've worked with fairly sizable</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1783-2
+01:24:33.691 --> 01:24:38.470
+<v John Miller>implementations where there's, you know,
+a a a big back end, a big front end,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1783-3
+01:24:38.470 --> 01:24:43.066
+<v John Miller>a lot of UI, a lot of business rules,
+and I've not run into any particular</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1783-4
+01:24:43.066 --> 01:24:43.985
+<v John Miller>issues with it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1787-0
+01:24:44.105 --> 01:24:47.238
+<v John Miller>With those kind,
+but I know that people have much bigger</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1787-1
+01:24:47.238 --> 01:24:50.426
+<v John Miller>projects than those that have to segment
+out and you can.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1787-2
+01:24:50.426 --> 01:24:53.010
+<v John Miller>You can do that by a number of different
+ways.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1787-3
+01:24:53.010 --> 01:24:57.627
+<v John Miller>When you could specify that you only want
+to have it focus on the files that are in</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1787-4
+01:24:57.627 --> 01:25:00.265
+<v John Miller>a particular folder for instance,
+so you could.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1791-0
+01:25:00.265 --> 01:25:07.045
+<v John Miller>Or in a particular project and say, OK,
+I want this operation to just affect the</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1791-1
+01:25:07.045 --> 01:25:13.238
+<v John Miller>files or in this one part of the
+application and that would that's really</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1791-2
+01:25:13.238 --> 01:25:15.665
+<v John Miller>easy to do. Here it wants to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1793-0
+01:25:17.265 --> 01:25:19.025
+<v John Miller>Edit some files.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1795-0
+01:25:21.305 --> 01:25:23.025
+<v John Miller>But let it do it in the session.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1801-0
+01:25:26.505 --> 01:25:30.943
+<v Carter, Jake>So if you just like say you have like
+some project with like maybe like 100</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1801-1
+01:25:30.943 --> 01:25:33.979
+<v Carter, Jake>files in it,
+would you just go into the chat window</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1801-2
+01:25:33.979 --> 01:25:37.832
+<v Carter, Jake>and say like tell me where?
+So you know there's like a calculator</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1801-3
+01:25:37.832 --> 01:25:42.153
+<v Carter, Jake>implemented somewhere in the app.
+You could just say there's a calculator</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1801-4
+01:25:42.153 --> 01:25:45.305
+<v Carter, Jake>somewhere in here and it has this bug
+where the plus.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1803-0
+01:25:45.345 --> 01:25:48.217
+<v Carter, Jake>Button doesn't work.
+You could just like let it loose like</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1803-1
+01:25:48.217 --> 01:25:50.505
+<v Carter, Jake>that or you'd sort of target it a little
+more.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1806-0
+01:25:50.905 --> 01:25:55.705
+<v John Miller>You might have luck with with with it
+being loose like that. Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1805-0
+01:25:53.825 --> 01:25:54.305
+<v Carter, Jake>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1808-0
+01:25:57.145 --> 01:25:59.665
+<v John Miller>But it looks like it succeeded in
+something.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1811-0
+01:26:07.785 --> 01:26:12.625
+<v John Miller>Wire enter key to evaluate and clear the
+input. Can we?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1813-0
+01:26:12.665 --> 01:26:12.945
+<v John Miller>And.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1815-0
+01:26:17.745 --> 01:26:19.265
+<v John Miller>Run the UI.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1834-0
+01:27:11.225 --> 01:27:12.585
+<v John Miller>That's what we get.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1836-0
+01:27:14.985 --> 01:27:16.465
+<v Majernik, Peter>Oh, I see what it did.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1838-0
+01:27:17.945 --> 01:27:20.345
+<v Majernik, Peter>I was expecting a calculator with buttons.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1840-0
+01:27:21.625 --> 01:27:27.305
+<v John Miller>So uh, we'll just see if it does anything.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1842-0
+01:27:29.505 --> 01:27:32.945
+<v Majernik, Peter>OK, this is basically a UI of the console.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1843-0
+01:27:33.385 --> 01:27:35.065
+<v John Miller>Yeah, that makes sense.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1845-0
+01:27:35.545 --> 01:27:37.745
+<v Majernik, Peter>I still it's a UI, OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1849-0
+01:27:42.705 --> 01:27:50.584
+<v John Miller>You have to hit the value key. So yeah,
+so that's not expected and you could come</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1849-1
+01:27:50.584 --> 01:27:52.505
+<v John Miller>back here and say I.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1851-0
+01:27:55.025 --> 01:27:59.825
+<v Majernik, Peter>Or we can just say change it to the one
+that looks like a real calculator.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1854-0
+01:28:06.985 --> 01:28:07.665
+<v John Miller>The tools.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1858-0
+01:28:16.985 --> 01:28:17.265
+<v John Miller>Let me uh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1859-0
+01:28:19.625 --> 01:28:21.545
+<v John Miller>Keep the changes I already made.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1872-0
+01:28:37.905 --> 01:28:42.156
+<v Zhang, Yan>Hey John,
+is there a way to control how much output</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1872-1
+01:28:42.156 --> 01:28:47.878
+<v Zhang, Yan>this tax tax in the chat window?
+Can we control how much it output to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1872-2
+01:28:47.878 --> 01:28:51.883
+<v Zhang, Yan>their here?
+If I don't want so much information,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1872-3
+01:28:51.883 --> 01:28:52.945
+<v Zhang, Yan>can I let me?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1873-0
+01:28:53.905 --> 01:28:54.385
+<v Zhang, Yan>Nintendo.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1876-0
+01:28:54.505 --> 01:28:57.976
+<v John Miller>Yeah,
+you can specify that to to produce a</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1876-1
+01:28:57.976 --> 01:29:04.674
+<v John Miller>minimal amount of context in your prompt
+or or to be more precise or concise in in</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1876-2
+01:29:04.674 --> 01:29:08.225
+<v John Miller>your and it will do less reporting back
+to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1880-0
+01:29:09.225 --> 01:29:14.216
+<v John Miller>But you may want to actually have that
+content and save that content so so you</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1880-1
+01:29:14.216 --> 01:29:18.827
+<v John Miller>have a record of what you actually what
+you did and what the AI did more</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1880-2
+01:29:18.827 --> 01:29:19.585
+<v John Miller>importantly.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1879-0
+01:29:20.945 --> 01:29:22.065
+<v Zhang, Yan>OK. Thank you.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1897-0
+01:29:54.065 --> 01:29:57.348
+<v John Miller>Oh,
+it's making some suggestions on what we</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1897-1
+01:29:57.348 --> 01:30:01.825
+<v John Miller>should do next, which is me.
+It wants some UI improvements.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1902-0
+01:30:05.185 --> 01:30:11.321
+<v John Miller>So expression display to replace the
+expression results. Clear history,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1902-1
+01:30:11.321 --> 01:30:16.008
+<v John Miller>a long press and hold behaviour or
+keyboard shortcuts.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1902-2
+01:30:16.008 --> 01:30:18.905
+<v John Miller>Swap the SDK to Microsoft.net SDK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1905-0
+01:30:20.185 --> 01:30:24.823
+<v John Miller>To remove a a a a warning for
+modernization,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1905-1
+01:30:24.823 --> 01:30:28.945
+<v John Miller>but what I want to see is yeah, run the.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1906-0
+01:30:30.505 --> 01:30:30.705
+<v John Miller>UI.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1928-0
+01:31:17.665 --> 01:31:20.305
+<v John Miller>And what do we have? We have buttons.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1934-0
+01:31:38.545 --> 01:31:38.665
+<v John Miller>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1936-0
+01:31:43.465 --> 01:31:45.505
+<v John Miller>Oh, I see that to make the window bigger.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1942-0
+01:31:56.425 --> 01:31:59.665
+<v Tarrants, Seth>So I got a question. Whenever we're done,
+we're ready for the next step.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1941-0
+01:31:58.425 --> 01:31:59.225
+<v John Miller>Yeah.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1945-0
+01:32:00.185 --> 01:32:04.085
+<v John Miller>Sure. So that seems to work. OK,
+we can say answer,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1945-1
+01:32:04.085 --> 01:32:06.785
+<v John Miller>but I don't think that's gonna work.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1958-0
+01:32:31.105 --> 01:32:34.929
+<v John Miller>And then we can tell you.
+So it looks like we have a problem that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1958-1
+01:32:34.929 --> 01:32:36.145
+<v John Miller>we need to clear the.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1960-0
+01:32:38.505 --> 01:32:40.905
+<v John Miller>When you do the square of the answer.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1963-0
+01:32:49.145 --> 01:32:52.265
+<v John Miller>And we got our history log.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1966-0
+01:32:54.265 --> 01:32:56.447
+<v John Miller>We can.
+So there's a lot of UI improvements to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1966-1
+01:32:56.447 --> 01:33:00.345
+<v John Miller>make that it's suggested and we can think
+of as well. But you had a question, Jake.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1971-0
+01:32:59.625 --> 01:33:02.831
+<v Tarrants, Seth>Yeah, no, Seth, this is Seth.
+I had a question.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1971-1
+01:33:02.831 --> 01:33:07.840
+<v Tarrants, Seth>So can we run the unit test coverage
+again to see what the changes are and</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1971-2
+01:33:07.840 --> 01:33:11.446
+<v Tarrants, Seth>then if possible,
+see if it can generate a automation</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1969-0
+01:33:10.145 --> 01:33:10.385
+<v John Miller>Sure.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1971-3
+01:33:11.446 --> 01:33:14.585
+<v Tarrants, Seth>framework to test out the new UI
+introduction?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1972-0
+01:33:15.825 --> 01:33:17.825
+<v John Miller>All right, well, let's just start with um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1974-0
+01:33:20.985 --> 01:33:21.665
+<v Tarrants, Seth>The coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/1976-0
+01:33:22.785 --> 01:33:24.305
+<v John Miller>Update the code coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2016-0
+01:34:36.345 --> 01:34:41.385
+<v John Miller>So we just did a commit 15 minutes ago
+and already modified 49 files.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2017-0
+01:34:43.025 --> 01:34:45.345
+<v John Miller>So you can kind of get a sense that we.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2022-0
+01:34:47.625 --> 01:34:52.062
+<v John Miller>We you need to stop and kind of figure
+out where you're at,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2022-1
+01:34:52.062 --> 01:34:58.200
+<v John Miller>or else you'll end up with a huge commit
+that involves a lot of functionality that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2022-2
+01:34:58.200 --> 01:35:01.305
+<v John Miller>needs to be tested. So let's go ahead and.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2023-0
+01:35:02.385 --> 01:35:03.225
+<v John Miller>Run that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2026-0
+01:35:04.425 --> 01:35:09.296
+<v John Miller>But this is a good example of wide coding
+where we're just really not paying too</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2026-1
+01:35:09.296 --> 01:35:13.385
+<v John Miller>close attention and it it looks like our
+code covers is going down.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2028-0
+01:35:17.145 --> 01:35:20.425
+<v John Miller>Because we were at 90% the last time that
+we ran it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2031-0
+01:35:22.825 --> 01:35:26.105
+<v John Miller>um So how about?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2032-0
+01:35:27.865 --> 01:35:28.425
+<v John Miller>Implement.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2034-0
+01:35:31.785 --> 01:35:35.025
+<v John Miller>Test for the UI.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2064-0
+01:36:30.905 --> 01:36:34.281
+<v John Miller>So,
+so we didn't tell how we wanted these</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2064-1
+01:36:34.281 --> 01:36:39.345
+<v John Miller>tests to be implemented.
+It's picked us a solution on its own.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2085-0
+01:37:21.465 --> 01:37:23.505
+<v John Miller>Still having problems with the build.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2102-0
+01:37:55.105 --> 01:37:57.185
+<v John Miller>Now we're U to 85 files.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2124-0
+01:38:31.625 --> 01:38:37.001
+<v John Miller>Updated the test project,
+added main window tests,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2124-1
+01:38:37.001 --> 01:38:40.585
+<v John Miller>run WPFUI tests on the SDA thread.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2126-0
+01:38:42.185 --> 01:38:45.490
+<v John Miller>Test that the evaluate button computes an
+expression.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2126-1
+01:38:45.490 --> 01:38:49.345
+<v John Miller>Test that pressing the seven button aends
+7 to the expression.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2131-0
+01:38:50.825 --> 01:38:57.523
+<v John Miller>Fix the main window to ensure the eval
+button has a a a name so the test can</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2131-1
+01:38:57.523 --> 01:39:04.307
+<v John Miller>find it and ran the test and regenerated
+the coverage report. All tests pass.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2131-2
+01:39:04.307 --> 01:39:05.785
+<v John Miller>There's 27 tests.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2133-0
+01:39:07.705 --> 01:39:10.985
+<v John Miller>And there's a coverage report that we can.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2134-0
+01:39:12.225 --> 01:39:13.505
+<v John Miller>Show in a browser.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2137-0
+01:39:17.145 --> 01:39:23.494
+<v John Miller>Test coverage went down.
+It's telling us here we have what is a</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2137-1
+01:39:23.494 --> 01:39:24.585
+<v John Miller>crap score?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2139-0
+01:39:25.225 --> 01:39:25.425
+<v John Miller>Score.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2141-0
+01:39:26.385 --> 01:39:32.825
+<v John Miller>That we have a good amount of cyclomatic
+complexity that.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2145-0
+01:39:35.105 --> 01:39:40.081
+<v John Miller>There's some issues with our tests.
+We can see here that the W PIP app</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2145-1
+01:39:40.081 --> 01:39:43.865
+<v John Miller>doesn't doesn't look like it tested much
+of anything.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2147-0
+01:39:47.425 --> 01:39:49.465
+<v John Miller>That it tested the main window.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2149-0
+01:39:53.305 --> 01:39:55.785
+<v John Miller>How's? How's that for you?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2151-0
+01:39:57.705 --> 01:39:59.185
+<v Tarrants, Seth>That's very interesting.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2157-0
+01:40:05.185 --> 01:40:11.506
+<v John Miller>So the the purpose of this exercise was
+to give you a sense of what it's like to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2157-1
+01:40:11.506 --> 01:40:16.578
+<v John Miller>go through the process,
+but I think you might get the impression</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2157-2
+01:40:16.578 --> 01:40:21.025
+<v John Miller>it's a little bit, a little bit scattered,
+a little bit.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2158-0
+01:40:21.545 --> 01:40:21.945
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2161-0
+01:40:23.345 --> 01:40:28.726
+<v John Miller>Ad hoc in terms of its nature,
+one of the prompts I'd like to run here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2161-1
+01:40:28.726 --> 01:40:31.865
+<v John Miller>Let's keep everything. Let's do a commits.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2163-0
+01:40:34.625 --> 01:40:34.665
+<v John Miller>Uh.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2168-0
+01:40:35.025 --> 01:40:40.618
+<v Majernik, Peter>John, John, sorry, I was talking.
+I was on mute. When you ran this test,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2164-0
+01:40:37.265 --> 01:40:38.385
+<v John Miller>Yeah, yes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2168-1
+01:40:40.618 --> 01:40:46.977
+<v Majernik, Peter>did the app actually pop up on the other
+screen that I missed or was this all this</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2171-0
+01:40:44.985 --> 01:40:50.126
+<v John Miller>No, it didn't pop up. It was all done.
+It was all headless. Yes. Yeah,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2168-2
+01:40:46.977 --> 01:40:48.585
+<v Majernik, Peter>was all headless? OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2171-1
+01:40:50.126 --> 01:40:53.745
+<v John Miller>I would have dragged it over if I would
+have saw.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2169-0
+01:40:51.985 --> 01:40:52.985
+<v Majernik, Peter>All right.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2172-0
+01:40:54.665 --> 01:40:55.345
+<v Majernik, Peter>OK. Thanks.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2173-0
+01:40:54.665 --> 01:40:55.065
+<v John Miller>Sure.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2175-0
+01:40:58.585 --> 01:41:00.825
+<v John Miller>All right, so let's get these.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2177-0
+01:41:02.265 --> 01:41:04.185
+<v John Miller>While I was committed.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2182-0
+01:41:12.305 --> 01:41:16.670
+<v John Miller>You know, it's slowing down a bit.
+I think it's mostly because we've been</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2182-1
+01:41:16.670 --> 01:41:19.678
+<v John Miller>building up our context as we've been
+going along.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2182-2
+01:41:19.678 --> 01:41:24.455
+<v John Miller>We haven't really started anything new
+since we started this process and so it's</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2182-3
+01:41:24.455 --> 01:41:27.345
+<v John Miller>continually adding to our window context
+window.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2189-0
+01:41:32.465 --> 01:41:38.292
+<v Majernik, Peter>So one one detail I just noticed there,
+there was a PDB file that you just</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2189-1
+01:41:38.292 --> 01:41:42.099
+<v Majernik, Peter>committed.
+Did you actually initialize this repo</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2185-0
+01:41:39.865 --> 01:41:40.105
+<v John Miller>Yeah.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2189-2
+01:41:42.099 --> 01:41:45.905
+<v Majernik, Peter>with some Visual Studio specific
+gitignore file?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2188-0
+01:41:45.585 --> 01:41:45.665
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2193-0
+01:41:48.785 --> 01:41:52.991
+<v Majernik, Peter>Because you may be,
+you may be committing all the binaries</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2191-0
+01:41:49.185 --> 01:41:51.705
+<v John Miller>I don't know. I I didn't.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2193-1
+01:41:52.991 --> 01:41:54.345
+<v Majernik, Peter>that we should not.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2198-0
+01:41:56.745 --> 01:42:00.381
+<v John Miller>No, I did not create one.
+That's probably why would the number of</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2198-1
+01:42:00.381 --> 01:42:03.025
+<v John Miller>file calc has gone on. So that would,
+you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2196-0
+01:42:02.065 --> 01:42:02.425
+<v Majernik, Peter>Yeah.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2198-2
+01:42:03.025 --> 01:42:06.385
+<v John Miller>that would be something that we would
+want to change, right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2199-0
+01:42:07.865 --> 01:42:09.145
+<v Majernik, Peter>I think so.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2201-0
+01:42:09.865 --> 01:42:09.945
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2203-0
+01:42:13.465 --> 01:42:14.465
+<v John Miller>So.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2205-0
+01:42:16.225 --> 01:42:19.202
+<v John Miller>Who?
+Who's heard of the of the concept of</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2205-1
+01:42:19.202 --> 01:42:20.265
+<v John Miller>Evergreen code?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2207-0
+01:42:22.705 --> 01:42:24.585
+<v Majernik, Peter>What kind of green?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2208-0
+01:42:25.305 --> 01:42:25.945
+<v John Miller>Evergreen.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2210-0
+01:42:27.025 --> 01:42:27.585
+<v Majernik, Peter>Evergreen.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2211-0
+01:42:29.025 --> 01:42:31.025
+<v Majernik, Peter>No, I will.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2216-0
+01:42:29.905 --> 01:42:32.858
+<v John Miller>Yeah,
+and so Evergreen code is the concept that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2216-1
+01:42:32.858 --> 01:42:37.286
+<v John Miller>you know you when you start a project,
+it's Greenfield, it's brand new,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2216-2
+01:42:37.286 --> 01:42:41.530
+<v John Miller>just like we're doing here.
+This is all brand new code and over time</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2216-3
+01:42:41.530 --> 01:42:45.774
+<v John Miller>it moves from Greenfield to brownfield
+and becomes more legacy code.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2216-4
+01:42:45.774 --> 01:42:47.865
+<v John Miller>And we'll talk a lot about legacy.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2221-0
+01:42:48.345 --> 01:42:54.003
+<v John Miller>I'm dealing with legacy code tomorrow,
+but and the goal when we're dealing with</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2221-1
+01:42:54.003 --> 01:42:59.094
+<v John Miller>code is to keep it Evergreen,
+and we'll talk again in more detail about</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2221-2
+01:42:59.094 --> 01:43:04.468
+<v John Miller>this tomorrow about what it takes.
+But the idea is that it stays in a state</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2221-3
+01:43:04.468 --> 01:43:08.145
+<v John Miller>where if you were to restart it and
+create it from.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2224-0
+01:43:08.145 --> 01:43:12.658
+<v John Miller>Scratch again.
+It'd be close to what you already have,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2224-1
+01:43:12.658 --> 01:43:17.745
+<v John Miller>so I'm going to try a prompt here that
+says in the code base.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2227-0
+01:43:21.905 --> 01:43:30.865
+<v John Miller>Show me where this code is not Evergreen.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2229-0
+01:43:34.465 --> 01:43:37.065
+<v John Miller>Oh, I should probably put code base there.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2236-0
+01:43:50.745 --> 01:43:54.304
+<v John Miller>Now I haven't really told it what
+Evergreen is,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2236-1
+01:43:54.304 --> 01:43:59.863
+<v John Miller>but it will make based on the model and
+based on the training of the data,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2236-2
+01:43:59.863 --> 01:44:05.645
+<v John Miller>it will figure out some definition of
+what it thinks Evergreen is and it will</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2236-3
+01:44:05.645 --> 01:44:06.905
+<v John Miller>then report back.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2240-0
+01:44:07.265 --> 01:44:13.942
+<v John Miller>Where this application is not Evergreen.
+So if it finds anything in this project</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2240-1
+01:44:13.942 --> 01:44:19.465
+<v John Miller>that it deviate from that,
+we've in fact I've created legacy code.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2242-0
+01:44:22.065 --> 01:44:26.718
+<v John Miller>Right.
+We've incurred a technical debt that we</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2242-1
+01:44:26.718 --> 01:44:27.905
+<v John Miller>have to fix.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2245-0
+01:44:27.185 --> 01:44:30.311
+<v Majernik, Peter>So, so,
+so if we just did this and it knows</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2245-1
+01:44:30.311 --> 01:44:34.715
+<v Majernik, Peter>what's not Evergreen,
+why didn't it generate it right away as</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2246-0
+01:44:34.545 --> 01:44:37.265
+<v John Miller>Because we didn't tell.
+We didn't tell it to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2245-2
+01:44:34.715 --> 01:44:35.425
+<v Majernik, Peter>Evergreen?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2252-0
+01:44:38.225 --> 01:44:42.931
+<v John Miller>And that's what we'll get in tomorrow is
+how do we tell it to keep our code in a</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2252-1
+01:44:42.931 --> 01:44:46.475
+<v John Miller>in a much better state than what what
+we're able to do here.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2252-2
+01:44:46.475 --> 01:44:50.658
+<v John Miller>So even if we do vibe coding,
+we'll get a better output than what we'll</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2252-3
+01:44:50.658 --> 01:44:53.446
+<v John Miller>get now.
+But you have a look at the things that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2252-4
+01:44:53.446 --> 01:44:56.874
+<v John Miller>it's found, right? No,
+it's notice here it founded the get</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2252-5
+01:44:56.874 --> 01:44:57.745
+<v John Miller>ignore problem.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2253-0
+01:44:58.065 --> 01:44:59.025
+<v John Miller>You just mentioned.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2254-0
+01:44:59.985 --> 01:45:00.065
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2258-0
+01:45:01.985 --> 01:45:06.520
+<v John Miller>So there are some things that we can do
+to improve it.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2258-1
+01:45:06.520 --> 01:45:11.384
+<v John Miller>Add coverage report to the gitignore,
+use a tool manifest,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2258-2
+01:45:11.384 --> 01:45:16.825
+<v John Miller>move the UI test into a separate project,
+add cover with filters.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2263-0
+01:45:18.145 --> 01:45:21.500
+<v John Miller>Change the WFSDK to use themicrosoft.
+net SDK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2263-1
+01:45:21.500 --> 01:45:27.425
+<v John Miller>But larger things replace the data table
+dot compute with a proper math expression</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2263-2
+01:45:27.425 --> 01:45:30.994
+<v John Miller>evaluator.
+Add the CI changes to run the UIA test</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2263-3
+01:45:30.994 --> 01:45:35.705
+<v John Miller>only on Windows runners and publishers
+that covers our artifacts.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2266-0
+01:45:36.425 --> 01:45:40.876
+<v John Miller>Hard-coded strings and tests.
+Explicit internal,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2266-1
+01:45:40.876 --> 01:45:44.145
+<v John Miller>explicit internals visible to usage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2267-0
+01:45:45.825 --> 01:45:47.985
+<v John Miller>Tests that assume a GI environment.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2268-0
+01:45:49.065 --> 01:45:49.145
+<v John Miller>Um.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2272-0
+01:45:50.825 --> 01:45:54.863
+<v John Miller>Generated source files included in
+coverage.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2272-1
+01:45:54.863 --> 01:46:01.681
+<v John Miller>That's fragile expression evaluation,
+hard coded environment specific paths</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2272-2
+01:46:01.681 --> 01:46:03.385
+<v John Miller>inside of our logs.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2274-0
+01:46:04.665 --> 01:46:09.305
+<v John Miller>Coverage generated HTML is committed in
+the repo.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2277-0
+01:46:11.665 --> 01:46:16.126
+<v John Miller>Uh code,
+global tool usage and repo level tool</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2277-1
+01:46:16.126 --> 01:46:17.265
+<v John Miller>assumptions.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2279-0
+01:46:19.425 --> 01:46:22.665
+<v John Miller>Platform specific target framework in a
+test project.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2281-0
+01:46:23.745 --> 01:46:29.225
+<v John Miller>Use of the Windows Desktop SDK where a
+modern SDK was recommended.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2286-0
+01:46:31.745 --> 01:46:35.934
+<v John Miller>And pin package versions in the press
+project require manual updates.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2286-1
+01:46:35.934 --> 01:46:39.644
+<v John Miller>So it it it lists,
+you know what the files that are included,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2286-2
+01:46:39.644 --> 01:46:44.551
+<v John Miller>why they're not ever considered Evergreen,
+and what the remediation steps are for</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2286-3
+01:46:44.551 --> 01:46:46.705
+<v John Miller>all of those things that we've done.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2291-0
+01:46:47.425 --> 01:46:50.393
+<v John Miller>And to me,
+this is like where the real power of</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2291-1
+01:46:50.393 --> 01:46:54.905
+<v John Miller>working with A comes into play,
+cuz not only is it telling us or writing</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2291-2
+01:46:54.905 --> 01:46:58.924
+<v John Miller>a bunch of code for us,
+but it wrote a bunch of code that's less</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2291-3
+01:46:58.924 --> 01:47:02.385
+<v John Miller>than maintainable or not as good as it
+could have been.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2291-4
+01:47:02.385 --> 01:47:07.145
+<v John Miller>And what we want to talk about tomorrow
+when we get is to talk working with.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2296-0
+01:47:07.265 --> 01:47:12.552
+<v John Miller>Legacy code is how to bring that legacy
+code back to a more of an Evergreen state,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2296-1
+01:47:12.552 --> 01:47:15.992
+<v John Miller>so that and how to keep it in that.
+More importantly,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2296-2
+01:47:15.992 --> 01:47:20.769
+<v John Miller>keep it in an Evergreen state so that
+every change that we make is done in</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2296-3
+01:47:20.769 --> 01:47:25.228
+<v John Miller>accordance with the standards that
+conform with Evergreen development</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2296-4
+01:47:25.228 --> 01:47:25.865
+<v John Miller>processes.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2299-0
+01:47:26.305 --> 01:47:29.679
+<v John Miller>And we end up with in a situation where
+we can,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2299-1
+01:47:29.679 --> 01:47:33.053
+<v John Miller>we can move faster in these projects.
+We don't,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2299-2
+01:47:33.053 --> 01:47:37.832
+<v John Miller>we don't have any technical debt that we
+incur, which is, you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2299-3
+01:47:37.832 --> 01:47:41.065
+<v John Miller>if you talk about the nice to have a
+backlog.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2304-0
+01:47:41.785 --> 01:47:46.469
+<v John Miller>A great deal of that nice to have work is
+gonna be technical debt.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2304-1
+01:47:46.469 --> 01:47:49.685
+<v John Miller>And in projects that I've worked in the
+past,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2304-2
+01:47:49.685 --> 01:47:55.418
+<v John Miller>sometimes a project will allocate 10% or
+20% of the story points for an iteration</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2304-3
+01:47:55.418 --> 01:47:57.585
+<v John Miller>to dealing with technical debt.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2306-0
+01:47:57.985 --> 01:48:00.609
+<v John Miller>Well,
+that is not an Evergreen strategy because</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2306-1
+01:48:00.609 --> 01:48:03.560
+<v John Miller>you're adding more technical debt than
+you're fixing.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2306-2
+01:48:03.560 --> 01:48:07.385
+<v John Miller>So this is what we want to talk about in
+the next two days is how to.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2312-0
+01:48:08.225 --> 01:48:12.774
+<v John Miller>Take a look at a legacy code base,
+how to look at what is in that code base</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2308-0
+01:48:12.745 --> 01:48:12.865
+<v Majernik, Peter>OK.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2312-1
+01:48:12.774 --> 01:48:17.323
+<v John Miller>and see where there are issues in that
+code base that need to be addressed,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2312-2
+01:48:17.323 --> 01:48:20.854
+<v John Miller>and then how do we go about addressing
+those those issues?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2312-3
+01:48:20.854 --> 01:48:24.505
+<v John Miller>So any any final questions before we wrap
+it up for the day?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2314-0
+01:48:27.505 --> 01:48:30.865
+<v Majernik, Peter>Do do you have such a legacy code base
+that we can use?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2319-0
+01:48:32.385 --> 01:48:37.337
+<v John Miller>We have one right in front of us.
+We could use this one,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2319-1
+01:48:37.337 --> 01:48:44.461
+<v John Miller>but I have one that I have which I took
+from an early iteration of a project from</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2319-2
+01:48:44.461 --> 01:48:50.889
+<v John Miller>code and as I suggested before,
+if you go looking on GitHub for a project</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2319-3
+01:48:50.889 --> 01:48:52.105
+<v John Miller>in C that has.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2324-0
+01:48:52.305 --> 01:48:56.628
+<v John Miller>A lot of issues that are pending.
+There's a good chance that that code base</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2324-1
+01:48:56.628 --> 01:48:59.985
+<v John Miller>is not Evergreen,
+and there are going to be things that we</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2324-2
+01:48:59.985 --> 01:49:04.535
+<v John Miller>need to do to update that code base and
+we could take a stab at actually a code</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2324-3
+01:49:04.535 --> 01:49:09.143
+<v John Miller>base that none of us are familiar with
+and try to see how much we can improve it</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2324-4
+01:49:09.143 --> 01:49:09.825
+<v John Miller>in two days.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2325-0
+01:49:13.745 --> 01:49:14.745
+<v John Miller>Go on.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2328-0
+01:49:14.825 --> 01:49:19.243
+<v Majernik, Peter>OK. Yeah,
+I do have one more general question.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2328-1
+01:49:19.243 --> 01:49:20.465
+<v Majernik, Peter>So let's say.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2327-0
+01:49:19.385 --> 01:49:20.225
+<v John Miller>Sure, sure.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2333-0
+01:49:21.105 --> 01:49:27.112
+<v Majernik, Peter>Let's say you wanted to prevent a
+developer from injecting more tech depth.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2333-1
+01:49:27.112 --> 01:49:33.593
+<v Majernik, Peter>Is there some kind of a plugin in GitHub
+Enterprise that you can use to make that</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2333-2
+01:49:33.593 --> 01:49:37.545
+<v Majernik, Peter>happen?
+This may have nothing to do with Copilot.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2335-0
+01:49:37.585 --> 01:49:39.145
+<v Majernik, Peter>But I'm not sure.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2338-0
+01:49:39.665 --> 01:49:42.712
+<v John Miller>Well,
+what you could do is this output here</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2338-1
+01:49:42.712 --> 01:49:48.528
+<v John Miller>identifies all of the things that need to
+be addressed. If you save this to a file,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2338-2
+01:49:48.528 --> 01:49:53.859
+<v John Miller>you could actually have a CI process run
+the same prompt that we ran here to</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2338-3
+01:49:53.859 --> 01:49:55.105
+<v John Miller>produce this file.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2345-0
+01:49:55.105 --> 01:49:59.077
+<v John Miller>And compare the two and make sure that
+nothing else gets added to this, right?</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2345-1
+01:49:59.077 --> 01:50:02.346
+<v John Miller>And if it sees something,
+you could actually break the build and</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2345-2
+01:50:02.346 --> 01:50:05.815
+<v John Miller>say we've added technical debt.
+We need to be, we need to, you know,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2345-3
+01:50:05.815 --> 01:50:09.988
+<v John Miller>you need to go back and figure out how to
+get rid of at least not raise the bar or</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2345-4
+01:50:09.988 --> 01:50:14.111
+<v John Miller>or increase the amount of technical debt
+that you have in your project and always</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2345-5
+01:50:14.111 --> 01:50:14.865
+<v John Miller>looking to try.</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2348-0
+01:50:14.945 --> 01:50:18.291
+<v John Miller>To move it back.
+So that's another good technique is in</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2348-1
+01:50:18.291 --> 01:50:21.040
+<v John Miller>your pipeline you could actually run
+prompts,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2348-2
+01:50:21.040 --> 01:50:25.223
+<v John Miller>get results and then make decisions on
+those results about the state,</v>
+
+dd14d51a-07b1-46f8-a7c1-6f557b889558/2348-3
+01:50:25.223 --> 01:50:26.000
+<v John Miller>how the state</v>

@@ -1,0 +1,4429 @@
+WEBVTT
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/59-0
+00:00:01.969 --> 00:00:04.049
+<v John Miller>So we can see here that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/61-0
+00:00:05.489 --> 00:00:08.369
+<v John Miller>It's completed imlementing slice one.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/63-0
+00:00:11.489 --> 00:00:12.609
+<v John Miller>And that um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/70-0
+00:00:14.849 --> 00:00:21.121
+<v John Miller>It has 36 out of 30 tests are passing.
+The performance is optimized with</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/70-1
+00:00:21.121 --> 00:00:25.933
+<v John Miller>compiled bindings,
+error handling with graceful failure</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/70-2
+00:00:25.933 --> 00:00:32.721
+<v John Miller>recovery and it's class cross-platform
+ready with the Windows side of this has</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/70-3
+00:00:32.721 --> 00:00:34.009
+<v John Miller>been validated.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/71-0
+00:00:34.089 --> 00:00:38.369
+<v John Miller>Saying that it's ready to go on to slice
+2 for the basic arithmetic operations.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/73-0
+00:00:40.009 --> 00:00:44.359
+<v John Miller>It produced a review,
+a pre a a slice one implementation</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/73-1
+00:00:44.359 --> 00:00:44.969
+<v John Miller>summary.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/78-0
+00:00:46.649 --> 00:00:52.918
+<v John Miller>With the the basically success criteria
+that it can enter a single and multiple</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/78-1
+00:00:52.918 --> 00:00:56.445
+<v John Miller>digit numbers,
+we can enter decimal numbers,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/78-2
+00:00:56.445 --> 00:01:01.225
+<v John Miller>we can edit negative numbers,
+display the updates correctly,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/78-3
+00:01:01.225 --> 00:01:03.889
+<v John Miller>clear and backspace work properly.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/80-0
+00:01:04.489 --> 00:01:08.729
+<v John Miller>With a view of the overall architecture.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/85-0
+00:01:10.169 --> 00:01:16.122
+<v John Miller>With the business and object layer layer
+in the calculator app dot core with the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/85-1
+00:01:16.122 --> 00:01:20.972
+<v John Miller>features of number display,
+number entry and display and a common</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/85-2
+00:01:20.972 --> 00:01:25.969
+<v John Miller>shared domain models as well as the state
+management service layer.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/89-0
+00:01:26.529 --> 00:01:32.904
+<v John Miller>The calculator app Maui is the
+presentation layer with the MVM,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/89-1
+00:01:32.904 --> 00:01:38.182
+<v John Miller>MVVM view models,
+XAML value converters and XAML UI,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/89-2
+00:01:38.182 --> 00:01:41.369
+<v John Miller>and then there's a test project.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/91-0
+00:01:42.329 --> 00:01:45.721
+<v John Miller>With comprehensive test coverage for
+features,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/91-1
+00:01:45.721 --> 00:01:49.689
+<v John Miller>the feature number entry as well as
+integration tests.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/95-0
+00:01:51.249 --> 00:01:59.984
+<v John Miller>Key design patterns is CQCQRS with media
+mediate R the MMB MVVM dependency</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/95-1
+00:01:59.984 --> 00:02:04.409
+<v John Miller>injection vertical slice architecture.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/97-0
+00:02:05.129 --> 00:02:10.009
+<v John Miller>Core features implemented is the number
+entry commands and handlers.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/102-0
+00:02:10.729 --> 00:02:14.259
+<v John Miller>The display management,
+the state management,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/102-1
+00:02:14.259 --> 00:02:20.244
+<v John Miller>the Maui front end features using the
+MVVM Community Toolkit, async commands,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/102-2
+00:02:20.244 --> 00:02:24.541
+<v John Miller>error handling,
+data binding with the UI implementation</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/102-3
+00:02:24.541 --> 00:02:26.689
+<v John Miller>with responsive grid layout.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/106-0
+00:02:28.609 --> 00:02:33.138
+<v John Miller>Compiled bindings, visual states,
+accessibility. As I said,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/106-1
+00:02:33.138 --> 00:02:38.951
+<v John Miller>100% test coverage with 30 handler
+specific functionality test unit tests as</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/106-2
+00:02:38.951 --> 00:02:44.688
+<v John Miller>well as six end to end workflows and
+those scenarios covered digital entry,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/106-3
+00:02:44.688 --> 00:02:48.009
+<v John Miller>decimal entry, clear operations,
+backspace.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/108-0
+00:02:48.089 --> 00:02:51.049
+<v John Miller>Base operations,
+integration flows and air conditions.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/112-0
+00:02:52.009 --> 00:02:56.330
+<v John Miller>Performance optimizations are the
+compiled XAML bindings,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/112-1
+00:02:56.330 --> 00:03:02.365
+<v John Miller>singleton state service, async operations,
+and efficient state updates that used</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/112-2
+00:03:02.365 --> 00:03:07.729
+<v John Miller>solid principles, clean code,
+graceful error handling, and testability.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/115-0
+00:03:07.849 --> 00:03:12.557
+<v John Miller>Development best practices.
+It's the the vertical slice architecture,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/115-1
+00:03:12.557 --> 00:03:16.929
+<v John Miller>domain divers and design,
+CQRS pattern and dependency injection.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/117-0
+00:03:18.089 --> 00:03:21.889
+<v John Miller>Core technologies were.net 9.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/121-0
+00:03:23.449 --> 00:03:27.076
+<v John Miller>I'm not sure that that's actually what we
+used.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/121-1
+00:03:27.076 --> 00:03:31.836
+<v John Miller>Mediate our fluent validation community
+toolkit, MVVM, X unit,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/121-2
+00:03:31.836 --> 00:03:36.520
+<v John Miller>fluid assertions and custom integration
+tests, Maui controls,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/121-3
+00:03:36.520 --> 00:03:39.089
+<v John Miller>compiling biling value converters.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/125-0
+00:03:39.769 --> 00:03:44.765
+<v John Miller>In terms of performance,
+the core project build is about 5 seconds.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/125-1
+00:03:44.765 --> 00:03:48.806
+<v John Miller>The Bobby build is about 15 seconds.
+It takes about 2.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/125-2
+00:03:48.806 --> 00:03:54.169
+<v John Miller>4 seconds to execute those 36 tests.
+Total build takes about 11 seconds.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/130-0
+00:03:55.449 --> 00:03:59.800
+<v John Miller>100% test coverage,
+low psychochromatic complexity,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/130-1
+00:03:59.800 --> 00:04:04.987
+<v John Miller>minimal code duplication and
+comprehensive XML documentation.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/130-2
+00:04:04.987 --> 00:04:11.514
+<v John Miller>On the validation results we get the
+functional validation a lot of the major</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/130-3
+00:04:11.514 --> 00:04:14.609
+<v John Miller>feature if any aspects of this slice.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/135-0
+00:04:16.209 --> 00:04:19.950
+<v John Miller>And the technical validation shows that
+all 36 test pass,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/135-1
+00:04:19.950 --> 00:04:23.820
+<v John Miller>no memory leaks in the state management,
+UI responsiveness,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/135-2
+00:04:23.820 --> 00:04:28.399
+<v John Miller>cross back from compatibility,
+proper dependency injection in the MVBM</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/135-3
+00:04:28.399 --> 00:04:32.849
+<v John Miller>pattern and then it's saying it's ready
+to go on to the next slices.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/140-0
+00:04:33.289 --> 00:04:37.128
+<v John Miller>A couple of architectural decisions and
+lessons learned.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/140-1
+00:04:37.128 --> 00:04:42.448
+<v John Miller>The vertical slice architecture proved
+excellent for incremental deployment or</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/140-2
+00:04:42.448 --> 00:04:46.018
+<v John Miller>development.
+The shared state service supplies cross</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/140-3
+00:04:46.018 --> 00:04:50.260
+<v John Miller>handler state management.
+CQRS with media are proved clean and</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/140-4
+00:04:50.260 --> 00:04:51.809
+<v John Miller>separation of concerns.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/144-0
+00:04:52.329 --> 00:04:57.285
+<v John Miller>And a comprehensive test and testing
+caught edge cases early in the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/144-1
+00:04:57.285 --> 00:05:00.856
+<v John Miller>development.
+So we did a test driven development</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/144-2
+00:05:00.856 --> 00:05:05.375
+<v John Miller>approach to improve code quality,
+incremental implementation,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/144-3
+00:05:05.375 --> 00:05:09.529
+<v John Miller>clear success criteria and documentation
+first approach.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/148-0
+00:05:10.169 --> 00:05:15.130
+<v John Miller>With a final conclusion that says that
+slice one has been successfully</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/148-1
+00:05:15.130 --> 00:05:19.602
+<v John Miller>implemented with complete functionality
+for basic number entry,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/148-2
+00:05:19.602 --> 00:05:22.746
+<v John Miller>robust architecture,
+complete functionality,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/148-3
+00:05:22.746 --> 00:05:26.169
+<v John Miller>performance optimized and future ready
+right so.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/149-0
+00:05:26.289 --> 00:05:28.849
+<v John Miller>So that's a good.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/154-0
+00:05:30.329 --> 00:05:37.738
+<v John Miller>Textual description gives us a level of
+confidence of what it did.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/154-1
+00:05:37.738 --> 00:05:45.809
+<v John Miller>It created 63 new files in this and I
+manually entered a gitignore file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/157-0
+00:05:46.289 --> 00:05:52.496
+<v John Miller>Because to exclude the other 300 odd
+files that were were created in OBJ files</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/157-1
+00:05:52.496 --> 00:05:57.209
+<v John Miller>and other OBJ directories and bin
+directories and the like.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/159-0
+00:05:58.449 --> 00:06:03.729
+<v John Miller>So questions on this so far.
+This is looking promising.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/163-0
+00:06:07.369 --> 00:06:12.843
+<v John Miller>Looking good. All right. Well,
+I think a couple of things as well.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/163-1
+00:06:12.843 --> 00:06:17.009
+<v John Miller>Does it actually run for one?
+So let's ask you to.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/165-0
+00:06:18.529 --> 00:06:22.329
+<v John Miller>Talk me through the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/166-0
+00:06:25.249 --> 00:06:26.209
+<v John Miller>Showcase.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/168-0
+00:06:27.769 --> 00:06:30.529
+<v John Miller>Four slice one.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/182-0
+00:06:55.729 --> 00:07:00.868
+<v John Miller>All right,
+so we're gonna show you done in doing the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/182-1
+00:07:00.868 --> 00:07:01.449
+<v John Miller>build.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/184-0
+00:07:06.809 --> 00:07:10.409
+<v John Miller>So showcase pointed the application build
+successfully.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/187-0
+00:07:17.569 --> 00:07:21.449
+<v John Miller>And it's got a number of different things
+it wants us to be able to do.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/190-0
+00:07:25.809 --> 00:07:29.049
+<v John Miller>And now it's run the tests,
+but we want to back U here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/235-0
+00:09:25.489 --> 00:09:30.571
+<v John Miller>It's having some problems getting the app
+started due to pathing issues,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/235-1
+00:09:30.571 --> 00:09:32.729
+<v John Miller>something I see quite a bit of.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/257-0
+00:10:37.249 --> 00:10:39.689
+<v John Miller>So now it's it's on the project.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/261-0
+00:10:43.009 --> 00:10:47.058
+<v John Miller>Same this is the issue.
+I thought I tried to fix this but notice</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/261-1
+00:10:47.058 --> 00:10:47.369
+<v John Miller>it's.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/263-0
+00:10:49.169 --> 00:10:54.529
+<v John Miller>Every time it opens up a new terminal
+window, it gets rooted back to the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/266-0
+00:10:55.649 --> 00:11:00.914
+<v John Miller>And we're kind of in a needs to be able
+to get into this directory when it opens</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/266-1
+00:11:00.914 --> 00:11:01.889
+<v John Miller>up a new shell.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/271-0
+00:11:18.289 --> 00:11:20.639
+<v John Miller>All right,
+so now it's figured out it needs to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/271-1
+00:11:20.639 --> 00:11:21.089
+<v John Miller>actually.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/284-0
+00:11:55.809 --> 00:11:57.929
+<v John Miller>So it's going to create a launch settings
+file for us.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/286-0
+00:12:02.689 --> 00:12:04.769
+<v John Miller>Again, we have the pathing problem.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/288-0
+00:12:07.889 --> 00:12:10.809
+<v John Miller>I I did try to find a setting in VS code.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/291-0
+00:12:12.289 --> 00:12:17.723
+<v John Miller>To have it go to the correct folder,
+but I think there's a a conflict in with</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/291-1
+00:12:17.723 --> 00:12:18.489
+<v John Miller>my profile.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/292-0
+00:12:19.969 --> 00:12:21.889
+<v John Miller>That I need to resolve.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/337-0
+00:14:16.129 --> 00:14:19.317
+<v John Miller>It's still working on getting its path
+straight.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/337-1
+00:14:19.317 --> 00:14:22.569
+<v John Miller>Definitely something I need to
+troubleshoot more.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/377-0
+00:16:07.409 --> 00:16:10.249
+<v John Miller>All right, let me stop this.
+I think I've figured out the problem.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/380-0
+00:16:15.889 --> 00:16:19.289
+<v John Miller>Uh, let's go ahead and clear our.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/381-0
+00:16:21.449 --> 00:16:22.249
+<v John Miller>Oh, it's.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/383-0
+00:16:24.569 --> 00:16:25.489
+<v John Miller>And.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/385-0
+00:16:27.329 --> 00:16:31.529
+<v John Miller>Let's close down some of these PowerShell
+windows.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/389-0
+00:16:41.889 --> 00:16:45.289
+<v John Miller>And let's try again, see if it works.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/415-0
+00:17:52.129 --> 00:17:56.694
+<v John Miller>So I think the problem was is I have it
+come in in my profile to already start in</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/415-1
+00:17:56.694 --> 00:17:57.529
+<v John Miller>the Git folder.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/417-0
+00:17:58.929 --> 00:17:59.129
+<v John Miller>And.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/419-0
+00:18:01.369 --> 00:18:04.692
+<v John Miller>To try to fix that,
+I had a setting in Visual Studio code to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/419-1
+00:18:04.692 --> 00:18:06.489
+<v John Miller>always go to the projects folder.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/420-0
+00:18:08.009 --> 00:18:08.929
+<v John Miller>And.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/425-0
+00:18:10.609 --> 00:18:16.682
+<v John Miller>Since power it's keeping you up opening
+different integrations of PowerShell with</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/425-1
+00:18:16.682 --> 00:18:20.830
+<v John Miller>these commands,
+it's causing it to end up in folders it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/425-2
+00:18:20.830 --> 00:18:25.051
+<v John Miller>doesn't expect.
+So I've taken out both of those settings</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/425-3
+00:18:25.051 --> 00:18:27.569
+<v John Miller>and I'm hoping that improves this.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/428-0
+00:18:35.409 --> 00:18:36.969
+<v John Miller>All right, get process working.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/430-0
+00:18:38.769 --> 00:18:41.249
+<v John Miller>No,
+it's still not respecting that setting.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/432-0
+00:18:44.289 --> 00:18:45.609
+<v John Miller>Let me try again.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/434-0
+00:18:51.729 --> 00:18:52.009
+<v John Miller>Yeah.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/439-0
+00:19:03.649 --> 00:19:05.129
+<v John Miller>Yeah, so that's clean.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/442-0
+00:19:09.969 --> 00:19:13.529
+<v John Miller>So I'm not sure what the issue is there.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/447-0
+00:19:23.649 --> 00:19:26.583
+<v John Miller>It's kind of interesting as how smart the
+AI seems to be.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/447-1
+00:19:26.583 --> 00:19:29.769
+<v John Miller>It's really difficult to dealing with
+these kinds of problems.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/448-0
+00:19:31.769 --> 00:19:33.689
+<v John Miller>Which are fairly simple.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/467-0
+00:20:17.929 --> 00:20:22.529
+<v John Miller>Still having the same issue.
+I wonder if we could just uh.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/468-0
+00:20:24.249 --> 00:20:24.969
+<v John Miller>Stop this.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/470-0
+00:20:26.449 --> 00:20:28.929
+<v John Miller>Let's see if we can get it to do it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/472-0
+00:20:32.049 --> 00:20:33.689
+<v John Miller>Do I need this?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/474-0
+00:20:38.489 --> 00:20:40.689
+<v John Miller>3D into the Maui A.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/476-0
+00:20:41.689 --> 00:20:43.129
+<v John Miller>Then do a net run.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/521-0
+00:22:41.769 --> 00:22:45.719
+<v Majernik, Peter>John, silly question.
+I suppose you did build the product,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/521-1
+00:22:45.719 --> 00:22:50.003
+<v Majernik, Peter>right? I could build it,
+it published it and it just can't find</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/521-2
+00:22:50.003 --> 00:22:51.409
+<v Majernik, Peter>where to run it from.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/523-0
+00:22:51.489 --> 00:22:56.569
+<v John Miller>Yeah, I mean, I did do a if we're here,
+we would if we did a.net.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/524-0
+00:22:57.729 --> 00:22:58.649
+<v John Miller>Girls.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/528-0
+00:23:00.849 --> 00:23:06.034
+<v Majernik, Peter>I mean in that command line I don't see
+the name of the project being spelled out.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/528-1
+00:23:06.034 --> 00:23:09.220
+<v Majernik, Peter>Say run this.
+It just says which framework to use.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/528-2
+00:23:09.220 --> 00:23:10.969
+<v Majernik, Peter>So is are you on Windows 10?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/530-0
+00:23:13.369 --> 00:23:16.009
+<v John Miller>Um, no. I'm on Windows 11.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/532-0
+00:23:16.489 --> 00:23:20.649
+<v Majernik, Peter>So why? Why is it picking the.
+NET 9 Windows 10?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/533-0
+00:23:22.049 --> 00:23:26.009
+<v Majernik, Peter>That could be one red flag maybe,
+but I'm not sure if that's related.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/536-0
+00:23:30.329 --> 00:23:31.289
+<v John Miller>So let's take that out.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/539-0
+00:23:35.969 --> 00:23:38.680
+<v Majernik, Peter>I mean,
+I would just kind of look around in that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/539-1
+00:23:38.680 --> 00:23:41.447
+<v Majernik, Peter>folder,
+see where the actual binaries are that it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/539-2
+00:23:41.447 --> 00:23:45.209
+<v Majernik, Peter>produced to make sure we are trying to
+run it from the right place.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/544-0
+00:23:53.649 --> 00:23:57.693
+<v John Miller>I think that's why it was adding that
+command line for that framework to say it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/544-1
+00:23:57.693 --> 00:23:59.209
+<v John Miller>was only gonna be running the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/545-0
+00:24:02.169 --> 00:24:02.409
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/547-0
+00:24:05.369 --> 00:24:07.129
+<v John Miller>dot net version of it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/549-0
+00:24:08.209 --> 00:24:12.089
+<v John Miller>So if we go to look at the file folders,
+they're there already.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/553-0
+00:24:21.169 --> 00:24:25.009
+<v John Miller>The calculator app core,
+so this would be in the Maui.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/555-0
+00:24:26.769 --> 00:24:28.569
+<v John Miller>Side of the things.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/561-0
+00:24:31.809 --> 00:24:34.366
+<v Majernik, Peter>I mean,
+I I don't know where these things</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/561-1
+00:24:34.366 --> 00:24:37.958
+<v Majernik, Peter>actually end up.
+Usually it's in some bin folder or object</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/561-2
+00:24:37.958 --> 00:24:40.698
+<v Majernik, Peter>folder.
+It all depends on the targets that's</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/561-3
+00:24:40.698 --> 00:24:45.021
+<v Majernik, Peter>specified in the project properties.
+But since everything's generated,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/561-4
+00:24:45.021 --> 00:24:48.186
+<v Majernik, Peter>I haven't seen any of that,
+so I can't really help.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/561-5
+00:24:48.186 --> 00:24:49.769
+<v Majernik, Peter>I'm just speculating here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/562-0
+00:24:53.289 --> 00:24:55.289
+<v John Miller>And there's the project file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/577-0
+00:25:28.129 --> 00:25:31.809
+<v John Miller>Yeah, it's still.
+That's kind of frustrating.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/580-0
+00:25:37.729 --> 00:25:41.409
+<v John Miller>Let me restart Visual Studio Code.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/582-0
+00:25:43.169 --> 00:25:45.609
+<v John Miller>Wanted to try to pick up that setting.
+It changed.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/584-0
+00:25:48.209 --> 00:25:50.409
+<v John Miller>So let's bring it back up again.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/605-0
+00:26:38.889 --> 00:26:43.129
+<v John Miller>All right, so we're back in our project.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/607-0
+00:26:45.649 --> 00:26:47.833
+<v Majernik, Peter>OK,
+so you are in the folder where the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/607-1
+00:26:47.833 --> 00:26:49.569
+<v Majernik, Peter>project lives, is that correct?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/609-0
+00:26:49.009 --> 00:26:51.449
+<v John Miller>This is the where the solution lives.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/612-0
+00:26:52.769 --> 00:26:55.312
+<v Majernik, Peter>The solution OK uh try to try to do like
+a.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/612-1
+00:26:55.312 --> 00:26:59.818
+<v Majernik, Peter>net run and then do the dash dash project
+and then specify the solution file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/612-2
+00:26:59.818 --> 00:27:01.609
+<v Majernik, Peter>See if that makes a difference.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/614-0
+00:27:08.409 --> 00:27:10.649
+<v John Miller>Right, but this is in the Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/619-0
+00:27:13.169 --> 00:27:21.889
+<v Majernik, Peter>Do like a dash dash project and then then
+just give it the solution name.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/620-0
+00:27:24.569 --> 00:27:26.249
+<v John Miller>And not the framework.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/622-0
+00:27:27.289 --> 00:27:30.809
+<v Majernik, Peter>Yeah, let's skip the framework.
+Maybe that's gonna help.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/627-0
+00:27:32.289 --> 00:27:35.760
+<v Majernik, Peter>I mean,
+I don't know where it came up with the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/627-1
+00:27:35.760 --> 00:27:39.969
+<v Majernik, Peter>Windows 10 target.
+Not sure where where that originates.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/626-0
+00:27:37.169 --> 00:27:39.049
+<v John Miller>Yeah, I don't either.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/629-0
+00:27:43.929 --> 00:27:44.329
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/632-0
+00:27:50.289 --> 00:27:53.769
+<v John Miller>I think it's actually the same to grab
+this.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/636-0
+00:28:08.449 --> 00:28:10.849
+<v John Miller>Still complaining about that Android
+project.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/639-0
+00:28:12.209 --> 00:28:14.649
+<v Majernik, Peter>Yeah,
+maybe we should just remove all the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/639-1
+00:28:14.649 --> 00:28:18.367
+<v Majernik, Peter>Android references, iOS,
+just leave it at Windows and then it's</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/639-2
+00:28:18.367 --> 00:28:19.529
+<v Majernik, Peter>going to be simpler.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/642-0
+00:28:31.489 --> 00:28:32.209
+<v John Miller>Yeah, that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/648-0
+00:28:44.929 --> 00:28:49.489
+<v John Miller>You think I could just remove these
+folders? I don't think that'll be enough.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/653-0
+00:28:49.809 --> 00:28:53.961
+<v Majernik, Peter>Oh no, no.
+I meant like the start prompting,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/653-1
+00:28:53.961 --> 00:28:58.482
+<v Majernik, Peter>say hey copilot,
+remove all the operating system</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/650-0
+00:28:55.929 --> 00:28:56.129
+<v John Miller>Mm.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/653-2
+00:28:58.482 --> 00:29:01.249
+<v Majernik, Peter>references except for Windows.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/655-0
+00:29:02.769 --> 00:29:08.089
+<v Majernik, Peter>Let's just target Windows instead of
+trying to make it truly cross-platform.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/657-0
+00:29:09.569 --> 00:29:12.640
+<v Majernik, Peter>I mean,
+we probably should have started with that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/657-1
+00:29:12.640 --> 00:29:13.929
+<v Majernik, Peter>in the beginning, so.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/658-0
+00:29:12.929 --> 00:29:15.609
+<v John Miller>Yeah, right. Move the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/661-0
+00:29:17.529 --> 00:29:21.649
+<v John Miller>Support or iOS?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/667-0
+00:29:29.889 --> 00:29:33.769
+<v Majernik, Peter>So I I mean,
+I don't know how it's all done in terms</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/667-1
+00:29:33.769 --> 00:29:38.820
+<v Majernik, Peter>of support for cross-platform,
+but a long time ago when I used to do</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/667-2
+00:29:38.820 --> 00:29:42.773
+<v Majernik, Peter>things like this,
+you would have to set up a bunch of</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/667-3
+00:29:42.773 --> 00:29:48.409
+<v Majernik, Peter>things on the machine in addition to what
+you did in VS code and extensions.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/670-0
+00:29:48.769 --> 00:29:54.110
+<v Majernik, Peter>So I'm not sure if what Copilot did for
+you is sufficient to get this running,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/670-1
+00:29:54.110 --> 00:29:59.112
+<v Majernik, Peter>but again, I'm just speculating, you know,
+without looking at everything,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/670-2
+00:29:59.112 --> 00:30:00.329
+<v Majernik, Peter>it's hard to know.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/673-0
+00:30:00.689 --> 00:30:04.191
+<v John Miller>Yeah, and it did.
+As you saw before we went to lunch,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/673-1
+00:30:04.191 --> 00:30:08.729
+<v John Miller>it did install a bunch of things related
+to that cost platform piece.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/675-0
+00:30:12.529 --> 00:30:15.009
+<v John Miller>So it looks like it just modified the
+project file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/682-0
+00:30:31.089 --> 00:30:33.993
+<v Majernik, Peter>Yeah,
+let's give it a try with just Windows.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/682-1
+00:30:33.993 --> 00:30:35.089
+<v Majernik, Peter>See how it works.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/707-0
+00:31:29.529 --> 00:31:29.689
+<v John Miller>Mm.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/712-0
+00:31:46.729 --> 00:31:46.769
+<v Majernik, Peter>Uh.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/714-0
+00:31:48.609 --> 00:31:51.769
+<v Majernik, Peter>Not be able to use the launch profile.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/716-0
+00:31:53.969 --> 00:31:57.089
+<v Majernik, Peter>Guess we got to figure out what's wrong
+with that launch profile.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/718-0
+00:31:58.689 --> 00:32:01.969
+<v John Miller>Yeah, let's start with this.
+Continue to remove.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/721-0
+00:32:04.489 --> 00:32:08.068
+<v Majernik, Peter>It says your project targets multiple
+frameworks,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/721-1
+00:32:08.068 --> 00:32:11.289
+<v Majernik, Peter>so we need to specify the framework we
+want.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/723-0
+00:32:20.049 --> 00:32:20.169
+<v Majernik, Peter>Well.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/727-0
+00:32:22.129 --> 00:32:26.016
+<v Majernik, Peter>Maybe we need to add that framework back
+in. You know where it says.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/727-1
+00:32:26.016 --> 00:32:30.634
+<v Majernik, Peter>net 9 Windows 10 and just change that to
+something else like Windows 11 if that's</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/727-2
+00:32:30.634 --> 00:32:31.929
+<v Majernik, Peter>what you're running on.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/759-0
+00:33:42.489 --> 00:33:45.609
+<v John Miller>All right,
+so that seemed like that worked.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/761-0
+00:33:47.209 --> 00:33:48.609
+<v John Miller>Same problem with the pathing.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/763-0
+00:33:50.049 --> 00:33:52.849
+<v John Miller>So restarting this code didn't fix it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/776-0
+00:34:17.489 --> 00:34:20.524
+<v Majernik, Peter>Well,
+this would be a good time to do the mob</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/776-1
+00:34:20.524 --> 00:34:23.558
+<v Majernik, Peter>coding.
+You could just push all your changes.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/776-2
+00:34:23.558 --> 00:34:27.714
+<v Majernik, Peter>We all get it on our laptops and we try
+to fix it in parallel.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/774-0
+00:34:27.689 --> 00:34:27.929
+<v John Miller>Uh.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/776-3
+00:34:27.714 --> 00:34:30.089
+<v Majernik, Peter>One of the five people will succeed.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/778-0
+00:34:29.409 --> 00:34:33.129
+<v John Miller>Good idea. So let's um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/779-0
+00:34:34.889 --> 00:34:36.889
+<v John Miller>Add all of these changes.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/783-0
+00:34:47.409 --> 00:34:49.849
+<v John Miller>And let's get a commit message.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/786-0
+00:35:00.729 --> 00:35:00.849
+<v John Miller>And.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/787-0
+00:35:01.969 --> 00:35:03.689
+<v John Miller>Go ahead and commit.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/789-0
+00:35:05.369 --> 00:35:07.569
+<v John Miller>And sync those files.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/792-0
+00:35:12.809 --> 00:35:15.969
+<v John Miller>All right, so it it thinks that this is.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/793-0
+00:35:16.889 --> 00:35:18.249
+<v John Miller>Targeted correctly.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/797-0
+00:35:30.889 --> 00:35:32.089
+<v John Miller>I don't see where it's running now.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/800-0
+00:35:36.529 --> 00:35:41.089
+<v Majernik, Peter>So it succeeded in running it and you
+don't see the screen or the window.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/801-0
+00:35:40.929 --> 00:35:43.489
+<v John Miller>I don't. I don't see a screen.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/802-0
+00:35:43.649 --> 00:35:43.889
+<v Majernik, Peter>Hmm.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/804-0
+00:35:46.129 --> 00:35:46.569
+<v Majernik, Peter>Interesting.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/828-0
+00:36:38.529 --> 00:36:40.329
+<v John Miller>Same pouting problem.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/852-0
+00:37:43.249 --> 00:37:45.449
+<v John Miller>It looks like it's launches, but doesn't.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/855-0
+00:37:51.449 --> 00:37:56.289
+<v John Miller>So let's the package and deploy it as a
+proper MSIX file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/861-0
+00:38:04.129 --> 00:38:09.273
+<v Majernik, Peter>Well, I have a different problem.
+I tried to run it and it's part of</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/861-1
+00:38:09.273 --> 00:38:13.149
+<v Majernik, Peter>building.
+It's trying to install stuff and I cannot</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/861-2
+00:38:13.149 --> 00:38:18.293
+<v Majernik, Peter>install on my laptop. Sorry,
+I I can't test your changes. Not today.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/861-3
+00:38:18.293 --> 00:38:18.889
+<v Majernik, Peter>I tried.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/864-0
+00:38:20.689 --> 00:38:26.156
+<v John Miller>All right. Well,
+we'll just have to continue to plug away.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/864-1
+00:38:26.156 --> 00:38:28.009
+<v John Miller>I'm sure that we'll.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/865-0
+00:38:28.969 --> 00:38:31.209
+<v John Miller>Come up with a solution soon.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/892-0
+00:39:31.969 --> 00:39:33.369
+<v John Miller>So we haven't got any problems.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/895-0
+00:39:40.729 --> 00:39:42.009
+<v John Miller>Doesn't like the package.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/901-0
+00:39:45.369 --> 00:39:48.330
+<v Majernik, Peter>Yeah, I don't know.
+This this is getting complicated. Yeah,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/901-1
+00:39:48.330 --> 00:39:52.229
+<v Majernik, Peter>I mean, typically you would build the app,
+then you would publish the app that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/901-2
+00:39:52.229 --> 00:39:56.177
+<v Majernik, Peter>collects all the dependencies to the same
+folder and then you could just run it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/901-3
+00:39:56.177 --> 00:39:58.891
+<v Majernik, Peter>from there.
+Maybe when you try to run it as a project,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/899-0
+00:39:57.609 --> 00:39:58.089
+<v John Miller>Mhm.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/901-4
+00:39:58.891 --> 00:40:00.569
+<v Majernik, Peter>it needs some kind of a simulator.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/902-0
+00:40:01.129 --> 00:40:02.129
+<v Majernik, Peter>I don't know.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/904-0
+00:40:05.369 --> 00:40:08.089
+<v Majernik, Peter>This is getting, uh, quite involved here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/906-0
+00:40:14.009 --> 00:40:15.969
+<v John Miller>And it's still not running.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/924-0
+00:40:55.409 --> 00:40:59.009
+<v John Miller>It thinks it has a solution,
+or at least it knows what the problem is.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/927-0
+00:41:03.609 --> 00:41:06.409
+<v John Miller>Oh, looks like it's a SDK issue.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/941-0
+00:41:36.569 --> 00:41:39.529
+<v John Miller>Wants to reinstall the Windows App SDK.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/955-0
+00:42:08.729 --> 00:42:13.619
+<v John Miller>So this might be an indication where we
+would want to slice zero of some sort</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/955-1
+00:42:13.619 --> 00:42:15.249
+<v John Miller>that just makes sure that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/958-0
+00:42:18.969 --> 00:42:22.689
+<v John Miller>That we can take a very simple
+application and get it to run.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/963-0
+00:42:27.569 --> 00:42:32.309
+<v Majernik, Peter>Yeah, I agree. That's a good approach.
+You just create an empty shell with not</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/963-1
+00:42:32.309 --> 00:42:35.429
+<v Majernik, Peter>much in there to get all the layers
+working, right?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/963-2
+00:42:35.429 --> 00:42:37.529
+<v Majernik, Peter>And then you start adding features.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/973-0
+00:43:00.649 --> 00:43:01.849
+<v John Miller>It's still not running.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/991-0
+00:43:42.929 --> 00:43:44.569
+<v John Miller>I don't see that it's running.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/998-0
+00:43:55.849 --> 00:43:58.687
+<v John Miller>All right,
+so it's it's going to be tough to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/998-1
+00:43:58.687 --> 00:44:01.209
+<v John Miller>demonstrate, but we can't get it to run.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1010-0
+00:44:21.169 --> 00:44:26.353
+<v Majernik, Peter>Well, it's it's OK.
+We get the concept right. By the way,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1008-0
+00:44:24.369 --> 00:44:25.849
+<v John Miller>Yeah.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1010-1
+00:44:26.353 --> 00:44:33.236
+<v Majernik, Peter>I did succeed in creating a Maui app
+yesterday in like 5 minutes. It worked,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1010-2
+00:44:33.236 --> 00:44:34.129
+<v Majernik, Peter>popped up.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1012-0
+00:44:35.049 --> 00:44:37.049
+<v Majernik, Peter>I had the screen and everything.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1013-0
+00:44:38.489 --> 00:44:38.849
+<v John Miller>So um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1082-0
+00:47:09.809 --> 00:47:11.049
+<v John Miller>So that's good.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1084-0
+00:47:14.449 --> 00:47:17.249
+<v Majernik, Peter>Yeah, that's good. You have an app.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1087-0
+00:47:20.929 --> 00:47:24.249
+<v John Miller>You know,
+it should show that it's running.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1091-0
+00:47:33.849 --> 00:47:35.529
+<v Majernik, Peter>So what was the fix?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1093-0
+00:47:38.209 --> 00:47:40.972
+<v John Miller>Well,
+it looked to me like it replaced a whole</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1093-1
+00:47:40.972 --> 00:47:42.089
+<v John Miller>bunch of things in.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1095-0
+00:47:46.489 --> 00:47:46.889
+<v John Miller>So.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1099-0
+00:47:49.489 --> 00:47:55.009
+<v John Miller>I did a command to create a new hello
+world and under source.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1101-0
+00:47:56.529 --> 00:48:01.529
+<v John Miller>Created a Hello World Maui project.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1103-0
+00:48:05.369 --> 00:48:08.769
+<v John Miller>Replaced a string in the file in the
+Hello world.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1106-0
+00:48:17.649 --> 00:48:19.489
+<v John Miller>Added the hello world text.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1109-0
+00:48:23.569 --> 00:48:27.169
+<v John Miller>deleted some code out of the um main page.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1112-0
+00:48:31.329 --> 00:48:34.329
+<v John Miller>Added a launch settings file in the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1113-0
+00:48:36.449 --> 00:48:37.809
+<v John Miller>Hello world Maui.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1116-0
+00:48:43.649 --> 00:48:47.209
+<v John Miller>And ran it with the full path and it
+works.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1140-0
+00:49:31.569 --> 00:49:35.504
+<v John Miller>I think it's hung up here trying to
+execute a command because the app is</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1140-1
+00:49:35.504 --> 00:49:39.654
+<v John Miller>still running, so it's a catch 22.
+It can't tell if the app is running while</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1140-2
+00:49:39.654 --> 00:49:43.049
+<v John Miller>the app is running because it's hogging
+up PowerShell command.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1142-0
+00:49:47.449 --> 00:49:47.649
+<v John Miller>Hello.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1144-0
+00:49:50.849 --> 00:49:52.649
+<v John Miller>Suppose we can have to stop it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1146-0
+00:49:58.809 --> 00:49:59.289
+<v John Miller>Ends.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1153-0
+00:50:11.009 --> 00:50:15.780
+<v Majernik, Peter>This I don't want to understand.
+Is it is are all of these things running</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1153-1
+00:50:15.780 --> 00:50:20.809
+<v Majernik, Peter>on a single thread or what's going on?
+Like how? Why? Why did it get blocked?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1154-0
+00:50:22.929 --> 00:50:23.009
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1159-0
+00:50:27.129 --> 00:50:31.514
+<v John Miller>Yeah, this is.
+I think this is a like a bug in Copilot.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1159-1
+00:50:31.514 --> 00:50:37.700
+<v John Miller>Notice that it's spawning all of these
+PowerShell windows and it's not reusing</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1159-2
+00:50:37.700 --> 00:50:40.049
+<v John Miller>them and when it runs the app.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1158-0
+00:50:37.849 --> 00:50:39.449
+<v Majernik, Peter>Oh, let me see.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1164-0
+00:50:41.009 --> 00:50:44.354
+<v John Miller>When it runs the app,
+it's opening up another PowerShell window</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1164-1
+00:50:44.354 --> 00:50:47.856
+<v John Miller>and then it's trying to execute a command
+within that same window.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1164-2
+00:50:47.856 --> 00:50:52.195
+<v John Miller>It's not it's not smart enough right now
+it appears to be able to to say I want to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1164-3
+00:50:52.195 --> 00:50:55.906
+<v John Miller>go back to this window and run this
+command while this other window is</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1164-4
+00:50:55.906 --> 00:50:57.369
+<v John Miller>running a different command.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1168-0
+00:50:57.809 --> 00:51:04.049
+<v John Miller>That's that seems to be the problem here.
+It's a it's a an issue I I I did find</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1168-1
+00:51:04.049 --> 00:51:09.041
+<v John Miller>that there was a setting,
+but it doesn't seem like it's working</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1168-2
+00:51:09.041 --> 00:51:14.969
+<v John Miller>where you could specify that it should be
+reusing the same terminal window.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1173-0
+00:51:15.409 --> 00:51:20.976
+<v John Miller>Next spawning up these and it it seems
+like the once I set that setting it it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1173-1
+00:51:20.976 --> 00:51:26.470
+<v John Miller>improved but it didn't in the middle and
+it didn't immediately eliminate the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1173-2
+00:51:26.470 --> 00:51:29.967
+<v John Miller>problem.
+So So what I'm gonna do is tell tell it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1172-0
+00:51:27.929 --> 00:51:28.489
+<v Majernik, Peter>OK, but.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1173-3
+00:51:29.967 --> 00:51:30.609
+<v John Miller>that the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1174-0
+00:51:31.089 --> 00:51:32.249
+<v John Miller>Working.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1177-0
+00:51:34.009 --> 00:51:36.049
+<v John Miller>What is the difference?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1178-0
+00:51:42.849 --> 00:51:43.169
+<v John Miller>Between.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1180-0
+00:51:46.369 --> 00:51:48.249
+<v John Miller>Hello world.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1183-0
+00:51:53.369 --> 00:51:55.689
+<v John Miller>in a calculator.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1185-0
+00:52:02.089 --> 00:52:03.529
+<v John Miller>That would.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1188-0
+00:52:05.009 --> 00:52:09.289
+<v John Miller>cause that calculator to not run.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1190-0
+00:52:14.129 --> 00:52:16.249
+<v John Miller>See if we can figure something out.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1234-0
+00:53:51.209 --> 00:53:51.449
+<v Majernik, Peter>Hmm.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1327-0
+00:57:10.729 --> 00:57:14.289
+<v Majernik, Peter>Can you guys hear me?
+I I don't hear anyone.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1329-0
+00:57:15.529 --> 00:57:16.049
+<v Tarrants, Seth>Yeah.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1331-0
+00:57:16.969 --> 00:57:20.889
+<v Majernik, Peter>OK. John, John. Oh, OK. Sorry, John.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1335-0
+00:57:18.809 --> 00:57:24.329
+<v John Miller>And that was me. I'm sorry about that. Oh,
+it was me. I I apologize.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1335-1
+00:57:24.329 --> 00:57:30.809
+<v John Miller>So we we were able to run the app and I
+think we saw that we were able to do all</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1335-2
+00:57:30.809 --> 00:57:32.169
+<v John Miller>of the slice one.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1336-0
+00:57:32.209 --> 00:57:32.449
+<v John Miller>Nice one.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1337-0
+00:57:34.249 --> 00:57:34.329
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1338-0
+00:57:35.889 --> 00:57:39.049
+<v John Miller>Uh, showcase features.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1342-0
+00:57:43.969 --> 00:57:48.161
+<v John Miller>Where we can edit in numbers,
+we can back out of those numbers,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1342-1
+00:57:48.161 --> 00:57:49.929
+<v John Miller>we can add a decimal point.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1343-0
+00:57:52.649 --> 00:57:55.329
+<v John Miller>We can clear the contents and start over.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1347-0
+00:57:57.169 --> 00:58:00.809
+<v John Miller>So all of this functionality seems to be
+working fine.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1349-0
+00:58:02.369 --> 00:58:06.546
+<v John Miller>Any questions or comments on that?
+Do you want to look at the the code that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1349-1
+00:58:06.546 --> 00:58:09.129
+<v John Miller>was implemented or should we go on to
+slice 2?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1351-0
+00:58:13.569 --> 00:58:16.089
+<v Tarrants, Seth>Are there any UI tests or just unit tests?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1355-0
+00:58:16.769 --> 00:58:20.994
+<v John Miller>Right now that we're just what I saw were
+unit test and integration test.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1355-1
+00:58:20.994 --> 00:58:23.849
+<v John Miller>Do you want to see if we can implement a
+UI test?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1354-0
+00:58:21.649 --> 00:58:21.769
+<v Tarrants, Seth>OK.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1356-0
+00:58:23.809 --> 00:58:26.369
+<v Tarrants, Seth>Yeah, I'd be curious to see what it does.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1362-0
+00:58:37.329 --> 00:58:43.449
+<v John Miller>And let me clear the context from all
+that debugging. Let's close all of our.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1363-0
+00:58:45.289 --> 00:58:45.449
+<v John Miller>Files.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1366-0
+00:58:49.609 --> 00:58:52.409
+<v John Miller>And say add a UI test or.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1367-0
+00:58:54.249 --> 00:58:56.009
+<v John Miller>Slice on.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1370-0
+00:58:59.169 --> 00:59:04.809
+<v Majernik, Peter>Can we can we do a push on the working
+code before we change it?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1371-0
+00:59:05.929 --> 00:59:06.289
+<v John Miller>Sure.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1377-0
+00:59:07.969 --> 00:59:11.679
+<v Majernik, Peter>Or maybe it's too late. Sorry,
+I said it too late. OK,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1373-0
+00:59:08.169 --> 00:59:08.849
+<v John Miller>Oops.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1375-0
+00:59:11.529 --> 00:59:11.609
+<v John Miller>Oh.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1377-1
+00:59:11.679 --> 00:59:14.849
+<v Majernik, Peter>the next set of working code.
+Let's do a push.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1378-0
+00:59:15.609 --> 00:59:16.209
+<v Majernik, Peter>Next checkpoint.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1381-0
+00:59:18.329 --> 00:59:22.489
+<v John Miller>Well, let's we we can stop this.
+We can say stop and we can go back.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1382-0
+00:59:25.849 --> 00:59:26.009
+<v John Miller>Mm.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1384-0
+00:59:27.449 --> 00:59:27.609
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1386-0
+00:59:34.609 --> 00:59:36.969
+<v John Miller>I was looking for that checkpoint of here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1388-0
+00:59:38.529 --> 00:59:39.529
+<v John Miller>I'll see it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1391-0
+00:59:48.929 --> 00:59:51.129
+<v John Miller>Doesn't want to get changed this file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1400-0
+01:00:09.729 --> 01:00:12.329
+<v John Miller>Oh, let's go ahead and do our commit.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1402-0
+01:00:13.409 --> 01:00:16.369
+<v John Miller>I want to verify it works before we do
+that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1403-0
+01:00:19.129 --> 01:00:19.369
+<v Tarrants, Seth>Yeah.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1406-0
+01:00:19.449 --> 01:00:22.409
+<v Majernik, Peter>Well,
+I don't think I can 'cause I tried and it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1406-1
+01:00:22.409 --> 01:00:23.889
+<v Majernik, Peter>wouldn't let me install.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1408-0
+01:00:26.329 --> 01:00:29.849
+<v John Miller>No, I'm saying I'm gonna,
+I'm gonna try to run it here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1409-0
+01:00:26.809 --> 01:00:30.009
+<v Majernik, Peter>So whoever, whoever has an admin password,
+sorry.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1411-0
+01:00:32.289 --> 01:00:35.969
+<v Majernik, Peter>If somebody has an admin password,
+they can do it maybe.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1413-0
+01:00:36.289 --> 01:00:41.489
+<v John Miller>I was just wanted to verify that it that
+short prompt execution didn't change</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1413-1
+01:00:41.489 --> 01:00:42.089
+<v John Miller>anything.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1415-0
+01:00:43.889 --> 01:00:47.689
+<v John Miller>Significant.
+It looks like it still runs fine.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1416-0
+01:00:49.049 --> 01:00:49.289
+<v Majernik, Peter>OK.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1418-0
+01:00:49.129 --> 01:00:49.689
+<v John Miller>So.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1419-0
+01:00:51.089 --> 01:00:54.249
+<v John Miller>Let's go over here and add another.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1421-0
+01:00:55.889 --> 01:00:59.129
+<v John Miller>State some changes. Let's add a message.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1427-0
+01:01:09.129 --> 01:01:13.289
+<v John Miller>Go ahead and commit it and push those
+changes.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1430-0
+01:01:17.609 --> 01:01:21.769
+<v John Miller>All right, so clear our contacts again.
+Let's close down our windows.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1432-0
+01:01:24.649 --> 01:01:28.049
+<v John Miller>And add a UI test for slice one.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1444-0
+01:01:48.849 --> 01:01:51.529
+<v John Miller>We're seeing that we're not seeing any
+light to us.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1448-0
+01:02:03.009 --> 01:02:08.969
+<v John Miller>Did you should we have specified what
+kind of technology to use it for the test?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1450-0
+01:02:09.609 --> 01:02:11.737
+<v Tarrants, Seth>No,
+'cause that's what I'm mostly curious</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1450-1
+01:02:11.737 --> 01:02:14.169
+<v Tarrants, Seth>about,
+to see what it picks for this framework.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1451-0
+01:02:14.809 --> 01:02:15.849
+<v John Miller>All right.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1454-0
+01:02:22.969 --> 01:02:23.689
+<v John Miller>All right, UI tests.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1469-0
+01:02:52.689 --> 01:02:56.089
+<v John Miller>So it's modifying the code to support the
+UI testing.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1471-0
+01:02:57.689 --> 01:02:57.769
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1474-0
+01:03:02.689 --> 01:03:08.384
+<v John Miller>Calculator app Maui unit tests UI test
+dot infrastructure is the technology it's</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1474-1
+01:03:08.384 --> 01:03:09.649
+<v John Miller>going to be using.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1478-0
+01:03:17.489 --> 01:03:19.089
+<v John Miller>Wait for A to be ready.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1482-0
+01:03:29.889 --> 01:03:31.689
+<v John Miller>Oh, that's something we didn't test is to.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1484-0
+01:03:33.329 --> 01:03:36.609
+<v John Miller>You're actually trying to type in
+something we know it doesn't understand.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1493-0
+01:03:52.129 --> 01:03:55.769
+<v John Miller>So that looks pretty straightforward. Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1495-0
+01:03:57.129 --> 01:03:58.849
+<v John Miller>It's updated the main page.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1497-0
+01:04:03.929 --> 01:04:06.489
+<v John Miller>So it's adding X names to.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1498-0
+01:04:08.009 --> 01:04:08.769
+<v John Miller>All the controls.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1507-0
+01:04:27.089 --> 01:04:29.929
+<v John Miller>And this would be a point where we want
+to go back and say in our.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1509-0
+01:04:31.009 --> 01:04:35.929
+<v John Miller>Definition of slices or other instruction
+file that says.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1511-0
+01:04:37.169 --> 01:04:42.089
+<v John Miller>We also need to have a UI test for each
+slice as well.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1514-0
+01:04:45.889 --> 01:04:52.849
+<v John Miller>So now it's going and creating some tests.
+Here's the number entry test file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1517-0
+01:04:55.849 --> 01:05:00.929
+<v John Miller>Should deploy a single digit when a
+number button is tapped.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1519-0
+01:05:02.609 --> 01:05:06.729
+<v John Miller>Tab number a sync, sort the display value.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1521-0
+01:05:09.369 --> 01:05:11.609
+<v John Miller>And then it's gonna go tap all of these
+buttons.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1530-0
+01:05:28.769 --> 01:05:32.128
+<v John Miller>So I thought, well,
+I think an interesting thing is that not</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1530-1
+01:05:32.128 --> 01:05:36.037
+<v John Miller>only did it create the test,
+but it did go back and modify the code to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1530-2
+01:05:36.037 --> 01:05:37.689
+<v John Miller>make your to make it testable.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1532-0
+01:05:40.289 --> 01:05:44.882
+<v Tarrants, Seth>Yeah, that's that's really helpful.
+Can you scroll to the very top so I can</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1532-1
+01:05:44.882 --> 01:05:45.849
+<v Tarrants, Seth>see the imports?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1533-0
+01:05:46.809 --> 01:05:46.969
+<v John Miller>Sure.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1541-0
+01:06:01.809 --> 01:06:05.314
+<v Tarrants, Seth>And then can you Scroll down just a
+little bit so I can see where it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1541-1
+01:06:05.314 --> 01:06:06.329
+<v Tarrants, Seth>initializes the app?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1545-0
+01:06:15.209 --> 01:06:16.409
+<v Tarrants, Seth>A little bit more.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1547-0
+01:06:18.289 --> 01:06:19.689
+<v John Miller>This is the first test.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1549-0
+01:06:19.569 --> 01:06:23.849
+<v Tarrants, Seth>What is uh can you control click in the
+tab number async?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1550-0
+01:06:26.889 --> 01:06:28.249
+<v John Miller>Uh, up here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1552-0
+01:06:28.609 --> 01:06:29.449
+<v Tarrants, Seth>Line 26.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1556-0
+01:06:37.649 --> 01:06:40.889
+<v Tarrants, Seth>Or or at least go to that method wherever
+it's at.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1555-0
+01:06:37.969 --> 01:06:39.049
+<v John Miller>Uh, I think I need.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1566-0
+01:07:00.609 --> 01:07:03.129
+<v Tarrants, Seth>It was up there at the base UI test,
+I think it said.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1570-0
+01:07:11.169 --> 01:07:14.649
+<v John Miller>If I keep these changes, is it done yet?
+No, it's still thinking.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1571-0
+01:07:16.849 --> 01:07:18.249
+<v John Miller>About this this one.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1582-0
+01:07:41.929 --> 01:07:42.329
+<v John Miller>Here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1583-0
+01:07:44.129 --> 01:07:44.809
+<v Tarrants, Seth>Yeah, that's it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1585-0
+01:07:46.169 --> 01:07:46.489
+<v Tarrants, Seth>All right.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1588-0
+01:07:49.889 --> 01:07:52.409
+<v Tarrants, Seth>App OK,
+so can you go to to the top where it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1588-1
+01:07:52.409 --> 01:07:53.529
+<v Tarrants, Seth>initializes the app?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1591-0
+01:08:02.169 --> 01:08:02.289
+<v Tarrants, Seth>OK.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1594-0
+01:08:06.249 --> 01:08:08.880
+<v Tarrants, Seth>All right,
+and then scroll up to the top again,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1594-1
+01:08:08.880 --> 01:08:10.689
+<v Tarrants, Seth>please, so I can see the imports.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1595-0
+01:08:13.049 --> 01:08:15.489
+<v Tarrants, Seth>OK, interesting. All right. Thank you.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1597-0
+01:08:15.169 --> 01:08:15.529
+<v John Miller>Yeah.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1598-0
+01:08:17.489 --> 01:08:19.929
+<v John Miller>Anybody else want to look at any of the
+code?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1603-0
+01:08:29.369 --> 01:08:34.686
+<v John Miller>So we can see what it's changed here.
+It's changed the app solution file to add</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1603-1
+01:08:34.686 --> 01:08:37.809
+<v John Miller>our reference to the Maui test
+infrastructure.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1605-0
+01:08:40.969 --> 01:08:42.809
+<v John Miller>Oh, actually is that the test project?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1608-0
+01:08:44.929 --> 01:08:47.818
+<v John Miller>We talked,
+we already talked about the main page</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1608-1
+01:08:47.818 --> 01:08:48.289
+<v John Miller>changes.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1610-0
+01:08:49.289 --> 01:08:53.049
+<v John Miller>There's the new test UI test project.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1613-0
+01:08:57.089 --> 01:09:04.569
+<v John Miller>Which then references the Maui
+application itself.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1616-0
+01:09:08.249 --> 01:09:12.409
+<v John Miller>created a README file for the UI testing.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1619-0
+01:09:21.729 --> 01:09:25.969
+<v John Miller>And how to run the tests,
+the test helper methods.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1623-0
+01:09:27.649 --> 01:09:34.327
+<v John Miller>The names of the buttons it's trying to
+contest. That looks good.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1623-1
+01:09:34.327 --> 01:09:37.969
+<v John Miller>Here's the UIUI testing setup guide.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1628-0
+01:09:45.129 --> 01:09:49.849
+<v John Miller>And looks like we're down to our last
+video here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1641-0
+01:10:16.649 --> 01:10:20.449
+<v John Miller>And from these icons we can saw these are
+all added files. This is a file that was.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1643-0
+01:10:21.209 --> 01:10:25.369
+<v John Miller>Changed. That's untracked, and these are.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1645-0
+01:10:27.689 --> 01:10:29.329
+<v John Miller>File type any changes.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1664-0
+01:11:09.369 --> 01:11:14.713
+<v John Miller>So here's an example of what I was saying
+that you ask it to create tests and</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1664-1
+01:11:14.713 --> 01:11:17.727
+<v John Miller>typically they're don't run the first
+time.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1664-2
+01:11:17.727 --> 01:11:20.809
+<v John Miller>These are all just like dependency
+problems.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1673-0
+01:11:42.049 --> 01:11:44.649
+<v John Miller>And another common.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1676-0
+01:11:46.569 --> 01:11:50.595
+<v John Miller>Issue I see cropping up is where here
+it's actually implemented what he thought</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1676-1
+01:11:50.595 --> 01:11:53.915
+<v John Miller>the display result should be,
+but it actually turns out there's a</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1676-2
+01:11:53.915 --> 01:11:56.129
+<v John Miller>different signature.
+It has to change that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1679-0
+01:12:07.049 --> 01:12:09.649
+<v John Miller>And looks like we now got a good build.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1681-0
+01:12:10.649 --> 01:12:12.969
+<v John Miller>And let's see if the tests work.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1685-0
+01:12:19.649 --> 01:12:21.049
+<v John Miller>57 tests failed.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1691-0
+01:12:36.049 --> 01:12:39.167
+<v Tarrants, Seth>I know we're short on time,
+so we don't have to triage the test</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1691-1
+01:12:39.167 --> 01:12:41.701
+<v Tarrants, Seth>failures.
+I was just curious what kind of structure</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1691-2
+01:12:41.701 --> 01:12:43.649
+<v Tarrants, Seth>it would create at the initial go of it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1693-0
+01:12:45.769 --> 01:12:46.809
+<v John Miller>Sure.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1696-0
+01:12:51.809 --> 01:12:56.435
+<v John Miller>Well, let's give it one more pass.
+If it doesn't pass on the next run,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1696-1
+01:12:56.435 --> 01:12:58.129
+<v John Miller>we'll stop it and move on.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1700-0
+01:13:04.689 --> 01:13:09.914
+<v John Miller>Any any just random questions I can
+answer while you were watching this grass</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1700-1
+01:13:09.914 --> 01:13:10.249
+<v John Miller>grow?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1702-0
+01:13:17.649 --> 01:13:20.169
+<v John Miller>Uh, mediate our problem.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1705-0
+01:13:26.929 --> 01:13:29.409
+<v John Miller>So it wants a downgrade mediator.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1711-0
+01:13:35.169 --> 01:13:39.087
+<v Tarrants, Seth>That's interesting.
+So it that particular library requires a</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1711-1
+01:13:39.087 --> 01:13:42.362
+<v Tarrants, Seth>license.
+So that would be something that we'd need</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1709-0
+01:13:40.809 --> 01:13:41.049
+<v John Miller>Right.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1711-2
+01:13:42.362 --> 01:13:46.729
+<v Tarrants, Seth>to stipulate within the prompt as well,
+right? Or the instructions?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1714-0
+01:13:47.049 --> 01:13:50.451
+<v John Miller>Right,
+we would say you only use this version of</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1714-1
+01:13:50.451 --> 01:13:55.449
+<v John Miller>media R and nothing beyond it.
+Or maybe specify a different technology.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1713-0
+01:13:55.929 --> 01:13:56.049
+<v Tarrants, Seth>OK.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1718-0
+01:14:04.769 --> 01:14:09.209
+<v John Miller>All right, I think we can allow.net clean.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1728-0
+01:14:32.649 --> 01:14:35.129
+<v John Miller>Now we're down to 4 field tests.
+I think that's retty cool.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1731-0
+01:14:40.369 --> 01:14:44.249
+<v John Miller>All right, so let's move on.
+Let's clear our contexts.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1733-0
+01:14:46.609 --> 01:14:48.729
+<v John Miller>Uh, keep and continue.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1735-0
+01:14:51.609 --> 01:14:53.969
+<v John Miller>So do you want me to push this version?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1736-0
+01:14:55.889 --> 01:14:57.249
+<v Tarrants, Seth>Yes, please.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1738-0
+01:14:59.009 --> 01:15:00.369
+<v John Miller>All right, here we go.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1745-0
+01:15:11.089 --> 01:15:14.132
+<v John Miller>All right,
+let's close our files cause these</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1745-1
+01:15:14.132 --> 01:15:16.769
+<v John Miller>automatically get added to our context.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1747-0
+01:15:18.809 --> 01:15:22.249
+<v John Miller>All right, so now we can go back.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1750-0
+01:15:28.369 --> 01:15:30.409
+<v John Miller>I'm gonna skip that. There it is.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1752-0
+01:15:31.649 --> 01:15:34.049
+<v John Miller>So let's go ahead and implement.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1753-0
+01:15:35.849 --> 01:15:36.569
+<v John Miller>It's nice too.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1764-0
+01:15:54.769 --> 01:16:02.077
+<v John Miller>So with a lot of the installation pieces
+and requirements and prerequisites</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1764-1
+01:16:02.077 --> 01:16:08.230
+<v John Miller>already been satisfied,
+it should be able to go and produce the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1764-2
+01:16:08.230 --> 01:16:10.249
+<v John Miller>OR implement slice 2.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1768-0
+01:16:10.769 --> 01:16:17.556
+<v John Miller>Pretty much on its own and in slice one I
+I I I get went and got some food and when</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1768-1
+01:16:17.556 --> 01:16:23.858
+<v John Miller>I came back up after about 20 minutes or
+so it was waiting for input and so I</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1768-2
+01:16:23.858 --> 01:16:27.089
+<v John Miller>approved that input and it finished the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1770-0
+01:16:27.169 --> 01:16:32.169
+<v John Miller>The implementation implementation of
+slides one about about quarter 2.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1774-0
+01:16:33.809 --> 01:16:38.827
+<v John Miller>And this implementation should be
+somewhat faster, I would expect,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1774-1
+01:16:38.827 --> 01:16:44.369
+<v John Miller>because of the fact that it's the
+foundational slice is already in place.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1778-0
+01:16:47.969 --> 01:16:53.700
+<v John Miller>And with that foundational slice in place,
+I'd be really curious to try to implement</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1778-1
+01:16:53.700 --> 01:16:59.027
+<v John Miller>multiple slices on different branches at
+the same time and see if they see how</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1778-2
+01:16:59.027 --> 01:17:03.409
+<v John Miller>well they integrated when you try to move
+them all back to main.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1781-0
+01:17:03.769 --> 01:17:09.799
+<v John Miller>Because the one of the requirements that
+we stipulated was that it should be able</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1781-1
+01:17:09.799 --> 01:17:13.769
+<v John Miller>to be each slide should be independently
+implemented.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1784-0
+01:17:17.329 --> 01:17:21.605
+<v John Miller>And with the way the the way the feature
+is actually implemented in the actual</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1784-1
+01:17:21.605 --> 01:17:21.929
+<v John Miller>files.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1786-0
+01:17:23.089 --> 01:17:26.649
+<v John Miller>Where we have features and we have now
+basic arithmetic going in.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1787-0
+01:17:28.489 --> 01:17:28.729
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1790-0
+01:17:31.329 --> 01:17:35.609
+<v John Miller>There should be little contact,
+very little shared.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1791-0
+01:17:38.129 --> 01:17:40.209
+<v John Miller>Implementation outside of what goes into
+common.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1800-0
+01:17:56.969 --> 01:18:04.097
+<v John Miller>So here you can see that it's it's doing
+a lot of basic figuring out what need to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1800-1
+01:18:04.097 --> 01:18:09.313
+<v John Miller>do based on existing files that were in
+the context before.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1800-2
+01:18:09.313 --> 01:18:12.529
+<v John Miller>It might be a good idea for us to to.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1801-0
+01:18:12.849 --> 01:18:13.729
+<v John Miller>Start with a.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1807-0
+01:18:15.169 --> 01:18:20.360
+<v John Miller>A previous session file and say OK,
+here's the context from proceeding on.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1807-1
+01:18:20.360 --> 01:18:25.204
+<v John Miller>Once you have the foundation,
+this is the context that you need to to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1807-2
+01:18:25.204 --> 01:18:29.495
+<v John Miller>use in order for you to go ahead and
+implement another slice.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1807-3
+01:18:29.495 --> 01:18:32.609
+<v John Miller>Might make might speed the process up a
+bit.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1813-0
+01:18:44.929 --> 01:18:49.089
+<v John Miller>So it's modifying the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1815-0
+01:18:50.329 --> 01:18:52.969
+<v John Miller>Our calculator state.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1817-0
+01:18:55.649 --> 01:18:59.489
+<v John Miller>Actually, yeah, yeah,
+and the calculator itself.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1820-0
+01:19:06.529 --> 01:19:08.769
+<v John Miller>Main page and view model is changing.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1822-0
+01:19:10.649 --> 01:19:14.729
+<v John Miller>Adding some of our the core arithmetic
+features.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1832-0
+01:19:31.049 --> 01:19:37.190
+<v John Miller>And I think you get the the sense of what
+I was talking about earlier when I was</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1832-1
+01:19:37.190 --> 01:19:42.800
+<v John Miller>saying that once I started the process of
+creating the once I had the the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1832-2
+01:19:42.800 --> 01:19:48.941
+<v John Miller>requirements file that pretty much AI is
+assisting it by generating most of what</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1832-3
+01:19:48.941 --> 01:19:50.609
+<v John Miller>the implementation is.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1837-0
+01:19:50.809 --> 01:19:54.362
+<v John Miller>And what the instruction files were and
+the like.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1837-1
+01:19:54.362 --> 01:19:59.833
+<v John Miller>And what we're trying to do is assisted
+in debugging and assisted in in the,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1837-2
+01:19:59.833 --> 01:20:03.528
+<v John Miller>you know,
+making some decisions along the way on an</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1837-3
+01:20:03.528 --> 01:20:07.649
+<v John Miller>implementation.
+But this is largely an AI driven process.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1848-0
+01:20:36.569 --> 01:20:38.689
+<v John Miller>Any other questions?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1860-0
+01:21:08.369 --> 01:21:10.685
+<v John Miller>All right,
+it's gotten to a point where it thinks it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1860-1
+01:21:10.685 --> 01:21:11.209
+<v John Miller>can test it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1863-0
+01:21:18.089 --> 01:21:19.809
+<v John Miller>Some comilation errors to fix.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1878-0
+01:22:01.529 --> 01:22:04.529
+<v John Miller>All right, from six failures to three.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1886-0
+01:22:29.129 --> 01:22:31.809
+<v John Miller>And now all the tests are working.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1896-0
+01:22:57.409 --> 01:22:59.889
+<v John Miller>So let's compare what we did on the first
+day.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1898-0
+01:23:01.529 --> 01:23:04.409
+<v John Miller>With what we're doing today and.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1904-0
+01:23:07.049 --> 01:23:10.873
+<v John Miller>In my mind,
+the improvements I'm seeing is that we're</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1904-1
+01:23:10.873 --> 01:23:16.043
+<v John Miller>getting a much better implementation
+that's cleaner and we're getting it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1904-2
+01:23:16.043 --> 01:23:21.850
+<v John Miller>faster than we were getting it on on the
+first day because we're already now in a</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1904-3
+01:23:21.850 --> 01:23:25.249
+<v John Miller>position where we have a have a user
+interface.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1905-0
+01:23:25.529 --> 01:23:27.689
+<v John Miller>Or that we had to add that at the end.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1907-0
+01:23:29.169 --> 01:23:32.089
+<v John Miller>So now we can try.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1908-0
+01:23:33.729 --> 01:23:33.769
+<v John Miller>Uh.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1910-0
+01:23:39.329 --> 01:23:40.449
+<v John Miller>Operations.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1913-0
+01:23:47.329 --> 01:23:49.249
+<v John Miller>Uh, we can actually.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1915-0
+01:23:51.969 --> 01:23:54.049
+<v John Miller>Type in letters.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1917-0
+01:23:55.529 --> 01:23:58.209
+<v John Miller>That that that doesn't get accepted as
+input.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1933-0
+01:24:41.449 --> 01:24:44.929
+<v John Miller>Cool. Any questions on this?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1935-0
+01:24:47.369 --> 01:24:49.809
+<v John Miller>Yeah, I think that's a pretty good shot.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1942-0
+01:24:58.209 --> 01:25:01.218
+<v John Miller>Well,
+I think I I know I definitely can see the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1942-1
+01:25:01.218 --> 01:25:06.045
+<v John Miller>benefits of using this like the the
+vertical slicing approach because you we</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1942-2
+01:25:06.045 --> 01:25:11.248
+<v John Miller>can see that technology start to build up
+as we go along and we can verify it much</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1942-3
+01:25:11.248 --> 01:25:12.689
+<v John Miller>earlier in the process.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1945-0
+01:25:20.969 --> 01:25:24.162
+<v John Miller>Oh,
+now it's creating a summary document for</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1945-1
+01:25:24.162 --> 01:25:24.729
+<v John Miller>slice 2.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1949-0
+01:25:28.969 --> 01:25:33.775
+<v John Miller>So improvement I'd always see right now
+would be we're not specifying that we</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1949-1
+01:25:33.775 --> 01:25:38.581
+<v John Miller>need to that we want some UI testing and
+that that would be something that we</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1949-2
+01:25:38.581 --> 01:25:41.969
+<v John Miller>would want to make sure that we have in
+order to keep.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1952-0
+01:25:43.049 --> 01:25:49.177
+<v John Miller>Keep it from regressing and of course you
+know adding it to to our build process</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1952-1
+01:25:49.177 --> 01:25:50.009
+<v John Miller>would be a.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1953-0
+01:25:52.089 --> 01:25:53.769
+<v John Miller>Uh, desirable.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1964-0
+01:26:20.529 --> 01:26:21.129
+<v John Miller>Well.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1968-0
+01:26:32.289 --> 01:26:32.769
+<v John Miller>So um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1971-0
+01:26:36.569 --> 01:26:41.689
+<v John Miller>So I just noticed we missed something
+after I restarted Visual Studio code.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1973-0
+01:26:43.849 --> 01:26:45.969
+<v John Miller>Any idea what that might have been?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1976-0
+01:26:52.369 --> 01:26:54.849
+<v Carter, Jake>Is it that we're using the basic agent?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1975-0
+01:26:52.769 --> 01:26:53.609
+<v Harding, Mike>To use our chat.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1980-0
+01:26:55.449 --> 01:27:00.327
+<v John Miller>That's correct.
+We didn't switch back to the to the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1977-0
+01:26:55.769 --> 01:26:55.969
+<v Harding, Mike>Yeah.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1980-1
+01:27:00.327 --> 01:27:03.329
+<v John Miller>senior senior developer persona.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1984-0
+01:27:04.649 --> 01:27:09.086
+<v John Miller>So what I think we should do next now
+that we have a, you know,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1984-1
+01:27:09.086 --> 01:27:13.383
+<v John Miller>two implementations or just one
+implementation based on that,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1984-2
+01:27:13.383 --> 01:27:16.849
+<v John Miller>let's go ahead and see if we can ask that
+senior.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1985-0
+01:27:19.089 --> 01:27:20.689
+<v John Miller>Engineer to review the code.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1987-0
+01:27:22.569 --> 01:27:26.329
+<v John Miller>O It looks like it's finished.
+Let's keep all of this.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1991-0
+01:27:29.649 --> 01:27:34.729
+<v John Miller>Click it created 19 new files.
+Let's commit these changes.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1995-0
+01:27:52.169 --> 01:27:55.329
+<v John Miller>And then let's change our persona.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1997-0
+01:27:56.649 --> 01:27:59.129
+<v John Miller>To our senior SATA engineer.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/1999-0
+01:28:01.849 --> 01:28:02.849
+<v John Miller>And ask it to.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2001-0
+01:28:05.009 --> 01:28:06.889
+<v John Miller>Review this.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2003-0
+01:28:08.369 --> 01:28:09.049
+<v John Miller>Code base.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2007-0
+01:28:13.289 --> 01:28:17.807
+<v John Miller>So I think that's something that was a
+tool that we also have to add in to the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2007-1
+01:28:17.807 --> 01:28:21.809
+<v John Miller>persona to say that you're actually can
+look at the entire code base.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2015-0
+01:28:42.969 --> 01:28:45.729
+<v John Miller>Yeah, so I wanted to.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2017-0
+01:28:46.929 --> 01:28:49.329
+<v John Miller>close down these files.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2030-0
+01:29:25.729 --> 01:29:27.609
+<v John Miller>Did we not?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2042-0
+01:29:57.289 --> 01:30:00.889
+<v John Miller>It looks like it's, uh,
+like it's missing a tool.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2055-0
+01:30:35.609 --> 01:30:35.769
+<v John Miller>2.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2063-0
+01:30:56.609 --> 01:30:59.259
+<v John Miller>Yeah,
+not sure I'm gonna get what I want out of</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2063-1
+01:30:59.259 --> 01:31:00.529
+<v John Miller>this. We didn't really.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2066-0
+01:31:05.449 --> 01:31:10.689
+<v John Miller>So it's reading out the summary file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2068-0
+01:31:12.729 --> 01:31:18.079
+<v John Miller>All right, it's good.
+It does have some some opinions here at</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2068-1
+01:31:18.079 --> 01:31:18.769
+<v John Miller>the end.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2070-0
+01:31:20.889 --> 01:31:24.329
+<v John Miller>And it's actually something to things
+that are likely improved.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2084-0
+01:31:52.729 --> 01:31:56.682
+<v John Miller>Key strength,
+clean architecture with proper separation</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2084-1
+01:31:56.682 --> 01:31:59.928
+<v John Miller>concerns,
+comprehensive test covers with good</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2084-2
+01:31:59.928 --> 01:32:03.598
+<v John Miller>patterns,
+consistent use of modern C shar features,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2084-3
+01:32:03.598 --> 01:32:07.409
+<v John Miller>well organized code structure,
+priority improvements.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2089-0
+01:32:09.249 --> 01:32:14.107
+<v John Miller>Our add input validation to prevent
+invalid states.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2089-1
+01:32:14.107 --> 01:32:19.244
+<v John Miller>Extract the display formatting to a
+dedicated service.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2089-2
+01:32:19.244 --> 01:32:25.129
+<v John Miller>Implement the decimal point support.
+This one I don't kind of.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2091-0
+01:32:25.129 --> 01:32:31.240
+<v John Miller>Interested in why it thinks that it
+doesn't have decimals apart and then to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2091-1
+01:32:31.240 --> 01:32:33.089
+<v John Miller>consider thread safety.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2092-0
+01:32:34.449 --> 01:32:34.689
+<v John Miller>So.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2097-0
+01:32:36.609 --> 01:32:40.153
+<v John Miller>So anyway,
+so that give us some idea of what it is,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2097-1
+01:32:40.153 --> 01:32:44.514
+<v John Miller>but it it basically like the
+implementation pretty much a solid</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2097-2
+01:32:44.514 --> 01:32:48.057
+<v John Miller>software engineering practices,
+clean architecture,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2097-3
+01:32:48.057 --> 01:32:53.236
+<v John Miller>contraband testing and it again emphasize
+that it likes this vertical slice</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2097-4
+01:32:53.236 --> 01:32:53.849
+<v John Miller>approach.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2100-0
+01:32:57.049 --> 01:33:02.459
+<v John Miller>So we might got a might have gotten a
+slightly improved implementation had we</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2100-1
+01:33:02.459 --> 01:33:05.649
+<v John Miller>had used the proper persona when we did
+that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2104-0
+01:33:09.209 --> 01:33:16.169
+<v John Miller>So everything here is committed.
+So why don't we have that persona? Yes.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2103-0
+01:33:13.169 --> 01:33:13.489
+Sure.
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2109-0
+01:33:16.569 --> 01:33:19.919
+<v Harding, Mike>Yeah, I was gonna say,
+so if you use the persona to implement</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2109-1
+01:33:19.919 --> 01:33:22.945
+<v Harding, Mike>the third slice,
+will it clean up the previous stuff it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2109-2
+01:33:22.945 --> 01:33:25.809
+<v Harding, Mike>thinks is wrong or will it just add the
+third slice?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2113-0
+01:33:27.769 --> 01:33:33.760
+<v John Miller>But what we could do is we can implement
+the third slice and then we could ask it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2113-1
+01:33:33.760 --> 01:33:39.678
+<v John Miller>to review what it did and see if it if it
+flags those as errors or or or issues.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2113-2
+01:33:39.678 --> 01:33:43.769
+<v John Miller>That would be one way of evaluating that
+or and we can.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2114-0
+01:33:43.929 --> 01:33:45.409
+<v John Miller>We can.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2117-0
+01:33:47.049 --> 01:33:52.222
+<v John Miller>We can take a look at some of the
+recommendations here for testing</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2117-1
+01:33:52.222 --> 01:33:57.009
+<v John Miller>improvements that wants more integration
+tasks, for instance.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2119-0
+01:33:58.729 --> 01:34:02.209
+<v John Miller>And see if those get created and property
+based tests.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2125-0
+01:34:05.449 --> 01:34:11.588
+<v John Miller>So and this is not a bad approach I think
+to as we're going through the as we're</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2125-1
+01:34:11.588 --> 01:34:17.726
+<v John Miller>going through slice to slice is to is to
+build up a set of prompts that we would</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2125-2
+01:34:17.726 --> 01:34:23.940
+<v John Miller>want to apply to review to to assess help
+us into reviewing the implementation as</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2125-3
+01:34:23.940 --> 01:34:24.849
+<v John Miller>we go along.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2130-0
+01:34:25.369 --> 01:34:30.472
+<v John Miller>And potentially running those prompts in
+different models and see if those models</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2130-1
+01:34:30.472 --> 01:34:35.636
+<v John Miller>agree on things or disagree on things and
+see if that can help us find areas where</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2130-2
+01:34:35.636 --> 01:34:39.618
+<v John Miller>we can improve things.
+And you can approach this in a couple of</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2130-3
+01:34:39.618 --> 01:34:42.978
+<v John Miller>different ways.
+Once they make those recommendations,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2130-4
+01:34:42.978 --> 01:34:44.969
+<v John Miller>you can have them implement the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2134-0
+01:34:45.129 --> 01:34:48.605
+<v John Miller>Recommendations in the current state of
+the app,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2134-1
+01:34:48.605 --> 01:34:54.209
+<v John Miller>or you can actually go back and update
+your instruction files and roll back to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2134-2
+01:34:54.209 --> 01:34:59.813
+<v John Miller>the previous state and then see if you
+can improve the output by improving the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2134-3
+01:34:59.813 --> 01:35:01.089
+<v John Miller>instruction files.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2139-0
+01:35:01.449 --> 01:35:06.251
+<v John Miller>And I think the benefit of that approach
+is that the learnings that you get as you</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2139-1
+01:35:06.251 --> 01:35:10.648
+<v John Miller>go from slice to slice get get folded
+back into the into into the documents</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2139-2
+01:35:10.648 --> 01:35:15.507
+<v John Miller>that are producing the implementation and
+help prevent you having those same issues</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2139-3
+01:35:15.507 --> 01:35:18.689
+<v John Miller>rolling forward,
+which is what I've been trying to do.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2144-0
+01:35:19.209 --> 01:35:24.845
+<v John Miller>In my work like along these lines is to
+to to let the A I generate things to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2144-1
+01:35:24.845 --> 01:35:30.407
+<v John Miller>review the output that it produces and
+then see what I can do to update and</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2144-2
+01:35:30.407 --> 01:35:36.554
+<v John Miller>prove the instructions and the prompts in
+the chat modes in order for it to give me</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2144-3
+01:35:36.554 --> 01:35:38.969
+<v John Miller>a better output, a better output.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2145-0
+01:35:39.129 --> 01:35:39.769
+<v John Miller>The first time.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2146-0
+01:35:42.329 --> 01:35:44.889
+<v John Miller>So let's go ahead and try for slice 3.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2151-0
+01:35:56.329 --> 01:35:58.834
+<v Majernik, Peter>John,
+are these custom chat modes more</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2151-1
+01:35:58.834 --> 01:36:00.889
+<v Majernik, Peter>expensive than the regular ones?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2157-0
+01:36:00.969 --> 01:36:05.267
+<v John Miller>No, no. I mean, well,
+I would say they're they're no more</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2153-0
+01:36:03.249 --> 01:36:04.369
+<v Majernik, Peter>It's the same OK.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2157-1
+01:36:05.267 --> 01:36:10.824
+<v John Miller>expensive than an instruction file or a
+profile in the sense that they get</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2157-2
+01:36:10.824 --> 01:36:15.788
+<v John Miller>tokenized in the same way.
+The only difference I think between the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2157-3
+01:36:15.788 --> 01:36:18.529
+<v John Miller>agent mode and the edit mode is that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2162-0
+01:36:18.729 --> 01:36:25.063
+<v John Miller>And the agent mode, out mode and *** mode,
+those are essentially prompts that are</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2162-1
+01:36:25.063 --> 01:36:29.388
+<v John Miller>built in and optimized, you know,
+by the by the vendor.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2162-2
+01:36:29.388 --> 01:36:35.412
+<v John Miller>So they may be more efficient and and
+less costly in terms of tokens than the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2162-3
+01:36:35.412 --> 01:36:37.729
+<v John Miller>ones we're able to do by hand.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2167-0
+01:36:38.409 --> 01:36:41.511
+<v Majernik, Peter>OK.
+And then if you're on a complex prompt</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2167-1
+01:36:41.511 --> 01:36:46.416
+<v Majernik, Peter>like what you're doing here,
+just implement slides free and it runs</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2167-2
+01:36:46.416 --> 01:36:50.312
+<v Majernik, Peter>for half an hour.
+Is that a single request or is that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2167-3
+01:36:50.312 --> 01:36:55.289
+<v Majernik, Peter>multiple requests in terms of token usage
+or not token usage do you?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2166-0
+01:36:55.289 --> 01:36:56.769
+<v John Miller>In terms.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2169-0
+01:36:55.289 --> 01:36:59.609
+<v Majernik, Peter>Allowance that we have with the
+enterprise subscription.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2175-0
+01:37:01.449 --> 01:37:07.389
+<v John Miller>So far as I understand it's this is a
+single request that we're making and as</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2175-1
+01:37:07.389 --> 01:37:13.633
+<v John Miller>long as it the request isn't so big that
+it that it overflows some buffer that in</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2172-0
+01:37:08.129 --> 01:37:08.249
+<v Majernik, Peter>OK.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2175-2
+01:37:13.633 --> 01:37:18.049
+<v John Miller>terms of processing it,
+it's considered a single request.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2176-0
+01:37:18.489 --> 01:37:18.729
+<v John Miller>And.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2179-0
+01:37:18.649 --> 01:37:22.972
+<v Majernik, Peter>So do we know what what those limits are?
+Is that obvious?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2179-1
+01:37:22.972 --> 01:37:25.609
+<v Majernik, Peter>Is there any kind of guide for this?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2177-0
+01:37:23.169 --> 01:37:24.609
+<v John Miller>Well, sometime.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2184-0
+01:37:26.289 --> 01:37:29.316
+<v John Miller>Yeah,
+I I mean you'll see some things when your</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2184-1
+01:37:29.316 --> 01:37:32.153
+<v John Miller>when your context window starts to get
+full,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2184-2
+01:37:32.153 --> 01:37:37.072
+<v John Miller>you start to get messages back indicating
+that it was not able to handle your</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2184-3
+01:37:37.072 --> 01:37:42.305
+<v John Miller>request or other things or other messages
+similar to that where it's having issues</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2184-4
+01:37:42.305 --> 01:37:44.449
+<v John Miller>that or can't respond to directly.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2188-0
+01:37:44.569 --> 01:37:50.043
+<v John Miller>And those are usually indications that
+you're starting to get close to where</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2188-1
+01:37:50.043 --> 01:37:53.527
+<v John Miller>you're filling up your context window.
+You know,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2188-2
+01:37:53.527 --> 01:37:59.214
+<v John Miller>I I I think there's a there certainly the
+copilot team understands that we need</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2188-3
+01:37:59.214 --> 01:38:02.129
+<v John Miller>better transparency into what it's doing.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2192-0
+01:38:02.169 --> 01:38:06.469
+<v John Miller>Behind the scenes in order for us to be
+able to control that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2192-1
+01:38:06.469 --> 01:38:11.878
+<v John Miller>And so I'm hoping that you know the next
+week that we might even get some new</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2192-2
+01:38:11.878 --> 01:38:13.889
+<v John Miller>features announced that will.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2197-0
+01:38:15.209 --> 01:38:20.439
+<v John Miller>Give us more guidance in terms of being
+able to control the number of tokens get</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2197-1
+01:38:20.439 --> 01:38:23.473
+<v John Miller>generated,
+at least at least evaluate what the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2197-2
+01:38:23.473 --> 01:38:28.767
+<v John Miller>problem is or and give us more feedback
+in terms of when it's running into issues</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2197-3
+01:38:28.767 --> 01:38:33.609
+<v John Miller>like that that we can that we have some
+some idea that they are occurring.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2202-0
+01:38:33.929 --> 01:38:37.615
+<v Majernik, Peter>Yeah, I'm just trying.
+I'm starting to wonder like if you craft</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2202-1
+01:38:37.615 --> 01:38:42.338
+<v Majernik, Peter>these instruction files and the prompt
+files properly, like everything is set up,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2202-2
+01:38:42.338 --> 01:38:45.621
+<v Majernik, Peter>you already went through 10 iterations
+and it's perfect.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2202-3
+01:38:45.621 --> 01:38:50.056
+<v Majernik, Peter>Then with a singular request you can
+essentially generate a fully functional</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2202-4
+01:38:50.056 --> 01:38:50.689
+<v Majernik, Peter>app almost.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2203-0
+01:38:51.049 --> 01:38:54.129
+<v Majernik, Peter>That's what it feels like.
+Is that an incorrect or something?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2209-0
+01:38:55.449 --> 01:38:59.339
+<v John Miller>I would say that's,
+I think that's the we're moving towards</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2209-1
+01:38:59.339 --> 01:39:03.619
+<v John Miller>that goal, but I don't,
+I don't think that it's something that we</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2209-2
+01:39:03.619 --> 01:39:08.417
+<v John Miller>could do today and it wouldn't be
+something I would feel comfortable with</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2209-3
+01:39:08.417 --> 01:39:12.047
+<v John Miller>today simply because as we've gone
+through the process,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2209-4
+01:39:12.047 --> 01:39:15.289
+<v John Miller>we've seen issues that would pop up in
+different.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2213-0
+01:39:15.289 --> 01:39:20.111
+<v John Miller>Files or different instruction files or
+different pieces of code that get</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2213-1
+01:39:20.111 --> 01:39:23.239
+<v John Miller>generated.
+Just the fact that we ran the senior</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2213-2
+01:39:23.239 --> 01:39:28.452
+<v John Miller>software engineer against the code that
+we already have and it was able to give</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2213-3
+01:39:28.452 --> 01:39:31.449
+<v John Miller>us some suggestions in terms of
+improvements.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2217-0
+01:39:31.529 --> 01:39:36.436
+<v John Miller>Would tell me that that if we really care
+about the implementation of being being</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2217-1
+01:39:36.436 --> 01:39:41.104
+<v John Miller>maintainable is that we we definitely
+want to try to stay in the loop as much</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2217-2
+01:39:41.104 --> 01:39:45.772
+<v John Miller>as we can and this process that we're
+going through here in the in the course</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2217-3
+01:39:45.772 --> 01:39:46.729
+<v John Miller>of a you know a.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2222-0
+01:39:47.129 --> 01:39:51.076
+<v John Miller>1/2 a day to reduce all of this code.
+I would expect to take longer just in</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2222-1
+01:39:51.076 --> 01:39:54.139
+<v John Miller>terms of the pre,
+the pre thought that we want to put into</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2222-2
+01:39:54.139 --> 01:39:56.943
+<v John Miller>the instructions and the testing of the
+instructions,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2222-3
+01:39:56.943 --> 01:40:01.305
+<v John Miller>the prompts and the chat modes to just to
+be sure that we're getting what we expect</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2222-4
+01:40:01.305 --> 01:40:05.459
+<v John Miller>out of them and then the review process
+on the other end once we were satisfied</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2222-5
+01:40:05.459 --> 01:40:06.289
+<v John Miller>that we had the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2227-0
+01:40:07.129 --> 01:40:12.370
+<v John Miller>Correct prompts and chat modes and
+instructions on the front end that we</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2227-1
+01:40:12.370 --> 01:40:16.031
+<v John Miller>were still getting what we wanted on the
+back end.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2227-2
+01:40:16.031 --> 01:40:19.477
+<v John Miller>So I would slow your roll a little bit.
+I mean,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2227-3
+01:40:19.477 --> 01:40:25.149
+<v John Miller>I definitely have gotten myself into
+trouble by not paying enough attention to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2227-4
+01:40:25.149 --> 01:40:26.369
+<v John Miller>that on projects.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2230-0
+01:40:26.649 --> 01:40:32.753
+<v John Miller>And had to rollback, you know,
+major implementations because it turned</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2230-1
+01:40:32.753 --> 01:40:38.943
+<v John Miller>out that the AI was going down a path
+that wasn't actually sustainable.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2230-2
+01:40:38.943 --> 01:40:43.929
+<v John Miller>And so that so and the other way of
+thinking about it is.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2233-0
+01:40:44.009 --> 01:40:49.555
+<v John Miller>If you think about it from the
+perspective that this is AI assisted and</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2233-1
+01:40:49.555 --> 01:40:51.249
+<v John Miller>not just AI generated.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2235-0
+01:40:52.969 --> 01:40:55.499
+<v John Miller>And you need to stay on top of this code
+base.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2235-1
+01:40:55.499 --> 01:40:58.889
+<v John Miller>You need to stay on top of what these
+instruction, right? You.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2237-0
+01:40:56.209 --> 01:40:59.913
+<v Majernik, Peter>Yeah, of course. OK, I'm glad.
+I'm glad you said that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2237-1
+01:40:59.913 --> 01:41:01.529
+<v Majernik, Peter>So we still need humans.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2241-0
+01:41:01.449 --> 01:41:06.115
+<v John Miller>Oh yeah, yeah. Like I said, I don't,
+particularly when you're dealing with a a</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2241-1
+01:41:06.115 --> 01:41:10.308
+<v John Miller>problem domain where you've got
+regulatory compliance to deal with and</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2241-2
+01:41:10.308 --> 01:41:13.084
+<v John Miller>you've got, you know,
+people's lives at stake.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2241-3
+01:41:13.084 --> 01:41:17.809
+<v John Miller>I would not feel comfortable just letting
+pushing a button and walking away and</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2241-4
+01:41:17.809 --> 01:41:19.049
+<v John Miller>then coming back and.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2246-0
+01:41:19.729 --> 01:41:23.550
+<v John Miller>A couple of days and saying we're ready
+to go to production, you know,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2246-1
+01:41:23.550 --> 01:41:28.015
+<v John Miller>that's that I think is still so far away
+the way and I think it's going to take us</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2246-2
+01:41:28.015 --> 01:41:30.706
+<v John Miller>a while even just in the models that we
+have now,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2246-3
+01:41:30.706 --> 01:41:35.172
+<v John Miller>which are I think capable and I think if
+you look at the implementation that we're</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2246-4
+01:41:35.172 --> 01:41:36.409
+<v John Miller>getting now, this is a.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2247-0
+01:41:36.409 --> 01:41:40.089
+<v John Miller>I think it's fairly highly.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2250-0
+01:41:41.089 --> 01:41:48.083
+<v John Miller>Competent implementation, right? You know,
+I think it is using a from the</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2250-1
+01:41:48.083 --> 01:41:49.689
+<v John Miller>perspective of a.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2251-0
+01:41:51.369 --> 01:41:51.609
+<v Majernik, Peter>Hmm.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2254-0
+01:41:55.089 --> 01:41:58.449
+<v John Miller>So what did it do here?
+Didn't create any files.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2257-0
+01:42:07.289 --> 01:42:07.609
+<v John Miller>The.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2258-0
+01:42:09.049 --> 01:42:11.889
+<v Majernik, Peter>Well,
+we have the senior software thing enabled.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2262-0
+01:42:09.129 --> 01:42:19.169
+<v John Miller>Oh, you jinxed us. You asked the question.
+You asked the question.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2263-0
+01:42:14.649 --> 01:42:19.729
+<v Majernik, Peter>Oh, I'm sorry.
+I'm gonna stop asking questions.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2266-0
+01:42:20.489 --> 01:42:25.981
+<v John Miller>We asked a question and mute the response
+length on our limit so we could try it</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2266-1
+01:42:25.981 --> 01:42:28.489
+<v John Miller>again. Sometimes this this will work.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2267-0
+01:42:30.089 --> 01:42:32.649
+<v Majernik, Peter>OK, so there are limits. Good to know.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2271-0
+01:42:32.489 --> 01:42:36.327
+<v John Miller>Yep.
+And there's another problem that we</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2271-1
+01:42:36.327 --> 01:42:41.849
+<v John Miller>haven't run into yet that is configurable
+is that it will.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2276-0
+01:42:44.729 --> 01:42:49.660
+<v John Miller>It will prompt you to say to say I've
+been working on this problem for a long</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2276-1
+01:42:49.660 --> 01:42:53.390
+<v John Miller>time. Do you want to continue?
+And that's a there's a set,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2274-0
+01:42:51.769 --> 01:42:53.409
+<v Majernik, Peter>Yeah, I've seen that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2276-2
+01:42:53.390 --> 01:42:58.574
+<v John Miller>there's a setting that you can increase
+that and I've doubled the size of that on</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2276-3
+01:42:58.574 --> 01:43:00.849
+<v John Miller>in my current workstation right now.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2280-0
+01:43:01.129 --> 01:43:04.554
+<v John Miller>To try to keep it from popping up sooner,
+I I I said.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2280-1
+01:43:04.554 --> 01:43:07.788
+<v John Miller>I'm not know what what the upper limit of
+that is,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2280-2
+01:43:07.788 --> 01:43:11.846
+<v John Miller>but I get that message a lot less now
+because having done that,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2280-3
+01:43:11.846 --> 01:43:14.129
+<v John Miller>I think that's in one of the slides.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2281-0
+01:43:15.409 --> 01:43:16.449
+<v John Miller>But that setting is.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2284-0
+01:43:17.809 --> 01:43:21.555
+<v Carter, Jake>Can you click on that? Uh,
+it's like the wrench and screwdriver</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2284-1
+01:43:21.555 --> 01:43:26.003
+<v Carter, Jake>symbol to like configure the tools.
+A little bit suspicious that we haven't</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2284-2
+01:43:26.003 --> 01:43:26.529
+<v Carter, Jake>actually.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2289-0
+01:43:27.849 --> 01:43:31.366
+<v Carter, Jake>Yeah,
+see we haven't actually enabled the edit</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2289-1
+01:43:31.366 --> 01:43:34.808
+<v Carter, Jake>tool.
+I I think whenever like earlier when we</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2289-2
+01:43:34.808 --> 01:43:40.569
+<v Carter, Jake>tried to get it to reconfigure this mode,
+I don't think it did it correctly.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2293-0
+01:43:43.209 --> 01:43:48.460
+<v John Miller>So let's stop this then,
+since it's not gonna do us any good.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2293-1
+01:43:48.460 --> 01:43:54.049
+<v John Miller>Let's go back and revisit these.
+There's 36 of the built in ones.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2294-0
+01:43:55.609 --> 01:43:57.729
+<v John Miller>For us.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2298-0
+01:44:01.409 --> 01:44:05.161
+<v John Miller>Right so well,
+so this is a question I don't have an</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2298-1
+01:44:05.161 --> 01:44:09.479
+<v John Miller>answer to at at the moment,
+but if the chat if the chat mode</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2298-2
+01:44:09.479 --> 01:44:12.169
+<v John Miller>specifies it needs to be able to edit.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2300-0
+01:44:13.729 --> 01:44:17.209
+<v John Miller>Does that assume that you have to have
+the the tool enabled as well?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2301-0
+01:44:18.249 --> 01:44:18.329
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2304-0
+01:44:18.249 --> 01:44:23.969
+<v Carter, Jake>That's my understanding, but you know,
+I also am not an expert, so.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2303-0
+01:44:22.289 --> 01:44:22.369
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2305-0
+01:44:25.249 --> 01:44:25.289
+<v John Miller>Oh.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2309-0
+01:44:27.849 --> 01:44:32.449
+<v John Miller>So that we don't need the Azure one,
+don't need the SQL Server one,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2309-1
+01:44:32.449 --> 01:44:37.049
+<v John Miller>we don't need the mark one and the code
+review one might be useful.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2311-0
+01:44:38.289 --> 01:44:41.689
+<v John Miller>Here's where we deal with um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2314-0
+01:44:42.569 --> 01:44:50.209
+<v John Miller>Let's make sure we have the ones we want
+for nothing for Azure AI toolkits.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2315-0
+01:44:52.649 --> 01:44:53.409
+<v John Miller>Uh, that looks good.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2318-0
+01:45:01.209 --> 01:45:03.569
+<v John Miller>Uh, let's close down.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2321-0
+01:45:09.409 --> 01:45:11.769
+<v John Miller>All right. Third time's a charm.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2323-0
+01:45:18.649 --> 01:45:20.609
+<v John Miller>Still time for questions.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2326-0
+01:45:23.729 --> 01:45:28.566
+<v Majernik, Peter>Are you going to e-mail us all the
+recordings from all these sessions after</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2326-1
+01:45:28.566 --> 01:45:29.329
+<v Majernik, Peter>we are done?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2328-0
+01:45:28.609 --> 01:45:34.073
+<v John Miller>Yeah, I think,
+I I think LB is gonna be taking care of</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2328-1
+01:45:34.073 --> 01:45:34.569
+<v John Miller>that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2329-0
+01:45:35.089 --> 01:45:36.249
+<v Majernik, Peter>OK. Thanks.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2330-0
+01:45:36.929 --> 01:45:37.089
+<v John Miller>Right.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2333-0
+01:45:38.089 --> 01:45:42.169
+<v John Miller>And I'm not sure how she's gonna
+distribute them, but uh.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2335-0
+01:45:49.689 --> 01:45:51.809
+<v John Miller>Oh, 12 two days in this one.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2338-0
+01:45:56.249 --> 01:45:58.969
+<v John Miller>So it's working on a directory structure.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2343-0
+01:46:04.889 --> 01:46:07.916
+<v Majernik, Peter>I I have one more question about those
+chat modes.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2343-1
+01:46:07.916 --> 01:46:12.724
+<v Majernik, Peter>So if you configure something called the
+senior software engineer that's doing a</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2343-2
+01:46:12.724 --> 01:46:15.929
+<v Majernik, Peter>perfect job,
+why would you ever want to not use that?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2349-0
+01:46:18.569 --> 01:46:21.466
+<v John Miller>Well,
+you would want to have a senior test</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2344-0
+01:46:18.689 --> 01:46:18.929
+<v Majernik, Peter>Like.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2349-1
+01:46:21.466 --> 01:46:26.855
+<v John Miller>engineer so that you could use that test
+engineer to to review the tests and to</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2349-2
+01:46:26.855 --> 01:46:32.378
+<v John Miller>implement additional tests for instance.
+So there's different roles that you have</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2349-3
+01:46:32.378 --> 01:46:37.969
+<v John Miller>in your software team and you can create
+a a role for create a chat mode for each.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2354-0
+01:46:38.569 --> 01:46:44.133
+<v John Miller>One of them that can assist them in doing
+their job with the assistance of AI.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2354-1
+01:46:44.133 --> 01:46:49.274
+<v John Miller>So that's one way of looking at it.
+I don't see necessarily a need for a</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2354-2
+01:46:49.274 --> 01:46:53.569
+<v John Miller>junior software engineer role, right?
+That seems to me like.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2353-0
+01:46:51.129 --> 01:46:53.929
+<v Majernik, Peter>Yeah, that's what I was wondering about.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2359-0
+01:46:53.929 --> 01:46:58.791
+<v John Miller>But then again, you might actually,
+you know, you you could think that, OK,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2359-1
+01:46:58.791 --> 01:47:03.845
+<v John Miller>if you are a junior software engineer,
+what additional kinds of support do you</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2359-2
+01:47:03.845 --> 01:47:06.915
+<v John Miller>need in order to be for to be effective,
+right?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2359-3
+01:47:06.915 --> 01:47:11.329
+<v John Miller>There might be tools that you're not
+allowed to use. There might be.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2363-0
+01:47:11.889 --> 01:47:16.394
+<v John Miller>Functions or prompts that you shouldn't
+be able to execute.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2363-1
+01:47:16.394 --> 01:47:22.326
+<v John Miller>Things like that might be something way
+that you can to make a make a software</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2363-2
+01:47:22.326 --> 01:47:26.831
+<v John Miller>engineer more functional.
+You might give them access or to,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2363-3
+01:47:26.831 --> 01:47:29.609
+<v John Miller>you know, more detailed instructions.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2368-0
+01:47:30.009 --> 01:47:33.044
+<v John Miller>On how to accomplish things like,
+you know,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2368-1
+01:47:33.044 --> 01:47:37.596
+<v John Miller>how they can go about creating new
+instruction files or the like.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2368-2
+01:47:37.596 --> 01:47:42.630
+<v John Miller>So there there could be a role,
+a role for that. I'd have to think more,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2367-0
+01:47:41.769 --> 01:47:43.249
+<v Majernik, Peter>OK, nice.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2368-3
+01:47:42.630 --> 01:47:44.009
+<v John Miller>think more about it.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2369-0
+01:47:45.209 --> 01:47:46.049
+<v John Miller>But yeah.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2373-0
+01:47:49.089 --> 01:47:55.133
+<v Majernik, Peter>So it sounds like either way we should we
+should create our personas and we should</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2371-0
+01:47:49.849 --> 01:47:50.649
+<v John Miller>But you might just.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2373-1
+01:47:55.133 --> 01:47:57.609
+<v Majernik, Peter>use these. It kind of makes sense.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2374-0
+01:47:55.609 --> 01:47:58.169
+<v John Miller>I think that makes sense.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2378-0
+01:48:09.849 --> 01:48:12.342
+<v John Miller>Well,
+let's see if we can get this one in under</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2378-1
+01:48:12.342 --> 01:48:12.809
+<v John Miller>the wire.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2382-0
+01:48:14.649 --> 01:48:18.389
+<v John Miller>Let's switch the slides.
+Maybe there's something else we can talk</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2382-1
+01:48:18.389 --> 01:48:20.089
+<v John Miller>about there before we wrap up.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2386-0
+01:48:31.089 --> 01:48:35.529
+<v John Miller>Let's start it from the beginning,
+so let me jum down towards the end.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2391-0
+01:48:48.689 --> 01:48:51.609
+<v John Miller>No, I'm looking.
+I'm not seeing too much here.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2398-0
+01:49:05.569 --> 01:49:11.024
+<v Majernik, Peter>Are there any books you would recommend
+on this topic or do we just talk to a</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2398-1
+01:49:11.024 --> 01:49:14.590
+<v Majernik, Peter>copilot now?
+copilot is going to answer all of our</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2398-2
+01:49:14.590 --> 01:49:15.289
+<v Majernik, Peter>questions.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2402-0
+01:49:16.129 --> 01:49:19.855
+<v John Miller>Oh,
+what was that one book I was recommending</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2402-1
+01:49:19.855 --> 01:49:25.525
+<v John Miller>to people? It was it was something.
+It was something on the lines of.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2402-2
+01:49:25.525 --> 01:49:32.409
+<v John Miller>I'll find it for you now and reference it,
+but the basic gist of it was how to tell.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2406-0
+01:49:32.609 --> 01:49:40.575
+<v John Miller>When A I was basically pulling your leg
+into trying to trying to frame and manage</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2406-1
+01:49:40.575 --> 01:49:48.249
+<v John Miller>expectations about what A I can and
+cannot do and I thought that was a useful.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2411-0
+01:49:48.609 --> 01:49:53.076
+<v John Miller>Way of grounding our work because it's
+very easy.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2411-1
+01:49:53.076 --> 01:50:00.402
+<v John Miller>I think when you start to work with this
+all the time to just kind of trust the A</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2411-2
+01:50:00.402 --> 01:50:06.209
+<v John Miller>I more than you should and because it's
+the easiest path and so.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2414-0
+01:50:06.369 --> 01:50:10.462
+<v John Miller>I think it's useful to keep in mind that
+we're only dealing with a prediction</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2414-1
+01:50:10.462 --> 01:50:13.348
+<v John Miller>engine and not a true knowledge engine.
+And so anyway,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2414-2
+01:50:13.348 --> 01:50:15.289
+<v John Miller>those kinds of books are interesting.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2415-0
+01:50:19.369 --> 01:50:19.529
+<v John Miller>Uh.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2417-0
+01:50:21.409 --> 01:50:24.089
+<v John Miller>I What did I see?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2422-0
+01:50:26.769 --> 01:50:32.026
+<v John Miller>There was a I listened to Jon Stewart's
+podcast and he had somebody on that was</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2422-1
+01:50:32.026 --> 01:50:37.086
+<v John Miller>explaining to him what AI, what AI was,
+which is really great because it was</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2422-2
+01:50:37.086 --> 01:50:42.344
+<v John Miller>obviously trying to talk to a general
+audience. I thought that was interesting.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2422-3
+01:50:42.344 --> 01:50:43.329
+<v John Miller>I can find you.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2426-0
+01:50:43.849 --> 01:50:47.989
+<v John Miller>I'll link to that.
+There's a couple of podcasts that I</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2426-1
+01:50:47.989 --> 01:50:53.785
+<v John Miller>listened to that I that I help me keep up
+to date on what's what's going on,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2426-2
+01:50:53.785 --> 01:50:59.129
+<v John Miller>both from the perspective of, you know,
+what's coming new in terms of.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2430-0
+01:50:59.329 --> 01:51:05.277
+<v John Miller>A I features and as well as some of the
+how to deal with or how how the industry</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2430-1
+01:51:05.277 --> 01:51:11.445
+<v John Miller>is dealing with some of the environmental
+impacts of of building the infrastructure</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2430-2
+01:51:11.445 --> 01:51:14.529
+<v John Miller>that are necessary to support these a I's.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2433-0
+01:51:14.769 --> 01:51:23.169
+<v John Miller>Just recently I heard that Meta is
+building a a.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2436-0
+01:51:24.969 --> 01:51:32.750
+<v John Miller>A data installation for handling a I
+that's as big as the in Texas that as big</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2436-1
+01:51:32.750 --> 01:51:35.409
+<v John Miller>as the island of Manhattan.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2442-0
+01:51:37.689 --> 01:51:43.920
+<v John Miller>Which is mind boggling to think and the
+you know the implications of something</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2438-0
+01:51:41.689 --> 01:51:41.849
+<v Majernik, Peter>Yep.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2442-1
+01:51:43.920 --> 01:51:50.072
+<v John Miller>like that from just just from the power
+perspective and how having to support</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2442-2
+01:51:50.072 --> 01:51:54.409
+<v John Miller>something like that is is something to
+keep an eye on.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2444-0
+01:51:59.129 --> 01:52:02.729
+<v Majernik, Peter>Does anybody else have questions?
+I I still have more.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2445-0
+01:52:03.929 --> 01:52:03.969
+<v Majernik, Peter>I.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2447-0
+01:52:05.969 --> 01:52:06.809
+<v Harding, Mike>Gone.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2453-0
+01:52:06.209 --> 01:52:09.434
+<v Majernik, Peter>So I I just have one more actually about
+the models.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2453-1
+01:52:09.434 --> 01:52:13.085
+<v Majernik, Peter>So what if I was to create a model that's
+called, you know,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2453-2
+01:52:13.085 --> 01:52:17.466
+<v Majernik, Peter>teleflex knowledge base and it knows
+everything about everything inside</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2453-3
+01:52:17.466 --> 01:52:21.969
+<v Majernik, Peter>teleflex? How would I go about that?
+Or is this not a couple of question?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2452-0
+01:52:20.529 --> 01:52:20.609
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2458-0
+01:52:22.769 --> 01:52:26.138
+<v John Miller>Well,
+I mean if you have a model you can add</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2458-1
+01:52:26.138 --> 01:52:29.506
+<v John Miller>that to copilot and you can create your
+own,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2458-2
+01:52:29.506 --> 01:52:35.570
+<v John Miller>you know knowledge bases based on those
+and include those as a as as a tool that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2458-3
+01:52:35.570 --> 01:52:38.489
+<v John Miller>they that you can take advantage of so.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2463-0
+01:52:38.849 --> 01:52:44.280
+<v John Miller>In terms of creating those models,
+the first thing place I would look for</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2463-1
+01:52:44.280 --> 01:52:50.150
+<v John Miller>that is the is one of the tools that you
+have available to you in our tool list</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2463-2
+01:52:50.150 --> 01:52:56.021
+<v John Miller>would be is the AI toolkit for Visual
+Studio code will allow you to add that AI</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2463-3
+01:52:56.021 --> 01:52:58.369
+<v John Miller>into Visual Studio and give you.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2466-0
+01:52:58.489 --> 01:53:04.531
+<v John Miller>Guidance on that and then go look at some
+of the AI support in Azure.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2466-1
+01:53:04.531 --> 01:53:09.969
+<v John Miller>If you're using Azure,
+that will help you actually build those</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2466-2
+01:53:09.969 --> 01:53:13.249
+<v John Miller>models and train those models on your.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2467-0
+01:53:13.969 --> 01:53:14.089
+<v John Miller>Um.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2471-0
+01:53:15.609 --> 01:53:21.822
+<v John Miller>On your knowledge base and you could also,
+depending upon what your the the state of</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2471-1
+01:53:21.822 --> 01:53:25.768
+<v John Miller>your code is,
+you could train it on your code base as</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2471-2
+01:53:25.768 --> 01:53:27.449
+<v John Miller>well and it would then.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2476-0
+01:53:26.489 --> 01:53:31.898
+<v Majernik, Peter>So, so when you say, oh, I'm sorry,
+I I just when you say knowledge base,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2472-0
+01:53:29.329 --> 01:53:30.289
+<v John Miller>Go ahead.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2476-1
+01:53:31.898 --> 01:53:35.406
+<v Majernik, Peter>knowledge base,
+what is the definition of that?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2476-2
+01:53:35.406 --> 01:53:40.523
+<v Majernik, Peter>Is that just a bunch of blobs?
+Like could it be anything source code,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2476-3
+01:53:40.523 --> 01:53:42.569
+<v Majernik, Peter>documents, all these things?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2480-0
+01:53:42.209 --> 01:53:45.668
+<v John Miller>It could be all those things, right?
+It could be, you know,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2480-1
+01:53:45.668 --> 01:53:50.338
+<v John Miller>you certainly could train it on all any
+documentation that you think is relevant</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2480-2
+01:53:50.338 --> 01:53:54.892
+<v John Miller>that you want to continue to use as a
+part of their co-generation process that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2480-3
+01:53:54.892 --> 01:53:57.370
+<v John Miller>thinks,
+that thinks that values that could</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2480-4
+01:53:57.370 --> 01:53:57.889
+<v John Miller>describe.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2484-0
+01:53:58.889 --> 01:54:04.833
+<v John Miller>You know specific requirements that you
+have in terms of compliance.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2484-1
+01:54:04.833 --> 01:54:11.724
+<v John Miller>You can you can upload those into your
+knowledge base and then you can then add</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2484-2
+01:54:11.724 --> 01:54:15.169
+<v John Miller>to your instruction file that that that.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2489-0
+01:54:15.169 --> 01:54:19.371
+<v John Miller>That your your code needs to be compliant
+with all of these,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2489-1
+01:54:19.371 --> 01:54:23.297
+<v John Miller>all of these compliance or demands that
+you have on you,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2489-2
+01:54:23.297 --> 01:54:28.394
+<v John Miller>and then you could provide examples of
+how you actually or strategies for</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2489-3
+01:54:28.394 --> 01:54:30.529
+<v John Miller>actually how you address those.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2492-0
+01:54:30.929 --> 01:54:34.527
+<v John Miller>Compliance issues.
+So you might not just say that you need</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2492-1
+01:54:34.527 --> 01:54:38.490
+<v John Miller>to be compliant to this,
+but this is how you should be compliant</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2492-2
+01:54:38.490 --> 01:54:43.489
+<v John Miller>with it and what you wanted and it will
+then be be part of your instruction file.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2498-0
+01:54:44.449 --> 01:54:49.666
+<v Majernik, Peter>And then then one more question I thought
+of when when we are talking about like</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2498-1
+01:54:49.666 --> 01:54:53.724
+<v Majernik, Peter>use cases and the ORM,
+you know generating code from diagrams,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2498-2
+01:54:53.724 --> 01:54:59.135
+<v Majernik, Peter>do you have any recommendations on how to
+capture these use cases like any industry</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2495-0
+01:54:54.089 --> 01:54:54.409
+<v John Miller>Yep.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2498-3
+01:54:59.135 --> 01:55:00.809
+<v Majernik, Peter>standards that you prefer?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2502-0
+01:55:03.009 --> 01:55:10.026
+<v John Miller>I don't know of any industry standards,
+but I would be interested in saying, OK,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2502-1
+01:55:10.026 --> 01:55:17.043
+<v John Miller>here's a document or a set of documents.
+Can you produce an ARM model from those</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2502-2
+01:55:17.043 --> 01:55:18.689
+<v John Miller>documents and then?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2507-0
+01:55:19.089 --> 01:55:21.933
+<v John Miller>You know,
+provide it with a doc within with a with</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2507-1
+01:55:21.933 --> 01:55:26.450
+<v John Miller>knowledge about you know what that what
+an or model actually consists of so that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2507-2
+01:55:26.450 --> 01:55:30.967
+<v John Miller>it would know how to actually create them
+and see if it can produce that or help</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2507-3
+01:55:30.967 --> 01:55:34.703
+<v John Miller>you produce those models.
+And that would be an interesting process</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2507-4
+01:55:34.703 --> 01:55:38.049
+<v John Miller>because it would then say, OK,
+I'm going to go back to the.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2511-0
+01:55:38.289 --> 01:55:44.006
+<v John Miller>The the artifacts that have been produced
+by a subject matter expert and then have</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2511-1
+01:55:44.006 --> 01:55:49.379
+<v John Miller>it produce some documentation or some
+models based on that that documentation</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2511-2
+01:55:49.379 --> 01:55:54.889
+<v John Miller>that that can be gone taken back to those
+subject matter experts and validated.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2514-0
+01:55:55.169 --> 01:55:59.327
+<v John Miller>And then once it's valid,
+it can be then used to drive</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2514-1
+01:55:59.327 --> 01:56:02.729
+<v John Miller>implementation as we saw a bit of
+yesterday.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2517-0
+01:56:04.529 --> 01:56:08.196
+<v Majernik, Peter>Great. Thanks.
+I'm gonna stop asking questions because</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2515-0
+01:56:06.289 --> 01:56:07.969
+<v John Miller>All right, will it?</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2517-1
+01:56:08.196 --> 01:56:10.929
+<v Majernik, Peter>looks like we are almost out of time now.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2522-0
+01:56:10.809 --> 01:56:13.129
+<v John Miller>Yeah,
+I wanted to thank you guys for your</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2522-1
+01:56:13.129 --> 01:56:16.057
+<v John Miller>attention and and for engaging us to do
+this course.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2522-2
+01:56:16.057 --> 01:56:19.703
+<v John Miller>It was really helpful for me to kind of
+go through the exercises.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2522-3
+01:56:19.703 --> 01:56:24.066
+<v John Miller>I changed the course quite a bit as we
+were going along to try to make it more</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2522-4
+01:56:24.066 --> 01:56:27.049
+<v John Miller>relevant and to and grounded a little bit
+better and.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2526-0
+01:56:27.089 --> 01:56:31.083
+<v John Miller>Real world things.
+So that was very helpful to me and I'm</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2526-1
+01:56:31.083 --> 01:56:36.591
+<v John Miller>hoping that this is helpful to you and
+let's let's keep the conversation going.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2526-2
+01:56:36.591 --> 01:56:42.237
+<v John Miller>If you find yourself an interest in one
+of building one of those internal models,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2526-3
+01:56:42.237 --> 01:56:43.889
+<v John Miller>code can definitely has.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2529-0
+01:56:43.969 --> 01:56:48.531
+<v John Miller>Has the knowledge to do that,
+so we could definitely help help you</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2529-1
+01:56:48.531 --> 01:56:51.527
+<v John Miller>there.
+And so I I look at this as you know,</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2529-2
+01:56:51.527 --> 01:56:56.769
+<v John Miller>potentially the start of something and
+not just the finish of something, so.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2533-0
+01:56:57.329 --> 01:57:02.677
+<v Skrzeszewski, Tom>John, thank you very much.
+I think that was eye-opening at least for</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2533-1
+01:57:02.677 --> 01:57:08.877
+<v Skrzeszewski, Tom>me that that exceeded expectations in
+terms of the capabilities and I think you</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2533-2
+01:57:08.877 --> 01:57:13.449
+<v Skrzeszewski, Tom>taught us a lot.
+I think it's a time for us to digest and.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2538-0
+01:57:13.569 --> 01:57:19.698
+<v Skrzeszewski, Tom>Understand how we could use it towards
+product development and commercialisation</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2538-1
+01:57:19.698 --> 01:57:25.600
+<v Skrzeszewski, Tom>and application of this knowledge and we
+would love to have you as our mentor</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2538-2
+01:57:25.600 --> 01:57:28.929
+<v Skrzeszewski, Tom>going forward with on this on this
+journey.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2541-0
+01:57:29.489 --> 01:57:34.009
+<v John Miller>That would be great. I would enjoy that.
+So I wish you guys if you have any</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2541-1
+01:57:34.009 --> 01:57:38.529
+<v John Miller>questions, feel free to contact me.
+I'd be happy to help you any way I can.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2547-0
+01:57:38.689 --> 01:57:41.497
+<v Skrzeszewski, Tom>Absolutely.
+Thank you so much everyone for for for</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2547-1
+01:57:41.497 --> 01:57:45.515
+<v Skrzeszewski, Tom>this week. I hope you enjoyed this.
+Let's work group next week or a week</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2547-2
+01:57:45.515 --> 01:57:49.919
+<v Skrzeszewski, Tom>after how we would like to utilize it.
+I think there's a lot of value here that</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2547-3
+01:57:49.919 --> 01:57:53.607
+<v Skrzeszewski, Tom>that we need to bring in and and
+strategize how how to go forward.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2547-4
+01:57:53.607 --> 01:57:56.249
+<v Skrzeszewski, Tom>Thank you so much.
+Have a great weekend though.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2549-0
+01:57:55.969 --> 01:57:57.000
+<v Tarrants, Seth>Yep. Thank you.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2556-0
+01:57:56.369 --> 01:57:57.000
+<v Zhang, Yan>Yep. Thanks.</v>
+
+c54b66bc-0fbb-43f2-bd36-d136c1462481/2552-0
+01:57:56.929 --> 01:57:57.000
+<v Majernik, Peter>Thank</v>

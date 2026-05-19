@@ -1,0 +1,6282 @@
+WEBVTT
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/121-0
+00:00:00.000 --> 00:00:02.059
+<v John Miller> first thing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/122-0
+00:00:06.899 --> 00:00:13.699
+<v John Miller>I did find out that there is an Azure
+DevOps MCMCP extension.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/124-0
+00:00:14.979 --> 00:00:22.018
+<v John Miller>And you can get that extension by first.
+You can go ahead and try to do a search</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/124-1
+00:00:22.018 --> 00:00:28.449
+<v John Miller>for at MCP and if that doesn't Azure
+DevOps that didn't show up anything,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/124-2
+00:00:28.449 --> 00:00:29.579
+<v John Miller>then you can.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/125-0
+00:00:31.299 --> 00:00:37.156
+<v John Miller>You need to go to the into VS code and
+make a change to and and enable the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/125-1
+00:00:37.156 --> 00:00:43.013
+<v John Miller>gallery if it's not and then not allow
+you to do this search and find this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/125-2
+00:00:43.013 --> 00:00:46.059
+<v John Miller>extension. So let's see, let's go into.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/126-0
+00:00:52.179 --> 00:00:52.939
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/127-0
+00:00:55.379 --> 00:00:57.779
+<v John Miller>And if we look at the extensions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/128-0
+00:00:59.699 --> 00:01:09.579
+<v John Miller>And then say at MCP this restricts this
+just to MCP servers and do Azure DevOps.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/129-0
+00:01:16.979 --> 00:01:17.099
+<v John Miller>OK.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/134-0
+00:01:36.819 --> 00:01:40.019
+<v John Miller>All right, while we're waiting for that,
+I can show you something else that was</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/134-1
+00:01:40.019 --> 00:01:40.819
+<v John Miller>kind of interesting.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/135-0
+00:01:41.979 --> 00:01:43.019
+<v John Miller>Uh, yesterday.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/136-0
+00:01:44.939 --> 00:01:46.379
+<v John Miller>Oh, there it is. It showed up.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/137-0
+00:01:48.219 --> 00:01:49.339
+<v John Miller>Finally.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/139-0
+00:02:07.499 --> 00:02:07.579
+<v John Miller>Oh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/140-0
+00:02:09.259 --> 00:02:10.379
+<v John Miller>Really slow.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/141-0
+00:02:20.299 --> 00:02:27.460
+<v John Miller>So here we go. There's Azure DevOps.
+Let me pop this up so we can take a look</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/141-1
+00:02:27.460 --> 00:02:28.379
+<v John Miller>at it and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/142-0
+00:02:31.019 --> 00:02:31.059
+<v John Miller>Uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/143-0
+00:02:32.819 --> 00:02:38.758
+<v John Miller>So these are some examples of the kinds
+of things you can do with it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/143-1
+00:02:38.758 --> 00:02:45.377
+<v John Miller>So you can now essentially using this
+manipulate Azure DevOps through the A I</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/143-2
+00:02:45.377 --> 00:02:47.499
+<v John Miller>and here's a list of the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/144-0
+00:02:48.099 --> 00:02:51.937
+<v John Miller>The supported tools of which for.
+There's a whole list of supported tools.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/144-1
+00:02:51.937 --> 00:02:52.859
+<v John Miller>One of them is um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/145-0
+00:02:55.539 --> 00:03:00.059
+<v John Miller>Or or I see it's get work items list
+right here like here we could.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/146-0
+00:03:02.099 --> 00:03:07.248
+<v John Miller>A tool for creating work items.
+So now you could create a prompt or or a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/146-1
+00:03:07.248 --> 00:03:12.821
+<v John Miller>a chat mode or an instruction that would
+actually create a work item in Azure,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/146-2
+00:03:12.821 --> 00:03:13.739
+<v John Miller>Azure DevOps.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/147-0
+00:03:16.739 --> 00:03:21.544
+<v John Miller>So this was based on what we were talking
+about trying to do yesterday.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/147-1
+00:03:21.544 --> 00:03:26.484
+<v John Miller>This would essentially allow you to do
+the same thing by using that tool.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/147-2
+00:03:26.484 --> 00:03:27.819
+<v John Miller>Any questions there?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/148-0
+00:03:30.979 --> 00:03:31.979
+<v John Miller>All right, that's cool.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/149-0
+00:03:33.699 --> 00:03:37.819
+<v John Miller>So go back to the slide. So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/150-0
+00:03:40.899 --> 00:03:46.050
+<v John Miller>Today we want to get deeper into
+understanding legacy code,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/150-1
+00:03:46.050 --> 00:03:51.716
+<v John Miller>so we'll look at generating documentation,
+architecture diagrams,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/150-2
+00:03:51.716 --> 00:03:57.211
+<v John Miller>updating readme files,
+and then identify and explain complex or</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/150-3
+00:03:57.211 --> 00:03:58.499
+<v John Miller>confusing code.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/151-0
+00:03:58.979 --> 00:04:03.259
+<v John Miller>It's a part and then we'll then get into
+starting to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/152-0
+00:04:04.939 --> 00:04:11.605
+<v John Miller>And to do some additional modifications.
+I've got a couple of ideas that I think</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/152-1
+00:04:11.605 --> 00:04:17.613
+<v John Miller>will be interesting that we can use to
+explore our code, our code bases.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/152-2
+00:04:17.613 --> 00:04:20.659
+<v John Miller>So let's go back and just talk about.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/153-0
+00:04:21.019 --> 00:04:28.830
+<v John Miller>Doing some documentation on existing code.
+If we go and look at our code base,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/153-1
+00:04:28.830 --> 00:04:29.819
+<v John Miller>we've got.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/154-0
+00:04:31.379 --> 00:04:38.139
+<v John Miller>A couple of files here that we've created
+in our calculator and if we.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/155-0
+00:04:39.139 --> 00:04:44.339
+<v John Miller>One of the things that we we can see that
+there are already some comments.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/157-0
+00:04:47.059 --> 00:04:50.986
+<v John Miller>They were put into the code,
+but it's not consistent.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/157-1
+00:04:50.986 --> 00:04:56.586
+<v John Miller>So this is something that you can do
+fairly easily is you can do a control I</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/157-2
+00:04:56.586 --> 00:04:59.859
+<v John Miller>and then you can just say you know
+document.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/158-0
+00:05:00.819 --> 00:05:01.659
+<v John Miller>This code.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/159-0
+00:05:03.899 --> 00:05:05.859
+<v John Miller>And it will then.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/160-0
+00:05:06.859 --> 00:05:13.374
+<v John Miller>Look at the code and where it sees there.
+There needs to be a further explanation.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/160-1
+00:05:13.374 --> 00:05:15.259
+<v John Miller>Add additional comments.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/161-0
+00:05:22.539 --> 00:05:27.195
+<v John Miller>And so here, step by step,
+it's going to read this file,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/161-1
+00:05:27.195 --> 00:05:31.035
+<v John Miller>add XML documentation comments to the
+classes,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/161-2
+00:05:31.035 --> 00:05:36.019
+<v John Miller>and here we see that it's actually going
+about adding those.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/162-0
+00:05:44.059 --> 00:05:45.019
+<v John Miller>To the class.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/163-0
+00:05:47.659 --> 00:05:52.699
+<v John Miller>And here we can see what the what it
+decided to wanted to change and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/164-0
+00:05:57.019 --> 00:06:01.678
+<v John Miller>In the file.
+So instead of just the public class that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/164-1
+00:06:01.678 --> 00:06:06.942
+<v John Miller>with a simple memory,
+it's added the XML based comments that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/164-2
+00:06:06.942 --> 00:06:13.415
+<v John Miller>document the functionality that's
+actually that we've actually implemented</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/164-3
+00:06:13.415 --> 00:06:14.019
+<v John Miller>so far.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/165-0
+00:06:14.019 --> 00:06:14.099
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/166-0
+00:06:17.219 --> 00:06:23.810
+<v John Miller>It's also added comments internally
+within the within the the methods and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/166-1
+00:06:23.810 --> 00:06:30.402
+<v John Miller>just added additional documentation.
+Here's comments about the the static</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/166-2
+00:06:30.402 --> 00:06:31.739
+<v John Miller>decimal method.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/167-0
+00:06:35.059 --> 00:06:39.660
+<v John Miller>And so you see that it's decided that
+that we wants to add additional</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/167-1
+00:06:39.660 --> 00:06:43.341
+<v John Miller>documentation.
+Here is removes some of the code and put</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/167-2
+00:06:43.341 --> 00:06:47.548
+<v John Miller>code back in its place that has
+additional documentation in it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/167-3
+00:06:47.548 --> 00:06:51.690
+<v John Miller>So this is really, you know,
+a simple way that you can quickly</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/167-4
+00:06:51.690 --> 00:06:52.939
+<v John Miller>document your code.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/168-0
+00:06:53.299 --> 00:06:58.163
+<v John Miller>While you're writing it,
+but and I have to spend a lot of effort</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/168-1
+00:06:58.163 --> 00:07:03.402
+<v John Miller>in doing so and it's you know,
+it does a a pretty decent job on that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/168-2
+00:07:03.402 --> 00:07:04.899
+<v John Miller>Any questions there?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/169-0
+00:07:09.539 --> 00:07:12.539
+<v John Miller>So we can go ahead and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/170-0
+00:07:18.219 --> 00:07:21.099
+<v John Miller>Except these these changes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/171-0
+00:07:30.419 --> 00:07:34.299
+<v John Miller>Uh, both in turn.
+We did a bit of this yesterday, but.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/172-0
+00:07:35.819 --> 00:07:35.899
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/173-0
+00:07:39.539 --> 00:07:45.259
+<v John Miller>The other things that we can do is is
+where's my accept all button?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/174-0
+00:07:48.419 --> 00:07:53.513
+<v John Miller>Here, there we go. All right,
+so the other thing that we can do is we</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/174-1
+00:07:53.513 --> 00:07:58.099
+<v John Miller>can take a look at the any any piece of
+code that we like and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/175-0
+00:08:00.299 --> 00:08:05.359
+<v John Miller>So here's the implementation of this
+replace function.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/175-1
+00:08:05.359 --> 00:08:07.659
+<v John Miller>She can select this code.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/176-0
+00:08:10.099 --> 00:08:12.699
+<v John Miller>This is maybe too much to actually take
+on.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/177-0
+00:08:15.299 --> 00:08:21.352
+<v John Miller>But we can select a a piece of code like
+this and and just ask and do another</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/177-1
+00:08:21.352 --> 00:08:24.379
+<v John Miller>control I and ask to explain that code.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/178-0
+00:08:29.219 --> 00:08:34.148
+<v John Miller>This is useful if you've got,
+if you're either not familiar with the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/178-1
+00:08:34.148 --> 00:08:39.577
+<v John Miller>syntax of the language or if it's doing
+something that that you don't quite</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/178-2
+00:08:39.577 --> 00:08:42.792
+<v John Miller>understand.
+This will allow you to actually.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/178-3
+00:08:42.792 --> 00:08:48.579
+<v John Miller>It will allow you to have an explanation
+of the code and it will then provide a.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/179-0
+00:08:48.899 --> 00:08:54.459
+<v John Miller>A step by step or line by line
+explanation of what's actually going on.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/180-0
+00:09:00.579 --> 00:09:03.257
+<v John Miller>And again,
+this is really helpful when you're you're</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/180-1
+00:09:03.257 --> 00:09:07.097
+<v John Miller>working in code you're not familiar with
+and you want to make sure that you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/180-2
+00:09:07.097 --> 00:09:11.191
+<v John Miller>understand it. And it's also, I think,
+useful in code that's generated like this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/180-3
+00:09:11.191 --> 00:09:14.779
+<v John Miller>code is because it may be the first time
+that you've actually seen it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/181-0
+00:09:20.859 --> 00:09:27.530
+<v Skrzeszewski, Tom>So is it possible then when the
+explanation is given to add comments into</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/181-1
+00:09:27.530 --> 00:09:32.579
+<v Skrzeszewski, Tom>this section and and capture this
+explanation that way?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/182-0
+00:09:31.619 --> 00:09:38.055
+<v John Miller>Sure, yes, yeah, that's very doable.
+You can just add another if we were to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/182-1
+00:09:38.055 --> 00:09:42.289
+<v John Miller>say, OK,
+just give me an explanation of this line</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/182-2
+00:09:42.289 --> 00:09:43.899
+<v John Miller>of these two lines.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/183-0
+00:09:50.659 --> 00:09:54.666
+<v John Miller>We can then just follow that up with a
+prompt that says add a comment to this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/183-1
+00:09:54.666 --> 00:09:56.979
+<v John Miller>effect or add this as a comment to the
+code.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/184-0
+00:09:59.219 --> 00:09:59.859
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/185-0
+00:10:07.379 --> 00:10:10.059
+<v John Miller>But that would be a pretty big comment,
+right?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/186-0
+00:10:09.539 --> 00:10:10.779
+<v Skrzeszewski, Tom>Yeah, that's right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/187-0
+00:10:13.979 --> 00:10:16.707
+<v John Miller>And you know, to be, you know,
+perfectly honest,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/187-1
+00:10:16.707 --> 00:10:21.219
+<v John Miller>if you can select a piece of code and
+have it explained in this level of detail.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/189-0
+00:10:22.979 --> 00:10:27.819
+<v John Miller>At any point in time,
+what's the value of the comment, right?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/188-0
+00:10:28.979 --> 00:10:29.299
+<v Skrzeszewski, Tom>Hmm.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/190-0
+00:10:30.979 --> 00:10:35.834
+<v John Miller>The other thing that you can do that I
+think is would would be useful is that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/190-1
+00:10:35.834 --> 00:10:38.759
+<v John Miller>you can just go.
+Let's close this explanation.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/190-2
+00:10:38.759 --> 00:10:42.619
+<v John Miller>You can just go into the chat window and
+say you know update.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/191-0
+00:10:43.979 --> 00:10:45.419
+<v John Miller>The documentation.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/192-0
+00:10:49.139 --> 00:10:49.779
+<v John Miller>Mhm.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/193-0
+00:10:50.779 --> 00:10:52.019
+<v John Miller>For this file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/195-0
+00:10:54.979 --> 00:11:01.339
+<v Skrzeszewski, Tom>And then the file is the entire file or
+the section that you have highlighted.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/194-0
+00:10:55.059 --> 00:10:55.659
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/196-0
+00:11:00.939 --> 00:11:05.819
+<v John Miller>So here notice that it's only referencing
+the the the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/197-0
+00:11:04.939 --> 00:11:06.259
+<v Skrzeszewski, Tom>This long like.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/199-0
+00:11:06.899 --> 00:11:14.763
+<v John Miller>Just that section of the file. If I was,
+if I deselect that now the the the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/198-0
+00:11:10.179 --> 00:11:11.019
+<v Skrzeszewski, Tom>OK, good.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/199-1
+00:11:14.763 --> 00:11:21.179
+<v John Miller>context is the entire entire file.
+So we had that control it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/200-0
+00:11:22.419 --> 00:11:24.579
+<v John Miller>And you can even do something like.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/201-0
+00:11:25.939 --> 00:11:27.459
+<v John Miller>For this project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/202-0
+00:11:31.059 --> 00:11:37.256
+<v John Miller>And it will it will think basically go
+through the whole project and and update</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/202-1
+00:11:37.256 --> 00:11:43.531
+<v John Miller>read me files and the other things and I
+often I often do this as update the for</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/202-2
+00:11:43.531 --> 00:11:44.539
+<v John Miller>this for the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/203-0
+00:11:45.859 --> 00:11:46.979
+<v John Miller>The current state.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/204-0
+00:11:49.859 --> 00:11:50.459
+<v John Miller>of the project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/205-0
+00:11:55.379 --> 00:11:59.256
+<v John Miller>And then this will take a more holistic
+view of the project,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/205-1
+00:11:59.256 --> 00:12:02.562
+<v John Miller>look at all the files,
+and then generate additional</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/205-2
+00:12:02.562 --> 00:12:06.059
+<v John Miller>documentation.
+You can also get more specific in terms</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/205-3
+00:12:06.059 --> 00:12:09.619
+<v John Miller>of what kinds of documentation that
+you're looking for.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/206-0
+00:12:21.539 --> 00:12:25.655
+<v John Miller>So it looks like so now it's taking it's
+looking at at the reading files and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/206-1
+00:12:25.655 --> 00:12:27.099
+<v John Miller>updating the read me files.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/207-0
+00:12:28.819 --> 00:12:30.219
+<v John Miller>And we should see.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/208-0
+00:12:32.739 --> 00:12:36.179
+<v John Miller>Some changes there 'cause we haven't
+spent a good deal of time.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/209-0
+00:12:37.419 --> 00:12:40.139
+<v John Miller>Focusing on changes to read me.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/210-0
+00:12:43.619 --> 00:12:45.892
+<v John Miller>Oh,
+there was something else I wanted to show</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/210-1
+00:12:45.892 --> 00:12:47.819
+<v John Miller>you. I'll get to that right after this.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/211-0
+00:12:49.059 --> 00:12:53.019
+<v John Miller>So here in the readme file,
+it's giving putting in a project overview.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/212-0
+00:12:59.499 --> 00:12:59.899
+<v Skrzeszewski, Tom>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/213-0
+00:13:00.979 --> 00:13:05.322
+<v John Miller>While this is thinking,
+why don't I show you that I I just need</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/213-1
+00:13:05.322 --> 00:13:07.019
+<v John Miller>to find the right window.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/214-0
+00:13:10.619 --> 00:13:10.859
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/215-0
+00:13:25.499 --> 00:13:27.299
+<v John Miller>All right, so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/216-0
+00:13:29.379 --> 00:13:35.065
+<v John Miller>So when I was, you know,
+working in experimenting last night or</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/216-1
+00:13:35.065 --> 00:13:39.063
+<v John Miller>yesterday,
+this little icon showed up again.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/216-2
+00:13:39.063 --> 00:13:45.727
+<v John Miller>It had been there for a little while and
+it disappeared and now it's back,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/216-3
+00:13:45.727 --> 00:13:48.659
+<v John Miller>but it's not back for all of the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/217-0
+00:13:49.019 --> 00:13:53.899
+<v John Miller>Projects that I have open,
+it's only only that for.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/218-0
+00:13:56.739 --> 00:14:00.208
+<v John Miller>Uh, we can't see it in this one.
+It's only back for this one window that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/218-1
+00:14:00.208 --> 00:14:02.299
+<v John Miller>showed up,
+which I thought was interesting.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/219-0
+00:14:06.459 --> 00:14:08.579
+<v John Miller>And what that's what this does is.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/220-0
+00:14:11.539 --> 00:14:18.474
+<v John Miller>There's two way basically delegate this
+task to a background coding agent and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/220-1
+00:14:18.474 --> 00:14:25.142
+<v John Miller>what'll it's interesting how it works in
+that if we were to give a prompt,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/220-2
+00:14:25.142 --> 00:14:27.099
+<v John Miller>let's see, we're here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/221-0
+00:14:28.899 --> 00:14:32.306
+<v John Miller>Um,
+what would be something interesting to to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/221-1
+00:14:32.306 --> 00:14:32.899
+<v John Miller>look at?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/222-0
+00:14:35.139 --> 00:14:40.379
+<v John Miller>How about we'll just ask it to create?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/223-0
+00:14:41.419 --> 00:14:43.979
+<v John Miller>The chat mode.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/224-0
+00:14:45.819 --> 00:14:47.379
+<v John Miller>For updating.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/225-0
+00:14:49.819 --> 00:14:50.859
+<v John Miller>Documentation.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/227-0
+00:14:58.939 --> 00:14:59.619
+<v John Miller>Patient.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/228-0
+00:15:03.539 --> 00:15:08.074
+<v John Miller>And then we can say, all right,
+so I want to have this done in the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/228-1
+00:15:08.074 --> 00:15:08.819
+<v John Miller>background.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/229-0
+00:15:10.899 --> 00:15:14.739
+<v John Miller>And So what the what what Copilot will do
+now is.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/230-0
+00:15:15.939 --> 00:15:19.668
+<v John Miller>It says OK,
+Copilot Asia will continue your work.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/230-1
+00:15:19.668 --> 00:15:24.965
+<v John Miller>Your chat context will be used to
+continue work in a new pull request.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/230-2
+00:15:24.965 --> 00:15:29.739
+<v John Miller>So it's going if we say go ahead and
+continue and then it will.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/231-0
+00:15:31.259 --> 00:15:37.339
+<v John Miller>Open up this chat in a the chat window.
+Separate chat window.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/232-0
+00:15:39.059 --> 00:15:43.099
+<v John Miller>And so here it's saying we're delegating
+this to the coding agent.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/233-0
+00:15:44.179 --> 00:15:50.110
+<v John Miller>And then it's going to run in a in a more
+autonomous function with the idea that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/233-1
+00:15:50.110 --> 00:15:55.603
+<v John Miller>it's going to create a pull request.
+It's going to implement the work that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/233-2
+00:15:55.603 --> 00:16:00.876
+<v John Miller>you've asked it to to take on,
+and then you can then it will, you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/233-3
+00:16:00.876 --> 00:16:03.659
+<v John Miller>create a create create a pull request.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/234-0
+00:16:03.859 --> 00:16:06.359
+<v John Miller>Requests at the end. What's it? Well,
+it's gonna.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/234-1
+00:16:06.359 --> 00:16:08.759
+<v John Miller>What it's gonna do at first is create a
+branch,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/234-2
+00:16:08.759 --> 00:16:12.459
+<v John Miller>then it's gonna implement the code on
+that branch and then it's going to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/235-0
+00:16:13.979 --> 00:16:14.019
+<v John Miller>Uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/236-0
+00:16:15.379 --> 00:16:20.129
+<v John Miller>Create a pull request and and submit that
+pull request.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/236-1
+00:16:20.129 --> 00:16:26.407
+<v John Miller>So I just got a a a piece of toast
+notification that our previous request</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/236-2
+00:16:26.407 --> 00:16:32.939
+<v John Miller>here has completed which is a a feature
+that's I I can't demonstrate to you.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/237-0
+00:16:34.779 --> 00:16:37.810
+<v John Miller>Because it shows up in a different
+monitor.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/237-1
+00:16:37.810 --> 00:16:42.976
+<v John Miller>But if you've executed a prompt and then
+you go and change your focus to a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/237-2
+00:16:42.976 --> 00:16:46.765
+<v John Miller>different task,
+maybe your e-mail program or something</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/237-3
+00:16:46.765 --> 00:16:49.659
+<v John Miller>else, when it completes that tab, it will.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/238-0
+00:16:50.979 --> 00:16:55.230
+<v John Miller>It will give you a piece of toast and
+allow you to go back to where you were.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/238-1
+00:16:55.230 --> 00:16:55.939
+<v John Miller>So let's see.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/239-0
+00:17:00.099 --> 00:17:03.175
+<v John Miller>Uh, so this is not our documentation.
+Let's go like,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/239-1
+00:17:03.175 --> 00:17:04.859
+<v John Miller>take a look and see what our.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/240-0
+00:17:06.019 --> 00:17:06.059
+<v John Miller>Uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/241-0
+00:17:08.979 --> 00:17:11.619
+<v John Miller>Where's our window that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/242-0
+00:17:13.699 --> 00:17:16.459
+<v John Miller>Yeah, here we go.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/243-0
+00:17:19.539 --> 00:17:22.059
+<v John Miller>So it's starting that process, it's.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/244-0
+00:17:24.819 --> 00:17:28.499
+<v John Miller>It's looking for the to see if there's an
+existing chat mode for that function.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/245-0
+00:17:41.299 --> 00:17:44.619
+<v John Miller>It's noticed that there's already some
+existing chat modes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/246-0
+00:17:51.219 --> 00:17:54.441
+<v John Miller>It it.
+But the whole point is that this is this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/246-1
+00:17:54.441 --> 00:17:59.879
+<v John Miller>is done in a a more autonomous way and it
+allows us to delegate these tasks into</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/246-2
+00:17:59.879 --> 00:18:04.579
+<v John Miller>the into a background thread,
+which means that we're free to do other</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/246-3
+00:18:04.579 --> 00:18:08.272
+<v John Miller>other tasks.
+We can actually spin up multiple back end</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/246-4
+00:18:08.272 --> 00:18:10.219
+<v John Miller>threads. That's what will go.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/247-0
+00:18:10.499 --> 00:18:15.530
+<v John Miller>And implement different aspects of it.
+So this makes addresses.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/247-1
+00:18:15.530 --> 00:18:21.897
+<v John Miller>One issue that I've had when I'm working
+with working with Copilot is that it is</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/247-2
+00:18:21.897 --> 00:18:28.579
+<v John Miller>very single threaded and at this point in
+terms that once you've submitted a prompt.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/248-0
+00:18:28.979 --> 00:18:33.647
+<v John Miller>You're pretty much dedicating your
+machine to addressing that. You can do,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/248-1
+00:18:33.647 --> 00:18:36.697
+<v John Miller>you know,
+quick chats and some other things like</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/248-2
+00:18:36.697 --> 00:18:39.499
+<v John Miller>that,
+but you're not really able to spin up.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/249-0
+00:18:41.379 --> 00:18:46.756
+<v John Miller>You know multiple multiple prompts and
+get those prompts to be executing at the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/249-1
+00:18:46.756 --> 00:18:50.251
+<v John Miller>same time.
+The only way that I was aware that to do</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/249-2
+00:18:50.251 --> 00:18:55.561
+<v John Miller>that would be to you know to try to do
+the execute the other prompts in Visual</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/249-3
+00:18:55.561 --> 00:18:57.779
+<v John Miller>Studio or on a different machine.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/250-0
+00:18:58.539 --> 00:19:03.363
+<v John Miller>Maybe a a VM or something,
+but this allows us to to actually</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/250-1
+00:19:03.363 --> 00:19:09.690
+<v John Miller>accomplish even more code generation by
+actually having multiple different chat</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/250-2
+00:19:09.690 --> 00:19:12.459
+<v John Miller>windows executing at the same time.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/251-0
+00:19:15.259 --> 00:19:17.179
+<v John Miller>Any questions on that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/252-0
+00:19:19.259 --> 00:19:20.979
+<v John Miller>All right, so let's take a look at the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/253-0
+00:19:23.339 --> 00:19:26.887
+<v John Miller>Documentation that it created here in the
+README file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/253-1
+00:19:26.887 --> 00:19:32.177
+<v John Miller>There's a small section up at at the top.
+It gives us a project overview and then</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/253-2
+00:19:32.177 --> 00:19:37.339
+<v John Miller>down at the bottom it added a project
+structure that lists what the folders are</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/253-3
+00:19:37.339 --> 00:19:39.339
+<v John Miller>and what what's in each folder.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/254-0
+00:19:39.939 --> 00:19:46.397
+<v John Miller>Getting started section that tells you
+what the prerequisites that we need to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/254-1
+00:19:46.397 --> 00:19:52.194
+<v John Miller>actually be able to work on this project,
+how to build it and run it,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/254-2
+00:19:52.194 --> 00:19:57.659
+<v John Miller>how to build and run the the the front
+end, how to run the tests.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/255-0
+00:19:58.179 --> 00:20:04.593
+<v John Miller>What the CICD pipeline looks like,
+quality and testing in terms to what the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/255-1
+00:20:04.593 --> 00:20:10.248
+<v John Miller>current line coverage is, branch coverage,
+total tests, et cetera.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/255-2
+00:20:10.248 --> 00:20:16.579
+<v John Miller>Some recent test gap analysis that I ran
+last night that we'll redo today.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/256-0
+00:20:16.579 --> 00:20:21.473
+<v John Miller>Identified some things,
+key areas needing test which will also</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/256-1
+00:20:21.473 --> 00:20:27.455
+<v John Miller>will take on today and then it added a
+test section here to the projects and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/256-2
+00:20:27.455 --> 00:20:32.739
+<v John Miller>this is something I think is really
+useful because this high level.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/257-0
+00:20:32.819 --> 00:20:39.028
+<v John Miller>And documentation is something that we
+tend to not to want to keep up to date.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/257-1
+00:20:39.028 --> 00:20:42.879
+<v John Miller>And you know,
+AI has no problems with doing very</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/257-2
+00:20:42.879 --> 00:20:48.539
+<v John Miller>comprehensive documentation like this and
+we can do a simple, you know.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/258-0
+00:20:48.819 --> 00:20:54.046
+<v John Miller>Task or use up a prompt that will just
+update that documentation anytime the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/258-1
+00:20:54.046 --> 00:20:59.545
+<v John Miller>project has made any significant change
+to it or it could even be a part of your</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/258-2
+00:20:59.545 --> 00:21:04.297
+<v John Miller>your hygiene for a pull request is that
+that there's an update to the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/258-3
+00:21:04.297 --> 00:21:08.099
+<v John Miller>documentation that just goes along with
+it and instead.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/259-0
+00:21:08.459 --> 00:21:11.706
+<v John Miller>of having to turn through the the code
+base,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/259-1
+00:21:11.706 --> 00:21:15.099
+<v John Miller>it will just go ahead and and do that for
+you.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/260-0
+00:21:16.979 --> 00:21:19.579
+<v John Miller>Any questions on this so far?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/261-0
+00:21:22.979 --> 00:21:25.454
+<v John Miller>Alright,
+so let's keep those changes since that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/261-1
+00:21:25.454 --> 00:21:27.259
+<v John Miller>seems pretty good. Let's go and um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/265-0
+00:21:29.939 --> 00:21:34.036
+<v Skrzeszewski, Tom>So John,
+maybe maybe a quick follow up as as the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/262-0
+00:21:30.299 --> 00:21:30.379
+<v John Miller>Say.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/263-0
+00:21:31.979 --> 00:21:32.259
+<v John Miller>Yes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/265-1
+00:21:34.036 --> 00:21:39.137
+<v Skrzeszewski, Tom>code base that evolves.
+Then this would be part of the build</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/265-2
+00:21:39.137 --> 00:21:45.074
+<v Skrzeszewski, Tom>process to update site documentation or a
+read me and have it in sync.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/264-0
+00:21:42.899 --> 00:21:43.059
+<v John Miller>You.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/265-3
+00:21:45.074 --> 00:21:47.499
+<v Skrzeszewski, Tom>Is that how you structure it?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/268-0
+00:21:45.699 --> 00:21:51.898
+<v John Miller>Yeah, yeah, that's certainly possible.
+Yes, we we talked about this, you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/268-1
+00:21:51.898 --> 00:21:57.705
+<v John Miller>working things into into the pull request
+and into the pipeline and well,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/268-2
+00:21:57.705 --> 00:22:04.219
+<v John Miller>I think we'll have time to do those those
+kinds of explorations a bit later today.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/266-0
+00:21:57.739 --> 00:21:58.459
+<v Skrzeszewski, Tom>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/267-0
+00:22:04.179 --> 00:22:05.819
+<v Skrzeszewski, Tom>Awesome. Thank you.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/270-0
+00:22:04.779 --> 00:22:08.522
+<v John Miller>And try to build up,
+try to build up some of it so that you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/270-1
+00:22:08.522 --> 00:22:13.388
+<v John Miller>can see how you could potentially include
+this in your pipeline and have this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/270-2
+00:22:13.388 --> 00:22:18.441
+<v John Miller>always In Sync with the actual code base
+with every with every push to the repo,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/270-3
+00:22:18.441 --> 00:22:19.939
+<v John Miller>which is really be cool.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/269-0
+00:22:19.979 --> 00:22:21.059
+<v Skrzeszewski, Tom>Thank you.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/271-0
+00:22:21.459 --> 00:22:27.739
+<v John Miller>Uh, sure.
+So update the documentation with.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/272-0
+00:22:30.419 --> 00:22:31.499
+<v John Miller>A mermaid.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/273-0
+00:22:35.619 --> 00:22:40.779
+<v John Miller>Arch text true.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/274-0
+00:22:51.179 --> 00:22:51.259
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/275-0
+00:22:55.499 --> 00:22:58.939
+<v John Miller>Include sequence diagrams.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/276-0
+00:23:09.379 --> 00:23:13.019
+<v John Miller>I it's actually pretty bad this morning.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/277-0
+00:23:14.699 --> 00:23:16.219
+<v John Miller>Diagrams. What else? Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/278-0
+00:23:17.899 --> 00:23:19.339
+<v John Miller>A class diagram.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/281-0
+00:23:29.619 --> 00:23:33.740
+<v John Miller>And this is also useful in terms of the
+documentation,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/281-1
+00:23:33.740 --> 00:23:39.735
+<v John Miller>because it's again something that can
+fall out of synchronisation with the rest</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/281-2
+00:23:39.735 --> 00:23:44.605
+<v John Miller>of the code. And you know,
+mermaid diagrams are are particularly</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/281-3
+00:23:44.605 --> 00:23:46.779
+<v John Miller>useful. This is a flavour of.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/282-0
+00:23:48.059 --> 00:23:55.737
+<v John Miller>Of markdown and here we see the system
+architecture diagram here and and since</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/282-1
+00:23:55.737 --> 00:23:57.779
+<v John Miller>it's markdown it can.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/283-0
+00:23:58.579 --> 00:24:04.776
+<v John Miller>It it can be easily generated and read by
+the A I and so that it's easy for it to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/283-1
+00:24:04.776 --> 00:24:10.219
+<v John Miller>keep up to date. So if you were to say OK,
+I'll open a preview of this.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/284-0
+00:24:11.699 --> 00:24:17.206
+<v John Miller>Read me file now and let me open up in a
+window so we can see it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/284-1
+00:24:17.206 --> 00:24:23.214
+<v John Miller>So now we have a system architecture
+diagram which talks about the user</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/284-2
+00:24:23.214 --> 00:24:29.139
+<v John Miller>interface to our we have a command line
+interface and a WPF interface.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/285-0
+00:24:29.699 --> 00:24:34.135
+<v John Miller>It goes into our core library,
+which is the elevator dot CS.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/285-1
+00:24:34.135 --> 00:24:37.626
+<v John Miller>It talks about the the ENS memory static
+state,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/285-2
+00:24:37.626 --> 00:24:41.189
+<v John Miller>the the calculation history that we
+implemented,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/285-3
+00:24:41.189 --> 00:24:46.571
+<v John Miller>as well as some external dependencies on
+some system data and system math</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/285-4
+00:24:46.571 --> 00:24:47.299
+<v John Miller>functions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/286-0
+00:24:47.339 --> 00:24:52.416
+<v John Miller>System math functions.
+Here's a component interaction flow that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/286-1
+00:24:52.416 --> 00:24:58.763
+<v John Miller>talks about how these things that we just
+described actually interact with each</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/286-2
+00:24:58.763 --> 00:25:01.699
+<v John Miller>other as you feed information to the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/287-0
+00:25:02.699 --> 00:25:04.139
+<v John Miller>Into the calculator.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/289-0
+00:25:08.379 --> 00:25:10.819
+<v John Miller>Let's so let's see if there's anything.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/290-0
+00:25:14.019 --> 00:25:17.340
+<v John Miller>And it's still,
+it's still working on potentially</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/290-1
+00:25:17.340 --> 00:25:22.522
+<v John Miller>additional diagrams. So again, you know,
+if you're a visual learner like I am</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/290-2
+00:25:22.522 --> 00:25:25.578
+<v John Miller>seeing,
+seeing all that in a diagram helps me</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/290-3
+00:25:25.578 --> 00:25:31.091
+<v John Miller>definitely understand what we've actually
+implemented and when you're working in a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/290-4
+00:25:31.091 --> 00:25:32.819
+<v John Miller>lot of A I generated code.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/291-0
+00:25:33.419 --> 00:25:37.851
+<v John Miller>Being able to take that code and produce
+diagrams on it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/291-1
+00:25:37.851 --> 00:25:43.684
+<v John Miller>So you for example can say take this
+class or this class file and create a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/291-2
+00:25:43.684 --> 00:25:49.750
+<v John Miller>sequence diagram for how it actually
+works and then get a really good idea of</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/291-3
+00:25:49.750 --> 00:25:52.939
+<v John Miller>what the functionality is actually doing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/292-0
+00:25:53.059 --> 00:25:54.059
+<v John Miller>The code is doing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/293-0
+00:25:54.979 --> 00:25:55.139
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/294-0
+00:25:57.579 --> 00:26:02.570
+<v John Miller>So let's see. We had those. So yeah,
+it looks like we have another document,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/294-1
+00:26:02.570 --> 00:26:06.199
+<v John Miller>another diagram.
+Here's the class diagram that we asked</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/294-2
+00:26:06.199 --> 00:26:06.459
+<v John Miller>for.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/296-0
+00:26:14.339 --> 00:26:16.019
+<v John Miller>I want to preview it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/297-0
+00:26:19.859 --> 00:26:21.459
+<v John Miller>It's in the window.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/298-0
+00:26:23.659 --> 00:26:25.899
+<v John Miller>And so here's the the class diagram.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/300-0
+00:26:36.779 --> 00:26:38.099
+<v John Miller>And the data flow diagram.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/301-0
+00:26:40.019 --> 00:26:44.669
+<v John Miller>And you notice I I called out two
+specific diagrams I wanted to see,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/301-1
+00:26:44.669 --> 00:26:49.927
+<v John Miller>but it's creating additional diagrams
+because I added I added a a clause that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/301-2
+00:26:49.927 --> 00:26:54.848
+<v John Miller>said you know basically said any
+additional documentation that you think</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/301-3
+00:26:54.848 --> 00:26:55.859
+<v John Miller>is appropriate.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/302-0
+00:26:57.019 --> 00:27:02.227
+<v John Miller>But of course we could, you know,
+we could specify exactly what what kinds</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/302-1
+00:27:02.227 --> 00:27:05.699
+<v John Miller>of documentation that we want to see in
+the file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/303-0
+00:27:09.339 --> 00:27:12.407
+<v John Miller>And just like the just like the written
+documentation,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/303-1
+00:27:12.407 --> 00:27:16.702
+<v John Miller>you can you can say OK or the text
+documentation you say go ahead and update</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/303-2
+00:27:16.702 --> 00:27:21.164
+<v John Miller>the documentation and update the mermaid
+diagrams as well and then it will keep</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/303-3
+00:27:21.164 --> 00:27:23.619
+<v John Miller>those In Sync with the rest of the
+project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/304-0
+00:27:26.059 --> 00:27:27.419
+<v John Miller>Any questions on this?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/305-0
+00:27:38.659 --> 00:27:40.739
+<v John Miller>OK, so so then jump back.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/306-0
+00:27:42.379 --> 00:27:45.143
+<v John Miller>To the slides,
+we've seen it update the readme file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/306-1
+00:27:45.143 --> 00:27:49.054
+<v John Miller>We've seen a bit of that deployment.
+We actually haven't seen a deployment</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/306-2
+00:27:49.054 --> 00:27:50.619
+<v John Miller>guide, so we can ask for that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/307-0
+00:27:55.859 --> 00:27:55.899
+<v John Miller>Uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/308-0
+00:27:57.979 --> 00:28:00.699
+<v John Miller>It's it's still working on the diagrams.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/309-0
+00:28:01.499 --> 00:28:01.819
+<v John Miller>Yes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/310-0
+00:28:05.019 --> 00:28:06.099
+<v John Miller>So maybe that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/311-0
+00:28:08.779 --> 00:28:14.539
+<v John Miller>So it's doing a a text coverage
+visualization diagram now.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/314-0
+00:28:25.899 --> 00:28:29.099
+<v John Miller>All right,
+I just got a a notification that our.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/315-0
+00:28:30.059 --> 00:28:30.899
+<v John Miller>Our chat mode.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/316-0
+00:28:33.659 --> 00:28:37.259
+<v John Miller>Any background tasks that we asked it to
+do is finished.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/317-0
+00:28:43.139 --> 00:28:43.379
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/318-0
+00:28:48.859 --> 00:28:51.219
+<v John Miller>Been committed to the repository, so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/319-0
+00:28:57.979 --> 00:29:05.280
+<v John Miller>New files I created was a documentation
+update or chat mode file and then since</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/319-1
+00:29:05.280 --> 00:29:10.391
+<v John Miller>this project has those AI assisted output
+instructions,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/319-2
+00:29:10.391 --> 00:29:16.871
+<v John Miller>it's logged the changes into a
+conversation file and a summary file as</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/319-3
+00:29:16.871 --> 00:29:17.419
+<v John Miller>we've.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/320-0
+00:29:17.579 --> 00:29:22.938
+<v John Miller>instructed to do.
+So we have a continuing chat log or in</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/320-1
+00:29:22.938 --> 00:29:28.579
+<v John Miller>the project that we can refer to.
+So here is one for today.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/321-0
+00:29:31.259 --> 00:29:33.655
+<v John Miller>Oh,
+that was one other thing I wanted to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/321-1
+00:29:33.655 --> 00:29:38.099
+<v John Miller>mention that I noticed is that there was
+a there was a release for copilot.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/322-0
+00:29:39.819 --> 00:29:43.819
+<v John Miller>On the 20th, which was yesterday.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/323-0
+00:29:45.259 --> 00:29:49.579
+<v John Miller>So if we go down to extensions and just
+look for copilot.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/324-0
+00:29:54.819 --> 00:29:56.259
+<v John Miller>Here's her.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/325-0
+00:29:58.339 --> 00:30:00.419
+<v John Miller>Uh, Copilot chat and the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/326-0
+00:30:01.579 --> 00:30:06.137
+<v John Miller>So there was a a a new version of this
+and co-piloted itself.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/326-1
+00:30:06.137 --> 00:30:11.505
+<v John Miller>One of the things that I haven't
+mentioned is that there are pre-release</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/326-2
+00:30:11.505 --> 00:30:16.579
+<v John Miller>versions that talk about the new
+functionality and since there as I.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/327-0
+00:30:18.219 --> 00:30:24.019
+<v John Miller>A a a conference show next week.
+Yeah the you know they released that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/327-1
+00:30:24.019 --> 00:30:28.660
+<v John Miller>update yesterday I think in in in
+anticipation of that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/327-2
+00:30:28.660 --> 00:30:35.124
+<v John Miller>So you could actually switch to this
+pre-release version and see what some of</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/327-3
+00:30:35.124 --> 00:30:37.859
+<v John Miller>the the the upcoming changes are.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/328-0
+00:30:39.059 --> 00:30:39.379
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/329-0
+00:30:43.419 --> 00:30:48.419
+<v John Miller>I thought this was interesting in that it
+gives you some.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/330-0
+00:30:51.139 --> 00:30:55.810
+<v John Miller>Some feedback on what the actual events
+are.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/330-1
+00:30:55.810 --> 00:31:03.699
+<v John Miller>What are some proposals commands that you
+can execute that are implemented?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/331-0
+00:31:05.419 --> 00:31:09.339
+<v John Miller>Programming languages and the the other
+thing that I thought was interesting was.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/332-0
+00:31:13.299 --> 00:31:23.844
+<v John Miller>It's added another a model called Claude
+haiku and it they priced it at at least</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/332-1
+00:31:23.844 --> 00:31:27.099
+<v John Miller>for me at 1/3 of a token.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/333-0
+00:31:28.219 --> 00:31:34.979
+<v John Miller>And there's also reduce the price of
+these older models as well.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/334-0
+00:31:36.459 --> 00:31:43.751
+<v John Miller>So this is a kind of demonstrates how
+things change over quickly kind of in the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/334-1
+00:31:43.751 --> 00:31:49.859
+<v John Miller>UI over time and and how features will
+become enabled or disabled.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/336-0
+00:31:55.739 --> 00:31:59.192
+<v John Miller>Um,
+one of the things I haven't pointed out</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/335-0
+00:31:57.339 --> 00:31:57.539
+Sorry.
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/336-1
+00:31:59.192 --> 00:31:59.899
+<v John Miller>yet, yes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/337-0
+00:31:59.419 --> 00:32:02.579
+<v Tarrants, Seth>A quick question,
+was this only on the pre release version?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/341-0
+00:32:03.019 --> 00:32:07.108
+<v John Miller>No, I'm not running the pre releases.
+I if I to do that I'd have to switch to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/341-1
+00:32:07.108 --> 00:32:10.779
+<v John Miller>the pre release version here and then you
+would get updates for that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/338-0
+00:32:08.819 --> 00:32:08.939
+<v Tarrants, Seth>OK.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/340-0
+00:32:10.539 --> 00:32:11.179
+<v Tarrants, Seth>Got it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/342-0
+00:32:12.659 --> 00:32:19.825
+<v John Miller>Yeah, I didn't want to, you know,
+take a chance on habit, you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/342-1
+00:32:19.825 --> 00:32:23.619
+<v John Miller>do something I wasn't expecting, so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/343-0
+00:32:28.219 --> 00:32:31.412
+<v John Miller>All right.
+I guess that's all I thought be</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/343-1
+00:32:31.412 --> 00:32:36.684
+<v John Miller>interesting to see about that.
+So we can go back here and this was the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/343-2
+00:32:36.684 --> 00:32:40.694
+<v John Miller>documentation.
+So it's produced this sequence diagram</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/343-3
+00:32:40.694 --> 00:32:44.779
+<v John Miller>for component interaction flow.
+So let's go ahead and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/344-0
+00:32:45.179 --> 00:32:50.067
+<v John Miller>There's a well,
+there's there's a a diagrams readme file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/344-1
+00:32:50.067 --> 00:32:52.259
+<v John Miller>Let's take a look at this.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/345-0
+00:32:56.179 --> 00:33:02.924
+<v John Miller>So this describes the system architecture.
+So there's a system architecture diagram,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/345-1
+00:33:02.924 --> 00:33:09.192
+<v John Miller>a component interaction, a class diagram,
+a data flow, ACICD workflow diagram,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/345-2
+00:33:09.192 --> 00:33:14.430
+<v John Miller>test covers visualization.
+These are all in the main README file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/345-3
+00:33:14.430 --> 00:33:15.779
+<v John Miller>So if we were to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/346-0
+00:33:16.579 --> 00:33:17.699
+<v John Miller>Review this.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/347-0
+00:33:19.379 --> 00:33:23.616
+<v John Miller>And take a look at the here's the system
+architecture,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/347-1
+00:33:23.616 --> 00:33:28.779
+<v John Miller>the the component interaction and then I
+think down at the bottom.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/348-0
+00:33:29.499 --> 00:33:32.659
+<v John Miller>Is the class diagram a data flow diagram?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/349-0
+00:33:34.859 --> 00:33:38.259
+<v John Miller>There's the CIACD workflow.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/350-0
+00:33:49.699 --> 00:33:52.499
+<v John Miller>Here's the test coverage visualization.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/351-0
+00:33:56.099 --> 00:33:57.379
+<v John Miller>And some metrics.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/352-0
+00:33:59.499 --> 00:34:04.752
+<v John Miller>So obviously maintaining these document
+these document diagrams is would be time</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/352-1
+00:34:04.752 --> 00:34:10.005
+<v John Miller>very time consuming if you're having to
+do it manually and it would be certainly</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/352-2
+00:34:10.005 --> 00:34:15.063
+<v John Miller>one of the first tasks that you would
+drop in lieu of actually working on new</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/352-3
+00:34:15.063 --> 00:34:17.139
+<v John Miller>code or or or or fixing bugs or.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/353-0
+00:34:17.779 --> 00:34:23.064
+<v John Miller>Working on technical debt and so you can
+either you know we'll talk about later</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/353-1
+00:34:23.064 --> 00:34:26.038
+<v John Miller>about how to how to work it into a
+pipeline.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/353-2
+00:34:26.038 --> 00:34:30.927
+<v John Miller>But you know it is as simple as just
+running a single prompt that says go</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/353-3
+00:34:30.927 --> 00:34:35.619
+<v John Miller>ahead and update that that that diagram
+and you can build that prompt.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/354-0
+00:34:36.059 --> 00:34:40.966
+<v John Miller>To be very specific in terms of what you
+what you're expecting it to do,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/354-1
+00:34:40.966 --> 00:34:46.343
+<v John Miller>because here we're we're kind of letting
+the the AI figure out what diagrams it</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/354-2
+00:34:46.343 --> 00:34:47.419
+<v John Miller>needs to create.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/355-0
+00:34:48.379 --> 00:34:52.242
+<v John Miller>But you may have specific requirements or
+specific kinds of documents that you'd</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/355-1
+00:34:52.242 --> 00:34:54.532
+<v John Miller>like,
+or diagrams that you prefer that you want</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/355-2
+00:34:54.532 --> 00:34:57.537
+<v John Miller>to see it implement,
+and you can easily do that by adding that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/355-3
+00:34:57.537 --> 00:34:59.779
+<v John Miller>to a prompt and putting that in a prompt
+file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/356-0
+00:35:03.059 --> 00:35:03.179
+<v John Miller>Cool.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/358-0
+00:35:13.699 --> 00:35:14.099
+<v John Miller>All right, so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/359-0
+00:35:15.979 --> 00:35:18.539
+<v John Miller>Review for errors and admissions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/361-0
+00:35:21.499 --> 00:35:26.019
+<v John Miller>So here what you can say is look at the
+code base.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/368-0
+00:36:08.619 --> 00:36:09.499
+<v John Miller>Mhm.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/369-0
+00:36:11.579 --> 00:36:17.029
+<v John Miller>And this going with our theme of being
+able to identify you know technical debt</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/369-1
+00:36:17.029 --> 00:36:20.775
+<v John Miller>and and surface that technical debt and
+and record it,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/369-2
+00:36:20.775 --> 00:36:25.476
+<v John Miller>we could actually have it create
+additional issues for improving the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/369-3
+00:36:25.476 --> 00:36:29.019
+<v John Miller>documentation.
+So this will probably take a bit to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/370-0
+00:36:29.099 --> 00:36:30.259
+<v John Miller>To run.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/373-0
+00:36:45.859 --> 00:36:51.139
+<v John Miller>Oh, duplicate section headers.
+Duplicate section headers.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/374-0
+00:36:52.379 --> 00:36:53.459
+<v John Miller>Missing information.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/379-0
+00:37:20.299 --> 00:37:24.608
+<v John Miller>So not an insignificant amount of of work
+involved in updating all that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/379-1
+00:37:24.608 --> 00:37:27.900
+<v John Miller>documentation,
+but we can easily give this back to A I</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/379-2
+00:37:27.900 --> 00:37:32.509
+<v John Miller>and said go ahead and update this,
+update that documentation and then we can</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/379-3
+00:37:32.509 --> 00:37:37.059
+<v John Miller>just review it and make any modifications
+to it once we see once we see it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/380-0
+00:37:37.259 --> 00:37:41.993
+<v John Miller>Because remember,
+I mean it it always there always could be</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/380-1
+00:37:41.993 --> 00:37:47.279
+<v John Miller>errors introduced by the AI.
+So we always have to be careful about</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/380-2
+00:37:47.279 --> 00:37:51.619
+<v John Miller>making sure that we just don't accept
+changes without.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/381-0
+00:37:52.939 --> 00:37:59.588
+<v John Miller>Having somebody look at them and it's
+updated our documentation documentation</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/381-1
+00:37:59.588 --> 00:38:06.579
+<v John Miller>file that gives us a link to the MD file
+that contains some some of the diagrams.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/382-0
+00:38:08.659 --> 00:38:12.419
+<v John Miller>It's updated the project overview.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/385-0
+00:38:19.419 --> 00:38:24.622
+<v John Miller>This is another thing I think is
+interesting in terms of using this for</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/385-1
+00:38:24.622 --> 00:38:30.404
+<v John Miller>project management or for for guiding
+technical debt is that we could implement</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/385-2
+00:38:30.404 --> 00:38:34.379
+<v John Miller>a prompt that's let's go ahead and keep
+these changes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/386-0
+00:38:36.019 --> 00:38:36.379
+<v John Miller>And.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/387-0
+00:38:38.139 --> 00:38:39.139
+<v John Miller>Go ahead and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/390-0
+00:38:51.979 --> 00:38:56.310
+<v John Miller>As you can see,
+I tend to not do things in the on the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/390-1
+00:38:56.310 --> 00:39:00.802
+<v John Miller>command line.
+I find it's easier just to ask the the AI</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/390-2
+00:39:00.802 --> 00:39:06.819
+<v John Miller>to go ahead and and do these kinds of
+operations because not only will it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/391-0
+00:39:07.779 --> 00:39:13.043
+<v John Miller>Do the commit.
+It will actually update the conversation</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/391-1
+00:39:13.043 --> 00:39:19.059
+<v John Miller>history as well as you know,
+provide a a decent commit message.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/392-0
+00:39:22.699 --> 00:39:27.015
+<v John Miller>So this is the prompt I wanted to talk
+about is that we, you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/392-1
+00:39:27.015 --> 00:39:31.911
+<v John Miller>let's assume that one of our major
+efforts that we want to take on in terms</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/392-2
+00:39:31.911 --> 00:39:37.259
+<v John Miller>of addressing technical debt is that we
+want to go up upgrade from.net 8 to.net 9.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/393-0
+00:39:37.979 --> 00:39:40.499
+<v John Miller>And we could say just like.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/394-0
+00:39:41.819 --> 00:39:42.259
+<v John Miller>Mm.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/395-0
+00:39:46.019 --> 00:39:47.539
+<v John Miller>Create a plan.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/396-0
+00:39:53.579 --> 00:39:53.859
+<v John Miller>Or.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/397-0
+00:39:55.939 --> 00:39:56.019
+<v John Miller>Up.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/398-0
+00:39:58.859 --> 00:39:58.979
+<v John Miller>Ring.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/399-0
+00:40:00.539 --> 00:40:01.699
+<v John Miller>The code base so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/402-0
+00:40:14.979 --> 00:40:24.299
+<v John Miller>8.0 to 9.0 and soon there'll be a 10.0.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/403-0
+00:40:28.379 --> 00:40:33.374
+<v John Miller>So it wants to run a PowerShell command
+here that will add the so it's going to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/403-1
+00:40:33.374 --> 00:40:34.499
+<v John Miller>do our our commit.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/404-0
+00:40:36.859 --> 00:40:39.986
+<v John Miller>So for.
+net and then we can and this might be</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/404-1
+00:40:39.986 --> 00:40:45.561
+<v John Miller>something where we would spend a probably
+a good amount of time creating a prompt</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/404-2
+00:40:45.561 --> 00:40:50.728
+<v John Miller>file that was so that we we'd have a
+comprehensive set of instructions that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/404-3
+00:40:50.728 --> 00:40:55.215
+<v John Miller>would tell it what to do.
+But here we can just say we want a list</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/404-4
+00:40:55.215 --> 00:40:55.419
+<v John Miller>of.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/405-0
+00:40:59.819 --> 00:41:00.099
+<v John Miller>Great.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/406-0
+00:41:03.099 --> 00:41:03.859
+<v John Miller>Epics.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/407-0
+00:41:06.379 --> 00:41:06.619
+<v John Miller>And.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/408-0
+00:41:09.139 --> 00:41:09.619
+<v John Miller>Tess.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/409-0
+00:41:12.939 --> 00:41:13.059
+<v John Miller>Or.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/410-0
+00:41:14.139 --> 00:41:15.299
+<v John Miller>Uh, pass and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/414-0
+00:41:37.539 --> 00:41:38.579
+<v John Miller>It's all right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/415-0
+00:41:43.499 --> 00:41:47.819
+<v John Miller>But you just had a high level. I mean,
+we can, we can have it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/417-0
+00:41:56.539 --> 00:41:58.859
+<v John Miller>OK.
+We could actually ask it to do this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/417-1
+00:41:58.859 --> 00:42:03.442
+<v John Miller>really high level analysis and looking at
+the project and saying what were the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/417-2
+00:42:03.442 --> 00:42:08.025
+<v John Miller>changes that we would need to make in
+order for us to accomplish that upgrade.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/417-3
+00:42:08.025 --> 00:42:10.693
+<v John Miller>And if we were doing this with a live
+system,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/417-4
+00:42:10.693 --> 00:42:15.044
+<v John Miller>we could add instructions that would say
+we need to minimize the amount of</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/417-5
+00:42:15.044 --> 00:42:16.379
+<v John Miller>downtime that we occur.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/418-0
+00:42:16.499 --> 00:42:20.144
+<v John Miller>And we could have it include in that
+upgrade, you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/418-1
+00:42:20.144 --> 00:42:25.352
+<v John Miller>any database modifications that we need
+to make plan for whatever downtime that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/418-2
+00:42:25.352 --> 00:42:30.104
+<v John Miller>we think that we we might have.
+And so we could gracefully roll out this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/418-3
+00:42:30.104 --> 00:42:33.099
+<v John Miller>new upgrade, you know,
+including a test plan.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/419-0
+00:42:35.139 --> 00:42:39.332
+<v John Miller>And it would, you know,
+it may not be the complete plan that we</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/419-1
+00:42:39.332 --> 00:42:44.115
+<v John Miller>would actually like to implement,
+but it would give you us a really good</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/419-2
+00:42:44.115 --> 00:42:48.899
+<v John Miller>start on understanding what the impact of
+this upgrade is going to take.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/420-0
+00:42:49.339 --> 00:42:54.161
+<v John Miller>It's going to have on your code and on
+your code base and help you reason</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/420-1
+00:42:54.161 --> 00:42:59.375
+<v John Miller>through a logical way of making that
+upgrade so that you can you can deploy it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/420-2
+00:42:59.375 --> 00:43:03.546
+<v John Miller>And so you could actually take a look at
+this plan and say, OK,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/420-3
+00:43:03.546 --> 00:43:06.219
+<v John Miller>I need to break this plan up in sections.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/421-0
+00:43:06.419 --> 00:43:10.806
+<v John Miller>And implement it in sections,
+but still keep the application running</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/421-1
+00:43:10.806 --> 00:43:12.459
+<v John Miller>through the whole process.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/422-0
+00:43:15.139 --> 00:43:16.539
+<v John Miller>O We'll see how this goes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/423-0
+00:43:26.219 --> 00:43:28.979
+<v John Miller>Any uh comments or questions while we're
+waiting?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/426-0
+00:43:49.019 --> 00:43:54.886
+<v John Miller>So I know I promised some of the hands on
+exercises. If you like, we can all,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/426-1
+00:43:54.886 --> 00:43:58.572
+<v John Miller>you know,
+clone this repo and we can start to do</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/426-2
+00:43:58.572 --> 00:44:02.259
+<v John Miller>some things independently against the
+code base.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/427-0
+00:44:03.259 --> 00:44:05.939
+<v John Miller>Since we all, we all have access to this.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/428-0
+00:44:07.019 --> 00:44:08.059
+<v John Miller>This repo.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/429-0
+00:44:19.499 --> 00:44:20.899
+<v John Miller>How do you feel about that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/430-0
+00:44:24.259 --> 00:44:28.899
+<v John Miller>Or does this just me showing you it
+executing? Is that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/431-0
+00:44:30.099 --> 00:44:31.259
+<v John Miller>Sufficient.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/433-0
+00:44:33.899 --> 00:44:39.152
+<v Majernik, Peter>It's probably better this way for now
+since we have troubles installing</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/433-1
+00:44:39.152 --> 00:44:43.238
+<v Majernik, Peter>components on our laptops,
+but this is just my opinion.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/432-0
+00:44:42.259 --> 00:44:42.659
+<v John Miller>Alright.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/433-2
+00:44:43.238 --> 00:44:46.448
+<v Majernik, Peter>Maybe someone else would like to
+volunteer,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/433-3
+00:44:46.448 --> 00:44:50.899
+<v Majernik, Peter>but I don't think my laptop is ready for
+what you are doing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/434-0
+00:44:55.499 --> 00:45:00.659
+<v John Miller>Eight major epochs and it has a plan.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/435-0
+00:45:05.979 --> 00:45:06.099
+<v John Miller>So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/436-0
+00:45:06.139 --> 00:45:06.259
+<v John Miller>So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/439-0
+00:45:08.619 --> 00:45:13.215
+<v John Miller>So that took a couple of minutes to
+create a a whole plan for a.net 8 upgrade.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/439-1
+00:45:13.215 --> 00:45:13.739
+<v John Miller>So let's.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/437-0
+00:45:13.539 --> 00:45:13.819
+<v Majernik, Peter>So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/440-0
+00:45:16.859 --> 00:45:20.459
+<v John Miller>So let's see.
+Let's take a look at what it created and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/441-0
+00:45:21.979 --> 00:45:23.099
+<v John Miller>See what it's.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/442-0
+00:45:25.179 --> 00:45:25.219
+<v John Miller>Uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/443-0
+00:45:27.739 --> 00:45:28.739
+<v John Miller>Where's that plan?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/444-0
+00:45:30.139 --> 00:45:31.659
+<v John Miller>That's it right here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/448-0
+00:45:49.819 --> 00:45:54.103
+<v John Miller>Risk level is medium.
+Estimated time would be two to three</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/448-1
+00:45:54.103 --> 00:45:54.539
+<v John Miller>weeks.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/449-0
+00:45:58.779 --> 00:46:03.192
+<v John Miller>Motivation, performance improvement,
+security updates, long term support,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/449-1
+00:46:03.192 --> 00:46:05.459
+<v John Miller>new language features, better tooling.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/450-0
+00:46:06.779 --> 00:46:12.739
+<v John Miller>Projects affected would be our calculator
+project, our WPF project and our tests.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/451-0
+00:46:15.259 --> 00:46:20.937
+<v John Miller>Infrastructure would be the the CICD
+pipeline, local development environments,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/451-1
+00:46:20.937 --> 00:46:24.244
+<v John Miller>build scripts.
+So these are the major epochs,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/451-2
+00:46:24.244 --> 00:46:28.270
+<v John Miller>pre upgrade preparation,
+establish a baseline research,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/451-3
+00:46:28.270 --> 00:46:30.139
+<v John Miller>breaking changes, prepare.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/452-0
+00:46:30.939 --> 00:46:36.683
+<v John Miller>For the environment upgrade takes three
+to five days.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/452-1
+00:46:36.683 --> 00:46:43.597
+<v John Miller>Development environment upgrade,
+project files and dependencies,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/452-2
+00:46:43.597 --> 00:46:45.619
+<v John Miller>code modernization.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/453-0
+00:46:46.579 --> 00:46:52.675
+<v John Miller>Test testing and quality assurance,
+CIC pipeline upgrade documentation and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/453-1
+00:46:52.675 --> 00:46:59.097
+<v John Miller>training, then post upgrade validation,
+then a detailed task breakdown of each</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/453-2
+00:46:59.097 --> 00:47:01.699
+<v John Miller>each one of these steps. So the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/454-0
+00:47:01.939 --> 00:47:06.257
+<v John Miller>Pre upgrade preparation is document the
+current test coverage,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/454-1
+00:47:06.257 --> 00:47:11.878
+<v John Miller>run performance benchmarks for baseline
+comparisons, capture current build times,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/454-2
+00:47:11.878 --> 00:47:16.539
+<v John Miller>document the current memory usage
+patterns, export dependency tree.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/456-0
+00:47:17.099 --> 00:47:21.658
+<v John Miller>Create a snapshot of the current
+artifacts and the deliver will be a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/456-1
+00:47:21.658 --> 00:47:27.208
+<v John Miller>baseline metrics MD with performance data.
+So you can see this is a pretty detailed</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/455-0
+00:47:26.819 --> 00:47:26.859
+<v Majernik, Peter>Uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/456-2
+00:47:27.208 --> 00:47:31.701
+<v John Miller>plan. It's fairly comprehensive.
+There may be things that we that's</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/456-3
+00:47:31.701 --> 00:47:33.419
+<v John Miller>missing or not quite, but.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/457-0
+00:47:33.739 --> 00:47:39.820
+<v John Miller>Here it's calling out in a very specific
+versions of things that needed to be</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/457-1
+00:47:39.820 --> 00:47:44.499
+<v John Miller>updated to for compatibility and create
+the feature branch.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/458-0
+00:47:46.219 --> 00:47:50.859
+<v John Miller>Develop at the development at the
+environment upgrade.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/459-0
+00:47:52.459 --> 00:47:55.299
+<v John Miller>Update the Visual Studio on V codes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/460-0
+00:48:01.259 --> 00:48:02.819
+<v John Miller>Uh, project files and dependencies.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/461-0
+00:48:04.539 --> 00:48:08.579
+<v John Miller>Package, you know, package references,
+code modernization.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/462-0
+00:48:12.299 --> 00:48:15.380
+<v John Miller>Now where's the break?
+I skipped over the breaking change</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/462-1
+00:48:15.380 --> 00:48:15.859
+<v John Miller>analysis.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/463-0
+00:48:28.299 --> 00:48:34.120
+<v John Miller>Yeah, here it is. Review the.
+net 9 breaking change documentation.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/463-1
+00:48:34.120 --> 00:48:40.724
+<v John Miller>Review the C# 13 language changes.
+Check the WPF specific changes in.net 9.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/463-2
+00:48:40.724 --> 00:48:43.939
+<v John Miller>Review the system data table changes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/464-0
+00:48:44.299 --> 00:48:47.659
+<v John Miller>Identify the APIs that marked as obsolete.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/465-0
+00:48:49.739 --> 00:48:54.139
+<v John Miller>And document the potential impact on the
+the the calculator code base.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/466-0
+00:48:56.939 --> 00:49:02.566
+<v John Miller>And we could in turn feed this right back
+right back into the AI and say, OK,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/466-1
+00:49:02.566 --> 00:49:08.555
+<v John Miller>can you take report back on what you see
+in terms of these actual breaking changes</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/466-2
+00:49:08.555 --> 00:49:14.255
+<v John Miller>in the documentation that could affect
+the app and then and then and then work</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/466-3
+00:49:14.255 --> 00:49:16.059
+<v John Miller>on actually doing it the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/467-0
+00:49:16.059 --> 00:49:20.179
+<v John Miller>Implement a plan to actually implement
+those modifications.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/468-0
+00:49:23.419 --> 00:49:25.779
+<v John Miller>Any any questions on that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/472-0
+00:49:27.859 --> 00:49:32.209
+<v Skrzeszewski, Tom>Right. So John,
+what you've got here 8 to 9,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/469-0
+00:49:28.619 --> 00:49:28.659
+<v Majernik, Peter>Oh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/472-1
+00:49:32.209 --> 00:49:39.942
+<v Skrzeszewski, Tom>it's it's just an example and it's kind
+of very applicable to what we're facing</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/472-2
+00:49:39.942 --> 00:49:46.419
+<v Skrzeszewski, Tom>on our existing code base,
+only maybe not between N9 but different</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/470-0
+00:49:40.259 --> 00:49:40.499
+<v John Miller>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/472-3
+00:49:46.419 --> 00:49:47.579
+<v Skrzeszewski, Tom>nodes but I.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/471-0
+00:49:46.819 --> 00:49:46.979
+<v John Miller>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/475-0
+00:49:47.659 --> 00:49:51.766
+<v Skrzeszewski, Tom>I think this would be it.
+It's actually very applicable.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/475-1
+00:49:51.766 --> 00:49:57.531
+<v Skrzeszewski, Tom>We're about to kick off a exactly project
+like this and I would love to utilize</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/475-2
+00:49:57.531 --> 00:50:02.575
+<v Skrzeszewski, Tom>that to the extent possible.
+So I'm not sure Peter and Sam how how we</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/474-0
+00:49:58.659 --> 00:49:59.699
+<v John Miller>Sure.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/475-3
+00:50:02.575 --> 00:50:07.259
+<v Skrzeszewski, Tom>can utilize what I think this is just an
+example, but I I think.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/476-0
+00:50:07.339 --> 00:50:13.939
+<v Skrzeszewski, Tom>If if we will, we use that as a practical.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/477-0
+00:50:15.299 --> 00:50:19.630
+<v Skrzeszewski, Tom>Evidence of usefulness of what we're
+learning here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/477-1
+00:50:19.630 --> 00:50:24.379
+<v Skrzeszewski, Tom>How far away are we from being able to at
+least attempt?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/478-0
+00:50:26.219 --> 00:50:26.459
+<v Majernik, Peter>Hmm.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/481-0
+00:50:29.499 --> 00:50:32.754
+<v Majernik, Peter>Well, you know going from.
+net 8:00 to 9:00,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/481-1
+00:50:32.754 --> 00:50:37.383
+<v Majernik, Peter>that's a little bit simpler exercise
+because it's all.net Core.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/481-2
+00:50:37.383 --> 00:50:42.664
+<v Majernik, Peter>What we need to do is uplift from the
+classic.net framework to.net Core,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/479-0
+00:50:38.259 --> 00:50:38.419
+<v Skrzeszewski, Tom>Sure.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/481-3
+00:50:42.664 --> 00:50:48.017
+<v Majernik, Peter>which is a much bigger lift and our
+challenges will be in the third party</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/480-0
+00:50:42.699 --> 00:50:43.179
+<v Skrzeszewski, Tom>Mhm.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/481-4
+00:50:48.017 --> 00:50:48.379
+<v Majernik, Peter>area.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/484-0
+00:50:49.299 --> 00:50:54.430
+<v Majernik, Peter>Not so much in the.NET itself,
+but in I mean in general the steps should</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/482-0
+00:50:53.339 --> 00:50:53.379
+<v Skrzeszewski, Tom>Oh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/484-1
+00:50:54.430 --> 00:50:57.874
+<v Majernik, Peter>be similar,
+except you know we'll be doing it in</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/484-2
+00:50:57.874 --> 00:50:58.859
+<v Majernik, Peter>Visual Studio.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/483-0
+00:50:59.619 --> 00:51:00.099
+<v Skrzeszewski, Tom>Mhm.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/485-0
+00:51:00.419 --> 00:51:00.499
+<v Majernik, Peter>Oh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/487-0
+00:51:02.699 --> 00:51:06.114
+<v Majernik, Peter>I don't know what else to say about that.
+I mean,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/487-1
+00:51:06.114 --> 00:51:11.783
+<v Majernik, Peter>in theory it's as simple as retarget the
+framework, look for the breaking changes,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/486-0
+00:51:07.379 --> 00:51:07.579
+<v Tarrants, Seth>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/487-2
+00:51:11.783 --> 00:51:15.676
+<v Majernik, Peter>you know, uplift,
+accommodate the new language features,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/487-3
+00:51:15.676 --> 00:51:20.867
+<v Majernik, Peter>get the box worked out and keep rolling.
+And then of course regression test</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/487-4
+00:51:20.867 --> 00:51:21.619
+<v Majernik, Peter>everything.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/491-0
+00:51:21.779 --> 00:51:25.116
+<v Tarrants, Seth>Yeah, yeah,
+I I think the this agent approach would</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/488-0
+00:51:21.819 --> 00:51:24.139
+<v Majernik, Peter>Let's not forget about that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/491-1
+00:51:25.116 --> 00:51:29.994
+<v Tarrants, Seth>be good to help us to identify and
+isolate any potential things that we may</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/491-2
+00:51:29.994 --> 00:51:33.652
+<v Tarrants, Seth>overlook or not catch at the beginning as
+we analyze it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/491-3
+00:51:33.652 --> 00:51:38.723
+<v Tarrants, Seth>So I think this is this would be valuable
+to at least start and then we can at</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/489-0
+00:51:33.939 --> 00:51:34.099
+<v Skrzeszewski, Tom>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/491-4
+00:51:38.723 --> 00:51:41.419
+<v Tarrants, Seth>least start to evaluate the the load that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/490-0
+00:51:39.539 --> 00:51:39.739
+<v John Miller>This.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/492-0
+00:51:41.499 --> 00:51:43.779
+<v Tarrants, Seth>It would take to actually perform this
+uplift.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/493-0
+00:51:43.939 --> 00:51:46.408
+<v Skrzeszewski, Tom>Yeah,
+so I I think this lines up with the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/493-1
+00:51:46.408 --> 00:51:49.288
+<v Skrzeszewski, Tom>principle.
+This is just an assistant or internal</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/493-2
+00:51:49.288 --> 00:51:52.580
+<v Skrzeszewski, Tom>assistant, right?
+But I think we have a structure here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/493-3
+00:51:52.580 --> 00:51:57.225
+<v Skrzeszewski, Tom>It's it's quite comprehensive that we're
+able to generate something like this.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/493-4
+00:51:57.225 --> 00:52:01.399
+<v Skrzeszewski, Tom>I'm not saying this is complete,
+but it's would be then up to us to to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/493-5
+00:52:01.399 --> 00:52:03.339
+<v Skrzeszewski, Tom>utilize it to improve and extend.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/494-0
+00:52:03.419 --> 00:52:07.981
+<v Skrzeszewski, Tom>But this is quite promising and it's very
+applicable to, you know, again,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/494-1
+00:52:07.981 --> 00:52:11.619
+<v Skrzeszewski, Tom>different notes,
+but very applicable to what we're facing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/497-0
+00:52:11.699 --> 00:52:15.672
+<v Majernik, Peter>Yeah, I don't disagree with that.
+I mean it's it's good to follow those</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/497-1
+00:52:15.672 --> 00:52:18.818
+<v Majernik, Peter>general steps.
+I would not pay too much attention to the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/497-2
+00:52:18.818 --> 00:52:23.234
+<v Majernik, Peter>estimates because I I don't know how it
+came up with those. This could go much,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/495-0
+00:52:20.859 --> 00:52:22.819
+<v John Miller>And that was my question.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/497-3
+00:52:23.234 --> 00:52:25.883
+<v Majernik, Peter>much.
+This could go much faster or much slower.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/497-4
+00:52:25.883 --> 00:52:27.539
+<v Majernik, Peter>It all depends on many things.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/496-0
+00:52:26.299 --> 00:52:27.539
+<v Skrzeszewski, Tom>I'm sorry.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/498-0
+00:52:32.659 --> 00:52:36.490
+<v Majernik, Peter>Yeah, I'm,
+I'm not sure what else to elaborate here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/498-1
+00:52:36.490 --> 00:52:42.275
+<v Majernik, Peter>So in in terms of usefulness of Copilot,
+there is no question about it. I mean,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/498-2
+00:52:42.275 --> 00:52:46.613
+<v Majernik, Peter>we'll be using it,
+be chatting with it all day long and you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/498-3
+00:52:46.613 --> 00:52:48.059
+<v Majernik, Peter>know, make progress.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/500-0
+00:52:51.099 --> 00:52:54.688
+<v Skrzeszewski, Tom>Well,
+so maybe at at some point when we start</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/500-1
+00:52:54.688 --> 00:52:58.902
+<v Skrzeszewski, Tom>to digest this,
+but I would like us to start thinking</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/500-2
+00:52:58.902 --> 00:53:02.882
+<v Skrzeszewski, Tom>about it.
+What would be the practical examples how</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/500-3
+00:53:02.882 --> 00:53:07.019
+<v Skrzeszewski, Tom>we can utilize it just to mature this
+knowledge and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/501-0
+00:53:07.099 --> 00:53:12.260
+<v Skrzeszewski, Tom>And kind of bring it into the mainstream
+of of business and as I mentioned,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/501-1
+00:53:12.260 --> 00:53:16.606
+<v Skrzeszewski, Tom>I think that John is available to to help
+us with that as well.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/501-2
+00:53:16.606 --> 00:53:21.767
+<v Skrzeszewski, Tom>So I think you know this is just the
+initial, we're scratching the surface,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/501-3
+00:53:21.767 --> 00:53:25.299
+<v Skrzeszewski, Tom>but I think the potential here is quite
+impressive.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/502-0
+00:53:27.899 --> 00:53:29.299
+<v Majernik, Peter>I agree.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/503-0
+00:53:28.459 --> 00:53:39.083
+<v John Miller>So I have to go about how it came up at
+the time and it has a it claimed it used</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/503-1
+00:53:39.083 --> 00:53:43.019
+<v John Miller>a very, I think sophisticated.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/504-0
+00:53:44.339 --> 00:53:49.059
+<v John Miller>Way of approaching that kind of the
+question, but.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/505-0
+00:53:50.059 --> 00:53:52.139
+<v John Miller>The other question I have.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/509-0
+00:54:06.619 --> 00:54:11.195
+<v John Miller>I guess what I'm trying to figure out.
+I wanted to figure out what the units</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/509-1
+00:54:11.195 --> 00:54:12.859
+<v John Miller>when you say that's an hour.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/518-0
+00:54:40.859 --> 00:54:43.712
+<v Majernik, Peter>John,
+I think you missed the word in there,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/518-1
+00:54:43.712 --> 00:54:48.901
+<v Majernik, Peter>but maybe it will figure it out. Anyway,
+it's very good at figuring out missing</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/517-0
+00:54:45.379 --> 00:54:45.539
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/518-2
+00:54:48.901 --> 00:54:49.939
+<v Majernik, Peter>words and typos.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/528-0
+00:55:16.619 --> 00:55:23.939
+<v Majernik, Peter>Can can you guys actually read that fast?
+I did not catch all that. Sorry.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/529-0
+00:55:22.339 --> 00:55:26.339
+<v John Miller>Yeah, that's all I'm getting to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/527-0
+00:55:22.899 --> 00:55:23.699
+<v Tarrants, Seth>Just the headers.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/531-0
+00:55:30.139 --> 00:55:34.310
+<v John Miller>So that's this is the bottom line is what
+I was looking for.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/531-1
+00:55:34.310 --> 00:55:39.781
+<v John Miller>A mid level developer working without
+major interruptions with proper tools and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/531-2
+00:55:39.781 --> 00:55:44.979
+<v John Miller>access complete this well defined low
+complexity task from start to finish.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/532-0
+00:55:45.419 --> 00:55:50.529
+<v John Miller>In approximately 60 minutes with an 80%
+conference level. So that is what I was,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/532-1
+00:55:50.529 --> 00:55:55.198
+<v John Miller>I was looking for how many developers
+it's going to take to do this work.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/532-2
+00:55:55.198 --> 00:56:00.499
+<v John Miller>So when they say it's two or three days,
+they're saying that that's gonna be about.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/533-0
+00:56:00.979 --> 00:56:03.619
+<v John Miller>You know, one developer,
+two to three days will work.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/534-0
+00:56:05.139 --> 00:56:05.379
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/535-0
+00:56:20.139 --> 00:56:22.939
+<v John Miller>Yeah, I'm sorry,
+I'm kind of getting down a rabbit hole</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/535-1
+00:56:22.939 --> 00:56:25.139
+<v John Miller>here,
+but I think it's kind of interesting.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/544-0
+00:56:57.419 --> 00:57:02.838
+<v John Miller>So it's, you know,
+anywhere between 1020% to 40% faster with</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/544-1
+00:57:02.838 --> 00:57:05.059
+<v John Miller>AI assistance looks like.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/545-0
+00:57:11.819 --> 00:57:15.339
+<v John Miller>Yeah, AI has no impact on waiting.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/546-0
+00:57:17.219 --> 00:57:18.419
+<v John Miller>Can help.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/547-0
+00:57:22.739 --> 00:57:24.979
+<v John Miller>So a revised plan.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/556-0
+00:57:46.219 --> 00:57:49.419
+<v John Miller>I would.
+I would treat this as an educated guess,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/556-1
+00:57:49.419 --> 00:57:50.379
+<v John Miller>right? Yeah, I.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/557-0
+00:57:53.579 --> 00:57:59.779
+<v John Miller>Estimating in software project I think is
+just more of an art than a science.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/558-0
+00:58:04.539 --> 00:58:06.572
+<v John Miller>All right.
+So I think that was kind of a fun</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/558-1
+00:58:06.572 --> 00:58:06.979
+<v John Miller>exercise.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/559-0
+00:58:08.739 --> 00:58:08.819
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/560-0
+00:58:12.379 --> 00:58:16.605
+<v John Miller>I can reduce your errors.
+I also have a point here that you know</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/560-1
+00:58:16.605 --> 00:58:22.001
+<v John Miller>you can you can you can take an approach
+where you know you trust but verify where</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/560-2
+00:58:22.001 --> 00:58:27.398
+<v John Miller>you say you ask it to generate something.
+But then as we did yesterday at the when</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/560-3
+00:58:27.398 --> 00:58:31.299
+<v John Miller>we had it look at those two
+implementations you can always.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/561-0
+00:58:31.499 --> 00:58:38.792
+<v John Miller>Create a chat mode that will produce some
+output and then have another model</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/561-1
+00:58:38.792 --> 00:58:44.760
+<v John Miller>actually review that output and because
+the way that AI works,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/561-2
+00:58:44.760 --> 00:58:46.939
+<v John Miller>it's non deterministic.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/562-0
+00:58:47.019 --> 00:58:51.681
+<v John Miller>It's very often that that that that
+you'll find that actually having an</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/562-1
+00:58:51.681 --> 00:58:56.798
+<v John Miller>update to an output that it created will
+cause it to include additional things</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/562-2
+00:58:56.798 --> 00:59:01.525
+<v John Miller>that it hadn't thought of before or
+remove things that it didn't that it</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/562-3
+00:59:01.525 --> 00:59:01.979
+<v John Miller>thinks.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/563-0
+00:59:02.259 --> 00:59:09.606
+<v John Miller>Can be done in a in a in a better way.
+So having a second look at something is</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/563-1
+00:59:09.606 --> 00:59:14.721
+<v John Miller>not a bad idea,
+or having two models generate the same</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/563-2
+00:59:14.721 --> 00:59:17.419
+<v John Miller>output and then compare them.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/564-0
+00:59:17.739 --> 00:59:22.791
+<v John Miller>Is also not a bad idea as well.
+So I think from a quality control</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/564-1
+00:59:22.791 --> 00:59:29.144
+<v John Miller>perspective it it kind of makes a lot of
+sense since it's AI is doing all the work</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/564-2
+00:59:29.144 --> 00:59:32.589
+<v John Miller>anyway, you might as well have it,
+you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/564-3
+00:59:32.589 --> 00:59:37.259
+<v John Miller>help you with those by doing those
+multiple implementations.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/565-0
+00:59:37.339 --> 00:59:42.249
+<v John Miller>It's kind of like it's called double
+entry accounting where everything is done</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/565-1
+00:59:42.249 --> 00:59:46.539
+<v John Miller>twice and then the output's compared to
+make sure that it's correct.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/566-0
+00:59:52.819 --> 00:59:58.459
+<v John Miller>Uh, some meta instructions.
+So I think if we look at our AI.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/567-0
+00:59:59.379 --> 01:00:00.339
+<v John Miller>Uh, projects.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/568-0
+01:00:12.899 --> 01:00:14.179
+<v John Miller>This is the guy.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/569-0
+01:00:15.299 --> 01:00:17.379
+<v John Miller>All right. So if we look at that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/573-0
+01:00:26.539 --> 01:00:34.696
+<v John Miller>What I what I mean by meta instructions
+are instructions that apply to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/573-1
+01:00:34.696 --> 01:00:42.739
+<v John Miller>instruction files or prompt files.
+So I I created one this yesterday.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/574-0
+01:00:44.139 --> 01:00:47.834
+<v John Miller>And we and we've talked a bit about about
+these,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/574-1
+01:00:47.834 --> 01:00:53.942
+<v John Miller>but here's a here's an instruction file
+and I use a kind of a naming convention.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/574-2
+01:00:53.942 --> 01:00:59.975
+<v John Miller>If it if it ends in instructions dot MD,
+it's an instruction file if it ends in</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/574-3
+01:00:59.975 --> 01:01:00.579
+<v John Miller>prompts.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/575-0
+01:01:00.939 --> 01:01:05.786
+<v John Miller>dot instruction file.
+It means that this is an instruction file</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/575-1
+01:01:05.786 --> 01:01:12.148
+<v John Miller>for for prompts and so here we're looking
+for an instruction file for prompting and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/575-2
+01:01:12.148 --> 01:01:15.859
+<v John Miller>this one will provides A mandatory
+requirements.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/576-0
+01:01:16.299 --> 01:01:21.175
+<v John Miller>For prompt files.
+So this is an instruction file for</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/576-1
+01:01:21.175 --> 01:01:28.259
+<v John Miller>prompts and this one here is a chat mode
+in instructions and here is one for</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/576-2
+01:01:28.259 --> 01:01:33.779
+<v John Miller>creating prompts provides comprehensive.
+Oh this one sorry.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/577-0
+01:01:34.299 --> 01:01:39.748
+<v John Miller>I misspoke on this slightly. What this is,
+is it provides requirements for all</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/577-1
+01:01:39.748 --> 01:01:45.266
+<v John Miller>prompts that generate instruction files.
+So this this is very meta in the sense</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/577-2
+01:01:45.266 --> 01:01:49.404
+<v John Miller>that it only goes.
+It only actually looks at files that are</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/577-3
+01:01:49.404 --> 01:01:53.819
+<v John Miller>prompts dot instruction files,
+and there are a few of those in.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/578-0
+01:01:54.219 --> 01:01:59.085
+<v John Miller>In here.
+So here where it says instructions dot</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/578-1
+01:01:59.085 --> 01:02:07.095
+<v John Miller>prompt, that is an instruction file.
+It's a prompt for creating an instruction</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/578-2
+01:02:07.095 --> 01:02:13.179
+<v John Miller>file and this can get really meta in the
+sense that I have.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/579-0
+01:02:13.419 --> 01:02:17.027
+<v John Miller>In my in my mind I work.
+In my mind the way I think about it is</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/579-1
+01:02:17.027 --> 01:02:21.312
+<v John Miller>that the instruction files are are the
+the deliverable that we're trying to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/579-2
+01:02:21.312 --> 01:02:24.639
+<v John Miller>accomplish here.
+If this is the instruction files are what</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/579-3
+01:02:24.639 --> 01:02:28.699
+<v John Miller>are actually used to guide the code
+implementations and all of the the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/580-0
+01:02:28.699 --> 01:02:32.475
+<v John Miller>All of the artifacts,
+the other meta files for guiding the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/580-1
+01:02:32.475 --> 01:02:36.251
+<v John Miller>creation of the instruction files or
+creating the prompts.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/580-2
+01:02:36.251 --> 01:02:40.091
+<v John Miller>I don't really consider it as a part of
+the project per SE,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/580-3
+01:02:40.091 --> 01:02:45.403
+<v John Miller>but they're actually just part of things
+that you would use to help you create the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/580-4
+01:02:45.403 --> 01:02:48.539
+<v John Miller>instruction files that you're going to be
+using.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/581-0
+01:02:48.539 --> 01:02:52.541
+<v John Miller>Using it in a course of implementing a
+solution.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/581-1
+01:02:52.541 --> 01:02:57.933
+<v John Miller>So what these instruction files for
+creating prompts and creating</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/581-2
+01:02:57.933 --> 01:03:04.141
+<v John Miller>instructions and prompt files are doing
+for you is they're just providing a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/581-3
+01:03:04.141 --> 01:03:05.939
+<v John Miller>template or a pattern.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/582-0
+01:03:06.299 --> 01:03:11.537
+<v John Miller>And defining the requirements of what you
+want to see in the ultimate instruction</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/582-1
+01:03:11.537 --> 01:03:15.050
+<v John Miller>files themselves.
+And so I've and I kind of came about</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/582-2
+01:03:15.050 --> 01:03:19.713
+<v John Miller>these from essentially doing them in kind
+of a reverse order. I say, OK,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/582-3
+01:03:19.713 --> 01:03:23.419
+<v John Miller>I want to create a prop that creates an
+instruction file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/583-0
+01:03:23.499 --> 01:03:28.410
+<v John Miller>Then I want to turn that prompt,
+which is a simple prompt that I might</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/583-1
+01:03:28.410 --> 01:03:34.152
+<v John Miller>have just entered in the chat window into
+a more comprehensive profile by saying I</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/583-2
+01:03:34.152 --> 01:03:39.203
+<v John Miller>want to create a prompt file now of this
+prompt that I used to create an</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/583-3
+01:03:39.203 --> 01:03:40.379
+<v John Miller>instruction file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/584-0
+01:03:40.499 --> 01:03:43.747
+<v John Miller>And then in some cases I've said OK,
+I now have a prompt,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/584-1
+01:03:43.747 --> 01:03:47.107
+<v John Miller>but I want to create a prompt that will
+create that prompt,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/584-2
+01:03:47.107 --> 01:03:51.027
+<v John Miller>which is I haven't had. Well,
+I actually have had a good use for that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/584-3
+01:03:51.027 --> 01:03:54.835
+<v John Miller>in that it allows me if I make
+modifications to that prompt file or</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/584-4
+01:03:54.835 --> 01:03:59.259
+<v John Miller>other things that I want to revert them,
+I can actually just go back and rerun</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/584-5
+01:03:59.259 --> 01:03:59.539
+<v John Miller>them.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/585-0
+01:03:59.899 --> 01:04:04.059
+<v John Miller>The the prompt creation,
+the prompt that created the prompt and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/585-1
+01:04:04.059 --> 01:04:09.129
+<v John Miller>then run the and then and then from there
+I can run that prompt to create the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/585-2
+01:04:09.129 --> 01:04:11.859
+<v John Miller>instruction files if that makes any sense.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/586-0
+01:04:13.539 --> 01:04:15.739
+<v John Miller>Alright, so the this, yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/589-0
+01:04:13.779 --> 01:04:16.734
+<v Majernik, Peter>So can John,
+can you pause here for a second?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/589-1
+01:04:16.734 --> 01:04:21.102
+<v Majernik, Peter>So I have a question for our team.
+Do you guys understand all this?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/587-0
+01:04:16.739 --> 01:04:17.139
+<v John Miller>Go ahead.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/589-2
+01:04:21.102 --> 01:04:25.278
+<v Majernik, Peter>Like do you know how to create an
+instruction file from scratch?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/589-3
+01:04:25.278 --> 01:04:28.233
+<v Majernik, Peter>Should we go through that exercise as a
+team?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/589-4
+01:04:28.233 --> 01:04:32.859
+<v Majernik, Peter>Because I I can't say that I'm like
+comfortable with this. So my first.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/588-0
+01:04:33.219 --> 01:04:33.339
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/590-0
+01:04:33.339 --> 01:04:37.334
+<v Majernik, Peter>The question to John would be something
+like OK, if I'm starting a new project,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/590-1
+01:04:37.334 --> 01:04:41.230
+<v Majernik, Peter>do I start typing from scratch or do I
+copy paste one of your files and start</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/590-2
+01:04:41.230 --> 01:04:42.579
+<v Majernik, Peter>with that? Which is better?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/591-0
+01:04:43.419 --> 01:04:46.873
+<v John Miller>I would say,
+I would say in some cases it's better to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/591-1
+01:04:46.873 --> 01:04:51.991
+<v John Miller>start and I'll talk to talk tomorrow when
+we get into the more of a Greenfield.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/591-2
+01:04:51.991 --> 01:04:56.725
+<v John Miller>If you're starting a new project,
+there are some files that you can't you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/591-3
+01:04:56.725 --> 01:05:01.139
+<v John Miller>you don't have really an opportunity to
+generate through AI because.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/592-0
+01:05:01.459 --> 01:05:05.656
+<v John Miller>No, you could try,
+but things like business rules and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/592-1
+01:05:05.656 --> 01:05:11.797
+<v John Miller>requirements and use cases and things
+like that you can you have to provide it</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/592-2
+01:05:11.797 --> 01:05:16.539
+<v John Miller>some input in order for it to understand
+the problem domain.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/593-0
+01:05:16.579 --> 01:05:16.819
+<v John Miller>But.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/594-0
+01:05:16.579 --> 01:05:19.534
+<v Majernik, Peter>So,
+so let's say we have this legacy project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/594-1
+01:05:19.534 --> 01:05:23.067
+<v Majernik, Peter>What would I do?
+I open GitHub Copilot chat and I say,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/594-2
+01:05:23.067 --> 01:05:26.279
+<v Majernik, Peter>hey Copilot,
+generate me the instruction files by</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/594-3
+01:05:26.279 --> 01:05:29.299
+<v Majernik, Peter>looking at my code base.
+Is that a good start?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/597-0
+01:05:27.819 --> 01:05:35.644
+<v John Miller>Yeah, that is. I have a prompt for that.
+This is this is a pretty interesting one.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/595-0
+01:05:32.699 --> 01:05:32.819
+<v Majernik, Peter>OK.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/597-1
+01:05:35.644 --> 01:05:43.281
+<v John Miller>I I need to update it a little bit and
+just as an aside, you know I've given it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/596-0
+01:05:35.899 --> 01:05:36.139
+<v Majernik, Peter>So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/597-2
+01:05:43.281 --> 01:05:46.299
+<v John Miller>This is a public repo in GitHub.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/599-0
+01:05:46.659 --> 01:05:51.592
+<v John Miller>And as I make modifications and all this,
+it'll all go back in that repo,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/599-1
+01:05:51.592 --> 01:05:53.259
+<v John Miller>so it'll evolve overtime.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/601-0
+01:05:53.099 --> 01:05:55.697
+<v Majernik, Peter>OK,
+so I could use the prompt from your</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/601-1
+01:05:55.697 --> 01:05:59.659
+<v Majernik, Peter>generate instructions prompt MD.
+Start with that. OK, great.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/602-0
+01:05:56.819 --> 01:06:00.127
+<v John Miller>Right, right.
+You could open up this repo and you could</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/602-1
+01:06:00.127 --> 01:06:04.971
+<v John Miller>drag this file directly into your project
+into your instruction folder and now it</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/602-2
+01:06:04.971 --> 01:06:09.343
+<v John Miller>under now your now your solution
+understands how to do that kind of work.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/602-3
+01:06:09.343 --> 01:06:12.179
+<v John Miller>So I wanted to open this in a preview and
+just.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/603-0
+01:06:12.499 --> 01:06:16.650
+<v John Miller>Talk about what it does here,
+and this is an interesting thing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/603-1
+01:06:16.650 --> 01:06:22.099
+<v John Miller>Another let me let me show you this first
+and then I'll talk about something that's</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/603-2
+01:06:22.099 --> 01:06:25.667
+<v John Miller>even simpler.
+So let's just open this into a window so</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/603-3
+01:06:25.667 --> 01:06:27.419
+<v John Miller>we can see the whole thing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/604-0
+01:06:27.779 --> 01:06:32.817
+<v John Miller>So it basically goes through an analysis
+phase where it looks at the project</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/604-1
+01:06:32.817 --> 01:06:36.088
+<v John Miller>structure,
+the existing patterns and conventions,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/604-2
+01:06:36.088 --> 01:06:39.883
+<v John Miller>the technology stack,
+and then goes through and generates</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/604-3
+01:06:39.883 --> 01:06:43.743
+<v John Miller>instruction files from what it learned
+about your project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/604-4
+01:06:43.743 --> 01:06:46.099
+<v John Miller>So what this is trying to do is say.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/605-0
+01:06:46.099 --> 01:06:51.291
+<v John Miller>Do a code base search,
+look at the whole project and then go</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/605-1
+01:06:51.291 --> 01:06:56.314
+<v John Miller>ahead and create general instructions
+like a read me file,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/605-2
+01:06:56.314 --> 01:07:02.784
+<v John Miller>project level instructions which looks
+like this would be basically some AI</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/605-3
+01:07:02.784 --> 01:07:06.019
+<v John Miller>assistant guidelines which we've done.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/606-0
+01:07:06.099 --> 01:07:10.744
+<v John Miller>Project overview, the technology stack.
+So this is kind of like A at the project</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/606-1
+01:07:10.744 --> 01:07:14.414
+<v John Miller>level, at a very high level.
+What does this project consist of?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/606-2
+01:07:14.414 --> 01:07:15.619
+<v John Miller>And so it's going to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/607-0
+01:07:14.419 --> 01:07:18.256
+<v Majernik, Peter>OK,
+so so if I run it on a legacy code code</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/607-1
+01:07:18.256 --> 01:07:23.924
+<v Majernik, Peter>base, that's not ideal.
+Would the instruction files reflect that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/607-2
+01:07:23.924 --> 01:07:29.419
+<v Majernik, Peter>state and provide instructions that are
+not perfect to follow?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/608-0
+01:07:29.699 --> 01:07:32.115
+<v John Miller>Well,
+what it actually does is it's not</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/608-1
+01:07:32.115 --> 01:07:35.499
+<v John Miller>actually, well,
+the only time it actually looks at your</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/608-2
+01:07:35.499 --> 01:07:40.273
+<v John Miller>code base is here when it's looking at
+the project structure and technologies,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/608-3
+01:07:40.273 --> 01:07:44.744
+<v John Miller>the the patterns it can see and the
+conventions that you're using and the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/608-4
+01:07:44.744 --> 01:07:46.859
+<v John Miller>technology stack that you're using.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/609-0
+01:07:47.339 --> 01:07:53.249
+<v John Miller>Then it goes ahead and pays instruction
+files that are specific to those tasks,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/609-1
+01:07:53.249 --> 01:07:56.795
+<v John Miller>right?
+So if you just say if you're using C# as</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/609-2
+01:07:56.795 --> 01:08:00.563
+<v John Miller>an example,
+what it's going to do is it's actually</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/609-3
+01:08:00.563 --> 01:08:01.819
+<v John Miller>going to utilize.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/611-0
+01:08:02.969 --> 01:08:08.616
+<v John Miller>Standards and practices from the from
+Microsoft and other places that describe</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/611-1
+01:08:08.616 --> 01:08:13.692
+<v John Miller>what how C# code should be written
+theoretically and it will create an</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/611-2
+01:08:13.692 --> 01:08:16.409
+<v John Miller>instruction file which is targeted at.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/612-0
+01:08:18.059 --> 01:08:21.619
+<v John Miller>At writing good C# code, it's not.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/613-0
+01:08:20.779 --> 01:08:25.393
+<v Majernik, Peter>OK, So what I'm trying to figure out is,
+is there a risk of generating an</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/613-1
+01:08:25.393 --> 01:08:27.139
+<v Majernik, Peter>imperfect instructions file?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/614-0
+01:08:27.459 --> 01:08:30.245
+<v John Miller>Well,
+of course it's always a risk because it's</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/614-1
+01:08:30.245 --> 01:08:32.219
+<v John Miller>AI. It's non deterministic, right?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/616-0
+01:08:31.179 --> 01:08:35.482
+<v Majernik, Peter>And and how?
+So how do I go about like improving that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/616-1
+01:08:35.482 --> 01:08:41.779
+<v Majernik, Peter>instruction file after I generated it
+from a bad code base and I'm not saying.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/617-0
+01:08:39.939 --> 01:08:42.918
+<v John Miller>Well, you would, I would,
+it would be a review, right?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/617-1
+01:08:42.918 --> 01:08:47.090
+<v John Miller>Do a do a review and I would do a team
+review of those instructions and say,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/617-2
+01:08:47.090 --> 01:08:49.582
+<v John Miller>well,
+do we agree or do not agree with all of</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/617-3
+01:08:49.582 --> 01:08:52.616
+<v John Miller>these instructions? Make your,
+make your modifications.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/617-4
+01:08:52.616 --> 01:08:57.059
+<v John Miller>So there's instruction files to reflect
+what you actually expect because they're.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/618-0
+01:08:57.299 --> 01:09:00.673
+<v John Miller>You know,
+we're giving it very generic instructions</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/618-1
+01:09:00.673 --> 01:09:06.125
+<v John Miller>and it's giving us very detailed output,
+but it's making assumptions along the way.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/618-2
+01:09:06.125 --> 01:09:10.733
+<v John Miller>And so we want to validate that those
+assumptions that it's making are</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/618-3
+01:09:10.733 --> 01:09:13.459
+<v John Miller>consistent with what our expectations are.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/619-0
+01:09:13.539 --> 01:09:18.729
+<v John Miller>So we can either provide those
+expectations upfront when we say to go</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/619-1
+01:09:18.729 --> 01:09:24.437
+<v John Miller>ahead and generate these instruction
+files by specifying more precisely what</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/619-2
+01:09:24.437 --> 01:09:29.998
+<v John Miller>we want, and to a certain extent,
+that's done in the instruction file that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/619-3
+01:09:29.998 --> 01:09:31.259
+<v John Miller>I've created for.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/620-0
+01:09:31.379 --> 01:09:34.618
+<v John Miller>Which is the one of those meta
+instruction files,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/620-1
+01:09:34.618 --> 01:09:39.024
+<v John Miller>which is an instruction file for creating
+instruction files, right?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/620-2
+01:09:39.024 --> 01:09:44.272
+<v John Miller>So you're a technical writer and produce
+a markdown instruction file that guides</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/620-3
+01:09:44.272 --> 01:09:48.419
+<v John Miller>contributors on how to create an
+instruction file consistently.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/621-0
+01:09:48.739 --> 01:09:53.631
+<v John Miller>So you if you if you add this to your
+project and then you have it generate the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/621-1
+01:09:53.631 --> 01:09:58.340
+<v John Miller>instruction files that they all those
+instruction files will conform to this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/621-2
+01:09:58.340 --> 01:10:01.887
+<v John Miller>this instruction file and you'll get a
+consistent output,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/621-3
+01:10:01.887 --> 01:10:03.539
+<v John Miller>but you could actually add.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/622-0
+01:10:03.979 --> 01:10:10.344
+<v John Miller>Additional instructions that are much
+more specific to your project in terms of</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/622-1
+01:10:10.344 --> 01:10:16.710
+<v John Miller>how you want those instructions generated
+and that will impact the instructions</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/622-2
+01:10:16.710 --> 01:10:18.779
+<v John Miller>that actually get created.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/623-0
+01:10:19.539 --> 01:10:23.604
+<v John Miller>Or you can just go ahead and say, OK,
+generate them based on the basics that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/623-1
+01:10:23.604 --> 01:10:27.828
+<v John Miller>we're talking about here and then we'll
+go back and we'll do essentially a code</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/623-2
+01:10:27.828 --> 01:10:31.630
+<v John Miller>review on those instructions,
+which would be something I would strongly</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/623-3
+01:10:31.630 --> 01:10:35.379
+<v John Miller>recommend just to make sure that it's not
+producing something that is.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/624-0
+01:10:36.059 --> 01:10:42.379
+<v John Miller>Different from what you would like to see
+the code conform to. Does that make sense?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/625-0
+01:10:43.859 --> 01:10:44.459
+<v Majernik, Peter>I I think so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/626-0
+01:10:46.899 --> 01:10:50.445
+<v John Miller>Right.
+So so they but they you know the the the,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/626-1
+01:10:50.445 --> 01:10:56.380
+<v John Miller>I think the crux of it is that we want to
+make sure that that we have instruction</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/626-2
+01:10:56.380 --> 01:11:01.592
+<v John Miller>files that conform to what our
+expectation is of the code base when you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/626-3
+01:11:01.592 --> 01:11:03.619
+<v John Miller>run that get the generation.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/627-0
+01:11:04.219 --> 01:11:10.471
+<v John Miller>This file for generating instructions,
+it will use whatever instructions that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/627-1
+01:11:10.471 --> 01:11:14.159
+<v John Miller>you provide in order to create it.
+And again,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/627-2
+01:11:14.159 --> 01:11:20.732
+<v John Miller>this is telling you essentially what kind
+of output that you're gonna get for all</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/627-3
+01:11:20.732 --> 01:11:24.019
+<v John Miller>these different aspects of your practice.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/628-0
+01:11:24.099 --> 01:11:28.037
+<v John Miller>The standards, your practices,
+your error handling instructions,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/628-1
+01:11:28.037 --> 01:11:32.885
+<v John Miller>the styling, A styling guide. You know,
+all of these would be things that you'd</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/628-2
+01:11:32.885 --> 01:11:36.339
+<v John Miller>kind of want to review and make sure
+they're conforming.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/630-0
+01:11:35.019 --> 01:11:40.088
+<v Majernik, Peter>So, so let me ask a practical question.
+Let's say I want to create.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/629-0
+01:11:38.659 --> 01:11:39.419
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/630-1
+01:11:40.088 --> 01:11:46.051
+<v Majernik, Peter>Let's say I have a repo that works with
+Azure cloud resources and for all of my</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/630-2
+01:11:46.051 --> 01:11:49.928
+<v Majernik, Peter>scripting I want to restrict my team to
+PowerShell.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/630-3
+01:11:49.928 --> 01:11:53.059
+<v Majernik, Peter>I don't want anybody to be coding in bash.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/631-0
+01:11:53.059 --> 01:11:58.869
+<v Majernik, Peter>Is is there a way to capture that what
+what this rule what I just said in the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/631-1
+01:11:58.869 --> 01:12:03.413
+<v Majernik, Peter>instruction files?
+So when I ask for you know new scripts to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/631-2
+01:12:03.413 --> 01:12:06.988
+<v Majernik, Peter>be generated,
+make sure it's all in PowerShell,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/631-3
+01:12:06.988 --> 01:12:07.659
+<v Majernik, Peter>not bash.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/632-0
+01:12:08.139 --> 01:12:13.779
+<v Majernik, Peter>Or is that not a instruction files thing
+to do? Like I don't know.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/633-0
+01:12:12.659 --> 01:12:18.299
+<v John Miller>Well, you, yeah, you well,
+you could definitely go into like the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/633-1
+01:12:18.299 --> 01:12:24.633
+<v John Miller>projects one which which talked about you
+know how you know the project,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/633-2
+01:12:24.633 --> 01:12:29.579
+<v John Miller>the AI assistance guidelines etcetera,
+project overview.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/634-0
+01:12:30.099 --> 01:12:35.070
+<v John Miller>The technology that you use,
+you can be specific about those</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/634-1
+01:12:35.070 --> 01:12:41.753
+<v John Miller>technologies and you can specify that you
+want to use PowerShell and when you get</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/634-2
+01:12:41.753 --> 01:12:45.339
+<v John Miller>into the practices here you can also
+apply.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/636-0
+01:12:45.459 --> 01:12:51.115
+<v John Miller>Instruction or add instructions here that
+says when you're working in this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/636-1
+01:12:51.115 --> 01:12:56.697
+<v John Miller>particular area of the project or with
+this kind of file that you want to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/636-2
+01:12:56.697 --> 01:13:00.619
+<v John Miller>restrict this to just PowerShell output
+and not to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/635-0
+01:12:59.299 --> 01:13:02.459
+<v Majernik, Peter>So where?
+So which section would you type that in?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/637-0
+01:13:03.499 --> 01:13:03.859
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/638-0
+01:13:08.939 --> 01:13:13.280
+<v John Miller>That API design,
+I would say that would go into the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/638-1
+01:13:13.280 --> 01:13:18.791
+<v John Miller>development workflow practices,
+but farther down in this generate</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/638-2
+01:13:18.791 --> 01:13:24.219
+<v John Miller>instructions document we get into we
+talked about style briefly.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/639-0
+01:13:26.139 --> 01:13:29.707
+<v John Miller>Testing.
+This is also something you probably want</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/639-1
+01:13:29.707 --> 01:13:35.274
+<v John Miller>to take a close look at and then I get
+into technology specific instructions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/639-2
+01:13:35.274 --> 01:13:40.699
+<v John Miller>So it goes through then and identifies
+what technologies that you're using.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/640-0
+01:13:41.219 --> 01:13:47.483
+<v John Miller>And you could actually, you know,
+you you said you wanted to when you're</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/642-0
+01:13:47.019 --> 01:13:50.732
+<v Majernik, Peter>So yeah,
+so let's say the developer comes along</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/640-1
+01:13:47.483 --> 01:13:50.659
+<v John Miller>doing dealing with Azure, right? The.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/642-1
+01:13:50.732 --> 01:13:54.601
+<v Majernik, Peter>and they open the compiler chat and
+they're like,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/642-2
+01:13:54.601 --> 01:14:00.558
+<v Majernik, Peter>give me a script to generate a new
+storage account in Azure and I expect the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/642-3
+01:14:00.558 --> 01:14:04.659
+<v Majernik, Peter>answer to come back in PowerShell,
+not Bash without.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/641-0
+01:14:00.699 --> 01:14:00.859
+<v John Miller>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/643-0
+01:14:04.979 --> 01:14:09.229
+<v Majernik, Peter>The developer saying anything or asking
+for that specific language?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/643-1
+01:14:09.229 --> 01:14:12.979
+<v Majernik, Peter>Is there a way to enforce that with this
+instruction files?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/644-0
+01:14:13.939 --> 01:14:16.019
+<v Majernik, Peter>That's what I'm wondering about.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/646-0
+01:14:14.179 --> 01:14:17.757
+<v John Miller>Right. So yeah,
+so so here we have this this idea that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/646-1
+01:14:17.757 --> 01:14:22.116
+<v John Miller>we're generating these instructions for
+the particular technology.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/645-0
+01:14:17.979 --> 01:14:18.139
+<v Majernik, Peter>H.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/646-2
+01:14:22.116 --> 01:14:27.451
+<v John Miller>It says if you you detect a cloud service,
+then you would create some appropriate</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/646-3
+01:14:27.451 --> 01:14:30.379
+<v John Miller>folders underneath your instructions
+folder.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/647-0
+01:14:31.139 --> 01:14:36.444
+<v John Miller>There are instructions specifically for
+Azure and that's or AWS or Google Cloud</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/647-1
+01:14:36.444 --> 01:14:41.020
+<v John Miller>or whatever it happens to be,
+and in that instruction file you could</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/647-2
+01:14:41.020 --> 01:14:46.259
+<v John Miller>then specify specifically that all of the
+work needs to be done in PowerShell.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/648-0
+01:14:48.499 --> 01:14:52.405
+<v John Miller>So when he so when he asked then to
+create a storage account,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/648-1
+01:14:52.405 --> 01:14:56.059
+<v John Miller>that storage account code would be
+written in PowerShell.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/649-0
+01:14:58.579 --> 01:15:00.219
+<v Majernik, Peter>OK. Thanks.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/650-0
+01:15:00.739 --> 01:15:07.239
+<v John Miller>So we can we want let's why don't we take
+this instruction file and let's make sure</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/650-1
+01:15:07.239 --> 01:15:09.019
+<v John Miller>that we have it in our.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/651-0
+01:15:11.299 --> 01:15:14.139
+<v John Miller>I think it's this guy here, yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/652-0
+01:15:16.939 --> 01:15:19.815
+<v John Miller>Yeah,
+I just gotta gotta bounce back and forth</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/652-1
+01:15:19.815 --> 01:15:23.059
+<v John Miller>between different projects.
+So this is the one here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/652-2
+01:15:23.059 --> 01:15:26.059
+<v John Miller>Do we have that instruction file in our
+project?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/653-0
+01:15:28.859 --> 01:15:30.779
+<v John Miller>As I move some over um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/654-0
+01:15:32.219 --> 01:15:32.379
+<v John Miller>2.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/655-0
+01:15:33.419 --> 01:15:34.139
+<v John Miller>Prompts issues.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/657-0
+01:15:39.579 --> 01:15:43.779
+<v John Miller>No, it doesn't like it gets here,
+so why don't we?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/658-0
+01:15:45.179 --> 01:15:48.459
+<v John Miller>create create an instruction folder.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/659-0
+01:15:49.339 --> 01:15:49.499
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/661-0
+01:15:58.419 --> 01:15:59.099
+<v John Miller>And then?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/662-0
+01:16:00.659 --> 01:16:02.859
+<v John Miller>I'll go back to the other project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/663-0
+01:16:09.779 --> 01:16:09.819
+<v John Miller>Uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/664-0
+01:16:13.499 --> 01:16:13.939
+<v John Miller>This file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/665-0
+01:16:26.179 --> 01:16:30.868
+<v John Miller>So we wanted to generate instructions
+prompts, so I'll just copy that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/665-1
+01:16:30.868 --> 01:16:36.219
+<v John Miller>We'll go back to our project and to our
+instruction folder that we just created.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/666-0
+01:16:44.779 --> 01:16:48.179
+<v John Miller>And we'll just add it there.
+So now we have this is oh,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/666-1
+01:16:48.179 --> 01:16:51.579
+<v John Miller>it's actually a prompt,
+so let me move it into prompts.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/667-0
+01:16:54.619 --> 01:16:59.979
+<v John Miller>Alright, so now we have a prompt file.
+Let's clear up our our context.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/668-0
+01:17:03.059 --> 01:17:07.979
+<v John Miller>And then say we want to execute the
+generate instructions prompt.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/669-0
+01:17:09.099 --> 01:17:11.099
+<v John Miller>On our calculator.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/672-0
+01:17:22.499 --> 01:17:27.339
+<v John Miller>So then we should see instruction files
+now show up in our instruction folder.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/674-0
+01:17:28.659 --> 01:17:31.339
+<v John Miller>Once it goes and looks at the code base.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/673-0
+01:17:29.259 --> 01:17:29.379
+<v Majernik, Peter>OK.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/675-0
+01:17:31.179 --> 01:17:33.219
+<v Majernik, Peter>Great. So that's our entry point.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/676-0
+01:17:34.259 --> 01:17:38.542
+<v John Miller>Yeah, this is Oh yeah.
+So the the first effort would be take a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/676-1
+01:17:38.542 --> 01:17:43.980
+<v John Miller>look at this generate instructions prompt
+file and make sure that it's what you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/676-2
+01:17:43.980 --> 01:17:48.739
+<v John Miller>want to see in the output into your in
+terms of the instruction file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/676-3
+01:17:48.739 --> 01:17:52.819
+<v John Miller>So you you kind of in my mind the the
+workflow is that you.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/677-0
+01:17:52.819 --> 01:17:56.511
+<v John Miller>Create all of this front,
+create all this front matter 1st and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/677-1
+01:17:56.511 --> 01:18:00.907
+<v John Miller>starting with examining these profiles
+and making sure that they meet your</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/677-2
+01:18:00.907 --> 01:18:03.955
+<v John Miller>expectations.
+Because now that we've copied it into</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/677-3
+01:18:03.955 --> 01:18:07.121
+<v John Miller>this project,
+it's actually part of the source of the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/677-4
+01:18:07.121 --> 01:18:08.059
+<v John Miller>of your project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/678-0
+01:18:08.779 --> 01:18:13.947
+<v John Miller>Rather than mine,
+and you can make whatever modifications</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/678-1
+01:18:13.947 --> 01:18:19.650
+<v John Miller>you want to in order for it to actually
+map to what you expect.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/678-2
+01:18:19.650 --> 01:18:26.779
+<v John Miller>Notice that it's created a C folder and a
+WPF folder, but it's yet to create a.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/679-0
+01:18:26.899 --> 01:18:32.149
+<v John Miller>An instruction file for it,
+but here's the readme file that we asked</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/679-1
+01:18:32.149 --> 01:18:36.410
+<v John Miller>it to create.
+It describes what it's learned about that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/679-2
+01:18:36.410 --> 01:18:37.019
+<v John Miller>project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/680-0
+01:18:39.299 --> 01:18:45.699
+<v John Miller>And this is a good place to make sure
+that it's your that it's clear about what</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/680-1
+01:18:45.699 --> 01:18:51.779
+<v John Miller>the what the application is trying to do
+so because this becomes important.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/681-0
+01:18:52.699 --> 01:18:57.582
+<v John Miller>OK,
+here's the technology stack that it's</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/681-1
+01:18:57.582 --> 01:19:01.419
+<v John Miller>that is determined or it's found.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/682-0
+01:19:03.059 --> 01:19:04.939
+<v John Miller>That it's a monolithic application.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/683-0
+01:19:07.139 --> 01:19:10.579
+<v John Miller>With with a clear separation between the
+UI layers.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/684-0
+01:19:13.379 --> 01:19:18.939
+<v John Miller>And now it's going to create the the
+instruction files. Questions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/685-0
+01:19:23.699 --> 01:19:23.979
+<v John Miller>In.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/687-0
+01:19:25.299 --> 01:19:28.583
+<v Majernik, Peter>I'm I'm gonna let others ask some
+questions as well.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/687-1
+01:19:28.583 --> 01:19:30.939
+<v Majernik, Peter>I don't want to take up all your time.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/689-0
+01:19:32.539 --> 01:19:35.139
+<v John Miller>O Here's the roject instructions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/688-0
+01:19:33.259 --> 01:19:33.579
+<v Majernik, Peter>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/692-0
+01:19:44.059 --> 01:19:49.030
+<v Majernik, Peter>OK, I do have a question. So OK,
+we generated this, it says.net 8.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/692-1
+01:19:49.030 --> 01:19:54.075
+<v Majernik, Peter>You push this to the repo,
+next guy clones the repo and he's asking</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/692-2
+01:19:54.075 --> 01:19:58.675
+<v Majernik, Peter>a question like OK,
+generate a new class for a new entity and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/692-3
+01:19:58.675 --> 01:20:02.979
+<v Majernik, Peter>use a certain language feature that only
+exists in.net 9.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/693-0
+01:20:03.059 --> 01:20:08.894
+<v Majernik, Peter>What's what they are going to say about
+that? Is it going to complain, say, hey,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/693-1
+01:20:08.894 --> 01:20:14.153
+<v Majernik, Peter>you cannot do this because this project
+is.net 8 or is it just going to,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/693-2
+01:20:14.153 --> 01:20:16.459
+<v Majernik, Peter>I don't know, do something else?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/694-0
+01:20:17.539 --> 01:20:19.899
+<v John Miller>Oh, we can try something like that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/695-0
+01:20:17.619 --> 01:20:18.459
+<v Majernik, Peter>Did.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/696-0
+01:20:23.139 --> 01:20:27.494
+<v John Miller>If we if we could come up with a feature
+that we that we know that we could try to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/696-1
+01:20:27.494 --> 01:20:28.019
+<v John Miller>implement.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/699-0
+01:20:28.819 --> 01:20:32.677
+<v Majernik, Peter>So in other words,
+I'm trying to figure out if AI is going</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/699-1
+01:20:32.677 --> 01:20:37.974
+<v Majernik, Peter>to detect this conflict between what the
+developer is asking for versus what the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/697-0
+01:20:35.819 --> 01:20:36.219
+<v John Miller>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/699-2
+01:20:37.974 --> 01:20:41.179
+<v Majernik, Peter>instruction files are guiding it for or
+towards.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/698-0
+01:20:43.499 --> 01:20:43.659
+<v John Miller>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/700-0
+01:20:51.059 --> 01:20:52.779
+<v John Miller>So let's see. Let's go back to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/701-0
+01:20:58.179 --> 01:20:58.379
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/702-0
+01:21:01.219 --> 01:21:04.139
+<v John Miller>Let me see if I can come up with an
+example.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/704-0
+01:21:13.019 --> 01:21:13.499
+<v Majernik, Peter>I.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/713-0
+01:21:48.099 --> 01:21:52.987
+<v John Miller>All right, so how do we stand to luck?
+Now it's starting to produce the generic</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/713-1
+01:21:52.987 --> 01:21:56.104
+<v John Miller>instructions.
+And one thing I would point out just</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/713-2
+01:21:56.104 --> 01:22:00.626
+<v John Miller>about this is that you know these
+potentially error handling instructions</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/713-3
+01:22:00.626 --> 01:22:05.576
+<v John Miller>the the might be something that you would
+apply across multiple projects and you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/713-4
+01:22:05.576 --> 01:22:07.899
+<v John Miller>may only need to generate at one time.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/714-0
+01:22:08.099 --> 01:22:12.122
+<v John Miller>Time and modify it one time and then be
+able to use it from project to project to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/714-1
+01:22:12.122 --> 01:22:12.859
+<v John Miller>project, right?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/715-0
+01:22:21.899 --> 01:22:24.353
+<v John Miller>All right,
+so I have an example of something that we</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/715-1
+01:22:24.353 --> 01:22:24.539
+<v John Miller>can.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/716-0
+01:22:26.699 --> 01:22:27.139
+<v John Miller>Take a look at.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/717-0
+01:22:32.579 --> 01:22:35.739
+<v John Miller>Let's see. Good way to show this would be.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/718-0
+01:22:38.779 --> 01:22:41.739
+<v John Miller>Go here to.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/719-0
+01:22:44.659 --> 01:22:47.819
+<v John Miller>The prompts were close.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/721-0
+01:23:06.379 --> 01:23:07.939
+<v John Miller>One that's created here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/724-0
+01:23:19.499 --> 01:23:26.860
+<v John Miller>So I did a I did a a request asking for a
+new feature and it told me that this this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/724-1
+01:23:26.860 --> 01:23:30.979
+<v John Miller>this members feature required members
+feature.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/725-0
+01:23:33.339 --> 01:23:34.019
+<v John Miller>Here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/726-0
+01:23:35.619 --> 01:23:39.379
+<v John Miller>Doesn't exist in.net 8, but doesn't.net 9.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/728-0
+01:23:42.619 --> 01:23:46.794
+<v John Miller>Right. So, so the question would be,
+you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/727-0
+01:23:43.819 --> 01:23:43.939
+<v Majernik, Peter>OK.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/728-1
+01:23:46.794 --> 01:23:51.859
+<v John Miller>how do we get AI to actually create
+something like that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/729-0
+01:23:56.979 --> 01:24:01.614
+<v John Miller>And before we we get into that,
+I think we need to let this prompt finish</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/729-1
+01:24:01.614 --> 01:24:05.059
+<v John Miller>so that we have our complete set of
+instruction files.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/733-0
+01:24:09.139 --> 01:24:13.344
+<v Majernik, Peter>So if you don't specify what kind of
+instruction files you want,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/733-1
+01:24:13.344 --> 01:24:18.456
+<v Majernik, Peter>does it always give you the exact same
+list or is this totally random or is it</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/733-2
+01:24:18.456 --> 01:24:20.139
+<v Majernik, Peter>like based on the project?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/731-0
+01:24:19.779 --> 01:24:20.059
+<v John Miller>Yes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/732-0
+01:24:21.179 --> 01:24:21.259
+<v John Miller>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/735-0
+01:24:21.699 --> 01:24:26.351
+<v Majernik, Peter>Like I'm just looking at the names of
+those files like projects, practices,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/735-1
+01:24:26.351 --> 01:24:29.656
+<v Majernik, Peter>error handling.
+If I ask the same question again on a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/734-0
+01:24:27.059 --> 01:24:29.819
+<v John Miller>Well, yeah, the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/735-2
+01:24:29.656 --> 01:24:32.839
+<v Majernik, Peter>different project,
+am I gonna get the same files or</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/735-3
+01:24:32.839 --> 01:24:33.819
+<v Majernik, Peter>different files?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/736-0
+01:24:33.219 --> 01:24:36.871
+<v John Miller>Well,
+remember that the only question we asked</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/736-1
+01:24:36.871 --> 01:24:38.659
+<v John Miller>was to run this prompt.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/738-0
+01:24:39.859 --> 01:24:46.218
+<v John Miller>Right now in the in the past what I've
+done is actually written this prompt just</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/737-0
+01:24:40.659 --> 01:24:41.379
+<v Majernik, Peter>Yes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/738-1
+01:24:46.218 --> 01:24:51.949
+<v John Miller>very simply and says say generate
+instruction files for this project and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/738-2
+01:24:51.949 --> 01:24:54.619
+<v John Miller>with that very simple instruction.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/739-0
+01:24:55.219 --> 01:25:00.255
+<v John Miller>It then went and figured out what the
+technology was and it kind of implemented</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/739-1
+01:25:00.255 --> 01:25:04.662
+<v John Miller>something very similar to this.
+And then I've taken that and codified</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/739-2
+01:25:04.662 --> 01:25:09.698
+<v John Miller>that into a into a a prop file that's
+more explicit about what the expectations</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/739-3
+01:25:09.698 --> 01:25:10.139
+<v John Miller>are so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/741-0
+01:25:11.139 --> 01:25:15.899
+<v Majernik, Peter>Oh, OK. So that comes from your file,
+right? It's listed there. OK, thanks.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/740-0
+01:25:11.579 --> 01:25:11.659
+<v John Miller>Hey.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/742-0
+01:25:14.179 --> 01:25:18.699
+<v John Miller>Yes, right, right, right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/743-0
+01:25:22.579 --> 01:25:29.224
+<v John Miller>All right, so we have C# instructions.
+We've got WPF instructions that still</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/743-1
+01:25:29.224 --> 01:25:34.834
+<v John Miller>have yet to be created.
+We talked about project instructions and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/743-2
+01:25:34.834 --> 01:25:38.459
+<v John Miller>here's a style instructions. It basically.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/744-0
+01:25:38.499 --> 01:25:42.059
+<v John Miller>It talks about naming conventions,
+directory structures.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/746-0
+01:25:44.899 --> 01:25:50.539
+<v John Miller>In terms of what it's expecting or what
+it sees testing instructions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/747-0
+01:25:52.419 --> 01:25:57.606
+<v John Miller>And notice that it's following wants to
+follow a test driven development</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/747-1
+01:25:57.606 --> 01:25:58.459
+<v John Miller>methodology.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/748-0
+01:26:03.139 --> 01:26:07.605
+<v John Miller>I think maybe we could probably
+demonstrate this by just making a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/748-1
+01:26:07.605 --> 01:26:11.259
+<v John Miller>modification in the code and then ask it
+to evaluate.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/749-0
+01:26:12.259 --> 01:26:18.346
+<v John Miller>That that particular instruction file.
+So let's just see what happens when we</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/749-1
+01:26:18.346 --> 01:26:18.659
+<v John Miller>get.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/750-0
+01:26:21.019 --> 01:26:21.259
+<v John Miller>All right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/753-0
+01:26:33.179 --> 01:26:38.459
+<v John Miller>So it's now finally working on the WPF
+instructions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/754-0
+01:26:39.739 --> 01:26:43.470
+<v John Miller>And what I like about this is that it it
+doesn't,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/754-1
+01:26:43.470 --> 01:26:48.619
+<v John Miller>it's not technology specific in terms of
+its in terms of the prompt.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/755-0
+01:26:49.779 --> 01:26:52.939
+<v John Miller>But if it's producing technology specific
+instructions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/758-0
+01:27:03.499 --> 01:27:08.706
+<v Carter, Jake>While we're waiting for this to finish,
+do you mind if I ask a different question?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/758-1
+01:27:08.706 --> 01:27:12.596
+<v Carter, Jake>It's like completely off topic from
+Gabriel's question. Yeah,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/757-0
+01:27:09.379 --> 01:27:12.739
+<v John Miller>Well, yeah, sure, Vanna. Yeah, sure.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/758-2
+01:27:12.596 --> 01:27:17.740
+<v Carter, Jake>so I I guess my question is like more so
+we we I think a lot of these instruction</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/758-3
+01:27:17.740 --> 01:27:18.619
+<v Carter, Jake>files sort of.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/759-0
+01:27:19.939 --> 01:27:22.946
+<v Carter, Jake>tell the AI exactly what you want it to
+produce.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/759-1
+01:27:22.946 --> 01:27:27.609
+<v Carter, Jake>So like it gives you like a format of
+like some sort of instruction file or</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/759-2
+01:27:27.609 --> 01:27:32.335
+<v Carter, Jake>maybe some guidelines for your C# code.
+But can you also do like instruction</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/759-3
+01:27:32.335 --> 01:27:36.569
+<v Carter, Jake>files that determine like other behaviors
+of the AI? So for example,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/759-4
+01:27:36.569 --> 01:27:39.699
+<v Carter, Jake>like could you have an instruction file
+that tells</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/760-0
+01:27:39.699 --> 01:27:42.859
+<v Carter, Jake>which instruction files you want it to
+use for certain things.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/762-0
+01:27:44.059 --> 01:27:47.572
+<v John Miller>Yeah, sure.
+I mean that there's a couple of ways of</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/762-1
+01:27:47.572 --> 01:27:50.748
+<v John Miller>doing that.
+One would be there's a an apply to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/762-2
+01:27:50.748 --> 01:27:54.532
+<v John Miller>section here.
+We talked about this yesterday where it's</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/762-3
+01:27:54.532 --> 01:27:59.059
+<v John Miller>saying that this instruction file will
+only apply to dot CS files.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/763-0
+01:28:01.299 --> 01:28:04.760
+<v John Miller>Right,
+so so that way you're controlling what</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/761-0
+01:28:02.699 --> 01:28:02.819
+<v Carter, Jake>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/763-1
+01:28:04.760 --> 01:28:09.199
+<v John Miller>it's actually using.
+And then if you create a a a a prompt</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/763-2
+01:28:09.199 --> 01:28:12.660
+<v John Miller>file,
+you can actually specifically reference</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/763-3
+01:28:12.660 --> 01:28:17.099
+<v John Miller>instruction files that you want to
+include in that prompt.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/764-0
+01:28:17.539 --> 01:28:22.302
+<v John Miller>Oh, and if you create a chat mode file,
+you can do the same thing where you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/764-1
+01:28:22.302 --> 01:28:25.813
+<v John Miller>specify that when you're actually
+executing chat modes,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/764-2
+01:28:25.813 --> 01:28:30.451
+<v John Miller>and we'll talk about that later today,
+that that only should use specific</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/764-3
+01:28:30.451 --> 01:28:33.899
+<v John Miller>instruction files,
+so you have the ability to control.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/765-0
+01:28:34.139 --> 01:28:39.729
+<v John Miller>What what it uses in terms of, you know,
+what it brings into the context of the of</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/765-1
+01:28:39.729 --> 01:28:43.299
+<v John Miller>the prompt in order for it to be able to
+execute it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/765-2
+01:28:43.299 --> 01:28:48.419
+<v John Miller>So it looks like this completed.
+We now have our WPF instruction file here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/766-0
+01:28:49.699 --> 01:28:50.299
+<v John Miller>That describes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/767-0
+01:28:52.259 --> 01:28:59.848
+<v John Miller>What we want. So it has here a.net 8.
+0 version of that we had I think in our</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/767-1
+01:28:59.848 --> 01:29:05.979
+<v John Miller>project file an instruction for.net 8.
+So I think if we go in.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/768-0
+01:29:06.019 --> 01:29:06.299
+<v John Miller>1.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/769-0
+01:29:07.459 --> 01:29:10.235
+<v John Miller>Yeah, you know, you know,
+to be honest with you,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/769-1
+01:29:10.235 --> 01:29:12.219
+<v John Miller>my guess is if we go into the code.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/770-0
+01:29:13.899 --> 01:29:16.539
+<v John Miller>And we we we reference um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/772-0
+01:29:17.859 --> 01:29:23.779
+<v John Miller>In our evaluator program,
+let's see if we can find a place.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/773-0
+01:29:26.059 --> 01:29:28.099
+<v John Miller>We're looking for a class definition.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/774-0
+01:29:29.339 --> 01:29:32.499
+<v John Miller>This isn't it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/775-0
+01:29:35.379 --> 01:29:37.779
+<v John Miller>All right,
+so here we have a public static.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/776-0
+01:29:46.939 --> 01:29:46.979
+<v John Miller>Uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/777-0
+01:29:50.899 --> 01:29:54.950
+<v John Miller>Require members,
+public interface required string.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/777-1
+01:29:54.950 --> 01:29:58.604
+<v John Miller>So we're looking for a like a member up
+here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/777-2
+01:29:58.604 --> 01:30:02.099
+<v John Miller>Is there anything that we can use for
+that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/778-0
+01:30:05.899 --> 01:30:06.579
+<v John Miller>The end.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/779-0
+01:30:17.779 --> 01:30:19.899
+<v John Miller>Let me search for public.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/780-0
+01:30:24.299 --> 01:30:26.299
+<v John Miller>There's nothing in that file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/781-0
+01:30:28.699 --> 01:30:35.539
+<v John Miller>There's looks like 3 here,
+so public static so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/782-0
+01:30:43.099 --> 01:30:48.179
+<v John Miller>So let's just add a member to the class.
+I think that would be the best approach.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/785-0
+01:31:02.499 --> 01:31:06.097
+<v John Miller>So if we go here,
+we just say into this class we want to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/785-1
+01:31:06.097 --> 01:31:06.539
+<v John Miller>add um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/786-0
+01:31:12.939 --> 01:31:14.299
+<v John Miller>So it sees that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/787-0
+01:31:18.819 --> 01:31:21.259
+<v John Miller>To start a class.
+So let's just do this then.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/790-0
+01:31:47.419 --> 01:31:52.602
+<v John Miller>So my first question is,
+will the compiler catch this? It doesn't.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/790-1
+01:31:52.602 --> 01:31:55.619
+<v John Miller>It's not being flagged here in the IDE.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/791-0
+01:31:59.299 --> 01:32:01.099
+<v John Miller>But uh, we do a.net.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/792-0
+01:32:03.499 --> 01:32:03.659
+<v John Miller>Well.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/794-0
+01:32:19.019 --> 01:32:19.899
+<v John Miller>The build succeeded.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/795-0
+01:32:22.979 --> 01:32:26.899
+<v John Miller>So let's clear up our context here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/796-0
+01:32:30.019 --> 01:32:32.859
+<v John Miller>Let's open U our evaluator class.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/799-0
+01:32:44.259 --> 01:32:45.459
+<v John Miller>Let's say um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/800-0
+01:32:53.619 --> 01:32:56.821
+<v Majernik, Peter>So John,
+I I mean I I'm not like on top of the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/800-1
+01:32:56.821 --> 01:33:01.522
+<v Majernik, Peter>latest C# language features,
+but there's a good chance that required</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/800-2
+01:33:01.522 --> 01:33:04.179
+<v Majernik, Peter>keyword was available in.net 8 as well.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/801-0
+01:33:04.899 --> 01:33:08.339
+<v John Miller>Well, I I I asked when I.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/803-0
+01:33:10.139 --> 01:33:14.628
+<v John Miller>The prompt that I used was give me a
+simple feature that's that's implemented</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/802-0
+01:33:11.179 --> 01:33:11.339
+<v Majernik, Peter>So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/803-1
+01:33:14.628 --> 01:33:18.139
+<v John Miller>that's available in.
+net 9 that's not available in.net 8 so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/804-0
+01:33:19.619 --> 01:33:23.894
+<v Majernik, Peter>Well, let's look at the project,
+the calculator dot CS project file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/804-1
+01:33:23.894 --> 01:33:29.038
+<v Majernik, Peter>Let's see what we are targeting. Is it.
+net 8? I mean, that's what it said it was.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/804-2
+01:33:29.038 --> 01:33:31.579
+<v Majernik, Peter>I assume it's true, but we could confirm.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/805-0
+01:33:33.699 --> 01:33:35.699
+<v John Miller>Yeah, so let's.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/807-0
+01:33:38.659 --> 01:33:43.072
+<v Majernik, Peter>Oh, in there. See that? Yeah. So target.
+net 8. That's good.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/806-0
+01:33:39.019 --> 01:33:39.699
+<v John Miller>Starting.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/807-1
+01:33:43.072 --> 01:33:47.269
+<v Majernik, Peter>So if you go back to the class and it
+does not highlight,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/807-2
+01:33:47.269 --> 01:33:51.899
+<v Majernik, Peter>it doesn't complain about it.
+There's a good chance required is</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/807-3
+01:33:51.899 --> 01:33:53.419
+<v Majernik, Peter>available in c.net 8.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/808-0
+01:33:53.979 --> 01:33:54.059
+<v Majernik, Peter>Um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/810-0
+01:33:58.699 --> 01:34:02.123
+<v Majernik, Peter>It's, you know,
+it's it's a language feature,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/810-1
+01:34:02.123 --> 01:34:07.482
+<v Majernik, Peter>so it's not even a.net 8 thing.
+It's more like C# 11 or 12 or something</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/810-2
+01:34:07.482 --> 01:34:10.981
+<v Majernik, Peter>like that.
+So we could try like if you type in</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/810-3
+01:34:10.981 --> 01:34:12.619
+<v Majernik, Peter>something like params.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/812-0
+01:34:15.779 --> 01:34:21.499
+<v Majernik, Peter>The params it would be like supposedly
+params collections were added in C# 13</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/811-0
+01:34:18.059 --> 01:34:18.299
+<v John Miller>Where?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/812-1
+01:34:21.499 --> 01:34:26.779
+<v Majernik, Peter>which is only available in.NET 9,
+so you could try something like that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/814-0
+01:34:27.379 --> 01:34:30.139
+<v John Miller>You wanna put something inside of the?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/813-0
+01:34:28.179 --> 01:34:28.299
+Wait.
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/815-0
+01:34:30.379 --> 01:34:34.531
+<v Majernik, Peter>Yeah,
+just hit enter after that public required</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/815-1
+01:34:34.531 --> 01:34:37.819
+<v Majernik, Peter>string configuration and just type in.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/816-0
+01:34:39.059 --> 01:34:43.859
+<v Majernik, Peter>Public params. I want to see what happens.
+Public space.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/817-0
+01:34:45.739 --> 01:34:48.179
+<v Majernik, Peter>Params. Does it recognize that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/819-0
+01:34:49.259 --> 01:34:52.939
+<v Majernik, Peter>No, it does.
+It does not recognize that it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/818-0
+01:34:49.579 --> 01:34:49.739
+<v John Miller>Whoops.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/820-0
+01:34:54.459 --> 01:34:59.140
+<v Majernik, Peter>Space. Yeah, yeah,
+it doesn't recognise that. So, OK,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/820-1
+01:34:59.140 --> 01:35:03.649
+<v Majernik, Peter>so that's good.
+So my question was really about the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/820-2
+01:35:03.649 --> 01:35:08.764
+<v Majernik, Peter>copilot chat. So I type in a question.
+They're saying, OK,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/820-3
+01:35:08.764 --> 01:35:12.059
+<v Majernik, Peter>give me an or or add a new collection.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/821-0
+01:35:12.739 --> 01:35:18.295
+<v Majernik, Peter>New params collection to the evaluator
+class. What is AI going to say about that?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/821-1
+01:35:18.295 --> 01:35:21.954
+<v Majernik, Peter>If in the instructions files I said we
+are targeting.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/821-2
+01:35:21.954 --> 01:35:27.579
+<v Majernik, Peter>NET 8 and we know that the C version that
+goes with.NET 8 does not support params.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/822-0
+01:35:27.859 --> 01:35:30.619
+<v Majernik, Peter>I want to see if it detects a conflict.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/823-0
+01:35:33.499 --> 01:35:35.459
+<v John Miller>Uh, add the um.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/824-0
+01:35:34.179 --> 01:35:39.985
+<v Majernik, Peter>Just say yeah,
+add the new collection of type params to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/824-1
+01:35:39.985 --> 01:35:42.059
+<v Majernik, Peter>the evaluator class.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/825-0
+01:35:50.219 --> 01:35:53.099
+<v Majernik, Peter>Yeah, something like that.
+That should do it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/826-0
+01:35:56.339 --> 01:35:56.779
+<v Majernik, Peter>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/827-0
+01:35:57.819 --> 01:36:01.939
+<v Majernik, Peter>I just want to see if it actually does it
+or it complaints.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/834-0
+01:36:32.739 --> 01:36:35.739
+<v Carter, Jake>Looks like I just named it params.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/835-0
+01:36:38.019 --> 01:36:39.819
+<v Majernik, Peter>Yeah, so it uh.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/836-0
+01:36:42.259 --> 01:36:47.859
+<v Majernik, Peter>It's basically creating a collection
+anyway of a different type, which is.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/837-0
+01:36:49.299 --> 01:36:51.619
+<v Majernik, Peter>Technically not a bad thing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/839-0
+01:36:58.059 --> 01:37:01.795
+<v Majernik, Peter>OK, so I didn't complain,
+it just basically made it happen anyway,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/839-1
+01:37:01.795 --> 01:37:03.859
+<v Majernik, Peter>a different way, something like that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/838-0
+01:37:02.299 --> 01:37:04.019
+<v John Miller>Right. Yes. Yep.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/840-0
+01:37:03.139 --> 01:37:07.139
+<v Carter, Jake>What would if you said it? Did it?
+If it did it wrong and like be more</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/840-1
+01:37:07.139 --> 01:37:10.859
+<v Carter, Jake>insistent that you want a params,
+maybe it would complain, right?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/842-0
+01:37:13.459 --> 01:37:16.699
+<v John Miller>In terms of what would you change the?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/841-0
+01:37:14.939 --> 01:37:15.099
+<v Majernik, Peter>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/844-0
+01:37:15.219 --> 01:37:19.779
+<v Carter, Jake>I don't know if we wanna try to bully it
+into doing something wrong, but.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/845-0
+01:37:18.419 --> 01:37:20.819
+<v Majernik, Peter>Yeah, I don't know.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/846-0
+01:37:21.099 --> 01:37:24.499
+<v John Miller>Well, you kind of want to, you know, you.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/847-0
+01:37:29.139 --> 01:37:30.299
+<v John Miller>Well, it wasn't.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/848-0
+01:37:31.659 --> 01:37:32.779
+<v John Miller>Let's see.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/849-0
+01:37:36.139 --> 01:37:38.636
+<v Majernik, Peter>Yeah,
+so I I had this experience before where I</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/849-1
+01:37:38.636 --> 01:37:42.070
+<v Majernik, Peter>asked it to do something.
+It did something else and I'm like, OK,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/849-2
+01:37:42.070 --> 01:37:44.723
+<v Majernik, Peter>this is not what I asked for,
+do what I asked for.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/849-3
+01:37:44.723 --> 01:37:48.313
+<v Majernik, Peter>Then it did something else.
+So it it took a few iterations to get to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/849-4
+01:37:48.313 --> 01:37:51.019
+<v Majernik, Peter>the point where I arrived at where I want
+it to be.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/851-0
+01:37:51.539 --> 01:37:54.741
+<v John Miller>You know, that's, yes,
+that's not uncommon,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/850-0
+01:37:51.899 --> 01:37:53.779
+<v Majernik, Peter>That's why I ask this question.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/851-1
+01:37:54.741 --> 01:37:58.161
+<v John Miller>particularly if you're dealing with,
+you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/851-2
+01:37:58.161 --> 01:38:02.019
+<v John Miller>specific syntax that you're looking to to
+implement.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/853-0
+01:38:03.539 --> 01:38:09.245
+<v John Miller>I I just made a mistake and undid all of
+our instruction generation,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/853-1
+01:38:09.245 --> 01:38:10.899
+<v John Miller>so I'm rerunning it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/852-0
+01:38:12.899 --> 01:38:13.019
+<v Majernik, Peter>So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/854-0
+01:38:14.179 --> 01:38:16.859
+<v John Miller>Yeah, I think, yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/855-0
+01:38:14.819 --> 01:38:18.632
+<v Majernik, Peter>Yeah, John. So we don't, I'm sorry,
+I I was just gonna say we don't need to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/855-1
+01:38:18.632 --> 01:38:21.692
+<v Majernik, Peter>get stuck on this particular request.
+Maybe we can continue.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/855-2
+01:38:21.692 --> 01:38:23.499
+<v Majernik, Peter>I was just curious what it would do.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/856-0
+01:38:26.619 --> 01:38:26.859
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/857-0
+01:38:27.939 --> 01:38:31.619
+<v John Miller>Let's see,
+let's bring up a different project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/861-0
+01:38:39.939 --> 01:38:45.499
+<v John Miller>And to say clear our context and say.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/862-0
+01:38:49.179 --> 01:38:50.019
+<v John Miller>I have a.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/863-0
+01:38:54.579 --> 01:38:59.627
+<v John Miller>And this is ask mode, I think. Good.
+So we won't make any changes. No,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/863-1
+01:38:59.627 --> 01:39:00.339
+<v John Miller>we'll ask.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/864-0
+01:39:01.979 --> 01:39:02.699
+<v John Miller>I.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/865-0
+01:39:06.179 --> 01:39:08.787
+<v John Miller>Anyway,
+we need I need something to fill up the</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/865-1
+01:39:08.787 --> 01:39:09.059
+<v John Miller>time.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/866-0
+01:39:12.219 --> 01:39:15.179
+<v John Miller>Well,
+to regenerate those instruction files.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/867-0
+01:39:23.099 --> 01:39:23.179
+<v Majernik, Peter>So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/875-0
+01:40:05.939 --> 01:40:08.419
+<v John Miller>So maybe that's a decent prompt.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/880-0
+01:40:29.979 --> 01:40:30.059
+<v Majernik, Peter>So.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/881-0
+01:40:32.299 --> 01:40:33.419
+<v John Miller>There's params.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/885-0
+01:40:48.979 --> 01:40:53.947
+<v John Miller>So this would likely do a pretty good job
+of doing what you're asked,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/885-1
+01:40:53.947 --> 01:40:59.767
+<v John Miller>at least in terms of prohibiting the AI
+from producing any code that would target</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/885-2
+01:40:59.767 --> 01:41:00.619
+<v John Miller>dotnet dine.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/884-0
+01:41:01.019 --> 01:41:01.139
+<v Majernik, Peter>OK.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/886-0
+01:41:03.419 --> 01:41:05.339
+<v Majernik, Peter>I get. I get the idea.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/887-0
+01:41:06.379 --> 01:41:07.019
+<v John Miller>Right.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/889-0
+01:41:07.619 --> 01:41:11.264
+<v Majernik, Peter>So,
+so we just gotta get good at expressing</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/889-1
+01:41:11.264 --> 01:41:13.419
+<v Majernik, Peter>what we really want. It's.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/890-0
+01:41:12.859 --> 01:41:18.838
+<v John Miller>Well, that's that is true. You know,
+I find instead of writing syntax,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/890-1
+01:41:18.838 --> 01:41:25.323
+<v John Miller>I'm tweaking prompts and you know,
+instruction file language in order for it</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/890-2
+01:41:25.323 --> 01:41:30.629
+<v John Miller>to properly interpret,
+you know what I'm trying to accomplish.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/890-3
+01:41:30.629 --> 01:41:31.219
+<v John Miller>That's.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/891-0
+01:41:31.219 --> 01:41:33.059
+<v John Miller>That I that I think is the new.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/892-0
+01:41:34.659 --> 01:41:39.722
+<v John Miller>Paradigm that we that we tend to work a
+lot in now that we're generating code</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/892-1
+01:41:39.722 --> 01:41:45.174
+<v John Miller>through AI is just and that's why I think
+it's a good idea to encapsulate this into</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/892-2
+01:41:45.174 --> 01:41:49.848
+<v John Miller>an instruction file like this what we're
+saying here because that's a a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/892-3
+01:41:49.848 --> 01:41:52.899
+<v John Miller>requirement that we don't want to have
+the AI.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/893-0
+01:41:53.779 --> 01:41:57.752
+<v John Miller>Violate and therefore we can we can apply
+that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/893-1
+01:41:57.752 --> 01:42:03.795
+<v John Miller>Obviously you know as we saw if you
+actually hand wrote code it wouldn't</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/893-2
+01:42:03.795 --> 01:42:07.107
+<v John Miller>compile.
+So there's there's a there's a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/893-3
+01:42:07.107 --> 01:42:12.819
+<v John Miller>automatically a quality gate there for
+any using any.net 9 features.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/894-0
+01:42:13.899 --> 01:42:17.050
+<v John Miller>So,
+but this will keep it from generating any</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/894-1
+01:42:17.050 --> 01:42:22.050
+<v John Miller>code that would fail in compilation if
+you were if it if it actually was</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/894-2
+01:42:22.050 --> 01:42:25.818
+<v John Miller>generating some,
+you know if it actually did have this</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/894-3
+01:42:25.818 --> 01:42:30.339
+<v John Miller>this instruction file and didn't have any
+instructions about the.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/895-0
+01:42:30.659 --> 01:42:35.086
+<v John Miller>The version of net that you were using,
+it would still be able to interpret from</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/895-1
+01:42:35.086 --> 01:42:39.185
+<v John Miller>the project file like we saw that it was
+using net eight and then it would</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/895-2
+01:42:39.185 --> 01:42:43.777
+<v John Miller>recognize when it tried to actually run a
+test or run the code that the build would</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/895-3
+01:42:43.777 --> 01:42:47.384
+<v John Miller>fail and then it would try to take steps
+to try and address that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/895-4
+01:42:47.384 --> 01:42:49.899
+<v John Miller>It would recognize that this feature
+doesn't.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/896-0
+01:42:50.259 --> 01:42:56.547
+<v John Miller>Isn't supported and it would then go back
+and try to implement it in a way that was</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/896-1
+01:42:56.547 --> 01:43:00.814
+<v John Miller>supported in NET 8.
+So I think you're pretty safe there,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/896-2
+01:43:00.814 --> 01:43:06.354
+<v John Miller>even without this instruction file that
+even if it did generate the code,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/896-3
+01:43:06.354 --> 01:43:09.499
+<v John Miller>it would be able to recognize that it was.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/897-0
+01:43:09.779 --> 01:43:12.779
+<v John Miller>I'm gonna run and then take it out and
+replace it with something else.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/898-0
+01:43:13.899 --> 01:43:17.139
+<v Majernik, Peter>Yeah, I mean in this case that is true.
+But you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/898-1
+01:43:17.139 --> 01:43:19.839
+<v Majernik, Peter>if you have like a large team,
+any projects,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/898-2
+01:43:19.839 --> 01:43:24.219
+<v Majernik, Peter>you know there could be a developer
+creating a new project that targets.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/898-3
+01:43:24.219 --> 01:43:28.839
+<v Majernik, Peter>net 9 and then you try to, you know,
+add that like create a new program that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/898-4
+01:43:28.839 --> 01:43:32.499
+<v Majernik, Peter>combines multiple assemblies from
+multiple places later and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/899-0
+01:43:32.659 --> 01:43:37.980
+<v Majernik, Peter>Basically it is possible that they would
+generate or produce an assembly that is</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/899-1
+01:43:37.980 --> 01:43:43.432
+<v Majernik, Peter>not compatible with the rest of it until
+later. So time would be wasted, you know,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/899-2
+01:43:43.432 --> 01:43:48.819
+<v Majernik, Peter>things like that. But it's not a big deal.
+I I think I know what to do with this.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/900-0
+01:43:48.939 --> 01:43:50.619
+<v Majernik, Peter>So thank you.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/902-0
+01:44:06.659 --> 01:44:08.059
+<v John Miller>I'm just seeing if I can.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/903-0
+01:44:14.579 --> 01:44:19.563
+<v Majernik, Peter>Yeah, that's a good one.
+So is it gonna do it or is it gonna</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/903-1
+01:44:19.563 --> 01:44:20.299
+<v Majernik, Peter>complain?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/904-0
+01:44:20.899 --> 01:44:24.339
+<v John Miller>Yeah, that's what I'm trying to see.
+I see that it's installed.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/905-0
+01:44:24.899 --> 01:44:28.379
+<v Majernik, Peter>Yeah, I didn't complain.
+It just makes it happen.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/906-0
+01:44:35.219 --> 01:44:39.799
+<v Carter, Jake>Probably should have like a rule that
+specifically prohibits this sort of thing,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/906-1
+01:44:39.799 --> 01:44:40.139
+<v Carter, Jake>right?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/907-0
+01:44:41.619 --> 01:44:44.760
+<v Majernik, Peter>Well,
+so this instruction file is supposed to</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/907-1
+01:44:44.760 --> 01:44:50.019
+<v Majernik, Peter>be applicable to the repo, right?
+Not just a single project within the repo.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/908-0
+01:44:50.899 --> 01:44:53.979
+<v John Miller>Yeah,
+I'm trying to see where that ended up.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/909-0
+01:45:00.939 --> 01:45:03.619
+<v Majernik, Peter>Yeah, let's look at the Alley 2 and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/910-0
+01:45:04.899 --> 01:45:07.179
+<v Majernik, Peter>Maybe the answer is in there somewhere.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/911-0
+01:45:15.059 --> 01:45:17.779
+<v John Miller>So we asked for a new. Let's go up here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/912-0
+01:45:21.499 --> 01:45:25.259
+<v John Miller>Changed the readme. Oh,
+it's in roject instructions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/913-0
+01:45:28.579 --> 01:45:31.939
+<v John Miller>And someplace in here it's it's we said
+it's.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/914-0
+01:45:33.939 --> 01:45:34.459
+<v John Miller>Yeah.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/915-0
+01:45:36.059 --> 01:45:39.339
+<v John Miller>Targeting.net 9. Oh, you know something?
+I think I.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/916-0
+01:45:40.819 --> 01:45:40.979
+<v John Miller>2.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/917-0
+01:45:42.299 --> 01:45:43.579
+<v John Miller>Do I keep this?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/918-0
+01:45:49.659 --> 01:45:51.379
+<v John Miller>May have been my mistake.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/919-0
+01:45:58.419 --> 01:46:01.179
+<v John Miller>Because I don't see that construction
+anymore.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/920-0
+01:46:04.139 --> 01:46:06.768
+<v John Miller>This is generate. Oh,
+this is generating those instruction</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/920-1
+01:46:06.768 --> 01:46:08.819
+<v John Miller>files.
+I'm gonna see where do we create that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/921-0
+01:46:09.619 --> 01:46:12.059
+<v John Miller>Yeah, I think we did this over here.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/922-0
+01:46:13.819 --> 01:46:16.659
+<v John Miller>Right. Uh, no, I don't think it's there.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/923-0
+01:46:20.339 --> 01:46:24.198
+<v Majernik, Peter>Yeah, I I saw you do it.
+I I'm just not sure if it was persisted</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/923-1
+01:46:24.198 --> 01:46:25.979
+<v Majernik, Peter>or it went to the right place.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/924-0
+01:46:26.499 --> 01:46:31.142
+<v John Miller>Well,
+I I made a mistake and I undid some of</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/924-1
+01:46:31.142 --> 01:46:33.619
+<v John Miller>these instruction files.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/925-0
+01:46:35.779 --> 01:46:37.739
+<v John Miller>It looks like it's finished creating them.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/926-0
+01:46:41.619 --> 01:46:45.899
+<v John Miller>This is the generate instruction prompt.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/931-0
+01:47:11.459 --> 01:47:14.618
+<v John Miller>It hasn't actually created that project
+yet,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/931-1
+01:47:14.618 --> 01:47:18.059
+<v John Miller>but I'm still looking for that
+instruction file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/933-0
+01:47:23.379 --> 01:47:28.301
+<v Carter, Jake>Looks like this instruction file does say
+that you're supposed to use.net 8.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/933-1
+01:47:28.301 --> 01:47:30.539
+<v Carter, Jake>0 consistently across all projects.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/934-0
+01:47:29.459 --> 01:47:33.259
+<v John Miller>Right, it does say that, so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/935-0
+01:47:33.299 --> 01:47:35.379
+<v Carter, Jake>It should be prohibited.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/945-0
+01:48:03.619 --> 01:48:08.381
+<v Majernik, Peter>So when it says apply to star star,
+does that mean everything in the whole</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/945-1
+01:48:08.381 --> 01:48:08.699
+<v Majernik, Peter>repo?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/944-0
+01:48:09.539 --> 01:48:09.659
+<v John Miller>Yes.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/946-0
+01:48:16.419 --> 01:48:19.875
+<v John Miller>Oh yeah,
+so we generated that one instruction file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/946-1
+01:48:19.875 --> 01:48:24.794
+<v John Miller>Maybe we just asked it to create it,
+but we didn't actually implement it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/946-2
+01:48:24.794 --> 01:48:25.659
+<v John Miller>Maybe that's.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/947-0
+01:48:27.579 --> 01:48:29.179
+<v John Miller>What we.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/948-0
+01:48:34.459 --> 01:48:34.739
+<v John Miller>Yeah, I.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/949-0
+01:48:42.379 --> 01:48:44.259
+<v John Miller>Well, it looks like we interrupted it.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/950-0
+01:48:45.459 --> 01:48:50.550
+<v John Miller>All right, so what I'll at lunch, I'll,
+I'll recreate these instruction files so</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/950-1
+01:48:50.550 --> 01:48:55.139
+<v John Miller>we can get going through and I'll look at
+where I'll see if I can add an</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/950-2
+01:48:55.139 --> 01:49:00.167
+<v John Miller>instruction file and we can do kind of do
+that demonstration again and show how</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/950-3
+01:49:00.167 --> 01:49:00.859
+<v John Miller>that works.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/951-0
+01:49:01.259 --> 01:49:06.803
+<v John Miller>So we also want to kind of revisit this
+idea of incorporating this into the,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/951-1
+01:49:06.803 --> 01:49:10.547
+<v John Miller>you know,
+the pull request in the pipeline and make</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/951-2
+01:49:10.547 --> 01:49:16.523
+<v John Miller>sure that we can enforce these rules that
+we're defining systematically and across</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/951-3
+01:49:16.523 --> 01:49:17.819
+<v John Miller>the whole project.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/953-0
+01:49:19.419 --> 01:49:28.948
+<v John Miller>And what I also thought we would do is
+that in our in our project here is</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/953-1
+01:49:28.948 --> 01:49:35.259
+<v John Miller>identify areas that are that still need
+testing.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/954-0
+01:49:35.539 --> 01:49:41.145
+<v John Miller>And then we can kind of go through the
+process of implementing those tests and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/954-1
+01:49:41.145 --> 01:49:46.964
+<v John Miller>and and there and and showing essentially
+how we can modify this existing code by</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/954-2
+01:49:46.964 --> 01:49:50.939
+<v John Miller>adding additional tests and then adding
+implementation.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/955-0
+01:49:51.859 --> 01:49:53.819
+<v John Miller>To support that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/956-0
+01:49:58.259 --> 01:49:59.499
+<v John Miller>All right, so.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/957-0
+01:50:01.539 --> 01:50:04.739
+<v John Miller>Only one file changed,
+so let me go ahead and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/958-0
+01:50:10.379 --> 01:50:17.689
+<v John Miller>So this is the other point that I wanted
+to make with these instruction files is</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/958-1
+01:50:17.689 --> 01:50:25.089
+<v John Miller>that we can go back and we can add or ask
+to say and I have a an instruction file</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/958-2
+01:50:25.089 --> 01:50:28.699
+<v John Miller>that that a prop file that will do this.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/959-0
+01:50:29.059 --> 01:50:32.060
+<v John Miller>There's a go ahead and compare the
+project,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/959-1
+01:50:32.060 --> 01:50:37.654
+<v John Miller>this file or the whole file against those
+instruction files and report back where</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/959-2
+01:50:37.654 --> 01:50:43.111
+<v John Miller>we now deviate from those instructions.
+So if we go back to thinking about that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/959-3
+01:50:43.111 --> 01:50:46.659
+<v John Miller>generate instruction files that produces
+all these.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/960-0
+01:50:46.899 --> 01:50:51.636
+<v John Miller>You know technology and project specific
+instructions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/960-1
+01:50:51.636 --> 01:50:57.838
+<v John Miller>We can then go and ask ask the AI to
+evaluate the project against those</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/960-2
+01:50:57.838 --> 01:51:02.059
+<v John Miller>instructions because those instructions
+are not.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/961-0
+01:51:02.339 --> 01:51:06.664
+<v John Miller>And specifically targeted into the
+implementation that we have here,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/961-1
+01:51:06.664 --> 01:51:11.554
+<v John Miller>they're really targeted towards the
+technology that we're using because we're</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/961-2
+01:51:11.554 --> 01:51:16.632
+<v John Miller>not really not asking it to do anything
+other than analyze what technologies and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/961-3
+01:51:16.632 --> 01:51:20.707
+<v John Miller>practices are in place.
+And then we can go back and compare that</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/961-4
+01:51:20.707 --> 01:51:21.899
+<v John Miller>against the actual.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/962-0
+01:51:22.179 --> 01:51:28.497
+<v John Miller>Implementation that we see against the
+instruction files and it'll produce a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/962-1
+01:51:28.497 --> 01:51:35.062
+<v John Miller>list of things that deviate from that.
+So here when I ran this against this one</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/962-2
+01:51:35.062 --> 01:51:36.539
+<v John Miller>evaluator CS file.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/963-0
+01:51:38.019 --> 01:51:44.924
+<v John Miller>It's told us that the C# stop convention
+has a that the code is actually compliant</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/963-1
+01:51:44.924 --> 01:51:51.830
+<v John Miller>with that with that that it has the XML
+documentation that we had created earlier.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/963-2
+01:51:51.830 --> 01:51:52.579
+<v John Miller>It's got.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/964-0
+01:51:53.139 --> 01:51:57.627
+<v John Miller>It complies with the error handling
+instructions and and the code quality</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/964-1
+01:51:57.627 --> 01:52:00.539
+<v John Miller>instructions.
+It did find one issue which was a</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/964-2
+01:52:00.539 --> 01:52:05.149
+<v John Miller>namespace style issue which it thinks is
+minor and that the old style brace</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/964-3
+01:52:05.149 --> 01:52:07.819
+<v John Miller>namespace instead of file scope
+namespaces.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/965-0
+01:52:08.179 --> 01:52:12.339
+<v John Miller>And it recommends a code fix for for that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/966-0
+01:52:14.379 --> 01:52:18.062
+<v John Miller>Here's a another issue where there's an
+unnecessary class which is the app</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/966-1
+01:52:18.062 --> 01:52:19.339
+<v John Miller>setting, so it found that.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/967-0
+01:52:20.379 --> 01:52:20.979
+<v John Miller>And.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/968-0
+01:52:23.299 --> 01:52:29.891
+<v John Miller>Here's another issue with the, you know,
+excessive white space which violates our</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/968-1
+01:52:29.891 --> 01:52:31.419
+<v John Miller>style instructions.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/969-0
+01:52:33.259 --> 01:52:38.099
+<v John Miller>It found a A to do for implementing a
+logging behavior and we have an</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/969-1
+01:52:38.099 --> 01:52:43.284
+<v John Miller>instruction that identifies that.
+So we need to either remove the to do or</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/969-2
+01:52:43.284 --> 01:52:47.295
+<v John Miller>update the comment since the feature is
+already complete.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/969-3
+01:52:47.295 --> 01:52:52.619
+<v John Miller>So it's recognized that the to do is
+actually comment is not needed anymore.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/970-0
+01:52:52.899 --> 01:52:59.468
+<v John Miller>And then it gives us kind of a an
+overview of how it how this file conforms</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/970-1
+01:52:59.468 --> 01:53:06.123
+<v John Miller>to those instructions files that we
+created and points out areas where where</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/970-2
+01:53:06.123 --> 01:53:07.939
+<v John Miller>it could be improved.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/971-0
+01:53:09.059 --> 01:53:13.043
+<v John Miller>So it generally considers this to be
+excellent and well aligned.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/971-1
+01:53:13.043 --> 01:53:16.965
+<v John Miller>Now I think that if you did the same
+thing in in your solution,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/971-2
+01:53:16.965 --> 01:53:21.685
+<v John Miller>it would produce quite a a different
+output depending upon how well you guys</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/971-3
+01:53:21.685 --> 01:53:25.179
+<v John Miller>were are able to to implement your own
+coding standards.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/972-0
+01:53:26.179 --> 01:53:31.378
+<v John Miller>But this is I think a good way of looking
+at an existing code base and then saying,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/972-1
+01:53:31.378 --> 01:53:34.597
+<v John Miller>you know,
+generate these instruction files that are</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/972-2
+01:53:34.597 --> 01:53:39.611
+<v John Miller>specific to the project and technology
+that you're actually implemented and then</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/972-3
+01:53:39.611 --> 01:53:42.459
+<v John Miller>can then comparing the actual
+implementation.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/973-0
+01:53:42.739 --> 01:53:48.406
+<v John Miller>To those instruction files and seeing
+where there are deviations and then you</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/973-1
+01:53:48.406 --> 01:53:52.402
+<v John Miller>can actually then as I discussed,
+as we did yesterday,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/973-2
+01:53:52.402 --> 01:53:58.360
+<v John Miller>is have it create these these issue files
+and potentially put those directly into</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/973-3
+01:53:58.360 --> 01:54:02.139
+<v John Miller>Azure DevOps as tasks that need to be
+taken on and.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/974-0
+01:54:02.339 --> 01:54:10.072
+<v John Miller>And implemented and using this background
+feature that you could actually have it,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/974-1
+01:54:10.072 --> 01:54:17.713
+<v John Miller>you could assign it and have it implement
+these things on individual branches and</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/974-2
+01:54:17.713 --> 01:54:18.179
+<v John Miller>then.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/975-0
+01:54:18.579 --> 01:54:24.083
+<v John Miller>And then take those and merge those
+branches back into the into the main</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/975-1
+01:54:24.083 --> 01:54:29.738
+<v John Miller>branch once they've been implemented and
+tested. So I think this provides,</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/975-2
+01:54:29.738 --> 01:54:35.846
+<v John Miller>I think a strong way to get a code base
+back up into a more of a Evergreen state</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/975-3
+01:54:35.846 --> 01:54:38.259
+<v John Miller>by identifying where you've got.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/976-0
+01:54:38.459 --> 01:54:44.005
+<v John Miller>Technical debt and where you can easily
+pare down that technical debt with</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/976-1
+01:54:44.005 --> 01:54:48.368
+<v John Miller>assistance of AI,
+which is I think really a sweet spot for</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/976-2
+01:54:48.368 --> 01:54:53.619
+<v John Miller>using AI assisted code is attacking
+technical debt and paying it down.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/977-0
+01:54:55.139 --> 01:54:56.819
+<v John Miller>Any questions there?</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/978-0
+01:54:58.899 --> 01:55:01.679
+<v John Miller>All right.
+Why don't we break for lunch and then</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/978-1
+01:55:01.679 --> 01:55:04.459
+<v John Miller>when we come back,
+we can pick it up from there.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/979-0
+01:55:06.859 --> 01:55:07.859
+<v Majernik, Peter>OK. Thank you.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/980-0
+01:55:07.539 --> 01:55:08.299
+<v Carter, Jake>Sounds good.</v>
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/981-0
+01:55:07.819 --> 01:55:08.179
+Thank you.
+
+93991c5f-e25c-40e3-9659-2ab3c98d2b49/985-0
+01:55:10.059 --> 01:55:10.779
+<v John Miller>Sure.</v>

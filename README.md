@@ -1,6 +1,31 @@
-# AI-Assisted Software Development
+# AI-Assisted-Software-Development-Course
 
-This repo was created for the 2025 Next Gen AI Conference Leveraging AI for Legacy Code Refactoring session
+Files suppoting the CODE Training AI Assisted Software Development not included in the public repos.-Course
+This repo was created for the AIASD CODE Training Course
+
+## Guidance & Instructions
+
+- [`.github/instructions/marp-slides.instructions.md`](.github/instructions/marp-slides.instructions.md) — Instructions and templates for creating Marp slide files. Slides created using these instructions must be placed in `slides/marp/` and include AI provenance metadata linking to an `ai-logs/` conversation (see `.github/instructions/ai-assisted-output.instructions.md` and `.github/instructions/copilot-instructions.md`).
+
+## Useful Keybinding
+
+This keybinding opens markdown files in a side-by-side preview and copies the editor to a new window for easier review:
+
+```json
+{
+  "key": "ctrl+shift+alt+x",
+  "command": "extension.multiCommand.execute",
+  "args": {
+    "sequence": [
+      "markdown.showPreviewToSide",
+      "workbench.action.copyEditorToNewWindow"
+    ]
+  },
+  "when": "editorLangId == mdc"
+}
+```
+
+This requires the `multiCommand` extension and is configured to trigger when editing Marp markdown files (`.mdc`).
 
 ## Prompts
 
@@ -95,6 +120,17 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Notable Artifacts
 
+- **AI-Assisted MFC to WPF Conversions Slides** ([`slides/marp/ai-assisted-mfc-to-wpf-conversions.deck.md`](slides/marp/ai-assisted-mfc-to-wpf-conversions.deck.md))
+  - Marp slide deck for planning and executing MFC-to-WPF migration using AI-assisted workflows
+  - Covers both whole-application conversion and module-by-module migration patterns
+  - Includes architecture mapping, quality gates, estimation heuristics, and presenter notes on every slide
+  - Provenance: [Chat log](ai-logs/2026/05/04/mfc-to-wpf-conversion-deck-20260504/conversation.md) | [Summary](ai-logs/2026/05/04/mfc-to-wpf-conversion-deck-20260504/summary.md)
+
+- **Thursday GE Merged Course Deck** ([`slides/merged/ge/aiasd-311-thursday.ge-draft.md`](slides/merged/ge/aiasd-311-thursday.ge-draft.md))
+  - Manifest-driven combined Marp deck assembled from `slides/manifests/ge/aiasd-311-thursday.ge.manifest.md`
+  - Includes section divider slides, module progression context, and speaker notes coverage across all slide blocks
+  - Provenance: [Chat log](ai-logs/2026/05/04/merge-marp-thursday-ge-20260504/conversation.md) | [Summary](ai-logs/2026/05/04/merge-marp-thursday-ge-20260504/summary.md)
+
 - **VTT Content Summarizer Promptfile** ([`.github/prompts/summarize-vti-content.prompt.md`](.github/prompts/summarize-vti-content.prompt.md))
   - Analyzes VTT (Video Text Track) files from class recordings and generates structured summaries
   - Extracts timing information, section breakdowns, key topics, and action items
@@ -187,10 +223,39 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 - **Instruction Validation Report** ([`validation-report-20251015-212137.md`](validation-report-20251015-212137.md))
   - Comprehensive analysis of instruction file conflicts and inconsistencies
   - Identifies 7 issues (1 high, 4 medium, 3 low severity) with fixes applied to critical issues
-  - Generated from: [`.github/prompts/meta/validate-and-improve-instructions.prompt.md`](.github/prompts/meta/validate-and-improve-instructions.prompt.md)
+  - Generated from: [`.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md`](.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md)
   - Status: Critical fixes applied (Option C executed - 4 issues resolved, 3 deferred for refactoring)
   - Provenance: [Chat log](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/conversation.md) | [Summary](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/summary.md)
   - Verification: [Fixes verified 2025-10-16](validation-fixes-verified-20251016.md) ([chat log](ai-logs/2025/10/16/resume-validation-fixes-20251016/conversation.md))
+
+- **CQRS Architecture Slides** ([`slides/marp/cqrs-architecture.deck.md`](slides/marp/cqrs-architecture.deck.md))
+  - Comprehensive presentation explaining Command Query Responsibility Segregation (CQRS) pattern
+  - Covers when to use CQRS, core principles, implementation examples, and migration strategies
+  - Includes detailed speaker notes for effective delivery
+  - Provenance: [Chat log](ai-logs/2026/02/07/cqrs-architecture-slides-20260207/conversation.md)
+
+- **Getting Started Checklist** ([`slides/marp/getting-started-checklist.deck.md`](slides/marp/getting-started-checklist.deck.md))
+  - Converted 3-slide Marp deck covering phased AI adoption steps and a high-level AI-assisted workflow from requirements to implementation
+  - Preserves the extracted workflow visual and adds speaker notes for presentation use in the course slide pipeline
+  - Provenance: [Chat log](ai-logs/2026/03/26/convert-getting-started-checklist-20260326/conversation.md) | [Summary](ai-logs/2026/03/26/convert-getting-started-checklist-20260326/summary.md)
+
+- **GitHub Copilot Memory Feature** ([`slides/marp/copilot-memory-feature.deck.md`](slides/marp/copilot-memory-feature.deck.md))
+  - Marp deck explaining the Copilot memory feature, including user, session, and repository memory scopes
+  - Covers memory workflow, memory hygiene, and a slide-authoring example for practical application
+  - Provenance: [Chat log](ai-logs/2026/04/10/copilot-memory-feature-deck-20260410/conversation.md) | [Summary](ai-logs/2026/04/10/copilot-memory-feature-deck-20260410/summary.md)
+
+- **Vertical Slicing Architecture Introduction** ([`slides/marp/vertical-slicing-architecture-introduction.deck.md`](slides/marp/vertical-slicing-architecture-introduction.deck.md))
+  - 7-slide Marp deck introducing feature-based architecture, layered versus slice-oriented structure, and the maintainability benefits of localized change
+  - Covers developer experience improvements, team collaboration, testing strategy, and the introductory CQRS relationship
+  - Includes Mermaid visuals and detailed speaker notes for classroom delivery
+  - Provenance: [Chat log](ai-logs/2026/03/21/vertical-slicing-architecture-introduction-20260321/conversation.md) | [Summary](ai-logs/2026/03/21/vertical-slicing-architecture-introduction-20260321/summary.md)
+
+- **Instruction File ApplyTo Patterns Slides** ([`slides/marp/instruction-file-applyto-patterns.deck.md`](slides/marp/instruction-file-applyto-patterns.deck.md))
+  - 13-slide Marp presentation explaining glob pattern matching for instruction file applyTo fields
+  - Covers universal patterns, file extension matching, directory-specific patterns, and best practices
+  - Includes comprehensive speaker notes (1-3 minutes per slide) with timing, examples, and audience interaction cues
+  - Features real-world examples from this repository, common pitfalls, testing strategies, and decision frameworks
+  - Provenance: [Chat log](ai-logs/2026/03/03/applyto-patterns-marp-deck-20260303/conversation.md) | [Summary](ai-logs/2026/03/03/applyto-patterns-marp-deck-20260303/summary.md)
 
 ## Utility Scripts
 

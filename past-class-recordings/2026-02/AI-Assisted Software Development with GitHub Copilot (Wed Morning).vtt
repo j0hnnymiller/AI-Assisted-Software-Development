@@ -1,0 +1,6148 @@
+WEBVTT
+
+e7059870-4861-4d84-90b3-091db9536099/9-0
+00:00:30.460 --> 00:00:30.820
+<v John Miller>Morning.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/10-0
+00:00:33.540 --> 00:00:34.540
+<v Rockwell, Christopher L>Good morning.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/23-0
+00:01:17.820 --> 00:01:18.940
+<v Chris Bishop>Good morning.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/24-0
+00:01:19.780 --> 00:01:21.780
+<v John Miller>Good morning. How are you today?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/25-0
+00:01:24.660 --> 00:01:27.300
+<v Chris Bishop>Sign us out and ask for more than that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/26-0
+00:01:27.340 --> 00:01:28.300
+<v Chris Bishop>For more than that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/27-0
+00:01:30.100 --> 00:01:31.220
+<v John Miller>It's raining here.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/29-0
+00:01:33.740 --> 00:01:36.260
+<v Chris Bishop>We'll get to that soon. Freezing rain.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/30-0
+00:01:36.380 --> 00:01:36.500
+<v John Miller>Oh.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/31-0
+00:01:38.340 --> 00:01:40.260
+<v Chris Bishop>The joys of the North.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/32-0
+00:01:40.780 --> 00:01:47.140
+<v John Miller>Here it's freezing rain if it's below 60.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/47-0
+00:02:43.900 --> 00:02:44.420
+<v John Miller>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/56-0
+00:03:18.740 --> 00:03:23.860
+<v John Miller>All right. Welcome to day three.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/61-0
+00:03:25.180 --> 00:03:30.439
+<v John Miller>Here today we'll be finishing up on our
+brownfield work, but before I do that,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/61-1
+00:03:30.439 --> 00:03:35.763
+<v John Miller>I wanted to share a couple of things.
+First is I I remembered what the question</v>
+
+e7059870-4861-4d84-90b3-091db9536099/61-2
+00:03:35.763 --> 00:03:41.088
+<v John Miller>was that was asked earlier and it was
+about Azure DevOps and using Azure DevOps</v>
+
+e7059870-4861-4d84-90b3-091db9536099/61-3
+00:03:41.088 --> 00:03:41.420
+<v John Miller>with.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/62-0
+00:03:41.500 --> 00:03:47.227
+<v John Miller>With Copilot and I found two things.
+There are two extensions in the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/62-1
+00:03:47.227 --> 00:03:50.879
+<v John Miller>marketplace that I think are relevant
+here.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/62-2
+00:03:50.879 --> 00:03:57.020
+<v John Miller>One is this the Git DevOps existent which
+is basically allows you to use.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/63-0
+00:03:59.260 --> 00:04:06.450
+<v John Miller>A GitHub Copilot with Azure DevOps.
+It's it's built by a team at Microsoft,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/63-1
+00:04:06.450 --> 00:04:13.924
+<v John Miller>but not the not the GitHub Copilot team.
+And then there is a an extension that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/63-2
+00:04:13.924 --> 00:04:17.140
+<v John Miller>allows you to use the Copilot CLI.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/65-0
+00:04:17.580 --> 00:04:22.694
+<v John Miller>In Azure DevOps pipelines.
+So if you were going to be doing things</v>
+
+e7059870-4861-4d84-90b3-091db9536099/65-1
+00:04:22.694 --> 00:04:28.799
+<v John Miller>like what I showed yesterday of having a
+pipeline run a prompt to do a evaluate</v>
+
+e7059870-4861-4d84-90b3-091db9536099/65-2
+00:04:28.799 --> 00:04:34.599
+<v John Miller>the you know a commit or the like you
+this this tool should allow you to do</v>
+
+e7059870-4861-4d84-90b3-091db9536099/65-3
+00:04:34.599 --> 00:04:34.980
+<v John Miller>that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/66-0
+00:04:37.020 --> 00:04:42.571
+<v John Miller>So I put this in a in the folder and
+committed this to the repo so you could</v>
+
+e7059870-4861-4d84-90b3-091db9536099/66-1
+00:04:42.571 --> 00:04:48.409
+<v John Miller>have access to that and it's actually if
+you do a search in the in in the in the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/66-2
+00:04:48.409 --> 00:04:51.220
+<v John Miller>extensions and look for GitHub copilot.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/67-0
+00:04:52.660 --> 00:04:59.657
+<v John Miller>And Azure DevOps,
+it was the top two things that popped up.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/67-1
+00:04:59.657 --> 00:05:05.020
+<v John Miller>The other one is a table I've found or
+built.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/69-0
+00:05:06.860 --> 00:05:13.567
+<v John Miller>That just compares the business and
+enterprise versions based the idea here</v>
+
+e7059870-4861-4d84-90b3-091db9536099/69-1
+00:05:13.567 --> 00:05:17.802
+<v John Miller>or the what I found is that basically
+it's $19.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/69-2
+00:05:17.802 --> 00:05:24.420
+<v John Miller>00 a month for a business per per user
+per month for business, a business.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/70-0
+00:05:24.780 --> 00:05:29.902
+<v John Miller>For a business license and what what I
+thought was interesting is what is that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/70-1
+00:05:29.902 --> 00:05:34.959
+<v John Miller>the the requirements are that you have a
+a a GitHub organization established.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/70-2
+00:05:34.959 --> 00:05:40.340
+<v John Miller>So that's how they track how many people
+they should be billing is how many people</v>
+
+e7059870-4861-4d84-90b3-091db9536099/70-3
+00:05:40.340 --> 00:05:44.100
+<v John Miller>to join the org.
+But do you only need to have one person?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/71-0
+00:05:44.380 --> 00:05:48.945
+<v John Miller>To create the org.
+So if you were a single person shop,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/71-1
+00:05:48.945 --> 00:05:55.546
+<v John Miller>you could create an organ in in GitHub
+and then be able to get access to Copilot</v>
+
+e7059870-4861-4d84-90b3-091db9536099/71-2
+00:05:55.546 --> 00:05:59.703
+<v John Miller>for $19.
+00 a month and that gives you essentially</v>
+
+e7059870-4861-4d84-90b3-091db9536099/71-3
+00:05:59.703 --> 00:06:01.740
+<v John Miller>A cheaper way to get the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/72-0
+00:06:01.980 --> 00:06:09.084
+<v John Miller>Pro Plus license and and you get access
+to some of the the business level</v>
+
+e7059870-4861-4d84-90b3-091db9536099/72-1
+00:06:09.084 --> 00:06:16.860
+<v John Miller>configuration as well as the org level
+instruction files. So that's something I.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/73-0
+00:06:17.340 --> 00:06:20.976
+<v John Miller>You might want to that might be
+applicable to you. All right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/73-1
+00:06:20.976 --> 00:06:25.491
+<v John Miller>Any questions on those two or anything
+that we want to discuss before we get</v>
+
+e7059870-4861-4d84-90b3-091db9536099/73-2
+00:06:25.491 --> 00:06:26.780
+<v John Miller>into today's material?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/74-0
+00:06:35.780 --> 00:06:37.780
+<v John Miller>OK then, let's see. Let's start off here.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/75-0
+00:06:43.300 --> 00:06:45.620
+<v John Miller>No, that's not what I wanted.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/76-0
+00:06:48.620 --> 00:06:51.580
+<v John Miller>This is the guy I wanted. All right,
+so um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/77-0
+00:06:52.660 --> 00:07:00.174
+<v John Miller>So the first exercise I I wanted to start
+off this morning is to is to fork a repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/77-1
+00:07:00.174 --> 00:07:06.793
+<v John Miller>This is the AI assisted software
+development brownfield repo that we want</v>
+
+e7059870-4861-4d84-90b3-091db9536099/77-2
+00:07:06.793 --> 00:07:11.802
+<v John Miller>to work with.
+The idea is we want to be able to explore</v>
+
+e7059870-4861-4d84-90b3-091db9536099/77-3
+00:07:11.802 --> 00:07:11.980
+<v John Miller>a.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/78-0
+00:07:12.220 --> 00:07:16.240
+<v John Miller>Unfamiliar code base,
+so this is a code that we haven't seen</v>
+
+e7059870-4861-4d84-90b3-091db9536099/78-1
+00:07:16.240 --> 00:07:19.337
+<v John Miller>before.
+What I'd like you to do is to fork the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/78-2
+00:07:19.337 --> 00:07:23.620
+<v John Miller>repo so that and I'll paste the URLs into
+chat in just a minute,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/78-3
+00:07:23.620 --> 00:07:26.980
+<v John Miller>but fork the repo and then clone that
+forked repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/79-0
+00:07:27.420 --> 00:07:33.202
+<v John Miller>You also need to create a GitHub personal
+access token and store that in an</v>
+
+e7059870-4861-4d84-90b3-091db9536099/79-1
+00:07:33.202 --> 00:07:38.451
+<v John Miller>environment variable so that it's
+available to a Visual Studio code,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/79-2
+00:07:38.451 --> 00:07:44.460
+<v John Miller>and so you'll need to restart Visual
+Studio code once you've established that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/80-0
+00:07:44.620 --> 00:07:49.740
+<v John Miller>That uh, environment variable.
+So let me grab those.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/81-0
+00:07:50.460 --> 00:07:54.100
+<v John Miller>Two URLs. One is for the repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/82-0
+00:07:59.820 --> 00:08:02.340
+<v John Miller>And the other one is for.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/83-0
+00:08:08.020 --> 00:08:13.207
+<v John Miller>And the other one is for the page in in
+GitHub that you can create your personal</v>
+
+e7059870-4861-4d84-90b3-091db9536099/83-1
+00:08:13.207 --> 00:08:16.025
+<v John Miller>access token.
+So let's get started on that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/83-2
+00:08:16.025 --> 00:08:21.212
+<v John Miller>And the scenario that that I'm thinking
+of is that Doug here you are that you've</v>
+
+e7059870-4861-4d84-90b3-091db9536099/83-3
+00:08:21.212 --> 00:08:22.940
+<v John Miller>been basically handed this.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/85-0
+00:08:23.780 --> 00:08:28.486
+<v John Miller>This new application that you need to
+need to basically try to understand so we</v>
+
+e7059870-4861-4d84-90b3-091db9536099/85-1
+00:08:28.486 --> 00:08:33.016
+<v John Miller>can use some of the things that we
+learned yesterday to actually interrogate</v>
+
+e7059870-4861-4d84-90b3-091db9536099/85-2
+00:08:33.016 --> 00:08:37.898
+<v John Miller>the code base and figure out in that how
+what what the what are the issues that we</v>
+
+e7059870-4861-4d84-90b3-091db9536099/85-3
+00:08:37.898 --> 00:08:42.251
+<v John Miller>would have with that code base and the
+like and we'll do that in the next</v>
+
+e7059870-4861-4d84-90b3-091db9536099/85-4
+00:08:42.251 --> 00:08:42.780
+<v John Miller>exercise.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/86-0
+00:08:43.020 --> 00:08:48.447
+<v John Miller>So but for right now we just want to be
+able to get this repo available locally</v>
+
+e7059870-4861-4d84-90b3-091db9536099/86-1
+00:08:48.447 --> 00:08:50.820
+<v John Miller>to our so that we can work with it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/87-0
+00:08:51.940 --> 00:08:54.100
+<v John Miller>All right, questions.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/88-0
+00:08:55.820 --> 00:08:56.100
+<v John Miller>Chris.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/90-0
+00:08:57.300 --> 00:09:01.504
+<v Chris Bishop>Yeah, a quick one, John.
+I've been putting all of these folders in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/90-1
+00:09:01.504 --> 00:09:05.017
+<v Chris Bishop>the same workspace.
+Is that gonna cause issues with the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/90-2
+00:09:05.017 --> 00:09:06.020
+<v Chris Bishop>copilot context?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/91-0
+00:09:07.900 --> 00:09:07.980
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/92-0
+00:09:10.180 --> 00:09:12.881
+<v John Miller>Well, yeah,
+that's 'cause it'll all be part of the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/92-1
+00:09:12.881 --> 00:09:16.006
+<v John Miller>same code base at that point.
+You might want to, you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/92-2
+00:09:16.006 --> 00:09:19.660
+<v John Miller>bring this into a a separate folder and
+and work with it on its own.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/93-0
+00:09:20.820 --> 00:09:22.140
+<v Chris Bishop>Sure. OK. Thanks.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/94-0
+00:09:24.620 --> 00:09:29.482
+<v Bui, Tom>Um, for the personal access token,
+am I supposed to be creating a fine grain</v>
+
+e7059870-4861-4d84-90b3-091db9536099/94-1
+00:09:29.482 --> 00:09:31.060
+<v Bui, Tom>token or a classic token?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/97-0
+00:09:30.940 --> 00:09:34.907
+<v John Miller>I would do a classic token.
+It's a little bit easier to you don't</v>
+
+e7059870-4861-4d84-90b3-091db9536099/95-0
+00:09:34.580 --> 00:09:34.700
+<v Bui, Tom>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/97-1
+00:09:34.907 --> 00:09:38.633
+<v John Miller>have to do as much.
+If you're doing this in a production app,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/97-2
+00:09:38.633 --> 00:09:42.780
+<v John Miller>you would want to use a fine grain token
+just for security purposes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/96-0
+00:09:43.460 --> 00:09:44.260
+<v Bui, Tom>OK. Thanks.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/98-0
+00:09:45.460 --> 00:09:45.780
+<v John Miller>Sure.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/99-0
+00:09:47.180 --> 00:09:49.020
+<v John Miller>Shout out if you have another question.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/104-0
+00:10:02.380 --> 00:10:07.113
+<v John Miller>And why don't you all go ahead and raise
+your hand and take your hand down when</v>
+
+e7059870-4861-4d84-90b3-091db9536099/104-1
+00:10:07.113 --> 00:10:09.420
+<v John Miller>you've actually completed the exercise?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/117-0
+00:10:46.140 --> 00:10:49.776
+<v John Miller>Just so you know,
+this is a fork of an existing repo in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/117-1
+00:10:49.776 --> 00:10:54.125
+<v John Miller>GitHub that I've created.
+I did some looking around and found this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/117-2
+00:10:54.125 --> 00:10:57.566
+<v John Miller>this project.
+I looked for something that wasn't too</v>
+
+e7059870-4861-4d84-90b3-091db9536099/117-3
+00:10:57.566 --> 00:11:01.460
+<v John Miller>big because I didn't want it to be
+overwhelming, but had a.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/118-0
+00:11:01.900 --> 00:11:07.533
+<v John Miller>A a decent amount of code that we could
+use and it has a a decent number of of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/118-1
+00:11:07.533 --> 00:11:12.380
+<v John Miller>things about this code base that we would
+probably want to address.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/119-0
+00:11:14.100 --> 00:11:18.999
+<v John Miller>So I took a fork of this and now you're
+being now you're essentially taking a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/119-1
+00:11:18.999 --> 00:11:22.579
+<v John Miller>fork of my fork.
+And the reason for the the fork is that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/119-2
+00:11:22.579 --> 00:11:27.730
+<v John Miller>this will give you a a standalone copy of
+the of the repository that you can push</v>
+
+e7059870-4861-4d84-90b3-091db9536099/119-3
+00:11:27.730 --> 00:11:28.420
+<v John Miller>changes to.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/120-0
+00:11:28.500 --> 00:11:28.660
+<v John Miller>2.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/122-0
+00:11:34.060 --> 00:11:37.700
+<v Dan Blanchard>So should we only copy the main branch?
+Should we do the whole?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/121-0
+00:11:37.140 --> 00:11:38.140
+<v John Miller>Just do the main branch.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/130-0
+00:12:16.460 --> 00:12:19.556
+<v Matt Hoffman>Sorry,
+where do we set the GitHub token</v>
+
+e7059870-4861-4d84-90b3-091db9536099/130-1
+00:12:19.556 --> 00:12:21.180
+<v Matt Hoffman>environment variable?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/131-0
+00:12:23.860 --> 00:12:28.156
+<v John Miller>Where do you set it?
+You you you can you can either go into</v>
+
+e7059870-4861-4d84-90b3-091db9536099/131-1
+00:12:28.156 --> 00:12:34.099
+<v John Miller>your into Windows and set it there or you
+can you can use the you know you can use</v>
+
+e7059870-4861-4d84-90b3-091db9536099/131-2
+00:12:34.099 --> 00:12:39.540
+<v John Miller>PowerShell or something else like that to
+actually set it programmatically.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/137-0
+00:12:59.620 --> 00:13:06.162
+<v Dan Blanchard>And the token we just says repository
+access public repositories or is it is it</v>
+
+e7059870-4861-4d84-90b3-091db9536099/137-1
+00:13:06.162 --> 00:13:08.860
+<v Dan Blanchard>our own all all all repositories?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/138-0
+00:13:10.620 --> 00:13:15.780
+<v John Miller>You're talking about for the the personal
+access token.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/139-0
+00:13:14.820 --> 00:13:17.220
+<v Dan Blanchard>Token. Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/140-0
+00:13:18.140 --> 00:13:20.624
+<v John Miller>Well,
+you you basically need it for this one</v>
+
+e7059870-4861-4d84-90b3-091db9536099/140-1
+00:13:20.624 --> 00:13:20.900
+<v John Miller>repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/142-0
+00:13:23.940 --> 00:13:27.858
+<v John Miller>But you know you can create it with this
+with whatever permissions that you that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/142-1
+00:13:27.858 --> 00:13:29.260
+<v John Miller>you want, as long as you can.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/143-0
+00:13:30.220 --> 00:13:35.940
+<v John Miller>Use it within Visual Studio code to
+actually use a GitHub CLI.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/144-0
+00:13:39.620 --> 00:13:39.740
+<v Dan Blanchard>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/156-0
+00:14:29.340 --> 00:14:31.180
+<v John Miller>Anyone need some help?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/157-0
+00:14:34.940 --> 00:14:39.580
+<v Dan Blanchard>Does the user environment variable or a
+system or doesn't doesn't it matter?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/158-0
+00:14:38.780 --> 00:14:41.660
+<v John Miller>It doesn't matter.
+I don't think that matters.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/178-0
+00:15:58.460 --> 00:16:02.851
+<v John Miller>And then if you're done with the exercise,
+you can go ahead and lower your hand.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/178-1
+00:16:02.851 --> 00:16:05.940
+<v John Miller>That way I'll have a sense of when
+everybody's finished.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/188-0
+00:16:52.460 --> 00:16:55.220
+<v John Miller>You need any help, Rebecca? Regalberto?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/189-0
+00:17:01.100 --> 00:17:05.300
+<v John Miller>All right, good. All right,
+so let's move on then. Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/190-0
+00:17:08.060 --> 00:17:11.500
+<v John Miller>So we're gonna talk about building a
+backlog here.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/190-1
+00:17:11.500 --> 00:17:15.950
+<v John Miller>So the the idea is here we want to be
+able to identify, you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/190-2
+00:17:15.950 --> 00:17:20.199
+<v John Miller>technical debt. You know, you can make,
+we can make, you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/190-3
+00:17:20.199 --> 00:17:23.300
+<v John Miller>have a scenario where you've been given
+this.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/191-0
+00:17:23.580 --> 00:17:28.392
+<v John Miller>Code base to to inspect and you need to
+to advise you know the organization about</v>
+
+e7059870-4861-4d84-90b3-091db9536099/191-1
+00:17:28.392 --> 00:17:32.792
+<v John Miller>the the quality of the code base.
+You want to be able to identify you know</v>
+
+e7059870-4861-4d84-90b3-091db9536099/191-2
+00:17:32.792 --> 00:17:37.252
+<v John Miller>what technical debt that that you would
+be accumulating if you took on this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/191-3
+00:17:37.252 --> 00:17:40.362
+<v John Miller>application.
+So you want to be able to identify what</v>
+
+e7059870-4861-4d84-90b3-091db9536099/191-4
+00:17:40.362 --> 00:17:42.180
+<v John Miller>issues it has in the code base.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/192-0
+00:17:42.540 --> 00:17:48.638
+<v John Miller>We also want to automate the creation of
+those GitHub issues so that you can build</v>
+
+e7059870-4861-4d84-90b3-091db9536099/192-1
+00:17:48.638 --> 00:17:54.148
+<v John Miller>a backlog that that you can then use to
+essentially build a a a a plan for</v>
+
+e7059870-4861-4d84-90b3-091db9536099/192-2
+00:17:54.148 --> 00:17:57.380
+<v John Miller>actually addressing the the technical
+debt.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/193-0
+00:17:57.740 --> 00:18:02.060
+<v John Miller>That that's like this in that code base.
+Peter, did you have something?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/194-0
+00:18:01.580 --> 00:18:04.260
+<v Goostree, Peter>Oh, sorry,
+I was didn't realize I was not muted.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/195-0
+00:18:06.300 --> 00:18:09.125
+<v John Miller>All right,
+so so when we're talking about</v>
+
+e7059870-4861-4d84-90b3-091db9536099/195-1
+00:18:09.125 --> 00:18:13.630
+<v John Miller>identifying technical debt, yeah,
+I can help us without, you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/195-2
+00:18:13.630 --> 00:18:17.598
+<v John Miller>looking for outdated coding patterns and
+or coding styles,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/195-3
+00:18:17.598 --> 00:18:21.700
+<v John Miller>looking for high complexity,
+duplicate logic, missing tests,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/195-4
+00:18:21.700 --> 00:18:24.860
+<v John Miller>security vulnerabilities,
+architectural drift.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/196-0
+00:18:25.820 --> 00:18:31.047
+<v John Miller>And the the the main benefits are is that
+we can rediscover this technical debt</v>
+
+e7059870-4861-4d84-90b3-091db9536099/196-1
+00:18:31.047 --> 00:18:33.791
+<v John Miller>very quickly.
+We can have more consistent</v>
+
+e7059870-4861-4d84-90b3-091db9536099/196-2
+00:18:33.791 --> 00:18:38.691
+<v John Miller>classification of the debt of the
+technical debt when we create the issues</v>
+
+e7059870-4861-4d84-90b3-091db9536099/196-3
+00:18:38.691 --> 00:18:43.395
+<v John Miller>and we can prioritize modernization,
+create a prioritize modernization,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/196-4
+00:18:43.395 --> 00:18:45.420
+<v John Miller>modernization roadmap, roadmap.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/197-0
+00:18:45.500 --> 00:18:52.395
+<v John Miller>That can actually help us then move this
+through our change control process in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/197-1
+00:18:52.395 --> 00:18:56.060
+<v John Miller>order for us to get these items addressed.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/198-0
+00:18:59.020 --> 00:19:05.997
+<v John Miller>So our next exercise is that we want to
+take a look at the at building a backlog</v>
+
+e7059870-4861-4d84-90b3-091db9536099/198-1
+00:19:05.997 --> 00:19:11.940
+<v John Miller>and and and going about see if we can
+create issues in in GitHub to.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/199-0
+00:19:12.660 --> 00:19:18.252
+<v John Miller>Actually document exactly what we find
+and when we're doing this exploration of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/199-1
+00:19:18.252 --> 00:19:22.935
+<v John Miller>this new code base and and then we can
+use that to help us to do a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/199-2
+00:19:22.935 --> 00:19:26.709
+<v John Miller>prioritization,
+trying to evaluate what the impact of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/199-3
+00:19:26.709 --> 00:19:32.020
+<v John Miller>each of these issues are versus the
+amount of effort it's going to require.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/200-0
+00:19:32.380 --> 00:19:35.969
+<v John Miller>To to do that.
+So we we we talked about a number of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/200-1
+00:19:35.969 --> 00:19:41.628
+<v John Miller>tools yesterday to do this kind of work.
+There's also in the AI assisted software</v>
+
+e7059870-4861-4d84-90b3-091db9536099/200-2
+00:19:41.628 --> 00:19:46.803
+<v John Miller>development repository some additional
+prompts that you might want to take</v>
+
+e7059870-4861-4d84-90b3-091db9536099/200-3
+00:19:46.803 --> 00:19:47.700
+<v John Miller>advantage of.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/201-0
+00:19:48.260 --> 00:19:50.580
+<v John Miller>That will help you identify.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/202-0
+00:19:51.900 --> 00:19:56.111
+<v John Miller>Technical debt that you that we might
+want to try to address.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/202-1
+00:19:56.111 --> 00:20:01.748
+<v John Miller>So let's go ahead and give this a go and
+see if we can get some issues created and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/202-2
+00:20:01.748 --> 00:20:06.774
+<v John Miller>and and talk about that process.
+Let me know if if you're having problems</v>
+
+e7059870-4861-4d84-90b3-091db9536099/202-3
+00:20:06.774 --> 00:20:07.860
+<v John Miller>getting started.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/203-0
+00:20:08.100 --> 00:20:08.180
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/204-0
+00:20:10.700 --> 00:20:18.300
+<v John Miller>So let me bring up chat. See,
+there's a message.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/205-0
+00:20:20.980 --> 00:20:25.622
+<v John Miller>Yeah,
+so you're if you're running a version of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/205-1
+00:20:25.622 --> 00:20:33.325
+<v John Miller>Visual Studio code that's not 1.109.2,
+you should update your VS code because</v>
+
+e7059870-4861-4d84-90b3-091db9536099/205-2
+00:20:33.325 --> 00:20:38.460
+<v John Miller>there's I think there's an
+incompatibility between.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/206-0
+00:20:38.900 --> 00:20:44.787
+<v John Miller>Older versions of US code that are not
+the most current one and copilot.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/206-1
+00:20:44.787 --> 00:20:49.786
+<v John Miller>I ran into this last night and I needed
+to update to the 109.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/206-2
+00:20:49.786 --> 00:20:54.220
+<v John Miller>2 version in order for us in order for me
+to actually.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/207-0
+00:20:54.660 --> 00:20:57.220
+<v John Miller>Work with a copilot again.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/208-0
+00:20:59.900 --> 00:21:00.020
+<v John Miller>So.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/209-0
+00:21:05.500 --> 00:21:08.533
+<v John Miller>Right, right.
+They they they made a change in the API</v>
+
+e7059870-4861-4d84-90b3-091db9536099/209-1
+00:21:08.533 --> 00:21:12.970
+<v John Miller>that required an update to Visual Studio
+code in order for it to work with the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/209-2
+00:21:12.970 --> 00:21:13.700
+<v John Miller>back end API.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/215-0
+00:21:47.060 --> 00:21:51.140
+<v John Miller>All right.
+Raise your hand if you have any questions.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/216-0
+00:21:54.380 --> 00:21:58.580
+<v Dan Blanchard>Do you have the prompts to creating it
+into a GitHub issue? Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/217-0
+00:22:01.700 --> 00:22:01.780
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/219-0
+00:22:04.500 --> 00:22:10.020
+<v John Miller>Yeah, basically, yeah.
+What I did yesterday was basically added</v>
+
+e7059870-4861-4d84-90b3-091db9536099/219-1
+00:22:10.020 --> 00:22:16.660
+<v John Miller>on to the end of the the prompt to to
+create GitHub issues for the findings.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/220-0
+00:22:19.660 --> 00:22:24.080
+<v John Miller>You could also, if you don't,
+if you're having issues actually</v>
+
+e7059870-4861-4d84-90b3-091db9536099/220-1
+00:22:24.080 --> 00:22:27.518
+<v John Miller>interacting with GitHub and creating the
+issues,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/220-2
+00:22:27.518 --> 00:22:32.920
+<v John Miller>you can just have them created in a file
+in a in a folder and and that would</v>
+
+e7059870-4861-4d84-90b3-091db9536099/220-3
+00:22:32.920 --> 00:22:37.340
+<v John Miller>suffice. It wouldn't.
+You wouldn't actually have to go through</v>
+
+e7059870-4861-4d84-90b3-091db9536099/220-4
+00:22:37.340 --> 00:22:37.620
+<v John Miller>and.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/221-0
+00:22:37.820 --> 00:22:39.580
+<v John Miller>Troubleshoot any GitHub interactions.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/222-0
+00:22:45.260 --> 00:22:48.340
+<v John Miller>You can, you know, figure that out later.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/223-0
+00:22:52.100 --> 00:22:56.432
+<v John Miller>But it's nice to be able to see the
+issues automatically get posted into into</v>
+
+e7059870-4861-4d84-90b3-091db9536099/223-1
+00:22:56.432 --> 00:22:56.820
+<v John Miller>GitHub.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/224-0
+00:22:58.620 --> 00:23:04.212
+<v John Miller>And this is the one of the reasons why we
+wanted to do a fork instead of a a clone</v>
+
+e7059870-4861-4d84-90b3-091db9536099/224-1
+00:23:04.212 --> 00:23:09.602
+<v John Miller>in that you all get each get your own
+repository and you get to create your own</v>
+
+e7059870-4861-4d84-90b3-091db9536099/224-2
+00:23:09.602 --> 00:23:10.140
+<v John Miller>backlog.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/225-0
+00:23:11.260 --> 00:23:13.734
+<v Dan Blanchard>So this doesn't have any in the
+instruction file,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/225-1
+00:23:13.734 --> 00:23:16.900
+<v Dan Blanchard>so if we want we would wanna move them in
+so we have something.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/226-0
+00:23:17.980 --> 00:23:20.481
+<v John Miller>Yes,
+that would you know that would be the,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/226-1
+00:23:20.481 --> 00:23:24.800
+<v John Miller>you know as we discussed yesterday,
+that's kind of the first things that we</v>
+
+e7059870-4861-4d84-90b3-091db9536099/226-2
+00:23:24.800 --> 00:23:29.459
+<v John Miller>want to do is to to to not only bring in
+the instruction files from our our, our,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/226-3
+00:23:29.459 --> 00:23:33.380
+<v John Miller>our core instruction files from our,
+you know our shared repository.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/227-0
+00:23:34.220 --> 00:23:38.089
+<v John Miller>But you, yeah,
+you may want to build new instruction</v>
+
+e7059870-4861-4d84-90b3-091db9536099/227-1
+00:23:38.089 --> 00:23:43.783
+<v John Miller>files for the technologies that are being
+used and so that you can, you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/227-2
+00:23:43.783 --> 00:23:48.820
+<v John Miller>have a broader range of of of things that
+you're trying to evaluate.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/228-0
+00:24:00.700 --> 00:24:02.971
+<v John Miller>Yeah,
+so this is an exercise that is a bit</v>
+
+e7059870-4861-4d84-90b3-091db9536099/228-1
+00:24:02.971 --> 00:24:04.660
+<v John Miller>closer to a real world scenario.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/239-0
+00:24:47.500 --> 00:24:51.058
+<v Bui, Tom>Hi John,
+I'm I'm actually having a problem.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/238-0
+00:24:48.500 --> 00:24:48.900
+<v John Miller>Yes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/239-1
+00:24:51.058 --> 00:24:55.505
+<v Bui, Tom>I actually didn't fork it initially,
+I just cloned it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/239-2
+00:24:55.505 --> 00:24:59.953
+<v Bui, Tom>But when I try to fork it from the the
+GitHub website,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/239-3
+00:24:59.953 --> 00:25:06.340
+<v Bui, Tom>it's saying it cannot fork because the
+repository is outside of my enterprise.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/240-0
+00:25:06.860 --> 00:25:09.020
+<v Bui, Tom>Companies account.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/241-0
+00:25:10.420 --> 00:25:11.260
+<v John Miller>Which?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/244-0
+00:25:12.380 --> 00:25:18.780
+<v Bui, Tom>The fork button is disabled and when I
+hover over it, it says cannot fork.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/242-0
+00:25:12.980 --> 00:25:13.100
+<v Buddy Toups>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/244-1
+00:25:18.780 --> 00:25:21.340
+<v Bui, Tom>I can give a screenshot of it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/245-0
+00:25:21.060 --> 00:25:25.334
+<v Buddy Toups>Do you does it show a drop down for your
+username?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/245-1
+00:25:25.334 --> 00:25:31.450
+<v Buddy Toups>Because you could you could on mine.
+I could choose either my my myself,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/245-2
+00:25:31.450 --> 00:25:35.220
+<v Buddy Toups>you know like to have it fork to my
+profile.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/247-0
+00:25:36.100 --> 00:25:39.060
+<v Buddy Toups>Or you can have it forked here to an org
+that you're in.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/248-0
+00:25:41.180 --> 00:25:44.758
+<v Bui, Tom>Uh,
+is this the drop down on the word fork</v>
+
+e7059870-4861-4d84-90b3-091db9536099/248-1
+00:25:44.758 --> 00:25:45.340
+<v Bui, Tom>itself?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/249-0
+00:25:45.980 --> 00:25:50.060
+<v Buddy Toups>Uh, I don't remember,
+but it it it's when you go forward.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/251-0
+00:25:48.300 --> 00:25:51.233
+<v Bui, Tom>Because so that that doesn't give me any
+options.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/251-1
+00:25:51.233 --> 00:25:54.400
+<v Bui, Tom>It doesn't give me any options when I
+drop that down.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/251-2
+00:25:54.400 --> 00:25:59.034
+<v Bui, Tom>But let let me just at least show the
+screenshot that I was talking about that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/251-3
+00:25:59.034 --> 00:26:00.500
+<v Bui, Tom>I'm having problems with.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/252-0
+00:26:00.940 --> 00:26:05.310
+<v Rockwell, Christopher L>I I have the same issue with my GitHub
+enterprise through work,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/252-1
+00:26:05.310 --> 00:26:10.020
+<v Rockwell, Christopher L>but I so I had to switch to my personal
+GitHub in order to clone it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/253-0
+00:26:10.420 --> 00:26:13.300
+<v Bui, Tom>Oh, I don't have a personal one.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/254-0
+00:26:13.820 --> 00:26:18.477
+<v Buddy Toups>Oh, you know what? I might.
+I'm on my enterprise with my personal one,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/254-1
+00:26:18.477 --> 00:26:21.100
+<v Buddy Toups>so that's probably why I could see both.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/255-0
+00:26:25.860 --> 00:26:26.340
+<v Bui, Tom>OK, alright.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/256-0
+00:26:27.980 --> 00:26:30.740
+<v Bui, Tom>We'll work on creating a personal account.
+Thanks.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/257-0
+00:26:30.860 --> 00:26:31.700
+<v John Miller>All right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/261-0
+00:26:43.740 --> 00:26:46.911
+<v Chris Bishop>I'm not sure if I missed something,
+but um,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/261-1
+00:26:46.911 --> 00:26:52.604
+<v Chris Bishop>I've been given what issues to create,
+but Copilot's not creating anything for</v>
+
+e7059870-4861-4d84-90b3-091db9536099/261-2
+00:26:52.604 --> 00:26:53.540
+<v Chris Bishop>me in GitHub.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/260-0
+00:26:53.780 --> 00:26:53.860
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/262-0
+00:26:56.340 --> 00:27:00.911
+<v John Miller>Does is it creating anything?
+Is it what you see output in the just in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/262-1
+00:27:00.911 --> 00:27:01.940
+<v John Miller>the chat window?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/263-0
+00:27:02.220 --> 00:27:06.100
+<v Chris Bishop>It's just output in the chat window. Yeah,
+issue #1, issue #2.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/264-0
+00:27:05.740 --> 00:27:09.119
+<v John Miller>OK,
+do you have to do a prompt that says that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/264-1
+00:27:09.119 --> 00:27:09.780
+<v John Miller>you know?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/266-0
+00:27:10.780 --> 00:27:17.364
+<v John Miller>Help me. Help me create these.
+Help me post these issues to GitHub.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/265-0
+00:27:11.380 --> 00:27:12.100
+<v Chris Bishop>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/266-1
+00:27:17.364 --> 00:27:19.300
+<v John Miller>What does it return?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/268-0
+00:27:18.700 --> 00:27:23.208
+<v Chris Bishop>OK, I'll try that.
+I I did tell it in the original prompt to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/268-1
+00:27:23.208 --> 00:27:27.641
+<v Chris Bishop>create GitHub issues for any that was
+found, but it didn't.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/267-0
+00:27:27.140 --> 00:27:27.540
+<v John Miller>Right. All right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/268-2
+00:27:27.641 --> 00:27:29.340
+<v Chris Bishop>It ignored that prompt.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/269-0
+00:27:30.660 --> 00:27:36.843
+<v John Miller>Yeah, right.
+So that's we can troubleshoot it that way.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/269-1
+00:27:36.843 --> 00:27:38.940
+<v John Miller>It may be that the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/270-0
+00:27:39.980 --> 00:27:42.740
+<v John Miller>That we have to log into.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/271-0
+00:27:44.460 --> 00:27:50.527
+<v John Miller>There's some commands that we have to do.
+I think with GitHub to actually get it to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/271-1
+00:27:50.527 --> 00:27:55.220
+<v John Miller>to log into the the GitHub account.
+So let me let me post those.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/272-0
+00:28:00.060 --> 00:28:03.140
+<v John Miller>Yeah, try uh, try this.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/285-0
+00:28:39.860 --> 00:28:42.887
+<v Matt Hoffman>John, when you have a second,
+can you switch back to, uh,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/285-1
+00:28:42.887 --> 00:28:44.660
+<v Matt Hoffman>the instructions for the exercise?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/286-0
+00:28:44.860 --> 00:28:46.020
+<v John Miller>Yep, will do.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/287-0
+00:28:47.420 --> 00:28:47.860
+<v Matt Hoffman>Thank you.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/288-0
+00:28:54.100 --> 00:28:55.140
+<v John Miller>There you go.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/299-0
+00:29:44.140 --> 00:29:47.420
+<v John Miller>Alright, I'm gonna switch back.
+Let me know if you need to see it again.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/300-0
+00:29:54.220 --> 00:29:57.696
+<v Bui, Tom>Yeah,
+can you go back again and I'll just take</v>
+
+e7059870-4861-4d84-90b3-091db9536099/300-1
+00:29:57.696 --> 00:29:59.100
+<v Bui, Tom>a quick screenshot.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/301-0
+00:30:02.900 --> 00:30:03.820
+<v John Miller>There you go.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/303-0
+00:30:04.460 --> 00:30:06.500
+<v Bui, Tom>Got it. Thanks.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/302-0
+00:30:06.340 --> 00:30:06.860
+<v John Miller>Sure.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/306-0
+00:30:14.860 --> 00:30:19.947
+<v John Miller>So if you do a GitHub auth status,
+it should tell you if you're logged into</v>
+
+e7059870-4861-4d84-90b3-091db9536099/306-1
+00:30:19.947 --> 00:30:21.820
+<v John Miller>GitHub. It's the GitHub CLI.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/307-0
+00:30:26.060 --> 00:30:30.064
+<v John Miller>With that you can use GitHub Auth login
+and it will help you log into GitHub and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/307-1
+00:30:30.064 --> 00:30:32.140
+<v John Miller>then that should allow you to communicate.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/308-0
+00:30:32.980 --> 00:30:35.420
+<v Goostree, Peter>Hey, John, do you know? Go ahead.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/310-0
+00:30:33.420 --> 00:30:37.809
+<v Chris Bishop>Yeah, I've I'm sorry,
+I'm just going to comment on that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/310-1
+00:30:37.809 --> 00:30:43.813
+<v Chris Bishop>I've I've just explicitly asked Copilot
+then to use certain it's a proper CLI</v>
+
+e7059870-4861-4d84-90b3-091db9536099/310-2
+00:30:43.813 --> 00:30:48.740
+<v Chris Bishop>commands for GitHub and now it looks like
+it might be doing it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/309-0
+00:30:48.500 --> 00:30:48.620
+<v John Miller>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/313-0
+00:30:58.180 --> 00:31:04.271
+<v Goostree, Peter>Don, I was gonna ask you,
+do you know if Azure DevOps has a client</v>
+
+e7059870-4861-4d84-90b3-091db9536099/313-1
+00:31:04.271 --> 00:31:05.180
+<v Goostree, Peter>like this?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/315-0
+00:31:05.820 --> 00:31:11.740
+<v Goostree, Peter>Or is it just GitHub and is Microsoft
+migrating everything to GitHub and?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/316-0
+00:31:13.380 --> 00:31:18.063
+<v Goostree, Peter>Some setting Azure DevOps in the future
+to 'cause this type of automation is</v>
+
+e7059870-4861-4d84-90b3-091db9536099/316-1
+00:31:18.063 --> 00:31:20.860
+<v Goostree, Peter>great, right?
+Like I wanna use this for sure.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/317-0
+00:31:20.380 --> 00:31:24.380
+<v John Miller>Yeah, if we'd look for GitHub.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/318-0
+00:31:26.020 --> 00:31:27.300
+<v John Miller>Copilot.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/319-0
+00:31:28.660 --> 00:31:29.940
+<v John Miller>Uh, Azure.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/320-0
+00:31:32.100 --> 00:31:33.940
+<v Goostree, Peter>Yeah, Copilot for Azure.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/321-0
+00:31:34.940 --> 00:31:36.020
+<v Goostree, Peter>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/322-0
+00:31:38.300 --> 00:31:41.780
+<v Goostree, Peter>There probably is. Yeah, I see that.
+There it is.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/325-0
+00:31:42.180 --> 00:31:47.578
+<v John Miller>So here's the CLI extension.
+There was another one that I posted in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/324-0
+00:31:43.980 --> 00:31:44.500
+<v Goostree, Peter>Mhm.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/325-1
+00:31:47.578 --> 00:31:51.547
+<v John Miller>the repo,
+which is I'm not seeing in this list at</v>
+
+e7059870-4861-4d84-90b3-091db9536099/325-2
+00:31:51.547 --> 00:31:52.420
+<v John Miller>the moment.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/327-0
+00:31:53.820 --> 00:31:58.792
+<v John Miller>But there's there's another one that's by
+Microsoft that I don't see it in the list</v>
+
+e7059870-4861-4d84-90b3-091db9536099/327-1
+00:31:58.792 --> 00:31:59.620
+<v John Miller>at the moment.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/328-0
+00:32:03.580 --> 00:32:05.860
+<v Goostree, Peter>OK, yeah, there probably is.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/329-0
+00:32:07.020 --> 00:32:10.180
+<v Goostree, Peter>Or just use GitHub instead of DevOps.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/331-0
+00:32:10.300 --> 00:32:12.980
+<v John Miller>Well, there's always that option, right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/330-0
+00:32:12.500 --> 00:32:12.660
+<v Goostree, Peter>Right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/332-0
+00:32:14.420 --> 00:32:22.816
+<v John Miller>You know from you know I don't know any I
+I I have I don't really have any insight</v>
+
+e7059870-4861-4d84-90b3-091db9536099/332-1
+00:32:22.816 --> 00:32:30.300
+<v John Miller>into what Microsoft's road plans are so
+but I had heard in the past that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/333-0
+00:32:30.300 --> 00:32:33.060
+<v John Miller>They were favoring GitHub over Azure
+DevOps.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/334-0
+00:32:33.340 --> 00:32:36.500
+<v Goostree, Peter>Yeah, I I've heard that too, actually.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/335-0
+00:32:39.260 --> 00:32:42.180
+<v Goostree, Peter>Long term, I think that's the plan,
+which makes sense.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/338-0
+00:32:59.220 --> 00:33:00.980
+<v John Miller>Let me go to that repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/349-0
+00:33:42.780 --> 00:33:44.380
+<v John Miller>Here is the one from Microsoft.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/350-0
+00:33:47.100 --> 00:33:47.580
+<v John Miller>And.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/351-0
+00:33:50.060 --> 00:33:55.381
+<v John Miller>I think this is the one to use.
+It's got 5000 downloads and a 4 1/2 star</v>
+
+e7059870-4861-4d84-90b3-091db9536099/351-1
+00:33:55.381 --> 00:33:58.660
+<v John Miller>rating where everything else is a much
+less.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/352-0
+00:33:59.180 --> 00:34:01.340
+<v Goostree, Peter>And yeah, I'm gonna screenshot that.
+Thanks.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/353-0
+00:34:02.820 --> 00:34:04.260
+<v John Miller>Sure.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/354-0
+00:34:17.820 --> 00:34:20.860
+<v John Miller>So raise your hand if you need more time
+and.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/356-0
+00:34:33.340 --> 00:34:37.180
+<v Chris Bishop>A quick question.
+Visual Studio question I guess.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/357-0
+00:34:38.140 --> 00:34:38.340
+<v John Miller>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/359-0
+00:34:38.300 --> 00:34:44.531
+<v Chris Bishop>I'm getting a link to enable shell
+integration when I already have shell</v>
+
+e7059870-4861-4d84-90b3-091db9536099/359-1
+00:34:44.531 --> 00:34:49.823
+<v Chris Bishop>integration enabled.
+I don't know if there's a specific thing</v>
+
+e7059870-4861-4d84-90b3-091db9536099/358-0
+00:34:47.460 --> 00:34:47.580
+<v John Miller>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/359-2
+00:34:49.823 --> 00:34:52.980
+<v Chris Bishop>for copilot that needs to be enabled.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/360-0
+00:34:53.500 --> 00:34:57.940
+<v Chris Bishop>But I'm looking at my settings and shell
+integration is enabled.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/361-0
+00:35:01.140 --> 00:35:03.860
+<v John Miller>OK, you know, have you tried asking?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/362-0
+00:35:05.140 --> 00:35:09.540
+<v John Miller>A copilot to explain that issue or help
+you fix it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/363-0
+00:35:11.460 --> 00:35:13.020
+<v Chris Bishop>I I'll do that now.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/364-0
+00:35:17.580 --> 00:35:18.820
+<v John Miller>It's not something I've seen.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/367-0
+00:35:32.540 --> 00:35:37.193
+<v John Miller>So anybody discover anything in
+interesting in their explore exploration</v>
+
+e7059870-4861-4d84-90b3-091db9536099/367-1
+00:35:37.193 --> 00:35:38.340
+<v John Miller>of this code base?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/372-0
+00:36:02.100 --> 00:36:02.820
+<v Goostree, Peter>Authentication.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/373-0
+00:36:05.820 --> 00:36:06.500
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/374-0
+00:36:16.060 --> 00:36:17.740
+<v John Miller>What about authentication?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/375-0
+00:36:19.260 --> 00:36:25.788
+<v Goostree, Peter>Well,
+just that you've added JWT off to the API</v>
+
+e7059870-4861-4d84-90b3-091db9536099/375-1
+00:36:25.788 --> 00:36:26.740
+<v Goostree, Peter>itself.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/376-0
+00:36:28.460 --> 00:36:32.426
+<v Goostree, Peter>So in order to interact with that API,
+we have to have a token,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/376-1
+00:36:32.426 --> 00:36:34.780
+<v Goostree, Peter>presumably pass a token in the header.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/377-0
+00:36:41.380 --> 00:36:41.620
+<v Goostree, Peter>Swagger.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/379-0
+00:36:59.100 --> 00:37:01.900
+<v Goostree, Peter>Talking about the Um blog service, right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/380-0
+00:37:04.500 --> 00:37:04.980
+<v John Miller>Yes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/381-0
+00:37:05.540 --> 00:37:05.860
+<v Goostree, Peter>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/383-0
+00:37:13.260 --> 00:37:18.694
+<v John Miller>Yeah,
+it should be the the AIA AIASD Brownfield</v>
+
+e7059870-4861-4d84-90b3-091db9536099/383-1
+00:37:18.694 --> 00:37:19.260
+<v John Miller>repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/382-0
+00:37:19.780 --> 00:37:19.980
+<v Goostree, Peter>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/386-0
+00:37:38.540 --> 00:37:42.273
+<v Goostree, Peter>Oh, it's just the API,
+so I maybe we'll be building the UI for</v>
+
+e7059870-4861-4d84-90b3-091db9536099/386-1
+00:37:42.273 --> 00:37:43.220
+<v Goostree, Peter>it or something.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/387-0
+00:37:43.340 --> 00:37:44.740
+<v John Miller>Yeah, we can do that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/394-0
+00:38:17.900 --> 00:38:18.300
+<v Goostree, Peter>You.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/400-0
+00:38:39.620 --> 00:38:40.340
+<v Goostree, Peter>Tests 2.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/401-0
+00:38:43.380 --> 00:38:43.860
+<v John Miller>What was that?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/402-0
+00:38:44.900 --> 00:38:46.260
+<v Goostree, Peter>Don't have any tests yet, so.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/403-0
+00:38:46.460 --> 00:38:46.500
+<v John Miller>Oh.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/405-0
+00:38:49.340 --> 00:38:54.120
+<v Matt Hoffman>Just a heads up,
+issues were disabled on my repo by</v>
+
+e7059870-4861-4d84-90b3-091db9536099/405-1
+00:38:54.120 --> 00:38:58.623
+<v Matt Hoffman>default,
+so that that prevented me from creating</v>
+
+e7059870-4861-4d84-90b3-091db9536099/404-0
+00:38:54.300 --> 00:38:55.140
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/405-2
+00:38:58.623 --> 00:39:01.380
+<v Matt Hoffman>issues. Just warning everyone.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/406-0
+00:39:03.580 --> 00:39:04.620
+<v Goostree, Peter>Yes, I'm here.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/408-0
+00:39:16.860 --> 00:39:20.380
+<v Bui, Tom>Was that something that was supposed to
+be added on the personal access token?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/411-0
+00:39:20.700 --> 00:39:24.423
+<v John Miller>No, it's a setting for your repo.
+So if you if you go to the settings in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/409-0
+00:39:23.540 --> 00:39:23.620
+<v Bui, Tom>Oh.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/411-1
+00:39:24.423 --> 00:39:26.820
+<v John Miller>your repo,
+you should be able to turn that on.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/410-0
+00:39:27.580 --> 00:39:27.700
+<v Bui, Tom>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/412-0
+00:39:32.620 --> 00:39:33.900
+<v Dan Blanchard>What setting is that? Uh?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/413-0
+00:39:35.380 --> 00:39:36.460
+<v Dan Blanchard>Creating issues.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/414-0
+00:39:36.300 --> 00:39:36.740
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/415-0
+00:39:38.060 --> 00:39:43.424
+<v Goostree, Peter>The issues which is it's called issues,
+but I you know what I told Copilot</v>
+
+e7059870-4861-4d84-90b3-091db9536099/415-1
+00:39:43.424 --> 00:39:48.715
+<v Goostree, Peter>explicitly to create the ticket remotely
+and it said issues are disabled.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/415-2
+00:39:48.715 --> 00:39:50.860
+<v Goostree, Peter>Do you want me to enable them?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/428-0
+00:40:24.340 --> 00:40:29.372
+<v Buddy Toups>Hey John, I decided to do some experiment.
+So like I I remember yesterday we were</v>
+
+e7059870-4861-4d84-90b3-091db9536099/425-0
+00:40:25.100 --> 00:40:25.900
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/428-1
+00:40:29.372 --> 00:40:33.054
+<v Buddy Toups>talking about prompt files and I wasn't
+familiar with that,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/428-2
+00:40:33.054 --> 00:40:37.288
+<v Buddy Toups>you know that type of technique.
+So like I I decided instead of just</v>
+
+e7059870-4861-4d84-90b3-091db9536099/426-0
+00:40:35.060 --> 00:40:35.420
+<v John Miller>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/428-3
+00:40:37.288 --> 00:40:41.031
+<v Buddy Toups>asking it for a report,
+I told it to create a prompt for the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/428-4
+00:40:41.031 --> 00:40:41.460
+<v Buddy Toups>report.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/431-0
+00:40:41.900 --> 00:40:45.213
+<v Buddy Toups>And then that way,
+because it seems like something you would</v>
+
+e7059870-4861-4d84-90b3-091db9536099/427-0
+00:40:42.500 --> 00:40:42.660
+<v John Miller>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/431-1
+00:40:45.213 --> 00:40:48.309
+<v Buddy Toups>want to run, you know, repeatedly, right?
+Would that be?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/430-0
+00:40:47.340 --> 00:40:48.580
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/431-2
+00:40:48.309 --> 00:40:51.513
+<v Buddy Toups>Is that like a good use case for creating
+the prompt file?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/431-3
+00:40:51.513 --> 00:40:54.500
+<v Buddy Toups>Like something you want to repeat over
+and over again?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/432-0
+00:40:53.340 --> 00:40:57.534
+<v John Miller>Yeah, yeah, that's a that's a good.
+That's exactly what they're designed to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/432-1
+00:40:57.534 --> 00:41:01.838
+<v John Miller>do is to encapsulate this into a file so
+that you can reuse them in different</v>
+
+e7059870-4861-4d84-90b3-091db9536099/432-2
+00:41:01.838 --> 00:41:02.500
+<v John Miller>projects or.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/434-0
+00:41:03.340 --> 00:41:07.340
+<v Buddy Toups>Or just rely. Yeah,
+like basically if you don't like how it</v>
+
+e7059870-4861-4d84-90b3-091db9536099/433-0
+00:41:05.060 --> 00:41:06.900
+<v John Miller>Or just run, run.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/434-1
+00:41:07.340 --> 00:41:11.740
+<v Buddy Toups>like on mine it didn't do,
+it didn't say anything about unit test</v>
+
+e7059870-4861-4d84-90b3-091db9536099/434-2
+00:41:11.740 --> 00:41:16.607
+<v Buddy Toups>coverage. If I didn't like that,
+I could change that prompt file, right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/434-3
+00:41:16.607 --> 00:41:19.540
+<v Buddy Toups>And then that way it's always gonna
+behave.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/435-0
+00:41:19.900 --> 00:41:22.980
+<v Buddy Toups>The way I, you know,
+like I expect it to behave, right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/436-0
+00:41:22.540 --> 00:41:27.539
+<v John Miller>That's right. That's right. So yeah,
+so by encapsulating into a prompt file,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/436-1
+00:41:27.539 --> 00:41:32.537
+<v John Miller>you can not only remember what you
+actually did at the time to produce those</v>
+
+e7059870-4861-4d84-90b3-091db9536099/436-2
+00:41:32.537 --> 00:41:36.692
+<v John Miller>the backlog originally,
+but you could actually reuse it and run</v>
+
+e7059870-4861-4d84-90b3-091db9536099/436-3
+00:41:36.692 --> 00:41:37.860
+<v John Miller>it on an occasion.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/437-0
+00:41:38.380 --> 00:41:43.647
+<v John Miller>You would probably want to add things to
+that prompt file to to not create any</v>
+
+e7059870-4861-4d84-90b3-091db9536099/437-1
+00:41:43.647 --> 00:41:44.780
+<v John Miller>duplicate issues.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/438-0
+00:41:47.020 --> 00:41:51.520
+<v John Miller>Which might be a little bit of a
+challenge for to to be able to identify</v>
+
+e7059870-4861-4d84-90b3-091db9536099/438-1
+00:41:51.520 --> 00:41:54.294
+<v John Miller>it,
+but if it's using the same logic in your</v>
+
+e7059870-4861-4d84-90b3-091db9536099/438-2
+00:41:54.294 --> 00:41:57.622
+<v John Miller>prompt file,
+then it it should be able to do a decent</v>
+
+e7059870-4861-4d84-90b3-091db9536099/438-3
+00:41:57.622 --> 00:42:02.677
+<v John Miller>job of identifying that that this is the
+same issue as something that was created</v>
+
+e7059870-4861-4d84-90b3-091db9536099/438-4
+00:42:02.677 --> 00:42:05.820
+<v John Miller>earlier and so I won't go ahead and do
+that right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/439-0
+00:42:07.780 --> 00:42:11.420
+<v John Miller>All right. So how are we doing on this?
+I see two people with their hands up.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/439-1
+00:42:11.420 --> 00:42:14.220
+<v John Miller>Are you just trying to finish up or do
+you have a question?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/444-0
+00:42:16.940 --> 00:42:21.869
+<v Rockwell, Christopher L>I'm still, yeah,
+I I ended up creating an instruction file</v>
+
+e7059870-4861-4d84-90b3-091db9536099/440-0
+00:42:17.140 --> 00:42:18.660
+<v Dan Blanchard>Find us in the shop.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/441-0
+00:42:18.500 --> 00:42:18.540
+<v John Miller>Uh.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/444-1
+00:42:21.869 --> 00:42:28.302
+<v Rockwell, Christopher L>for doing a code base analysis and that
+took a while and now that's running.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/442-0
+00:42:28.260 --> 00:42:28.380
+<v John Miller>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/444-2
+00:42:28.302 --> 00:42:32.980
+<v Rockwell, Christopher L>But but don't let me hold things up,
+it's just running.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/443-0
+00:42:33.380 --> 00:42:33.700
+<v John Miller>All right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/445-0
+00:42:35.660 --> 00:42:39.140
+<v John Miller>So how many issues have we found so far?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/448-0
+00:42:51.660 --> 00:42:54.540
+<v Goostree, Peter>The code looks pretty good,
+it's just missing tests basically.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/451-0
+00:43:11.700 --> 00:43:14.913
+<v Matt Hoffman>Yeah,
+mine's having a lot of trouble uploading</v>
+
+e7059870-4861-4d84-90b3-091db9536099/451-1
+00:43:14.913 --> 00:43:18.535
+<v Matt Hoffman>the issues,
+so I'm just having it continuously debug</v>
+
+e7059870-4861-4d84-90b3-091db9536099/451-2
+00:43:18.535 --> 00:43:18.740
+<v Matt Hoffman>it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/452-0
+00:43:19.420 --> 00:43:23.009
+<v John Miller>Yeah, and if you, you know you can just,
+you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/452-1
+00:43:23.009 --> 00:43:27.020
+<v John Miller>create them as files in a folder and
+that'll do for now.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/453-0
+00:43:32.820 --> 00:43:37.095
+<v Dan Blanchard>We're on GitHub. Do you see the issues?
+Sorry, I don't see it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/453-1
+00:43:37.095 --> 00:43:40.420
+<v Dan Blanchard>The code pull request agents, actions,
+projects.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/454-0
+00:43:40.780 --> 00:43:44.410
+<v Chris Bishop>If you're,
+you can go to General and Scroll down.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/454-1
+00:43:44.410 --> 00:43:48.838
+<v Chris Bishop>There's a tick box for issues in the
+settings for your repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/455-0
+00:43:48.500 --> 00:43:51.451
+<v Dan Blanchard>Yeah, yeah,
+I did that and I and I had it and I had a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/454-2
+00:43:48.838 --> 00:43:50.580
+<v Chris Bishop>That's where I found it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/455-1
+00:43:51.451 --> 00:43:55.002
+<v Dan Blanchard>VS code create an issue, but I sorry,
+I don't use GitHub really.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/455-2
+00:43:55.002 --> 00:43:57.460
+<v Dan Blanchard>I don't see where the issues are in my
+repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/456-0
+00:44:00.700 --> 00:44:05.357
+<v Chris Bishop>It seems to take a while to enable issues
+because I'm still not able to to do</v>
+
+e7059870-4861-4d84-90b3-091db9536099/456-1
+00:44:05.357 --> 00:44:08.580
+<v Chris Bishop>anything even though I've enabled issues
+on the repo.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/458-0
+00:44:11.260 --> 00:44:16.652
+<v Rockwell, Christopher L>And Dan, if if you enable it and refresh,
+you should across your top navigation bar</v>
+
+e7059870-4861-4d84-90b3-091db9536099/457-0
+00:44:11.500 --> 00:44:11.620
+<v Dan Blanchard>But.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/458-1
+00:44:16.652 --> 00:44:19.860
+<v Rockwell, Christopher L>you should see code issues,
+pull request actions.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/459-0
+00:44:18.700 --> 00:44:22.100
+<v Dan Blanchard>Oh, I see it now. I see it now. Thanks.
+OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/461-0
+00:44:29.980 --> 00:44:34.321
+<v Dan Blanchard>But I mostly use Azure Dev apps,
+so there's only issues like you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/461-1
+00:44:34.321 --> 00:44:38.357
+<v Dan Blanchard>in Azure Dev apps there's features,
+there's PB is, there's tasks,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/461-2
+00:44:38.357 --> 00:44:41.780
+<v Dan Blanchard>there's bugs.
+But in GitHub there's only issues, right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/460-0
+00:44:40.340 --> 00:44:40.500
+<v John Miller>Right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/462-0
+00:44:41.580 --> 00:44:46.887
+<v John Miller>Right, that's that's right.
+You you can tag them as being bugs or or</v>
+
+e7059870-4861-4d84-90b3-091db9536099/462-1
+00:44:46.887 --> 00:44:50.348
+<v John Miller>the like,
+but they're all issues inherently.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/462-2
+00:44:50.348 --> 00:44:55.500
+<v John Miller>You know, I haven't used it,
+but that that extension I showed you.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/463-0
+00:44:57.540 --> 00:44:57.700
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/464-0
+00:44:59.020 --> 00:45:02.139
+<v John Miller>Has the ability to create issues among
+other things.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/464-1
+00:45:02.139 --> 00:45:07.022
+<v John Miller>So you so you should be able to with that
+tool say this is a this is a bug or this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/464-2
+00:45:07.022 --> 00:45:11.729
+<v John Miller>is a this is a feature or or or however
+you want to do this when Azure in Azure</v>
+
+e7059870-4861-4d84-90b3-091db9536099/464-3
+00:45:11.729 --> 00:45:12.140
+<v John Miller>DevOps.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/465-0
+00:45:14.940 --> 00:45:16.820
+<v Dan Blanchard>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/466-0
+00:45:15.380 --> 00:45:18.186
+<v John Miller>So you can essentially apply the same
+same ideas,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/466-1
+00:45:18.186 --> 00:45:22.620
+<v John Miller>the same same concepts and techniques,
+but just use a different tool to do the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/466-2
+00:45:22.620 --> 00:45:22.900
+<v John Miller>work.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/467-0
+00:45:24.220 --> 00:45:27.965
+<v Dan Blanchard>Gotcha. OK, thanks. Yeah,
+I was able to create an issue from VS</v>
+
+e7059870-4861-4d84-90b3-091db9536099/467-1
+00:45:27.965 --> 00:45:31.300
+<v Dan Blanchard>code, so I I lowered my end.
+I think I was the last one.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/468-0
+00:45:32.060 --> 00:45:33.300
+<v John Miller>All right, great.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/469-0
+00:45:34.460 --> 00:45:39.105
+<v John Miller>So this is something that we can,
+you know, continue to refine.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/469-1
+00:45:39.105 --> 00:45:45.127
+<v John Miller>But what we wanted to do is to try to do
+something that establish this backlog and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/469-2
+00:45:45.127 --> 00:45:48.900
+<v John Miller>the the idea is if we looked at the
+prompts in the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/470-0
+00:45:49.740 --> 00:45:52.813
+<v John Miller>In the folder,
+there's a a number of different prompts</v>
+
+e7059870-4861-4d84-90b3-091db9536099/470-1
+00:45:52.813 --> 00:45:56.500
+<v John Miller>here that we could have used to, you know,
+do a code base review.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/471-0
+00:45:57.900 --> 00:46:01.300
+<v John Miller>Right, so we could say, um,
+let me open this up.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/473-0
+00:46:06.780 --> 00:46:10.820
+<v John Miller>So this does this code base versus
+instruction audit Uh prompt.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/474-0
+00:46:15.460 --> 00:46:15.700
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/475-0
+00:46:23.700 --> 00:46:23.940
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/476-0
+00:46:26.540 --> 00:46:29.809
+<v John Miller>All right,
+here's one for creating issues for dead</v>
+
+e7059870-4861-4d84-90b3-091db9536099/476-1
+00:46:29.809 --> 00:46:32.180
+<v John Miller>code, creating issues for found bugs.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/477-0
+00:46:37.220 --> 00:46:42.298
+<v John Miller>And things like that. Security,
+a security audit, looking for that,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/477-1
+00:46:42.298 --> 00:46:43.940
+<v John Miller>looking for test gaps.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/478-0
+00:46:43.980 --> 00:46:44.180
+<v John Miller>Yes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/479-0
+00:46:45.220 --> 00:46:52.121
+<v John Miller>All of these prompts would would help us
+identify issues that goes into our go</v>
+
+e7059870-4861-4d84-90b3-091db9536099/479-1
+00:46:52.121 --> 00:46:57.275
+<v John Miller>into our backlog.
+So in a matter of you know an hour or or</v>
+
+e7059870-4861-4d84-90b3-091db9536099/479-2
+00:46:57.275 --> 00:47:04.526
+<v John Miller>so by running these prompts you could you
+know for a brand new code base establish</v>
+
+e7059870-4861-4d84-90b3-091db9536099/479-3
+00:47:04.526 --> 00:47:04.700
+<v John Miller>a.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/480-0
+00:47:04.940 --> 00:47:10.986
+<v John Miller>Fairly comprehensive backlog of things
+that needs to be done and then the next</v>
+
+e7059870-4861-4d84-90b3-091db9536099/480-1
+00:47:10.986 --> 00:47:13.740
+<v John Miller>part was to evaluate it in terms of.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/482-0
+00:47:15.340 --> 00:47:22.649
+<v John Miller>In terms of the the impact of the issue
+versus the the amount of effort involved,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/482-1
+00:47:22.649 --> 00:47:27.997
+<v John Miller>so you could ask,
+you could ask AI to to examine the issues</v>
+
+e7059870-4861-4d84-90b3-091db9536099/482-2
+00:47:27.997 --> 00:47:34.860
+<v John Miller>in the in the backlog and prioritize them
+based on the the amount of effort.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/483-0
+00:47:34.860 --> 00:47:41.498
+<v John Miller>Put in the the the actual impact to the
+so that you you could prioritize the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/483-1
+00:47:41.498 --> 00:47:45.378
+<v John Miller>things that are most important to fix
+first.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/483-2
+00:47:45.378 --> 00:47:49.860
+<v John Miller>You can also include in a in a prompt
+like that to.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/484-0
+00:47:50.700 --> 00:47:56.730
+<v John Miller>Consider the the dependencies of you know
+one issue on one issue on another so that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/484-1
+00:47:56.730 --> 00:48:02.617
+<v John Miller>you're doing the things that are that are
+have depend things that are depended on</v>
+
+e7059870-4861-4d84-90b3-091db9536099/484-2
+00:48:02.617 --> 00:48:06.780
+<v John Miller>1st as so that you can get that work
+accomplished sooner.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/485-0
+00:48:06.860 --> 00:48:09.991
+<v John Miller>So this whole, this whole,
+this whole part of it,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/485-1
+00:48:09.991 --> 00:48:14.750
+<v John Miller>what I think is really powerful and
+something I've used quite a bit is that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/485-2
+00:48:14.750 --> 00:48:19.070
+<v John Miller>by establishing that backlog,
+you now raise the visibility of all of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/485-3
+00:48:19.070 --> 00:48:23.140
+<v John Miller>the technical debt to the rest of the
+team and the organisation.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/486-0
+00:48:23.500 --> 00:48:24.500
+<v John Miller>Um and.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/487-0
+00:48:26.820 --> 00:48:32.163
+<v John Miller>What I think what you're going to find is
+that the real bottleneck now becomes not</v>
+
+e7059870-4861-4d84-90b3-091db9536099/487-1
+00:48:32.163 --> 00:48:36.926
+<v John Miller>the actual fixing of the issues,
+because we can do that fairly simply and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/487-2
+00:48:36.926 --> 00:48:40.981
+<v John Miller>very quickly using a I.
+It's going to be the prioritization of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/487-3
+00:48:40.981 --> 00:48:46.323
+<v John Miller>the of the work as well as the reviewing
+of the work once you're complete in which</v>
+
+e7059870-4861-4d84-90b3-091db9536099/487-4
+00:48:46.323 --> 00:48:46.580
+<v John Miller>the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/488-0
+00:48:46.700 --> 00:48:50.201
+<v John Miller>What's AI has completed doing the the
+remediation.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/488-1
+00:48:50.201 --> 00:48:55.760
+<v John Miller>So that's that becomes where where most
+of the time is in terms of fixing or the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/488-2
+00:48:55.760 --> 00:49:01.457
+<v John Miller>technical data is going to be wrapped up.
+So you could identify all these items in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/488-3
+00:49:01.457 --> 00:49:05.300
+<v John Miller>the backlog,
+but you still need to get it to your your.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/489-0
+00:49:05.620 --> 00:49:10.146
+<v John Miller>Software development process to to get it
+approved for for for fixing.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/489-1
+00:49:10.146 --> 00:49:14.862
+<v John Miller>I mean you need to review these these
+these issues just to make sure that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/489-2
+00:49:14.862 --> 00:49:20.024
+<v John Miller>they're accurate and that there is that
+something hasn't slipped through the A I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/489-3
+00:49:20.024 --> 00:49:24.740
+<v John Miller>that's that would that be incorrect or
+something they shouldn't be doing.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/490-0
+00:49:25.100 --> 00:49:30.429
+<v John Miller>You also need to evaluate what the what
+the recommended fixes are to make sure</v>
+
+e7059870-4861-4d84-90b3-091db9536099/490-1
+00:49:30.429 --> 00:49:35.286
+<v John Miller>that you agree with those fixes.
+But once you've once you've done that,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/490-2
+00:49:35.286 --> 00:49:39.940
+<v John Miller>you know you can then just hand an issue
+off to a a copilot and say.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/491-0
+00:49:40.380 --> 00:49:42.740
+<v John Miller>Go ahead and address this issue.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/493-0
+00:49:43.900 --> 00:49:47.631
+<v John Miller>Which is pretty simple.
+So this is still thinking,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/493-1
+00:49:47.631 --> 00:49:52.020
+<v John Miller>so I'm looking to create some identify
+some issues of this.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/494-0
+00:49:53.180 --> 00:49:55.940
+<v John Miller>And that'll give us some backlog to work
+on.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/495-0
+00:49:57.420 --> 00:50:00.660
+<v John Miller>All right.
+Any questions on this exercise or?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/497-0
+00:50:01.020 --> 00:50:05.838
+<v Dan Blanchard>I got a question about those prompts.
+Are are you gonna add those to the repo</v>
+
+e7059870-4861-4d84-90b3-091db9536099/496-0
+00:50:02.180 --> 00:50:02.260
+<v Goostree, Peter>Hey.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/497-1
+00:50:05.838 --> 00:50:08.740
+<v Dan Blanchard>'cause they're not in there yet, right?
+Or or?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/498-0
+00:50:06.060 --> 00:50:10.973
+<v John Miller>They're not in your repo,
+but they're in the they're in the A I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/498-1
+00:50:10.973 --> 00:50:16.729
+<v John Miller>assisted software development repo.
+So I just copied them from 1 folder to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/498-2
+00:50:16.729 --> 00:50:21.180
+<v John Miller>the next. I can show you what I did there.
+All right, so.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/501-0
+00:50:19.980 --> 00:50:22.314
+<v Dan Blanchard>Oh,
+I didn't see them in that folder 'cause I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/501-1
+00:50:22.314 --> 00:50:24.900
+<v Dan Blanchard>pulled latest this morning.
+Did you just add them?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/499-0
+00:50:23.180 --> 00:50:23.580
+<v John Miller>So what I.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/500-0
+00:50:24.700 --> 00:50:25.220
+<v John Miller>Yes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/502-0
+00:50:26.460 --> 00:50:28.700
+<v John Miller>Into the AI assisted software development.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/505-0
+00:50:28.180 --> 00:50:33.059
+<v Dan Blanchard>Yeah. Oh, this is the topic as well. OK,
+I was looking at the one from the first</v>
+
+e7059870-4861-4d84-90b3-091db9536099/503-0
+00:50:30.100 --> 00:50:30.180
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/504-0
+00:50:31.780 --> 00:50:31.980
+<v John Miller>M.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/506-0
+00:50:32.860 --> 00:50:36.847
+<v John Miller>No, no, this is this.
+So this this repo is kind of like your</v>
+
+e7059870-4861-4d84-90b3-091db9536099/505-1
+00:50:33.059 --> 00:50:33.540
+<v Dan Blanchard>day. OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/506-1
+00:50:36.847 --> 00:50:41.879
+<v John Miller>toolkit that you're getting from this
+course of things that I've created and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/506-2
+00:50:41.879 --> 00:50:46.845
+<v John Miller>used over the over the, you know,
+over time that has helped me out and that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/506-3
+00:50:46.845 --> 00:50:48.740
+<v John Miller>you might find some value in.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/507-0
+00:50:49.140 --> 00:50:52.944
+<v John Miller>So you know,
+we talked about how to share these</v>
+
+e7059870-4861-4d84-90b3-091db9536099/507-1
+00:50:52.944 --> 00:50:58.254
+<v John Miller>between between projects.
+Right now we're doing the a syncing type</v>
+
+e7059870-4861-4d84-90b3-091db9536099/507-2
+00:50:58.254 --> 00:51:04.673
+<v John Miller>of approach where we're just copying the
+files over from one repo into the next.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/507-3
+00:51:04.673 --> 00:51:06.020
+<v John Miller>You know they're.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/508-0
+00:51:06.380 --> 00:51:12.811
+<v John Miller>We talked about other ways using the
+co-pody setting files and sub repos in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/508-1
+00:51:12.811 --> 00:51:19.241
+<v John Miller>order for us to share share these
+instruction files from a central location</v>
+
+e7059870-4861-4d84-90b3-091db9536099/508-2
+00:51:19.241 --> 00:51:22.540
+<v John Miller>and and and and keep control over them.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/509-0
+00:51:22.860 --> 00:51:28.422
+<v John Miller>We you know if you work in a lot of
+projects replicating these among we also</v>
+
+e7059870-4861-4d84-90b3-091db9536099/509-1
+00:51:28.422 --> 00:51:33.261
+<v John Miller>talked about using a like an
+organizational level instruction file</v>
+
+e7059870-4861-4d84-90b3-091db9536099/509-2
+00:51:33.261 --> 00:51:38.100
+<v John Miller>which would be I I think ideal for for
+for many of these types of.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/510-0
+00:51:38.220 --> 00:51:42.954
+<v John Miller>Instruction files to be put and shared
+across multiple repos within an</v>
+
+e7059870-4861-4d84-90b3-091db9536099/510-1
+00:51:42.954 --> 00:51:43.820
+<v John Miller>organization.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/512-0
+00:51:46.620 --> 00:51:49.380
+<v John Miller>So anyway, yeah, go ahead.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/511-0
+00:51:46.980 --> 00:51:47.980
+<v Rich LaVorgna>Hey, John, this.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/513-0
+00:51:49.500 --> 00:51:51.820
+<v Goostree, Peter>Is there? Is there some?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/515-0
+00:51:52.860 --> 00:52:00.140
+<v Goostree, Peter>Limitation to the number of instruction
+files that you can create and use like.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/517-0
+00:52:01.660 --> 00:52:07.248
+<v Goostree, Peter>Can you just go? I mean, you know,
+is there a naming convention that copilot</v>
+
+e7059870-4861-4d84-90b3-091db9536099/517-1
+00:52:07.248 --> 00:52:12.980
+<v Goostree, Peter>knows to look for specific instruction
+files to apply under certain scenarios?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/516-0
+00:52:14.980 --> 00:52:15.300
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/518-0
+00:52:17.460 --> 00:52:18.020
+<v John Miller>You can.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/521-0
+00:52:19.580 --> 00:52:24.307
+<v John Miller>Well, one you can.
+You can refer to them explicitly in your</v>
+
+e7059870-4861-4d84-90b3-091db9536099/521-1
+00:52:24.307 --> 00:52:28.246
+<v John Miller>prompts,
+or you can refer them to them explicitly</v>
+
+e7059870-4861-4d84-90b3-091db9536099/519-0
+00:52:25.380 --> 00:52:25.540
+<v Goostree, Peter>Right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/521-2
+00:52:28.246 --> 00:52:34.469
+<v John Miller>in your prompt files that you want to
+incorporate these particular instruction</v>
+
+e7059870-4861-4d84-90b3-091db9536099/520-0
+00:52:31.380 --> 00:52:31.620
+<v Goostree, Peter>Mm.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/521-3
+00:52:34.469 --> 00:52:37.620
+<v John Miller>files. What I'll talk about tomorrow is.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/522-0
+00:52:38.380 --> 00:52:43.790
+<v John Miller>How to use agents to encapsulate much of
+this information in terms of the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/522-1
+00:52:43.790 --> 00:52:49.492
+<v John Miller>instruction files and be more precise
+about what is actually included and you</v>
+
+e7059870-4861-4d84-90b3-091db9536099/522-2
+00:52:49.492 --> 00:52:55.340
+<v John Miller>can make that apply to a multiple prompts
+or that you're that you're executing.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/523-0
+00:52:56.140 --> 00:53:00.364
+<v John Miller>By invoking a a custom agent to to to
+control that,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/523-1
+00:53:00.364 --> 00:53:06.861
+<v John Miller>there's also in prom files the ability to
+say that this applies to certain file</v>
+
+e7059870-4861-4d84-90b3-091db9536099/523-2
+00:53:06.861 --> 00:53:12.140
+<v John Miller>extensions and and there's other patterns
+that you can use that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/524-0
+00:53:12.540 --> 00:53:17.080
+<v John Miller>Where you can express how that
+instruction file gets utilized and you</v>
+
+e7059870-4861-4d84-90b3-091db9536099/524-1
+00:53:17.080 --> 00:53:21.425
+<v John Miller>can, as I mentioned yesterday,
+you can also put them in a specific</v>
+
+e7059870-4861-4d84-90b3-091db9536099/524-2
+00:53:21.425 --> 00:53:23.500
+<v John Miller>folder. So we're to look at our.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/525-0
+00:53:24.860 --> 00:53:29.421
+<v John Miller>Our our implementation here where we have
+a controllers folder,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/525-1
+00:53:29.421 --> 00:53:35.264
+<v John Miller>you could put an instruction file in this
+folder that would only apply to the the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/525-2
+00:53:35.264 --> 00:53:40.109
+<v John Miller>the content of that folder.
+So but your the answer to your question</v>
+
+e7059870-4861-4d84-90b3-091db9536099/525-3
+00:53:40.109 --> 00:53:44.740
+<v John Miller>is yeah there is a finite limit in this
+in that if you you know.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/526-0
+00:53:44.900 --> 00:53:50.635
+<v John Miller>If we looked at our diagnostics,
+we can see that we're bringing in quite a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/526-1
+00:53:50.635 --> 00:53:50.940
+<v John Miller>few.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/527-0
+00:53:54.180 --> 00:53:55.460
+<v John Miller>And instruction files.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/528-0
+00:53:56.020 --> 00:53:56.700
+<v Goostree, Peter>Mhm.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/529-0
+00:53:57.180 --> 00:53:57.300
+<v John Miller>But.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/530-0
+00:53:59.300 --> 00:53:59.380
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/531-0
+00:54:01.420 --> 00:54:01.620
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/532-0
+00:54:02.700 --> 00:54:07.199
+<v John Miller>In our context and so your limit is going
+to be eventually that you're going to run</v>
+
+e7059870-4861-4d84-90b3-091db9536099/532-1
+00:54:07.199 --> 00:54:11.322
+<v John Miller>out of your your support in your context
+window for all of these all of this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/532-2
+00:54:11.322 --> 00:54:15.071
+<v John Miller>content because it's all it's all being
+loaded automatically for you.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/532-3
+00:54:15.071 --> 00:54:19.140
+<v John Miller>And so that's what I want to talk about a
+little tomorrow is OK, how do we.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/534-0
+00:54:19.660 --> 00:54:23.968
+<v John Miller>How do we focus this?
+How to provide more focus to this so that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/534-1
+00:54:23.968 --> 00:54:28.275
+<v John Miller>we're not bringing everything in all the
+time, right? But yeah,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/534-2
+00:54:28.275 --> 00:54:33.860
+<v John Miller>there is a limit and you have to manage
+that. You want to use the tools down here.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/533-0
+00:54:28.980 --> 00:54:29.220
+<v Goostree, Peter>Hmm.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/535-0
+00:54:34.460 --> 00:54:37.980
+<v John Miller>To see how much of the context window
+you're how many.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/536-0
+00:54:39.380 --> 00:54:43.623
+<v John Miller>What you're seeing and you can also use
+this icon over here to show here like</v>
+
+e7059870-4861-4d84-90b3-091db9536099/536-1
+00:54:43.623 --> 00:54:45.580
+<v John Miller>like system instructions. These are.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/537-0
+00:54:46.940 --> 00:54:51.545
+<v John Miller>Basically what all these files when we
+noticing if we as we've gone through and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/537-1
+00:54:51.545 --> 00:54:55.977
+<v John Miller>building out more and more instruction
+files, this number has been going up.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/537-2
+00:54:55.977 --> 00:55:00.524
+<v John Miller>You know it started out at like 5% and
+now it's a third of our context windows</v>
+
+e7059870-4861-4d84-90b3-091db9536099/537-3
+00:55:00.524 --> 00:55:02.020
+<v John Miller>is just being consumed by.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/538-0
+00:55:02.300 --> 00:55:07.380
+<v John Miller>The instruction files that we have told
+it that if we want to use.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/540-0
+00:55:11.260 --> 00:55:14.887
+<v John Miller>And so you can see here that I'm starting
+to get, you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/540-1
+00:55:14.887 --> 00:55:18.817
+<v John Miller>68% of my context window.
+When it starts to get to farther here,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/540-2
+00:55:18.817 --> 00:55:23.532
+<v John Miller>it'll start changing the UI to try to
+warn you that you're starting to exceed</v>
+
+e7059870-4861-4d84-90b3-091db9536099/540-3
+00:55:23.532 --> 00:55:24.740
+<v John Miller>your context window.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/539-0
+00:55:25.460 --> 00:55:25.620
+<v Goostree, Peter>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/541-0
+00:55:27.500 --> 00:55:28.180
+<v John Miller>Other questions?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/543-0
+00:55:29.660 --> 00:55:31.300
+<v Goostree, Peter>And I think that's the big.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/542-0
+00:55:30.140 --> 00:55:31.980
+<v Dan Blanchard>I have a question so I.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/545-0
+00:55:32.340 --> 00:55:35.540
+<v John Miller>Oops, raise your hand please.
+That way we can do this.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/544-0
+00:55:32.860 --> 00:55:33.100
+<v Goostree, Peter>Mm.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/546-0
+00:55:35.740 --> 00:55:37.540
+<v Goostree, Peter>Yeah, go ahead.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/547-0
+00:55:39.500 --> 00:55:42.787
+<v Dan Blanchard>Well, I've you can go ahead.
+I've asked a lot of questions,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/548-0
+00:55:42.300 --> 00:55:45.569
+<v Goostree, Peter>OK. I was, yeah, I was just gonna.
+I was just gonna continue on with that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/547-1
+00:55:42.787 --> 00:55:44.540
+<v Dan Blanchard>so you please go. I'll raise it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/548-1
+00:55:45.569 --> 00:55:47.380
+<v Goostree, Peter>one, John. Like, you know, I mean, we're.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/549-0
+00:55:49.340 --> 00:55:54.269
+<v Goostree, Peter>One of the goals for myself and my
+teammates who are attending this class</v>
+
+e7059870-4861-4d84-90b3-091db9536099/549-1
+00:55:54.269 --> 00:55:59.265
+<v Goostree, Peter>with you is to be able to take this
+knowledge back to our organization and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/549-2
+00:55:59.265 --> 00:56:02.462
+<v Goostree, Peter>share it.
+And one of the biggest takeaways that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/549-3
+00:56:02.462 --> 00:56:04.060
+<v Goostree, Peter>I've captured so far is.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/551-0
+00:56:05.540 --> 00:56:09.572
+<v Goostree, Peter>You know, from an enterprise perspective,
+creating prompt files,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/551-1
+00:56:09.572 --> 00:56:12.921
+<v Goostree, Peter>creating instruction files,
+how to use them properly,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/551-2
+00:56:12.921 --> 00:56:17.635
+<v Goostree, Peter>essentially how to treat copilot as a
+team member, right? And and you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/550-0
+00:56:17.220 --> 00:56:17.460
+<v John Miller>Right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/551-3
+00:56:17.635 --> 00:56:21.976
+<v Goostree, Peter>so there's myself and two other
+colleagues are here from our company,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/551-4
+00:56:21.976 --> 00:56:23.340
+<v Goostree, Peter>right? And we're each.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/552-0
+00:56:24.740 --> 00:56:29.341
+<v Goostree, Peter>Leaders on our own teams and so you know
+my take away is,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/552-1
+00:56:29.341 --> 00:56:35.686
+<v Goostree, Peter>is that you know I think that on my team
+specifically we'll be investing in a a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/552-2
+00:56:35.686 --> 00:56:42.110
+<v Goostree, Peter>set of instruction and prompt files for
+my team for the type of software that we</v>
+
+e7059870-4861-4d84-90b3-091db9536099/552-3
+00:56:42.110 --> 00:56:43.220
+<v Goostree, Peter>build and and.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/554-0
+00:56:43.460 --> 00:56:46.320
+<v Goostree, Peter>And you know,
+I think the other team members will</v>
+
+e7059870-4861-4d84-90b3-091db9536099/554-1
+00:56:46.320 --> 00:56:49.979
+<v Goostree, Peter>probably do that for their teams in their
+repositories as well.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/554-2
+00:56:49.979 --> 00:56:54.554
+<v Goostree, Peter>And then I think we want to understand
+how we can take that to the organization</v>
+
+e7059870-4861-4d84-90b3-091db9536099/554-3
+00:56:54.554 --> 00:56:57.298
+<v Goostree, Peter>level.
+How can we define standards and you know</v>
+
+e7059870-4861-4d84-90b3-091db9536099/554-4
+00:56:57.298 --> 00:57:00.500
+<v Goostree, Peter>all of the all of the things right and
+and use copilot.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/553-0
+00:56:58.620 --> 00:56:58.900
+<v John Miller>Right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/555-0
+00:57:02.300 --> 00:57:05.015
+<v Goostree, Peter>And treat Copilot as a team member going
+forward, right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/555-1
+00:57:05.015 --> 00:57:08.397
+<v Goostree, Peter>I mean that that's the huge,
+that's the big take away that I'm getting</v>
+
+e7059870-4861-4d84-90b3-091db9536099/555-2
+00:57:08.397 --> 00:57:09.540
+<v Goostree, Peter>so far from all of this.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/556-0
+00:57:09.580 --> 00:57:12.815
+<v John Miller>Yeah,
+I think that's that's really what we're</v>
+
+e7059870-4861-4d84-90b3-091db9536099/556-1
+00:57:12.815 --> 00:57:18.723
+<v John Miller>trying to accomplish in this course is to
+give you the the the skills that you need</v>
+
+e7059870-4861-4d84-90b3-091db9536099/556-2
+00:57:18.723 --> 00:57:24.419
+<v John Miller>in order to be able to accomplish that.
+And that's where when we get into agents</v>
+
+e7059870-4861-4d84-90b3-091db9536099/556-3
+00:57:24.419 --> 00:57:27.654
+<v John Miller>tomorrow,
+those are the next big piece that's</v>
+
+e7059870-4861-4d84-90b3-091db9536099/556-4
+00:57:27.654 --> 00:57:29.060
+<v John Miller>missing out of that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/558-0
+00:57:29.260 --> 00:57:33.695
+<v John Miller>That effort, right?
+So you know the the the chat modes</v>
+
+e7059870-4861-4d84-90b3-091db9536099/558-1
+00:57:33.695 --> 00:57:40.065
+<v John Miller>essentially allow us to wrap up these
+instruction files and these prompt files</v>
+
+e7059870-4861-4d84-90b3-091db9536099/558-2
+00:57:40.065 --> 00:57:44.580
+<v John Miller>and and essentially create not just one
+AI team member.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/561-0
+00:57:45.340 --> 00:57:50.590
+<v John Miller>But a whole range of them that we can
+invoke on a on a case by case,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/559-0
+00:57:46.860 --> 00:57:47.340
+<v Goostree, Peter>Mhm.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/561-1
+00:57:50.590 --> 00:57:55.993
+<v John Miller>task by task basis and say OK,
+I want to have a a chat mode or a agent</v>
+
+e7059870-4861-4d84-90b3-091db9536099/560-0
+00:57:51.140 --> 00:57:51.300
+<v Goostree, Peter>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/561-2
+00:57:55.993 --> 00:57:59.340
+<v John Miller>that is an expert in software
+requirements.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/562-0
+00:58:01.540 --> 00:58:09.806
+<v John Miller>And use that when I am when I'm managing
+my backlog or dealing with how to define</v>
+
+e7059870-4861-4d84-90b3-091db9536099/562-1
+00:58:09.806 --> 00:58:16.660
+<v John Miller>new requirements for a new feature or the
+like. I can use that one.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/563-0
+00:58:17.420 --> 00:58:22.737
+<v John Miller>And I can even have it, you know.
+So when I'm doing these kind of backlog</v>
+
+e7059870-4861-4d84-90b3-091db9536099/563-1
+00:58:22.737 --> 00:58:28.556
+<v John Miller>grooming sessions or these these sessions
+that I'm going through and scoring the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/563-2
+00:58:28.556 --> 00:58:31.861
+<v John Miller>code base,
+I could have one agent that really</v>
+
+e7059870-4861-4d84-90b3-091db9536099/563-3
+00:58:31.861 --> 00:58:35.740
+<v John Miller>understands C# code very well and is
+focused on that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/564-0
+00:58:36.220 --> 00:58:41.178
+<v John Miller>Actually create the the first draft of a
+a of an issue from a technical</v>
+
+e7059870-4861-4d84-90b3-091db9536099/564-1
+00:58:41.178 --> 00:58:44.622
+<v John Miller>perspective,
+but then the a more business analyst</v>
+
+e7059870-4861-4d84-90b3-091db9536099/564-2
+00:58:44.622 --> 00:58:50.199
+<v John Miller>looks at it in terms of prioritization
+and organization and trying to to build a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/564-3
+00:58:50.199 --> 00:58:52.540
+<v John Miller>plan for actually implementing it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/566-0
+00:58:52.540 --> 00:58:53.780
+<v John Miller>Things like that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/565-0
+00:58:52.940 --> 00:58:54.100
+<v Goostree, Peter>Yeah, yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/567-0
+00:58:54.940 --> 00:58:57.500
+<v John Miller>All right, Dan, you had a question.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/569-0
+00:58:59.540 --> 00:59:02.832
+<v Dan Blanchard>Yeah,
+so I assigned one of the issues to A to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/569-1
+00:59:02.832 --> 00:59:08.484
+<v Dan Blanchard>copilot and I see it made a pull request
+and it's just it just has one commit.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/569-2
+00:59:08.484 --> 00:59:13.277
+<v Dan Blanchard>It just says initial plan. Oh,
+I think now I think it has a second</v>
+
+e7059870-4861-4d84-90b3-091db9536099/569-3
+00:59:13.277 --> 00:59:16.568
+<v Dan Blanchard>commit.
+Is there a way to see it like as it's</v>
+
+e7059870-4861-4d84-90b3-091db9536099/569-4
+00:59:16.568 --> 00:59:17.140
+<v Dan Blanchard>working?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/571-0
+00:59:17.580 --> 00:59:20.398
+<v Dan Blanchard>You know while if you assign something to
+copilot,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/571-1
+00:59:20.398 --> 00:59:24.872
+<v Dan Blanchard>is there a way to kind of see you know
+like if you're in VS code you can kind of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/571-2
+00:59:24.872 --> 00:59:29.180
+<v Dan Blanchard>see it thinking and doing its thing and
+all that stuff like when you when you</v>
+
+e7059870-4861-4d84-90b3-091db9536099/571-3
+00:59:29.180 --> 00:59:31.500
+<v Dan Blanchard>start it from the website to to assign it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/572-0
+00:59:30.700 --> 00:59:35.450
+<v John Miller>Yeah, there is. You can actually,
+you know view the session that it's using</v>
+
+e7059870-4861-4d84-90b3-091db9536099/572-1
+00:59:35.450 --> 00:59:38.388
+<v John Miller>on the on the back end and that will show
+you,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/572-2
+00:59:38.388 --> 00:59:43.638
+<v John Miller>you know where it stands currently in the
+process as well as what it's done so far.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/572-3
+00:59:43.638 --> 00:59:46.700
+<v John Miller>So if you sign an issue to the to copilot
+there,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/572-4
+00:59:46.700 --> 00:59:49.700
+<v John Miller>the other thing that you should probably
+do is.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/573-0
+00:59:50.300 --> 00:59:55.551
+<v John Miller>Is which I I think I've mentioned,
+but it's something to re-emphasize is</v>
+
+e7059870-4861-4d84-90b3-091db9536099/573-1
+00:59:55.551 --> 01:00:01.305
+<v John Miller>that you can go into your settings and
+you can turn on copilot code reviews and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/573-2
+01:00:01.305 --> 01:00:05.620
+<v John Miller>what that will do is anytime you create a
+a a pull request.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/574-0
+01:00:07.540 --> 01:00:14.199
+<v John Miller>Copilot will automatically assign itself
+as a reviewer of that pull request and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/574-1
+01:00:14.199 --> 01:00:19.693
+<v John Miller>then evaluate, you know,
+go ahead and look for issues and add add</v>
+
+e7059870-4861-4d84-90b3-091db9536099/574-2
+01:00:19.693 --> 01:00:21.940
+<v John Miller>those things that it finds.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/575-0
+01:00:22.220 --> 01:00:26.766
+<v John Miller>To the comments of the of the pull
+request and that gives you the the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/575-1
+01:00:26.766 --> 01:00:32.025
+<v John Miller>ability to you know address them directly
+which sometimes it can do that or take</v>
+
+e7059870-4861-4d84-90b3-091db9536099/575-2
+01:00:32.025 --> 01:00:36.700
+<v John Miller>what it what it's recommending and
+implement it your yourself and then.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/576-0
+01:00:38.500 --> 01:00:44.423
+<v John Miller>Push push that change back into that same
+pull request and have that be reviewed</v>
+
+e7059870-4861-4d84-90b3-091db9536099/576-1
+01:00:44.423 --> 01:00:47.420
+<v John Miller>again.
+So you'll need to have a a a paid</v>
+
+e7059870-4861-4d84-90b3-091db9536099/576-2
+01:00:47.420 --> 01:00:49.540
+<v John Miller>subscription to do that, but.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/577-0
+01:00:51.020 --> 01:00:55.054
+<v John Miller>But it's yeah,
+that's a a nice way to to also get work</v>
+
+e7059870-4861-4d84-90b3-091db9536099/577-1
+01:00:55.054 --> 01:00:55.420
+<v John Miller>done.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/579-0
+01:00:56.860 --> 01:00:59.621
+<v John Miller>But yeah, you can,
+you can view the session and see that and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/579-1
+01:00:59.621 --> 01:01:02.291
+<v John Miller>we might be able to,
+I might be able to demonstrate that a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/578-0
+01:01:01.220 --> 01:01:01.300
+<v Dan Blanchard>So.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/579-2
+01:01:02.291 --> 01:01:03.060
+<v John Miller>little bit later.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/580-0
+01:01:03.740 --> 01:01:06.533
+<v Dan Blanchard>OK, yeah,
+I think in the settings under Copilot</v>
+
+e7059870-4861-4d84-90b3-091db9536099/580-1
+01:01:06.533 --> 01:01:09.500
+<v Dan Blanchard>there's code review and it says create a
+rule set.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/580-2
+01:01:09.500 --> 01:01:13.806
+<v Dan Blanchard>So if I do that then it should then
+automatically do code reviews and any</v>
+
+e7059870-4861-4d84-90b3-091db9536099/580-3
+01:01:13.806 --> 01:01:14.620
+<v Dan Blanchard>pull requests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/582-0
+01:01:14.620 --> 01:01:17.753
+<v John Miller>Yes,
+if you turn on the the code reviews in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/582-1
+01:01:17.753 --> 01:01:23.378
+<v John Miller>the copilot section of the settings that
+that will enable that feature and you</v>
+
+e7059870-4861-4d84-90b3-091db9536099/581-0
+01:01:20.220 --> 01:01:21.180
+<v Dan Blanchard>Yeah, OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/582-2
+01:01:23.378 --> 01:01:29.002
+<v John Miller>should be able to then any pull request
+you you take create will get that code</v>
+
+e7059870-4861-4d84-90b3-091db9536099/582-3
+01:01:29.002 --> 01:01:29.500
+<v John Miller>review.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/583-0
+01:01:30.860 --> 01:01:35.100
+<v John Miller>And that's a a good first start of it.
+One of the things that I've done is um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/584-0
+01:01:36.060 --> 01:01:42.960
+<v John Miller>Is asked two different models to to
+evaluate the the same code base.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/584-1
+01:01:42.960 --> 01:01:50.860
+<v John Miller>The reason for that is that it tend that
+it tends to eliminate the bias in one</v>
+
+e7059870-4861-4d84-90b3-091db9536099/584-2
+01:01:50.860 --> 01:01:51.460
+<v John Miller>model.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/585-0
+01:01:51.820 --> 01:01:56.062
+<v John Miller>By using one model,
+and I mentioned this the other day that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/585-1
+01:01:56.062 --> 01:02:00.656
+<v John Miller>the models have a certain affinity for
+the code that they write.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/585-2
+01:02:00.656 --> 01:02:05.816
+<v John Miller>So if you asked it to compare,
+you know code written by one model versus</v>
+
+e7059870-4861-4d84-90b3-091db9536099/585-3
+01:02:05.816 --> 01:02:07.300
+<v John Miller>versus another model.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/586-0
+01:02:08.420 --> 01:02:12.646
+<v John Miller>And then you ask one of those two models
+to review the code base,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/586-1
+01:02:12.646 --> 01:02:16.232
+<v John Miller>it will tend to prefer the code that was
+created by it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/586-2
+01:02:16.232 --> 01:02:21.482
+<v John Miller>And that's I think that makes a certain
+amount of sense because you know it has a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/586-3
+01:02:21.482 --> 01:02:26.028
+<v John Miller>certain amount of training data,
+it understands a certain way the code</v>
+
+e7059870-4861-4d84-90b3-091db9536099/586-4
+01:02:26.028 --> 01:02:27.180
+<v John Miller>should be written.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/587-0
+01:02:27.420 --> 01:02:33.742
+<v John Miller>It's been tweaked by the providers of the
+of the model for particular to have</v>
+
+e7059870-4861-4d84-90b3-091db9536099/587-1
+01:02:33.742 --> 01:02:39.172
+<v John Miller>particular characteristics,
+so it will recognize its code and more</v>
+
+e7059870-4861-4d84-90b3-091db9536099/587-2
+01:02:39.172 --> 01:02:45.008
+<v John Miller>readily than it would recognize another
+implementation because of those</v>
+
+e7059870-4861-4d84-90b3-091db9536099/587-3
+01:02:45.008 --> 01:02:45.980
+<v John Miller>differences.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/588-0
+01:02:47.020 --> 01:02:53.932
+<v John Miller>So using multiple models to do code
+reviews and or particularly having a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/588-1
+01:02:53.932 --> 01:03:00.180
+<v John Miller>review being done by a different model
+than the what the code is.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/589-0
+01:03:01.420 --> 01:03:06.976
+<v John Miller>Can be a good can be a good idea and you
+can even go as far as say I want to have</v>
+
+e7059870-4861-4d84-90b3-091db9536099/589-1
+01:03:06.976 --> 01:03:12.192
+<v John Miller>three different models do it and I want
+them to see if any of the two models</v>
+
+e7059870-4861-4d84-90b3-091db9536099/589-2
+01:03:12.192 --> 01:03:17.340
+<v John Miller>agree that the code is doesn't require
+any significant changes and if they.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/590-0
+01:03:17.580 --> 01:03:21.139
+<v John Miller>If they both agree, then you can,
+or two of the three agree.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/590-1
+01:03:21.139 --> 01:03:25.222
+<v John Miller>You can assume that that that you're
+essentially eliminated any bias.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/590-2
+01:03:25.222 --> 01:03:29.830
+<v John Miller>You're getting a good signal that the
+code is ready for a human review at that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/590-3
+01:03:29.830 --> 01:03:30.180
+<v John Miller>point.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/591-0
+01:03:34.060 --> 01:03:36.150
+<v Dan Blanchard>So you have to do that sort of manually,
+right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/591-1
+01:03:36.150 --> 01:03:38.065
+<v Dan Blanchard>You just in VS code you make a new
+session,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/591-2
+01:03:38.065 --> 01:03:40.980
+<v Dan Blanchard>pick a new model and then just ask it to
+review the code. Is that?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/592-0
+01:03:40.100 --> 01:03:43.108
+<v John Miller>Yeah,
+that's pretty much how you go about doing</v>
+
+e7059870-4861-4d84-90b3-091db9536099/592-1
+01:03:43.108 --> 01:03:47.180
+<v John Miller>it. You put, you know,
+you what I've done in the past is create.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/593-0
+01:03:48.540 --> 01:03:54.768
+<v John Miller>Separate branches for each of the
+evaluations and then ask AI to compare</v>
+
+e7059870-4861-4d84-90b3-091db9536099/593-1
+01:03:54.768 --> 01:04:01.763
+<v John Miller>them and and and tell and report with the
+pros and cons of each implementation or</v>
+
+e7059870-4861-4d84-90b3-091db9536099/593-2
+01:04:01.763 --> 01:04:03.980
+<v John Miller>or each review is and and.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/594-0
+01:04:03.980 --> 01:04:07.964
+<v John Miller>And then you could essentially use the
+result of that to decide what your,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/594-1
+01:04:07.964 --> 01:04:10.460
+<v John Miller>you know,
+which course you want to take Peter.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/595-0
+01:04:11.860 --> 01:04:14.585
+<v Goostree, Peter>Hey John,
+I just wanna circle back around and talk.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/595-1
+01:04:14.585 --> 01:04:17.729
+<v Goostree, Peter>You were talking about,
+you know when we were talking about</v>
+
+e7059870-4861-4d84-90b3-091db9536099/595-2
+01:04:17.729 --> 01:04:21.607
+<v Goostree, Peter>prompt files and instruction files,
+you know and and getting granular and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/595-3
+01:04:21.607 --> 01:04:24.175
+<v Goostree, Peter>defining the different domains for those,
+right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/595-4
+01:04:24.175 --> 01:04:28.210
+<v Goostree, Peter>I wanna make sure that that's that I
+understood that correctly that you know</v>
+
+e7059870-4861-4d84-90b3-091db9536099/595-5
+01:04:28.210 --> 01:04:29.100
+<v Goostree, Peter>that kind of the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/596-0
+01:04:29.580 --> 01:04:34.382
+<v Goostree, Peter>To be able to be, you know,
+setting standards for C# or C++ or unit</v>
+
+e7059870-4861-4d84-90b3-091db9536099/596-1
+01:04:34.382 --> 01:04:40.172
+<v Goostree, Peter>testing or refactoring or architecture,
+those are all kind of different top level</v>
+
+e7059870-4861-4d84-90b3-091db9536099/596-2
+01:04:40.172 --> 01:04:45.820
+<v Goostree, Peter>domains that we would want to define
+prompt and instruction files for, correct?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/599-0
+01:04:45.580 --> 01:04:49.866
+<v John Miller>That's correct.
+And that's where that's where the the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/597-0
+01:04:46.500 --> 01:04:48.300
+<v Goostree, Peter>So it's OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/599-1
+01:04:49.866 --> 01:04:55.818
+<v John Miller>agents or chat modes come into play is
+that you can actually say I want to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/599-2
+01:04:55.818 --> 01:05:00.500
+<v John Miller>create an agent that is a let's use a
+solutions architect.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/601-0
+01:05:01.020 --> 01:05:06.656
+<v John Miller>And you can say that this solution
+architect is an expert in these kinds of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/598-0
+01:05:01.060 --> 01:05:01.180
+<v Goostree, Peter>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/601-1
+01:05:06.656 --> 01:05:11.994
+<v John Miller>these areas of software development
+specifically and and you can define</v>
+
+e7059870-4861-4d84-90b3-091db9536099/600-0
+01:05:09.060 --> 01:05:09.860
+<v Goostree, Peter>Mhm, Yep.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/601-2
+01:05:11.994 --> 01:05:16.220
+<v John Miller>commands that are associated with that
+particular agent.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/603-0
+01:05:16.340 --> 01:05:23.210
+<v John Miller>And have those commands execute a prompt
+that is then targeted towards the that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/603-1
+01:05:23.210 --> 01:05:29.479
+<v John Miller>particular functionality, right?
+So so that that give that gives you the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/602-0
+01:05:26.980 --> 01:05:27.140
+<v Goostree, Peter>Right.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/603-2
+01:05:29.479 --> 01:05:32.140
+<v John Miller>ability to kind of craft these.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/606-0
+01:05:32.140 --> 01:05:37.333
+<v John Miller>Teammates that you're going to create
+these AI teammates that are experts in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/606-1
+01:05:37.333 --> 01:05:42.324
+<v John Miller>certain aspects of the software
+development process and then you can just</v>
+
+e7059870-4861-4d84-90b3-091db9536099/604-0
+01:05:39.340 --> 01:05:40.140
+<v Goostree, Peter>Mm.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/606-2
+01:05:42.324 --> 01:05:47.112
+<v John Miller>go in and use your agent here.
+You can see here that I've got a number</v>
+
+e7059870-4861-4d84-90b3-091db9536099/606-3
+01:05:47.112 --> 01:05:48.460
+<v John Miller>of them defined and.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/605-0
+01:05:47.980 --> 01:05:50.100
+<v Goostree, Peter>Gotcha. Gotcha.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/608-0
+01:05:49.020 --> 01:05:54.064
+<v John Miller>Here's one that's a project expert, right?
+So here's one that's an expert in git.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/607-0
+01:05:53.020 --> 01:05:53.260
+<v Goostree, Peter>Oh yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/608-1
+01:05:54.064 --> 01:05:58.615
+<v John Miller>So if you're having a git issue,
+you can you can actually select this and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/608-2
+01:05:58.615 --> 01:06:03.105
+<v John Miller>then you can have that that git expert
+then be the the be the agent that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/608-3
+01:06:03.105 --> 01:06:05.380
+<v John Miller>actually first processes that prompt.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/610-0
+01:06:06.300 --> 01:06:11.465
+<v John Miller>And then whatever expertise that you've
+defined within that,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/610-1
+01:06:11.465 --> 01:06:16.800
+<v John Miller>that chat mode or agent,
+then it gets put into the context and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/610-2
+01:06:16.800 --> 01:06:22.980
+<v John Miller>then it's used and it's really a way of
+of focusing the context down to.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/613-0
+01:06:23.020 --> 01:06:28.090
+<v John Miller>A very specific set of skills that are
+targeted for a specific thing, you know?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/609-0
+01:06:23.500 --> 01:06:23.900
+<v Goostree, Peter>Yes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/611-0
+01:06:26.020 --> 01:06:26.260
+<v Goostree, Peter>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/613-1
+01:06:28.090 --> 01:06:33.412
+<v John Miller>And once you get accustomed to saying, OK,
+I I should always be using one of these,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/612-0
+01:06:33.340 --> 01:06:35.060
+<v Goostree, Peter>Right. Did you?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/613-2
+01:06:33.412 --> 01:06:36.580
+<v John Miller>right?
+I shouldn't be doing any work alone, yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/614-0
+01:06:36.460 --> 01:06:40.740
+<v Goostree, Peter>Did you say we were gonna get into that
+tomorrow? Defining this? OK, good.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/617-0
+01:06:38.140 --> 01:06:43.460
+<v John Miller>Yeah, yeah, right.
+We'll talk about creating many of these</v>
+
+e7059870-4861-4d84-90b3-091db9536099/617-1
+01:06:43.460 --> 01:06:48.780
+<v John Miller>or how to go create new ones or and look
+at them tomorrow.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/615-0
+01:06:47.540 --> 01:06:47.860
+<v Goostree, Peter>Cool.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/616-0
+01:06:49.180 --> 01:06:49.740
+<v Goostree, Peter>Awesome.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/618-0
+01:06:54.140 --> 01:06:57.342
+<v John Miller>OK,
+so this is Ron is identified just to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/618-1
+01:06:57.342 --> 01:07:02.730
+<v John Miller>running that one prompt that there's a a
+secret that's been exposed.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/618-2
+01:07:02.730 --> 01:07:08.820
+<v John Miller>It's not using HTTPS missing a AI logs.
+I was expecting to see those there's.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/619-0
+01:07:09.340 --> 01:07:14.036
+<v John Miller>No test coverage, right.
+So no CICD pipeline.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/619-1
+01:07:14.036 --> 01:07:22.405
+<v John Miller>So these are all important things that we
+would probably want to probably want to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/619-2
+01:07:22.405 --> 01:07:24.140
+<v John Miller>address. So it's.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/620-0
+01:07:24.180 --> 01:07:29.051
+<v John Miller>So if somebody came to us and said here,
+take a look at this code base and tell us</v>
+
+e7059870-4861-4d84-90b3-091db9536099/620-1
+01:07:29.051 --> 01:07:33.628
+<v John Miller>whether it's worthwhile enhancing this
+code base or fixing it or or the like,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/620-2
+01:07:33.628 --> 01:07:33.980
+<v John Miller>right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/621-0
+01:07:35.620 --> 01:07:38.580
+<v John Miller>We could then say something like uh.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/622-0
+01:07:39.620 --> 01:07:42.300
+<v John Miller>Uh, prioritize.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/624-0
+01:07:44.900 --> 01:07:47.540
+<v John Miller>Um, these issues?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/626-0
+01:07:54.420 --> 01:07:56.460
+<v John Miller>Uh, impact.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/627-0
+01:08:01.100 --> 01:08:01.340
+<v John Miller>Versus.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/628-0
+01:08:02.420 --> 01:08:03.580
+<v John Miller>Approved.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/631-0
+01:08:21.860 --> 01:08:24.340
+<v John Miller>All right.
+So it's going to go ahead and do that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/632-0
+01:08:26.580 --> 01:08:31.860
+<v John Miller>And we could then ask it to to to go
+ahead and update the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/633-0
+01:08:32.980 --> 01:08:37.380
+<v John Miller>The issues in GitHub with this with the
+with this particular priority.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/634-0
+01:08:38.340 --> 01:08:44.357
+<v John Miller>And now we've we've moved closer to.
+I should probably use a different agent</v>
+
+e7059870-4861-4d84-90b3-091db9536099/634-1
+01:08:44.357 --> 01:08:45.060
+<v John Miller>for this.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/635-0
+01:08:49.860 --> 01:08:51.620
+<v John Miller>But we'll let it go.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/636-0
+01:08:52.820 --> 01:08:55.902
+<v John Miller>So anyway,
+so this allows us to essentially put into</v>
+
+e7059870-4861-4d84-90b3-091db9536099/636-1
+01:08:55.902 --> 01:09:00.671
+<v John Miller>this backlog and this is the thing that
+you know this section is really trying to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/636-2
+01:09:00.671 --> 01:09:05.148
+<v John Miller>drive for is that to try to make the
+technical debt that you that you see in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/636-3
+01:09:05.148 --> 01:09:09.742
+<v John Miller>your project that A I is able to identify
+make that visible to the rest of the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/636-4
+01:09:09.742 --> 01:09:12.300
+<v John Miller>organization so that it can be
+prioritized.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/637-0
+01:09:12.580 --> 01:09:17.343
+<v John Miller>And then you can argue that, look,
+A I can can help us pay down a good deal</v>
+
+e7059870-4861-4d84-90b3-091db9536099/637-1
+01:09:17.343 --> 01:09:21.479
+<v John Miller>of this technical debt,
+particularly if you start with the things</v>
+
+e7059870-4861-4d84-90b3-091db9536099/637-2
+01:09:21.479 --> 01:09:26.491
+<v John Miller>that are have the largest impact and the
+the the least amount of effort and the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/637-3
+01:09:26.491 --> 01:09:30.940
+<v John Miller>least amount of introducing the least
+amount of risk into the process.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/638-0
+01:09:31.060 --> 01:09:35.910
+<v John Miller>You can then start to pay down that
+technical debt fairly quickly and get</v>
+
+e7059870-4861-4d84-90b3-091db9536099/638-1
+01:09:35.910 --> 01:09:40.890
+<v John Miller>yourself into a much more Evergreen state
+without having to spend a lot of,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/638-2
+01:09:40.890 --> 01:09:44.101
+<v John Miller>you know, human resources to actually,
+you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/638-3
+01:09:44.101 --> 01:09:47.180
+<v John Miller>figure out what needs to be done and
+create a.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/639-0
+01:09:47.300 --> 01:09:53.385
+<v John Miller>Implementations for that.
+The other thing that you can do with with</v>
+
+e7059870-4861-4d84-90b3-091db9536099/639-1
+01:09:53.385 --> 01:10:00.722
+<v John Miller>many of these issues is or or or the like
+is you can ask a I to propose how would</v>
+
+e7059870-4861-4d84-90b3-091db9536099/639-2
+01:10:00.722 --> 01:10:04.300
+<v John Miller>we go about implementing a a a solution.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/640-0
+01:10:04.660 --> 01:10:07.595
+<v John Miller>So,
+so that way you can actually get a a a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/640-1
+01:10:07.595 --> 01:10:13.053
+<v John Miller>sense of what it would actually do and
+you can then evaluate whether that makes</v>
+
+e7059870-4861-4d84-90b3-091db9536099/640-2
+01:10:13.053 --> 01:10:13.940
+<v John Miller>sense or not.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/641-0
+01:10:17.620 --> 01:10:23.667
+<v John Miller>So here it's produced a phase zero
+security of an infinite amount of return</v>
+
+e7059870-4861-4d84-90b3-091db9536099/641-1
+01:10:23.667 --> 01:10:24.780
+<v John Miller>on investment.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/642-0
+01:10:32.660 --> 01:10:36.780
+<v John Miller>So when did it create it, change the file.
+So here is our.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/643-0
+01:10:38.100 --> 01:10:39.900
+<v John Miller>Prioritization matrix.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/644-0
+01:10:50.140 --> 01:10:55.205
+<v John Miller>So one thing we could add to our
+instruction file is that whenever you're</v>
+
+e7059870-4861-4d84-90b3-091db9536099/644-1
+01:10:55.205 --> 01:10:59.380
+<v John Miller>creating a diagram in the in a markdown
+file to use Mermaid.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/645-0
+01:11:02.060 --> 01:11:08.140
+<v John Miller>And here we can see all of the issues and
+they're all prioritized.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/646-0
+01:11:14.420 --> 01:11:17.460
+<v John Miller>All right, questions there?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/647-0
+01:11:20.580 --> 01:11:23.653
+<v John Miller>All right,
+then let's see where we stand here.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/647-1
+01:11:23.653 --> 01:11:26.857
+<v John Miller>So we've done this, built this backlog.
+We have,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/647-2
+01:11:26.857 --> 01:11:30.060
+<v John Miller>so we now have some things that we're
+targeting.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/648-0
+01:11:31.300 --> 01:11:36.939
+<v John Miller>So moving on to just building safety Nets
+for projecting these brownfield databases,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/648-1
+01:11:36.939 --> 01:11:41.981
+<v John Miller>leveraging those AI code reviews,
+we've talked about some of this effective</v>
+
+e7059870-4861-4d84-90b3-091db9536099/648-2
+01:11:41.981 --> 01:11:45.828
+<v John Miller>human code reviews.
+So we'll talk a bit about that in the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/648-3
+01:11:45.828 --> 01:11:47.420
+<v John Miller>role of test automation.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/649-0
+01:11:49.500 --> 01:11:54.256
+<v John Miller>So in terms of protecting those
+brownfield code bases,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/649-1
+01:11:54.256 --> 01:12:00.481
+<v John Miller>we want to preserve existing behavior
+until it's intentionally changed.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/649-2
+01:12:00.481 --> 01:12:06.100
+<v John Miller>So the idea here is that we want to have
+a test suite that will.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/650-0
+01:12:06.180 --> 01:12:12.038
+<v John Miller>Will constantly reassure us that that we
+haven't broken anything in the production</v>
+
+e7059870-4861-4d84-90b3-091db9536099/650-1
+01:12:12.038 --> 01:12:15.425
+<v John Miller>system.
+We'll talk a a bit more about achieving</v>
+
+e7059870-4861-4d84-90b3-091db9536099/650-2
+01:12:15.425 --> 01:12:19.800
+<v John Miller>that in in a second,
+but we but it's really important that we</v>
+
+e7059870-4861-4d84-90b3-091db9536099/650-3
+01:12:19.800 --> 01:12:23.540
+<v John Miller>have some way to evaluate that that
+doesn't require.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/651-0
+01:12:23.940 --> 01:12:28.749
+<v John Miller>A great deal of human intervention in
+order to be able to make that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/651-1
+01:12:28.749 --> 01:12:32.215
+<v John Miller>determination.
+We also want to avoid large risky</v>
+
+e7059870-4861-4d84-90b3-091db9536099/651-2
+01:12:32.215 --> 01:12:35.821
+<v John Miller>refactors.
+We want to break things down into small</v>
+
+e7059870-4861-4d84-90b3-091db9536099/651-3
+01:12:35.821 --> 01:12:41.620
+<v John Miller>pieces that can be easily verified and
+deployed so we can and and so we can move.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/652-0
+01:12:42.620 --> 01:12:45.869
+<v John Miller>Quickly and get things out into
+production faster.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/652-1
+01:12:45.869 --> 01:12:51.156
+<v John Miller>We can use feature flags to actually hide
+some of that behaviour if we if it's not</v>
+
+e7059870-4861-4d84-90b3-091db9536099/652-2
+01:12:51.156 --> 01:12:56.060
+<v John Miller>quite ready to be exposed to users,
+but still can be deployed to production.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/653-0
+01:12:57.620 --> 01:13:03.519
+<v John Miller>You could use use incremental
+modernization where we're we're just</v>
+
+e7059870-4861-4d84-90b3-091db9536099/653-1
+01:13:03.519 --> 01:13:10.738
+<v John Miller>making we're making a slow steady stream
+of improvements over time and not making</v>
+
+e7059870-4861-4d84-90b3-091db9536099/653-2
+01:13:10.738 --> 01:13:15.140
+<v John Miller>anything that's too too too big or too
+too risky.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/654-0
+01:13:15.140 --> 01:13:19.825
+<v John Miller>Maintain the architectural boundaries.
+This is kind of goes with the the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/654-1
+01:13:19.825 --> 01:13:24.830
+<v John Miller>discussion of scenes yesterday where
+we're breaking up the the code base into</v>
+
+e7059870-4861-4d84-90b3-091db9536099/654-2
+01:13:24.830 --> 01:13:29.193
+<v John Miller>areas that that are well isolated and
+decoupled so that they can be</v>
+
+e7059870-4861-4d84-90b3-091db9536099/654-3
+01:13:29.193 --> 01:13:30.540
+<v John Miller>independently tested.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/655-0
+01:13:30.780 --> 01:13:35.690
+<v John Miller>And we want to document all that AIS to
+change and that's where our AI logs come</v>
+
+e7059870-4861-4d84-90b3-091db9536099/655-1
+01:13:35.690 --> 01:13:40.418
+<v John Miller>to play and and some of this metadata.
+So it's important because you know the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/655-2
+01:13:40.418 --> 01:13:45.207
+<v John Miller>thing about brownfield development is
+that these systems are currently running</v>
+
+e7059870-4861-4d84-90b3-091db9536099/655-3
+01:13:45.207 --> 01:13:49.995
+<v John Miller>the business and the what we don't want
+is to have our A I introduce something</v>
+
+e7059870-4861-4d84-90b3-091db9536099/655-4
+01:13:49.995 --> 01:13:50.540
+<v John Miller>into the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/656-0
+01:13:50.660 --> 01:13:55.837
+<v John Miller>Those systems that would cause other
+people to question our ability to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/656-1
+01:13:55.837 --> 01:14:00.358
+<v John Miller>effectively use this.
+So we really want to build these safety</v>
+
+e7059870-4861-4d84-90b3-091db9536099/656-2
+01:14:00.358 --> 01:14:05.754
+<v John Miller>Nets for our own benefit so that we
+understand and can control all of the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/656-3
+01:14:05.754 --> 01:14:10.420
+<v John Miller>change that's going into the code base
+from multiple different.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/657-0
+01:14:10.420 --> 01:14:13.731
+<v John Miller>And sources and all that works well
+together.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/657-1
+01:14:13.731 --> 01:14:18.624
+<v John Miller>So so stability is is more important than
+new things per se per SE.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/657-2
+01:14:18.624 --> 01:14:24.453
+<v John Miller>But AI should give us the ability to to
+to keep the the the the code base stable</v>
+
+e7059870-4861-4d84-90b3-091db9536099/657-3
+01:14:24.453 --> 01:14:25.820
+<v John Miller>while we're adding.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/658-0
+01:14:28.140 --> 01:14:34.405
+<v John Miller>Either addressing technical data or
+adding your features and they they they</v>
+
+e7059870-4861-4d84-90b3-091db9536099/658-1
+01:14:34.405 --> 01:14:38.774
+<v John Miller>reverse the fear and increase your
+confidence right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/658-2
+01:14:38.774 --> 01:14:43.060
+<v John Miller>So by having having those protections you
+you feel.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/659-0
+01:14:43.260 --> 01:14:48.460
+<v John Miller>More at ease and more empowered to
+actually make more significant changes to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/659-1
+01:14:48.460 --> 01:14:52.917
+<v John Miller>the code base. So a a I code reviews.
+We talked a bit about this,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/659-2
+01:14:52.917 --> 01:14:58.117
+<v John Miller>about having that copilot do them.
+You can also request more specific things</v>
+
+e7059870-4861-4d84-90b3-091db9536099/659-3
+01:14:58.117 --> 01:14:59.940
+<v John Miller>that you wanted to look at.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/660-0
+01:15:00.420 --> 01:15:04.248
+<v John Miller>Just to the chat.
+So this can do things like highlighting</v>
+
+e7059870-4861-4d84-90b3-091db9536099/660-1
+01:15:04.248 --> 01:15:09.660
+<v John Miller>risky changes, detecting missing tests.
+This is some of the backlog grooming that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/660-2
+01:15:09.660 --> 01:15:14.412
+<v John Miller>we talked about identifying architectural
+violations. You can actually,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/660-3
+01:15:14.412 --> 01:15:17.580
+<v John Miller>you can like I said,
+actually have it proposed.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/661-0
+01:15:17.860 --> 01:15:23.495
+<v John Miller>What it suggests an approach to to fixing
+things and then you can then have it</v>
+
+e7059870-4861-4d84-90b3-091db9536099/661-1
+01:15:23.495 --> 01:15:29.486
+<v John Miller>suggest more than one way of addressing a
+problem and you can choose between those.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/661-2
+01:15:29.486 --> 01:15:34.620
+<v John Miller>And then of course it will help you by
+surfacing potential regressions.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/662-0
+01:15:35.260 --> 01:15:39.508
+<v John Miller>So this will provide us with faster
+feedback loops,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/662-1
+01:15:39.508 --> 01:15:45.390
+<v John Miller>more consistent review quality and an
+earlier detection of of of drift.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/662-2
+01:15:45.390 --> 01:15:52.007
+<v John Miller>So the idea here is that you know one of
+the things that we have to keep in mind</v>
+
+e7059870-4861-4d84-90b3-091db9536099/662-3
+01:15:52.007 --> 01:15:52.660
+<v John Miller>is that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/663-0
+01:15:52.740 --> 01:15:57.383
+<v John Miller>But by using AI to generate more code
+faster, we're creating,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/663-1
+01:15:57.383 --> 01:16:03.674
+<v John Miller>I think 2 human backlogs that we have to
+try to come up with strategies to address.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/663-2
+01:16:03.674 --> 01:16:07.867
+<v John Miller>And the first,
+the first one is on the front end before</v>
+
+e7059870-4861-4d84-90b3-091db9536099/663-3
+01:16:07.867 --> 01:16:09.140
+<v John Miller>the work is done.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/664-0
+01:16:09.140 --> 01:16:14.345
+<v John Miller>In terms of the the the work reviewing
+the the issues that we're creating to the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/664-1
+01:16:14.345 --> 01:16:19.293
+<v John Miller>backlog and do all that that do the
+backlog grooming work to prepare to make</v>
+
+e7059870-4861-4d84-90b3-091db9536099/664-2
+01:16:19.293 --> 01:16:24.626
+<v John Miller>sure that the organization is comfortable
+moving forward with any particular piece</v>
+
+e7059870-4861-4d84-90b3-091db9536099/664-3
+01:16:24.626 --> 01:16:25.140
+<v John Miller>of work.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/665-0
+01:16:25.460 --> 01:16:30.100
+<v John Miller>And then on the back back end,
+it's after the AI has written the codes</v>
+
+e7059870-4861-4d84-90b3-091db9536099/665-1
+01:16:30.100 --> 01:16:34.479
+<v John Miller>to how to get it reviewed.
+And if the and I guess my point is that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/665-2
+01:16:34.479 --> 01:16:38.988
+<v John Miller>the if we're moving faster,
+we're increasing the amount of work that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/665-3
+01:16:38.988 --> 01:16:43.300
+<v John Miller>without that it has to be done otherwise
+that human work becomes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/666-0
+01:16:43.420 --> 01:16:49.817
+<v John Miller>A a backlog that prevents us to from
+actually moving as fast as we could and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/666-1
+01:16:49.817 --> 01:16:56.214
+<v John Miller>if we can leverage AI to help us reduce
+those the the backlog for those code</v>
+
+e7059870-4861-4d84-90b3-091db9536099/666-2
+01:16:56.214 --> 01:16:58.540
+<v John Miller>reviews, then that would be.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/667-0
+01:16:59.060 --> 01:17:03.282
+<v John Miller>That would help us in in terms of
+increasing our our our our the pace of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/667-1
+01:17:03.282 --> 01:17:04.380
+<v John Miller>our our our change.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/668-0
+01:17:06.900 --> 01:17:11.766
+<v John Miller>So then we go. So.
+So the way that I think about it is I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/668-1
+01:17:11.766 --> 01:17:18.425
+<v John Miller>want AI to review everything first and
+until AI accept the accepts it as as a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/668-2
+01:17:18.425 --> 01:17:22.864
+<v John Miller>valid change,
+I don't want to have to deal with it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/668-3
+01:17:22.864 --> 01:17:26.620
+<v John Miller>I want that.
+I only want to see things for.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/669-0
+01:17:26.700 --> 01:17:32.620
+<v John Miller>My so I have a human view if it's already
+passed one or more.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/671-0
+01:17:34.340 --> 01:17:38.658
+<v John Miller>A I reviews and those A I reviews could
+be targeted at specific areas.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/671-1
+01:17:38.658 --> 01:17:42.002
+<v John Miller>You could have one that's reviewing the
+documentation,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/671-2
+01:17:42.002 --> 01:17:45.954
+<v John Miller>one that's reviewing the the the the
+actual code implementation,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/671-3
+01:17:45.954 --> 01:17:50.575
+<v John Miller>one is the impact on the architecture and
+in conformance with standards and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/671-4
+01:17:50.575 --> 01:17:53.616
+<v John Miller>practices.
+All of these things could be different</v>
+
+e7059870-4861-4d84-90b3-091db9536099/671-5
+01:17:53.616 --> 01:17:53.980
+<v John Miller>types.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/672-0
+01:17:54.220 --> 01:17:57.778
+<v John Miller>Of code reviews,
+like you can do a security analysis.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/672-1
+01:17:57.778 --> 01:18:02.390
+<v John Miller>All of these things can be done by AI,
+at least at the initial level.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/672-2
+01:18:02.390 --> 01:18:05.552
+<v John Miller>And then once it's passed all of those
+reviews,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/672-3
+01:18:05.552 --> 01:18:09.900
+<v John Miller>then I think we can take a look at it and
+see, OK, they can then.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/673-0
+01:18:10.180 --> 01:18:16.689
+<v John Miller>They're essentially in a position where
+they're approving or not approving the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/673-1
+01:18:16.689 --> 01:18:21.880
+<v John Miller>quality of those reviews.
+So you're really looking at what the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/673-2
+01:18:21.880 --> 01:18:26.740
+<v John Miller>intent was and is and is that intent
+properly implemented?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/674-0
+01:18:26.820 --> 01:18:30.778
+<v John Miller>In the code,
+is it aligned to the architecture that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/674-1
+01:18:30.778 --> 01:18:35.954
+<v John Miller>you're trying to implement?
+Is the is the business logic validation</v>
+
+e7059870-4861-4d84-90b3-091db9536099/674-2
+01:18:35.954 --> 01:18:42.347
+<v John Miller>accurate and and is there any risk that's
+that's being introduced as a as a part of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/674-3
+01:18:42.347 --> 01:18:43.260
+<v John Miller>this change?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/675-0
+01:18:43.620 --> 01:18:48.011
+<v John Miller>And ensuring that the changes are
+incremental and and reversible are are</v>
+
+e7059870-4861-4d84-90b3-091db9536099/675-1
+01:18:48.011 --> 01:18:53.004
+<v John Miller>things that we can do as humans that that
+that can over on top of what the A I are</v>
+
+e7059870-4861-4d84-90b3-091db9536099/675-2
+01:18:53.004 --> 01:18:56.853
+<v John Miller>in terms of their review.
+So you want to keep these change sets</v>
+
+e7059870-4861-4d84-90b3-091db9536099/675-3
+01:18:56.853 --> 01:18:59.860
+<v John Miller>small because that makes it easier for
+everybody.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/676-0
+01:19:00.500 --> 01:19:06.055
+<v John Miller>To that to that's looking at it as ask
+for context when it's missing.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/676-1
+01:19:06.055 --> 01:19:11.848
+<v John Miller>So you know this is where you can
+interrogate the A I about you know why</v>
+
+e7059870-4861-4d84-90b3-091db9536099/676-2
+01:19:11.848 --> 01:19:18.434
+<v John Miller>did it choose a particular implementation
+pattern versus another and get and get a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/676-3
+01:19:18.434 --> 01:19:20.100
+<v John Miller>better understanding.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/677-0
+01:19:20.100 --> 01:19:23.900
+<v John Miller>About the what it how it interpreted the
+intent that it was given.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/678-0
+01:19:24.820 --> 01:19:28.763
+<v John Miller>And then you would, you know,
+look at it with curiosity and and with</v>
+
+e7059870-4861-4d84-90b3-091db9536099/678-1
+01:19:28.763 --> 01:19:33.563
+<v John Miller>with skepticism. Because in in many cases,
+in my experience is that anytime I ask A</v>
+
+e7059870-4861-4d84-90b3-091db9536099/678-2
+01:19:33.563 --> 01:19:36.878
+<v John Miller>I to do something,
+it typically gives me more than what I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/678-3
+01:19:36.878 --> 01:19:40.478
+<v John Miller>asked to ask it to do.
+And in some cases that's a gold plating</v>
+
+e7059870-4861-4d84-90b3-091db9536099/678-4
+01:19:40.478 --> 01:19:42.020
+<v John Miller>and something I don't need.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/679-0
+01:19:42.020 --> 01:19:45.799
+<v John Miller>And in other cases,
+it's actually a really significant</v>
+
+e7059870-4861-4d84-90b3-091db9536099/679-1
+01:19:45.799 --> 01:19:51.500
+<v John Miller>improvement to what I would have done had
+I been thinking about it only on my own.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/680-0
+01:19:52.500 --> 01:19:55.195
+<v John Miller>All right.
+Any questions so far on some of this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/680-1
+01:19:55.195 --> 01:19:55.700
+<v John Miller>material?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/681-0
+01:19:58.660 --> 01:20:01.909
+<v John Miller>So let's then talk about the test
+automation, right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/681-1
+01:20:01.909 --> 01:20:06.322
+<v John Miller>So this gives us some behavioral
+guarantees, some regression detection,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/681-2
+01:20:06.322 --> 01:20:10.980
+<v John Miller>confidence for our modernization and then
+some guard guardrails for the A I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/681-3
+01:20:10.980 --> 01:20:13.860
+<v John Miller>assisted refactoring.
+So we want you know all.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/682-0
+01:20:13.860 --> 01:20:18.645
+<v John Miller>The many different types of tests that
+we've all seen the you know the the the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/682-1
+01:20:18.645 --> 01:20:23.550
+<v John Miller>pyramid of testing where you have more
+unit tests than you have integration test</v>
+
+e7059870-4861-4d84-90b3-091db9536099/682-2
+01:20:23.550 --> 01:20:28.577
+<v John Miller>and then you have more integration tests
+than you would have end to end behavioral</v>
+
+e7059870-4861-4d84-90b3-091db9536099/682-3
+01:20:28.577 --> 01:20:28.940
+<v John Miller>tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/683-0
+01:20:29.420 --> 01:20:35.990
+<v John Miller>So you and then you want to have tests
+that are are looking at basically at what</v>
+
+e7059870-4861-4d84-90b3-091db9536099/683-1
+01:20:35.990 --> 01:20:41.505
+<v John Miller>your APIAPI contracts are and and
+essentially evaluating in in many</v>
+
+e7059870-4861-4d84-90b3-091db9536099/683-2
+01:20:41.505 --> 01:20:47.100
+<v John Miller>different ways and and this is another
+factor that you can build up.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/684-0
+01:20:47.780 --> 01:20:51.804
+<v John Miller>With AI's help,
+a fairly comprehensive suite of tests</v>
+
+e7059870-4861-4d84-90b3-091db9536099/684-1
+01:20:51.804 --> 01:20:57.466
+<v John Miller>that perform many different kinds of
+operation tests automation against it,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/684-2
+01:20:57.466 --> 01:21:01.191
+<v John Miller>you know,
+going into load testing and performance</v>
+
+e7059870-4861-4d84-90b3-091db9536099/684-3
+01:21:01.191 --> 01:21:06.034
+<v John Miller>testing and and the like.
+So there's many different ways that we</v>
+
+e7059870-4861-4d84-90b3-091db9536099/684-4
+01:21:06.034 --> 01:21:07.300
+<v John Miller>can build a test.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/685-0
+01:21:07.340 --> 01:21:12.797
+<v John Miller>Suite that has a great deal of robustness
+and every time we add more testing to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/685-1
+01:21:12.797 --> 01:21:16.207
+<v John Miller>that process,
+we increase our level of confidence</v>
+
+e7059870-4861-4d84-90b3-091db9536099/685-2
+01:21:16.207 --> 01:21:21.663
+<v John Miller>because remember that one heuristic is
+that you know if all the test automation</v>
+
+e7059870-4861-4d84-90b3-091db9536099/685-3
+01:21:21.663 --> 01:21:22.140
+<v John Miller>passes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/686-0
+01:21:22.500 --> 01:21:27.088
+<v John Miller>Is how comfortable do you feel about
+releasing that to production in a in a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/686-1
+01:21:27.088 --> 01:21:30.892
+<v John Miller>brownfield environment?
+There's there's a risk associated with</v>
+
+e7059870-4861-4d84-90b3-091db9536099/686-2
+01:21:30.892 --> 01:21:34.453
+<v John Miller>every deployment,
+and you want to make sure that you're in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/686-3
+01:21:34.453 --> 01:21:38.981
+<v John Miller>a position that you feel comfortable
+going in and that if there's an issue</v>
+
+e7059870-4861-4d84-90b3-091db9536099/686-4
+01:21:38.981 --> 01:21:42.180
+<v John Miller>that shows up,
+you can easily get back to a unknown.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/687-0
+01:21:42.180 --> 01:21:51.696
+<v John Miller>Good state so that there's there's no no
+issues in in production that will cause a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/687-1
+01:21:51.696 --> 01:21:58.460
+<v John Miller>lot of hand wringing about the processes
+that we're using.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/688-0
+01:21:58.820 --> 01:22:04.403
+<v John Miller>Feature flags are are a great tool for
+that because you can actually do what are</v>
+
+e7059870-4861-4d84-90b3-091db9536099/688-1
+01:22:04.403 --> 01:22:09.985
+<v John Miller>called Canary releases where you actually
+roll this out to a small subset of the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/688-2
+01:22:09.985 --> 01:22:14.947
+<v John Miller>user base so that only a certain few
+people are affected by the initial</v>
+
+e7059870-4861-4d84-90b3-091db9536099/688-3
+01:22:14.947 --> 01:22:15.980
+<v John Miller>implementation.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/689-0
+01:22:16.420 --> 01:22:21.582
+<v John Miller>And then if that goes well,
+you can then slowly increase the number</v>
+
+e7059870-4861-4d84-90b3-091db9536099/689-1
+01:22:21.582 --> 01:22:27.351
+<v John Miller>of users that are are are available to
+actually invoke those change or take</v>
+
+e7059870-4861-4d84-90b3-091db9536099/689-2
+01:22:27.351 --> 01:22:32.740
+<v John Miller>advantage of those changes and and that
+way if there is a a a risk of.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/690-0
+01:22:32.820 --> 01:22:37.896
+<v John Miller>Of the that you're going to introduce
+something into production that would</v>
+
+e7059870-4861-4d84-90b3-091db9536099/690-1
+01:22:37.896 --> 01:22:43.378
+<v John Miller>cause a problem that you're you're not
+affecting the entire code base user base,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/690-2
+01:22:43.378 --> 01:22:47.507
+<v John Miller>you're just affecting.
+Essentially you would start with your</v>
+
+e7059870-4861-4d84-90b3-091db9536099/690-3
+01:22:47.507 --> 01:22:48.860
+<v John Miller>your most forgiving.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/691-0
+01:22:49.820 --> 01:22:55.019
+<v John Miller>User base that are most willing to give
+you positive feedback about what those</v>
+
+e7059870-4861-4d84-90b3-091db9536099/691-1
+01:22:55.019 --> 01:23:00.481
+<v John Miller>changes are, how how they're implemented,
+and then take advantage of that feedback</v>
+
+e7059870-4861-4d84-90b3-091db9536099/691-2
+01:23:00.481 --> 01:23:05.943
+<v John Miller>to either turn off a feature flag or and
+make some additional modifications before</v>
+
+e7059870-4861-4d84-90b3-091db9536099/691-3
+01:23:05.943 --> 01:23:08.180
+<v John Miller>you make it more widely available.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/692-0
+01:23:10.820 --> 01:23:17.514
+<v John Miller>So let's let's take a look at target
+since we have no test in this in this in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/692-1
+01:23:17.514 --> 01:23:22.147
+<v John Miller>this project.
+So it's a a good a good target for this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/692-2
+01:23:22.147 --> 01:23:26.180
+<v John Miller>kind of activity.
+Let's go ahead and you know.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/693-0
+01:23:26.180 --> 01:23:30.350
+<v John Miller>And start to ask AI,
+you know what kinds of tests would it,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/693-1
+01:23:30.350 --> 01:23:34.172
+<v John Miller>what does it,
+does it want to or does it think that we</v>
+
+e7059870-4861-4d84-90b3-091db9536099/693-2
+01:23:34.172 --> 01:23:39.871
+<v John Miller>should be implementing and then start to
+go ahead and and see if we can implement</v>
+
+e7059870-4861-4d84-90b3-091db9536099/693-3
+01:23:39.871 --> 01:23:41.260
+<v John Miller>some of those tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/694-0
+01:23:41.620 --> 01:23:46.828
+<v John Miller>Let's let's ask you about you know how
+we're doing in terms of code coverage and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/694-1
+01:23:46.828 --> 01:23:52.100
+<v John Miller>it could tell us how much you know where
+areas that need additional test coverage</v>
+
+e7059870-4861-4d84-90b3-091db9536099/694-2
+01:23:52.100 --> 01:23:56.922
+<v John Miller>are reside and we can actually then
+target the ones that that have the the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/694-3
+01:23:56.922 --> 01:23:57.500
+<v John Miller>the poor.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/695-0
+01:23:58.060 --> 01:24:01.286
+<v John Miller>Test coverage,
+we can also ask it to prioritize the test</v>
+
+e7059870-4861-4d84-90b3-091db9536099/695-1
+01:24:01.286 --> 01:24:05.418
+<v John Miller>that we should implement to the ones that
+would have the biggest impact.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/695-2
+01:24:05.418 --> 01:24:09.888
+<v John Miller>So that you know basically things that
+are most critical to the functioning of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/695-3
+01:24:09.888 --> 01:24:12.944
+<v John Miller>the application,
+we can make sure that those are well</v>
+
+e7059870-4861-4d84-90b3-091db9536099/695-4
+01:24:12.944 --> 01:24:13.340
+<v John Miller>tested.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/696-0
+01:24:13.860 --> 01:24:19.367
+<v John Miller>1st and and as I said earlier,
+if you have a very large code base that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/696-1
+01:24:19.367 --> 01:24:23.710
+<v John Miller>doesn't have the the test coverage that
+you would like,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/696-2
+01:24:23.710 --> 01:24:29.682
+<v John Miller>you can take an approach where you you
+add the test coverage just in just in</v>
+
+e7059870-4861-4d84-90b3-091db9536099/696-3
+01:24:29.682 --> 01:24:30.380
+<v John Miller>front of.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/697-0
+01:24:30.580 --> 01:24:35.250
+<v John Miller>The areas that you're making
+modifications to so that those areas that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/697-1
+01:24:35.250 --> 01:24:40.512
+<v John Miller>you're going to change have good test
+coverage before you actually implementing</v>
+
+e7059870-4861-4d84-90b3-091db9536099/697-2
+01:24:40.512 --> 01:24:45.906
+<v John Miller>any modifications into the system. Also,
+let's go ahead and take some time to ask</v>
+
+e7059870-4861-4d84-90b3-091db9536099/697-3
+01:24:45.906 --> 01:24:46.300
+<v John Miller>AI to.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/698-0
+01:24:46.420 --> 01:24:51.180
+<v John Miller>Help us write some tests and let's see
+how much we can, how much test coverage.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/699-0
+01:24:53.140 --> 01:24:57.071
+<v John Miller>That we see.
+So let's raise our hands to start the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/699-1
+01:24:57.071 --> 01:25:03.313
+<v John Miller>exercise and lower that when we finish
+and then why don't you post into chat the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/699-2
+01:25:03.313 --> 01:25:09.477
+<v John Miller>the percentage of code cover coverage
+that you were able to achieve as a result</v>
+
+e7059870-4861-4d84-90b3-091db9536099/699-3
+01:25:09.477 --> 01:25:12.020
+<v John Miller>of adding these additional tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/700-0
+01:25:12.460 --> 01:25:12.580
+<v John Miller>So.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/701-0
+01:25:18.740 --> 01:25:23.298
+<v Chris Bishop>Just a quick question,
+are we all running on copilot free 'cause</v>
+
+e7059870-4861-4d84-90b3-091db9536099/701-1
+01:25:23.298 --> 01:25:24.700
+<v Chris Bishop>I've reached my Max?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/703-0
+01:25:25.620 --> 01:25:30.600
+<v John Miller>Well then you just need to switch to the
+free models and use the free models until</v>
+
+e7059870-4861-4d84-90b3-091db9536099/703-1
+01:25:30.600 --> 01:25:34.740
+<v John Miller>for the rest of the course you may not
+get, you may not get as much.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/702-0
+01:25:31.420 --> 01:25:31.540
+<v Chris Bishop>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/704-0
+01:25:35.940 --> 01:25:40.407
+<v John Miller>You know, you're using an older model,
+but they should be so perfectly</v>
+
+e7059870-4861-4d84-90b3-091db9536099/704-1
+01:25:40.407 --> 01:25:42.860
+<v John Miller>functional for what we're trying to do.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/705-0
+01:25:41.540 --> 01:25:46.060
+<v Otto Dobretsberger>I think if you sign up you get one month
+free, right?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/707-0
+01:25:48.340 --> 01:25:51.097
+<v Otto Dobretsberger>Without, I mean,
+you have to put down your credit card</v>
+
+e7059870-4861-4d84-90b3-091db9536099/707-1
+01:25:51.097 --> 01:25:53.604
+<v Otto Dobretsberger>information,
+but I think the first month is free.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/707-2
+01:25:53.604 --> 01:25:56.260
+<v Otto Dobretsberger>At least that's what it said to me when I
+signed up.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/710-0
+01:25:56.420 --> 01:26:01.864
+<v Chris Bishop>Yeah, I I had used that up last month.
+They won't give you another one,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/708-0
+01:26:01.020 --> 01:26:01.580
+<v Otto Dobretsberger>Oh, OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/710-1
+01:26:01.864 --> 01:26:03.980
+<v Chris Bishop>unfortunately. Thanks, Will.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/709-0
+01:26:04.060 --> 01:26:04.540
+<v Otto Dobretsberger>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/711-0
+01:26:05.300 --> 01:26:08.879
+<v John Miller>Yeah,
+well I've I've had that same problem.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/711-1
+01:26:08.879 --> 01:26:15.384
+<v John Miller>I started with the free one and then ran
+out of tokens and then I purchased the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/711-2
+01:26:15.384 --> 01:26:20.100
+<v John Miller>the the pro version and ran out of those
+tokens and then.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/712-0
+01:26:20.620 --> 01:26:24.751
+<v John Miller>So far on the Pro Plus version for $40 a
+month,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/712-1
+01:26:24.751 --> 01:26:31.721
+<v John Miller>I've I've yet to see that issue come up.
+So you know my perspective on it is you</v>
+
+e7059870-4861-4d84-90b3-091db9536099/712-2
+01:26:31.721 --> 01:26:38.260
+<v John Miller>know to spend $40 a month for a tool that
+provides this amount of value is.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/713-0
+01:26:38.340 --> 01:26:40.923
+<v John Miller>I think certainly well worth the the
+money,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/713-1
+01:26:40.923 --> 01:26:44.972
+<v John Miller>and if you're if you're a mechanic and
+having to buy your own tools,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/713-2
+01:26:44.972 --> 01:26:47.260
+<v John Miller>it would cost you a lot more than that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/723-0
+01:27:27.700 --> 01:27:30.220
+<v Dan Blanchard>Can I ask you a question about the
+feature flags?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/724-0
+01:27:31.100 --> 01:27:31.340
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/725-0
+01:27:31.380 --> 01:27:34.884
+<v Dan Blanchard>I mean that also has risk too because I
+mean it is change code,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/725-1
+01:27:34.884 --> 01:27:39.208
+<v Dan Blanchard>we're just trying to turn it off or or
+and then what just have some some users</v>
+
+e7059870-4861-4d84-90b3-091db9536099/725-2
+01:27:39.208 --> 01:27:42.820
+<v Dan Blanchard>turned on by a by a hidden app setting or
+something like this or?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/726-0
+01:27:42.260 --> 01:27:45.331
+<v John Miller>Well, yeah,
+there's a there's a whole number of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/726-1
+01:27:45.331 --> 01:27:50.193
+<v John Miller>different frameworks that you can
+leverage and and and third party services</v>
+
+e7059870-4861-4d84-90b3-091db9536099/726-2
+01:27:50.193 --> 01:27:54.927
+<v John Miller>that you can leverage in Azure.
+There's a configuration service that that</v>
+
+e7059870-4861-4d84-90b3-091db9536099/726-3
+01:27:54.927 --> 01:28:00.237
+<v John Miller>can that can help you with feature flags.
+Ideally you want the setting of those of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/726-4
+01:28:00.237 --> 01:28:01.580
+<v John Miller>those of those flags.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/728-0
+01:28:02.100 --> 01:28:07.538
+<v John Miller>To be external to the code base so that
+you can change them on the fly and have</v>
+
+e7059870-4861-4d84-90b3-091db9536099/728-1
+01:28:07.538 --> 01:28:12.227
+<v John Miller>the application recognize that
+configuration change in some fashion.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/728-2
+01:28:12.227 --> 01:28:17.460
+<v John Miller>So if you are looking to implement this I
+would I would research what those.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/729-0
+01:28:17.940 --> 01:28:23.474
+<v John Miller>Frameworks that are available are and
+then you know choose something that's</v>
+
+e7059870-4861-4d84-90b3-091db9536099/729-1
+01:28:23.474 --> 01:28:28.207
+<v John Miller>that meets your needs.
+But but you know there you'll you'll have</v>
+
+e7059870-4861-4d84-90b3-091db9536099/729-2
+01:28:28.207 --> 01:28:30.100
+<v John Miller>a lot of options for that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/730-0
+01:28:33.660 --> 01:28:34.460
+<v Dan Blanchard>OK. Thanks.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/732-0
+01:28:42.740 --> 01:28:47.460
+<v Goostree, Peter>It'll be copied that you have the folder
+over from the other repo of this one.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/733-0
+01:28:49.220 --> 01:28:50.540
+<v Goostree, Peter>Is that what you did, John?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/734-0
+01:28:50.100 --> 01:28:53.620
+<v John Miller>Yeah,
+what I did was basically go into File</v>
+
+e7059870-4861-4d84-90b3-091db9536099/734-1
+01:28:53.620 --> 01:28:54.340
+<v John Miller>Explorer.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/735-0
+01:28:53.700 --> 01:28:54.060
+<v Goostree, Peter>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/738-0
+01:28:55.300 --> 01:28:59.025
+<v John Miller>I think it's here. I opened up.
+Here's the AI assistant one,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/738-1
+01:28:59.025 --> 01:29:02.079
+<v John Miller>which is the source of truth.
+Here's the project.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/736-0
+01:29:01.660 --> 01:29:01.780
+<v Goostree, Peter>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/738-2
+01:29:02.079 --> 01:29:06.780
+<v John Miller>I just grabbed the whole GitHub folder
+here and dragged it into the project.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/737-0
+01:29:05.140 --> 01:29:07.740
+<v Goostree, Peter>Yep. OK, cool.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/767-0
+01:30:39.820 --> 01:30:39.940
+<v John Miller>OK.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/808-0
+01:32:33.700 --> 01:32:36.680
+<v Dan Blanchard>John,
+could you share the prompt you used to do</v>
+
+e7059870-4861-4d84-90b3-091db9536099/808-1
+01:32:36.680 --> 01:32:37.300
+<v Dan Blanchard>that plan?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/809-0
+01:32:37.540 --> 01:32:38.660
+<v John Miller>Yeah, sure.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/810-0
+01:32:43.260 --> 01:32:44.940
+<v John Miller>What the spelling error or?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/812-0
+01:32:47.620 --> 01:32:51.260
+<v Dan Blanchard>Oh yeah, that's OK.
+I'll be happy from there.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/811-0
+01:32:49.220 --> 01:32:49.780
+<v John Miller>Understand.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/813-0
+01:32:53.540 --> 01:32:53.820
+<v John Miller>No.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/834-0
+01:34:00.620 --> 01:34:00.820
+<v John Miller>It.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/911-0
+01:38:13.460 --> 01:38:13.740
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/924-0
+01:39:23.420 --> 01:39:24.940
+<v John Miller>Everyone still working on it?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/925-0
+01:39:26.900 --> 01:39:29.540
+<v John Miller>If you're if you're finished,
+just lower your hand.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/926-0
+01:39:33.100 --> 01:39:33.980
+<v Childs, Stephen>Hey, John.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/927-0
+01:39:34.380 --> 01:39:35.180
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/930-0
+01:39:36.740 --> 01:39:39.908
+<v Childs, Stephen>So having never used Visual Studio Code
+or GitHub before,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/930-1
+01:39:39.908 --> 01:39:43.404
+<v Childs, Stephen>like just pressing through the tools is
+is plenty of challenge,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/930-2
+01:39:43.404 --> 01:39:47.664
+<v Childs, Stephen>but you know I'm doing the best I can and
+for example I prompted for you know</v>
+
+e7059870-4861-4d84-90b3-091db9536099/930-3
+01:39:47.664 --> 01:39:52.088
+<v Childs, Stephen>architectural constraints in the project
+and and they gave me a list just in the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/930-4
+01:39:52.088 --> 01:39:53.180
+<v Childs, Stephen>the prompt response.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/929-0
+01:39:52.820 --> 01:39:53.260
+<v John Miller>Yeah.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/931-0
+01:39:53.540 --> 01:39:56.764
+<v Childs, Stephen>And like I say,
+just kind of struggling with the tools.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/931-1
+01:39:56.764 --> 01:40:00.735
+<v Childs, Stephen>I miss a whole lot of what you say,
+but is is is there a better way?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/931-2
+01:40:00.735 --> 01:40:05.167
+<v Childs, Stephen>Like should this be captured maybe is
+like have it converted to markdown and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/931-3
+01:40:05.167 --> 01:40:08.045
+<v Childs, Stephen>put it in a directory within the project
+or what?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/931-4
+01:40:08.045 --> 01:40:11.729
+<v Childs, Stephen>What do you suggest doing with these
+architectural constraints?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/931-5
+01:40:11.729 --> 01:40:13.340
+<v Childs, Stephen>Turn turn them into tickets?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/932-0
+01:40:14.020 --> 01:40:16.640
+<v John Miller>Well,
+if they're if they're actionable</v>
+
+e7059870-4861-4d84-90b3-091db9536099/932-1
+01:40:16.640 --> 01:40:20.066
+<v John Miller>modifications,
+then I say let's surface them as as</v>
+
+e7059870-4861-4d84-90b3-091db9536099/932-2
+01:40:20.066 --> 01:40:24.903
+<v John Miller>tickets and that way they can be
+prioritized and you know and we we can</v>
+
+e7059870-4861-4d84-90b3-091db9536099/932-3
+01:40:24.903 --> 01:40:28.866
+<v John Miller>work on them, right.
+So that would be that would be what I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/932-4
+01:40:28.866 --> 01:40:31.620
+<v John Miller>would do with them if I was working in a.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/934-0
+01:40:32.420 --> 01:40:36.768
+<v John Miller>If this was a a project that I was
+participating in is I want to make sure</v>
+
+e7059870-4861-4d84-90b3-091db9536099/934-1
+01:40:36.768 --> 01:40:41.289
+<v John Miller>that the rest of the team knew that the
+application had these had these these</v>
+
+e7059870-4861-4d84-90b3-091db9536099/934-2
+01:40:41.289 --> 01:40:46.100
+<v John Miller>these particular things and then you can
+argue for you know dispense you know some</v>
+
+e7059870-4861-4d84-90b3-091db9536099/934-3
+01:40:46.100 --> 01:40:48.940
+<v John Miller>a I time on let's implement these
+modifications.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/935-0
+01:40:50.900 --> 01:40:54.677
+<v John Miller>Right, so you know,
+but I chose to equated this test plan</v>
+
+e7059870-4861-4d84-90b3-091db9536099/935-1
+01:40:54.677 --> 01:41:00.147
+<v John Miller>automation and I chose to create it as a
+markdown file and put it in a docs folder,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/935-2
+01:41:00.147 --> 01:41:05.421
+<v John Miller>which you can see here is what it's done.
+And so now I've captured that plan and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/935-3
+01:41:05.421 --> 01:41:07.700
+<v John Miller>I'm then asking it to go ahead and.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/936-0
+01:41:07.900 --> 01:41:14.796
+<v John Miller>Start to implement some,
+start to take some immediate actions on</v>
+
+e7059870-4861-4d84-90b3-091db9536099/936-1
+01:41:14.796 --> 01:41:22.540
+<v John Miller>try to establish a a a a a test framework
+and start to write some tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/937-0
+01:41:23.220 --> 01:41:25.260
+<v Childs, Stephen>I see. All right. Thank you.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/938-0
+01:41:24.820 --> 01:41:25.620
+<v John Miller>You're welcome.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/943-0
+01:41:54.820 --> 01:41:57.540
+<v John Miller>Anybody stuck on something that I can
+help with?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/946-0
+01:42:09.500 --> 01:42:12.732
+<v Matt Hoffman>No,
+I guess I'm just moving a little bit</v>
+
+e7059870-4861-4d84-90b3-091db9536099/946-1
+01:42:12.732 --> 01:42:14.860
+<v Matt Hoffman>slower, but we can move on.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/947-0
+01:42:16.260 --> 01:42:18.380
+<v John Miller>Yeah, I'll give you a couple more minutes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/948-0
+01:42:20.900 --> 01:42:24.770
+<v Dan Blanchard>So should we have it implement some of
+them or is it just mainly just to to to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/949-0
+01:42:23.060 --> 01:42:25.949
+<v John Miller>Yeah, yes. Go ahead and go ahead and,
+yeah,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/948-1
+01:42:24.770 --> 01:42:25.700
+<v Dan Blanchard>look at the report?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/949-1
+01:42:25.949 --> 01:42:29.100
+<v John Miller>go ahead and get as far into it as you
+can. Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/950-0
+01:42:30.620 --> 01:42:34.657
+<v John Miller>And what?
+Because what I'll do next is I'm going to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/950-1
+01:42:34.657 --> 01:42:39.780
+<v John Miller>review the plan that I created and we can
+just you see, you know.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/951-0
+01:42:42.180 --> 01:42:45.620
+<v John Miller>What the AI would expect us to is
+expecting us to do.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/959-0
+01:43:10.300 --> 01:43:11.900
+<v John Miller>All right, so um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/960-0
+01:43:14.940 --> 01:43:17.260
+<v John Miller>So I cheated a little bit, I actually.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/961-0
+01:43:19.820 --> 01:43:20.540
+<v John Miller>Invoked the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/962-0
+01:43:21.980 --> 01:43:23.060
+<v John Miller>Dev test engineer.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/963-0
+01:43:24.620 --> 01:43:32.218
+<v John Miller>Chat mode that we'll talk about tomorrow
+and then I asked it to to create a a a</v>
+
+e7059870-4861-4d84-90b3-091db9536099/963-1
+01:43:32.218 --> 01:43:39.341
+<v John Miller>test automation plan for this for the
+project and you can see that as it's</v>
+
+e7059870-4861-4d84-90b3-091db9536099/963-2
+01:43:39.341 --> 01:43:40.100
+<v John Miller>typical.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/964-0
+01:43:42.660 --> 01:43:45.813
+<v John Miller>It gives you more than you expect when
+you ask it,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/964-1
+01:43:45.813 --> 01:43:49.028
+<v John Miller>when you make a essentially a very
+generic request.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/964-2
+01:43:49.028 --> 01:43:53.479
+<v John Miller>Unless you say I only wanted something,
+a specific type of information,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/964-3
+01:43:53.479 --> 01:43:57.620
+<v John Miller>it's going to give you everything it
+thinks it need it would need.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/965-0
+01:43:59.100 --> 01:44:02.122
+<v John Miller>So it basically has an analysis of the
+project,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/965-1
+01:44:02.122 --> 01:44:05.333
+<v John Miller>which is just an overview of the
+technology stack,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/965-2
+01:44:05.333 --> 01:44:10.118
+<v John Miller>the project structure and then you can
+see here that it has high value test</v>
+
+e7059870-4861-4d84-90b3-091db9536099/965-3
+01:44:10.118 --> 01:44:12.888
+<v John Miller>areas,
+things that are critical in terms of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/965-4
+01:44:12.888 --> 01:44:16.980
+<v John Miller>testing or authentication and controllers
+and the service layer.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/966-0
+01:44:17.780 --> 01:44:23.828
+<v John Miller>And then the auto map or profiles and
+exception handling are are considered</v>
+
+e7059870-4861-4d84-90b3-091db9536099/966-1
+01:44:23.828 --> 01:44:25.340
+<v John Miller>high value targets.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/967-0
+01:44:26.740 --> 01:44:32.046
+<v John Miller>So we would have here is our our pyramid
+where we were talking about end to end</v>
+
+e7059870-4861-4d84-90b3-091db9536099/967-1
+01:44:32.046 --> 01:44:37.153
+<v John Miller>tests or 10% of the of the test load
+integration test would be 30% then unit</v>
+
+e7059870-4861-4d84-90b3-091db9536099/967-2
+01:44:37.153 --> 01:44:41.066
+<v John Miller>test would be 60%.
+So here are the test categories of what</v>
+
+e7059870-4861-4d84-90b3-091db9536099/967-3
+01:44:41.066 --> 01:44:42.060
+<v John Miller>and what tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/968-0
+01:44:42.340 --> 01:44:47.420
+<v John Miller>That it's expecting to see.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/969-0
+01:44:51.020 --> 01:44:58.030
+<v John Miller>Well integration tests it it's it's it's
+it's proposing that we create and what</v>
+
+e7059870-4861-4d84-90b3-091db9536099/969-1
+01:44:58.030 --> 01:45:00.220
+<v John Miller>those any tests would be.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/970-0
+01:45:03.860 --> 01:45:08.711
+<v John Miller>Here is the test project structure and so
+that it's expecting to build out a pretty</v>
+
+e7059870-4861-4d84-90b3-091db9536099/970-1
+01:45:08.711 --> 01:45:11.020
+<v John Miller>comprehensive structure for those tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/971-0
+01:45:12.060 --> 01:45:17.307
+<v John Miller>What new get packages we need to to
+install in order for us to be able to run</v>
+
+e7059870-4861-4d84-90b3-091db9536099/971-1
+01:45:17.307 --> 01:45:20.670
+<v John Miller>the tests,
+the quality metrics and coverage goals</v>
+
+e7059870-4861-4d84-90b3-091db9536099/971-2
+01:45:20.670 --> 01:45:24.503
+<v John Miller>and 90% coverage or greater for our core
+business logic.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/971-3
+01:45:24.503 --> 01:45:29.346
+<v John Miller>The controllers are 85 percent,
+100% for the auto mapper and acceptance</v>
+
+e7059870-4861-4d84-90b3-091db9536099/971-4
+01:45:29.346 --> 01:45:30.220
+<v John Miller>handlers, so.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/972-0
+01:45:32.100 --> 01:45:38.340
+<v John Miller>Go shooting for a a goal of 80% or
+greater code coverage.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/973-0
+01:45:39.300 --> 01:45:45.684
+<v John Miller>What some of the key performance metrics
+would should be a defect prevention</v>
+
+e7059870-4861-4d84-90b3-091db9536099/973-1
+01:45:45.684 --> 01:45:50.410
+<v John Miller>strategy, so functional testing,
+non-functional testing,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/973-2
+01:45:50.410 --> 01:45:54.140
+<v John Miller>performance testing,
+load testing scenarios.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/975-0
+01:45:55.900 --> 01:46:01.532
+<v John Miller>What tools suggesting that that we use
+for that testing some performance</v>
+
+e7059870-4861-4d84-90b3-091db9536099/975-1
+01:46:01.532 --> 01:46:02.380
+<v John Miller>benchmarks?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/976-0
+01:46:04.020 --> 01:46:06.020
+<v John Miller>An implementation road map.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/977-0
+01:46:07.700 --> 01:46:13.867
+<v John Miller>So I think it's interesting here that the
+road map is broken down into two weeks.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/977-1
+01:46:13.867 --> 01:46:17.552
+<v John Miller>You know when I sometimes I see these
+estimates,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/977-2
+01:46:17.552 --> 01:46:20.860
+<v John Miller>I ask it how to how it actually
+calculated.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/978-0
+01:46:23.220 --> 01:46:27.580
+<v John Miller>The the the duration of the of these
+phases.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/979-0
+01:46:32.340 --> 01:46:37.060
+<v John Miller>And then here's the tasks that need to be
+done and each week.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/980-0
+01:46:41.780 --> 01:46:44.940
+<v John Miller>Then how we would integrate it into a
+pipeline?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/981-0
+01:46:46.580 --> 01:46:51.020
+<v John Miller>So the test will automatically be
+executed. Confirmations on quality gates.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/982-0
+01:46:53.140 --> 01:46:56.996
+<v John Miller>So coverage.
+These are all the metrics that we want to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/982-1
+01:46:56.996 --> 01:47:00.291
+<v John Miller>try to achieve.
+Then some sample test example.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/982-2
+01:47:00.291 --> 01:47:06.039
+<v John Miller>So basically templates for creating tests.
+Controller tests should look like this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/982-3
+01:47:06.039 --> 01:47:07.300
+<v John Miller>integration tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/983-0
+01:47:10.220 --> 01:47:13.782
+<v John Miller>An end-to-end test.
+So the the key point about if you</v>
+
+e7059870-4861-4d84-90b3-091db9536099/983-1
+01:47:13.782 --> 01:47:18.992
+<v John Miller>generate a document like this that you
+you you need to essentially do a pretty</v>
+
+e7059870-4861-4d84-90b3-091db9536099/983-2
+01:47:18.992 --> 01:47:24.136
+<v John Miller>thorough review on it and and get some
+get the team essentially to buy off on</v>
+
+e7059870-4861-4d84-90b3-091db9536099/983-3
+01:47:24.136 --> 01:47:28.620
+<v John Miller>this is the the approach particularly
+looking at the test examples.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/984-0
+01:47:29.700 --> 01:47:34.513
+<v John Miller>And because because those are gonna
+govern actually the code that you see</v>
+
+e7059870-4861-4d84-90b3-091db9536099/984-1
+01:47:34.513 --> 01:47:37.634
+<v John Miller>generated.
+So you want to make sure that you're</v>
+
+e7059870-4861-4d84-90b3-091db9536099/984-2
+01:47:37.634 --> 01:47:39.780
+<v John Miller>comfortable with the entire plan.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/985-0
+01:47:41.260 --> 01:47:43.068
+<v John Miller>Uh,
+before we actually move on to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/985-1
+01:47:43.068 --> 01:47:45.140
+<v John Miller>implementation, but we're not going to.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/987-0
+01:47:46.700 --> 01:47:51.346
+<v John Miller>Take that level of effort right now
+because we don't really have the time to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/987-1
+01:47:51.346 --> 01:47:56.053
+<v John Miller>do it. But it is something that for,
+you know, with every generated artifact,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/987-2
+01:47:56.053 --> 01:48:00.880
+<v John Miller>there's always a little tag that says
+this could be wrong and that's and that's</v>
+
+e7059870-4861-4d84-90b3-091db9536099/987-3
+01:48:00.880 --> 01:48:04.620
+<v John Miller>always going to be true.
+So we always want to make sure that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/988-0
+01:48:05.100 --> 01:48:09.689
+<v John Miller>We're approving of these,
+a lot of this AI generated artifacts,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/988-1
+01:48:09.689 --> 01:48:14.922
+<v John Miller>so so that we're comfortable that the
+quality of the work and that we're</v>
+
+e7059870-4861-4d84-90b3-091db9536099/988-2
+01:48:14.922 --> 01:48:19.940
+<v John Miller>comfortable that we understand exactly
+what the ASII is doing for us.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/989-0
+01:48:21.260 --> 01:48:21.420
+<v John Miller>Mm.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/990-0
+01:48:22.940 --> 01:48:28.292
+<v John Miller>All right. So any questions,
+further questions on this, this activity?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/990-1
+01:48:28.292 --> 01:48:32.060
+<v John Miller>I think I went through in the project and
+had it.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/991-0
+01:48:33.780 --> 01:48:34.020
+<v John Miller>Clear.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/992-0
+01:48:35.100 --> 01:48:39.180
+<v John Miller>The first piece of this so it wants to.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/993-0
+01:48:43.420 --> 01:48:46.500
+<v John Miller>It's creating some test utility files.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/994-0
+01:48:51.740 --> 01:48:54.340
+<v John Miller>Looks like it's got a problem with the
+build.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/997-0
+01:49:16.060 --> 01:49:19.478
+<v John Miller>So,
+so we can see here that it's this is I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/997-1
+01:49:19.478 --> 01:49:25.756
+<v John Miller>think a fairly typical process and that
+once we've created a plan and we say I</v>
+
+e7059870-4861-4d84-90b3-091db9536099/997-2
+01:49:25.756 --> 01:49:32.194
+<v John Miller>want to implement the immediate actions,
+it will go through and and and start to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/997-3
+01:49:32.194 --> 01:49:34.180
+<v John Miller>do some of that work but.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/998-0
+01:49:34.220 --> 01:49:34.660
+<v John Miller>Um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/999-0
+01:49:35.980 --> 01:49:41.186
+<v John Miller>Yeah, sometimes we'll run into issues.
+I find this also with test generation</v>
+
+e7059870-4861-4d84-90b3-091db9536099/999-1
+01:49:41.186 --> 01:49:42.740
+<v John Miller>that sometimes the 1st.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1001-0
+01:49:44.460 --> 01:49:51.650
+<v John Miller>Attempt at a test doesn't succeed and for
+whatever reason and it will need to to go</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1001-1
+01:49:51.650 --> 01:49:58.668
+<v John Miller>through and actually debug that process.
+So it's still seeing a a bunch of errors</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1001-2
+01:49:58.668 --> 01:49:59.780
+<v John Miller>in the build.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1002-0
+01:50:05.260 --> 01:50:08.220
+<v John Miller>So we'll let it continue to.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1003-0
+01:50:09.300 --> 01:50:12.620
+<v John Miller>Turn on this technical piece. Yeah, Dan.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1004-0
+01:50:14.540 --> 01:50:17.979
+<v Dan Blanchard>Yeah. So I just have a question about,
+you know what, what it can generate.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1004-1
+01:50:17.979 --> 01:50:20.286
+<v Dan Blanchard>So obviously unit tests,
+it's really good at that.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1004-2
+01:50:20.286 --> 01:50:23.182
+<v Dan Blanchard>But you know what about integration
+testing end to end testing?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1004-3
+01:50:23.182 --> 01:50:26.621
+<v Dan Blanchard>Is that something we want them to
+integrate? Would they still be, you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1004-4
+01:50:26.621 --> 01:50:29.380
+<v Dan Blanchard>quote UN quote unit tests,
+but they're actually kind of run?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1006-0
+01:50:29.740 --> 01:50:33.940
+<v Dan Blanchard>Differently or would they be like
+separate applications? Or you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1006-1
+01:50:33.940 --> 01:50:37.900
+<v Dan Blanchard>how do you distinguish the different
+kinds of of tests like that?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1007-0
+01:50:38.540 --> 01:50:42.166
+<v John Miller>Right.
+I mean the the the primary difference</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1007-1
+01:50:42.166 --> 01:50:48.047
+<v John Miller>that I see in a unit test or and
+integration test is that the unit tests</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1007-2
+01:50:48.047 --> 01:50:53.929
+<v John Miller>you know mock out or don't execute
+anything that the the particular unit</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1007-3
+01:50:53.929 --> 01:50:55.620
+<v John Miller>that's under testing.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1008-0
+01:50:56.100 --> 01:50:58.880
+<v John Miller>It calls out where a integration test
+would.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1008-1
+01:50:58.880 --> 01:51:03.450
+<v John Miller>So you're mostly in dealing with
+integration tests like calling out to an</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1008-2
+01:51:03.450 --> 01:51:08.391
+<v John Miller>endpoint of an API and validating that
+you get the response back that you want.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1008-3
+01:51:08.391 --> 01:51:12.961
+<v John Miller>So that will require some some sort of
+way of deploying that application,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1008-4
+01:51:12.961 --> 01:51:15.060
+<v John Miller>either just running it locally or.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1009-0
+01:51:15.540 --> 01:51:21.480
+<v John Miller>Running it in a in a deployed environment
+and and in order to be able to do an end</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1009-1
+01:51:21.480 --> 01:51:26.704
+<v John Miller>testing you would have to do it.
+You would most likely want to deploy it</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1009-2
+01:51:26.704 --> 01:51:30.927
+<v John Miller>into a into a a,
+you know a temporary environment and then</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1009-3
+01:51:30.927 --> 01:51:35.220
+<v John Miller>execute it there.
+But A I can help us with all those tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1010-0
+01:51:35.460 --> 01:51:40.448
+<v John Miller>We can do so it it's it's it understands
+you know all the major test frameworks</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1010-1
+01:51:40.448 --> 01:51:42.380
+<v John Miller>that we would want to be using.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1011-0
+01:51:43.780 --> 01:51:44.460
+<v John Miller>And.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1012-0
+01:51:45.740 --> 01:51:50.259
+<v John Miller>So it it can help us build up that test
+suite and that you know,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1012-1
+01:51:50.259 --> 01:51:54.291
+<v John Miller>you know that's I think as far as
+broadfield development,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1012-2
+01:51:54.291 --> 01:51:59.852
+<v John Miller>one of the major things that we get out
+of using A I is that it helps us really</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1012-3
+01:51:59.852 --> 01:52:02.980
+<v John Miller>up our game in terms of our test
+automation.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1013-0
+01:52:03.260 --> 01:52:08.679
+<v John Miller>In terms of both the quality of the tests
+that are executing and and the quantity</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1013-1
+01:52:08.679 --> 01:52:13.899
+<v John Miller>or coverage that we're able to achieve in
+a very short period of time by just,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1013-2
+01:52:13.899 --> 01:52:17.071
+<v John Miller>you know,
+creating a valid test plan that makes</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1013-3
+01:52:17.071 --> 01:52:21.300
+<v John Miller>sense that when we go ahead and execute
+against that test plan.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1014-0
+01:52:21.740 --> 01:52:26.813
+<v John Miller>And then monitor our progress,
+you know in terms of its ability to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1014-1
+01:52:26.813 --> 01:52:30.900
+<v John Miller>evaluate the application as we go as we
+move forward.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1015-0
+01:52:35.300 --> 01:52:35.860
+<v Dan Blanchard>Okay, thanks.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1016-0
+01:52:36.020 --> 01:52:38.100
+<v John Miller>Sure. Any other questions?</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1017-0
+01:52:47.260 --> 01:52:51.634
+<v John Miller>All right,
+so a bit more on test automation and code</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1017-1
+01:52:51.634 --> 01:52:55.678
+<v John Miller>quality.
+We talked quite a bit about AI assisted</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1017-2
+01:52:55.678 --> 01:53:00.382
+<v John Miller>test generation.
+We can also do an intelligent enlisting</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1017-3
+01:53:00.382 --> 01:53:02.940
+<v John Miller>linting beyond static analysis.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1018-0
+01:53:03.500 --> 01:53:08.848
+<v John Miller>This would you know what we would ask you
+know questions of the A I about the the</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1018-1
+01:53:08.848 --> 01:53:13.542
+<v John Miller>coding having coding standards and
+bouncing the A the code that we have</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1018-2
+01:53:13.542 --> 01:53:18.824
+<v John Miller>against some of those coding standards
+you can as we see you can do help us with</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1018-3
+01:53:18.824 --> 01:53:20.780
+<v John Miller>the coverage analysis and the.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1019-0
+01:53:20.780 --> 01:53:25.892
+<v John Miller>Ade the adequacy of our assessment and so
+we can actually look at if we had</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1019-1
+01:53:25.892 --> 01:53:29.523
+<v John Miller>existing test,
+it could look at the test and and pick</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1019-2
+01:53:29.523 --> 01:53:34.836
+<v John Miller>apart the test to see if it's actually
+testing everything that it should be to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1019-3
+01:53:34.836 --> 01:53:39.140
+<v John Miller>help us create those automated quality
+gates through pipelines.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1020-0
+01:53:39.420 --> 01:53:42.982
+<v John Miller>So we talked about that.
+So in terms of generation,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1020-1
+01:53:42.982 --> 01:53:47.708
+<v John Miller>we can see that we can deal with all
+these different kinds of tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1020-2
+01:53:47.708 --> 01:53:52.023
+<v John Miller>This samples as we said,
+I just mentioned say helps us rapidly</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1020-3
+01:53:52.023 --> 01:53:57.434
+<v John Miller>expand our coverage and the and I said
+the quality equals test and have it and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1020-4
+01:53:57.434 --> 01:53:58.940
+<v John Miller>then apply consistent.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1021-0
+01:53:59.020 --> 01:54:04.579
+<v John Miller>Structure and naming convention on on all
+the the tests so that we can so that so</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1021-1
+01:54:04.579 --> 01:54:09.731
+<v John Miller>that everybody that's working the code
+base understands how these tests are</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1021-2
+01:54:09.731 --> 01:54:15.154
+<v John Miller>built and and that can reduce the amount
+of time it takes to come to come up to</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1021-3
+01:54:15.154 --> 01:54:16.780
+<v John Miller>speed on on a code base.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1022-0
+01:54:16.780 --> 01:54:22.581
+<v John Miller>So intangibility you can do things like
+looking for architectural violations,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1022-1
+01:54:22.581 --> 01:54:26.300
+<v John Miller>you can look for anti-patterns,
+unsafe refactors,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1022-2
+01:54:26.300 --> 01:54:31.208
+<v John Miller>looking for missing documentation,
+inconsistent naming and domain</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1022-3
+01:54:31.208 --> 01:54:32.100
+<v John Miller>terminology.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1023-0
+01:54:32.460 --> 01:54:37.984
+<v John Miller>That's you know something that where you
+can get a more semantic view of the your</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1023-1
+01:54:37.984 --> 01:54:42.160
+<v John Miller>of your code base versus just what the
+the the code is there.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1023-2
+01:54:42.160 --> 01:54:47.280
+<v John Miller>So this will go beyond just the syntax.
+You can enforce architectural guard</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1023-3
+01:54:47.280 --> 01:54:48.020
+<v John Miller>guardrails.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1024-0
+01:54:48.620 --> 01:54:55.060
+<v John Miller>And reduce your long-term technical debt
+by making sure that you're any changes</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1024-1
+01:54:55.060 --> 01:55:01.660
+<v John Miller>that you make are are are consistent with
+the instructions that we that we built.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1025-0
+01:55:03.740 --> 01:55:09.635
+<v John Miller>So in in terms of coverage analysis,
+it can help us evaluate the any look for</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1025-1
+01:55:09.635 --> 01:55:15.606
+<v John Miller>any coverage gaps, missing edge cases,
+over testing of implementation details,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1025-2
+01:55:15.606 --> 01:55:21.047
+<v John Miller>under testing of business logic,
+looking for redundant or or or brittle</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1025-3
+01:55:21.047 --> 01:55:21.500
+<v John Miller>tests.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1026-0
+01:55:21.820 --> 01:55:27.339
+<v John Miller>Which gives us more meaningful coverage
+again we this is all about a signal</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1026-1
+01:55:27.339 --> 01:55:33.148
+<v John Miller>that's telling us what is what is the
+current state of the the code base and is</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1026-2
+01:55:33.148 --> 01:55:39.102
+<v John Miller>it is it in a in a position where we feel
+comfortable going into production is is</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1026-3
+01:55:39.102 --> 01:55:39.900
+<v John Miller>is what we.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1027-0
+01:55:39.980 --> 01:55:43.676
+<v John Miller>Really want to drive towards. You know,
+ideally we would want to reach a state</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1027-1
+01:55:43.676 --> 01:55:45.500
+<v John Miller>where we have enough confidence in our.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1028-0
+01:55:46.260 --> 01:55:47.820
+<v John Miller>In our um.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1029-0
+01:55:49.900 --> 01:55:54.840
+<v John Miller>In our in our test suite so that we would
+feel that if we took a pull request and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1029-1
+01:55:54.840 --> 01:55:59.839
+<v John Miller>it passed all of the the test automation
+that we would feel comfortable merging it</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1029-2
+01:55:59.839 --> 01:56:03.694
+<v John Miller>to main and having that automatically
+deployed into production.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1029-3
+01:56:03.694 --> 01:56:05.260
+<v John Miller>So more of a a continuous.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1030-0
+01:56:05.660 --> 01:56:09.034
+<v John Miller>In addition,
+over on Bob what a continuous integration</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1030-1
+01:56:09.034 --> 01:56:11.855
+<v John Miller>we do,
+this will be continuous deployment and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1030-2
+01:56:11.855 --> 01:56:16.578
+<v John Miller>based and that basically allows us to
+push small changes out into production</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1030-3
+01:56:16.578 --> 01:56:19.828
+<v John Miller>very rapidly.
+And the final point is that it reduces</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1030-4
+01:56:19.828 --> 01:56:22.220
+<v John Miller>our maintenance burden because we have.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1031-0
+01:56:22.780 --> 01:56:28.388
+<v John Miller>Much more consistent test suite that we
+can rely on and then those automatic</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1031-1
+01:56:28.388 --> 01:56:33.849
+<v John Miller>quality gates that we're talking about in
+your pipelines, you can then do,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1031-2
+01:56:33.849 --> 01:56:39.456
+<v John Miller>you can do a minimum test coverage for
+the creation of a PR but require more</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1031-3
+01:56:39.456 --> 01:56:39.820
+<v John Miller>more.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1032-0
+01:56:40.140 --> 01:56:43.528
+<v John Miller>Extensive coverage for merging into into
+into main.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1032-1
+01:56:43.528 --> 01:56:47.111
+<v John Miller>You can include your linting and
+architectural checks,</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1032-2
+01:56:47.111 --> 01:56:52.453
+<v John Miller>your Providence requirements so that you
+make sure that a pull request has all of</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1032-3
+01:56:52.453 --> 01:56:57.860
+<v John Miller>that information that you want to be able
+to to demonstrate for auditing purposes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1033-0
+01:56:58.660 --> 01:57:03.957
+<v John Miller>So you could do PR level test generation,
+you can do risk scoring for changes.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1033-1
+01:57:03.957 --> 01:57:09.521
+<v John Miller>All of these things are things that you
+can consider leveraging AI to help you do.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1033-2
+01:57:09.521 --> 01:57:15.152
+<v John Miller>So this will help you prevent regressions,
+improve quality and and it supports this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1033-3
+01:57:15.152 --> 01:57:17.900
+<v John Miller>Evergreen development mindset that we're.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1034-0
+01:57:18.260 --> 01:57:20.060
+<v John Miller>That we're trying to adopt.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1035-0
+01:57:21.420 --> 01:57:25.462
+<v John Miller>All right.
+So we're getting close to the break. So.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1035-1
+01:57:25.462 --> 01:57:31.058
+<v John Miller>So this is basically looking for
+continuing this process of looking for</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1035-2
+01:57:31.058 --> 01:57:36.420
+<v John Miller>missing education, coverage gaps,
+trying to continue to improve our.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1036-0
+01:57:36.620 --> 01:57:41.024
+<v John Miller>Our our test suite.
+So what we what we do is go ahead and</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1036-1
+01:57:41.024 --> 01:57:47.250
+<v John Miller>take our our our break and come back in
+an hour and we can then finish up on this</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1036-2
+01:57:47.250 --> 01:57:49.300
+<v John Miller>this this testing exercise.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1037-0
+01:57:50.700 --> 01:57:51.820
+<v John Miller>See you guys in a bit.</v>
+
+e7059870-4861-4d84-90b3-091db9536099/1040-0
+01:57:53.700 --> 01:57:53.940
+<v Rockwell, Christopher L>Thanks.</v>

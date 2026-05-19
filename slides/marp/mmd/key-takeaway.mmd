@@ -1,0 +1,17 @@
+graph TB
+    A["Instructions"]:::instructStyle
+    B["AI Draft"]:::aiStyle
+    C["Review"]:::reviewStyle
+    D["Refine"]:::refineStyle
+    E["Implement"]:::implementStyle
+
+    A -->|strong planning| B
+    B -->|initial slice plan| C
+    C -->|multi-model compare| D
+    D -->|improve templates| E
+
+    classDef instructStyle fill:#4A90E2,stroke:#2E5C8A,color:#fff,stroke-width:2px
+    classDef aiStyle fill:#7ED321,stroke:#5A9D1C,color:#fff,stroke-width:2px
+    classDef reviewStyle fill:#F5A623,stroke:#C77D1A,color:#fff,stroke-width:2px
+    classDef refineStyle fill:#BD10E0,stroke:#8B0BA8,color:#fff,stroke-width:2px
+    classDef implementStyle fill:#50E3C2,stroke:#35A692,color:#fff,stroke-width:2px

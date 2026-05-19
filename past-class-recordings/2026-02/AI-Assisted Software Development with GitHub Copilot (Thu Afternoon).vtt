@@ -1,0 +1,5294 @@
+WEBVTT
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/37-0
+00:02:12.216 --> 00:02:13.816
+<v John Miller>All right, welcome back.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/40-0
+00:02:27.656 --> 00:02:29.376
+<v John Miller>Let me share my screen.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/54-0
+00:03:13.976 --> 00:03:20.168
+<v John Miller>All right, so I've updated the both repos,
+so you should be able to pull down from</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/54-1
+00:03:20.168 --> 00:03:25.092
+<v John Miller>the class repo and switch to the
+Greenfield branch and you'll see</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/54-2
+00:03:25.092 --> 00:03:31.135
+<v John Miller>basically the the core instruction files
+that we've been discussing that we want</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/54-3
+00:03:31.135 --> 00:03:33.896
+<v John Miller>to start to build off as well as the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/55-0
+00:03:33.896 --> 00:03:39.787
+<v John Miller>The agent that we created and the prompt
+file that we created for generating</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/55-1
+00:03:39.787 --> 00:03:44.607
+<v John Miller>business requirements.
+So if you if you take a a branch off of</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/55-2
+00:03:44.607 --> 00:03:48.816
+<v John Miller>the the Greenfield branch,
+you should be able to work.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/57-0
+00:03:49.456 --> 00:03:55.967
+<v John Miller>Independently and go ahead and see if you
+can generate a business requirements</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/57-1
+00:03:55.967 --> 00:03:59.759
+<v John Miller>document.
+You know from the using the the the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/57-2
+00:03:59.759 --> 00:04:05.941
+<v John Miller>product manager agent and the using the
+instructions that currently exist,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/57-3
+00:04:05.941 --> 00:04:08.496
+<v John Miller>you should be able to create a.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/58-0
+00:04:08.696 --> 00:04:13.148
+<v John Miller>A a a requirements document for this
+calculator.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/58-1
+00:04:13.148 --> 00:04:20.690
+<v John Miller>So once we go ahead and and give that a a
+go and then we'll move on to the the the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/58-2
+00:04:20.690 --> 00:04:23.416
+<v John Miller>the topic of vertical slicing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/59-0
+00:04:24.456 --> 00:04:28.296
+<v Goostree, Peter>Hey John,
+this is on the Zeus Academia 3 repo.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/61-0
+00:04:30.776 --> 00:04:36.027
+<v John Miller>No,
+this is in the ASID 2026 that that's the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/61-1
+00:04:36.027 --> 00:04:42.096
+<v John Miller>class repo and where we're putting all of
+our work.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/60-0
+00:04:36.376 --> 00:04:37.376
+<v Goostree, Peter>Got it. OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/63-0
+00:04:43.576 --> 00:04:47.442
+<v John Miller>So if you create a branch there,
+a personal branch there,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/62-0
+00:04:44.296 --> 00:04:45.616
+<v Bui, Tom>And this is the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/63-1
+00:04:47.442 --> 00:04:52.709
+<v John Miller>you should be able to then utilize the
+files that I've created in that in that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/63-2
+00:04:52.709 --> 00:04:57.376
+<v John Miller>to that branch to actually build out this
+requirements document. Dan,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/63-3
+00:04:57.376 --> 00:04:58.976
+<v John Miller>did you have a question?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/65-0
+00:05:01.496 --> 00:05:09.253
+<v Dan Blanchard>But we're not using the one that we for,
+we're using just the the main one right</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/64-0
+00:05:09.016 --> 00:05:11.696
+<v John Miller>Yeah, yeah, right.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/65-1
+00:05:09.253 --> 00:05:11.456
+<v Dan Blanchard>from the first day, OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/66-0
+00:05:14.696 --> 00:05:20.176
+<v Bui, Tom>Did I understand that right?
+It's the main branch of the repo.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/67-0
+00:05:18.496 --> 00:05:21.369
+<v John Miller>No,
+you want you want the the the Greenfield</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/67-1
+00:05:21.369 --> 00:05:21.816
+<v John Miller>branch.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/68-0
+00:05:22.896 --> 00:05:23.016
+<v Bui, Tom>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/69-0
+00:05:33.136 --> 00:05:33.536
+<v John Miller>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/70-0
+00:05:33.616 --> 00:05:34.416
+<v Otto Dobretsberger>Thank you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/139-0
+00:08:49.096 --> 00:08:51.502
+<v Rockwell, Christopher L>I'm sorry,
+we're supposed to be on the Greenfield</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/140-0
+00:08:51.496 --> 00:08:54.226
+<v John Miller>That's correct.
+In particular our own branch from the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/139-1
+00:08:51.502 --> 00:08:52.176
+<v Rockwell, Christopher L>branch, right?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/140-1
+00:08:54.226 --> 00:08:55.136
+<v John Miller>Greenfield branch.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/142-0
+00:08:55.776 --> 00:08:58.536
+<v Rockwell, Christopher L>The mine is telling me that a
+comprehensive.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/143-0
+00:09:00.856 --> 00:09:05.056
+<v Rockwell, Christopher L>PRD already exists that is thorough and
+production ready.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/144-0
+00:09:05.256 --> 00:09:09.762
+<v John Miller>Oh well, if you want,
+you can just remove that one and create</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/144-1
+00:09:09.762 --> 00:09:10.416
+<v John Miller>your own.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/145-0
+00:09:15.656 --> 00:09:18.252
+<v Bui, Tom>John,
+could you put the slide back on briefly</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/145-1
+00:09:18.252 --> 00:09:19.776
+<v Bui, Tom>so I can take a screenshot?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/146-0
+00:09:19.416 --> 00:09:20.616
+<v John Miller>Yeah, sure.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/147-0
+00:09:24.216 --> 00:09:24.616
+<v Bui, Tom>Yes.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/148-0
+00:09:26.496 --> 00:09:27.376
+<v Bui, Tom>Perfect. Thank you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/149-0
+00:09:27.576 --> 00:09:28.216
+<v John Miller>You're welcome.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/179-0
+00:12:38.616 --> 00:12:40.696
+<v John Miller>Go ahead and raise your hand if you're
+finished.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/222-0
+00:16:38.136 --> 00:16:40.976
+<v John Miller>Anybody have any questions or need some
+help?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/227-0
+00:17:07.016 --> 00:17:09.512
+<v Dan Blanchard>So we're not supposed to do the vertical
+slice right now.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/227-1
+00:17:09.512 --> 00:17:10.976
+<v Dan Blanchard>We're gonna do it together, right?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/228-0
+00:17:10.656 --> 00:17:10.896
+<v John Miller>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/229-0
+00:17:12.416 --> 00:17:12.536
+<v Dan Blanchard>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/230-0
+00:17:17.336 --> 00:17:17.776
+<v John Miller>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/242-0
+00:18:01.656 --> 00:18:04.136
+<v John Miller>Raise your hand if you're finished with
+your work.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/255-0
+00:18:47.856 --> 00:18:51.468
+<v Dan Blanchard>While we're waiting,
+I I got kind of a general question.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/253-0
+00:18:50.496 --> 00:18:50.816
+<v John Miller>Sure.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/255-1
+00:18:51.468 --> 00:18:56.601
+<v Dan Blanchard>I use both Visual Studio and VS code and
+I notice that it's Visual Studio is way</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/254-0
+00:18:54.056 --> 00:18:54.416
+<v John Miller>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/255-2
+00:18:56.601 --> 00:19:01.734
+<v Dan Blanchard>slower, especially when it updates files.
+It like has to rewrite the entire file</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/255-3
+00:19:01.734 --> 00:19:04.016
+<v Dan Blanchard>and it's seems to be extremely slow.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/257-0
+00:19:04.216 --> 00:19:08.693
+<v Dan Blanchard>So I don't know,
+I'm I'm just curious why that is if you</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/257-1
+00:19:08.693 --> 00:19:12.856
+<v Dan Blanchard>why they can't make Visual Studio fast
+like VS code.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/259-0
+00:19:13.856 --> 00:19:16.385
+<v John Miller>Yeah,
+I don't think I can answer that question.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/259-1
+00:19:16.385 --> 00:19:20.496
+<v John Miller>I'm not sure what what they're doing
+behind the scenes. That might be slower.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/258-0
+00:19:17.456 --> 00:19:17.576
+<v Dan Blanchard>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/260-0
+00:19:26.776 --> 00:19:28.296
+<v John Miller>Anybody else have any questions?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/261-0
+00:19:34.856 --> 00:19:37.696
+<v John Miller>So still waiting for a couple of people
+to finish up.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/269-0
+00:20:14.376 --> 00:20:14.656
+<v John Miller>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/271-0
+00:20:26.056 --> 00:20:28.736
+<v John Miller>Boris, do you need some help?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/272-0
+00:20:28.776 --> 00:20:29.656
+<v John Miller>You need some help?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/273-0
+00:20:34.816 --> 00:20:35.056
+<v Giterman, Boris>No.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/274-0
+00:20:35.816 --> 00:20:37.696
+<v John Miller>You ready to move on or?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/275-0
+00:20:38.376 --> 00:20:44.637
+<v Giterman, Boris>Yeah, yeah, I tried. I made an exercise.
+I compared the different instructions,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/275-1
+00:20:44.637 --> 00:20:45.576
+<v Giterman, Boris>so I'm good.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/277-0
+00:20:45.416 --> 00:20:47.936
+<v John Miller>OK. All right. Well, then let's move on.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/276-0
+00:20:46.256 --> 00:20:46.816
+<v Giterman, Boris>Thanks.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/279-0
+00:20:51.096 --> 00:20:54.794
+<v John Miller>So now that we have our business
+requirements,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/279-1
+00:20:54.794 --> 00:21:00.145
+<v John Miller>we can start to move a little bit closer
+to an implementation plan.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/279-2
+00:21:00.145 --> 00:21:05.968
+<v John Miller>So some of the things that we would want
+to do in a when we're starting a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/279-3
+00:21:05.968 --> 00:21:07.936
+<v John Miller>Greenfield project is to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/280-0
+00:21:07.976 --> 00:21:11.942
+<v John Miller>Do some of the things we started,
+like create those core instructions that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/280-1
+00:21:11.942 --> 00:21:15.115
+<v John Miller>we've been using.
+What we want to do is now add instruction</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/280-2
+00:21:15.115 --> 00:21:18.818
+<v John Miller>files for our our text stack that we're
+going to implement this with.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/280-3
+00:21:18.818 --> 00:21:22.097
+<v John Miller>We want to establish some coding
+standards and quality gates,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/280-4
+00:21:22.097 --> 00:21:25.376
+<v John Miller>so that would be included in some of
+these instruction files.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/281-0
+00:21:25.736 --> 00:21:29.545
+<v John Miller>And as well as some the security and
+compliance requirements.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/281-1
+00:21:29.545 --> 00:21:34.399
+<v John Miller>And then we want to basically verify that
+the these are that these instruction</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/281-2
+00:21:34.399 --> 00:21:39.130
+<v John Miller>files we're creating are effective by
+generating some test instruction files</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/281-3
+00:21:39.130 --> 00:21:43.431
+<v John Miller>and and and validating them.
+And of course you know validating the AI</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/281-4
+00:21:43.431 --> 00:21:45.336
+<v John Miller>output is always a requirement.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/282-0
+00:21:45.416 --> 00:21:51.375
+<v John Miller>Because you you you never know what it's
+going to infer that is incorrect or</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/282-1
+00:21:51.375 --> 00:21:56.250
+<v John Miller>doesn't really apply in your in your
+particular circumstances.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/282-2
+00:21:56.250 --> 00:22:02.054
+<v John Miller>Then we want to after that we want to
+identify some repeatable development</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/282-3
+00:22:02.054 --> 00:22:04.376
+<v John Miller>tasks that we want to be able.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/283-0
+00:22:04.376 --> 00:22:09.259
+<v John Miller>To execute regularly and create prompt
+files for those common workflows,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/283-1
+00:22:09.259 --> 00:22:12.670
+<v John Miller>build task specific execution templates,
+you know,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/283-2
+00:22:12.670 --> 00:22:17.621
+<v John Miller>validate some prompt file outputs,
+just basically working our way towards</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/283-3
+00:22:17.621 --> 00:22:20.096
+<v John Miller>having a good foundation to build on.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/284-0
+00:22:20.616 --> 00:22:25.195
+<v John Miller>Then we then comes in our our domain
+expertise and our our custom chat modes</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/284-1
+00:22:25.195 --> 00:22:27.456
+<v John Miller>which we've just started to build out.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/287-0
+00:22:28.856 --> 00:22:33.197
+<v John Miller>We want to test the conversational
+effectiveness of those and document the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/287-1
+00:22:33.197 --> 00:22:37.190
+<v John Miller>users uses uses guidelines.
+Here when we're building the chat modes,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/287-2
+00:22:37.190 --> 00:22:41.531
+<v John Miller>we would start to tie those chat modes
+into the prompts that we've already</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/287-3
+00:22:41.531 --> 00:22:44.136
+<v John Miller>already built and then build new prompts
+to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/288-0
+00:22:44.136 --> 00:22:49.326
+<v John Miller>Allow those those agents to to to do the
+the kinds of work that we needed to be</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/288-1
+00:22:49.326 --> 00:22:52.700
+<v John Miller>able to do.
+And then finally we would combine these</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/288-2
+00:22:52.700 --> 00:22:57.176
+<v John Miller>into more complex workflows and establish
+some team usage standards,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/288-3
+00:22:57.176 --> 00:23:00.096
+<v John Miller>create some training materials and and
+then.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/289-0
+00:23:00.376 --> 00:23:05.896
+<v John Miller>Just continue to iterate on that to
+improve the I've been finding that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/290-0
+00:23:07.256 --> 00:23:12.143
+<v John Miller>You're all you know the the the first set
+of instruction files and prop files and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/290-1
+00:23:12.143 --> 00:23:14.885
+<v John Miller>the like.
+You know they they get you started,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/290-2
+00:23:14.885 --> 00:23:18.997
+<v John Miller>but you always tend to go back and
+iterate on them and improve them.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/290-3
+00:23:18.997 --> 00:23:22.216
+<v John Miller>And with instruction files it's nice
+because you can.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/291-0
+00:23:22.616 --> 00:23:26.088
+<v John Miller>Basically,
+I had to ask it to ask the A I to use the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/291-1
+00:23:26.088 --> 00:23:30.872
+<v John Miller>instruction file and evaluate the
+existing artifacts that you've created</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/291-2
+00:23:30.872 --> 00:23:35.262
+<v John Miller>using that and governed by that
+instruction file to make sure that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/291-3
+00:23:35.262 --> 00:23:39.456
+<v John Miller>there's that there's no technical debt
+that you're introducing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/292-0
+00:23:39.576 --> 00:23:45.338
+<v John Miller>By modifying instruction files. All right,
+you can go ahead and lower your hand if</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/292-1
+00:23:45.338 --> 00:23:47.976
+<v John Miller>you have if you don't have a question.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/293-0
+00:23:48.016 --> 00:23:48.896
+<v John Miller>Question.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/294-0
+00:23:52.016 --> 00:23:56.771
+<v John Miller>So now I want to talk about a workflow
+that I that I've been using that I think</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/294-1
+00:23:56.771 --> 00:24:01.348
+<v John Miller>is effective in terms of Greenfield
+development development and then you may</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/294-2
+00:24:01.348 --> 00:24:05.628
+<v John Miller>even be able to apply this to some
+brownfield work if you're adding new</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/294-3
+00:24:05.628 --> 00:24:06.936
+<v John Miller>features and the like.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/295-0
+00:24:07.656 --> 00:24:12.042
+<v John Miller>So you want to try to go from
+requirements to a solution.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/295-1
+00:24:12.042 --> 00:24:17.259
+<v John Miller>We have some requirements now,
+so the stakeholders will define those</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/295-2
+00:24:17.259 --> 00:24:22.628
+<v John Miller>requirements with AI assistance.
+So you know it's would be a a broader</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/295-3
+00:24:22.628 --> 00:24:23.536
+<v John Miller>activity to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/296-0
+00:24:23.536 --> 00:24:28.399
+<v John Miller>What I'm demonstrating here and what
+we've been doing by just creating the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/296-1
+00:24:28.399 --> 00:24:32.615
+<v John Miller>requirements document,
+but the requirements document has quite a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/296-2
+00:24:32.615 --> 00:24:36.052
+<v John Miller>bit of information that is relevant to
+these things.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/296-3
+00:24:36.052 --> 00:24:40.916
+<v John Miller>And then we use the AI to transform those
+requirements into implementation</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/296-4
+00:24:40.916 --> 00:24:43.056
+<v John Miller>structure files that would guide.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/297-0
+00:24:43.456 --> 00:24:49.468
+<v John Miller>That implementation.
+So that would be our next step is say OK,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/297-1
+00:24:49.468 --> 00:24:56.148
+<v John Miller>let's if we're going to this is going to
+be AC sharpasp.net using EF,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/297-2
+00:24:56.148 --> 00:25:01.016
+<v John Miller>you know using EFS EFS as a Entity
+Framework as a.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/298-0
+00:25:01.456 --> 00:25:08.144
+<v John Miller>As a front end to our persistence layer,
+we would want to add instruction files to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/298-1
+00:25:08.144 --> 00:25:14.672
+<v John Miller>the application in order for it to have
+have the guidance that it needs in order</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/298-2
+00:25:14.672 --> 00:25:17.896
+<v John Miller>to produce the output that that we want.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/299-0
+00:25:18.656 --> 00:25:22.677
+<v John Miller>So and then then after that,
+if we've got those file,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/299-1
+00:25:22.677 --> 00:25:27.740
+<v John Miller>those files are created,
+we would want to verify that by reviewing,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/299-2
+00:25:27.740 --> 00:25:32.729
+<v John Miller>improving and reviewing,
+improving and approving those instruction</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/299-3
+00:25:32.729 --> 00:25:33.176
+<v John Miller>files.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/300-0
+00:25:33.456 --> 00:25:38.769
+<v John Miller>So that they think that we're in a place
+where we can actually start to generate</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/300-1
+00:25:38.769 --> 00:25:42.574
+<v John Miller>some artifacts with it.
+Then we would ask AI to use those</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/300-2
+00:25:42.574 --> 00:25:47.560
+<v John Miller>instruction files to create prompts to
+implement the business requirements.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/300-3
+00:25:47.560 --> 00:25:51.561
+<v John Miller>So what you can do,
+what this does is it basically says, OK,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/300-4
+00:25:51.561 --> 00:25:53.136
+<v John Miller>if we're going to use a.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/301-0
+00:25:53.216 --> 00:25:58.653
+<v John Miller>Feature a vertical slicing implementation
+plan.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/301-1
+00:25:58.653 --> 00:26:07.150
+<v John Miller>We would create a profile for each
+feature that would encapsulate a couple</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/301-2
+00:26:07.150 --> 00:26:09.416
+<v John Miller>of things. It would.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/302-0
+00:26:10.336 --> 00:26:16.432
+<v John Miller>It would tell the A I how to go about
+implementing that particular feature in</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/302-1
+00:26:16.432 --> 00:26:22.762
+<v John Miller>conformance with the instruction files,
+and it would also include the validation</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/302-2
+00:26:22.762 --> 00:26:25.576
+<v John Miller>steps it needs to take in order for.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/303-0
+00:26:26.736 --> 00:26:35.030
+<v John Miller>In order for it to validate that it that
+it implemented the the the the that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/303-1
+00:26:35.030 --> 00:26:41.816
+<v John Miller>particular feature correctly and then it
+may include you also.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/304-0
+00:26:42.576 --> 00:26:49.926
+<v John Miller>Additional additional instructions that
+that are that would provide us with the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/304-1
+00:26:49.926 --> 00:26:57.369
+<v John Miller>ability to demonstrate that particular
+functionality and show that it's actually</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/304-2
+00:26:57.369 --> 00:27:01.136
+<v John Miller>working to to the stakeholders. So these.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/305-0
+00:27:01.456 --> 00:27:06.499
+<v John Miller>These profiles are are are are good
+because they encapsulate how we're going</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/305-1
+00:27:06.499 --> 00:27:11.739
+<v John Miller>about doing the implementation and then
+they allow us to hand off to the to AI,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/305-2
+00:27:11.739 --> 00:27:17.044
+<v John Miller>to an or to an agent and say now I want
+you to go ahead and implement this whole</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/305-3
+00:27:17.044 --> 00:27:18.616
+<v John Miller>this particular feature.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/306-0
+00:27:19.576 --> 00:27:27.096
+<v John Miller>And then verify that the implementation
+actually conforms to the the expectations.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/307-0
+00:27:29.256 --> 00:27:35.116
+<v John Miller>So that another side benefit to that is
+of course that we get the version control</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/307-1
+00:27:35.116 --> 00:27:40.691
+<v John Miller>that prompt file and potentially reuse
+that prompt file if we need to go back</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/307-2
+00:27:40.691 --> 00:27:44.336
+<v John Miller>and redo any implementation due to some
+some some.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/308-0
+00:27:44.896 --> 00:27:50.183
+<v John Miller>Some change that we need to make to
+improve the actual implementation and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/308-1
+00:27:50.183 --> 00:27:53.899
+<v John Miller>then you then you can go basically as I
+was saying,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/308-2
+00:27:53.899 --> 00:27:59.401
+<v John Miller>you could go one by one through those
+implementation props and execute them,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/308-3
+00:27:59.401 --> 00:28:00.616
+<v John Miller>which would then.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/309-0
+00:28:00.856 --> 00:28:05.975
+<v John Miller>Go go about and do that implementation
+and then you could actually review and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/309-1
+00:28:05.975 --> 00:28:09.256
+<v John Miller>approve that that portion of that
+implementation.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/309-2
+00:28:09.256 --> 00:28:14.703
+<v John Miller>So this is the general pattern that that
+that I think is a effective way of moving</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/309-3
+00:28:14.703 --> 00:28:20.216
+<v John Miller>from those business requirements all the
+way through to to an implemented solution.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/310-0
+00:28:20.456 --> 00:28:24.175
+<v John Miller>And which and so anyway,
+so I think we're gonna,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/310-1
+00:28:24.175 --> 00:28:30.550
+<v John Miller>we'll try to go about and do some of that
+in the next the rest of this day and into</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/310-2
+00:28:30.550 --> 00:28:33.890
+<v John Miller>tomorrow.
+So any any question on on this AI</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/310-3
+00:28:33.890 --> 00:28:35.256
+<v John Miller>assisted workflow?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/311-0
+00:28:40.496 --> 00:28:43.409
+<v John Miller>All right.
+So there's something that that's</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/311-1
+00:28:43.409 --> 00:28:48.905
+<v John Miller>mentioned here that that I think we want
+to create. I don't have a slide for this,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/311-2
+00:28:48.905 --> 00:28:54.334
+<v John Miller>but let's take a look at our requirements
+document for the technologies that it's</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/311-3
+00:28:54.334 --> 00:28:57.645
+<v John Miller>requested,
+it's suggesting that we implement this</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/311-4
+00:28:57.645 --> 00:28:57.976
+<v John Miller>with.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/312-0
+00:28:58.336 --> 00:29:02.779
+<v John Miller>And if we are,
+if we agree with that technology stack,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/312-1
+00:29:02.779 --> 00:29:08.273
+<v John Miller>let's go ahead and create instruction
+files for the most particular</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/312-2
+00:29:08.273 --> 00:29:12.474
+<v John Miller>technologies.
+And that can be a prompt as simple as</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/312-3
+00:29:12.474 --> 00:29:14.656
+<v John Miller>create an instruction file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/313-0
+00:29:15.136 --> 00:29:21.003
+<v John Miller>That defines the standards and
+conventions for C# for instance,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/313-1
+00:29:21.003 --> 00:29:26.504
+<v John Miller>and we can create a series of instruction
+files to do that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/313-2
+00:29:26.504 --> 00:29:29.896
+<v John Miller>So if I was to switch to our project.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/314-0
+00:29:31.296 --> 00:29:37.576
+<v John Miller>And my version of it and look at this
+construction file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/315-0
+00:29:39.136 --> 00:29:42.456
+<v John Miller>The the requirements document though I
+created.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/316-0
+00:29:46.016 --> 00:29:46.576
+<v John Miller>Yeah, let me.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/317-0
+00:29:50.496 --> 00:29:52.376
+<v John Miller>In my key binding which is working again.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/318-0
+00:29:55.496 --> 00:29:55.816
+<v John Miller>And.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/319-0
+00:30:00.656 --> 00:30:04.656
+<v John Miller>Make a look at what the technologies. Uh,
+if it has anything in here for that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/320-0
+00:30:09.376 --> 00:30:10.496
+<v John Miller>All right, so um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/321-0
+00:30:13.256 --> 00:30:18.456
+<v John Miller>So this has the personas,
+it has the primary objectives.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/322-0
+00:30:21.416 --> 00:30:23.096
+<v John Miller>But the features should be.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/323-0
+00:30:24.256 --> 00:30:27.616
+<v John Miller>So we see a number of features,
+some user stories.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/324-0
+00:30:29.976 --> 00:30:32.136
+<v John Miller>So here's our technology stack.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/325-0
+00:30:34.576 --> 00:30:37.496
+<v John Miller>And it provides here some.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/327-0
+00:30:39.616 --> 00:30:49.253
+<v John Miller>Suggestions for using React or or or view
+for a version one of adding complex state</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/327-1
+00:30:49.253 --> 00:30:55.104
+<v John Miller>management.
+So we're looking for a an HTML5CSS and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/327-2
+00:30:55.104 --> 00:30:58.776
+<v John Miller>vanilla JavaScript instructions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/328-0
+00:31:01.456 --> 00:31:05.416
+<v John Miller>So if I I took those and I go into.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/329-0
+00:31:08.856 --> 00:31:09.016
+<v John Miller>Our um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/330-0
+00:31:12.256 --> 00:31:16.136
+<v John Miller>Back here into our chat window and they
+created a new chat and I can say.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/331-0
+00:31:17.296 --> 00:31:24.216
+<v John Miller>Great construction files for the
+following.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/332-0
+00:31:27.936 --> 00:31:28.896
+<v John Miller>Technologies.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/333-0
+00:31:34.696 --> 00:31:35.856
+<v John Miller>Continuing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/334-0
+00:31:42.376 --> 00:31:43.736
+<v John Miller>The standards.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/335-0
+00:31:45.376 --> 00:31:46.216
+<v John Miller>And.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/336-0
+00:31:47.816 --> 00:31:48.656
+<v John Miller>Practices.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/337-0
+00:31:55.416 --> 00:31:58.016
+<v John Miller>And now let's do technologies.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/338-0
+00:32:03.416 --> 00:32:04.896
+<v John Miller>Let me go back.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/339-0
+00:32:06.096 --> 00:32:08.696
+<v John Miller>You here?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/340-0
+00:32:12.416 --> 00:32:13.896
+<v John Miller>And try to get those again.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/343-0
+00:32:33.696 --> 00:32:36.269
+<v John Miller>And here we can make two design choices.
+For example,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/343-1
+00:32:36.269 --> 00:32:39.652
+<v John Miller>if you didn't want vanilla JavaScript,
+you could specify that you want</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/343-2
+00:32:39.652 --> 00:32:40.176
+<v John Miller>TypeScript.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/344-0
+00:32:41.056 --> 00:32:44.536
+<v John Miller>Or whatever other technologies that you
+think are.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/345-0
+00:32:45.616 --> 00:32:46.496
+<v John Miller>Applicable.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/346-0
+00:32:52.336 --> 00:32:57.059
+<v John Miller>And so we'll go ahead and trigger that
+and let that run. Chris,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/346-1
+00:32:57.059 --> 00:32:58.536
+<v John Miller>you have a question.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/347-0
+00:33:01.816 --> 00:33:02.616
+<v John Miller>Christopher.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/348-0
+00:33:03.896 --> 00:33:06.136
+<v Rockwell, Christopher L>Sorry, that was an accident.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/349-0
+00:33:06.336 --> 00:33:07.376
+<v John Miller>No worries.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/350-0
+00:33:08.336 --> 00:33:11.456
+<v John Miller>Anybody else have any questions on this
+exercise?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/352-0
+00:33:20.336 --> 00:33:24.136
+<v Dan Blanchard>So for this we're not creating prompts to
+create the instruction files.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/353-0
+00:33:25.096 --> 00:33:28.679
+<v John Miller>No,
+but that would be I I think a good step</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/353-1
+00:33:28.679 --> 00:33:31.936
+<v John Miller>in a if you were going into a more of a.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/354-0
+00:33:32.896 --> 00:33:37.419
+<v John Miller>If you wanted to capture these and record
+them in in source control, yeah,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/354-1
+00:33:37.419 --> 00:33:41.520
+<v John Miller>I I would create prompt files to to
+create these instruction files.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/354-2
+00:33:41.520 --> 00:33:44.656
+<v John Miller>That's a a good point.
+Thanks for bringing that up.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/355-0
+00:33:45.056 --> 00:33:49.091
+<v Dan Blanchard>And then also we would we would it do
+this automatically or do we need to we</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/355-1
+00:33:49.091 --> 00:33:53.336
+<v Dan Blanchard>would want to prompt it to like specify
+which file you know file extensions it's</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/355-2
+00:33:53.336 --> 00:33:56.586
+<v Dan Blanchard>gonna apply these to.
+Is that is that going to do those apply</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/355-3
+00:33:56.586 --> 00:33:59.416
+<v Dan Blanchard>for us or is that something we need to do
+on our own?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/356-0
+00:33:59.936 --> 00:34:02.834
+<v John Miller>Well,
+we'll take a look at what it creates and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/356-1
+00:34:02.834 --> 00:34:06.226
+<v John Miller>see what it applies to,
+but it's going to be using the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/356-2
+00:34:06.226 --> 00:34:09.742
+<v John Miller>instruction files for creating
+instruction files, right?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/356-3
+00:34:09.742 --> 00:34:14.490
+<v John Miller>To actually define what's going to be
+contained in that and the files that I</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/356-4
+00:34:14.490 --> 00:34:18.376
+<v John Miller>got put it generates here.
+So that'll be the first place that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/357-0
+00:34:18.896 --> 00:34:21.736
+<v John Miller>That we would go to if we didn't like the
+output.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/374-0
+00:35:16.416 --> 00:35:18.303
+<v John Miller>All right,
+so mine's still working on those</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/374-1
+00:35:18.303 --> 00:35:20.576
+<v John Miller>instruction files.
+That hasn't created anything yet.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/378-0
+00:35:27.576 --> 00:35:31.206
+<v John Miller>So once you see the instruction files get
+generated,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/378-1
+00:35:31.206 --> 00:35:36.891
+<v John Miller>go ahead and and start to review them and
+see if you can identify anything that in</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/378-2
+00:35:36.891 --> 00:35:38.056
+<v John Miller>those files that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/379-0
+00:35:40.256 --> 00:35:43.376
+<v John Miller>That's notable or concerning.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/396-0
+00:36:29.936 --> 00:36:33.496
+<v John Miller>We had to raise your hand when you
+finished the exercise.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/404-0
+00:36:59.016 --> 00:37:01.976
+<v John Miller>Right,
+so I'm getting close to creating a file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/405-0
+00:37:06.976 --> 00:37:11.576
+<v Matt Hoffman>Mine made them pretty quickly,
+but it's because they are are very short.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/406-0
+00:37:13.296 --> 00:37:13.536
+<v John Miller>Hmm.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/407-0
+00:37:19.856 --> 00:37:21.736
+<v John Miller>I wonder why I had this one.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/408-0
+00:37:24.176 --> 00:37:26.376
+<v John Miller>Do you know what model you're using?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/409-0
+00:37:28.816 --> 00:37:30.376
+<v Matt Hoffman>Uh GBT 4.1.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/410-0
+00:37:31.736 --> 00:37:31.976
+<v John Miller>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/411-0
+00:37:34.096 --> 00:37:37.488
+<v Matt Hoffman>Basically everything we've done so far,
+uh,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/411-1
+00:37:37.488 --> 00:37:42.576
+<v Matt Hoffman>I've gotten less output than what you
+have, John, on quads on it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/412-0
+00:37:46.656 --> 00:37:51.202
+<v John Miller>Well,
+I do find Claude Sonnett to be very</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/412-1
+00:37:51.202 --> 00:37:54.016
+<v John Miller>comprehensive in his work.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/413-0
+00:37:56.096 --> 00:37:58.056
+<v John Miller>So I think that would probably be there.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/414-0
+00:38:00.056 --> 00:38:02.016
+<v John Miller>Contributing factors of it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/415-0
+00:38:02.976 --> 00:38:04.496
+<v John Miller>So looks like I'm starting to get.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/416-0
+00:38:04.416 --> 00:38:06.783
+<v Matt Hoffman>Right,
+but I don't have access to that one,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/416-1
+00:38:06.783 --> 00:38:07.536
+<v Matt Hoffman>unfortunately.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/417-0
+00:38:07.296 --> 00:38:10.536
+<v John Miller>Yeah, I I can understand that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/420-0
+00:38:21.496 --> 00:38:24.404
+<v John Miller>All right,
+so it's basically writing out the the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/420-1
+00:38:24.404 --> 00:38:28.736
+<v John Miller>conversation history at this point,
+so I think I can take a look at the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/421-0
+00:38:29.936 --> 00:38:33.776
+<v John Miller>A generated instruction file and let's go
+ahead and.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/422-0
+00:38:36.016 --> 00:38:36.936
+<v John Miller>And do that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/423-0
+00:38:40.816 --> 00:38:46.029
+<v John Miller>So basically this is defining the
+canonical standards and best practices</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/423-1
+00:38:46.029 --> 00:38:51.028
+<v John Miller>for HTML5CSS and vanilla JavaScript.
+It's the target audience here is</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/423-2
+00:38:51.028 --> 00:38:56.527
+<v John Miller>primarily the AI assistance with the
+front end developers and web developers</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/423-3
+00:38:56.527 --> 00:38:57.456
+<v John Miller>as secondary.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/424-0
+00:38:59.096 --> 00:39:04.082
+<v John Miller>Consumers of this file,
+comprehensive guidelines covering the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/424-1
+00:39:04.082 --> 00:39:08.104
+<v John Miller>semantic HTML5 markup, accessibility,
+modern CSS,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/424-2
+00:39:08.104 --> 00:39:14.136
+<v John Miller>and no JavaScript cross-browser
+compatibility and progressive enhancement.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/425-0
+00:39:14.496 --> 00:39:18.448
+<v John Miller>Performance budgets and optimization
+strategies,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/425-1
+00:39:18.448 --> 00:39:23.692
+<v John Miller>security considerations and best
+practices and then some related</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/425-2
+00:39:23.692 --> 00:39:29.016
+<v John Miller>documentation that talks about the the
+making a reference to the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/426-0
+00:39:29.976 --> 00:39:34.829
+<v John Miller>Requirements document and then of course
+the AI assisted output instructions are</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/426-1
+00:39:34.829 --> 00:39:38.605
+<v John Miller>are mentioned as well.
+So then basically we're just looking at</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/426-2
+00:39:38.605 --> 00:39:43.099
+<v John Miller>the table of contents we're doing at the
+HTML5 standards, semantic markup,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/426-3
+00:39:43.099 --> 00:39:45.736
+<v John Miller>accessibility,
+document document structure.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/427-0
+00:39:46.096 --> 00:39:52.416
+<v John Miller>With the forms and input validation
+should be meta tags then CSS 3 standards.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/428-0
+00:39:53.616 --> 00:39:57.887
+<v John Miller>Then we have the JavaScript standards
+followed by the cross-cutting concerns</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/428-1
+00:39:57.887 --> 00:40:00.494
+<v John Miller>and then a validation checklist and a
+summary.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/428-2
+00:40:00.494 --> 00:40:03.324
+<v John Miller>If we could drop down to the validation
+checklist,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/428-3
+00:40:03.324 --> 00:40:07.651
+<v John Miller>we could see here that these are the
+things that it's going to be looking for</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/428-4
+00:40:07.651 --> 00:40:08.816
+<v John Miller>when it's evaluating.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/429-0
+00:40:09.216 --> 00:40:09.296
+<v John Miller>Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/430-0
+00:40:12.336 --> 00:40:16.552
+<v John Miller>When it's evaluating the the the output
+that it's producing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/430-1
+00:40:16.552 --> 00:40:21.736
+<v John Miller>So it's looking for all HTML documents,
+including for dot types, etcetera.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/430-2
+00:40:21.736 --> 00:40:26.989
+<v John Miller>And you know what the CSS validation
+should look like to what it's checking</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/430-3
+00:40:26.989 --> 00:40:30.376
+<v John Miller>there and what's be checking for for
+JavaScript.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/431-0
+00:40:30.816 --> 00:40:34.316
+<v John Miller>What? What?
+What will it be looking for when it's</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/431-1
+00:40:34.316 --> 00:40:38.376
+<v John Miller>looking for security violations?
+Performance validations?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/432-0
+00:40:38.416 --> 00:40:38.776
+<v John Miller>Patients.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/433-0
+00:40:40.256 --> 00:40:41.576
+<v John Miller>The browser compatibility.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/435-0
+00:40:44.656 --> 00:40:49.136
+<v John Miller>And then there's a summary here of what
+those requirements are.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/436-0
+00:40:50.016 --> 00:40:52.656
+<v John Miller>I did. Did you have a question, Chris?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/437-0
+00:40:54.656 --> 00:40:56.136
+<v John Miller>Are you just saying you're done?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/438-0
+00:40:59.216 --> 00:41:00.536
+<v Dan Blanchard>I have a question.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/439-0
+00:40:59.256 --> 00:41:00.416
+<v Chris Bishop>Sorry, I'm done. Yep.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/440-0
+00:41:02.096 --> 00:41:02.816
+<v John Miller>Yeah, go ahead.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/443-0
+00:41:03.016 --> 00:41:07.611
+<v Dan Blanchard>So mine did not include in validations,
+which I think are really helpful.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/443-1
+00:41:07.611 --> 00:41:12.641
+<v Dan Blanchard>Are you gonna commit the ones that you
+created into the repost so we can see the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/443-2
+00:41:12.641 --> 00:41:14.256
+<v Dan Blanchard>what you what you created?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/442-0
+00:41:14.256 --> 00:41:15.056
+<v John Miller>Yeah, sure.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/444-0
+00:41:16.296 --> 00:41:16.416
+<v Dan Blanchard>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/445-0
+00:41:16.576 --> 00:41:19.736
+<v John Miller>Right. Yeah, you you can commit yours,
+but don't merge your branch down to Maine.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/447-0
+00:41:20.296 --> 00:41:24.619
+<v Dan Blanchard>Yeah, yeah. But no,
+because yours seem a lot more, yeah,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/447-1
+00:41:24.619 --> 00:41:30.003
+<v Dan Blanchard>you have a lot more information.
+So it would be great to see yours and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/446-0
+00:41:26.776 --> 00:41:27.976
+<v John Miller>Cool, right?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/447-2
+00:41:30.003 --> 00:41:35.616
+<v Dan Blanchard>then use that to to add to our prompts to
+say, OK, make sure you include.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/449-0
+00:41:36.096 --> 00:41:39.186
+<v John Miller>Right, right.
+And you know just going back to the point</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/448-0
+00:41:36.136 --> 00:41:36.776
+<v Dan Blanchard>Validation.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/449-1
+00:41:39.186 --> 00:41:43.546
+<v John Miller>that the you know if the if what you're
+getting is different from what I'm I'm</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/449-2
+00:41:43.546 --> 00:41:47.905
+<v John Miller>getting you know there are a number of
+different reasons for that but you just</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/449-3
+00:41:47.905 --> 00:41:52.486
+<v John Miller>need to be aware that if these documents
+are different than my documents then it's</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/449-4
+00:41:52.486 --> 00:41:53.976
+<v John Miller>we're going to continue to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/450-0
+00:41:54.576 --> 00:41:56.826
+<v John Miller>Uh,
+deviate as we get farther into the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/450-1
+00:41:56.826 --> 00:41:58.096
+<v John Miller>implementation, right?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/451-0
+00:41:59.056 --> 00:42:04.196
+<v John Miller>So what I may do is I commit these
+changes and if you want to adopt these</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/451-1
+00:42:04.196 --> 00:42:08.642
+<v John Miller>this instruction file,
+you can go ahead and do a you know a a a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/451-2
+00:42:08.642 --> 00:42:14.407
+<v John Miller>poll from my branch and into your branch
+and you can get the the latest version of</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/451-3
+00:42:14.407 --> 00:42:14.616
+<v John Miller>it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/452-0
+00:42:15.256 --> 00:42:15.536
+<v John Miller>S.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/457-0
+00:42:23.216 --> 00:42:27.384
+<v John Miller>All right, so that looks good.
+So why don't I do what I said I was gonna</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/457-1
+00:42:27.384 --> 00:42:31.382
+<v John Miller>do and I will take a look at what changes
+I've made. There should be.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/457-2
+00:42:31.382 --> 00:42:34.580
+<v John Miller>There's an update to the read me,
+the web technologies,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/457-3
+00:42:34.580 --> 00:42:38.977
+<v John Miller>the conversation and the summary files.
+So those are all legitimate changes.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/457-4
+00:42:38.977 --> 00:42:40.576
+<v John Miller>I've been finding that if I.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/458-0
+00:42:41.966 --> 00:42:45.188
+<v John Miller>Only add the actual file that I'm
+changing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/458-1
+00:42:45.188 --> 00:42:50.168
+<v John Miller>I get a I get a better description for
+the changes that I'm making,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/458-2
+00:42:50.168 --> 00:42:54.781
+<v John Miller>but I didn't this time.
+So implement feature X to enhance user</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/458-3
+00:42:54.781 --> 00:43:00.274
+<v John Miller>experience and optimize performance.
+That's a I see that generically every</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/458-4
+00:43:00.274 --> 00:43:01.446
+<v John Miller>once in a while.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/459-0
+00:43:01.576 --> 00:43:04.736
+<v John Miller>And uh, so I'll just add the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/460-0
+00:43:07.656 --> 00:43:08.616
+<v John Miller>Web tech instructions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/461-0
+00:43:14.576 --> 00:43:21.896
+<v John Miller>And add the rest of these to the genes
+set and go ahead and post that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/468-0
+00:43:38.216 --> 00:43:43.491
+<v Dan Blanchard>Yeah, mine created one file for each.
+It created one for CSS31 for HTML51 for</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/468-1
+00:43:43.491 --> 00:43:44.776
+<v Dan Blanchard>vanilla JavaScript.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/471-0
+00:43:48.536 --> 00:43:51.840
+<v John Miller>Yeah, like I said, you know,
+it's non deterministic.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/471-1
+00:43:51.840 --> 00:43:56.765
+<v John Miller>What you get next time will be different.
+It's sometimes why it's a good idea,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/471-2
+00:43:56.765 --> 00:43:57.576
+<v John Miller>you know, to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/472-0
+00:43:58.616 --> 00:44:05.296
+<v John Miller>Now you could switch this from Claude to
+go to Gemini and say.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/473-0
+00:44:09.176 --> 00:44:10.176
+<v John Miller>Review.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/474-0
+00:44:12.736 --> 00:44:14.856
+<v John Miller>Release instructions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/475-0
+00:44:18.176 --> 00:44:23.896
+<v John Miller>Or errors and uh machines.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/476-0
+00:44:38.976 --> 00:44:43.117
+<v John Miller>And they'll go ahead and make an
+evaluation using your different model and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/476-1
+00:44:43.117 --> 00:44:45.934
+<v John Miller>see if it thinks there's a a a different
+approach.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/476-2
+00:44:45.934 --> 00:44:49.523
+<v John Miller>And then you can now that you have two
+different versions of it,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/476-3
+00:44:49.523 --> 00:44:53.776
+<v John Miller>you can start to determine which things
+you like out of each and build your.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/477-0
+00:44:54.296 --> 00:44:58.837
+<v John Miller>Instructions from more than one source.
+Not necessarily a a a a bad idea,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/477-1
+00:44:58.837 --> 00:45:03.439
+<v John Miller>particularly at this stage of the
+development process when it's, you know,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/477-2
+00:45:03.439 --> 00:45:08.287
+<v John Miller>critical that you get these files in a
+state that you're really happy with and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/477-3
+00:45:08.287 --> 00:45:10.496
+<v John Miller>that they're as complete as you can.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/478-0
+00:45:12.016 --> 00:45:13.656
+<v John Miller>As you can make them.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/479-0
+00:45:18.336 --> 00:45:20.496
+<v John Miller>All right.
+Raise your hand if you need more time.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/480-0
+00:45:29.896 --> 00:45:34.356
+<v John Miller>All right, so I pushed those changes,
+so feel free to merge them into your</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/480-1
+00:45:34.356 --> 00:45:37.270
+<v John Miller>branch.
+So let's go back to the slides and let's</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/480-2
+00:45:37.270 --> 00:45:38.936
+<v John Miller>talk about vertical slicing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/481-0
+00:45:44.816 --> 00:45:48.361
+<v John Miller>So vertical slicing are is an
+architectural pattern,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/481-1
+00:45:48.361 --> 00:45:52.175
+<v John Miller>although I kind of consider it more of a
+well, it isn't.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/481-2
+00:45:52.175 --> 00:45:57.527
+<v John Miller>It is an architectural pattern in the
+sense that it's dividing the architecture</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/481-3
+00:45:57.527 --> 00:46:00.136
+<v John Miller>up in a quite a bit different way than.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/482-0
+00:46:00.496 --> 00:46:04.016
+<v John Miller>Traditional applications have been
+implemented.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/482-1
+00:46:04.016 --> 00:46:09.442
+<v John Miller>It's where it's focused more on the
+features that are get implemented and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/482-2
+00:46:09.442 --> 00:46:15.309
+<v John Miller>trying to implement those features is
+complete capabilities so that they can be</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/482-3
+00:46:15.309 --> 00:46:19.196
+<v John Miller>demonstrated.
+It's it spans all the technical layers</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/482-4
+00:46:19.196 --> 00:46:19.856
+<v John Miller>vertical.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/483-0
+00:46:19.856 --> 00:46:25.453
+<v John Miller>As opposed to from a layered approach,
+which is more horizontal in its approach,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/483-1
+00:46:25.453 --> 00:46:30.775
+<v John Miller>everything that's needed for a feature
+together. So it's all self-contained,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/483-2
+00:46:30.775 --> 00:46:34.921
+<v John Miller>it's independent,
+so features don't directly reference each</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/483-3
+00:46:34.921 --> 00:46:35.336
+<v John Miller>other.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/484-0
+00:46:35.976 --> 00:46:41.251
+<v John Miller>And then this can make it much more
+maintainable because either the changes</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/484-1
+00:46:41.251 --> 00:46:46.387
+<v John Miller>are localized into a single feature
+folder as opposed to dividing up your</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/484-2
+00:46:46.387 --> 00:46:47.776
+<v John Miller>project into layers.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/485-0
+00:46:48.656 --> 00:46:54.191
+<v John Miller>So this is a kind of a a look at what the
+a later approach would look like from a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/485-1
+00:46:54.191 --> 00:46:57.768
+<v John Miller>file structure perspective versus a
+vertical slices.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/485-2
+00:46:57.768 --> 00:47:02.358
+<v John Miller>So instead of controllers and services
+and repositories and models,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/485-3
+00:47:02.358 --> 00:47:04.856
+<v John Miller>you would have a folder for features.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/486-0
+00:47:05.896 --> 00:47:09.038
+<v John Miller>And then you would have an individual
+feature,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/486-1
+00:47:09.038 --> 00:47:14.186
+<v John Miller>for example user user registration.
+And then you would have the code related</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/486-2
+00:47:14.186 --> 00:47:19.134
+<v John Miller>to user registration all in a single
+place that you where if you have any</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/486-3
+00:47:19.134 --> 00:47:24.216
+<v John Miller>issues or you want to do any enhancements
+in user registration, you can go.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/487-0
+00:47:24.496 --> 00:47:30.727
+<v John Miller>Here and feel confident that you have all
+the code on hand that you can need to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/487-1
+00:47:30.727 --> 00:47:36.336
+<v John Miller>actually make these the modification or
+improve on that particular that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/487-2
+00:47:36.336 --> 00:47:37.816
+<v John Miller>particular feature.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/488-0
+00:47:40.336 --> 00:47:44.996
+<v John Miller>So one some of the benefits of this is
+you got some developer experience</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/488-1
+00:47:44.996 --> 00:47:48.763
+<v John Miller>benefits in that it's it's faster for
+feature development.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/488-2
+00:47:48.763 --> 00:47:52.465
+<v John Miller>All the related code is upset is in in a
+single location.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/488-3
+00:47:52.465 --> 00:47:56.296
+<v John Miller>You don't gotta jump between folders and
+then and features.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/489-0
+00:47:56.776 --> 00:48:01.430
+<v John Miller>Don't affect existing ones.
+Easier maintenance because those changes</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/489-1
+00:48:01.430 --> 00:48:05.815
+<v John Miller>are isolated into a feature.
+Clear boundaries to reduce bugs and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/489-2
+00:48:05.815 --> 00:48:09.256
+<v John Miller>refactoring is also contained within that
+feature.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/490-0
+00:48:10.616 --> 00:48:15.891
+<v John Miller>Developers work on separate features
+simultaneously, fewer merge conflicts,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/490-1
+00:48:15.891 --> 00:48:20.889
+<v John Miller>clear ownership and responsibility,
+and you can test complete features,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/490-2
+00:48:20.889 --> 00:48:23.944
+<v John Miller>not layers,
+and you can mock at the feature</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/490-3
+00:48:23.944 --> 00:48:28.456
+<v John Miller>boundaries so that your your work can can
+proceed independently.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/491-0
+00:48:28.896 --> 00:48:33.351
+<v John Miller>Of other features that are being
+implemented and the integration tasks are</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/491-1
+00:48:33.351 --> 00:48:38.222
+<v John Miller>more straightforward than they would be
+if you were trying to deal with a more of</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/491-2
+00:48:38.222 --> 00:48:41.846
+<v John Miller>a layered approach.
+Now the only reason I'm introducing this</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/491-3
+00:48:41.846 --> 00:48:44.816
+<v John Miller>concept into the application is that it
+provides.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/492-0
+00:48:44.896 --> 00:48:49.932
+<v John Miller>The ability to, you know,
+to implement a small portion of the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/492-1
+00:48:49.932 --> 00:48:55.456
+<v John Miller>application and then get, you know,
+feedback immediately about that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/492-2
+00:48:55.456 --> 00:49:00.736
+<v John Miller>implementation so we don't have to
+actually complete the entire.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/493-0
+00:49:00.976 --> 00:49:05.957
+<v John Miller>Road map in order for us to actually see
+the results of that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/493-1
+00:49:05.957 --> 00:49:12.385
+<v John Miller>And so also this actually dovetails with
+other architectural patterns that that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/493-2
+00:49:12.385 --> 00:49:19.134
+<v John Miller>I've used that I that are I think closely
+associated with this which is the command</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/493-3
+00:49:19.134 --> 00:49:19.616
+<v John Miller>query.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/494-0
+00:49:21.496 --> 00:49:22.496
+<v John Miller>Um uh.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/495-0
+00:49:24.176 --> 00:49:25.456
+<v John Miller>Response.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/496-0
+00:49:27.136 --> 00:49:30.797
+<v John Miller>Segregation,
+which is basically you separate the the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/496-1
+00:49:30.797 --> 00:49:35.908
+<v John Miller>display of the application from the data
+collection and you could have it</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/496-2
+00:49:35.908 --> 00:49:41.365
+<v John Miller>essentially to have it essentially two
+different stacks that are joined by a a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/496-3
+00:49:41.365 --> 00:49:42.056
+<v John Miller>messaging.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/497-0
+00:49:42.256 --> 00:49:46.596
+<v John Miller>System that allow you to optimize for
+each.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/497-1
+00:49:46.596 --> 00:49:50.936
+<v John Miller>So for many applications you you read
+data.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/498-0
+00:49:52.416 --> 00:49:56.130
+<v John Miller>Much more often than you actually change
+data.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/498-1
+00:49:56.130 --> 00:50:02.689
+<v John Miller>This allows you to optimize the the read
+side for performance by doing things like</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/498-2
+00:50:02.689 --> 00:50:07.431
+<v John Miller>denormalizing the the the schemas that
+you're reading from.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/498-3
+00:50:07.431 --> 00:50:11.936
+<v John Miller>You can do things on on that side to try
+to improve the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/499-0
+00:50:11.936 --> 00:50:17.452
+<v John Miller>The the user experience from the read
+side and then you have a a back end</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/499-1
+00:50:17.452 --> 00:50:22.297
+<v John Miller>that's optimized for updating and
+updating the data so that that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/499-2
+00:50:22.297 --> 00:50:28.187
+<v John Miller>essentially creates a a situation where
+you can push a lot of data in when you</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/499-3
+00:50:28.187 --> 00:50:31.616
+<v John Miller>need to and then show a lot of data when
+you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/500-0
+00:50:31.976 --> 00:50:35.419
+<v John Miller>During the normal course of the
+application.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/500-1
+00:50:35.419 --> 00:50:41.616
+<v John Miller>So that's an interesting pattern that you
+could investigate and you can and that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/500-2
+00:50:41.616 --> 00:50:47.048
+<v John Miller>dovetails really nice with vertical
+slices in the sense that you would</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/500-3
+00:50:47.048 --> 00:50:51.256
+<v John Miller>implement the read and the write portions
+of the CQRS.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/501-0
+00:50:51.296 --> 00:50:55.182
+<v John Miller>Implementation simultaneously for the
+individual features.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/501-1
+00:50:55.182 --> 00:51:00.517
+<v John Miller>Questions so far on vertical slices and
+what they're why they're relevant for us</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/501-2
+00:51:00.517 --> 00:51:01.176
+<v John Miller>right now.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/503-0
+00:51:05.376 --> 00:51:08.364
+<v John Miller>All right,
+so let's talk about the implementation</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/503-1
+00:51:08.364 --> 00:51:13.146
+<v John Miller>prompts and implementation verification.
+I kind of touched on this. Is that OK?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/503-2
+00:51:13.146 --> 00:51:17.689
+<v John Miller>In fact, before we get into that,
+why don't we do an exercise and see if we</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/503-3
+00:51:17.689 --> 00:51:21.336
+<v John Miller>can actually divide up our application
+into vertical slices?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/504-0
+00:51:22.456 --> 00:51:29.582
+<v John Miller>I had I posted into the the repo an
+instruction file for that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/504-1
+00:51:29.582 --> 00:51:32.976
+<v John Miller>You can find that on the main.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/505-0
+00:51:34.176 --> 00:51:40.491
+<v John Miller>A Greenfield branch and it is the the web
+technology one. So let's close all these.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/505-1
+00:51:40.491 --> 00:51:42.296
+<v John Miller>It's a instruction file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/506-0
+00:51:44.136 --> 00:51:49.857
+<v John Miller>For planning vertical slices.
+So here's our vertical slice planning</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/506-1
+00:51:49.857 --> 00:51:56.336
+<v John Miller>instructions file and let me bring this
+up and just show you what it's like.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/507-0
+00:52:01.056 --> 00:52:05.736
+<v John Miller>And basically what it's trying to do here
+is to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/508-0
+00:52:07.136 --> 00:52:12.134
+<v John Miller>It's basically trying to trying to.
+It's basically trying to provide</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/508-1
+00:52:12.134 --> 00:52:17.929
+<v John Miller>strategies for taking a a requirements
+document and breaking that down into the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/508-2
+00:52:17.929 --> 00:52:22.928
+<v John Miller>vertical slices implementation.
+So the key part of this is the slice</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/508-3
+00:52:22.928 --> 00:52:25.536
+<v John Miller>identification and strategy section.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/509-0
+00:52:26.336 --> 00:52:31.088
+<v John Miller>It talks about how to go about this and
+it proposes a a number of different</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/509-1
+00:52:31.088 --> 00:52:31.776
+<v John Miller>strategies.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/510-0
+00:52:33.616 --> 00:52:38.249
+<v John Miller>So this approach breaks features down by
+the discrete user actions they need to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/510-1
+00:52:38.249 --> 00:52:40.913
+<v John Miller>take.
+So you could list every action they can</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/510-2
+00:52:40.913 --> 00:52:45.604
+<v John Miller>take and then for each action identify
+the the complete request to response flow</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/510-3
+00:52:45.604 --> 00:52:48.616
+<v John Miller>where each response flow is done a
+candidate slice.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/511-0
+00:52:49.056 --> 00:52:54.855
+<v John Miller>Or you can list all the entities and for
+each entity identify CRUD operations that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/511-1
+00:52:54.855 --> 00:52:59.327
+<v John Miller>needed to be performed.
+You can create slices for those and you</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/511-2
+00:52:59.327 --> 00:53:04.428
+<v John Miller>can look at the workflow stage
+decomposition strategy and split multiple</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/511-3
+00:53:04.428 --> 00:53:05.896
+<v John Miller>stage workflows into.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/512-0
+00:53:05.936 --> 00:53:07.736
+<v John Miller>The slices per stage.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/513-0
+00:53:09.056 --> 00:53:13.334
+<v John Miller>And then or a business event
+decomposition that identifies slices by</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/513-1
+00:53:13.334 --> 00:53:15.256
+<v John Miller>the business events that occur.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/514-0
+00:53:16.256 --> 00:53:22.715
+<v John Miller>Here's one that's optimized for that that
+CQRS architecture that looks at the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/514-1
+00:53:22.715 --> 00:53:29.174
+<v John Miller>separates all reads from writes as a
+distinct slices and then and and then it</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/514-2
+00:53:29.174 --> 00:53:31.576
+<v John Miller>goes through a decomposition.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/515-0
+00:53:32.216 --> 00:53:36.176
+<v John Miller>Principles where it talks about.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/516-0
+00:53:37.256 --> 00:53:41.496
+<v John Miller>Principles that we would use for
+decomposition that we want a single</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/516-1
+00:53:41.496 --> 00:53:46.658
+<v John Miller>responsibility each slice to do one thing
+and do it well about each we want to have</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/516-2
+00:53:46.658 --> 00:53:48.256
+<v John Miller>a complete vertical stack.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/517-0
+00:53:49.296 --> 00:53:54.651
+<v John Miller>We want no horizontal sharing,
+so slices do not depend on other slices,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/517-1
+00:53:54.651 --> 00:54:00.304
+<v John Miller>minimize an external dependencies,
+and then there's some slicing guidelines</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/517-2
+00:54:00.304 --> 00:54:02.536
+<v John Miller>about not making them too big.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/518-0
+00:54:03.936 --> 00:54:11.152
+<v John Miller>Or too small a a decision tree for making
+the decision on which strategies or how</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/518-1
+00:54:11.152 --> 00:54:17.488
+<v John Miller>to go about that decomposition and then
+analysis for data dependencies,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/518-2
+00:54:17.488 --> 00:54:19.336
+<v John Miller>service dependencies.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/519-0
+00:54:19.976 --> 00:54:23.782
+<v John Miller>And the like.
+So we could use this instruction file</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/519-1
+00:54:23.782 --> 00:54:26.856
+<v John Miller>then to to to go and say OK and using our.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/520-0
+00:54:28.096 --> 00:54:31.736
+<v John Miller>Um, our vertical slice planning in our.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/521-0
+00:54:34.176 --> 00:54:40.896
+<v John Miller>There we go. Using these two documents,
+I want to go ahead and create a.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/522-0
+00:54:41.936 --> 00:54:44.616
+<v John Miller>An implementation plan.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/523-0
+00:54:47.216 --> 00:54:47.336
+<v John Miller>So.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/524-0
+00:54:56.296 --> 00:55:02.536
+<v John Miller>So using our vertical flight planning
+instructions and the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/525-0
+00:55:06.016 --> 00:55:14.216
+<v John Miller>The where is the you know there's our web
+calculator requirements documents.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/526-0
+00:55:18.616 --> 00:55:18.776
+<v John Miller>Great.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/527-0
+00:55:19.936 --> 00:55:20.016
+<v John Miller>Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/528-0
+00:55:22.696 --> 00:55:31.456
+<v John Miller>Complementation plan using verbal the
+call slices.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/531-0
+00:55:39.096 --> 00:55:41.890
+<v John Miller>And we'll let that think,
+think about that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/531-1
+00:55:41.890 --> 00:55:46.590
+<v John Miller>So go ahead and try it out yourself and
+and let's see if we can get this,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/531-2
+00:55:46.590 --> 00:55:49.576
+<v John Miller>we can break this down into individual
+slices.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/532-0
+00:55:55.776 --> 00:55:57.824
+<v John Miller>All right.
+Raise your hand and like you can lower</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/532-1
+00:55:57.824 --> 00:55:59.136
+<v John Miller>your hand when you've completed.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/536-0
+00:56:26.216 --> 00:56:28.256
+<v John Miller>All right, so it's.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/537-0
+00:56:35.896 --> 00:56:38.051
+<v John Miller>All right,
+so I created a web calculator</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/537-1
+00:56:38.051 --> 00:56:39.576
+<v John Miller>implementation plan document.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/538-0
+00:56:41.136 --> 00:56:44.939
+<v John Miller>And it breaks this down to a summary of
+the requirements,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/538-1
+00:56:44.939 --> 00:56:49.529
+<v John Miller>identification and decomposition of each
+slice, a dependency diagram,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/538-2
+00:56:49.529 --> 00:56:51.496
+<v John Miller>and a proposed implementation.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/540-0
+00:57:01.856 --> 00:57:04.439
+<v Dan Blanchard>I'm sorry,
+we're supposed to do the vertical slice</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/540-1
+00:57:04.439 --> 00:57:08.136
+<v Dan Blanchard>or we're supposed to create the plan?
+I'm just looking at the documents.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/541-0
+00:57:07.096 --> 00:57:10.331
+<v John Miller>Write the plan.
+We're just we're on a we want to look at</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/541-1
+00:57:10.331 --> 00:57:11.296
+<v John Miller>look at the plan.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/542-0
+00:57:14.176 --> 00:57:16.772
+<v John Miller>First,
+because we're going to use the plan to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/542-1
+00:57:16.772 --> 00:57:19.256
+<v John Miller>actually create the implementation
+prompts.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/543-0
+00:57:24.256 --> 00:57:26.896
+<v Dan Blanchard>So we're just looking at it or we're
+actually creating one ourselves.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/544-0
+00:57:26.896 --> 00:57:28.936
+<v John Miller>I go ahead and create one.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/545-0
+00:57:33.336 --> 00:57:36.153
+<v John Miller>You'll need it to, like I said,
+to do the next step,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/545-1
+00:57:36.153 --> 00:57:37.376
+<v John Miller>which is to create the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/546-0
+00:57:38.776 --> 00:57:39.496
+<v John Miller>The probs.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/547-0
+00:57:42.176 --> 00:57:43.456
+<v John Miller>That we're going to implement.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/548-0
+00:57:56.816 --> 00:57:56.936
+<v John Miller>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/555-0
+00:58:15.176 --> 00:58:20.551
+<v Dan Blanchard>So we shouldn't use the latest your
+latest brand because you have it in there,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/555-1
+00:58:20.551 --> 00:58:22.456
+<v Dan Blanchard>right? It might use that or?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/556-0
+00:58:23.216 --> 00:58:27.056
+<v John Miller>Are you that in the instruction file you
+are you talking about?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/557-0
+00:58:26.856 --> 00:58:27.096
+<v Dan Blanchard>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/558-0
+00:58:28.896 --> 00:58:31.948
+<v John Miller>Yeah, you can. You can use that file.
+If you want,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/558-1
+00:58:31.948 --> 00:58:36.796
+<v John Miller>I can post it into chat and save you the
+trouble of going into the branch to get</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/558-2
+00:58:36.796 --> 00:58:36.976
+<v John Miller>it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/559-0
+00:58:40.256 --> 00:58:43.623
+<v Dan Blanchard>OK, so the prompt we want,
+we want to create an instruction file for</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/559-1
+00:58:43.623 --> 00:58:47.576
+<v Dan Blanchard>it to implement a vertical slice, correct?
+That's that's the prompt we're doing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/560-0
+00:58:46.176 --> 00:58:48.656
+<v John Miller>Well, the prompt I used I is this.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/561-0
+00:58:52.416 --> 00:58:54.816
+<v John Miller>Let me paste that in the chat first.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/563-0
+00:59:07.176 --> 00:59:11.176
+<v John Miller>And we don't have the vertical slides
+planning instructions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/564-0
+00:59:14.336 --> 00:59:16.616
+<v John Miller>Let's see if I can just drag that in here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/565-0
+00:59:21.256 --> 00:59:23.176
+<v John Miller>Didn't look like that took.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/566-0
+00:59:24.336 --> 00:59:28.656
+<v John Miller>Let me open in File Explorer and then
+grab it from here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/577-0
+01:00:10.776 --> 01:00:10.976
+<v John Miller>No.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/587-0
+01:00:55.536 --> 01:00:58.053
+<v John Miller>Alright,
+so I'm trying to copy the file in and I'm</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/587-1
+01:00:58.053 --> 01:01:01.016
+<v John Miller>having a little difficulty,
+so give me a minute to do that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/588-0
+01:01:03.176 --> 01:01:04.216
+<v John Miller>But I don't.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/589-0
+01:01:06.016 --> 01:01:08.376
+<v John Miller>Looks it's like it's something I can't do
+in.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/591-0
+01:01:13.016 --> 01:01:14.856
+<v John Miller>The teams chat right now.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/592-0
+01:01:16.016 --> 01:01:17.376
+<v John Miller>For some reason.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/593-0
+01:01:19.616 --> 01:01:24.598
+<v Chris Bishop>You put 3 back ticks and copy and paste
+the text into the box it creates in the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/593-1
+01:01:24.598 --> 01:01:27.401
+<v Chris Bishop>chat,
+then it's easy to just copy it out and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/593-2
+01:01:27.401 --> 01:01:28.896
+<v Chris Bishop>put it where we need it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/594-0
+01:01:28.656 --> 01:01:31.016
+<v John Miller>Alrighty, sounds good.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/599-0
+01:02:00.096 --> 01:02:01.736
+<v John Miller>Too large to send.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/600-0
+01:02:04.216 --> 01:02:04.856
+<v Dan Blanchard>Thank you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/601-0
+01:02:17.136 --> 01:02:20.696
+<v Dan Blanchard>Actually,
+should we be using an agent or just using?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/603-0
+01:02:22.256 --> 01:02:26.541
+<v Dan Blanchard>Just the regular 'cause I actually had a
+product manager set.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/603-1
+01:02:26.541 --> 01:02:30.136
+<v Dan Blanchard>I think we just probably went with a
+regular agent.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/602-0
+01:02:28.136 --> 01:02:29.176
+<v John Miller>That should be all.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/604-0
+01:02:30.976 --> 01:02:34.847
+<v John Miller>That that should,
+I think the either one I did,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/604-1
+01:02:34.847 --> 01:02:40.816
+<v John Miller>I use the agent as well, so I wouldn't,
+I would say go ahead and do that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/605-0
+01:02:42.136 --> 01:02:42.376
+<v Dan Blanchard>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/606-0
+01:02:43.296 --> 01:02:47.056
+<v John Miller>I just need to figure out how to send you
+a file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/607-0
+01:02:57.456 --> 01:02:59.616
+<v John Miller>Alright, I don't see it here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/610-0
+01:03:13.816 --> 01:03:15.016
+<v John Miller>And that's unusual.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/612-0
+01:03:26.256 --> 01:03:28.404
+<v John Miller>Well,
+I think you're gonna have to get it from</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/612-1
+01:03:28.404 --> 01:03:30.096
+<v John Miller>the branch. I'm not finding a way to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/613-0
+01:03:32.176 --> 01:03:34.856
+<v John Miller>Just to give it to your hands.
+Doesn't like that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/614-0
+01:03:34.576 --> 01:03:37.353
+<v Dan Blanchard>That's OK. I got the new branch,
+so if you do that for me, then that's OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/614-1
+01:03:37.353 --> 01:03:38.576
+<v Dan Blanchard>But maybe somebody else needs it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/615-0
+01:03:40.056 --> 01:03:40.296
+<v John Miller>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/616-0
+01:03:43.856 --> 01:03:45.376
+<v John Miller>Yeah, that's weird.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/622-0
+01:04:06.496 --> 01:04:08.856
+<v John Miller>All right, so how we doing?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/623-0
+01:04:14.976 --> 01:04:18.496
+<v John Miller>I see, uh,
+this form is still working on this, so uh.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/624-0
+01:04:19.576 --> 01:04:23.736
+<v John Miller>Let me know if you have any questions.
+So now it's gone to 6.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/625-0
+01:04:26.656 --> 01:04:29.699
+<v Dan Blanchard>That's really slow.
+I'm still on the 1st to do analyze,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/625-1
+01:04:29.699 --> 01:04:33.776
+<v Dan Blanchard>calculator requirements and identify
+slices. There's four more after this.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/626-0
+01:04:34.016 --> 01:04:35.376
+<v John Miller>All right, we'll give it some time.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/646-0
+01:05:52.936 --> 01:05:53.176
+<v John Miller>Alright.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/662-0
+01:06:51.256 --> 01:06:53.056
+<v John Miller>It didn't look like our.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/663-0
+01:06:55.456 --> 01:06:56.776
+<v John Miller>Our comparison.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/670-0
+01:07:17.056 --> 01:07:23.595
+<v John Miller>So I can see here that the we I used M
+and I25 Pro to evaluate the vertical</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/670-1
+01:07:23.595 --> 01:07:29.961
+<v John Miller>slice planning instruction file and it
+found six things that it thinks we</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/670-2
+01:07:29.961 --> 01:07:30.736
+<v John Miller>improved.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/674-0
+01:07:52.736 --> 01:07:58.931
+<v John Miller>So the things thing I found it found that
+was we're missing the task duration piece,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/674-1
+01:07:58.931 --> 01:08:04.615
+<v John Miller>the flesh out the decomposition examples.
+I wanted some more of that complete</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/674-2
+01:08:04.615 --> 01:08:09.936
+<v John Miller>dependency strategy examples,
+finish implementation sequencing examples.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/675-0
+01:08:10.016 --> 01:08:16.367
+<v John Miller>The complete road map template and
+finalize the slice specification template</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/675-1
+01:08:16.367 --> 01:08:20.326
+<v John Miller>as well.
+So it's actually tried to make some of</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/675-2
+01:08:20.326 --> 01:08:21.976
+<v John Miller>these modifications.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/676-0
+01:08:24.456 --> 01:08:26.536
+<v John Miller>And I got an error and I tried it again.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/677-0
+01:08:28.016 --> 01:08:29.936
+<v John Miller>And I got another error.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/678-0
+01:08:32.056 --> 01:08:33.136
+<v John Miller>So uh.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/679-0
+01:08:35.656 --> 01:08:36.536
+<v John Miller>There's something.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/680-0
+01:08:38.176 --> 01:08:40.736
+<v John Miller>Going on in the back end I think.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/681-0
+01:08:49.096 --> 01:08:55.364
+<v John Miller>So this is just an example of using one
+model to to evaluate the work of another</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/681-1
+01:08:55.364 --> 01:08:59.388
+<v John Miller>model. There's many,
+many opportunities to do this,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/681-2
+01:08:59.388 --> 01:09:05.502
+<v John Miller>and it's not a bad strategy for making
+sure that you get a complete picture of</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/681-3
+01:09:05.502 --> 01:09:08.056
+<v John Miller>what what AI as a global concept.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/682-0
+01:09:08.256 --> 01:09:09.976
+<v John Miller>And thinks about a particular task.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/683-0
+01:09:21.456 --> 01:09:22.856
+<v John Miller>So here it changed.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/684-0
+01:09:24.416 --> 01:09:28.613
+<v John Miller>With some of the the single
+responsibility principle,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/684-1
+01:09:28.613 --> 01:09:31.256
+<v John Miller>it's changed some of that verbage.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/685-0
+01:09:36.376 --> 01:09:40.856
+<v John Miller>It's changed some of the the
+implementation instructions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/686-0
+01:09:43.776 --> 01:09:44.216
+<v John Miller>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/687-0
+01:09:45.976 --> 01:09:53.488
+<v John Miller>It's changed the interface to the users,
+so it's it's done some minor code changes</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/687-1
+01:09:53.488 --> 01:09:54.936
+<v John Miller>to the examples.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/688-0
+01:09:58.256 --> 01:10:00.886
+<v John Miller>And of course,
+this is something we would review and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/688-1
+01:10:00.886 --> 01:10:02.176
+<v John Miller>want to make sure that we.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/689-0
+01:10:03.456 --> 01:10:09.736
+<v John Miller>I keep or I don't wish which version of
+these that we actually like the best.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/693-0
+01:10:25.456 --> 01:10:28.607
+<v John Miller>All right,
+so who still needs more time for AI to go</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/693-1
+01:10:28.607 --> 01:10:29.856
+<v John Miller>through its thinking?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/695-0
+01:10:38.656 --> 01:10:40.056
+<v John Miller>OK, looks like we're almost done.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/699-0
+01:10:55.296 --> 01:10:58.416
+<v John Miller>So, Lyle and Boris, are we ready to go on?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/700-0
+01:11:04.456 --> 01:11:04.776
+Yep.
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/702-0
+01:11:04.816 --> 01:11:05.736
+<v Lyle Ubben>So you can go on.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/701-0
+01:11:04.856 --> 01:11:05.216
+<v Giterman, Boris>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/703-0
+01:11:08.016 --> 01:11:12.696
+<v John Miller>Sure. OK, then. Thank you for that.
+Going back to the slides.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/705-0
+01:11:17.136 --> 01:11:21.456
+<v John Miller>So we want to talk about implementation
+prompts and that verification.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/706-0
+01:11:22.976 --> 01:11:29.096
+<v John Miller>Alright, so we're done.
+So basically this is the idea here. Umm</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/707-0
+01:11:30.096 --> 01:11:37.128
+<v John Miller>We want to create a prompt that will
+implement the a particular vertical slice.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/707-1
+01:11:37.128 --> 01:11:43.896
+<v John Miller>So we would go back to our implementation
+guide and we would select a slice.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/708-0
+01:11:45.416 --> 01:11:52.646
+<v John Miller>And and and basically say I want you to
+create a prompt that will implement this</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/708-1
+01:11:52.646 --> 01:12:00.055
+<v John Miller>vertical slice and I want you to include
+the the validation and include validation</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/708-2
+01:12:00.055 --> 01:12:01.216
+<v John Miller>instructions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/709-0
+01:12:01.696 --> 01:12:10.056
+<v John Miller>To verify that it was implemented
+correctly and I want you to provide.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/711-0
+01:12:11.376 --> 01:12:17.493
+<v John Miller>Essentially a a script that can that I
+can use to show the functionality to the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/711-1
+01:12:17.493 --> 01:12:22.923
+<v John Miller>to the the to the stakeholders.
+So we want in this we want to create a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/711-2
+01:12:22.923 --> 01:12:26.976
+<v John Miller>prompt that will do create an
+implementation prompt.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/710-0
+01:12:24.216 --> 01:12:24.496
+<v Giterman, Boris>Yes.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/712-0
+01:12:27.696 --> 01:12:33.050
+<v John Miller>For each slice and then we want to have
+that include the verification steps and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/712-1
+01:12:33.050 --> 01:12:34.456
+<v John Miller>the showcasing steps.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/713-0
+01:12:35.936 --> 01:12:39.456
+<v John Miller>So that would be something like uh.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/714-0
+01:12:41.496 --> 01:12:44.016
+<v John Miller>So we have our instruction file in scope.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/715-0
+01:12:52.936 --> 01:12:55.696
+<v John Miller>And so we can say here, uh, we have.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/716-0
+01:12:58.456 --> 01:13:01.336
+<v John Miller>I wanna see what our our slices are
+defined.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/720-0
+01:13:17.216 --> 01:13:18.896
+<v John Miller>And type patterns.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/721-0
+01:13:24.216 --> 01:13:25.536
+<v John Miller>Where are they?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/722-0
+01:13:36.536 --> 01:13:37.256
+<v John Miller>OK, so.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/723-0
+01:13:44.936 --> 01:13:45.896
+<v John Miller>There's that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/724-0
+01:13:50.976 --> 01:13:53.256
+<v John Miller>All right, so here we go slices.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/725-0
+01:14:04.216 --> 01:14:06.776
+<v John Miller>You know what's gonna be implemented in
+each slice?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/726-0
+01:14:10.496 --> 01:14:12.856
+<v John Miller>It's broken this down into sprints.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/729-0
+01:14:25.216 --> 01:14:28.816
+<v John Miller>Let me look for service one.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/730-0
+01:14:29.856 --> 01:14:32.286
+<v John Miller>All right,
+so here are the definition of the slices.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/730-1
+01:14:32.286 --> 01:14:33.616
+<v John Miller>So we have slice one and two.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/731-0
+01:14:37.136 --> 01:14:43.255
+<v John Miller>So let's go ahead and then do an
+implementation plan for slice one and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/731-1
+01:14:43.255 --> 01:14:45.496
+<v John Miller>then then one for slice 2.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/732-0
+01:15:00.176 --> 01:15:05.361
+<v John Miller>Alright,
+so I'll say using slice any instructions</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/732-1
+01:15:05.361 --> 01:15:05.776
+<v John Miller>and.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/733-0
+01:15:08.256 --> 01:15:08.696
+<v John Miller>Mm.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/734-0
+01:15:11.256 --> 01:15:11.336
+<v John Miller>Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/735-0
+01:15:14.896 --> 01:15:16.776
+<v John Miller>Implementation plan.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/736-0
+01:15:17.896 --> 01:15:18.096
+<v John Miller>Read.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/737-0
+01:15:20.976 --> 01:15:26.816
+<v John Miller>K prompts file that implements.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/738-0
+01:15:32.056 --> 01:15:33.416
+<v John Miller>Uh, slice.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/739-0
+01:15:36.016 --> 01:15:36.376
+<v John Miller>1.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/740-0
+01:15:38.976 --> 01:15:39.576
+<v John Miller>Include.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/741-0
+01:15:44.536 --> 01:15:46.216
+<v John Miller>Cation steps.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/742-0
+01:15:53.896 --> 01:15:55.096
+<v John Miller>That was.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/743-0
+01:15:58.896 --> 01:16:01.496
+<v John Miller>Yeah, and then include.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/744-0
+01:16:04.376 --> 01:16:06.536
+<v John Miller>That's good to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/745-0
+01:16:09.096 --> 01:16:11.096
+<v John Miller>Show.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/746-0
+01:16:21.776 --> 01:16:23.456
+<v John Miller>I'll add that to the chat.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/747-0
+01:16:28.256 --> 01:16:30.576
+<v John Miller>Looks like I have a typo in there.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/750-0
+01:16:48.336 --> 01:16:51.753
+<v John Miller>All right.
+And so let's go ahead and create a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/750-1
+01:16:51.753 --> 01:16:53.536
+<v John Miller>implementation problems.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/751-0
+01:16:55.536 --> 01:16:59.080
+<v Dan Blanchard>So when it created my plan,
+it didn't do a proper vertical slice.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/751-1
+01:16:59.080 --> 01:17:02.303
+<v Dan Blanchard>There's 15 slices in the first one,
+just a couple UI files,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/751-2
+01:17:02.303 --> 01:17:05.096
+<v Dan Blanchard>so I don't think it knew what a vertical
+slice was.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/752-0
+01:17:07.176 --> 01:17:07.256
+<v John Miller>Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/753-0
+01:17:14.096 --> 01:17:18.823
+<v John Miller>Well, I have this file.
+This is a vertical slice instruction file,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/753-1
+01:17:18.823 --> 01:17:22.634
+<v John Miller>but it was.
+It's more targeted towards CQRS and which</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/753-2
+01:17:22.634 --> 01:17:26.091
+<v John Miller>is why I'm getting some responses back
+for that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/753-3
+01:17:26.091 --> 01:17:31.313
+<v John Miller>But that's should be in your repo.
+You could therefore it should be being</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/753-4
+01:17:31.313 --> 01:17:32.936
+<v John Miller>used as a part of your.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/754-0
+01:17:33.056 --> 01:17:39.536
+<v John Miller>Slice definitions you could you could
+create a a specific you know this is what</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/754-1
+01:17:39.536 --> 01:17:42.776
+<v John Miller>vertical slices are an instruction file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/755-0
+01:17:46.296 --> 01:17:49.970
+<v Dan Blanchard>Yeah, I had created a new one.
+It says I'm absolutely right.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/755-1
+01:17:49.970 --> 01:17:54.126
+<v Dan Blanchard>I apologize for the confusion.
+What I created was a horizontal layer</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/756-0
+01:17:52.936 --> 01:17:59.616
+<v John Miller>Well, that's well, good, good.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/755-2
+01:17:54.126 --> 01:17:56.536
+<v Dan Blanchard>decomposition, not true vertical slices.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/770-0
+01:18:48.136 --> 01:18:52.456
+<v John Miller>And so I'm gonna go ahead and do slice #2.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/775-0
+01:19:18.176 --> 01:19:22.856
+<v John Miller>And let me bring this first slice
+implementation prompt up.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/776-0
+01:19:24.336 --> 01:19:26.376
+<v John Miller>So we can take a closer look at it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/777-0
+01:19:27.496 --> 01:19:27.736
+<v John Miller>Alright.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/778-0
+01:19:31.936 --> 01:19:35.056
+<v John Miller>Anybody still working on this that needs
+some more time?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/780-0
+01:19:37.696 --> 01:19:46.323
+<v Rockwell, Christopher L>Question if if if I don't see because I
+tried to create a new session for for</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/779-0
+01:19:38.736 --> 01:19:40.856
+<v Chris Bishop>Mine is still chugging along.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/780-1
+01:19:46.323 --> 01:19:52.296
+<v Rockwell, Christopher L>implementing slice 2 but I don't see any
+sessions in.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/783-0
+01:19:52.736 --> 01:19:58.107
+<v Rockwell, Christopher L>On the right when I open up that that
+slide out. Oh, never mind,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/781-0
+01:19:57.176 --> 01:19:57.416
+<v John Miller>Hmm.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/783-1
+01:19:58.107 --> 01:20:00.256
+<v Rockwell, Christopher L>there was a filter. Sorry.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/784-0
+01:20:03.576 --> 01:20:03.976
+<v John Miller>Cool.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/785-0
+01:20:06.656 --> 01:20:09.664
+<v John Miller>All right,
+so looking at the the the slice,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/785-1
+01:20:09.664 --> 01:20:13.562
+<v John Miller>which is basically just to to playing the
+current value,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/785-2
+01:20:13.562 --> 01:20:18.896
+<v John Miller>the implementation plan talks about the
+actual files that it needs to create.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/786-0
+01:20:20.616 --> 01:20:20.816
+<v John Miller>And.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/787-0
+01:20:21.776 --> 01:20:28.564
+<v John Miller>Some specification in terms of defining
+the the HTML that should be going into</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/787-1
+01:20:28.564 --> 01:20:33.291
+<v John Miller>that index file,
+what the CSS styles should be looking</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/787-2
+01:20:33.291 --> 01:20:37.416
+<v John Miller>like, and here it's defining, you know,
+colors.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/788-0
+01:20:38.016 --> 01:20:38.896
+<v John Miller>And the like.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/789-0
+01:20:39.776 --> 01:20:43.056
+<v John Miller>What the fonts should be using and then
+the main JS.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/790-0
+01:20:44.576 --> 01:20:50.587
+<v John Miller>It should have a a current value property
+and basically a display a a display</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/790-1
+01:20:50.587 --> 01:20:55.289
+<v John Miller>object to manage the UI,
+implement an update function with a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/790-2
+01:20:55.289 --> 01:20:59.142
+<v John Miller>display.
+Then it has the verification steps which</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/790-3
+01:20:59.142 --> 01:21:00.376
+<v John Miller>we asked it for.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/791-0
+01:21:06.016 --> 01:21:10.078
+<v John Miller>And here we have an initial initial state
+on the page.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/791-1
+01:21:10.078 --> 01:21:15.026
+<v John Miller>On page load the calculator should
+display and show the text is 0.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/791-2
+01:21:15.026 --> 01:21:20.787
+<v John Miller>The state update would be if we mail
+manually change the current value in the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/791-3
+01:21:20.787 --> 01:21:23.816
+<v John Miller>console to a new string it should update.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/792-0
+01:21:23.856 --> 01:21:29.187
+<v John Miller>It should update and the display color
+must have a contrast ratio of at least 4.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/792-1
+01:21:29.187 --> 01:21:34.189
+<v John Miller>5 to one against the background.
+The font size must be at least two rounds.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/792-2
+01:21:34.189 --> 01:21:38.402
+<v John Miller>To demonstrate this slice,
+add the following code to the end of</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/792-3
+01:21:38.402 --> 01:21:43.141
+<v John Miller>source main and this will simulate
+opening up the display after a short</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/792-4
+01:21:43.141 --> 01:21:43.536
+<v John Miller>delay.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/793-0
+01:21:43.656 --> 01:21:43.736
+<v John Miller>Why?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/795-0
+01:21:48.576 --> 01:21:52.262
+<v John Miller>All right,
+so I would probably add some showcase</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/795-1
+01:21:52.262 --> 01:21:58.056
+<v John Miller>instructions that would be indicate that
+the showcases are targeted towards.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/796-0
+01:21:59.216 --> 01:22:03.519
+<v John Miller>A human,
+a human who's demonstrating these the the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/796-1
+01:22:03.519 --> 01:22:09.931
+<v John Miller>actual implementation to a a user and
+then it should actually list you know</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/796-2
+01:22:09.931 --> 01:22:15.416
+<v John Miller>what the the user should actually see,
+what they are able to do.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/797-0
+01:22:16.216 --> 01:22:19.336
+<v John Miller>In terms of the behaviors and.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/798-0
+01:22:20.696 --> 01:22:26.776
+<v John Miller>And then allow us to actually show so
+show some functionality.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/799-0
+01:22:32.976 --> 01:22:35.256
+<v John Miller>All right. Anybody see anything different?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/800-0
+01:22:40.416 --> 01:22:42.176
+<v John Miller>Alright, so let's go ahead and um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/801-0
+01:22:45.816 --> 01:22:50.407
+<v John Miller>Created a promp file for slides 2 so we
+can take a look at that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/801-1
+01:22:50.407 --> 01:22:52.456
+<v John Miller>Let's go ahead and keep this.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/803-0
+01:22:59.496 --> 01:23:02.880
+<v John Miller>All right,
+so here we want to extend it back. Oh,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/802-0
+01:23:00.576 --> 01:23:01.456
+And.
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/803-1
+01:23:02.880 --> 01:23:03.896
+<v John Miller>comment, Chris.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/805-0
+01:23:03.656 --> 01:23:09.585
+<v Chris Bishop>Sorry John,
+my showcase script is not as snippet as</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/805-1
+01:23:09.585 --> 01:23:16.656
+<v Chris Bishop>yours. Mine is an entire HTML page,
+getting a little verbose.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/806-0
+01:23:18.616 --> 01:23:21.838
+<v John Miller>That's interesting. That's where I again,
+you know,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/806-1
+01:23:21.838 --> 01:23:26.486
+<v John Miller>neither of us gave much nutshell context
+in terms of what we were actually</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/806-2
+01:23:26.486 --> 01:23:30.823
+<v John Miller>expecting there. And you know,
+when you see something like that where</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/806-3
+01:23:30.823 --> 01:23:35.223
+<v John Miller>it's not exactly what you expected,
+it's a good idea to go back to the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/806-4
+01:23:35.223 --> 01:23:38.136
+<v John Miller>instruction files and try to add some
+clarity.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/807-0
+01:23:38.256 --> 01:23:43.538
+<v John Miller>There to better describe what your intent
+is and then go ahead and recreate the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/807-1
+01:23:43.538 --> 01:23:47.831
+<v John Miller>files that you're looking to see.
+Because it's really, you know,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/807-2
+01:23:47.831 --> 01:23:52.321
+<v John Miller>if you're seeing an output that you that
+doesn't make sense to you,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/807-3
+01:23:52.321 --> 01:23:57.736
+<v John Miller>there's a couple of different reasons.
+One is that you didn't provide the intent.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/808-0
+01:23:58.176 --> 01:24:02.489
+<v John Miller>That you that it needs or the context
+that it needs to do the work in a way</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/808-1
+01:24:02.489 --> 01:24:06.973
+<v John Miller>that you're that that is acceptable or
+you're running out of your your context</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/808-2
+01:24:06.973 --> 01:24:11.513
+<v John Miller>window and it's forgetting things that
+you've told it and therefore you need to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/808-3
+01:24:11.513 --> 01:24:13.216
+<v John Miller>take some steps to reduce the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/809-0
+01:24:13.296 --> 01:24:18.779
+<v John Miller>Note the the amount of effort or amount
+of tokens that you're consuming so that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/809-1
+01:24:18.779 --> 01:24:22.070
+<v John Miller>you can actually get the the task
+accomplished.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/809-2
+01:24:22.070 --> 01:24:25.360
+<v John Miller>So you'll you'll need to look at both of
+those,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/809-3
+01:24:25.360 --> 01:24:28.856
+<v John Miller>both of those things in order for you to
+identify.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/810-0
+01:24:29.216 --> 01:24:32.770
+<v John Miller>What the cause is,
+and if it's not the context window,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/810-1
+01:24:32.770 --> 01:24:38.003
+<v John Miller>then you know it's going to be that you
+need to provide a a a better explanation</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/810-2
+01:24:38.003 --> 01:24:40.136
+<v John Miller>for what it actually needs to do.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/811-0
+01:24:41.936 --> 01:24:45.849
+<v John Miller>So here then it's they were subscribing,
+you know,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/811-1
+01:24:45.849 --> 01:24:50.070
+<v John Miller>specifically before the before the
+calculator display.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/811-2
+01:24:50.070 --> 01:24:55.901
+<v John Miller>It wants to add a calculator buttons and
+add buttons for each digit and the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/811-3
+01:24:55.901 --> 01:24:56.976
+<v John Miller>decimal point.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/812-0
+01:24:57.496 --> 01:25:03.387
+<v John Miller>Assign a data value. It has some styling.
+It does some state management now,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/812-1
+01:25:03.387 --> 01:25:08.896
+<v John Miller>some it has some input logic,
+some event handling related to the to the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/812-2
+01:25:08.896 --> 01:25:12.416
+<v John Miller>individual buttons and the keyboard
+supports.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/813-0
+01:25:15.016 --> 01:25:16.576
+<v John Miller>Verification steps.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/814-0
+01:25:18.216 --> 01:25:20.576
+<v John Miller>Digital input input zero handling.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/815-0
+01:25:22.736 --> 01:25:26.731
+<v John Miller>All right,
+so what the decimal input should look</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/815-1
+01:25:26.731 --> 01:25:33.498
+<v John Miller>like clicking multiple periods should has
+a particular behaviour with the keyboard</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/815-2
+01:25:33.498 --> 01:25:37.656
+<v John Miller>input should do and then our showcase
+script here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/816-0
+01:25:38.016 --> 01:25:38.136
+<v John Miller>Yes.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/817-0
+01:25:40.656 --> 01:25:45.504
+<v John Miller>OK,
+so so now I know what I'm what my problem</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/817-1
+01:25:45.504 --> 01:25:48.456
+<v John Miller>was. It's if we go back and.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/818-0
+01:25:49.936 --> 01:25:52.016
+<v John Miller>Look at my prompts.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/819-0
+01:25:54.056 --> 01:25:57.856
+<v John Miller>Can you see a problem with my prompt
+that's giving me output that I don't</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/819-1
+01:25:57.856 --> 01:25:58.216
+<v John Miller>expect?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/820-0
+01:26:06.176 --> 01:26:08.536
+<v John Miller>Anybody see it?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/821-0
+01:26:14.296 --> 01:26:14.816
+<v Rockwell, Christopher L>Mm.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/823-0
+01:26:15.216 --> 01:26:18.536
+<v Dan Blanchard>The wrong files. One of the wrong files.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/822-0
+01:26:16.416 --> 01:26:16.936
+<v John Miller>Is the bit.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/824-0
+01:26:20.496 --> 01:26:24.300
+<v John Miller>No, no.
+There's one word in here that is causing</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/824-1
+01:26:24.300 --> 01:26:28.416
+<v John Miller>me to to not to get this a a a real
+showcase script.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/825-0
+01:26:31.776 --> 01:26:35.576
+<v Dan Blanchard>But it says to include the script to
+showcase the slide.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/826-0
+01:26:34.176 --> 01:26:37.548
+<v John Miller>Yeah, right.
+So it says verification sets much path.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/826-1
+01:26:37.548 --> 01:26:42.003
+<v John Miller>It should include a script.
+And so that's exactly what I'm getting is</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/826-2
+01:26:42.003 --> 01:26:42.576
+<v John Miller>a script.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/827-0
+01:26:46.616 --> 01:26:53.486
+<v John Miller>When I was expecting actually something
+that I could go do this first and do that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/827-1
+01:26:53.486 --> 01:27:00.525
+<v John Miller>second and do this third and this is what
+you'll see and then in order for you able</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/827-2
+01:27:00.525 --> 01:27:02.536
+<v John Miller>to do a a a showcase so.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/828-0
+01:27:02.736 --> 01:27:08.431
+<v John Miller>This would this is a good reason why this
+should be a a potentially a a prompt that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/828-1
+01:27:08.431 --> 01:27:13.720
+<v John Miller>generates a a prompt that contains the
+implementation instructions so that we</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/828-2
+01:27:13.720 --> 01:27:17.856
+<v John Miller>can essentially pass a parameter to that
+prompt and and say.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/829-0
+01:27:18.056 --> 01:27:23.519
+<v John Miller>Generate a prompt that would implement
+this slice and then it would have more</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/829-1
+01:27:23.519 --> 01:27:29.053
+<v John Miller>context where we could then define in
+that prompt file exactly what a showcase</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/829-2
+01:27:29.053 --> 01:27:32.976
+<v John Miller>is and what it should look like as well
+as guidance on.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/830-0
+01:27:33.256 --> 01:27:39.442
+<v John Miller>What the validation should look like and
+from the validation perspective,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/830-1
+01:27:39.442 --> 01:27:46.131
+<v John Miller>the goal is that we expect that whenever
+this is implemented that we would want</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/830-2
+01:27:46.131 --> 01:27:52.736
+<v John Miller>the AI to be able to go back and look at
+that implementation or we could even.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/831-0
+01:27:52.816 --> 01:27:59.746
+<v John Miller>And give another AI and the instruction
+to say look at this implementation script</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/831-1
+01:27:59.746 --> 01:28:04.056
+<v John Miller>or this implementation prompt and verify
+that the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/832-0
+01:28:05.216 --> 01:28:10.398
+<v John Miller>That the validation, the verification,
+the verification steps all pass.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/832-1
+01:28:10.398 --> 01:28:16.011
+<v John Miller>And I found that this is an important
+important thing because as you build up</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/832-2
+01:28:16.011 --> 01:28:19.610
+<v John Miller>features,
+you want to verify that those all those</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/832-3
+01:28:19.610 --> 01:28:24.936
+<v John Miller>features work independently and you also
+want to verify that you haven't.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/833-0
+01:28:25.576 --> 01:28:31.023
+<v John Miller>Introduced any regressions that that are
+significant that need to to to be</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/833-1
+01:28:31.023 --> 01:28:34.509
+<v John Miller>addressed.
+So what I tended to do in in earlier</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/833-2
+01:28:34.509 --> 01:28:40.028
+<v John Miller>iterations of this was to ask it to do to
+to verify that those verification</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/833-3
+01:28:40.028 --> 01:28:41.336
+<v John Miller>problems and then.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/834-0
+01:28:41.536 --> 01:28:44.399
+<v John Miller>Later on,
+after I've implemented a different slice</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/834-1
+01:28:44.399 --> 01:28:48.946
+<v John Miller>or a different piece of the application,
+to actually go back and verify that the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/834-2
+01:28:48.946 --> 01:28:51.416
+<v John Miller>previous slices all still validate as
+well.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/836-0
+01:28:55.136 --> 01:28:59.700
+<v John Miller>All right,
+so the other thing I think we'll miss.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/836-1
+01:28:59.700 --> 01:29:02.256
+<v John Miller>Let's see if I look at this.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/837-0
+01:29:07.616 --> 01:29:08.696
+<v John Miller>So if I look for tests.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/839-0
+01:29:10.096 --> 01:29:13.135
+<v John Miller>We're testing. There's no results here,
+right?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/839-1
+01:29:13.135 --> 01:29:18.243
+<v John Miller>So someplace in our instruction file we
+need, we need to include the the, the,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/839-2
+01:29:18.243 --> 01:29:23.028
+<v John Miller>the creation of some sort of test
+automation to verify the functionality.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/839-3
+01:29:23.028 --> 01:29:27.296
+<v John Miller>We don't have that yet,
+so that would be something that we could.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/840-0
+01:29:27.376 --> 01:29:32.885
+<v John Miller>Improve on and add to the instruction
+file and then have it go take a look at</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/840-1
+01:29:32.885 --> 01:29:38.395
+<v John Miller>the you know the implementation guide
+that we're providing for each slice and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/840-2
+01:29:38.395 --> 01:29:43.622
+<v John Miller>have it go ahead and implement the
+additional tests to to verify that and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/840-3
+01:29:43.622 --> 01:29:45.176
+<v John Miller>capture that into the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/841-0
+01:29:45.736 --> 01:29:50.198
+<v John Miller>Implementation prompts so that if for
+whatever reason we need to modify it or</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/841-1
+01:29:50.198 --> 01:29:53.916
+<v John Miller>or or execute it again,
+it will it will produce the test that we</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/841-2
+01:29:53.916 --> 01:29:55.976
+<v John Miller>need to to verify the functionality.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/842-0
+01:29:57.056 --> 01:30:02.525
+<v John Miller>And there's lots of other functionality
+that we would probably want to add to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/842-1
+01:30:02.525 --> 01:30:08.205
+<v John Miller>this if we were to go back and look at
+the implementation related to making sure</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/842-2
+01:30:08.205 --> 01:30:14.096
+<v John Miller>that we keep the out this new application
+Greenfield and don't let it degrade into.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/843-0
+01:30:14.176 --> 01:30:15.296
+<v John Miller>A brownfield application.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/844-0
+01:30:17.976 --> 01:30:20.656
+<v John Miller>All right. Any questions on on that?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/845-0
+01:30:30.176 --> 01:30:30.296
+<v John Miller>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/846-0
+01:30:32.296 --> 01:30:32.936
+<v John Miller>So.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/847-0
+01:30:36.816 --> 01:30:37.336
+<v John Miller>Let's.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/848-0
+01:30:44.856 --> 01:30:53.296
+<v John Miller>Look at our vertical slice planning
+instructions and let's.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/849-0
+01:30:54.016 --> 01:30:54.456
+<v John Miller>That's good.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/850-0
+01:31:02.936 --> 01:31:03.816
+<v John Miller>To um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/851-0
+01:31:09.776 --> 01:31:10.416
+<v John Miller>To add a.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/852-0
+01:31:15.656 --> 01:31:15.736
+<v John Miller>Uh.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/853-0
+01:31:18.616 --> 01:31:21.976
+<v John Miller>On that automation.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/854-0
+01:31:23.696 --> 01:31:25.616
+<v John Miller>Requirements.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/855-0
+01:31:28.616 --> 01:31:30.776
+<v John Miller>And here we're going to add it to the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/857-0
+01:31:31.776 --> 01:31:34.256
+<v John Miller>Vertical slice planning instructions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/856-0
+01:31:34.056 --> 01:31:34.536
+<v Giterman, Boris>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/860-0
+01:31:48.456 --> 01:31:52.256
+<v John Miller>So I'll go ahead and do that and then
+I'll go ahead and add.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/862-0
+01:31:55.096 --> 01:32:04.216
+<v John Miller>An instruction into the into the the
+planning instructions on showcases.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/864-0
+01:32:13.616 --> 01:32:17.416
+<v John Miller>All right. Any any questions on this?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/865-0
+01:32:19.536 --> 01:32:22.793
+<v John Miller>If you want,
+you can go ahead and follow along and try</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/865-1
+01:32:22.793 --> 01:32:24.096
+<v John Miller>to do the same things.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/868-0
+01:32:37.136 --> 01:32:40.445
+<v John Miller>All right, see, what is it doing now?
+It's evaluating its needs.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/868-1
+01:32:40.445 --> 01:32:43.296
+<v John Miller>It's still considering.
+Now it looks like it's decided.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/869-0
+01:32:45.816 --> 01:32:47.376
+<v John Miller>To make some changes.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/871-0
+01:32:52.976 --> 01:32:57.730
+<v John Miller>So when I'm going about demonstrating
+these AI sessions,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/871-1
+01:32:57.730 --> 01:33:00.816
+<v John Miller>I feel like a play-by-play announcer.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/872-0
+01:33:02.136 --> 01:33:04.216
+<v John Miller>Describing what's going on in the field.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/874-0
+01:33:06.336 --> 01:33:10.636
+<v John Miller>So here it's updated the vertical slice
+planning instructions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/874-1
+01:33:10.636 --> 01:33:16.096
+<v John Miller>It's adding content in that section and
+it looks like it's finished, so we can.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/873-0
+01:33:15.896 --> 01:33:17.416
+<v Goostree, Peter>What was that last command, John?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/875-0
+01:33:18.656 --> 01:33:20.816
+<v John Miller>Yeah, sure. Let me paste that in the chat.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/876-0
+01:33:34.776 --> 01:33:39.715
+<v John Miller>So I had to add a section on test
+automation requirements and I had the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/876-1
+01:33:39.715 --> 01:33:45.066
+<v John Miller>vertical slice planning document open,
+so it included that in the context and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/876-2
+01:33:45.066 --> 01:33:48.976
+<v John Miller>then I'm going to do the same thing to
+add a section on.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/877-0
+01:33:49.976 --> 01:33:50.056
+<v John Miller>Oh.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/878-0
+01:33:52.736 --> 01:33:53.496
+<v John Miller>Human.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/879-0
+01:33:56.936 --> 01:33:57.336
+<v John Miller>Would.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/880-0
+01:33:59.016 --> 01:33:59.816
+<v John Miller>Show games.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/881-0
+01:34:03.616 --> 01:34:04.696
+<v John Miller>That's nice.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/882-0
+01:34:06.256 --> 01:34:08.336
+<v John Miller>To stakeholders.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/883-0
+01:34:11.256 --> 01:34:14.016
+<v John Miller>And I'll grab that in two as well.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/884-0
+01:34:14.976 --> 01:34:16.896
+<v John Miller>But first, let's get it started.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/885-0
+01:34:24.456 --> 01:34:25.376
+<v John Miller>Back to chat.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/886-0
+01:34:30.776 --> 01:34:31.776
+<v John Miller>There we go.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/887-0
+01:34:39.136 --> 01:34:43.694
+<v John Miller>So now we see that we're getting a new
+item in our table of contents about the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/887-1
+01:34:43.694 --> 01:34:45.656
+<v John Miller>showcasing slices to stakeholders.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/888-0
+01:34:58.816 --> 01:35:03.536
+<v John Miller>And so it's thinking about that.
+It's already started to make some</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/888-1
+01:35:03.536 --> 01:35:05.016
+<v John Miller>modifications to the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/889-0
+01:35:07.656 --> 01:35:09.136
+<v John Miller>Instruction file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/890-0
+01:35:20.416 --> 01:35:24.136
+<v John Miller>Let's keep that and then the next step
+would be to go back and look at our.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/891-0
+01:35:25.976 --> 01:35:26.216
+<v John Miller>Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/892-0
+01:35:29.936 --> 01:35:38.458
+<v John Miller>The prompt that we use to actually create
+the implement implementation prompts,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/892-1
+01:35:38.458 --> 01:35:40.376
+<v John Miller>I'll call Lookout.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/894-0
+01:35:49.616 --> 01:35:53.838
+<v Matt Hoffman>I don't know about you guys,
+but it always wants to put like new</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/894-1
+01:35:53.838 --> 01:35:58.776
+<v Matt Hoffman>additions above the metadata for some
+reason, and I keep telling it not to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/895-0
+01:35:58.416 --> 01:36:00.216
+<v John Miller>Huh, that's interesting.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/900-0
+01:36:20.336 --> 01:36:23.776
+<v Chris Bishop>That's funny,
+as you said that mine had a message that</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/900-1
+01:36:23.776 --> 01:36:28.655
+<v Chris Bishop>it was checking the the file structure
+and table of contents to find the best</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/900-2
+01:36:28.655 --> 01:36:29.656
+<v Chris Bishop>insertion point.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/899-0
+01:36:29.176 --> 01:36:29.256
+<v John Miller>Bye.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/901-0
+01:36:34.496 --> 01:36:38.562
+<v John Miller>So This is why I wanted to do a mob
+programming 'cause we don't get the same</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/901-1
+01:36:38.562 --> 01:36:39.936
+<v John Miller>responses, right? We'd be.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/902-0
+01:36:40.896 --> 01:36:44.743
+<v John Miller>We could focus on the work and not the
+differences between us,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/902-1
+01:36:44.743 --> 01:36:47.736
+<v John Miller>but I guess it's also instructional to
+see that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/903-0
+01:36:48.656 --> 01:36:52.736
+<v John Miller>No different models with different with
+slightly different context. Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/904-0
+01:36:54.176 --> 01:36:58.234
+<v John Miller>Or even doing the same thing at a
+different time with a different with the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/904-1
+01:36:58.234 --> 01:37:02.456
+<v John Miller>with the same model and the same prompt
+can still give you different results.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/905-0
+01:37:06.416 --> 01:37:08.216
+<v John Miller>It still looks like it's still loading.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/906-0
+01:37:10.776 --> 01:37:12.056
+<v John Miller>Not sure.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/907-0
+01:37:13.136 --> 01:37:15.332
+<v John Miller>Well,
+we're updating the table of contents,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/907-1
+01:37:15.332 --> 01:37:19.326
+<v John Miller>but it's still working on the rest of it.
+I wonder if I can see what it's doing</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/907-2
+01:37:19.326 --> 01:37:19.576
+<v John Miller>here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/908-0
+01:37:22.056 --> 01:37:26.708
+<v John Miller>Doesn't look like it.
+It's still responding,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/908-1
+01:37:26.708 --> 01:37:30.016
+<v John Miller>so that's a good sign. Is there?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/909-0
+01:37:32.096 --> 01:37:34.576
+<v John Miller>Any other modifications?
+It doesn't look like it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/917-0
+01:38:01.976 --> 01:38:03.336
+<v John Miller>All right, so um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/918-0
+01:38:05.776 --> 01:38:07.336
+<v John Miller>I'm almost inclined to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/919-0
+01:38:09.296 --> 01:38:12.496
+<v John Miller>See if the a different model would behave
+differently.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/920-0
+01:38:14.936 --> 01:38:16.136
+<v John Miller>It looks like it's OK though.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/921-0
+01:38:17.616 --> 01:38:18.896
+<v John Miller>Wonder what the?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/922-0
+01:38:22.096 --> 01:38:23.976
+<v John Miller>Chat view would show us.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/923-0
+01:38:35.376 --> 01:38:37.733
+<v John Miller>Yeah,
+Visual Studio code definitely slowing</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/923-1
+01:38:37.733 --> 01:38:38.376
+<v John Miller>down for me.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/924-0
+01:38:46.016 --> 01:38:48.936
+<v John Miller>I think I am going to stop it if I can.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/926-0
+01:39:00.856 --> 01:39:01.816
+<v John Miller>Which I can't.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/927-0
+01:39:04.096 --> 01:39:10.176
+<v John Miller>So we'll just wait a little longer.
+How's are you guys gonna have any any</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/927-1
+01:39:10.176 --> 01:39:13.216
+<v John Miller>luck on this? So anybody finished it?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/936-0
+01:39:38.816 --> 01:39:43.061
+<v Lyle Ubben>Maybe it's just Gemini,
+but it finished pretty quick on Claude's</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/936-1
+01:39:43.061 --> 01:39:43.976
+<v Lyle Ubben>sonnet for me.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/937-0
+01:39:44.096 --> 01:39:44.736
+<v John Miller>Yeah, maybe.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/938-0
+01:39:51.256 --> 01:39:51.936
+<v Rockwell, Christopher L>Same here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/945-0
+01:40:10.376 --> 01:40:14.519
+<v Matt Hoffman>Yeah, mine's, uh,
+now refusing to move it to the bottom. Um,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/945-1
+01:40:14.519 --> 01:40:17.576
+<v Matt Hoffman>even though it says that it is is moving
+it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/948-0
+01:40:22.016 --> 01:40:27.079
+<v Matt Hoffman>I I've had to do this before,
+but this is the most resilient it's been</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/948-1
+01:40:27.079 --> 01:40:29.576
+<v Matt Hoffman>about. It's changes to these files.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/947-0
+01:40:27.496 --> 01:40:27.656
+<v John Miller>OK.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/959-0
+01:41:05.176 --> 01:41:08.016
+<v Chris Bishop>John,
+do you have an example of a showcase</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/959-1
+01:41:08.016 --> 01:41:11.253
+<v Chris Bishop>there?
+It's looking like it's still interpreting</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/959-2
+01:41:11.253 --> 01:41:13.896
+<v Chris Bishop>the showcase in mine as a block of code.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/958-0
+01:41:11.696 --> 01:41:12.216
+<v John Miller>Mhm.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/960-0
+01:41:16.696 --> 01:41:17.576
+<v John Miller>Alright.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/961-0
+01:41:19.296 --> 01:41:21.804
+<v John Miller>Well,
+did did you try the prompt that I gave it</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/961-1
+01:41:21.804 --> 01:41:22.536
+<v John Miller>about a human?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/962-0
+01:41:27.216 --> 01:41:30.456
+<v John Miller>All right,
+so let me restart Visual Studio.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/963-0
+01:41:29.736 --> 01:41:30.936
+<v Chris Bishop>I missed that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/964-0
+01:41:31.856 --> 01:41:34.416
+<v John Miller>It should be in. It should be in shop.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/966-0
+01:41:32.296 --> 01:41:38.776
+<v Chris Bishop>Prompt. Oh yeah, yeah, no,
+I I did use that prompt and it still goes</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/966-1
+01:41:38.776 --> 01:41:43.096
+<v Chris Bishop>into having a stable environment to stage
+it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/967-0
+01:41:55.856 --> 01:42:03.288
+<v Chris Bishop>I'll create another slice prompt and see
+if it still interprets it as literally as</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/967-1
+01:42:03.288 --> 01:42:03.736
+<v Chris Bishop>that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/968-0
+01:42:06.336 --> 01:42:10.203
+<v John Miller>Yeah,
+and maybe don't make sure we're not using</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/968-1
+01:42:10.203 --> 01:42:12.056
+<v John Miller>a word script possibly.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/971-0
+01:42:30.096 --> 01:42:33.656
+<v John Miller>I'll change back to Claude.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/973-0
+01:42:38.656 --> 01:42:42.696
+<v John Miller>It's still thinking about that.
+That's a lot interesting.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/976-0
+01:42:52.896 --> 01:42:57.768
+<v John Miller>There's the client planning instructions.
+It looks like it's trying to replace a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/976-1
+01:42:57.768 --> 01:43:00.656
+<v John Miller>good deal of the file or add quite a bit
+to it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/978-0
+01:43:13.736 --> 01:43:13.816
+<v John Miller>Oh.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/981-0
+01:43:29.016 --> 01:43:32.336
+<v John Miller>All right, let's see. I'm moving on.
+Let me try it again.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/982-0
+01:43:33.896 --> 01:43:33.976
+<v John Miller>Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/983-0
+01:43:40.496 --> 01:43:42.576
+<v John Miller>This is the one you're working on.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/984-0
+01:43:48.016 --> 01:43:51.136
+<v John Miller>You need the product manager.
+Let me see the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/985-0
+01:43:51.976 --> 01:43:53.496
+<v John Miller>Quad Sonic 05.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/986-0
+01:43:57.616 --> 01:43:59.776
+<v John Miller>Um, I'm gonna leave session.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/988-0
+01:44:09.816 --> 01:44:11.616
+<v John Miller>And I want that to be local.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/989-0
+01:44:15.576 --> 01:44:16.056
+<v John Miller>And.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/990-0
+01:44:19.856 --> 01:44:25.392
+<v John Miller>Yeah, the vertical slice planning guide.
+So we wanna add a section on how a human</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/990-1
+01:44:25.392 --> 01:44:30.456
+<v John Miller>would showcase the slice to stakeholders
+and let's see if we can get that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/991-0
+01:44:31.776 --> 01:44:32.536
+<v John Miller>To run.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/992-0
+01:44:37.456 --> 01:44:39.016
+<v John Miller>So it's gonna read the file first.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/993-0
+01:44:41.776 --> 01:44:42.496
+<v John Miller>And.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/994-0
+01:44:46.176 --> 01:44:49.936
+<v John Miller>And let's see what it can,
+what it does in terms of a showcase.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/995-0
+01:44:55.776 --> 01:44:58.867
+<v John Miller>So now it's you know,
+place this up to the planning output</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/995-1
+01:44:58.867 --> 01:45:01.016
+<v John Miller>section and before the quality checklist.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/998-0
+01:45:17.936 --> 01:45:24.144
+<v John Miller>We may have to provide additional
+guidance on showcases and again,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/998-1
+01:45:24.144 --> 01:45:29.056
+<v John Miller>as I mentioned,
+it might be a good idea to move the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/999-0
+01:45:31.656 --> 01:45:36.462
+<v John Miller>Creation of the vertical slice planning
+instructions into a prompt so that we</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/999-1
+01:45:36.462 --> 01:45:41.576
+<v John Miller>could make changes to the prompt and then
+regenerate the instruction file from it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1000-0
+01:45:44.096 --> 01:45:48.216
+<v John Miller>But it's going to replaced some lines in
+the file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1002-0
+01:46:02.856 --> 01:46:04.296
+<v John Miller>And let's see.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1003-0
+01:46:08.056 --> 01:46:11.456
+<v John Miller>Don't see any changes yet.
+We can hide the sessions.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1004-0
+01:46:18.376 --> 01:46:23.348
+<v John Miller>So anybody get a good a showcase section
+or a good test requirements section?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1004-1
+01:46:23.348 --> 01:46:26.536
+<v John Miller>Let's see if we can find those test
+requirements.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1005-0
+01:46:33.056 --> 01:46:34.616
+<v John Miller>So I need a simple test.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1006-0
+01:46:35.616 --> 01:46:38.096
+<v John Miller>And I see now that there's.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1007-0
+01:46:41.896 --> 01:46:48.329
+<v John Miller>But 81 mentions of test in the file.
+When we looked at it before there was</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1007-1
+01:46:48.329 --> 01:46:49.016
+<v John Miller>none so.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1008-0
+01:46:50.256 --> 01:46:51.896
+<v John Miller>It's probably a good thing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1009-0
+01:47:00.976 --> 01:47:03.176
+<v John Miller>So test automation requirements.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1010-0
+01:47:07.056 --> 01:47:08.336
+<v John Miller>Test verification.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1011-0
+01:47:11.136 --> 01:47:15.216
+<v John Miller>There's a testing strategy for unit test,
+integration test, edge cases.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1012-0
+01:47:18.936 --> 01:47:20.816
+<v John Miller>New files to create.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1013-0
+01:47:23.016 --> 01:47:27.616
+<v John Miller>the testing strategy which we looked at.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1014-0
+01:47:29.696 --> 01:47:31.496
+<v John Miller>Uh, definition of done.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1015-0
+01:47:34.096 --> 01:47:38.965
+<v John Miller>Code implemented passes all the test unit
+test coverage is up greater than 80%.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1015-1
+01:47:38.965 --> 01:47:43.896
+<v John Miller>So integration test pass deployed to a
+test environment. That'll be interesting.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1016-0
+01:47:44.976 --> 01:47:49.882
+<v John Miller>One of the things I I also look for when
+I'm evaluating or reviewing these</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1016-1
+01:47:49.882 --> 01:47:51.256
+<v John Miller>instruction files is.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1017-0
+01:47:52.496 --> 01:47:56.936
+<v John Miller>Say, uh, you know,
+select something like this and ask it. Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1018-0
+01:48:00.576 --> 01:48:00.936
+<v John Miller>No.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1019-0
+01:48:06.336 --> 01:48:08.496
+<v John Miller>Something like why do you plan to do this?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1020-0
+01:48:14.336 --> 01:48:19.310
+<v John Miller>And see what it can suggest,
+but I don't want to interrupt our session,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1020-1
+01:48:19.310 --> 01:48:20.416
+<v John Miller>so I'll wait to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1021-0
+01:48:21.376 --> 01:48:23.056
+<v John Miller>Till it finishes to do that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1022-0
+01:48:29.736 --> 01:48:32.656
+<v John Miller>What is it saying here about multiple
+matches?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1023-0
+01:48:33.696 --> 01:48:37.207
+<v John Miller>So better context.
+Let me use more lines before and after to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1023-1
+01:48:37.207 --> 01:48:38.416
+<v John Miller>make it truly unique.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1024-0
+01:48:40.696 --> 01:48:43.016
+<v John Miller>And then I'll include the Sprint section.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1028-0
+01:49:03.016 --> 01:49:03.136
+<v John Miller>But.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1029-0
+01:49:05.616 --> 01:49:10.652
+<v John Miller>And that way if you ask you a question
+like this or something or some some</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1029-1
+01:49:10.652 --> 01:49:15.755
+<v John Miller>asking clarification questions or
+questions about you know how is how would</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1029-2
+01:49:15.755 --> 01:49:19.314
+<v John Miller>you go about making a determination to do
+something,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1029-3
+01:49:19.314 --> 01:49:24.216
+<v John Miller>it's a it's a good way of getting getting
+the A I to expose what it was.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1030-0
+01:49:24.456 --> 01:49:28.696
+<v John Miller>What it was thinking and how it how it
+makes it a particular determination.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1031-0
+01:49:29.856 --> 01:49:33.772
+<v John Miller>All right,
+so it's still getting multiple matches.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1031-1
+01:49:33.772 --> 01:49:39.224
+<v John Miller>It's still editing the file.
+Anybody have any questions or or comments</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1031-2
+01:49:39.224 --> 01:49:40.376
+<v John Miller>on this so far?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1032-0
+01:49:43.696 --> 01:49:47.143
+<v John Miller>And yeah, I, you know,
+another comment I would make is that,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1032-1
+01:49:47.143 --> 01:49:50.309
+<v John Miller>you know, this is,
+I think you're kind of demonstrating</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1032-2
+01:49:50.309 --> 01:49:54.661
+<v John Miller>there's a lot of effort that has to go
+into getting to a point where you can</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1032-3
+01:49:54.661 --> 01:49:59.296
+<v John Miller>effectively put the A I on the task and
+and have it actually do an effective job.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1033-0
+01:49:59.896 --> 01:50:05.172
+<v John Miller>So it's a it's a a a great so it does
+take some level of review to make sure</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1033-1
+01:50:05.172 --> 01:50:10.517
+<v John Miller>that you built enough enough guardrails
+to make sure that you're going to get</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1033-2
+01:50:10.517 --> 01:50:15.656
+<v John Miller>output that is going to be acceptable and
+doesn't require a lot of rework.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1034-0
+01:50:16.616 --> 01:50:22.015
+<v John Miller>And in my my view,
+that's a great team exercise where you</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1034-1
+01:50:22.015 --> 01:50:29.368
+<v John Miller>essentially bring up these instruction
+files one at a time and you can go with</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1034-2
+01:50:29.368 --> 01:50:31.696
+<v John Miller>as a group and have them.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1035-0
+01:50:31.776 --> 01:50:37.577
+<v John Miller>You know have the A I explain what they
+do or ask or ask questions of the A I</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1035-1
+01:50:37.577 --> 01:50:43.379
+<v John Miller>about how it interprets any of these
+instructions and and then use it to as a</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1035-2
+01:50:43.379 --> 01:50:49.255
+<v John Miller>as a team with the A I assistance to
+create something that you you agree on as</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1035-3
+01:50:49.255 --> 01:50:49.776
+<v John Miller>a unit.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1036-0
+01:50:50.096 --> 01:50:56.673
+<v John Miller>Whereas at an organization that this is
+exactly how you want to approaching this</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1036-1
+01:50:56.673 --> 01:51:01.464
+<v John Miller>particular problem.
+So it's still pointing out it's having</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1036-2
+01:51:01.464 --> 01:51:03.576
+<v John Miller>issues creating this file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1037-0
+01:51:05.056 --> 01:51:10.122
+<v John Miller>I've had situations and it because we
+restarted Visual Studio Code,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1037-1
+01:51:10.122 --> 01:51:15.263
+<v John Miller>there might be actually some confusion
+we've introduced into the AI,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1037-2
+01:51:15.263 --> 01:51:16.456
+<v John Miller>but I've had it.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1038-0
+01:51:17.616 --> 01:51:22.381
+<v John Miller>Claim that files have been corrupted and
+it needs to recreate the files.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1038-1
+01:51:22.381 --> 01:51:27.343
+<v John Miller>When you get into that situation,
+you need to slow down and you you need to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1038-2
+01:51:27.343 --> 01:51:31.456
+<v John Miller>get a better sense of what it's actually
+trying to accomplish.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1039-0
+01:51:32.736 --> 01:51:36.581
+<v John Miller>You know,
+because you know file corruption is not</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1039-1
+01:51:36.581 --> 01:51:41.734
+<v John Miller>something that's a common thing.
+It's usually somebody has created</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1039-2
+01:51:41.734 --> 01:51:45.426
+<v John Miller>something that that the A I doesn't
+understand.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1039-3
+01:51:45.426 --> 01:51:48.656
+<v John Miller>It also has sometimes has difficulty with.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1040-0
+01:51:49.496 --> 01:51:55.156
+<v John Miller>While it's in the process of trying to
+make updates into the project,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1040-1
+01:51:55.156 --> 01:52:00.169
+<v John Miller>even if you're going in and making
+modifications of your own,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1040-2
+01:52:00.169 --> 01:52:06.962
+<v John Miller>that sometimes can confuse the A I and to
+to avoid that you can you can essentially</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1040-3
+01:52:06.962 --> 01:52:08.256
+<v John Miller>try to dedicate.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1041-0
+01:52:08.696 --> 01:52:14.973
+<v John Miller>Delegate to a background task or to the
+cloud some of the implementation steps so</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1041-1
+01:52:14.973 --> 01:52:20.561
+<v John Miller>that you'll have a a way that you can
+apply those changes or merge those</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1041-2
+01:52:20.561 --> 01:52:23.776
+<v John Miller>changes back into the main branch so that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1042-0
+01:52:23.856 --> 01:52:27.776
+<v John Miller>You're you're, you know,
+making conflicting issues.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1044-0
+01:52:30.216 --> 01:52:36.476
+<v John Miller>So it thinks here that the the
+application has multiple repeated</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1044-1
+01:52:36.476 --> 01:52:37.536
+<v John Miller>structures.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1045-0
+01:52:39.016 --> 01:52:42.696
+<v John Miller>So this is what's slowing,
+slowing down the work that it's trying to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1045-1
+01:52:42.696 --> 01:52:45.096
+<v John Miller>do and it's looking to try to clean that
+up.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1046-0
+01:52:50.776 --> 01:52:53.336
+<v John Miller>So what did you guys see?
+Anything interesting?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1048-0
+01:52:59.976 --> 01:53:00.256
+Yeah.
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1050-0
+01:53:00.336 --> 01:53:05.540
+<v Matt Hoffman>Yeah,
+I just I switched to GPT 40 and and</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1050-1
+01:53:05.540 --> 01:53:12.976
+<v Matt Hoffman>nailed the showcasing section on the
+first try on like 4.1.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1049-0
+01:53:14.576 --> 01:53:14.816
+<v John Miller>Hello.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1051-0
+01:53:17.136 --> 01:53:17.376
+<v John Miller>Cool.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1052-0
+01:53:18.896 --> 01:53:23.016
+<v John Miller>Now I see the timeline section ends with
+a duration of 12 months.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1053-0
+01:53:29.176 --> 01:53:31.536
+<v John Miller>So it's definitely having some issues
+with the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1054-0
+01:53:33.456 --> 01:53:34.416
+<v John Miller>Cloud structure.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1055-0
+01:53:33.656 --> 01:53:35.736
+<v Chris Bishop>Very fancy calculator.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1056-0
+01:53:36.736 --> 01:53:37.896
+<v John Miller>A lot of effort.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1057-0
+01:53:41.016 --> 01:53:41.256
+<v John Miller>I mean.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1058-0
+01:53:42.936 --> 01:53:46.645
+<v John Miller>I suppose in in a way the amount of time
+we spend on it,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1058-1
+01:53:46.645 --> 01:53:51.722
+<v John Miller>we could probably written it by hand,
+but really that's not the the the point</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1058-2
+01:53:51.722 --> 01:53:56.994
+<v John Miller>is how how do we use this against larger
+code bases in terms of breaking it down</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1058-3
+01:53:56.994 --> 01:53:58.296
+<v John Miller>and applying things.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1059-0
+01:54:04.816 --> 01:54:08.176
+<v John Miller>All right, so it's still looking to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1060-0
+01:54:10.616 --> 01:54:12.176
+<v John Miller>It um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1061-0
+01:54:13.256 --> 01:54:15.520
+<v John Miller>To.
+So now it looks like it's actually</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1061-1
+01:54:15.520 --> 01:54:16.856
+<v John Miller>updating the documents.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1062-0
+01:54:18.936 --> 01:54:21.136
+<v John Miller>And apologize for the difficulty.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1063-0
+01:54:29.776 --> 01:54:32.376
+<v John Miller>All right, so it's changed its approach.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1064-0
+01:54:34.576 --> 01:54:39.325
+<v John Miller>To using a file 1st and then
+incorporating the file into the into the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1064-1
+01:54:39.325 --> 01:54:39.936
+<v John Miller>document.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1065-0
+01:54:48.056 --> 01:54:50.416
+<v John Miller>And what do we have here as pending
+changes?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1066-0
+01:54:52.216 --> 01:54:57.616
+<v John Miller>We have our two vertical slice
+implementation prompts. We have the.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1067-0
+01:54:58.536 --> 01:54:59.696
+<v John Miller>Implementation plan.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1068-0
+01:55:01.256 --> 01:55:07.285
+<v John Miller>And the vertical slice planning.
+What I wanted to look at while this is</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1068-1
+01:55:07.285 --> 01:55:13.231
+<v John Miller>doing this is I had a question.
+It seemed a bit unusual for me that it</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1068-2
+01:55:13.231 --> 01:55:15.576
+<v John Miller>was only proposing 2 slices.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1069-0
+01:55:19.296 --> 01:55:27.216
+<v John Miller>So I was expecting from my my review of
+the document to see.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1070-0
+01:55:29.096 --> 01:55:32.816
+<v John Miller>More functionality being implemented than
+what we what we saw.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1071-0
+01:55:34.016 --> 01:55:34.096
+<v John Miller>Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1072-0
+01:55:38.056 --> 01:55:43.181
+<v John Miller>So like the calculation engine,
+data storage or calculations keeping the</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1072-1
+01:55:43.181 --> 01:55:44.656
+<v John Miller>last 50 calculations.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1073-0
+01:55:48.656 --> 01:55:49.256
+<v John Miller>And.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1074-0
+01:55:51.456 --> 01:55:56.028
+<v John Miller>Accessibility requirements,
+performance requirements,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1074-1
+01:55:56.028 --> 01:56:01.616
+<v John Miller>but I wanted to get to the actual
+functionality testing strategy.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1075-0
+01:56:06.456 --> 01:56:09.309
+<v John Miller>Tactical risk.
+So here's the development phases.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1075-1
+01:56:09.309 --> 01:56:11.696
+<v John Miller>So it looks like maybe that's only doing.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1076-0
+01:56:13.176 --> 01:56:16.176
+<v John Miller>MVP development maybe?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1077-0
+01:56:18.776 --> 01:56:23.576
+<v John Miller>Calculator core engine and a basic UI.
+That seems like what it was working on.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1078-0
+01:56:25.856 --> 01:56:26.336
+<v John Miller>And.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1079-0
+01:56:27.816 --> 01:56:32.177
+<v John Miller>That's the plan of QA and then we go on
+to version 1.1.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1079-1
+01:56:32.177 --> 01:56:38.564
+<v John Miller>So maybe that's where we would then come.
+We'll need to come back and follow this</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1079-2
+01:56:38.564 --> 01:56:42.536
+<v John Miller>up with slices for these additional 1.
+1 features.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1080-0
+01:56:46.016 --> 01:56:46.256
+<v John Miller>Alright.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1081-0
+01:56:49.416 --> 01:56:55.776
+<v John Miller>So we're going back to the vertical slice
+implementing planning instructions file.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1082-0
+01:56:57.936 --> 01:57:01.616
+<v John Miller>Now you will copy the content from the
+new file which is.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1083-0
+01:57:03.216 --> 01:57:03.536
+<v John Miller>This one.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1084-0
+01:57:09.896 --> 01:57:13.976
+<v John Miller>And it wants us to do that at line 2726.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1085-0
+01:57:15.856 --> 01:57:21.496
+<v John Miller>So let's take that and let's this is like
+a large file in and of itself.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1086-0
+01:57:30.056 --> 01:57:34.065
+<v Chris Bishop>John,
+would you recommend at times because of</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1086-1
+01:57:34.065 --> 01:57:40.950
+<v Chris Bishop>the size of the file to go through some
+summarization with these files just to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1086-2
+01:57:40.950 --> 01:57:43.216
+<v Chris Bishop>reduce the context window?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1087-0
+01:57:44.016 --> 01:57:49.381
+<v John Miller>Yeah, I would definitely. I mean,
+I would be looking at these files towards</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1087-1
+01:57:49.381 --> 01:57:55.170
+<v John Miller>that. What do I, what do I need, right?
+What's nice to have and what don't I need</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1087-2
+01:57:55.170 --> 01:58:00.535
+<v John Miller>and and start to pair the files down.
+It already has instructions to try to</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1087-3
+01:58:00.535 --> 01:58:02.936
+<v John Miller>minimize. We have that in the A I.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1088-0
+01:58:03.256 --> 01:58:07.408
+<v John Miller>Generated output instructions to minimize
+the token consumption.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1088-1
+01:58:07.408 --> 01:58:12.136
+<v John Miller>So we don't see a lot of verbiage,
+a lot of bullet points and things like</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1088-2
+01:58:12.136 --> 01:58:12.456
+<v John Miller>that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1089-0
+01:58:13.416 --> 01:58:20.519
+<v John Miller>But I'm not really happy with this
+vertical slice planning instruction file</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1089-1
+01:58:20.519 --> 01:58:22.576
+<v John Miller>having so many issues.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1090-0
+01:58:25.376 --> 01:58:25.456
+<v John Miller>Um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1091-0
+01:58:30.456 --> 01:58:35.749
+<v John Miller>So I would be more inclined to, you know,
+break it up into individual instruction</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1091-1
+01:58:35.749 --> 01:58:38.590
+<v John Miller>files,
+maybe having an instruction file for</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1091-2
+01:58:38.590 --> 01:58:41.624
+<v John Miller>showcases that only applies to showcase
+files.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1091-3
+01:58:41.624 --> 01:58:44.336
+<v John Miller>You could also start to take advantage of.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1092-0
+01:58:45.656 --> 01:58:51.936
+<v John Miller>If you know as we've seen with the
+applies to if we started to.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1093-0
+01:58:53.176 --> 01:58:57.000
+<v John Miller>Include in addition to just instructions
+dot MD file,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1093-1
+01:58:57.000 --> 01:59:02.169
+<v John Miller>but prior to that some sort of
+categorization of the of the of the files</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1093-2
+01:59:02.169 --> 01:59:07.339
+<v John Miller>so that we could call out that that this
+this file here is only applied.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1093-3
+01:59:07.339 --> 01:59:11.376
+<v John Miller>This instruction file only applies to to
+certain things.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1094-0
+01:59:11.656 --> 01:59:15.060
+<v John Miller>For example,
+if we if we had like a like planning</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1094-1
+01:59:15.060 --> 01:59:19.078
+<v John Miller>instructions dot MD,
+we could then specify that only apply</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1094-2
+01:59:19.078 --> 01:59:23.980
+<v John Miller>that showcase file to planning
+instructions because we're not gonna use</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1094-3
+01:59:23.980 --> 01:59:26.296
+<v John Miller>it when we're writing code, right?</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1095-0
+01:59:27.016 --> 01:59:31.803
+<v John Miller>And so that will also help us reduce the
+context window for even large files like</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1095-1
+01:59:31.803 --> 01:59:33.496
+<v John Miller>what we're dealing with here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1097-0
+01:59:40.456 --> 01:59:45.295
+<v John Miller>All right, so let's take this file.
+We talked. We gotta find that.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1097-1
+01:59:45.295 --> 01:59:47.896
+<v John Miller>Go to line 2726 if I'm not mistaken.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1098-0
+01:59:50.496 --> 01:59:51.376
+<v John Miller>That's here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1102-0
+02:00:05.656 --> 02:00:06.696
+<v John Miller>Right after the planning outputs.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1103-0
+02:00:12.656 --> 02:00:16.616
+<v John Miller>So we see output here.
+I'll put two planning outputs.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1103-1
+02:00:16.616 --> 02:00:18.376
+<v John Miller>That makes sense. So we.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1104-0
+02:00:20.656 --> 02:00:21.576
+<v John Miller>Um 2726.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1105-0
+02:00:25.856 --> 02:00:28.016
+<v John Miller>It's down here.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1106-0
+02:00:33.856 --> 02:00:35.776
+<v John Miller>So it wants that right there.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1109-0
+02:00:52.736 --> 02:00:55.416
+<v John Miller>Alright,
+so that's done and I think we can.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1110-0
+02:00:58.056 --> 02:01:03.197
+<v John Miller>We can get that out of that next.
+So at this point we have our planning</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1110-1
+02:01:03.197 --> 02:01:06.982
+<v John Miller>instructions.
+What we would need to do is that since</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1110-2
+02:01:06.982 --> 02:01:11.339
+<v John Miller>we've modified those,
+we need to create a new implementation</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1110-3
+02:01:11.339 --> 02:01:11.696
+<v John Miller>plan.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1111-0
+02:01:13.176 --> 02:01:15.256
+<v John Miller>So if we were select this guy.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1112-0
+02:01:17.416 --> 02:01:21.736
+<v John Miller>We this is a good reason to save the
+approx.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1113-0
+02:01:22.696 --> 02:01:24.536
+<v John Miller>Yeah, we could create a new.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1114-0
+02:01:27.416 --> 02:01:31.656
+<v John Miller>A new clear our session so that we have a.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1115-0
+02:01:33.776 --> 02:01:35.216
+<v John Miller>We have um.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1116-0
+02:01:38.136 --> 02:01:44.181
+<v John Miller>A bigger winner to work with and we can
+say now using the vertical slice planning</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1116-1
+02:01:44.181 --> 02:01:49.784
+<v John Miller>instructions file and the and the
+requirements file create a new plan using</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1116-2
+02:01:49.784 --> 02:01:53.176
+<v John Miller>a vertical slices.
+So we'll give that a shot.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1117-0
+02:01:54.216 --> 02:01:57.292
+<v John Miller>All right,
+looks like we're out of time for today,</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1117-1
+02:01:57.292 --> 02:02:00.911
+<v John Miller>so I'll let this finish and we'll can
+review this tomorrow.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1117-2
+02:02:00.911 --> 02:02:05.495
+<v John Miller>It's already took us a little bit of
+turning at the end there to try to get</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1117-3
+02:02:05.495 --> 02:02:08.993
+<v John Miller>back to our slices.
+I may generate some additional slices</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1117-4
+02:02:08.993 --> 02:02:09.536
+<v John Miller>based on.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1118-0
+02:02:10.056 --> 02:02:14.526
+<v John Miller>What I find and I'll show you share those
+prompts with you tomorrow and then</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1118-1
+02:02:14.526 --> 02:02:18.996
+<v John Miller>tomorrow we'll we'll work on you know
+iterating on the on the implementation</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1118-2
+02:02:18.996 --> 02:02:23.640
+<v John Miller>and see how see if we can get the the
+calculator up and running and continually</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1118-3
+02:02:23.640 --> 02:02:27.936
+<v John Miller>add slices and add features to the
+implementation and see how that works.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1119-0
+02:02:27.976 --> 02:02:29.576
+<v John Miller>That works all right.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1120-0
+02:02:31.296 --> 02:02:33.896
+<v John Miller>Have a good rest of your day and I'll see
+you tomorrow.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1122-0
+02:02:33.376 --> 02:02:34.576
+Thanks, John.
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1124-0
+02:02:35.336 --> 02:02:35.936
+<v Matt Hoffman>Thank you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1129-0
+02:02:37.136 --> 02:02:37.936
+<v Childs, Stephen>Thank you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1132-0
+02:02:38.176 --> 02:02:38.816
+<v Lyle Ubben>Thank you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1131-0
+02:02:38.536 --> 02:02:39.096
+<v Matt Hoffman>Already.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1133-0
+02:02:39.976 --> 02:02:40.856
+<v Myachin, Alex>Yeah.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1134-0
+02:02:40.256 --> 02:02:40.696
+<v Childs, Stephen>Thank you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1137-0
+02:02:43.976 --> 02:02:45.176
+<v John Miller>You're more than welcome.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1139-0
+02:02:46.896 --> 02:02:48.576
+<v Giterman, Boris>Thank you, John. Thank you.</v>
+
+0480ee32-e862-4b04-8dd8-47a9a4739219/1141-0
+02:02:48.296 --> 02:02:49.096
+<v John Miller>You're welcome.</v>

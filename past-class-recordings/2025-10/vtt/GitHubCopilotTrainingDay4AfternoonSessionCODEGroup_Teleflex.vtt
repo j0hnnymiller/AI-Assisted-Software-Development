@@ -1,0 +1,5835 @@
+WEBVTT
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/9-0
+00:00:28.259 --> 00:00:31.899
+<v Tarrants, Seth>It appears there's cupcakes in the
+kitchen if you want some.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/10-0
+00:00:34.819 --> 00:00:36.299
+<v Majernik, Peter>Thank you for that information.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/36-0
+00:02:43.070 --> 00:02:45.110
+<v John Miller>Hi, welcome back.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/74-0
+00:05:18.750 --> 00:05:24.398
+<v John Miller>So, So what I thought we'd do next,
+but I'm having a little trouble getting</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/74-1
+00:05:24.398 --> 00:05:28.411
+<v John Miller>it prepared,
+is let's reimplement our our calculator.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/74-2
+00:05:28.411 --> 00:05:34.430
+<v John Miller>But let's start off with requirements and
+then we'll see if we can get a closer.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/79-0
+00:05:34.910 --> 00:05:40.300
+<v John Miller>And a better implementation based on
+having those requirements and we can go</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/79-1
+00:05:40.300 --> 00:05:45.410
+<v John Miller>through that process that I've been
+outlining and bring in the proper or</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/79-2
+00:05:45.410 --> 00:05:49.750
+<v John Miller>create the proper instruction files we we
+think that we need.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/83-0
+00:05:50.110 --> 00:05:55.945
+<v John Miller>In order to do this, but I'm trying to.
+I created a branch and I'm looking to try</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/83-1
+00:05:55.945 --> 00:05:59.503
+<v John Miller>to get rid of the the old version in this
+branch,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/83-2
+00:05:59.503 --> 00:06:03.630
+<v John Miller>but it seems to be something that's
+taking quite a while.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/85-0
+00:06:07.150 --> 00:06:11.910
+<v John Miller>So let's say maybe we can start with the
+requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/87-0
+00:06:14.990 --> 00:06:18.150
+<v John Miller>So a simple way I think of doing this
+would be um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/90-0
+00:06:20.910 --> 00:06:24.470
+<v John Miller>Uh, create a requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/91-0
+00:06:27.190 --> 00:06:28.590
+<v John Miller>Uh, document.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/94-0
+00:06:31.830 --> 00:06:34.390
+<v John Miller>or a calculator.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/96-0
+00:06:40.150 --> 00:06:40.950
+<v John Miller>Uh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/97-0
+00:06:43.510 --> 00:06:43.990
+<v John Miller>Application.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/102-0
+00:06:54.510 --> 00:06:58.710
+<v John Miller>Yeah, that's what I wanted to avoid.
+I didn't wanna bleed in the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/104-0
+00:07:00.950 --> 00:07:03.710
+<v John Miller>The previous one, so let's.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/107-0
+00:07:10.510 --> 00:07:13.270
+<v John Miller>So a new calculator application don't.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/109-0
+00:07:15.270 --> 00:07:18.990
+<v John Miller>Use any existing.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/111-0
+00:07:21.190 --> 00:07:22.630
+<v John Miller>Implementation.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/113-0
+00:07:26.030 --> 00:07:29.110
+<v John Miller>You just want a nice clean requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/121-0
+00:07:45.550 --> 00:07:49.284
+<v John Miller>Oh yeah, kind of. Again,
+just starting with a a well known domain,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/121-1
+00:07:49.284 --> 00:07:52.070
+<v John Miller>we can get a requirements document pretty
+easily.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/124-0
+00:07:53.070 --> 00:07:58.346
+<v John Miller>Yeah, of course, returning, you know,
+producing a a requirements document for a</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/124-1
+00:07:58.346 --> 00:08:00.390
+<v John Miller>a new application is obviously.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/126-0
+00:08:01.470 --> 00:08:06.070
+<v John Miller>A much more intensive inquires,
+much more collaboration.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/134-0
+00:08:27.990 --> 00:08:28.150
+<v John Miller>Right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/136-0
+00:08:30.150 --> 00:08:31.950
+<v John Miller>So let's take a look at what it created.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/139-0
+00:08:40.030 --> 00:08:41.670
+<v John Miller>So it has introduction.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/143-0
+00:08:43.470 --> 00:08:48.000
+<v John Miller>This document specifies the requirements
+for a desktop calculator application,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/143-1
+00:08:48.000 --> 00:08:52.472
+<v John Miller>provides comprehensive mathematical
+computation capabilities and an intuitive</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/143-2
+00:08:52.472 --> 00:08:55.855
+<v John Miller>graphical user interface.
+So it should do basic arithmetic</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/143-3
+00:08:55.855 --> 00:08:58.550
+<v John Miller>operations,
+scientific mathematical functions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/148-0
+00:08:59.830 --> 00:09:05.800
+<v John Miller>Advanced features like memory operations
+and and calculator history and a</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/148-1
+00:09:05.800 --> 00:09:12.253
+<v John Miller>cross-platform design and compatibility.
+Devine some acronyms that we know some</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/148-2
+00:09:12.253 --> 00:09:18.142
+<v John Miller>document conventions which use the shall,
+should and may for the funding</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/148-3
+00:09:18.142 --> 00:09:19.190
+<v John Miller>requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/153-0
+00:09:19.550 --> 00:09:23.772
+<v John Miller>Overall description,
+the calculator should be a standalone</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/153-1
+00:09:23.772 --> 00:09:29.139
+<v John Miller>desktop application that operates
+independently without requiring Internet</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/153-2
+00:09:29.139 --> 00:09:34.434
+<v John Miller>connectivity or external dependencies
+beyond the target operating system.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/153-3
+00:09:34.434 --> 00:09:38.870
+<v John Miller>Provide standard arithmetic and memory,
+calculation, history.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/158-0
+00:09:39.430 --> 00:09:42.712
+<v John Miller>Results management,
+keyboard and mouse input,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/158-1
+00:09:42.712 --> 00:09:47.349
+<v John Miller>error handling and validation,
+user classes and characteristics.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/158-2
+00:09:47.349 --> 00:09:52.699
+<v John Miller>Primary users are general computer users.
+Secondary users are students and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/158-3
+00:09:52.699 --> 00:09:56.266
+<v John Miller>professionals.
+Beginning to intermediate computer</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/158-4
+00:09:56.266 --> 00:09:57.550
+<v John Miller>literacy expected.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/161-0
+00:09:58.230 --> 00:10:05.430
+<v John Miller>Operating environment are Windows,
+Mac OS and Linux hardware minimums and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/161-1
+00:10:05.430 --> 00:10:09.030
+<v John Miller>the display is a specific resolution.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/165-0
+00:10:10.950 --> 00:10:16.048
+<v John Miller>System features.
+So here we are defining what the the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/165-1
+00:10:16.048 --> 00:10:23.222
+<v John Miller>basic arithmetic operations are,
+functional requirements, input and output,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/165-2
+00:10:23.222 --> 00:10:25.110
+<v John Miller>scientific notation.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/166-0
+00:10:25.510 --> 00:10:26.830
+<v John Miller>Scientific functions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/168-0
+00:10:27.870 --> 00:10:29.590
+<v John Miller>Memory operations.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/170-0
+00:10:32.070 --> 00:10:35.133
+<v John Miller>And looking at these so far,
+they're all shells,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/170-1
+00:10:35.133 --> 00:10:37.070
+<v John Miller>so it must do all these things.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/173-0
+00:10:38.030 --> 00:10:43.717
+<v John Miller>External interface requirements,
+a general UI, display requirements,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/173-1
+00:10:43.717 --> 00:10:44.870
+<v John Miller>button layout.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/175-0
+00:10:46.350 --> 00:10:48.638
+<v John Miller>OK,
+here we're specifying a standard</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/175-1
+00:10:48.638 --> 00:10:49.750
+<v John Miller>calculator layout.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/176-0
+00:10:51.710 --> 00:10:52.830
+<v John Miller>Hardware interface requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/180-0
+00:10:56.110 --> 00:10:59.695
+<v John Miller>Software interface requirements,
+response time,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/180-1
+00:10:59.695 --> 00:11:04.550
+<v John Miller>non-functional requirements, reliability,
+throughput, usability.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/181-0
+00:11:06.230 --> 00:11:07.350
+<v John Miller>Scalability.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/184-0
+00:11:09.550 --> 00:11:14.230
+<v John Miller>Portability then technical requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/187-0
+00:11:15.950 --> 00:11:19.974
+<v John Miller>So it wants mathematical precision,
+resources, accessibility,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/187-1
+00:11:19.974 --> 00:11:25.232
+<v John Miller>and then finally the acceptance criteria,
+which is all operations should produce</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/187-2
+00:11:25.232 --> 00:11:26.270
+<v John Miller>correct results.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/189-0
+00:11:28.070 --> 00:11:31.910
+<v John Miller>Usability should be able to use it
+without training.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/191-0
+00:11:34.430 --> 00:11:39.950
+<v John Miller>It should start quickly compatibility
+testing and security testing.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/194-0
+00:11:40.910 --> 00:11:44.790
+<v John Miller>Any any questions on this or comments?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/196-0
+00:11:49.830 --> 00:11:51.830
+<v Tarrants, Seth>What was the prompt for that again?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/198-0
+00:11:54.390 --> 00:11:57.110
+<v John Miller>That prompt was.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/205-0
+00:11:58.670 --> 00:12:04.945
+<v John Miller>Create a requirements document for a new
+calculator desktop application and then I</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/205-1
+00:12:04.945 --> 00:12:09.405
+<v John Miller>added don't use any of the existing
+implementation format.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/202-0
+00:12:07.190 --> 00:12:09.270
+<v Tarrants, Seth>Ah, OK. Thank you.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/205-2
+00:12:09.405 --> 00:12:15.150
+<v John Miller>So it's very simple and from that because
+I think it's a well known domain.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/210-0
+00:12:15.910 --> 00:12:21.730
+<v John Miller>It was able to produce, I think,
+very accurate specifications for that,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/210-1
+00:12:21.730 --> 00:12:28.116
+<v John Miller>but certainly a prop like this could be
+used to help design any feature if you</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/210-2
+00:12:28.116 --> 00:12:34.339
+<v John Miller>give it enough context to where it knows
+basically how to infer the detailed</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/210-3
+00:12:34.339 --> 00:12:35.390
+<v John Miller>requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/211-0
+00:12:35.470 --> 00:12:38.950
+<v John Miller>requirements from the more general
+instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/217-0
+00:12:42.630 --> 00:12:48.532
+<v John Miller>So I just want to make a comment about
+the fact that I'm using quite a lot of A</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/217-1
+00:12:48.532 --> 00:12:52.073
+<v John Miller>I in all of the work that we've done this
+week.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/217-2
+00:12:52.073 --> 00:12:57.754
+<v John Miller>And one of the reasons I do that is that
+I've found that is and I think this</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/217-3
+00:12:57.754 --> 00:13:01.590
+<v John Miller>document is a good example of that it
+will produce.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/222-0
+00:13:02.270 --> 00:13:08.360
+<v John Miller>Output that is quite a bit more
+comprehensive than what I would do if I</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/222-1
+00:13:08.360 --> 00:13:13.773
+<v John Miller>was doing it on my own.
+So it's an easier job in my mind for me</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/222-2
+00:13:13.773 --> 00:13:20.455
+<v John Miller>to pare something down to just what I
+need than try to build something up from</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/222-3
+00:13:20.455 --> 00:13:21.470
+<v John Miller>scratch and.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/223-0
+00:13:21.550 --> 00:13:25.480
+<v John Miller>And worry that I'm I'm gonna be lifting,
+leaving something out or forgetting</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/223-1
+00:13:25.480 --> 00:13:25.990
+<v John Miller>something.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/229-0
+00:13:27.470 --> 00:13:32.864
+<v John Miller>So I tend to favor letting the A I at
+least give me a first draft of something</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/229-1
+00:13:32.864 --> 00:13:38.598
+<v John Miller>so that I can then fine tune it to to do
+you know exactly what I want. For example,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/229-2
+00:13:38.598 --> 00:13:44.196
+<v John Miller>one of the things we might decide is an
+optional thing that we don't want to take</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/229-3
+00:13:44.196 --> 00:13:46.790
+<v John Miller>on is the cost platform compatibility.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/232-0
+00:13:46.990 --> 00:13:51.354
+<v John Miller>And then we can go back and say I I just
+remove everything related to cross for</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/232-1
+00:13:51.354 --> 00:13:55.881
+<v John Miller>cross-platform for from the specification
+and we would be able to start to pare it</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/232-2
+00:13:55.881 --> 00:13:58.390
+<v John Miller>down to something that we think is
+realistic.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/236-0
+00:14:00.910 --> 00:14:03.721
+<v John Miller>All right,
+so it doesn't look my like what it's</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/236-1
+00:14:03.721 --> 00:14:08.463
+<v John Miller>hoping to do is to create a branch which
+I'm on and it was going to get rid of a</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/236-2
+00:14:08.463 --> 00:14:13.030
+<v John Miller>lot of the executing implementation,
+but that doesn't seem to be panning out.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/239-0
+00:14:19.590 --> 00:14:20.950
+<v John Miller>I wonder.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/245-0
+00:14:30.230 --> 00:14:35.376
+<v John Miller>So maybe we can just preface everything
+by, you know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/245-1
+00:14:35.376 --> 00:14:42.428
+<v John Miller>referencing the second calculator.
+So what we can do here is maybe rename</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/245-2
+00:14:42.428 --> 00:14:43.190
+<v John Miller>this to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/246-0
+00:14:45.190 --> 00:14:46.550
+<v John Miller>Calculator 2.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/251-0
+00:14:49.030 --> 00:14:53.303
+<v John Miller>Requirements. All right,
+So what would be our what would what</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/251-1
+00:14:53.303 --> 00:14:57.300
+<v John Miller>would be our next step?
+Now that we have our requirements</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/251-2
+00:14:57.300 --> 00:15:02.331
+<v John Miller>document, we know what we need to build.
+We have a detailed set of of of</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/251-3
+00:15:02.331 --> 00:15:06.190
+<v John Miller>implementations requirements that we need
+to implement.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/253-0
+00:15:07.310 --> 00:15:12.790
+<v John Miller>What would you? What would you?
+What did you suggest we should do first?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/256-0
+00:15:14.670 --> 00:15:19.510
+<v Tarrants, Seth>Probably run an analysis against the
+requirements in the existing project.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/258-0
+00:15:22.230 --> 00:15:27.430
+<v John Miller>OK, yeah, So what I was is frustrating.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/260-0
+00:15:29.030 --> 00:15:32.830
+<v John Miller>What I was hoping to do is clear out all
+of the folders.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/262-0
+00:15:34.590 --> 00:15:37.150
+<v John Miller>Let me do this. Let me see if it's.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/264-0
+00:15:38.270 --> 00:15:43.750
+<v John Miller>Let's close the Visual Studio of Visual
+Studio code and reopen it again.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/267-0
+00:15:45.310 --> 00:15:47.787
+<v Majernik, Peter>John,
+did did you have a branch without that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/267-1
+00:15:47.787 --> 00:15:50.924
+<v Majernik, Peter>first calculator?
+You could just switch back to that and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/267-2
+00:15:50.924 --> 00:15:52.190
+<v Majernik, Peter>create a new from that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/269-0
+00:15:52.430 --> 00:15:54.802
+<v John Miller>Yeah, we could.
+We could look for that too.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/269-1
+00:15:54.802 --> 00:15:56.150
+<v John Miller>Maybe that's a good idea.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/271-0
+00:16:02.590 --> 00:16:02.630
+<v John Miller>Uh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/275-0
+00:16:07.590 --> 00:16:12.377
+<v John Miller>So we would go back to the initial commit
+and we edit.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/275-1
+00:16:12.377 --> 00:16:15.510
+<v John Miller>We did a bunch of things related to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/277-0
+00:16:17.430 --> 00:16:21.550
+<v Majernik, Peter>But I don't want you to lose all the
+instruction files that are useful.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/282-0
+00:16:21.310 --> 00:16:25.147
+<v John Miller>Well, we can.
+We can either drag those back in or</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/282-1
+00:16:25.147 --> 00:16:30.288
+<v John Miller>recreate them if we need to.
+That that doesn't concern me too much</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/279-0
+00:16:26.950 --> 00:16:27.150
+<v Majernik, Peter>5.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/282-2
+00:16:30.288 --> 00:16:35.582
+<v John Miller>because I we have those in the other
+repository most of what we did.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/282-3
+00:16:35.582 --> 00:16:37.270
+<v John Miller>So copy the commit ID.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/284-0
+00:16:39.910 --> 00:16:41.750
+<v John Miller>And let's go here and say.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/285-0
+00:16:43.110 --> 00:16:43.550
+<v John Miller>Rollback.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/287-0
+00:16:45.510 --> 00:16:48.750
+<v John Miller>The repo to commit.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/292-0
+00:16:58.910 --> 00:17:02.590
+<v Majernik, Peter>So something like this,
+wouldn't that be better to do manually?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/296-0
+00:17:04.190 --> 00:17:07.650
+<v Majernik, Peter>I'm just curious 'cause it's just as
+simple a few clicks, right?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/296-1
+00:17:07.650 --> 00:17:10.630
+<v Majernik, Peter>And you're not using any, uh,
+GitHub copilot allowance.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/297-0
+00:17:12.750 --> 00:17:14.070
+<v John Miller>Yeah, probably.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/307-0
+00:17:34.750 --> 00:17:39.009
+<v John Miller>So I think this is interesting that it's
+it feels like it's got two different</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/307-1
+00:17:39.009 --> 00:17:41.848
+<v John Miller>approaches.
+So either a hard reset would completely</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/307-2
+00:17:41.848 --> 00:17:46.216
+<v John Miller>remove all commits or a revert which will
+create new commits that will undo the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/307-3
+00:17:46.216 --> 00:17:48.673
+<v John Miller>changes,
+which is safer and it preserves the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/307-4
+00:17:48.673 --> 00:17:49.110
+<v John Miller>history.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/310-0
+00:17:52.430 --> 00:17:56.852
+<v John Miller>So it's asking us if we want to do a hard
+reset. We can say no,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/310-1
+00:17:56.852 --> 00:17:59.270
+<v John Miller>that we want to do a reset instead.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/312-0
+00:18:01.870 --> 00:18:03.150
+<v John Miller>So we'll skip that command.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/313-0
+00:18:06.150 --> 00:18:06.750
+<v John Miller>And.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/315-0
+00:18:08.470 --> 00:18:10.870
+<v John Miller>We'll change the prop to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/317-0
+00:18:12.670 --> 00:18:14.070
+<v John Miller>Reset the repo.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/323-0
+00:18:28.550 --> 00:18:29.950
+<v John Miller>Yeah, so maybe we just do it ourselves.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/327-0
+00:18:30.750 --> 00:18:35.565
+<v Majernik, Peter>Yeah, that's what I would do. I mean,
+we don't need to like do anything with</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/327-1
+00:18:35.565 --> 00:18:39.005
+<v Majernik, Peter>this branch.
+We just switch back to to main and create</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/325-0
+00:18:36.510 --> 00:18:37.630
+<v John Miller>Oh, it's like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/327-2
+00:18:39.005 --> 00:18:39.630
+<v Majernik, Peter>a new one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/329-0
+00:18:42.590 --> 00:18:44.966
+<v Majernik, Peter>Anyway,
+don't don't let me steer you the wrong</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/329-1
+00:18:44.966 --> 00:18:47.190
+<v Majernik, Peter>way.
+I I don't wanna lose what you've done.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/331-0
+00:18:48.150 --> 00:18:50.771
+<v John Miller>Yeah,
+that's what I'm trying to do is I think</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/331-1
+00:18:50.771 --> 00:18:51.910
+<v John Miller>that it's if we say.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/333-0
+00:18:52.990 --> 00:18:55.190
+<v John Miller>I get switch.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/336-0
+00:19:02.270 --> 00:19:05.470
+<v John Miller>Um, get almost to get it up to date.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/338-0
+00:19:09.550 --> 00:19:09.950
+<v John Miller>And.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/340-0
+00:19:14.550 --> 00:19:17.030
+<v John Miller>We canceled out of that, so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/343-0
+00:19:25.830 --> 00:19:27.950
+<v John Miller>So do you know the command for a git
+reset?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/346-0
+00:19:29.070 --> 00:19:33.870
+<v Majernik, Peter>No, I don't. I will have to ask copilot.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/349-0
+00:19:38.110 --> 00:19:40.952
+<v Majernik, Peter>Well,
+I do everything visually in Visual Studio,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/349-1
+00:19:40.952 --> 00:19:42.750
+<v Majernik, Peter>so I know where to right click.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/348-0
+00:19:42.270 --> 00:19:42.390
+<v John Miller>Yes.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/351-0
+00:19:44.790 --> 00:19:47.270
+<v John Miller>Well, so could we do that then?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/353-0
+00:19:50.830 --> 00:19:53.550
+<v Majernik, Peter>You have Visual Studio looking at the
+same repo.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/358-0
+00:20:03.070 --> 00:20:05.910
+<v John Miller>None of those look like a promising.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/366-0
+00:20:27.630 --> 00:20:30.030
+<v Carter, Jake>Are are you trying to return to the
+initial commit?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/368-0
+00:20:30.670 --> 00:20:33.030
+<v John Miller>Yeah, but I want to keep the history.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/372-0
+00:20:34.550 --> 00:20:37.876
+<v Carter, Jake>Like keep all these other commits 'cause
+you could you could just check out the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/369-0
+00:20:34.910 --> 00:20:35.350
+<v Majernik, Peter>Well.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/372-1
+00:20:37.876 --> 00:20:38.790
+<v Carter, Jake>initial commit, right?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/375-0
+00:20:39.950 --> 00:20:44.234
+<v Majernik, Peter>Yeah, that's what I was suggesting.
+So I would switch to the original branch</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/377-0
+00:20:44.110 --> 00:20:48.305
+<v Carter, Jake>So if you right if you right click
+initial commit,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/375-1
+00:20:44.234 --> 00:20:46.070
+<v Majernik, Peter>that we created this branch from.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/377-1
+00:20:48.305 --> 00:20:52.910
+<v Carter, Jake>I think you can just go to check out
+there on the left.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/378-0
+00:20:54.350 --> 00:20:55.950
+<v John Miller>This one detached.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/380-0
+00:20:57.070 --> 00:20:58.830
+<v Carter, Jake>Yeah, I think so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/381-0
+00:20:59.310 --> 00:20:59.590
+<v Majernik, Peter>Yeah.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/383-0
+00:21:03.550 --> 00:21:03.630
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/385-0
+00:21:03.950 --> 00:21:08.390
+<v Majernik, Peter>Yeah, I don't like that detached.
+Nothing should be detached.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/387-0
+00:21:07.790 --> 00:21:11.692
+<v John Miller>I like this.
+Is it suggesting several different ways</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/387-1
+00:21:11.692 --> 00:21:12.870
+<v John Miller>do I get revert?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/391-0
+00:21:14.910 --> 00:21:19.462
+<v John Miller>Commits it new commits that undo those
+previous. Yes, I don't think that's good.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/391-1
+00:21:19.462 --> 00:21:23.002
+<v John Miller>Get reset with a new branch,
+preserve the history in a backup.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/391-2
+00:21:23.002 --> 00:21:26.710
+<v John Miller>But how about just creating a new branch
+from the target commits?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/395-0
+00:21:29.070 --> 00:21:34.178
+<v Majernik, Peter>I mean if you have the,
+if you found found the commit that is</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/392-0
+00:21:29.950 --> 00:21:31.030
+<v John Miller>Let me just do it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/395-1
+00:21:34.178 --> 00:21:40.110
+<v Majernik, Peter>right from before you created this branch,
+then we just switch to that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/400-0
+00:21:40.110 --> 00:21:43.781
+<v John Miller>Yeah, but this branch is, you know,
+is like up here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/400-1
+00:21:43.781 --> 00:21:47.591
+<v John Miller>We've got a lot of things in there that
+we don't want,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/400-2
+00:21:47.591 --> 00:21:51.054
+<v John Miller>which we've already implemented. So I, I,
+I, I'm,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/400-3
+00:21:51.054 --> 00:21:56.110
+<v John Miller>I'm in favour of just going back to that
+fresh start and creating a new.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/402-0
+00:21:56.150 --> 00:22:01.430
+<v John Miller>A new branch and then we can rerun the
+prompt that would get us the requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/403-0
+00:22:04.870 --> 00:22:06.550
+<v Majernik, Peter>Yeah, I'm fine with that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/405-0
+00:22:11.950 --> 00:22:12.190
+<v John Miller>Oh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/408-0
+00:22:16.630 --> 00:22:19.755
+<v John Miller>I don't want to do this.
+I don't want to delete the main branch.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/408-1
+00:22:19.755 --> 00:22:21.630
+<v John Miller>I just want to work on a new branch so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/417-0
+00:22:44.030 --> 00:22:45.710
+<v John Miller>No fresh start.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/419-0
+00:22:50.070 --> 00:22:52.230
+<v John Miller>Well, doesn't seem like it did what we.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/421-0
+00:22:54.230 --> 00:22:55.070
+<v John Miller>We're expecting.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/442-0
+00:23:43.710 --> 00:23:45.430
+<v John Miller>It looks like the same.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/444-0
+00:23:49.070 --> 00:23:49.510
+<v John Miller>Sure.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/446-0
+00:23:50.830 --> 00:23:53.192
+<v Majernik, Peter>Oh,
+did your initial commit already contain</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/446-1
+00:23:53.192 --> 00:23:55.070
+<v Majernik, Peter>some anything about the calculator?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/448-0
+00:23:56.750 --> 00:23:57.990
+<v Majernik, Peter>Should have not, right?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/450-0
+00:23:58.790 --> 00:24:01.730
+<v John Miller>Yeah,
+it should be just the read me the license</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/450-1
+00:24:01.730 --> 00:24:02.710
+<v John Miller>and get ignores.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/456-0
+00:24:13.230 --> 00:24:16.458
+<v Majernik, Peter>So the git checkout will create a new
+branch from that commit.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/456-1
+00:24:16.458 --> 00:24:17.790
+<v Majernik, Peter>That's the intention here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/457-0
+00:24:17.990 --> 00:24:18.630
+<v John Miller>Mhm.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/461-0
+00:24:23.270 --> 00:24:29.870
+<v Majernik, Peter>Well, then why didn't it do it?
+That's what I'm that's what I'm wondering.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/460-0
+00:24:30.110 --> 00:24:30.350
+<v John Miller>Yeah.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/464-0
+00:24:32.230 --> 00:24:35.841
+<v Carter, Jake>Sometimes in VS Code you have to add
+extra branches. Do you see?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/464-1
+00:24:35.841 --> 00:24:39.230
+<v Carter, Jake>Do you see this fresh start branch on the
+graph on the left?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/466-0
+00:24:40.350 --> 00:24:43.750
+<v Carter, Jake>If you don't see,
+sometimes you have to manually add the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/467-0
+00:24:45.230 --> 00:24:45.310
+<v Carter, Jake>Oh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/471-0
+00:24:46.870 --> 00:24:50.547
+<v Carter, Jake>If you click like,
+that's sort of hard to describe where you</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/471-1
+00:24:50.547 --> 00:24:51.390
+<v Carter, Jake>click, but um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/474-0
+00:24:51.270 --> 00:24:54.789
+<v Majernik, Peter>So I would just find that commit visually
+on the left side,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/474-1
+00:24:54.789 --> 00:24:58.425
+<v Majernik, Peter>right click that line and say create
+branch from this commit.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/474-2
+00:24:58.425 --> 00:24:59.950
+<v Majernik, Peter>Isn't that going to do it?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/473-0
+00:25:00.830 --> 00:25:01.950
+<v Carter, Jake>Yeah, that should work.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/479-0
+00:25:01.350 --> 00:25:05.662
+<v Majernik, Peter>Say create branch from that one.
+That should do it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/479-1
+00:25:05.662 --> 00:25:11.550
+<v Majernik, Peter>I just there we may have to type in a
+name or something. There you go.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/480-0
+00:25:13.030 --> 00:25:15.230
+<v Majernik, Peter>Let's ick a different name.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/486-0
+00:25:22.750 --> 00:25:26.759
+<v Majernik, Peter>And I don't know if it automatically
+switches to that branch or you</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/486-1
+00:25:26.759 --> 00:25:29.470
+<v Majernik, Peter>specifically have to say check out or
+switch.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/487-0
+00:25:30.710 --> 00:25:32.990
+<v Majernik, Peter>Did it switch to that branch?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/489-0
+00:25:34.310 --> 00:25:36.990
+<v John Miller>Yeah, it did. Calculator 2.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/495-0
+00:25:38.550 --> 00:25:42.323
+<v Majernik, Peter>OK, so all those things in there,
+depending changes,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/495-1
+00:25:42.323 --> 00:25:46.950
+<v Majernik, Peter>it brought with it from from what you had.
+So if you undo those,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/492-0
+00:25:43.030 --> 00:25:45.390
+<v John Miller>You know.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/495-2
+00:25:46.950 --> 00:25:51.150
+<v Majernik, Peter>you're gonna be back to where where you
+wanna be, I think.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/494-0
+00:25:49.030 --> 00:25:50.910
+<v John Miller>What? What? No, what?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/500-0
+00:25:55.750 --> 00:25:58.302
+<v Majernik, Peter>You know what I mean?
+When you switch branches,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/500-1
+00:25:58.302 --> 00:26:02.555
+<v Majernik, Peter>it tends to take the pending changes with
+it as long as there are no conflicts.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/500-2
+00:26:02.555 --> 00:26:06.543
+<v Majernik, Peter>So I think that's what we're seeing there.
+So if you undo all those files,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/500-3
+00:26:06.543 --> 00:26:08.350
+<v Majernik, Peter>then we are back to the beginning.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/501-0
+00:26:10.470 --> 00:26:12.190
+<v Majernik, Peter>Unless I'm missing something.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/513-0
+00:26:35.030 --> 00:26:38.990
+<v Majernik, Peter>OK,
+those those look like empty folders maybe?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/515-0
+00:26:41.190 --> 00:26:43.870
+<v John Miller>Well, maybe we can make them empty.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/517-0
+00:26:48.310 --> 00:26:49.310
+<v John Miller>You wanna keep that one?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/521-0
+00:26:55.150 --> 00:26:59.750
+<v Majernik, Peter>Now you can always go to the disk and
+just delete everything we don't want.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/526-0
+00:27:01.350 --> 00:27:06.137
+<v Majernik, Peter>So I know git is really weird about empty
+folders, like it doesn't track them.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/526-1
+00:27:06.137 --> 00:27:09.651
+<v Majernik, Peter>So when we we had some leftovers,
+now we undid the files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/523-0
+00:27:06.350 --> 00:27:06.590
+<v John Miller>Right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/526-2
+00:27:09.651 --> 00:27:12.438
+<v Majernik, Peter>I don't think it deletes the folders for
+you.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/526-3
+00:27:12.438 --> 00:27:15.710
+<v Majernik, Peter>Maybe we need to go on the disk and just
+clean it up.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/530-0
+00:27:23.270 --> 00:27:25.910
+<v John Miller>It seems like I'm back where I was when I
+started.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/548-0
+00:27:59.590 --> 00:28:03.150
+<v John Miller>And let's bring up code again.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/549-0
+00:28:04.550 --> 00:28:06.030
+<v John Miller>So it should have a bunch of changes.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/550-0
+00:28:07.390 --> 00:28:07.750
+<v Majernik, Peter>Hmm.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/554-0
+00:28:18.190 --> 00:28:18.310
+<v John Miller>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/555-0
+00:28:19.710 --> 00:28:20.910
+<v John Miller>Oh, seems to be happy.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/561-0
+00:28:34.030 --> 00:28:37.790
+<v John Miller>Good. All right.
+I think we're ready to go forward.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/564-0
+00:28:41.470 --> 00:28:43.550
+<v John Miller>Let's clear our contexts.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/567-0
+00:28:51.870 --> 00:28:55.470
+<v John Miller>And let's go ahead and create our
+requirements stock.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/568-0
+00:28:58.150 --> 00:28:58.510
+<v John Miller>Yeah.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/571-0
+00:29:03.910 --> 00:29:06.470
+<v John Miller>So what was the suggestion for the next
+step?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/581-0
+00:29:23.510 --> 00:29:26.591
+<v Majernik, Peter>Oh,
+are you asking about the previously</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/578-0
+00:29:24.710 --> 00:29:24.830
+<v Carter, Jake>So.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/581-1
+00:29:26.591 --> 00:29:31.750
+<v Majernik, Peter>suggested next step that Seth was saying
+or or just any next step?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/580-0
+00:29:29.750 --> 00:29:31.230
+<v John Miller>Or let's say it wasn't.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/584-0
+00:29:32.550 --> 00:29:36.790
+<v John Miller>Yeah, well, we once we have requirements,
+what do we want to do next?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/583-0
+00:29:33.310 --> 00:29:33.630
+<v Harding, Mike>Take the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/586-0
+00:29:37.710 --> 00:29:40.830
+<v Harding, Mike>Create instructions around those
+requirements or?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/588-0
+00:29:41.230 --> 00:29:45.110
+<v John Miller>That makes sense to me.
+Anybody else have an idea?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/592-0
+00:29:46.470 --> 00:29:50.110
+<v Majernik, Peter>Oh,
+we'll create the instruction files using</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/592-1
+00:29:50.110 --> 00:29:53.830
+<v Majernik, Peter>that.
+That's the starter instruction creator.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/590-0
+00:29:50.150 --> 00:29:51.870
+<v John Miller>So those are the instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/596-0
+00:29:59.430 --> 00:30:05.753
+<v John Miller>Right.
+So here what we can we can do is maybe</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/596-1
+00:30:05.753 --> 00:30:06.990
+<v John Miller>create a.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/598-0
+00:30:08.750 --> 00:30:10.470
+<v John Miller>Instruction file.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/602-0
+00:30:24.110 --> 00:30:24.390
+<v John Miller>Or a.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/604-0
+00:30:25.870 --> 00:30:28.230
+<v John Miller>I'm going to C-sharp application.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/606-0
+00:30:29.790 --> 00:30:31.310
+<v John Miller>If we haven't specified.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/610-0
+00:30:32.710 --> 00:30:37.105
+<v John Miller>In the requirements, any technology.
+So this is in my mind a good requirements</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/610-1
+00:30:37.105 --> 00:30:40.332
+<v John Miller>document because it's not really telling
+us how to do it,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/610-2
+00:30:40.332 --> 00:30:43.670
+<v John Miller>it's telling us what it wants done. Well,
+let me keep that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/611-0
+00:30:44.990 --> 00:30:46.150
+<v John Miller>Instruction file.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/613-0
+00:30:52.950 --> 00:30:55.230
+<v John Miller>And let's see what we get out of that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/618-0
+00:30:57.430 --> 00:31:00.528
+<v John Miller>And again,
+we're gonna do this a little bit,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/618-1
+00:31:00.528 --> 00:31:05.967
+<v John Miller>a little bit vibey in the sense that
+we're not gonna spend a whole lot of time</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/618-2
+00:31:05.967 --> 00:31:10.510
+<v John Miller>reviewing these instruction files,
+but it's gonna be a much more.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/621-0
+00:31:11.830 --> 00:31:17.318
+<v John Miller>Engineer approach because we're going to
+be able to make sure that our</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/621-1
+00:31:17.318 --> 00:31:20.950
+<v John Miller>implementation conforms to these
+instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/625-0
+00:31:32.470 --> 00:31:35.950
+<v John Miller>I'm still trying to figure out why some
+of my windows and projects.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/628-0
+00:31:39.750 --> 00:31:43.558
+<v John Miller>Have the delegate feature,
+but some of them don't,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/628-1
+00:31:43.558 --> 00:31:46.470
+<v John Miller>so it must be something that GitHub is.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/630-0
+00:31:47.830 --> 00:31:52.488
+<v John Miller>Recognizing about the repository and it's
+including some repositories,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/630-1
+00:31:52.488 --> 00:31:54.390
+<v John Miller>but not all the repositories.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/632-0
+00:31:56.110 --> 00:31:58.750
+<v John Miller>So here's our um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/634-0
+00:32:00.270 --> 00:32:01.830
+<v John Miller>Instruction file.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/636-0
+00:32:06.910 --> 00:32:10.350
+<v John Miller>Uh, let's open it up.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/639-0
+00:32:11.950 --> 00:32:16.350
+<v John Miller>Let's go ahead and Kee it.
+Take a look at it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/640-0
+00:32:18.870 --> 00:32:20.190
+<v John Miller>I'm in preview.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/643-0
+00:32:22.630 --> 00:32:27.310
+<v John Miller>And put in a new window so we can look at
+it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/646-0
+00:32:28.390 --> 00:32:32.306
+<v John Miller>So here we could change.
+We could change to this and say we want</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/646-1
+00:32:32.306 --> 00:32:33.390
+<v John Miller>it to be in.net 9.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/650-0
+00:32:34.470 --> 00:32:41.322
+<v John Miller>Specify what versions of Windows that we
+want to support and it's telling us to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/650-1
+00:32:41.322 --> 00:32:47.574
+<v John Miller>use git for version control and we can
+change that to Azure DevOps or or</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/650-2
+00:32:47.574 --> 00:32:49.030
+<v John Miller>whatever we like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/653-0
+00:32:49.750 --> 00:32:55.863
+<v John Miller>It's once a Windows Form app or a WPF app.
+We might edit that and say we're just</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/653-1
+00:32:55.863 --> 00:32:57.070
+<v John Miller>looking for WPF.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/654-0
+00:32:58.550 --> 00:33:01.790
+<v John Miller>The project name is what the solution
+name is.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/656-0
+00:33:03.350 --> 00:33:05.790
+<v John Miller>What the file structure should look like?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/659-0
+00:33:07.590 --> 00:33:12.950
+<v John Miller>Or implementation guidelines,
+a calculation engine.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/663-0
+00:33:14.230 --> 00:33:20.088
+<v John Miller>A memory management components,
+a calculation history components,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/663-1
+00:33:20.088 --> 00:33:24.704
+<v John Miller>the user interface specifications for
+Windows form,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/663-2
+00:33:24.704 --> 00:33:29.230
+<v John Miller>and there should be a WF implementation
+alternate.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/666-0
+00:33:31.510 --> 00:33:37.572
+<v John Miller>The key features are input validation,
+error handling, keyboard support,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/666-1
+00:33:37.572 --> 00:33:39.150
+<v John Miller>a testing strategy.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/670-0
+00:33:40.950 --> 00:33:46.510
+<v John Miller>Integration tests which we test the UI
+integration with the calculation engine,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/670-1
+00:33:46.510 --> 00:33:51.722
+<v John Miller>testing the keyboard input handling,
+typing, testing clipboard operations,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/670-2
+00:33:51.722 --> 00:33:56.030
+<v John Miller>testing the history functionality,
+some performance tests on.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/672-0
+00:33:56.470 --> 00:34:01.230
+<v John Miller>Complex expressions,
+some package dependency definitions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/675-0
+00:34:03.070 --> 00:34:07.550
+<v John Miller>Some configuration for app settings,
+user session settings management.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/676-0
+00:34:09.350 --> 00:34:11.790
+<v John Miller>Building it and deploying it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/680-0
+00:34:14.070 --> 00:34:20.039
+<v John Miller>Some code quality using standards using
+the Microsoft C# coding conventions using</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/680-1
+00:34:20.039 --> 00:34:25.354
+<v John Miller>async and wait for IO operations I
+disposable where appropriate nullable</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/680-2
+00:34:25.354 --> 00:34:25.790
+<v John Miller>types.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/686-0
+00:34:27.710 --> 00:34:32.774
+<v John Miller>What our documentation should look like?
+The code analysis is recommended.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/686-1
+00:34:32.774 --> 00:34:36.082
+<v John Miller>Security considerations would be input
+security,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/686-2
+00:34:36.082 --> 00:34:39.053
+<v John Miller>which would mean validating all our
+inputs,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/686-3
+00:34:39.053 --> 00:34:44.590
+<v John Miller>preventing code injections or expression
+parsing, sanitizing the clipboard input,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/686-4
+00:34:44.590 --> 00:34:46.750
+<v John Miller>unlimited expressive complexity.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/689-0
+00:34:47.190 --> 00:34:52.552
+<v John Miller>To prevent denial of service attacks,
+store user settings securely,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/689-1
+00:34:52.552 --> 00:34:58.228
+<v John Miller>don't log sensitive calculation data,
+implement secure memory handling,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/689-2
+00:34:58.228 --> 00:35:00.830
+<v John Miller>then some accessibility features.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/692-0
+00:35:03.270 --> 00:35:07.915
+<v John Miller>Testing with Windows Narrator.
+Verify keyboard only operations.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/692-1
+00:35:07.915 --> 00:35:10.310
+<v John Miller>Testing with high contrast nodes.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/697-0
+00:35:12.030 --> 00:35:17.007
+<v John Miller>Our development phases,
+the core functionality take us four weeks</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/697-1
+00:35:17.007 --> 00:35:21.079
+<v John Miller>to do that,
+5 to 8 weeks to do the advanced features,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/697-2
+00:35:21.079 --> 00:35:25.226
+<v John Miller>polishing and testing for I guess it's
+not five weeks,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/697-3
+00:35:25.226 --> 00:35:27.790
+<v John Miller>but additional week to four weeks.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/699-0
+00:35:29.110 --> 00:35:33.870
+<v John Miller>On UI refinements and then a checklist to
+get started.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/700-0
+00:35:37.870 --> 00:35:38.710
+<v John Miller>And the like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/703-0
+00:35:39.990 --> 00:35:44.502
+<v John Miller>So that's not too bad.
+So what are the things we want to change</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/703-1
+00:35:44.502 --> 00:35:45.630
+<v John Miller>about this then?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/705-0
+00:35:48.550 --> 00:35:50.110
+<v Majernik, Peter>Oh well, we don't need Windows 10.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/706-0
+00:35:53.470 --> 00:35:53.710
+<v John Miller>Alright.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/709-0
+00:35:53.510 --> 00:35:58.510
+<v Majernik, Peter>If if you are trying to recreate the same
+thing, then it's a WPF, not Windows forms.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/714-0
+00:35:59.230 --> 00:36:04.039
+<v John Miller>No, well, I mean, you know,
+this can be whatever we want it to be.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/714-1
+00:36:04.039 --> 00:36:08.990
+<v John Miller>We could have it to be a web app.
+We could be a so we could say one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/712-0
+00:36:09.270 --> 00:36:10.270
+<v Majernik, Peter>Do.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/715-0
+00:36:11.590 --> 00:36:13.750
+<v John Miller>Um, we don't need.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/718-0
+00:36:11.590 --> 00:36:15.415
+<v Majernik, Peter>Do do you guys have a preference?
+Anybody else? Like what?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/718-1
+00:36:15.415 --> 00:36:19.433
+<v Majernik, Peter>What are we trying to do?
+Are we creating the same thing or a</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/718-2
+00:36:19.433 --> 00:36:20.470
+<v Majernik, Peter>different thing?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/719-0
+00:36:21.790 --> 00:36:24.270
+<v Majernik, Peter>Same calculator, different kind of a.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/721-0
+00:36:27.150 --> 00:36:28.910
+<v Carter, Jake>I think a calculator seems fine to me.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/723-0
+00:36:30.310 --> 00:36:33.523
+<v Majernik, Peter>What about the UI?
+Should it be the same technology or</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/723-1
+00:36:33.523 --> 00:36:34.750
+<v Majernik, Peter>different technology?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/730-0
+00:36:44.070 --> 00:36:47.174
+<v Majernik, Peter>I I don't.
+I don't want to throw in keywords that I</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/726-0
+00:36:44.230 --> 00:36:46.070
+<v Carter, Jake>I don't know.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/730-1
+00:36:47.174 --> 00:36:50.635
+<v Majernik, Peter>don't fully understand because it's been
+a while. I mean,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/730-2
+00:36:50.635 --> 00:36:55.410
+<v Majernik, Peter>I know in those forums I've seen WPF,
+there is now Maui and some cross-platform</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/730-3
+00:36:55.410 --> 00:36:58.693
+<v Majernik, Peter>technologies,
+but I don't want to complicate things by</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/730-4
+00:36:58.693 --> 00:36:59.110
+<v Majernik, Peter>asking.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/732-0
+00:36:59.110 --> 00:37:02.950
+<v Majernik, Peter>For something too complicated that none
+of us know, you know what I mean.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/734-0
+00:37:03.310 --> 00:37:08.710
+<v Carter, Jake>Do like an electron. I don't know.
+I don't know WPF so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/735-0
+00:37:09.310 --> 00:37:10.030
+<v Majernik, Peter>That's.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/737-0
+00:37:11.830 --> 00:37:12.910
+<v Majernik, Peter>It does.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/738-0
+00:37:12.190 --> 00:37:12.230
+Uh.
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/739-0
+00:37:12.430 --> 00:37:14.270
+<v Tarrants, Seth>No, we could try Maui.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/740-0
+00:37:15.750 --> 00:37:16.230
+<v Carter, Jake>Maui.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/743-0
+00:37:17.590 --> 00:37:23.045
+<v Majernik, Peter>So so just take out the Windows,
+Windows Forms and the WPF and just put in</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/743-1
+00:37:23.045 --> 00:37:23.990
+<v Majernik, Peter>Maui instead.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/745-0
+00:37:25.870 --> 00:37:27.710
+<v Tarrants, Seth>dot net Maui.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/749-0
+00:37:36.630 --> 00:37:39.810
+<v John Miller>All right.
+So was there anything else that we wanted</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/749-1
+00:37:39.810 --> 00:37:39.990
+<v John Miller>to?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/754-0
+00:37:40.830 --> 00:37:45.787
+<v Majernik, Peter>Well, we don't need Windows 10.
+I would take that out. If you're doing,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/751-0
+00:37:43.510 --> 00:37:46.870
+<v John Miller>Yeah, I think I.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/754-1
+00:37:45.787 --> 00:37:49.779
+<v Majernik, Peter>if you're doing Maui,
+it should be the latest of.net. So.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/754-2
+00:37:49.779 --> 00:37:52.670
+<v Majernik, Peter>net 9 or 10 that's coming out in November.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/756-0
+00:37:58.190 --> 00:37:58.270
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/758-0
+00:37:59.830 --> 00:38:03.206
+<v John Miller>Yeah, let's use.
+net 9 since I know I have that installed.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/758-1
+00:38:03.206 --> 00:38:04.350
+<v John Miller>I know I don't have.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/759-0
+00:38:04.990 --> 00:38:08.310
+<v Majernik, Peter>OK, 9 is fine.
+That's the latest as of now.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/761-0
+00:38:08.030 --> 00:38:08.350
+<v John Miller>Right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/762-0
+00:38:10.150 --> 00:38:12.870
+<v Majernik, Peter>Oh, let's see. Git should stay Git.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/764-0
+00:38:12.790 --> 00:38:13.550
+<v John Miller>Yeah.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/765-0
+00:38:14.230 --> 00:38:15.950
+<v Majernik, Peter>2022 is fine.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/768-0
+00:38:18.070 --> 00:38:23.228
+<v Majernik, Peter>Maybe change the Oh yeah,
+you already said you're gonna change the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/768-1
+00:38:23.228 --> 00:38:23.910
+<v Majernik, Peter>net to 9.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/771-0
+00:38:24.870 --> 00:38:29.155
+<v Majernik, Peter>I just keep thinking you're gonna jump
+into the instructions file and edit,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/771-1
+00:38:29.155 --> 00:38:33.270
+<v Majernik, Peter>but instead you are gonna prompt and ask
+it to edit for us, correct? OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/772-0
+00:38:31.510 --> 00:38:35.670
+<v John Miller>Well,
+that's correct because mostly because.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/779-0
+00:38:37.270 --> 00:38:43.485
+<v John Miller>These choices that we're asking you to
+make may affect other places in the in</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/775-0
+00:38:42.670 --> 00:38:44.190
+<v Majernik, Peter>That's that's right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/779-1
+00:38:43.485 --> 00:38:48.664
+<v John Miller>the in the document, right?
+So by asking the A I to do the work,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/779-2
+00:38:48.664 --> 00:38:55.277
+<v John Miller>it only not only proves that I'm I'm lazy,
+but it also I think doesn't can can end</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/779-3
+00:38:55.277 --> 00:38:56.950
+<v John Miller>up with a better job.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/781-0
+00:38:57.470 --> 00:39:01.390
+<v John Miller>Right.
+So if we think that how to run that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/778-0
+00:38:58.110 --> 00:38:58.750
+<v Majernik, Peter>OK, so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/785-0
+00:39:01.470 --> 00:39:05.401
+<v Majernik, Peter>OK, yeah, that's a good start.
+I I was gonna scroll through that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/785-1
+00:39:05.401 --> 00:39:09.030
+<v Majernik, Peter>instructions file again to see what else
+we want to change.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/783-0
+00:39:09.790 --> 00:39:10.030
+<v John Miller>Sure.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/789-0
+00:39:14.470 --> 00:39:16.964
+<v John Miller>So let's take a look at what it did
+change,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/789-1
+00:39:16.964 --> 00:39:19.910
+<v John Miller>and it looks like it only changed at the
+beginning,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/789-2
+00:39:19.910 --> 00:39:23.310
+<v John Miller>so we would have been pretty safe to
+change this ourselves.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/792-0
+00:39:25.590 --> 00:39:29.348
+<v John Miller>Oh no, it's not done yet.
+I spoke too soon.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/792-1
+00:39:29.348 --> 00:39:35.070
+<v John Miller>So here it's changed the this the
+structure of of the directories.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/795-0
+00:39:36.510 --> 00:39:38.984
+<v Majernik, Peter>Well, yeah,
+because you changed the type of the app,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/795-1
+00:39:38.984 --> 00:39:41.550
+<v Majernik, Peter>now the entry point is different,
+so that makes sense.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/794-0
+00:39:40.670 --> 00:39:41.070
+<v John Miller>Right, so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/797-0
+00:39:42.710 --> 00:39:47.254
+<v John Miller>Right.
+So that you know that goes I think to my</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/797-1
+00:39:47.254 --> 00:39:48.390
+<v John Miller>point about.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/801-0
+00:39:50.070 --> 00:39:55.474
+<v John Miller>Letting the the A I take a first stab at
+making these modifications and then we</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/801-1
+00:39:55.474 --> 00:40:00.742
+<v John Miller>can adjust them afterwards if we think
+they're not that they didn't quite hit</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/801-2
+00:40:00.742 --> 00:40:01.350
+<v John Miller>the mark.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/804-0
+00:40:01.830 --> 00:40:06.670
+<v Majernik, Peter>Yeah, I I have to agree.
+I gotta stop coding and start prompting.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/802-0
+00:40:02.990 --> 00:40:03.110
+<v John Miller>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/809-0
+00:40:07.590 --> 00:40:13.791
+<v John Miller>I heard somebody that was somebody who
+who consults with organisations about</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/809-1
+00:40:13.791 --> 00:40:19.669
+<v John Miller>bringing on AI and what he said is and
+and this is in any context of AI,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/809-2
+00:40:19.669 --> 00:40:23.695
+<v John Miller>said if you're not doing 100 query
+prompts a day,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/809-3
+00:40:23.695 --> 00:40:26.030
+<v John Miller>you're falling behind and so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/813-0
+00:40:26.230 --> 00:40:31.319
+<v John Miller>I I tend to to.
+I tend to rather prompt the AI to do it</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/813-1
+00:40:31.319 --> 00:40:38.860
+<v John Miller>because I I I think I get a better result
+most of the time and in a shorter amount</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/813-2
+00:40:38.860 --> 00:40:40.950
+<v John Miller>of time. So it's still.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/814-0
+00:40:41.910 --> 00:40:45.230
+<v John Miller>Looks like it's made a bunch of
+modifications down here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/818-0
+00:40:45.510 --> 00:40:50.397
+<v Majernik, Peter>Yeah, we can browse, browse through that,
+see what's in there. OK,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/816-0
+00:40:49.750 --> 00:40:51.150
+<v John Miller>So it's.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/818-1
+00:40:50.397 --> 00:40:52.950
+<v Majernik, Peter>so that was taken out. That's fine.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/821-0
+00:40:54.390 --> 00:40:58.329
+<v John Miller>It's removed the WF and replaced it with
+Maui.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/821-1
+00:40:58.329 --> 00:41:01.430
+<v John Miller>It's changed the main page structure.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/822-0
+00:41:03.550 --> 00:41:05.590
+<v John Miller>In terms of what it looks like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/826-0
+00:41:10.870 --> 00:41:16.150
+<v John Miller>So this example's changed a bit what the
+button grid looks like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/829-0
+00:41:24.430 --> 00:41:26.430
+<v John Miller>Main view model.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/833-0
+00:41:35.670 --> 00:41:40.950
+<v John Miller>But pull this out and change that to be
+the main page content.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/835-0
+00:41:40.550 --> 00:41:46.356
+<v Majernik, Peter>OK, let's stop there for a second.
+It says if windows do I need to think</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/835-1
+00:41:46.356 --> 00:41:47.230
+<v Majernik, Peter>about this?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/839-0
+00:41:50.030 --> 00:41:57.076
+<v John Miller>Well we didn't take out the the the a
+constraint that says this must be multi</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/839-1
+00:41:57.076 --> 00:42:00.870
+<v John Miller>multi platform or a cross-platform app so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/841-0
+00:42:01.870 --> 00:42:07.414
+<v John Miller>It's giving us essentially pseudo code
+for targeting the the platform that we're</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/841-1
+00:42:07.414 --> 00:42:08.030
+<v John Miller>we're in.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/844-0
+00:42:10.670 --> 00:42:15.670
+<v John Miller>Down here it changed what packages that
+it thinks we need.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/846-0
+00:42:16.670 --> 00:42:18.550
+<v John Miller>The testing packages that we need.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/848-0
+00:42:22.030 --> 00:42:24.710
+<v John Miller>How the build deployment would work?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/853-0
+00:42:25.790 --> 00:42:28.668
+<v Majernik, Peter>Yeah,
+we'll we'll just leave all that alone.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/853-1
+00:42:28.668 --> 00:42:31.739
+<v Majernik, Peter>I mean,
+there is no way for a person to look at</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/853-2
+00:42:31.739 --> 00:42:36.216
+<v Majernik, Peter>this and just know what's right.
+So it probably generated much better</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/851-0
+00:42:34.710 --> 00:42:34.790
+<v John Miller>Oh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/853-3
+00:42:36.216 --> 00:42:38.390
+<v Majernik, Peter>instructions than I could type up.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/856-0
+00:42:39.390 --> 00:42:44.774
+<v John Miller>Yeah, I would tend to agree with that.
+Yeah, the the question is, you know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/856-1
+00:42:44.774 --> 00:42:46.190
+<v John Miller>we we want to avoid.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/860-0
+00:42:48.190 --> 00:42:53.936
+<v John Miller>Where we're blindly following the the the
+the instructions or the created by the A</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/860-1
+00:42:53.936 --> 00:42:59.543
+<v John Miller>I I mean we do need to keep our our our
+finger in the pie and and make sure that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/860-2
+00:42:59.543 --> 00:43:03.350
+<v John Miller>we're comfortable with everything that
+it's producing.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/862-0
+00:43:03.470 --> 00:43:09.131
+<v John Miller>But in this case, you know,
+we can go ahead and keep that is now</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/862-1
+00:43:09.131 --> 00:43:10.350
+<v John Miller>going back to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/866-0
+00:43:15.430 --> 00:43:21.420
+<v John Miller>Our file.
+So is there anything else in here that we</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/866-1
+00:43:21.420 --> 00:43:24.990
+<v John Miller>think that we'd like to tackle?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/868-0
+00:43:26.590 --> 00:43:31.172
+<v Majernik, Peter>Well,
+how much time do we have to think about</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/868-1
+00:43:31.172 --> 00:43:31.670
+<v Majernik, Peter>this?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/870-0
+00:43:31.270 --> 00:43:34.670
+<v John Miller>Well, we we have plenty of time.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/879-0
+00:43:58.630 --> 00:44:00.710
+<v John Miller>Anything on the testing side that we'd
+like to see?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/881-0
+00:44:08.830 --> 00:44:10.310
+<v Majernik, Peter>I mean just by.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/882-0
+00:44:09.070 --> 00:44:10.390
+<v John Miller>Any feature?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/888-0
+00:44:11.390 --> 00:44:14.115
+<v Majernik, Peter>I was,
+I was just gonna say scrolling through</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/884-0
+00:44:11.470 --> 00:44:12.550
+<v John Miller>Go ahead.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/888-1
+00:44:14.115 --> 00:44:17.728
+<v Majernik, Peter>like this, you know,
+nothing stands out as completely wrong,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/888-2
+00:44:17.728 --> 00:44:20.630
+<v Majernik, Peter>so it's probably a good enough start for
+a demo.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/890-0
+00:44:21.390 --> 00:44:23.844
+<v John Miller>OK,
+so are there any features of a calculator</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/890-1
+00:44:23.844 --> 00:44:26.830
+<v John Miller>that you always wish you had would have
+but never seen?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/891-0
+00:44:27.510 --> 00:44:27.550
+<v Majernik, Peter>Oh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/896-0
+00:44:30.150 --> 00:44:33.236
+<v Majernik, Peter>Well,
+we could add something like if you press</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/896-1
+00:44:33.236 --> 00:44:38.029
+<v Majernik, Peter>the operator keys multiple times,
+then it turns into a forever operator.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/896-2
+00:44:38.029 --> 00:44:41.771
+<v Majernik, Peter>I don't know what the official
+terminology is. You know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/896-3
+00:44:41.771 --> 00:44:45.710
+<v Majernik, Peter>if you do a plus,
+let's say 1 + 1 is 2 if you do a 1 + + 1.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/899-0
+00:44:45.750 --> 00:44:49.943
+<v Majernik, Peter>And you keep hitting enter,
+it's going to be a 23456.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/899-1
+00:44:49.943 --> 00:44:56.310
+<v Majernik, Peter>So it it's basically going to keep adding
+or using the same operator on an enter.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/902-0
+00:44:57.950 --> 00:45:00.392
+<v Majernik, Peter>I mean,
+if you want to get complicate things,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/900-0
+00:44:58.950 --> 00:44:59.750
+<v John Miller>So now what?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/902-1
+00:45:00.392 --> 00:45:00.870
+<v Majernik, Peter>you know.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/906-0
+00:45:04.190 --> 00:45:08.885
+<v John Miller>Well, why don't we,
+why don't we kind of research the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/906-1
+00:45:08.885 --> 00:45:12.710
+<v John Miller>terminology on on on the side and and
+then.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/905-0
+00:45:09.430 --> 00:45:12.470
+<v Majernik, Peter>Oh, OK. OK, good. Let's do that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/911-0
+00:45:14.190 --> 00:45:17.751
+<v John Miller>And then what I was gonna suggest is that
+we would go through the the exercise to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/907-0
+00:45:14.470 --> 00:45:14.550
+<v Majernik, Peter>So.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/911-1
+00:45:17.751 --> 00:45:21.224
+<v John Miller>the point where we would get something
+working and then we can see what it was,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/911-2
+00:45:21.224 --> 00:45:24.264
+<v John Miller>what it's like to actually go back and
+make a change like that to the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/911-3
+00:45:24.264 --> 00:45:25.870
+<v John Miller>implementation and see how that goes.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/914-0
+00:45:27.550 --> 00:45:30.838
+<v John Miller>Because, you know,
+it's going to start out as Greenfield,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/914-1
+00:45:30.838 --> 00:45:34.352
+<v John Miller>but it's going to quickly turn into
+Evergreen and we want to,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/914-2
+00:45:34.352 --> 00:45:39.057
+<v John Miller>we want that to to make sure that we it's
+maintainable and we can actually move it</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/914-3
+00:45:39.057 --> 00:45:39.510
+<v John Miller>forward.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/915-0
+00:45:40.350 --> 00:45:40.470
+<v John Miller>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/919-0
+00:45:41.710 --> 00:45:45.654
+<v John Miller>All right. So given that,
+I think that we're probably in a pretty</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/919-1
+00:45:45.654 --> 00:45:49.120
+<v John Miller>good state here.
+And also what I was going to say is that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/919-2
+00:45:49.120 --> 00:45:53.841
+<v John Miller>that's actually going to require us to go
+back here and say I need to add some</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/919-3
+00:45:53.841 --> 00:45:56.470
+<v John Miller>additional requirements down at the
+bottom.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/924-0
+00:45:56.990 --> 00:46:01.130
+<v John Miller>That defines what this new feature is
+going to actually look like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/924-1
+00:46:01.130 --> 00:46:05.579
+<v John Miller>And so we want to update this,
+then we want to percolate that back into</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/924-2
+00:46:05.579 --> 00:46:09.719
+<v John Miller>the calculator instructions,
+and then we would then percolate that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/924-3
+00:46:09.719 --> 00:46:12.190
+<v John Miller>into the implementation. So we have now.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/927-0
+00:46:12.950 --> 00:46:18.676
+<v John Miller>A technical guide, I think,
+in terms of how we want it to be</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/927-1
+00:46:18.676 --> 00:46:23.839
+<v John Miller>implemented.
+So what do we where do we think we should</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/927-2
+00:46:23.839 --> 00:46:24.590
+<v John Miller>go next?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/929-0
+00:46:31.030 --> 00:46:32.150
+<v Majernik, Peter>Not implementing.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/934-0
+00:46:32.750 --> 00:46:37.850
+<v John Miller>That's a possibility.
+What I was going to suggest is you know</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/934-1
+00:46:37.850 --> 00:46:44.348
+<v John Miller>we had those A I generation instructions
+how to some things to to to basically</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/934-2
+00:46:44.348 --> 00:46:50.517
+<v John Miller>manage how the actual code is generated
+as opposed to the specifics of the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/934-3
+00:46:50.517 --> 00:46:51.750
+<v John Miller>implementation.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/935-0
+00:46:52.550 --> 00:46:54.870
+<v John Miller>And bring that into the mix.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/937-0
+00:46:55.630 --> 00:46:59.310
+<v Majernik, Peter>We could do that and then we could also
+create the prompt files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/938-0
+00:46:59.750 --> 00:47:00.070
+<v John Miller>Right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/941-0
+00:47:02.710 --> 00:47:07.110
+<v John Miller>That's three.
+I think I need to open it again.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/943-0
+00:47:08.990 --> 00:47:12.057
+<v Majernik, Peter>And I researched that feature.
+It has a name.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/943-1
+00:47:12.057 --> 00:47:13.990
+<v Majernik, Peter>It's called constant feature.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/944-0
+00:47:13.790 --> 00:47:13.910
+<v John Miller>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/946-0
+00:47:15.150 --> 00:47:18.110
+<v Majernik, Peter>Not a very good name,
+but that's what it's called.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/948-0
+00:47:21.750 --> 00:47:23.790
+<v John Miller>So what we can do here?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/950-0
+00:47:25.630 --> 00:47:28.190
+<v John Miller>Because we can reach into our.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/952-0
+00:47:29.550 --> 00:47:32.581
+<v John Miller>Oh,
+I think This is why I couldn't do those</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/952-1
+00:47:32.581 --> 00:47:33.270
+<v John Miller>deletions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/953-0
+00:47:37.990 --> 00:47:38.990
+<v Majernik, Peter>Why is that?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/956-0
+00:47:38.110 --> 00:47:43.972
+<v John Miller>I was just getting a prompt basically
+allowing getting this prompt that says</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/956-1
+00:47:43.972 --> 00:47:49.682
+<v John Miller>you want VS code to be able to do
+something and I think This is why it was</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/956-2
+00:47:49.682 --> 00:47:54.630
+<v John Miller>hanging and not actually accomplishing
+what I was looking to do.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/958-0
+00:47:56.150 --> 00:47:59.230
+<v John Miller>So, um, so going back to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/960-0
+00:48:00.950 --> 00:48:04.310
+<v John Miller>Or did that did it open up?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/971-0
+00:48:30.270 --> 00:48:32.070
+<v John Miller>You don't see it being open.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/980-0
+00:48:50.070 --> 00:48:53.033
+<v John Miller>There we go.
+So we will look at this and say, OK,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/980-1
+00:48:53.033 --> 00:48:56.470
+<v John Miller>we we we thought that maybe this one
+would be worthwhile.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/982-0
+00:49:00.750 --> 00:49:05.910
+<v John Miller>Do we want to try to go for slices in
+terms of the implementation?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/986-0
+00:49:14.710 --> 00:49:15.270
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/985-0
+00:49:14.750 --> 00:49:14.910
+<v Majernik, Peter>I hope.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/991-0
+00:49:17.950 --> 00:49:20.840
+<v Majernik, Peter>I mean,
+do we want to do slices right from the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/991-1
+00:49:20.840 --> 00:49:25.512
+<v Majernik, Peter>beginning or did you want to create a
+base base app and then add the slice?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/989-0
+00:49:23.030 --> 00:49:23.230
+<v John Miller>What?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/991-2
+00:49:25.512 --> 00:49:27.110
+<v Majernik, Peter>That's what I'm wondering.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/992-0
+00:49:28.630 --> 00:49:28.830
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/994-0
+00:49:30.790 --> 00:49:34.182
+<v John Miller>Well,
+let's see what the prompts prompts look</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/996-0
+00:49:31.710 --> 00:49:36.642
+<v Majernik, Peter>Because if because if there is no no app
+yet, what is the meaning of a slice?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/994-1
+00:49:34.182 --> 00:49:34.550
+<v John Miller>like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/996-1
+00:49:36.642 --> 00:49:41.510
+<v Majernik, Peter>I thought the slice would make more sense
+once you have something to add to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/998-0
+00:49:42.910 --> 00:49:44.630
+<v Majernik, Peter>Or does it not matter?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1003-0
+00:49:43.230 --> 00:49:47.059
+<v John Miller>Well, it's kind of a yeah.
+So the idea with the slices would be,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1003-1
+00:49:47.059 --> 00:49:50.123
+<v John Miller>you know,
+you could actually start it with just the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1003-2
+00:49:50.123 --> 00:49:54.011
+<v John Miller>requirements. We could say, OK,
+use this requirement document and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1003-3
+00:49:54.011 --> 00:49:58.134
+<v John Miller>generate slices to implement an
+application that corresponds to those</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1003-4
+00:49:58.134 --> 00:50:02.670
+<v John Miller>requirements and then it would create a
+bunch of features that it would add.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1006-0
+00:50:02.990 --> 00:50:08.102
+<v John Miller>So it may do the initial calculator with
+just the basic calculator functions,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1006-1
+00:50:08.102 --> 00:50:12.297
+<v John Miller>but the whole thing would work right?
+And then we could say OK,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1006-2
+00:50:12.297 --> 00:50:16.950
+<v John Miller>add add feature #2 which adds the the
+memory requirements to that and.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1009-0
+00:50:15.390 --> 00:50:20.531
+<v Majernik, Peter>I mean, shouldn't shouldn't hurt, right?
+So the first first slice is going to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1009-1
+00:50:20.531 --> 00:50:25.013
+<v Majernik, Peter>establish your framework.
+Essentially it's going to create the wire</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1010-0
+00:50:23.630 --> 00:50:28.830
+<v John Miller>Yeah, and I I actually right in the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1009-2
+00:50:25.013 --> 00:50:25.870
+<v Majernik, Peter>wire dot app.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1012-0
+00:50:30.670 --> 00:50:31.110
+<v Majernik, Peter>Yes.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1013-0
+00:50:31.110 --> 00:50:33.750
+<v John Miller>The other thing I've been thinking of is
+that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1017-0
+00:50:35.190 --> 00:50:39.459
+<v John Miller>Where is my instruction instructions?
+I don't think they're here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1017-1
+00:50:39.459 --> 00:50:43.015
+<v John Miller>It's instruction prompts.
+This is something I've been.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1017-2
+00:50:43.015 --> 00:50:45.990
+<v John Miller>I know it's here,
+but it's I keep missing it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1021-0
+00:50:46.350 --> 00:50:52.462
+<v Majernik, Peter>It's it's there.
+It's if you go to Scroll down a little</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1018-0
+00:50:47.350 --> 00:50:48.470
+<v John Miller>Problems.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1021-1
+00:50:52.462 --> 00:50:56.390
+<v Majernik, Peter>bit 123455 under your highlighted 1.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1025-0
+00:50:58.350 --> 00:51:04.599
+<v John Miller>This one instruction.
+These are instructions for prompts that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1022-0
+00:50:58.470 --> 00:50:59.750
+<v Majernik, Peter>It's right there.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1025-1
+00:51:04.599 --> 00:51:06.110
+<v John Miller>create for for.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1026-0
+00:51:04.950 --> 00:51:07.190
+<v Majernik, Peter>Oh, that's not the one. OK, sorry.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1029-0
+00:51:07.750 --> 00:51:11.270
+<v John Miller>Yeah, well, let's just recreate it and.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1027-0
+00:51:08.430 --> 00:51:08.590
+<v Majernik, Peter>2.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1033-0
+00:51:12.950 --> 00:51:19.612
+<v John Miller>So and then since we have what I was
+gonna suggest is maybe before we created</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1033-1
+00:51:19.612 --> 00:51:25.163
+<v John Miller>that instruction file,
+but what we can do is retrofit it and and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1033-2
+00:51:25.163 --> 00:51:28.750
+<v John Miller>back in. But so you create an instruction.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1037-0
+00:51:29.950 --> 00:51:41.950
+<v John Miller>file to guide the creation of new
+instruction files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1038-0
+00:51:44.270 --> 00:51:44.470
+<v John Miller>3.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1043-0
+00:51:53.270 --> 00:51:56.718
+<v John Miller>So in in my mind,
+I'm thinking when we're starting a new</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1043-1
+00:51:56.718 --> 00:51:59.742
+<v John Miller>project,
+the first thing we wanna do is add these</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1043-2
+00:51:59.742 --> 00:52:03.190
+<v John Miller>kind of meta prompts so that we get a
+consistent output.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1049-0
+00:52:15.750 --> 00:52:20.094
+<v John Miller>So we get, you know,
+we get the front matter that the that the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1049-1
+00:52:20.094 --> 00:52:24.437
+<v John Miller>AI guidance suggests.
+Here we have for the we'll get a new log</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1049-2
+00:52:24.437 --> 00:52:28.643
+<v John Miller>file that tells us,
+you know what we asked it to do and what</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1049-3
+00:52:28.643 --> 00:52:29.470
+<v John Miller>it produced.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1055-0
+00:52:29.550 --> 00:52:34.190
+<v John Miller>And to me,
+these are handy because for two reasons.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1055-1
+00:52:34.190 --> 00:52:37.669
+<v John Miller>One,
+they contain all of the different</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1055-2
+00:52:37.669 --> 00:52:44.895
+<v John Miller>processors that we actually implemented.
+So here's the one where we actually did</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1055-3
+00:52:44.895 --> 00:52:47.750
+<v John Miller>the vertical slice instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1059-0
+00:52:48.270 --> 00:52:54.303
+<v John Miller>And and within each one of those,
+we get the conversation that gives us the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1059-1
+00:52:54.303 --> 00:52:59.701
+<v John Miller>context of what what we did,
+what the prompts were that we executed</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1059-2
+00:52:59.701 --> 00:53:03.670
+<v John Miller>and what the response back was for those
+prompts.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1064-0
+00:53:04.110 --> 00:53:09.522
+<v John Miller>So you get a bit of an audit trail as
+well as this summary document that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1064-1
+00:53:09.522 --> 00:53:15.675
+<v John Miller>essentially is something we can resume to.
+It gives us the current state of the of</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1064-2
+00:53:15.675 --> 00:53:21.531
+<v John Miller>the prompt and allows us to actually
+revisit that prompt and reset the context</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1064-3
+00:53:21.531 --> 00:53:23.310
+<v John Miller>up to the point that we.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1065-0
+00:53:24.030 --> 00:53:25.990
+<v John Miller>We were the last working in it and.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1067-0
+00:53:27.550 --> 00:53:31.350
+<v John Miller>I think that's also valuable and it's
+kind of handy at times.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1069-0
+00:53:33.190 --> 00:53:37.750
+<v John Miller>All right, so did it finish? No,
+it's still working.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1071-0
+00:53:41.350 --> 00:53:42.310
+<v John Miller>But we can.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1075-0
+00:53:52.910 --> 00:53:54.430
+<v John Miller>I've not seen that before.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1081-0
+00:54:10.750 --> 00:54:14.270
+<v John Miller>So it doesn't look like it's created a
+file yet and it's.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1085-0
+00:54:21.790 --> 00:54:26.438
+<v John Miller>So, and another reason is, you know,
+if we notice in our project that we're</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1085-1
+00:54:26.438 --> 00:54:27.110
+<v John Miller>working in.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1089-0
+00:54:30.030 --> 00:54:33.344
+<v John Miller>Um,
+our instruction file or files here are</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1089-1
+00:54:33.344 --> 00:54:39.510
+<v John Miller>ended up in the root folder as opposed to
+be going into the correct folder. Uh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1093-0
+00:54:41.470 --> 00:54:45.284
+<v John Miller>So that they'll they'll be recognized.
+Interesting.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1093-1
+00:54:45.284 --> 00:54:50.490
+<v John Miller>Notice it's a it's doing an AI
+optimization version or it's specifying</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1091-0
+00:54:46.990 --> 00:54:47.150
+But.
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1093-2
+00:54:50.490 --> 00:54:51.150
+<v John Miller>for that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1096-0
+00:54:52.590 --> 00:54:55.472
+<v Majernik, Peter>O What?
+What is the definition of the correct</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1096-1
+00:54:55.472 --> 00:54:55.910
+<v Majernik, Peter>folder?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1100-0
+00:54:57.150 --> 00:55:03.720
+<v John Miller>It needs to be under under GitHub that
+you can put individual folders,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1100-1
+00:55:03.720 --> 00:55:09.550
+<v John Miller>but anything under the dot GitHub folder
+is it will recognize.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1101-0
+00:55:11.190 --> 00:55:11.910
+<v John Miller>Uh uh that that file.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1105-0
+00:55:14.270 --> 00:55:18.809
+<v Majernik, Peter>But you said it went to the wrong place.
+That's what confused me.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1103-0
+00:55:18.790 --> 00:55:20.230
+<v John Miller>Well, if you look at the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1105-1
+00:55:18.809 --> 00:55:20.390
+<v Majernik, Peter>So it went to the root.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1106-0
+00:55:21.830 --> 00:55:23.270
+<v John Miller>Yeah, it went into the roots.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1109-0
+00:55:27.390 --> 00:55:30.990
+<v Majernik, Peter>And how is it supposed to know where it
+should go?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1111-0
+00:55:32.030 --> 00:55:34.310
+<v John Miller>That's what this instruction files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1110-0
+00:55:32.510 --> 00:55:32.550
+<v Majernik, Peter>Oh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1113-0
+00:55:34.750 --> 00:55:38.710
+<v Majernik, Peter>Oh, OK, so it's in the instruction file,
+but it didn't respect that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1120-0
+00:55:40.350 --> 00:55:45.028
+<v John Miller>Yeah, well, we didn't have one,
+so it didn't have something to respect,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1116-0
+00:55:44.590 --> 00:55:46.790
+<v Majernik, Peter>OK, now I get it so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1120-1
+00:55:45.028 --> 00:55:49.186
+<v John Miller>right. So that's why.
+So that's why that's why I was suggesting</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1120-2
+00:55:49.186 --> 00:55:53.668
+<v John Miller>that if we're doing Greenfield blank
+slate got a blank blank folder,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1120-3
+00:55:53.668 --> 00:55:58.801
+<v John Miller>the first thing that we should do is
+start to bring in these instruction files</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1120-4
+00:55:58.801 --> 00:55:59.710
+<v John Miller>that are that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1121-0
+00:55:59.990 --> 00:56:04.470
+<v John Miller>That define how this project should
+operate so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1124-0
+00:56:03.950 --> 00:56:07.180
+<v Majernik, Peter>OK,
+so now that we do have an instruction</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1124-1
+00:56:07.180 --> 00:56:12.024
+<v Majernik, Peter>file for instructions,
+can we apply that to what we did before</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1127-0
+00:56:11.950 --> 00:56:17.974
+<v John Miller>Yes, we can. So that was, well,
+what part did it create? Oh,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1124-2
+00:56:12.024 --> 00:56:12.870
+<v Majernik, Peter>and fix it?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1127-1
+00:56:17.974 --> 00:56:21.430
+<v John Miller>it's creating the conversation log.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1128-0
+00:56:23.350 --> 00:56:24.670
+<v John Miller>And.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1131-0
+00:56:26.870 --> 00:56:31.995
+<v John Miller>Here is the oh, it didn't create anything.
+It didn't update anything 'cause we had</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1131-1
+00:56:31.995 --> 00:56:33.230
+<v John Miller>just told it to ask.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1133-0
+00:56:40.830 --> 00:56:41.270
+<v John Miller>You catch that?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1137-0
+00:56:49.230 --> 00:56:52.804
+<v John Miller>So this one should go much quicker since
+it's in the context already.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1137-1
+00:56:52.804 --> 00:56:55.510
+<v John Miller>It should be able to produce that file
+pretty quick.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1150-0
+00:57:23.230 --> 00:57:27.670
+<v John Miller>But let's go ahead and add this one to
+our.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1152-0
+00:57:29.030 --> 00:57:30.590
+<v John Miller>Instruction file.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1154-0
+00:57:33.310 --> 00:57:34.190
+<v John Miller>List over here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1156-0
+00:57:40.190 --> 00:57:41.910
+<v John Miller>And then we'll paste that in.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1158-0
+00:57:48.230 --> 00:57:49.230
+<v John Miller>Copy.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1161-0
+00:57:54.990 --> 00:57:56.590
+<v John Miller>Oh, I'm in the wrong place.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1170-0
+00:58:11.230 --> 00:58:15.470
+<v John Miller>The AI Assist instructions.
+We want to get the instruction generation</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1170-1
+00:58:15.470 --> 00:58:18.741
+<v John Miller>instructions.
+We should probably take the prompt file</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1170-2
+00:58:18.741 --> 00:58:21.830
+<v John Miller>instructions since we'll be creating some
+prompts.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1172-0
+00:58:27.910 --> 00:58:27.990
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1175-0
+00:58:34.110 --> 00:58:36.070
+<v John Miller>Yeah, so there's the new one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1178-0
+00:58:42.350 --> 00:58:45.590
+<v John Miller>And it's creating the log entries now,
+so we see the 23rd.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1179-0
+00:58:47.190 --> 00:58:50.070
+<v John Miller>Create instructions, the conversation.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1181-0
+00:58:51.830 --> 00:58:52.110
+<v John Miller>And the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1183-0
+00:58:54.830 --> 00:58:57.910
+<v John Miller>Do we want to do the vertical slicing or
+not?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1185-0
+00:58:58.750 --> 00:58:59.910
+<v Majernik, Peter>I think we should.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1186-0
+00:59:02.390 --> 00:59:02.630
+<v John Miller>All right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1188-0
+00:59:06.630 --> 00:59:06.710
+<v John Miller>So.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1190-0
+00:59:10.230 --> 00:59:12.550
+<v John Miller>Business rules to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1192-0
+00:59:16.950 --> 00:59:17.710
+<v John Miller>Instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1195-0
+00:59:23.830 --> 00:59:26.830
+<v John Miller>And we need the one we just created.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1196-0
+00:59:28.150 --> 00:59:29.830
+<v John Miller>Keep those changes.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1198-0
+00:59:35.670 --> 00:59:36.030
+<v John Miller>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1201-0
+00:59:41.270 --> 00:59:43.230
+<v John Miller>Then we can say something like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1202-0
+00:59:45.270 --> 00:59:46.230
+<v John Miller>Applying.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1204-0
+00:59:49.350 --> 00:59:50.150
+<v John Miller>The.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1208-0
+00:59:53.750 --> 01:00:03.870
+<v John Miller>Create plan instructions to all
+instruction file except.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1209-0
+01:00:06.310 --> 01:00:06.390
+<v John Miller>Or.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1211-0
+01:00:10.790 --> 01:00:10.870
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1215-0
+01:00:14.590 --> 01:00:19.650
+<v John Miller>The create instructions file, right?
+We don't want to do it recursively.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1215-1
+01:00:19.650 --> 01:00:21.590
+<v John Miller>We don't want to look at it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1217-0
+01:00:26.310 --> 01:00:28.510
+<v John Miller>And let's see what it does with that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1223-0
+01:00:43.830 --> 01:00:45.550
+<v John Miller>So it's reading the prompt file
+instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1228-0
+01:00:55.150 --> 01:00:58.830
+<v John Miller>And now it's looking at the AI assisted
+instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1236-0
+01:01:18.350 --> 01:01:20.790
+<v John Miller>So it's going to update the files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1241-0
+01:01:23.270 --> 01:01:27.804
+<v John Miller>And since we created a brand new
+instruction file and due to the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1241-1
+01:01:27.804 --> 01:01:32.476
+<v John Miller>nondeterministic nature,
+it may actually had that that instruction</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1241-2
+01:01:32.476 --> 01:01:36.870
+<v John Miller>file might be different than the one that
+actually created it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1244-0
+01:01:39.070 --> 01:01:45.280
+<v John Miller>So here we're working on the prompt file
+instructions and it's replacing GitHub</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1244-1
+01:01:45.280 --> 01:01:48.230
+<v John Miller>username with with my GitHub username.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1246-0
+01:01:54.630 --> 01:01:57.030
+<v John Miller>And it's updated the the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1249-0
+01:01:57.870 --> 01:02:01.651
+<v John Miller>From file creation,
+the over added over instructions and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1249-1
+01:02:01.651 --> 01:02:03.110
+<v John Miller>related documentation.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1250-0
+01:02:05.750 --> 01:02:07.670
+<v John Miller>And down at the bottom.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1252-0
+01:02:09.790 --> 01:02:13.070
+<v John Miller>It added an example.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1256-0
+01:02:18.830 --> 01:02:22.563
+<v John Miller>But the one we're interested in,
+we want to see what it gets when it grabs</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1256-1
+01:02:22.563 --> 01:02:23.110
+<v John Miller>the C# one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1259-0
+01:02:27.390 --> 01:02:30.168
+<v John Miller>What I was curious about,
+is it going to put things in the right</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1259-1
+01:02:30.168 --> 01:02:30.510
+<v John Miller>folders?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1266-0
+01:02:46.430 --> 01:02:49.335
+<v John Miller>Like this,
+it likes the AI business rules to slice</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1266-1
+01:02:49.335 --> 01:02:49.790
+<v John Miller>as well.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1273-0
+01:03:03.270 --> 01:03:07.533
+<v John Miller>All right, so it's done making changes.
+It looks like it touched all of these</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1273-1
+01:03:07.533 --> 01:03:08.790
+<v John Miller>files and not that one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1274-0
+01:03:10.670 --> 01:03:11.510
+<v John Miller>Not that one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1276-0
+01:03:17.670 --> 01:03:20.190
+<v John Miller>Doesn't look at change anything there
+though.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1278-0
+01:03:21.950 --> 01:03:23.830
+<v John Miller>Which is what we were hoping for.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1282-0
+01:03:26.110 --> 01:03:28.493
+<v John Miller>Oh,
+the the the the front matter and things</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1282-1
+01:03:28.493 --> 01:03:32.772
+<v John Miller>is we'd want to do the same thing with
+the AI assisted output instructions and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1282-2
+01:03:32.772 --> 01:03:35.750
+<v John Miller>maybe we'll apply that just directly to
+this one file.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1284-0
+01:03:38.230 --> 01:03:40.550
+<v John Miller>Or maybe both of these?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1287-0
+01:03:49.110 --> 01:03:51.910
+<v John Miller>Oh, I want to um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1289-0
+01:03:53.390 --> 01:03:55.950
+<v John Miller>AI assisted output instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1290-0
+01:03:59.990 --> 01:04:00.550
+<v John Miller>To.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1294-0
+01:04:11.390 --> 01:04:14.470
+<v John Miller>The calculator requirements and.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1296-0
+01:04:16.790 --> 01:04:19.870
+<v John Miller>The calculator instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1305-0
+01:04:43.630 --> 01:04:46.790
+<v John Miller>That sees that it's missing all of the
+data that we have in the other files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1313-0
+01:05:10.510 --> 01:05:13.830
+<v John Miller>And there's one other file I think I we
+should bring in.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1315-0
+01:05:16.670 --> 01:05:17.710
+<v John Miller>And that is the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1317-0
+01:05:20.910 --> 01:05:22.990
+<v John Miller>Um, that's actually a prompt, I think.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1318-0
+01:05:24.830 --> 01:05:27.350
+<v John Miller>And that is our check contests prompt.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1321-0
+01:05:31.110 --> 01:05:34.630
+<v John Miller>So it's done with that work.
+It's updated both of those files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1324-0
+01:05:37.990 --> 01:05:43.950
+<v John Miller>By adding the metadata.
+So let's keep that and let's.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1325-0
+01:05:45.110 --> 01:05:45.150
+<v John Miller>Uh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1328-0
+01:05:50.870 --> 01:05:55.670
+<v John Miller>And let's go ahead and create a new
+folder.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1330-0
+01:05:57.510 --> 01:05:58.990
+<v John Miller>Our instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1332-0
+01:06:02.990 --> 01:06:04.310
+<v John Miller>Yeah, and another one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1333-0
+01:06:07.030 --> 01:06:08.070
+<v John Miller>For prompts.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1339-0
+01:06:19.470 --> 01:06:21.790
+<v John Miller>Then anything that ends with instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1341-0
+01:06:26.070 --> 01:06:28.550
+<v John Miller>We'll move into the instructions folder.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1343-0
+01:06:29.670 --> 01:06:33.430
+<v John Miller>Anything that ends at a prompt.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1345-0
+01:06:35.310 --> 01:06:38.910
+<v John Miller>This one here goes into the prompts
+folder.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1348-0
+01:06:40.990 --> 01:06:46.550
+<v John Miller>And then as we're adding these up,
+we want to just double check that these.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1351-0
+01:06:47.630 --> 01:06:53.936
+<v John Miller>These files are consistent and and don't
+introduce any ambiguity or anything that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1351-1
+01:06:53.936 --> 01:06:55.550
+<v John Miller>might confuse the AI.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1352-0
+01:06:56.510 --> 01:06:59.350
+<v John Miller>So this will just take a minute to do.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1355-0
+01:07:02.430 --> 01:07:05.670
+<v Harding, Mike>Will the requirements go in the
+instructions folder?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1357-0
+01:07:07.150 --> 01:07:08.390
+<v John Miller>Um, well, that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1358-0
+01:07:11.070 --> 01:07:11.110
+<v John Miller>Uh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1361-0
+01:07:16.510 --> 01:07:19.590
+<v John Miller>Yeah,
+I think that's not a bad idea either. Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1362-0
+01:07:20.470 --> 01:07:21.750
+<v Harding, Mike>That's where you have em.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1367-0
+01:07:23.670 --> 01:07:26.809
+<v John Miller>Yeah, no,
+that's I I the idea is is that you know</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1367-1
+01:07:26.809 --> 01:07:31.329
+<v John Miller>it doesn't have to follow the the the
+naming convention that I'm using,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1367-2
+01:07:31.329 --> 01:07:35.912
+<v John Miller>but by having them appear in the
+instruction folder between that it gets</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1367-3
+01:07:35.912 --> 01:07:40.809
+<v John Miller>out into the context for all of the all
+of the prompts that we execute and we</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1367-4
+01:07:40.809 --> 01:07:41.750
+<v John Miller>certainly want.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1368-0
+01:07:42.270 --> 01:07:43.750
+<v John Miller>The requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1374-0
+01:07:45.310 --> 01:07:49.882
+<v John Miller>To be included in all of those prompts so
+that it understands what it's what we're</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1374-1
+01:07:49.882 --> 01:07:54.289
+<v John Miller>asking it to try to accomplish and by
+having it in in that folder then you know</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1371-0
+01:07:51.910 --> 01:07:52.030
+<v Harding, Mike>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1374-2
+01:07:54.289 --> 01:07:57.979
+<v John Miller>anything that we generate from it,
+it'll take those into that into</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1374-3
+01:07:57.979 --> 01:07:58.750
+<v John Miller>consideration.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1388-0
+01:08:32.750 --> 01:08:37.430
+<v John Miller>And it'll give us a final summary here
+about.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1390-0
+01:08:40.910 --> 01:08:43.070
+<v John Miller>How things look.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1392-0
+01:08:47.550 --> 01:08:49.270
+<v John Miller>File organization.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1394-0
+01:08:51.110 --> 01:08:54.470
+<v John Miller>Some broken references overlapping scope.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1396-0
+01:08:56.990 --> 01:08:58.470
+<v John Miller>So let's see what it found.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1406-0
+01:09:21.030 --> 01:09:24.550
+<v John Miller>O Here's our next one.
+O This is where we started.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1410-0
+01:09:27.790 --> 01:09:32.511
+<v John Miller>Duplication or redundancy.
+The file prompt dash file instructions</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1410-1
+01:09:32.511 --> 01:09:36.230
+<v John Miller>appears in both the root directory and
+potentially.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1415-0
+01:09:42.270 --> 01:09:46.065
+<v John Miller>So it should be.
+So it looks like I missed one when I was</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1415-1
+01:09:46.065 --> 01:09:49.663
+<v John Miller>moving it around.
+So this should go in the instruction</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1415-2
+01:09:49.663 --> 01:09:52.738
+<v John Miller>folder.
+So interesting that it found the found</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1415-3
+01:09:52.738 --> 01:09:56.270
+<v John Miller>that it went to the wrong place.
+That's a good catch.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1419-0
+01:09:57.390 --> 01:10:02.561
+<v John Miller>Broken references and multiple files and
+reference copilot instructions,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1419-1
+01:10:02.561 --> 01:10:05.961
+<v John Miller>but it doesn't find those copilot
+instructions,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1419-2
+01:10:05.961 --> 01:10:11.910
+<v John Miller>so it's looking for copilot instructions
+so that we should we should bring that in.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1420-0
+01:10:14.070 --> 01:10:16.070
+<v John Miller>To make it consistent.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1422-0
+01:10:17.150 --> 01:10:20.630
+<v John Miller>So here's Copilot instructions.
+We'll copy that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1423-0
+01:10:21.830 --> 01:10:23.350
+<v John Miller>And we'll paste that in.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1426-0
+01:10:25.750 --> 01:10:31.350
+<v John Miller>Business rules to vertical slices does
+not exist.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1428-0
+01:10:32.950 --> 01:10:34.870
+<v John Miller>So one word that is referenced.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1431-0
+01:10:37.950 --> 01:10:42.075
+<v John Miller>AI vertical slice implementation
+instructions does not exist,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1431-1
+01:10:42.075 --> 01:10:44.270
+<v John Miller>so we know that that one is here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1440-0
+01:10:58.190 --> 01:11:05.505
+<v John Miller>Now one point I should make is that we're
+copying these files into this new project,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1440-1
+01:11:05.505 --> 01:11:10.324
+<v John Miller>so they are now diverged from the root
+source for them,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1440-2
+01:11:10.324 --> 01:11:14.110
+<v John Miller>and that may or may not be what you
+intend.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1444-0
+01:11:15.510 --> 01:11:19.804
+<v John Miller>Because you now have multiple copies of
+the same instruction file,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1444-1
+01:11:19.804 --> 01:11:24.034
+<v John Miller>but just in different places.
+It's useful in this in this example</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1444-2
+01:11:24.034 --> 01:11:29.033
+<v John Miller>because we can just copy them into the
+project and we can get and get started</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1444-3
+01:11:29.033 --> 01:11:32.430
+<v John Miller>from there,
+but you may want to actually share them.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1448-0
+01:11:32.510 --> 01:11:38.387
+<v John Miller>Among multiple projects and have a single
+source of truths.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1448-1
+01:11:38.387 --> 01:11:42.893
+<v John Miller>I know two ways that you can accomplish
+that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1448-2
+01:11:42.893 --> 01:11:47.790
+<v John Miller>One is you can actually create a symlink
+or from.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1449-0
+01:11:48.070 --> 01:11:48.230
+<v John Miller>The.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1452-0
+01:11:50.030 --> 01:11:56.100
+<v John Miller>Instruction files that are in the AI
+assisted software developer project into</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1452-1
+01:11:56.100 --> 01:12:01.470
+<v John Miller>the instruction folder in this project
+and then those files will be.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1457-0
+01:12:02.110 --> 01:12:06.120
+<v John Miller>Available here, but their source,
+but there ought to be one copy of them</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1457-1
+01:12:06.120 --> 01:12:10.019
+<v John Miller>back in the original source.
+The the benefit of that approach would be</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1457-2
+01:12:10.019 --> 01:12:14.578
+<v John Miller>that anytime you make a core modification
+to a a one of these instruction files in</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1457-3
+01:12:14.578 --> 01:12:16.390
+<v John Miller>back in the original source file.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1462-0
+01:12:16.430 --> 01:12:22.499
+<v John Miller>Files back in the original source file.
+All you need to do to update it here is</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1462-1
+01:12:22.499 --> 01:12:27.354
+<v John Miller>just do a pull of that repo and then
+these will become updated.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1462-2
+01:12:27.354 --> 01:12:33.423
+<v John Miller>The downside is that if you create the
+symlink to the entire instruction folder</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1462-3
+01:12:33.423 --> 01:12:36.230
+<v John Miller>over here, you're gonna get them all.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1465-0
+01:12:36.270 --> 01:12:40.434
+<v John Miller>You have to make sure that you're
+managing your scope very carefully so</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1465-1
+01:12:40.434 --> 01:12:45.292
+<v John Miller>that you're not bringing in too much into
+your contacts window when you're actually</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1465-2
+01:12:45.292 --> 01:12:46.390
+<v John Miller>executing a prompt.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1469-0
+01:12:47.710 --> 01:12:51.937
+<v John Miller>The other option I've heard is that you
+can build them into a Nugent package.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1469-1
+01:12:51.937 --> 01:12:55.622
+<v John Miller>I haven't done this myself,
+but then distribute that Nugent package</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1469-2
+01:12:55.622 --> 01:12:59.686
+<v John Miller>and then that can actually you can use
+that to update your prompts in your</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1469-3
+01:12:59.686 --> 01:13:00.390
+<v John Miller>instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1471-0
+01:13:01.390 --> 01:13:06.390
+<v Majernik, Peter>Symlink.
+Is that a Linux construct symbolic file?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1473-0
+01:13:05.950 --> 01:13:09.630
+<v John Miller>It's a, it's a, it's a,
+it's actually a um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1476-0
+01:13:10.630 --> 01:13:14.201
+<v John Miller>Windows too,
+and actually Windows has a implementation</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1474-0
+01:13:11.510 --> 01:13:11.590
+<v Carter, Jake>Hey.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1476-1
+01:13:14.201 --> 01:13:15.110
+<v John Miller>of it as well.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1477-0
+01:13:15.670 --> 01:13:15.750
+<v Majernik, Peter>O.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1478-0
+01:13:17.630 --> 01:13:18.390
+<v Carter, Jake>Do.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1482-0
+01:13:17.710 --> 01:13:22.046
+<v Majernik, Peter>Yeah, so I what? So what gets? OK,
+so we're sharing files across multiple</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1482-1
+01:13:22.046 --> 01:13:23.510
+<v Majernik, Peter>repos essentially, right?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1483-0
+01:13:23.630 --> 01:13:24.390
+<v John Miller>That's correct.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1485-0
+01:13:24.790 --> 01:13:29.670
+<v Majernik, Peter>And which one gets checked in?
+Which one doesn't get checked in?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1488-0
+01:13:31.030 --> 01:13:35.554
+<v Majernik, Peter>Or the let's say you put the file,
+the actual content of the file in the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1488-1
+01:13:35.554 --> 01:13:39.830
+<v Majernik, Peter>first repo. What's in the second repo?
+It's a symbolic link to what?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1492-0
+01:13:41.710 --> 01:13:44.919
+<v Carter, Jake>It's just a link to.
+It would just be a link to a different,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1492-1
+01:13:44.919 --> 01:13:47.496
+<v Carter, Jake>so you would manage them in two different
+repos.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1492-2
+01:13:47.496 --> 01:13:51.861
+<v Carter, Jake>But I I was looking at the documentation
+and looks like there's something called a</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1492-3
+01:13:51.861 --> 01:13:55.017
+<v Carter, Jake>GitHub Copilot space.
+Do you have any experience with that?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1492-4
+01:13:55.017 --> 01:13:56.910
+<v Carter, Jake>Because it seems like this would be.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1495-0
+01:13:57.150 --> 01:14:02.550
+<v Carter, Jake>Useful for doing the same sort of thing.
+It's like a built in feature of copilot.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1494-0
+01:14:00.870 --> 01:14:00.950
+<v Majernik, Peter>So.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1498-0
+01:14:04.270 --> 01:14:08.121
+<v John Miller>Yeah, that I mean for this kind of thing.
+I think that's really useful.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1498-1
+01:14:08.121 --> 01:14:11.598
+<v John Miller>That could be pretty useful.
+The problem with the spaces though,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1498-2
+01:14:11.598 --> 01:14:13.630
+<v John Miller>is they don't have access to the repo.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1499-0
+01:14:14.550 --> 01:14:15.110
+<v Carter, Jake>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1504-0
+01:14:14.590 --> 01:14:19.841
+<v John Miller>So you would what you what you would it
+wouldn't you wouldn't be actually using a.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1504-1
+01:14:19.841 --> 01:14:24.966
+<v John Miller>You couldn't use a repo to actually do it
+because I think it is a repo under the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1504-2
+01:14:24.966 --> 01:14:28.003
+<v John Miller>covers.
+So you would basically just Add all the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1504-3
+01:14:28.003 --> 01:14:30.470
+<v John Miller>instruction files into the into spaces.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1506-0
+01:14:31.030 --> 01:14:36.150
+<v John Miller>And then you could you could then use the
+GitHub tool. I think it's at GitHub.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1511-0
+01:14:42.270 --> 01:14:46.868
+<v John Miller>And from there you could well,
+maybe it's a different, a different tool,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1511-1
+01:14:46.868 --> 01:14:51.529
+<v John Miller>but you could get what I what I
+understand is you can then use that to to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1511-2
+01:14:51.529 --> 01:14:56.630
+<v John Miller>essentially pull all of those instruction
+files into your context at that stage.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1512-0
+01:14:57.670 --> 01:14:58.110
+<v John Miller>The.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1514-0
+01:14:58.350 --> 01:15:02.095
+<v Carter, Jake>You're saying the downside is that it
+it's not like you can't manage it in a</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1514-1
+01:15:02.095 --> 01:15:02.630
+<v Carter, Jake>repository?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1518-0
+01:15:04.790 --> 01:15:08.373
+<v John Miller>Yeah, you can't.
+You can't have them in a repository and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1518-1
+01:15:08.373 --> 01:15:12.522
+<v John Miller>make reference to them inside of spaces.
+If it's through the IDE,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1518-2
+01:15:12.522 --> 01:15:17.425
+<v John Miller>you can do that through spaces itself
+with GitHub if you were using GitHub as</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1518-3
+01:15:17.425 --> 01:15:17.990
+<v John Miller>your IDE.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1522-0
+01:15:19.430 --> 01:15:23.484
+<v John Miller>Then you could have access to the repo
+inside of spaces.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1522-1
+01:15:23.484 --> 01:15:28.390
+<v John Miller>So that was my when I was researching it.
+That was my understanding.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1522-2
+01:15:28.390 --> 01:15:32.230
+<v John Miller>So when you included the space in Visual
+Studio code.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1524-0
+01:15:33.030 --> 01:15:35.796
+<v John Miller>No,
+you wouldn't see any of the repos that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1524-1
+01:15:35.796 --> 01:15:40.106
+<v John Miller>you would have in in spaces.
+You would basically only see the repo</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1524-2
+01:15:40.106 --> 01:15:42.550
+<v John Miller>that you are are currently working in.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1530-0
+01:15:43.030 --> 01:15:48.077
+<v Majernik, Peter>So let me let me throw in something else
+here. I I don't think this is a new issue.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1530-1
+01:15:48.077 --> 01:15:51.201
+<v Majernik, Peter>You're trying to share files across
+multiple repos.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1530-2
+01:15:51.201 --> 01:15:56.067
+<v Majernik, Peter>Essentially there's something called git
+sub modules that people used to use for</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1528-0
+01:15:54.630 --> 01:15:54.870
+<v John Miller>All right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1530-3
+01:15:56.067 --> 01:15:58.590
+<v Majernik, Peter>that that purpose. Is that not a good one?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1534-0
+01:15:59.070 --> 01:16:02.986
+<v John Miller>I haven't actually done any work with
+that. It may may be a solution.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1534-1
+01:16:02.986 --> 01:16:07.629
+<v John Miller>I've my recollection is that people were
+kind of shying away from it because there</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1534-2
+01:16:07.629 --> 01:16:11.377
+<v John Miller>were some issues with it,
+but those issues may have been resolved,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1534-3
+01:16:11.377 --> 01:16:14.230
+<v John Miller>so it might be something worth
+experimenting with.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1535-0
+01:16:14.070 --> 01:16:16.510
+<v Majernik, Peter>OK. All right. Thank you.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1537-0
+01:16:19.270 --> 01:16:21.750
+<v John Miller>All right, so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1541-0
+01:16:23.390 --> 01:16:27.762
+<v John Miller>We we brought in the GitHub and the
+copilot instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1541-1
+01:16:27.762 --> 01:16:32.811
+<v John Miller>We brought in the AI vertical slicing
+implementation instructions,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1541-2
+01:16:32.811 --> 01:16:37.710
+<v John Miller>and then there's the vertical slicing
+architecture instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1542-0
+01:16:38.350 --> 01:16:40.150
+<v John Miller>So let's go get that one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1546-0
+01:16:53.550 --> 01:16:55.430
+<v John Miller>Well, see that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1548-0
+01:16:58.150 --> 01:17:00.990
+<v John Miller>So I'll have to look at where it's
+getting that idea.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1550-0
+01:17:01.950 --> 01:17:02.870
+<v John Miller>And um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1551-0
+01:17:04.470 --> 01:17:05.790
+<v John Miller>Instruction for prompts.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1554-0
+01:17:11.990 --> 01:17:14.510
+<v John Miller>And it's that one profile instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1557-0
+01:17:20.990 --> 01:17:24.190
+<v John Miller>Still in the wrong place, yeah.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1559-0
+01:17:28.470 --> 01:17:29.070
+<v John Miller>Copy.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1562-0
+01:17:39.270 --> 01:17:40.710
+<v John Miller>And paste.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1565-0
+01:17:46.710 --> 01:17:49.790
+<v John Miller>So let's just do a search for this.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1573-0
+01:18:04.790 --> 01:18:05.830
+<v John Miller>Let's drop that out.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1576-0
+01:18:08.750 --> 01:18:14.390
+<v John Miller>Remove that requirement and then we have
+another reference to it down here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1580-0
+01:18:25.550 --> 01:18:26.710
+<v John Miller>Let's see, do we have?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1583-0
+01:18:29.550 --> 01:18:34.503
+<v John Miller>Business rules to vertical slices
+instructions, but that's the AI version.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1583-1
+01:18:34.503 --> 01:18:36.550
+<v John Miller>That's the one we brought over.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1586-0
+01:18:37.470 --> 01:18:43.172
+<v John Miller>Yeah, that's the one here.
+So let's go ahead and drop that out since</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1588-0
+01:18:43.070 --> 01:18:49.230
+<v Harding, Mike>I believe there is a business rules.
+The vertical slices in the instructions</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1586-1
+01:18:43.172 --> 01:18:44.990
+<v John Miller>we already have the A.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1588-1
+01:18:49.230 --> 01:18:50.590
+<v Harding, Mike>are below the AI.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1596-0
+01:18:51.470 --> 01:18:57.686
+<v John Miller>That's in the source project you're
+saying right down here, right that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1596-1
+01:18:57.686 --> 01:19:04.766
+<v John Miller>So what I'm saying is that you know the
+thing that I did yesterday was I actually</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1591-0
+01:19:00.550 --> 01:19:00.790
+<v Harding, Mike>Yeah.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1596-2
+01:19:04.766 --> 01:19:10.550
+<v John Miller>created AI specific versions of these
+files that are optimized to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1594-0
+01:19:09.510 --> 01:19:09.630
+<v Harding, Mike>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1599-0
+01:19:11.070 --> 01:19:16.254
+<v John Miller>To reduce the context and since so this
+they're they're essentially trying to do</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1595-0
+01:19:12.550 --> 01:19:12.950
+<v Harding, Mike>So.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1599-1
+01:19:16.254 --> 01:19:19.390
+<v John Miller>the same thing,
+but in a slightly different way.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1600-0
+01:19:18.590 --> 01:19:21.630
+<v Harding, Mike>So you want to use the AI one 'cause it's
+optimized.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1603-0
+01:19:21.630 --> 01:19:24.710
+<v John Miller>Right, right, right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1601-0
+01:19:23.990 --> 01:19:24.230
+<v Harding, Mike>Right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1607-0
+01:19:25.870 --> 01:19:29.605
+<v John Miller>So that was that was the thing I've been
+thinking about. OK, I need to,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1607-1
+01:19:29.605 --> 01:19:33.496
+<v John Miller>I need to focus on optimizing that
+context because we're bringing a lot of</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1607-2
+01:19:33.496 --> 01:19:37.024
+<v John Miller>instruction files in here.
+We wanna make sure that they we have the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1607-3
+01:19:37.024 --> 01:19:37.750
+<v John Miller>room for them.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1610-0
+01:19:39.310 --> 01:19:44.802
+<v John Miller>So that's what I undertook yesterday was
+this idea to split them out and we should</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1610-1
+01:19:44.802 --> 01:19:49.830
+<v John Miller>basically just use these AI generate the
+ones that are targeted towards AI.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1613-0
+01:19:50.990 --> 01:19:54.516
+<v John Miller>So that takes care of that business role
+one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1613-1
+01:19:54.516 --> 01:19:59.190
+<v John Miller>I think we got this AI vertical slicing
+one brought that in.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1614-0
+01:20:00.550 --> 01:20:03.230
+<v John Miller>Uh, the vertical slice architecture.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1616-0
+01:20:06.630 --> 01:20:08.110
+<v John Miller>Instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1619-0
+01:20:15.390 --> 01:20:17.510
+<v John Miller>Vertical slice implementation.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1621-0
+01:20:21.390 --> 01:20:23.710
+<v John Miller>So we're making reference to a.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1624-0
+01:20:26.870 --> 01:20:30.470
+<v John Miller>So let's just drop that one then.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1630-0
+01:20:47.670 --> 01:20:50.230
+<v John Miller>Uh, but it looks like it's.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1632-0
+01:20:52.590 --> 01:20:54.070
+<v John Miller>Referenced a few places.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1636-0
+01:21:03.350 --> 01:21:03.390
+<v John Miller>Oh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1647-0
+01:21:24.910 --> 01:21:28.030
+<v John Miller>It's kind of like a linting process where
+we're having.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1648-0
+01:21:30.110 --> 01:21:30.230
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1651-0
+01:21:32.590 --> 01:21:37.870
+<v John Miller>We're having the AI kind of do a a an
+examination of those files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1653-0
+01:21:39.550 --> 01:21:42.182
+<v John Miller>So that was.
+So that takes care of that issue.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1653-1
+01:21:42.182 --> 01:21:45.710
+<v John Miller>Scope and priority conflicts,
+the file location standards. Uh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1659-0
+01:21:50.030 --> 01:21:56.546
+<v John Miller>So I think technical, well, let's do this.
+I think since we made a lot of changes in</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1659-1
+01:21:56.546 --> 01:22:00.531
+<v John Miller>the project,
+it might be better us to to rerun this</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1659-2
+01:22:00.531 --> 01:22:05.590
+<v John Miller>and just to see how close we've gotten to
+a a clean build of our.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1660-0
+01:22:05.670 --> 01:22:05.750
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1661-0
+01:22:08.710 --> 01:22:10.150
+<v John Miller>Of our instruction files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1663-0
+01:22:12.350 --> 01:22:12.470
+<v John Miller>So.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1664-0
+01:22:15.030 --> 01:22:17.430
+<v John Miller>Do you see value in this process that
+we're going through?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1671-0
+01:22:29.190 --> 01:22:32.859
+<v John Miller>So in my mind,
+it's we just want to make sure that we're</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1671-1
+01:22:32.859 --> 01:22:37.816
+<v John Miller>not putting anything into our instruction
+files that would be conflicting or</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1671-2
+01:22:37.816 --> 01:22:38.910
+<v John Miller>contradictory or.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1673-0
+01:22:39.870 --> 01:22:44.390
+<v John Miller>And since we've got a new instruction
+files, you know you know we we could see.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1676-0
+01:22:45.630 --> 01:22:50.086
+<v John Miller>That there could be issues that we've
+introduced that we don't that we need to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1676-1
+01:22:50.086 --> 01:22:51.270
+<v John Miller>take care of as well.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1683-0
+01:23:07.390 --> 01:23:12.103
+<v Carter, Jake>So it's it's saying that it's like
+analyzing lines one through 50.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1683-1
+01:23:12.103 --> 01:23:13.510
+<v Carter, Jake>Does that mean it's?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1687-0
+01:23:15.070 --> 01:23:21.183
+<v Carter, Jake>Only looking at the 1st 50 lines of each
+instruction file like here on the on the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1686-0
+01:23:20.030 --> 01:23:20.110
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1687-1
+01:23:21.183 --> 01:23:21.630
+<v Carter, Jake>right.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1694-0
+01:23:22.070 --> 01:23:26.689
+<v John Miller>Yeah, it it, it does it in chunks.
+So you'll see it come back later</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1689-0
+01:23:26.070 --> 01:23:26.470
+<v Carter, Jake>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1694-1
+01:23:26.689 --> 01:23:31.647
+<v John Miller>potentially and get the, you know,
+from 50 to 100 or now I'm getting the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1694-2
+01:23:31.647 --> 01:23:35.790
+<v John Miller>rest of the file.
+You'll see those kinds of messages pop up.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1692-0
+01:23:36.710 --> 01:23:36.830
+<v Carter, Jake>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1695-0
+01:23:36.750 --> 01:23:38.070
+<v John Miller>Is is well.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1701-0
+01:23:50.110 --> 01:23:53.826
+<v John Miller>So it looks like we're still having a
+problem with this business role.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1701-1
+01:23:53.826 --> 01:23:56.390
+<v John Miller>Maybe we missed a reference that we need
+to fix.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1731-0
+01:24:57.950 --> 01:25:02.533
+<v John Miller>So file location standards create
+instructions and D specifies that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1731-1
+01:25:02.533 --> 01:25:05.768
+<v John Miller>instruction files should be instruction
+folder,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1731-2
+01:25:05.768 --> 01:25:10.350
+<v John Miller>but the prompt file instruction is
+currently in the root directory.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1736-0
+01:25:20.750 --> 01:25:26.297
+<v John Miller>That must have cached. So what?
+Maybe what we should do is clear the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1736-1
+01:25:26.297 --> 01:25:28.950
+<v John Miller>context so it actually takes off.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1737-0
+01:25:31.430 --> 01:25:33.710
+<v John Miller>And let's close all these down.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1739-0
+01:25:34.670 --> 01:25:37.390
+<v John Miller>And try it one more time.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1745-0
+01:25:53.790 --> 01:25:57.630
+<v Harding, Mike>You do have two prompt file instructions.
+One's a copy.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1748-0
+01:25:59.270 --> 01:26:02.404
+<v John Miller>Oh, right, right.
+Let's let me stop that since we already</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1748-1
+01:26:02.404 --> 01:26:05.430
+<v John Miller>know this. Thanks a good.
+Thanks for pointing that out.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1750-0
+01:26:07.630 --> 01:26:10.950
+<v John Miller>Let's clear our contacts and start it
+again.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1787-0
+01:27:31.390 --> 01:27:35.177
+<v John Miller>So, so as a man,
+man is sitting in church and the usher</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1787-1
+01:27:35.177 --> 01:27:39.302
+<v John Miller>comes up and passes in the basket and he
+he asked the usher,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1787-2
+01:27:39.302 --> 01:27:43.630
+<v John Miller>would you rather have a 20, two 10s,
+four fives or twenty ones?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1789-0
+01:27:44.510 --> 01:27:48.590
+<v John Miller>And the other says says we don't care,
+we're non denominational.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1802-0
+01:28:16.750 --> 01:28:19.939
+<v John Miller>So yeah,
+here you see that it's reading lines 30</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1802-1
+01:28:19.939 --> 01:28:20.590
+<v John Miller>to 80 now.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1817-0
+01:28:50.070 --> 01:28:53.110
+<v Harding, Mike>On the right there, what's a grip search?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1818-0
+01:28:55.190 --> 01:28:55.270
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1819-0
+01:28:55.670 --> 01:28:57.430
+<v Harding, Mike>Must be group search.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1821-0
+01:28:58.830 --> 01:29:00.270
+<v John Miller>Well, grep is a is a command.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1822-0
+01:29:00.830 --> 01:29:00.950
+<v Harding, Mike>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1824-0
+01:29:02.510 --> 01:29:05.190
+<v John Miller>For finding text in files.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1827-0
+01:29:06.510 --> 01:29:09.630
+<v Harding, Mike>OK, I just don't not familiar with it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1826-0
+01:29:08.310 --> 01:29:09.350
+<v John Miller>Yeah, here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1831-0
+01:29:11.710 --> 01:29:14.737
+<v John Miller>Right. I mean,
+I'd be actually surprised that it's</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1831-1
+01:29:14.737 --> 01:29:19.664
+<v John Miller>actually using grep because it grep's not
+a Windows command, it's a Linux command.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1831-2
+01:29:19.664 --> 01:29:24.234
+<v John Miller>But there are PowerShell commands that
+are equivalent to it that it's likely</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1831-3
+01:29:24.234 --> 01:29:24.590
+<v John Miller>using.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1845-0
+01:29:58.310 --> 01:30:01.510
+<v John Miller>And I really like this prompt.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1846-0
+01:30:03.270 --> 01:30:03.630
+<v John Miller>Because.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1852-0
+01:30:05.750 --> 01:30:09.268
+<v John Miller>We're, you know,
+we're not telling it how to do the,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1852-1
+01:30:09.268 --> 01:30:14.113
+<v John Miller>how to, how to actually evaluate.
+It's just we're just saying we want to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1852-2
+01:30:14.113 --> 01:30:19.488
+<v John Miller>see if there's any any of these kinds of
+contradictions that we need to be to to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1852-3
+01:30:19.488 --> 01:30:23.470
+<v John Miller>be aware of and letting the A I figure
+out how to actually.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1857-0
+01:30:23.550 --> 01:30:28.808
+<v John Miller>Accomplish that and give us that
+information back and what I you know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1857-1
+01:30:28.808 --> 01:30:34.733
+<v John Miller>if you think about having to go through
+these for all these files one at a time</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1857-2
+01:30:34.733 --> 01:30:40.509
+<v John Miller>and just trying to look at just the first
+conflicting instruction section and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1857-3
+01:30:40.509 --> 01:30:41.990
+<v John Miller>trying to reconcile.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1861-0
+01:30:42.190 --> 01:30:48.039
+<v John Miller>All of that in your own mind would be a a
+a pretty significant effort. You know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1861-1
+01:30:48.039 --> 01:30:52.589
+<v John Miller>while this is taking some, you know,
+a few minutes to execute,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1861-2
+01:30:52.589 --> 01:30:58.149
+<v John Miller>it certainly would take take me a lot
+longer to do this if I had to do it by</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1861-3
+01:30:58.149 --> 01:30:58.510
+<v John Miller>hand.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1864-0
+01:31:00.350 --> 01:31:05.942
+<v John Miller>So what is it? Conflicting instructions?
+It's saying that there's a default model</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1864-1
+01:31:05.942 --> 01:31:10.510
+<v John Miller>specification in copilot instructions MD
+that specifies cloud 3.5.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1869-0
+01:31:12.070 --> 01:31:18.279
+<v John Miller>Recommended detail default for prompts.
+AI assisted output instructions is open</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1869-1
+01:31:18.279 --> 01:31:23.556
+<v John Miller>AI and GPT in its own metadata.
+Some several files consistently use</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1869-2
+01:31:23.556 --> 01:31:28.910
+<v John Miller>anthropic 3 fives so on it,
+while others reference different models.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1874-0
+01:31:29.470 --> 01:31:32.760
+<v John Miller>So that's something that we would want to
+take a look at,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1874-1
+01:31:32.760 --> 01:31:37.297
+<v John Miller>particularly in the Yambo front matter.
+This is the this is the part I'm having</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1874-2
+01:31:37.297 --> 01:31:40.643
+<v John Miller>problems with in that there's no way to
+tell in the model.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1874-3
+01:31:40.643 --> 01:31:45.294
+<v John Miller>So I'm here recording in the in the front
+matter what it's executing and it's not</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1874-4
+01:31:45.294 --> 01:31:49.150
+<v John Miller>clear to the AI what we're right,
+why we're referencing that there.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1877-0
+01:31:49.390 --> 01:31:57.881
+<v John Miller>It it could lead to inconsistent.
+So standardize on one model and it's</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1877-1
+01:31:57.881 --> 01:32:00.990
+<v John Miller>saying 35 and I would say.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1879-0
+01:32:03.510 --> 01:32:07.190
+<v John Miller>What is the latest?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1881-0
+01:32:10.470 --> 01:32:12.990
+<v John Miller>Version of mod.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1882-0
+01:32:14.550 --> 01:32:15.510
+<v John Miller>Sonic.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1893-0
+01:32:39.670 --> 01:32:46.449
+<v John Miller>It's doing a Microsoft Docs search.
+This kind of a prompt is it can be a</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1893-1
+01:32:46.449 --> 01:32:47.470
+<v John Miller>little bit.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1894-0
+01:32:49.590 --> 01:32:49.630
+<v John Miller>Uh.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1900-0
+01:32:52.390 --> 01:32:57.322
+<v John Miller>Problematic because if it lies on its own,
+if its own internal data,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1900-1
+01:32:57.322 --> 01:33:01.754
+<v John Miller>which it's not here,
+it may come up with some old information</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1900-2
+01:33:01.754 --> 01:33:06.685
+<v John Miller>and give you erroneous output.
+But it it's asking us if if it can go</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1900-3
+01:33:06.685 --> 01:33:09.830
+<v John Miller>ahead and search for that model
+definition.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1902-0
+01:33:10.270 --> 01:33:12.270
+<v John Miller>On the anthropic side.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1903-0
+01:33:14.790 --> 01:33:17.590
+<v John Miller>And what I was looking for was the a ID.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1908-0
+01:33:30.590 --> 01:33:32.750
+<v John Miller>And then we could do something like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1911-0
+01:33:34.550 --> 01:33:39.190
+<v John Miller>Update following reference.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1914-0
+01:33:49.190 --> 01:33:50.070
+<v John Miller>No.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1916-0
+01:33:51.390 --> 01:33:53.830
+<v John Miller>AI model references to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1919-0
+01:33:56.550 --> 01:34:01.611
+<v John Miller>Cods on it 4-5. All right,
+let's go back and take a look at the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1919-1
+01:34:01.611 --> 01:34:03.350
+<v John Miller>other things it found.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1923-0
+01:34:11.830 --> 01:34:14.847
+<v John Miller>It says overall assessment is overly
+redundant,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1923-1
+01:34:14.847 --> 01:34:20.002
+<v John Miller>so we would probably take a look at that.
+So here we can see it's actually making</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1923-2
+01:34:20.002 --> 01:34:20.630
+<v John Miller>an update.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1927-0
+01:34:30.750 --> 01:34:32.950
+<v John Miller>This is our quite.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1933-0
+01:34:46.270 --> 01:34:48.957
+<v John Miller>Alright,
+so the first one is that I can flick the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1933-1
+01:34:48.957 --> 01:34:51.590
+<v John Miller>instructions.
+We're we're fixing that right now.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1938-0
+01:34:55.190 --> 01:34:59.099
+<v John Miller>What's number one?
+So #2 would be factual inconsistencies.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1938-1
+01:34:59.099 --> 01:35:02.942
+<v John Miller>This one I think we can ignore.
+Current date is the 23rd,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1938-2
+01:35:02.942 --> 01:35:07.844
+<v John Miller>but it specifies this is in the metadata.
+This might be something we can.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1938-3
+01:35:07.844 --> 01:35:12.150
+<v John Miller>I can improve the prompt to try to ignore
+those kinds of things.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1942-0
+01:35:14.670 --> 01:35:22.046
+<v John Miller>Chat ID terminology is inconsistent.
+Copilot says chat chat ID in prose,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1942-1
+01:35:22.046 --> 01:35:24.470
+<v John Miller>but chat ID in metadata.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1944-0
+01:35:29.230 --> 01:35:32.710
+<v John Miller>And it doesn't like the session and
+session ID.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1946-0
+01:35:33.590 --> 01:35:34.990
+<v John Miller>It's it's a.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1947-0
+01:35:38.230 --> 01:35:39.550
+<v John Miller>Not a big deal.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1950-0
+01:35:41.790 --> 01:35:47.190
+<v John Miller>Multiple files target AI assistance with
+potential overlapping guidance.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1953-0
+01:35:52.430 --> 01:35:56.110
+<v John Miller>And so here it wants clear terminology in
+terms of.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1955-0
+01:36:01.470 --> 01:36:03.710
+<v John Miller>Uh, technical incompatibilities.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1957-0
+01:36:05.510 --> 01:36:06.830
+<v John Miller>Different versions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1959-0
+01:36:10.150 --> 01:36:12.310
+<v John Miller>And then communication gaps.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1962-0
+01:36:13.550 --> 01:36:19.379
+<v John Miller>Here is the duplication and redundancy.
+Multiplies repeat the same metadata</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1962-1
+01:36:19.379 --> 01:36:21.910
+<v John Miller>requirements. That's probably OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1965-0
+01:36:29.950 --> 01:36:34.630
+<v John Miller>And redundant process descriptions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1969-0
+01:36:38.470 --> 01:36:44.284
+<v John Miller>So overall it it's OK.
+Let's go ahead and keep the modifications.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1969-1
+01:36:44.284 --> 01:36:47.190
+<v John Miller>It's it's implemented and it's a.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1975-0
+01:36:50.310 --> 01:36:55.631
+<v John Miller>And what Yukasa could do is say if you're
+concerned about a particular one and you</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1975-1
+01:36:55.631 --> 01:36:59.414
+<v John Miller>want to address it,
+you could say go ahead and address the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1975-2
+01:36:59.414 --> 01:37:04.286
+<v John Miller>duplication redundancy as a prompt and it
+will go back and look at the this</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1975-3
+01:37:04.286 --> 01:37:09.030
+<v John Miller>duplication redundancy and then come up
+with a a recommended solution to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1979-0
+01:37:09.470 --> 01:37:13.338
+<v John Miller>To address it.
+So this is something I've done with this</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1979-1
+01:37:13.338 --> 01:37:17.896
+<v John Miller>repository in particular,
+where we have all these instructions as</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1979-2
+01:37:17.896 --> 01:37:21.764
+<v John Miller>to run that check to make sure that
+they're consistent,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1979-3
+01:37:21.764 --> 01:37:25.770
+<v John Miller>and then if it produces an output that I
+need to address,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1979-4
+01:37:25.770 --> 01:37:28.670
+<v John Miller>then I could ask the AI to help me fix it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1981-0
+01:37:29.790 --> 01:37:34.756
+<v John Miller>But I think we'll just leave it for now
+and I think it's good enough for us to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1981-1
+01:37:34.756 --> 01:37:35.510
+<v John Miller>let's still.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1983-0
+01:37:37.630 --> 01:37:39.270
+<v John Miller>getting out of report.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1986-0
+01:37:48.790 --> 01:37:49.590
+<v John Miller>Alright.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1989-0
+01:37:56.070 --> 01:37:59.510
+<v John Miller>Alright, so then let's clear this so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1991-0
+01:38:00.710 --> 01:38:05.590
+<v John Miller>How about we did this kind of earlier?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1993-0
+01:38:07.750 --> 01:38:09.870
+<v John Miller>Uh, let's say uh, create.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1994-0
+01:38:10.950 --> 01:38:11.830
+<v John Miller>Uh, plan.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1996-0
+01:38:13.550 --> 01:38:16.110
+<v John Miller>to implement.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/1998-0
+01:38:19.190 --> 01:38:19.910
+<v John Miller>The calculator.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2000-0
+01:38:23.030 --> 01:38:26.750
+<v John Miller>In vertical license.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2009-0
+01:38:39.630 --> 01:38:43.813
+<v John Miller>So this will look at the requirements
+that we defined,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2009-1
+01:38:43.813 --> 01:38:49.365
+<v John Miller>which has I think a detailed list of
+features that we want to implement.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2009-2
+01:38:49.365 --> 01:38:54.842
+<v John Miller>And what this is going to try to do is
+use the business rules to slices</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2009-3
+01:38:54.842 --> 01:38:55.830
+<v John Miller>instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2014-0
+01:38:56.430 --> 01:39:00.430
+<v John Miller>To to essentially identify,
+get the business rules,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2014-1
+01:39:00.430 --> 01:39:03.892
+<v John Miller>identify the use cases,
+define the features,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2014-2
+01:39:03.892 --> 01:39:09.430
+<v John Miller>design those vertical slices,
+present that structural analysis and then</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2014-3
+01:39:09.430 --> 01:39:15.430
+<v John Miller>validate the completeness and communicate
+it. So we should see it go through.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2015-0
+01:39:15.830 --> 01:39:17.910
+<v John Miller>Those kinds of stuffs.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2018-0
+01:39:19.030 --> 01:39:23.410
+<v John Miller>So here's the vertical slice
+implementation instructions that it's</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2018-1
+01:39:23.410 --> 01:39:24.390
+<v John Miller>it's including.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2024-0
+01:39:31.230 --> 01:39:36.802
+<v John Miller>The other thing I you might get from this
+is a a sense that this is a fairly</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2024-1
+01:39:36.802 --> 01:39:42.374
+<v John Miller>sophisticated process that we're going
+through and we're doing it, you know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2024-2
+01:39:42.374 --> 01:39:46.426
+<v John Miller>pretty quickly,
+but it has a great deal of depth to it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2024-3
+01:39:46.426 --> 01:39:50.550
+<v John Miller>And so we're really giving, you know,
+we're both giving.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2026-0
+01:39:51.070 --> 01:39:57.150
+<v John Miller>Strong instructions to the AI in terms of
+what we expecting it to produce and.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2031-0
+01:39:58.350 --> 01:40:03.130
+<v John Miller>And we're getting very sophisticated
+instructions or information out of it</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2031-1
+01:40:03.130 --> 01:40:07.017
+<v John Miller>that we can actually use as as a part of
+the implementation.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2031-2
+01:40:07.017 --> 01:40:12.243
+<v John Miller>And I think you know based on trying to
+as we saw in the very first days we tried</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2031-3
+01:40:12.243 --> 01:40:13.390
+<v John Miller>to do this on the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2036-0
+01:40:13.550 --> 01:40:19.091
+<v John Miller>With basically no instructions at all and
+just let it go on its own, you know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2036-1
+01:40:19.091 --> 01:40:24.492
+<v John Miller>it's certainly not going to have the
+level of sophistication as this version</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2036-2
+01:40:24.492 --> 01:40:30.104
+<v John Miller>is just based on the fact that the the
+demands that we're making on AI in terms</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2036-3
+01:40:30.104 --> 01:40:33.470
+<v John Miller>of the requirements that we want to see
+in the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2037-0
+01:40:33.550 --> 01:40:34.270
+<v John Miller>Actual output.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2042-0
+01:40:38.430 --> 01:40:42.255
+<v John Miller>And I think that's one of the main points
+of, you know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2042-1
+01:40:42.255 --> 01:40:47.515
+<v John Miller>of AI assisted software development is
+that we really want to focus a lot of</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2042-2
+01:40:47.515 --> 01:40:52.706
+<v John Miller>attention on these instruction files and
+later we'll talk about how to take</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2042-3
+01:40:52.706 --> 01:40:54.550
+<v John Miller>advantage of chat modes to.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2043-0
+01:40:55.230 --> 01:40:59.190
+<v John Miller>To further improve the process.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2046-0
+01:41:04.110 --> 01:41:08.750
+<v John Miller>So now it's updating the log,
+so it's created.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2049-0
+01:41:11.070 --> 01:41:15.310
+<v John Miller>In our docs file, our plan.
+So let's go take a look at that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2052-0
+01:41:22.950 --> 01:41:25.030
+<v John Miller>While it's updating the logs.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2057-0
+01:41:31.710 --> 01:41:37.783
+<v John Miller>So here's the core calculator,
+calculator features that that that it's</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2057-1
+01:41:37.783 --> 01:41:42.230
+<v John Miller>already identified earlier with the this
+rules are.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2062-0
+01:41:45.470 --> 01:41:50.555
+<v John Miller>And here is the vertical slice design,
+basic number entry and display,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2062-1
+01:41:50.555 --> 01:41:55.782
+<v John Miller>which is what we saw or what we
+speculated might be the first thing that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2062-2
+01:41:55.782 --> 01:42:00.150
+<v John Miller>it would take on.
+This is the foundation story to implement.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2063-0
+01:42:00.390 --> 01:42:00.470
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2068-0
+01:42:02.950 --> 01:42:05.558
+<v John Miller>So,
+so complete number input functionality.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2068-1
+01:42:05.558 --> 01:42:09.054
+<v John Miller>You can handle integers, decimal points,
+negative numbers,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2068-2
+01:42:09.054 --> 01:42:12.610
+<v John Miller>display the current input,
+clear the and clear the BAS base</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2068-3
+01:42:12.610 --> 01:42:15.810
+<v John Miller>functionality.
+But notice nothing in this is actually</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2068-4
+01:42:15.810 --> 01:42:18.417
+<v John Miller>calling it to actually do any
+calculations.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2068-5
+01:42:18.417 --> 01:42:20.550
+<v John Miller>Looks like just being able to enter.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2071-0
+01:42:21.790 --> 01:42:29.350
+<v John Miller>Enter into the into the keyboard,
+into the calculator and display the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2071-1
+01:42:29.350 --> 01:42:31.510
+<v John Miller>display the results.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2076-0
+01:42:34.270 --> 01:42:38.921
+<v John Miller>Can enter a single or multiple digit
+number, can enter decimal numbers,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2076-1
+01:42:38.921 --> 01:42:42.667
+<v John Miller>can enter an evergreen numbers,
+negative numbers, update,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2076-2
+01:42:42.667 --> 01:42:46.995
+<v John Miller>display updates correctly,
+clear and black space work properly and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2076-3
+01:42:46.995 --> 01:42:50.030
+<v John Miller>then it goes into slice 2.
+We would add basic.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2078-0
+01:42:50.190 --> 01:42:52.630
+<v John Miller>Arithmetic operations.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2080-0
+01:42:54.430 --> 01:42:57.390
+<v John Miller>And then slice 3 is at the memory
+functions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2083-0
+01:43:03.790 --> 01:43:10.150
+<v John Miller>Slice 4 is advanced operations,
+so square root power percentage change.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2085-0
+01:43:13.270 --> 01:43:14.590
+<v John Miller>Calculation history.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2088-0
+01:43:16.190 --> 01:43:19.790
+<v John Miller>We're about halfway through the
+implementation now.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2088-1
+01:43:19.790 --> 01:43:24.567
+<v John Miller>Error handling and validation. Oh,
+and then it is the implementation</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2088-2
+01:43:24.567 --> 01:43:25.190
+<v John Miller>strategy.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2090-0
+01:43:26.830 --> 01:43:29.915
+<v John Miller>Uh,
+so that was the the six slices that we're</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2090-1
+01:43:29.915 --> 01:43:31.390
+<v John Miller>gonna be implementing.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2093-0
+01:43:33.230 --> 01:43:38.390
+<v John Miller>Technologystackrecommendations.
+net Mediate are fluid validation.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2094-0
+01:43:39.390 --> 01:43:42.230
+<v John Miller>Deendency injection and logging.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2098-0
+01:43:46.830 --> 01:43:54.390
+<v John Miller>A console applications for simple testing
+and demonstration. AWPF application for.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2101-0
+01:43:55.550 --> 01:44:00.800
+<v John Miller>A rich experience. This is odd.
+Blazer Webassembly. Oh, these are options.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2101-1
+01:44:00.800 --> 01:44:04.370
+<v John Miller>It's saying React and TypeScript.
+I think we were.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2101-2
+01:44:04.370 --> 01:44:07.030
+<v John Miller>Maybe we need to be clearer about our.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2103-0
+01:44:08.310 --> 01:44:12.870
+<v John Miller>MAUI implementation or is that Blazor?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2120-0
+01:44:58.310 --> 01:44:58.430
+<v John Miller>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2123-0
+01:45:04.510 --> 01:45:09.750
+<v John Miller>So someplace in this process we've missed
+out on the the Maui requirement.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2130-0
+01:45:21.870 --> 01:45:26.110
+<v John Miller>So we can ask it to then to update this
+plan to implement.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2133-0
+01:45:29.910 --> 01:45:35.350
+<v John Miller>Um,
+Maui instead of these options for testing.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2135-0
+01:45:34.110 --> 01:45:41.097
+<v Majernik, Peter>I I think those those two can be used
+together so you can have Blazer inside</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2135-1
+01:45:41.097 --> 01:45:41.550
+<v Majernik, Peter>Maui.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2137-0
+01:45:45.830 --> 01:45:46.390
+<v John Miller>OK.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2139-0
+01:45:49.390 --> 01:45:52.990
+<v John Miller>The structure validation rules for each
+slice.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2144-0
+01:45:54.910 --> 01:45:59.712
+<v John Miller>Before we implement a slice,
+a feature boundary is clearly defined.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2144-1
+01:45:59.712 --> 01:46:05.502
+<v John Miller>No direct dependencies on other features.
+All required interfaces are identified.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2144-2
+01:46:05.502 --> 01:46:10.515
+<v John Miller>Success criteria is testable.
+File structure allows for vertical slice</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2144-3
+01:46:10.515 --> 01:46:11.150
+<v John Miller>patterns.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2148-0
+01:46:11.310 --> 01:46:15.184
+<v John Miller>I think once we get the foundation slice
+implemented,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2148-1
+01:46:15.184 --> 01:46:20.850
+<v John Miller>we would be able to implement the other
+slices independently of each other and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2148-2
+01:46:20.850 --> 01:46:26.015
+<v John Miller>and we should be able to do multiple,
+multiple lines of development and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2148-3
+01:46:26.015 --> 01:46:28.310
+<v John Miller>actually move the project along.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2152-0
+01:46:28.430 --> 01:46:32.224
+<v John Miller>Even quicker.
+So we want us to review the plan and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2152-1
+01:46:32.224 --> 01:46:36.019
+<v John Miller>approach, set up the project,
+implement slice one,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2152-2
+01:46:36.019 --> 01:46:41.896
+<v John Miller>then iterate on each slice to the testing
+and it just talks about what the the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2152-3
+01:46:41.896 --> 01:46:43.830
+<v John Miller>benefits of that plan are.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2154-0
+01:46:46.310 --> 01:46:48.590
+<v John Miller>So let's do this.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2156-0
+01:46:55.350 --> 01:46:57.430
+<v John Miller>Go back to the project.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2159-0
+01:47:02.390 --> 01:47:07.790
+<v John Miller>And let's look where do we see the IT was
+the C# calculator instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2164-0
+01:47:16.430 --> 01:47:23.390
+<v John Miller>I just want to ask it a question and let
+me put the dot dot.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2166-0
+01:47:25.150 --> 01:47:29.870
+<v John Miller>She shall calculate instructions,
+but I want to look at the the plan.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2167-0
+01:47:32.550 --> 01:47:34.550
+<v John Miller>Which was down here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2170-0
+01:47:40.270 --> 01:47:43.030
+<v John Miller>And we'll say that the CSR instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2172-0
+01:47:44.030 --> 01:47:44.110
+<v John Miller>Um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2182-0
+01:48:06.190 --> 01:48:09.630
+<v John Miller>Is that in uh?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2184-0
+01:48:13.950 --> 01:48:14.310
+<v John Miller>I am.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2186-0
+01:48:18.030 --> 01:48:19.630
+<v John Miller>And see what it thinks about that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2201-0
+01:48:48.510 --> 01:48:53.633
+<v John Miller>So it agrees that we're not being
+specific enough in the plan and that</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2201-1
+01:48:53.633 --> 01:48:56.230
+<v John Miller>somehow this requirement was missed.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2204-0
+01:49:00.990 --> 01:49:07.670
+<v John Miller>Reinforcing our need to want to review
+these artifacts, yeah.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2207-0
+01:49:04.270 --> 01:49:08.006
+<v Majernik, Peter>John,
+if I mean in this case if we take out the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2207-1
+01:49:08.006 --> 01:49:12.286
+<v Majernik, Peter>React and the console app and just change
+WPF to Maui,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2207-2
+01:49:12.286 --> 01:49:15.710
+<v Majernik, Peter>I think maybe it's going to be good
+enough.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2209-0
+01:49:22.950 --> 01:49:23.910
+<v Majernik, Peter>That's my guess.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2213-0
+01:49:29.150 --> 01:49:31.390
+<v John Miller>It's doing a little bit more than that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2219-0
+01:49:47.710 --> 01:49:49.110
+<v John Miller>So here it's changed this.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2221-0
+01:49:51.070 --> 01:49:54.505
+<v John Miller>To a.
+net MAUI application and a rationale for</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2221-1
+01:49:54.505 --> 01:49:54.870
+<v John Miller>that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2224-0
+01:49:58.550 --> 01:50:01.750
+<v John Miller>It updated the package references in the
+plan.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2225-0
+01:50:02.950 --> 01:50:04.110
+<v John Miller>To use Maui.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2230-0
+01:50:07.790 --> 01:50:12.917
+<v John Miller>It's changed the directory structure.
+So this would make me question, OK,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2230-1
+01:50:12.917 --> 01:50:17.628
+<v John Miller>how did we miss that? You know,
+this big of a change in the initial</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2230-2
+01:50:17.628 --> 01:50:21.508
+<v John Miller>requirements?
+And for that you can actually go back and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2230-3
+01:50:21.508 --> 01:50:22.270
+<v John Miller>ask the AI.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2235-0
+01:50:22.830 --> 01:50:25.405
+<v John Miller>You know,
+how did you determine that this</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2235-1
+01:50:25.405 --> 01:50:29.635
+<v John Miller>particular output was created and why
+didn't you recognize that this</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2235-2
+01:50:29.635 --> 01:50:33.251
+<v John Miller>instruction occurs?
+And it will actually explain its logic</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2235-3
+01:50:33.251 --> 01:50:36.132
+<v John Miller>about how it actually made that
+determination.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2235-4
+01:50:36.132 --> 01:50:40.791
+<v John Miller>And you can use that explanation to go
+back into the prompts and update the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2235-5
+01:50:40.791 --> 01:50:42.630
+<v John Miller>prompts to be more persistent.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2240-0
+01:50:42.870 --> 01:50:48.299
+<v John Miller>Specific or update the requirements
+documentation to be more specific to make</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2240-1
+01:50:48.299 --> 01:50:51.919
+<v John Miller>sure that we actually get the output that
+we write.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2240-2
+01:50:51.919 --> 01:50:57.417
+<v John Miller>Because This is why I'm going through
+this experiment is I wanna see where I'm</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2240-3
+01:50:57.417 --> 01:51:02.150
+<v John Miller>not being clear enough about my intent
+and not getting what I want.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2244-0
+01:51:02.590 --> 01:51:05.594
+<v John Miller>From that output.
+So this is a would be an iterative</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2244-1
+01:51:05.594 --> 01:51:09.788
+<v John Miller>process in my mind of continually going
+through and examining the output,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2244-2
+01:51:09.788 --> 01:51:13.019
+<v John Miller>the the the plan,
+making updates to the requirements and</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2244-3
+01:51:13.019 --> 01:51:17.780
+<v John Miller>the other documents so that I can produce
+a clean plan and I know that all my other</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2244-4
+01:51:17.780 --> 01:51:18.630
+<v John Miller>documents then.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2246-0
+01:51:18.910 --> 01:51:23.670
+<v John Miller>Are In Sync with that plan because that's
+produced a plan that I agree with.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2247-0
+01:51:25.350 --> 01:51:28.630
+<v John Miller>Right, so so it it changed the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2249-0
+01:51:30.350 --> 01:51:31.910
+<v John Miller>Yeah, the the plan itself.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2251-0
+01:51:33.310 --> 01:51:37.034
+<v John Miller>Right.
+But changing just the plan in my mind</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2251-1
+01:51:37.034 --> 01:51:38.110
+<v John Miller>isn't enough.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2255-0
+01:51:39.230 --> 01:51:42.574
+<v John Miller>Because I don't.
+I want to know what what went wrong in</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2255-1
+01:51:42.574 --> 01:51:47.052
+<v John Miller>the creation of the plan in the other
+files that I've specified that would</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2255-2
+01:51:47.052 --> 01:51:50.814
+<v John Miller>cause this to occur.
+So we could go that down that rabbit hole</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2255-3
+01:51:50.814 --> 01:51:51.470
+<v John Miller>if we want.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2256-0
+01:51:54.270 --> 01:51:54.950
+<v John Miller>But um.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2258-0
+01:51:57.670 --> 01:52:00.150
+<v John Miller>Let's go ahead and keep that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2266-0
+01:52:10.110 --> 01:52:12.815
+<v John Miller>All right,
+so anything else on this so far?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2266-1
+01:52:12.815 --> 01:52:15.826
+<v John Miller>How do you,
+how do you feel this is progressing?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2266-2
+01:52:15.826 --> 01:52:17.670
+<v John Miller>Are you comfortable with this?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2269-0
+01:52:21.350 --> 01:52:22.550
+<v Majernik, Peter>Yeah, I think so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2268-0
+01:52:22.230 --> 01:52:23.030
+<v Carter, Jake>Yeah, I mean.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2271-0
+01:52:26.590 --> 01:52:27.830
+<v John Miller>Alright, so then.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2272-0
+01:52:27.870 --> 01:52:28.390
+<v John Miller>So then.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2274-0
+01:52:31.030 --> 01:52:33.590
+<v John Miller>Uh, looking at the plan.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2277-0
+01:52:36.870 --> 01:52:39.590
+<v John Miller>We could tell it then to go ahead and.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2280-0
+01:52:43.070 --> 01:52:45.510
+<v John Miller>Um, let's look at the top here.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2284-0
+01:52:58.950 --> 01:52:59.190
+<v John Miller>Nice one.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2288-0
+01:53:05.950 --> 01:53:07.790
+<v John Miller>But before they you do that.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2290-0
+01:53:10.030 --> 01:53:15.750
+<v John Miller>One of the things that I've I wanted to
+start to try to add to this process.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2292-0
+01:53:17.150 --> 01:53:17.230
+<v John Miller>Is.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2296-0
+01:53:20.430 --> 01:53:24.086
+<v John Miller>Showcases.
+I'm sure you're all familiar with</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2296-1
+01:53:24.086 --> 01:53:30.991
+<v John Miller>showcasing the the work that you're doing,
+so it would be really helpful if the plan</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2296-2
+01:53:30.991 --> 01:53:36.190
+<v John Miller>included the instructions for showcasing
+that particular slice.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2299-0
+01:53:39.590 --> 01:53:43.670
+<v John Miller>So we could then say add add to the plan.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2301-0
+01:53:48.030 --> 01:53:49.310
+<v John Miller>Instructions.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2303-0
+01:53:51.110 --> 01:53:54.710
+<v John Miller>Or showcasing.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2305-0
+01:53:56.630 --> 01:53:58.190
+<v John Miller>This each slice.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2307-0
+01:54:00.270 --> 01:54:02.430
+<v John Miller>To stakeholders.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2312-0
+01:54:07.470 --> 01:54:11.450
+<v John Miller>And this was really helpful when I was
+finishing up on, you know,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2312-1
+01:54:11.450 --> 01:54:16.154
+<v John Miller>I I I got into this just the end of
+implementing the second iteration of this</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2312-2
+01:54:16.154 --> 01:54:20.978
+<v John Miller>and it was really helpful in terms of
+verifying that it that you know you could</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2312-3
+01:54:20.978 --> 01:54:23.390
+<v John Miller>actually demonstrate and it would drive.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2314-0
+01:54:23.550 --> 01:54:27.688
+<v John Miller>It would drive the AI towards producing
+something that was demonstratable because</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2314-1
+01:54:27.688 --> 01:54:31.270
+<v John Miller>it needed to produce instructions to
+actually meet those requirements.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2317-0
+01:54:32.790 --> 01:54:37.787
+<v John Miller>So let's go ahead and see if we can
+update the plan and and and include those</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2317-1
+01:54:37.787 --> 01:54:40.990
+<v John Miller>showcase instructions and see what it
+looks like.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2340-0
+01:55:22.510 --> 01:55:24.989
+<v John Miller>Well,
+this didn't do exactly what I was asking</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2340-1
+01:55:24.989 --> 01:55:28.628
+<v John Miller>or what I was expecting. I kind of didn't.
+I obviously asked for it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2340-2
+01:55:28.628 --> 01:55:32.372
+<v John Miller>It looks like it's gonna put all of these
+at the very end of the file,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2340-3
+01:55:32.372 --> 01:55:34.270
+<v John Miller>but I was thinking it should belong.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2344-0
+01:55:36.990 --> 01:55:40.509
+<v John Miller>In with the slice,
+so it may be at the very right either</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2344-1
+01:55:40.509 --> 01:55:45.262
+<v John Miller>before the success criteria or maybe
+after the success criteria would be the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2344-2
+01:55:45.262 --> 01:55:49.150
+<v John Miller>instructions for actually showing off
+that particular feature.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2347-0
+01:55:55.390 --> 01:56:00.473
+<v Harding, Mike>Maybe because the prompt you forgot to
+put each slice,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2347-1
+01:56:00.473 --> 01:56:03.430
+<v Harding, Mike>so it just kinda interpreted it.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2352-0
+01:56:03.750 --> 01:56:06.725
+<v John Miller>Right,
+so I said add the to the plan</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2352-1
+01:56:06.725 --> 01:56:11.710
+<v John Miller>instructions for showcasing.
+So I didn't say each slice it it</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2352-2
+01:56:11.710 --> 01:56:17.338
+<v John Miller>responded with adding instruction for
+showcasing each vertical slice.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2352-3
+01:56:17.338 --> 01:56:19.830
+<v John Miller>So I interpreted that as being.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2357-0
+01:56:19.950 --> 01:56:24.119
+<v John Miller>With the slice,
+but I guess goes to show us that you know</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2357-1
+01:56:24.119 --> 01:56:29.221
+<v John Miller>we need to be more persistent.
+But you can see all it all we're really</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2354-0
+01:56:26.510 --> 01:56:27.510
+<v Harding, Mike>More specific.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2357-2
+01:56:29.221 --> 01:56:35.186
+<v John Miller>doing is telling it to move the showcase
+piece someplace else because here it has,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2357-3
+01:56:35.186 --> 01:56:37.270
+<v John Miller>you know, slice one showcase.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2363-0
+01:56:37.710 --> 01:56:43.139
+<v John Miller>What the demonstrate taste,
+what the actual script we should use in</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2363-1
+01:56:43.139 --> 01:56:48.168
+<v John Miller>order to showcase it,
+what the the functional demo should look</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2363-2
+01:56:48.168 --> 01:56:54.555
+<v John Miller>like, enter single digits, show etcetera,
+enter decimal numbers and demonstrate</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2360-0
+01:56:49.830 --> 01:56:49.990
+<v Majernik, Peter>Mm.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2363-3
+01:56:54.555 --> 01:56:56.550
+<v John Miller>negative number handling.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2367-0
+01:56:57.230 --> 01:57:01.968
+<v John Miller>How did the clear function works?
+And then you can attempt invalid inputs.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2367-1
+01:57:01.968 --> 01:57:05.001
+<v John Miller>You can show it running on the Windows
+desktop,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2367-2
+01:57:05.001 --> 01:57:10.118
+<v John Miller>show it on an Android emulator device,
+or highlight and highlight the consistent</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2367-3
+01:57:10.118 --> 01:57:11.950
+<v John Miller>behavior across the platform.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2372-0
+01:57:13.150 --> 01:57:17.456
+<v John Miller>You can also showcase the technical
+highlights of the vertical slice</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2372-1
+01:57:17.456 --> 01:57:20.638
+<v John Miller>architecture,
+demonstrate the unit tester passing,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2372-2
+01:57:20.638 --> 01:57:24.381
+<v John Miller>do a quick code walkthrough of the
+command handler pattern.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2372-3
+01:57:24.381 --> 01:57:28.437
+<v John Miller>Successment results stakeholders can
+successfully enter numbers,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2372-4
+01:57:28.437 --> 01:57:32.430
+<v John Miller>platform differences.
+So this is a pretty decent definition of.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2373-0
+01:57:32.510 --> 01:57:33.870
+<v John Miller>Uh uh, the showcase.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2377-0
+01:57:35.230 --> 01:57:42.236
+<v John Miller>Here's the second slice showcase.
+Now we're doing showcasing the the</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2377-1
+01:57:42.236 --> 01:57:44.470
+<v John Miller>multiplication pieces.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2378-0
+01:57:47.950 --> 01:57:49.310
+<v John Miller>And what the?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2381-0
+01:57:50.750 --> 01:57:55.044
+<v John Miller>Here's the memory functions,
+and so it's telling us how to how to</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2381-1
+01:57:55.044 --> 01:57:56.150
+<v John Miller>actually do this.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2384-0
+01:57:59.470 --> 01:58:03.494
+<v John Miller>And I think from this you can see that it
+would be pretty easy to produce a user's</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2384-1
+01:58:03.494 --> 01:58:05.190
+<v John Miller>guide on how to use the calculator.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2386-0
+01:58:07.070 --> 01:58:11.606
+<v John Miller>And it would follow this these
+instructions pretty well.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2386-1
+01:58:11.606 --> 01:58:14.550
+<v John Miller>5 the complete calculator experience.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2388-0
+01:58:17.350 --> 01:58:18.870
+<v John Miller>And then the.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2392-0
+01:58:20.150 --> 01:58:25.265
+<v John Miller>Production ready where we're
+demonstrating error handling, edge cases,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2392-1
+01:58:25.265 --> 01:58:30.597
+<v John Miller>the complete feature integration,
+product readiness, performance metrics,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2392-2
+01:58:30.597 --> 01:58:33.190
+<v John Miller>test coverage, platform deployments.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2393-0
+01:58:34.550 --> 01:58:35.430
+<v John Miller>Et cetera.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2398-0
+01:58:37.510 --> 01:58:40.015
+<v John Miller>So I think that's that's a pretty good
+start.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2398-1
+01:58:40.015 --> 01:58:42.412
+<v John Miller>I mean that's I think pretty
+comprehensive.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2398-2
+01:58:42.412 --> 01:58:46.442
+<v John Miller>I think that if we can actually get
+something implemented that that if it</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2398-3
+01:58:46.442 --> 01:58:49.328
+<v John Miller>conforms these instruction files that
+we've created,</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2398-4
+01:58:49.328 --> 01:58:53.630
+<v John Miller>we should be have a have a pretty good
+chance of actually being successful so.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2400-0
+01:58:54.510 --> 01:58:57.086
+<v John Miller>All right,
+so tomorrow let's start running.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2400-1
+01:58:57.086 --> 01:58:59.310
+<v John Miller>Let's implementing slices. How's that?</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2401-0
+01:59:00.990 --> 01:59:01.670
+<v Carter, Jake>Sounds good.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2402-0
+01:59:01.750 --> 01:59:02.470
+<v Harding, Mike>Sounds good.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2404-0
+01:59:03.110 --> 01:59:04.750
+<v John Miller>Alrighty, see you tomorrow.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2405-0
+01:59:04.110 --> 01:59:04.470
+<v Carter, Jake>Yep, see.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2407-0
+01:59:05.030 --> 01:59:05.110
+<v Harding, Mike>Bye.</v>
+
+9724d464-118b-4e54-9dae-f7dc6078a66a/2412-0
+01:59:06.310 --> 01:59:06.910
+Thank you.

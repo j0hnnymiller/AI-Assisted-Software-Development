@@ -1,0 +1,3 @@
+[submodule "submodules/ai-assisted-dev"]
+	path = submodules/ai-assisted-dev
+	url = git@github.com:johnmillerATcodemag-com/AI-Assisted-Software-Development.git

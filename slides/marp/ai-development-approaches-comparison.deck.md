@@ -1,0 +1,118 @@
+﻿---
+marp: true
+theme: default
+paginate: true
+---
+
+# Comparing AI Development Approaches || Know Thy Copilot: Context, Artifacts, and Agent Files
+
+---
+
+## What Are Custom Agents?
+
+Definition
+  - Preconfigured AI personalities for specific domains
+  - Combine behavioral rules with specialized knowledge
+  - Provide contextual expertise for particular scenarios
+
+Key Characteristics
+  - Scope: Domain or role-specific interactions
+  - Context: Rich background knowledge and constraints
+  - Purpose: Act as specialized “AI expert” for conversations
+
+---
+
+## DevOps Engineer Custom Agent
+
+Role: "Senior DevOps Engineer"
+
+Expertise:
+  - CI/CD pipelines
+  - Infrastructure as Code
+  - Container orchestration
+  - Monitoring and observability
+
+Behavior:
+  - Focus on scalability and reliability
+  - Recommend industry best practices
+  - Consider security implications
+  - Suggest automation opportunities
+
+---
+
+## Custom Agents: Use Cases
+
+Perfect For:
+  - Domain Expertise → Get specialized knowledge
+  - Role-Playing → AI acts as specific professional
+  - Context Switching → Different perspectives on same problem
+  - Learning → Educational conversations with expert personas
+
+Examples:
+  - Security Architect Mode → Focus on security concerns
+  - Database Expert Mode → Optimize data architecture
+  - UX Designer Mode → Human-centered design guidance
+
+---
+
+## Comparison Matrix
+
+| Aspect      | Instruction Files      | Prompt Files           | Custom Agents             |
+| ----------- | ---------------------- | ---------------------- | ----------------------------- |
+| Purpose     | Define AI behavior     | Execute specific tasks | Provide specialized expertise |
+| Scope       | Repository-wide        | Single task/workflow   | Conversational context        |
+| Persistence | Always active          | On-demand execution    | Session-based                 |
+| Reusability | High (across projects) | High (task templates)  | Medium (role-specific)        |
+| Complexity  | Simple rules           | Detailed procedures    | Rich contextual knowledge     |
+
+---
+
+## Layered Integration Approach
+
+```mermaid
+graph TD
+    A["Instruction Files<br/>(Security Standards, Coding Rules)"] -->|Base Behavior| B["Prompt Files<br/>(Security Audit Template)"]
+    B -->|Task Execution| C["Custom Agents<br/>(Security Architect Persona)"]
+    C -->|Conversational Context| D["Result: Specialized Security Expert<br/>using standardized processes with<br/>consistent quality standards"]
+```
+
+::: column
+
+- Instruction Files set the foundational rules and guardrails first.
+- Prompt Files then apply those rules to execute a specific task in a structured way.
+- Custom Agents add domain persona and context (like a Security Architect) during the interaction.
+- The combined effect is a specialized expert-like result that stays consistent, standardized, and high quality.
+---
+
+## Real-World Integration Example
+
+Scenario: Implementing User Authentication
+
+Instruction Files provide:
+  - Security coding standards
+  - Testing requirements
+  - Documentation standards
+
+Prompt File executes:
+  - “Implement OAuth2 Authentication System”
+  - Step-by-step implementation guide
+
+::: column
+
+Custom Agents offers:
+  - Security Architect expertise
+  - Best practice recommendations
+  - Threat modeling insights
+
+---
+
+## The Integration Advantage
+
+When Used Together:
+
+- Higher Quality: Consistent standards + structured execution + expert knowledge
+- Greater Efficiency: Automated workflows with specialized guidance
+- Better Outcomes: Comprehensive approach covers all development aspects
+- Reduced Risk: Multiple layers of validation and expertise
+
+Result: > AI becomes a true development partner, not just a code generator

@@ -1,0 +1,6 @@
+flowchart TB
+    A[Flag enabled and stable] --> B[Find references]
+    B --> C[Review removal diff]
+    C --> D[Run focused tests]
+    D --> E[Delete obsolete paths]
+    E --> F[Update docs and rollout notes]

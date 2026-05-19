@@ -463,7 +463,7 @@ generate_tests.md → name: generate-tests ❌ (use kebab-case)
 - [ ] User-defined fields don't conflict with core schema
 - [ ] Values are appropriate types
 
-### Testing
+## Target Audience
 
 - [ ] File appears in Copilot promptfile picker
 - [ ] Can be invoked by name

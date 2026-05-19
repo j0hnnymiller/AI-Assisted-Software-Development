@@ -1,0 +1,5261 @@
+WEBVTT
+
+136052fd-22bf-408e-a12b-d0f4706e1565/29-0
+00:01:59.552 --> 00:02:00.232
+<v John Miller>Alright, welcome back.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/30-0
+00:02:02.432 --> 00:02:07.952
+<v John Miller>Let me share.
+Bonnie got the diagram to render.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/31-0
+00:02:13.072 --> 00:02:15.672
+<v John Miller>So from here we can see that here is um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/33-0
+00:02:16.432 --> 00:02:19.592
+<v John Miller>Vertical slice one,
+which is the one we just completed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/34-0
+00:02:20.792 --> 00:02:22.312
+<v John Miller>And you can see that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/35-0
+00:02:23.792 --> 00:02:31.543
+<v John Miller>All of these slices can be implemented in
+parallel once we've completed the VSO one.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/35-1
+00:02:31.543 --> 00:02:36.467
+<v John Miller>In addition to that,
+we have a VSO 2 which is a basic</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/35-2
+00:02:36.467 --> 00:02:43.032
+<v John Miller>arithmetic capability and that we have a
+VSO 3 which is dependent upon.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/36-0
+00:02:43.312 --> 00:02:49.639
+<v John Miller>That so taking on VSO 2 is a good idea so
+that we can proceed to our critical path</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/36-1
+00:02:49.639 --> 00:02:56.041
+<v John Miller>here that for all the things that must be
+done before other things can be completed</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/36-2
+00:02:56.041 --> 00:02:58.632
+<v John Miller>and that will allow us to execute.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/37-0
+00:02:59.192 --> 00:03:04.760
+<v John Miller>And implement additional vertical slices
+as we go along.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/37-1
+00:03:04.760 --> 00:03:07.592
+<v John Miller>So let's go ahead and assign.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/38-0
+00:03:08.792 --> 00:03:14.414
+<v John Miller>Some of these tasks, somebody,
+if somebody could pick up VSO 2,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/38-1
+00:03:14.414 --> 00:03:21.265
+<v John Miller>that would be a good idea and any of
+these others that are on the first tier,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/38-2
+00:03:21.265 --> 00:03:25.832
+<v John Miller>which is basically we're starting here
+with 781316.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/39-0
+00:03:27.552 --> 00:03:35.712
+<v John Miller>Are all good candidates for
+implementation, so.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/40-0
+00:03:37.552 --> 00:03:42.952
+<v John Miller>Let's go ahead and and assign these work
+items also.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/41-0
+00:03:45.472 --> 00:03:48.877
+<v John Miller>Al,
+I saw that you posted that you've</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/41-1
+00:03:48.877 --> 00:03:54.072
+<v John Miller>completed slices one through 10.
+How did that go for you?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/43-0
+00:04:08.632 --> 00:04:08.952
+<v John Miller>Alright.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/44-0
+00:04:13.632 --> 00:04:14.832
+<v John Miller>Right. Any questions?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/46-0
+00:04:17.952 --> 00:04:21.112
+<v John Miller>Oh, all right. No, no worries, though.
+That's fine.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/47-0
+00:04:25.552 --> 00:04:31.552
+<v John Miller>3:00 AM You win the Perseverance award.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/48-0
+00:04:33.312 --> 00:04:36.232
+<v John Miller>Thanks for sticking this out.
+I'm proud of you.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/49-0
+00:04:44.872 --> 00:04:50.195
+<v John Miller>All right. Any any questions on this?
+Anybody have any issues assigning a</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/49-1
+00:04:50.195 --> 00:04:51.992
+<v John Miller>ticket and picking it up?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/50-0
+00:04:53.192 --> 00:04:58.533
+<v John Miller>Can you post in chat which ones you you
+have which you've assigned so I can get a</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/50-1
+00:04:58.533 --> 00:05:00.552
+<v John Miller>sense of what we're working on?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/51-0
+00:05:03.232 --> 00:05:07.352
+<v Matt Hoffman>I I think that slice 7 and slice 6 are.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/52-0
+00:05:08.352 --> 00:05:11.152
+<v Matt Hoffman>Uh, like swapped in terms of name.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/53-0
+00:05:11.912 --> 00:05:12.152
+<v John Miller>Really.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/54-0
+00:05:12.152 --> 00:05:13.312
+<v Matt Hoffman>On this diagram.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/55-0
+00:05:16.672 --> 00:05:18.592
+<v John Miller>Let me look at the issues.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/56-0
+00:05:23.392 --> 00:05:24.472
+<v John Miller>Chris.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/61-0
+00:05:42.192 --> 00:05:46.272
+<v John Miller>The six and seven,
+so six is delete the last digit.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/62-0
+00:05:47.272 --> 00:05:49.072
+<v John Miller>And on the diagram.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/63-0
+00:05:52.312 --> 00:05:53.112
+<v John Miller>Where is 6?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/64-0
+00:05:59.152 --> 00:06:00.912
+<v John Miller>That's over here. Keyboard input.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/65-0
+00:06:08.432 --> 00:06:10.712
+<v John Miller>And then there is um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/66-0
+00:06:12.672 --> 00:06:17.959
+<v John Miller>So backspace, delete the last digit is,
+you know, it looks keyboard input. Yeah,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/66-1
+00:06:17.959 --> 00:06:20.112
+<v John Miller>you're right. That's interesting.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/71-0
+00:06:43.272 --> 00:06:45.752
+<v John Miller>Alright, so I'm gonna go ahead and ask.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/72-0
+00:06:47.472 --> 00:06:52.352
+<v John Miller>AI to take a look at that and see what it
+reports back.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/76-0
+00:07:11.552 --> 00:07:11.752
+<v Chris Bishop>Yes.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/79-0
+00:07:12.632 --> 00:07:17.552
+<v John Miller>So VS 06 and VS 07.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/80-0
+00:07:26.832 --> 00:07:30.232
+<v John Miller>But the the ESO 6 bill says titles are.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/81-0
+00:07:33.392 --> 00:07:33.672
+<v John Miller>Select.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/82-0
+00:07:36.872 --> 00:07:38.112
+<v John Miller>On the dial room.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/83-0
+00:07:47.952 --> 00:07:50.472
+<v John Miller>And then ask it to explain.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/87-0
+00:08:09.592 --> 00:08:10.152
+<v John Miller>So.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/88-0
+00:08:11.712 --> 00:08:13.872
+<v John Miller>It agrees that they're swapped.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/91-0
+00:08:25.952 --> 00:08:29.392
+<v John Miller>And it's think something is interesting.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/92-0
+00:08:40.912 --> 00:08:42.952
+<v John Miller>And it also found a VSO 8.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/93-0
+00:08:50.632 --> 00:08:53.272
+<v John Miller>As I think that's OK, so.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/94-0
+00:08:56.192 --> 00:08:57.752
+<v John Miller>And I'm gonna ask it then.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/96-0
+00:09:07.152 --> 00:09:09.752
+<v John Miller>But to to verify that all the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/97-0
+00:09:11.992 --> 00:09:12.552
+<v John Miller>Slice.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/98-0
+00:09:14.232 --> 00:09:15.912
+<v John Miller>Titles. Uh, correct.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/99-0
+00:09:18.872 --> 00:09:20.072
+<v John Miller>In the telegram.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/100-0
+00:09:30.112 --> 00:09:31.472
+<v John Miller>And let me go ahead and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/101-0
+00:09:32.872 --> 00:09:34.552
+<v John Miller>View the diagram again.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/102-0
+00:09:35.952 --> 00:09:36.152
+<v John Miller>3.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/103-0
+00:09:39.432 --> 00:09:45.758
+<v John Miller>And we can see here looks like VS 067 is
+here and 06 is correct.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/103-1
+00:09:45.758 --> 00:09:48.872
+<v John Miller>Delete the last digit backspace.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/104-0
+00:09:50.152 --> 00:09:52.712
+<v John Miller>And here is 7 keyboard input.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/105-0
+00:09:56.112 --> 00:10:01.807
+<v John Miller>All right, well,
+so let's see what happens with the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/105-1
+00:10:01.807 --> 00:10:02.792
+<v John Miller>analysis.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/106-0
+00:10:09.552 --> 00:10:13.642
+<v John Miller>Anybody have any questions?
+Everybody making progress?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/106-1
+00:10:13.642 --> 00:10:15.352
+<v John Miller>Any issues that we can?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/107-0
+00:10:17.872 --> 00:10:18.232
+<v John Miller>Discuss.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/108-0
+00:10:22.992 --> 00:10:29.032
+<v Chris Bishop>John, were you going to, um,
+go over a prompt about showcasing?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/110-0
+00:10:29.392 --> 00:10:34.672
+<v John Miller>I can. I did create a an instruction file.
+Is that what you're looking for?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/109-0
+00:10:30.472 --> 00:10:31.272
+<v Chris Bishop>No.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/112-0
+00:10:35.952 --> 00:10:39.070
+<v Chris Bishop>No,
+I I thought you before the break you had</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/112-1
+00:10:39.070 --> 00:10:43.712
+<v Chris Bishop>mentioned something about that part of
+the process showcasing the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/114-0
+00:10:43.552 --> 00:10:46.279
+<v John Miller>Well, if you complete a,
+if you've completed,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/113-0
+00:10:46.152 --> 00:10:46.312
+<v Chris Bishop>Twice.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/114-1
+00:10:46.279 --> 00:10:50.250
+<v John Miller>if you completed a slice,
+then I'd like you to showcase that slice</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/114-2
+00:10:50.250 --> 00:10:51.672
+<v John Miller>to the rest of the team.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/115-0
+00:10:53.392 --> 00:10:53.512
+<v Chris Bishop>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/117-0
+00:10:55.392 --> 00:10:59.695
+<v John Miller>So just so if you've once you've
+completed a slice and you think it's</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/117-1
+00:10:59.695 --> 00:11:03.384
+<v John Miller>ready for showcasing,
+then go ahead and raise your hand and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/117-2
+00:11:03.384 --> 00:11:03.752
+<v John Miller>we'll.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/118-0
+00:11:07.392 --> 00:11:10.552
+<v John Miller>And we'll we'll have you demonstrate it
+for us.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/119-0
+00:11:11.392 --> 00:11:15.232
+<v John Miller>So it looked like there's quite a few
+mistakes here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/120-0
+00:11:16.992 --> 00:11:20.104
+<v John Miller>Well, it says some of them are,
+some are fixed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/120-1
+00:11:20.104 --> 00:11:24.382
+<v John Miller>Looks like 1234 and five are all
+different and it made some minor</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/120-2
+00:11:24.382 --> 00:11:27.752
+<v John Miller>improvements to the document for some
+other titles.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/121-0
+00:11:32.392 --> 00:11:33.952
+<v John Miller>So let's uh preview that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/122-0
+00:11:36.832 --> 00:11:41.432
+<v John Miller>And we can see that we're getting a
+different error here with the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/123-0
+00:11:42.512 --> 00:11:45.472
+<v John Miller>Dependency graph. Again, I always find.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/124-0
+00:11:47.192 --> 00:11:54.392
+<v John Miller>Occasional errors with the the
+implementation of graphs.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/126-0
+00:12:02.272 --> 00:12:04.112
+<v John Miller>Uh, wants to update go.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/127-0
+00:12:08.912 --> 00:12:13.352
+<v John Miller>And uh, let's see,
+I wanna add into the chat now.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/128-0
+00:12:19.232 --> 00:12:22.352
+<v John Miller>Yeah,
+and the first copy always seems to fail.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/130-0
+00:12:35.432 --> 00:12:35.592
+<v John Miller>2.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/131-0
+00:12:38.992 --> 00:12:43.072
+<v John Miller>So it's gonna take a look at that and see
+if we can fix the parsing error.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/132-0
+00:12:45.072 --> 00:12:49.312
+<v John Miller>So it it looks like something got cut off
+and it's gonna fix that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/135-0
+00:13:02.712 --> 00:13:06.832
+<v John Miller>And you can see that it found that was
+missing a closing quote.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/139-0
+00:13:21.152 --> 00:13:23.672
+<v John Miller>Right.
+So let's go ahead and view that again.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/141-0
+00:13:28.632 --> 00:13:30.152
+<v John Miller>And we need to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/142-0
+00:13:42.112 --> 00:13:43.952
+<v John Miller>Not finding grass.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/143-0
+00:13:50.352 --> 00:13:53.952
+<v John Miller>Well, we still have an error,
+a parsing problem.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/144-0
+00:13:57.432 --> 00:13:58.752
+<v John Miller>It's a map.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/145-0
+00:14:01.352 --> 00:14:03.352
+<v John Miller>again.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/146-0
+00:14:04.672 --> 00:14:06.792
+<v John Miller>And with copy and paste.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/147-0
+00:14:08.392 --> 00:14:10.112
+<v John Miller>So let me go ahead and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/149-0
+00:14:19.072 --> 00:14:21.112
+<v John Miller>Still having a a problem with that same
+one.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/152-0
+00:14:37.472 --> 00:14:39.472
+<v John Miller>So it thinks it's got it fixed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/153-0
+00:14:42.752 --> 00:14:44.232
+<v John Miller>So let's take a look at that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/154-0
+00:14:52.752 --> 00:14:55.632
+<v John Miller>Same error. It doesn't look like it's.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/155-0
+00:14:56.632 --> 00:14:57.592
+<v John Miller>Got the same.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/156-0
+00:14:59.152 --> 00:15:02.432
+<v John Miller>Where is our PWA?
+So that that looks right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/157-0
+00:15:07.152 --> 00:15:10.752
+<v John Miller>And now we have a rendered documents.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/158-0
+00:15:16.632 --> 00:15:16.792
+<v John Miller>2.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/159-0
+00:15:17.872 --> 00:15:20.272
+<v John Miller>Let's go back and look at our issues.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/166-0
+00:15:52.752 --> 00:15:54.432
+<v John Miller>Let me look at all the issues.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/170-0
+00:16:23.792 --> 00:16:24.552
+<v John Miller>All right, so.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/171-0
+00:16:32.552 --> 00:16:37.153
+<v John Miller>There's a feature that's moved in.
+That's that's our first slice.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/171-1
+00:16:37.153 --> 00:16:39.592
+<v John Miller>Looks like Chris is working on the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/172-0
+00:16:41.192 --> 00:16:42.832
+<v John Miller>Slice 4.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/173-0
+00:16:45.552 --> 00:16:48.872
+<v John Miller>And these are ones I deleted. Yeah, Chris.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/174-0
+00:16:52.112 --> 00:16:55.992
+<v Chris Bishop>I'm on mute. I'm ready to showcase 4.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/175-0
+00:16:56.592 --> 00:16:59.152
+<v John Miller>All right, go right ahead.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/176-0
+00:17:02.392 --> 00:17:02.472
+<v Chris Bishop>Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/177-0
+00:17:04.832 --> 00:17:05.552
+<v John Miller>And share the screen.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/178-0
+00:17:07.432 --> 00:17:11.058
+<v Chris Bishop>Yeah,
+I'm going to share my laptop screen</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/178-1
+00:17:11.058 --> 00:17:18.051
+<v Chris Bishop>because this might be a little unruly for
+anyone who's on a laptop. Big screens.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/178-2
+00:17:18.051 --> 00:17:19.432
+<v Chris Bishop>There we go. OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/180-0
+00:17:25.992 --> 00:17:29.934
+<v John Miller>And I don't see that anybody's assigned a
+an issue to them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/180-1
+00:17:29.934 --> 00:17:32.825
+<v John Miller>So if you have or if you're working on
+one,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/180-2
+00:17:32.825 --> 00:17:35.912
+<v John Miller>please assign it so that we know that you
+are.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/181-0
+00:17:38.832 --> 00:17:40.112
+<v John Miller>So go ahead, Chris.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/182-0
+00:17:41.552 --> 00:17:46.479
+<v Chris Bishop>Yeah, so um,
+the tests or the the showcase items, um,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/182-1
+00:17:46.479 --> 00:17:50.676
+<v Chris Bishop>I'll,
+I'll just run through those and that's,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/182-2
+00:17:50.676 --> 00:17:52.592
+<v Chris Bishop>oh gosh, the screens.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/183-0
+00:17:57.472 --> 00:18:00.872
+<v Chris Bishop>I've got two wide.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/184-0
+00:18:01.872 --> 00:18:07.197
+<v Chris Bishop>Wide screens,
+so when I'm moving stuff around,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/184-1
+00:18:07.197 --> 00:18:14.447
+<v Chris Bishop>sometimes it's jumpy.
+So these are the items equals and result,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/184-2
+00:18:14.447 --> 00:18:16.712
+<v Chris Bishop>so equals and enter.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/187-0
+00:18:17.232 --> 00:18:23.734
+<v Chris Bishop>On these calculations I'm just going to
+run through these using the enter key</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/185-0
+00:18:20.712 --> 00:18:20.832
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/187-1
+00:18:23.734 --> 00:18:29.735
+<v Chris Bishop>following order of operations.
+Edge case 10 / 0 shows that can't divide</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/187-2
+00:18:29.735 --> 00:18:32.152
+<v Chris Bishop>and then precision, so float.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/186-0
+00:18:33.112 --> 00:18:33.272
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/188-0
+00:18:34.392 --> 00:18:34.672
+<v Chris Bishop>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/190-0
+00:18:37.712 --> 00:18:43.145
+<v Chris Bishop>And I've just be because I'm more
+familiar with cursor and I have the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/190-1
+00:18:43.145 --> 00:18:46.715
+<v Chris Bishop>cursor full and able to use all their
+models.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/190-2
+00:18:46.715 --> 00:18:50.285
+<v Chris Bishop>I've been using that and using the same
+kind.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/190-3
+00:18:50.285 --> 00:18:56.106
+<v Chris Bishop>It has a lot of the same stuff like
+agents and instructions and stuff like</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/190-4
+00:18:56.106 --> 00:18:57.192
+<v Chris Bishop>that. So just.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/189-0
+00:18:56.472 --> 00:18:56.712
+<v John Miller>Alright.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/191-0
+00:18:57.472 --> 00:19:04.552
+<v Chris Bishop>Supplanted those into cursor 5 + 3 equals
+8.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/192-0
+00:19:06.152 --> 00:19:06.472
+<v Chris Bishop>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/193-0
+00:19:09.912 --> 00:19:12.472
+<v Chris Bishop>Enter is giving me a result.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/194-0
+00:19:15.312 --> 00:19:18.952
+<v Chris Bishop>And thus so order of operations.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/195-0
+00:19:22.312 --> 00:19:23.432
+<v Chris Bishop>This doesn't.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/196-0
+00:19:25.032 --> 00:19:29.872
+<v Chris Bishop>You know, backspace,
+'cause that's not part of my slice. Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/198-0
+00:19:30.352 --> 00:19:31.512
+<v John Miller>Probably me do.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/197-0
+00:19:31.272 --> 00:19:31.752
+<v Chris Bishop>Now.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/199-0
+00:19:35.352 --> 00:19:38.552
+<v Chris Bishop>So 5 + 3 * 2.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/200-0
+00:19:42.392 --> 00:19:51.792
+<v Chris Bishop>115 + 3 multiplied by 211.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/201-0
+00:19:55.432 --> 00:19:57.312
+<v Chris Bishop>Edge case 10 / 0.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/203-0
+00:20:06.432 --> 00:20:10.872
+<v Chris Bishop>I cannot divide by zero.
+Try something completely different.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/205-0
+00:20:13.992 --> 00:20:19.872
+<v Chris Bishop>OK, really test it and then float.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/204-0
+00:20:15.192 --> 00:20:16.232
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/206-0
+00:20:22.392 --> 00:20:22.512
+<v Chris Bishop>Oh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/207-0
+00:20:26.352 --> 00:20:26.432
+<v Chris Bishop>Uh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/208-0
+00:20:30.192 --> 00:20:33.832
+<v Chris Bishop>There we go,
+and we're working with float too.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/210-0
+00:20:35.032 --> 00:20:41.552
+<v Chris Bishop>So that's that's the showcase for slice
+for order of operations.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/211-0
+00:20:43.992 --> 00:20:49.072
+<v John Miller>OK, so you did 5 + 3 * 2, is that right?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/212-0
+00:20:50.152 --> 00:20:54.112
+<v Chris Bishop>5 + 3,
+so 3 * 2 + 5 the order of operations.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/213-0
+00:20:54.352 --> 00:20:56.992
+<v John Miller>All right. OK, that's great.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/214-0
+00:20:55.672 --> 00:20:58.112
+<v Chris Bishop>equals 11. Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/217-0
+00:20:59.432 --> 00:21:02.592
+<v John Miller>So go ahead and go ahead and merge that
+change then.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/216-0
+00:20:59.592 --> 00:20:59.872
+<v Chris Bishop>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/218-0
+00:21:02.912 --> 00:21:08.872
+<v Chris Bishop>I didn't have to do any development
+myself. It's great.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/219-0
+00:21:09.232 --> 00:21:13.286
+<v John Miller>Yeah,
+I just saw a a post on LinkedIn where you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/219-1
+00:21:13.286 --> 00:21:19.619
+<v John Miller>know where they the the the value
+proposition for coding is changing from,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/219-2
+00:21:19.619 --> 00:21:25.192
+<v John Miller>you know having high skills in terms of
+writing the code towards.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/220-0
+00:21:25.192 --> 00:21:29.955
+<v John Miller>High skills in terms of defining the
+specifications and being able to,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/220-1
+00:21:29.955 --> 00:21:33.443
+<v John Miller>you know,
+express that intent that the A I can take</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/220-2
+00:21:33.443 --> 00:21:36.395
+<v John Miller>on.
+And I I tend to agree that that's where</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/220-3
+00:21:36.395 --> 00:21:39.480
+<v John Miller>where the skills are going to be going to
+be.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/220-4
+00:21:39.480 --> 00:21:44.377
+<v John Miller>It's it's like think the critical
+thinking part of it is where all where</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/220-5
+00:21:44.377 --> 00:21:44.712
+<v John Miller>that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/221-0
+00:21:45.032 --> 00:21:49.337
+<v John Miller>All the activity is gonna be now and not
+just the, you know,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/221-1
+00:21:49.337 --> 00:21:53.712
+<v John Miller>figuring out the code syntax in order to
+express that intent.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/222-0
+00:21:56.472 --> 00:22:00.321
+<v John Miller>All right,
+so is anybody else working on a slice?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/222-1
+00:22:00.321 --> 00:22:01.552
+<v John Miller>Raise your hand.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/223-0
+00:22:05.192 --> 00:22:07.757
+<v John Miller>Hey, Matt, what do you want?
+What are you working on?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/223-1
+00:22:07.757 --> 00:22:11.272
+<v John Miller>Christopher's working on one. That's good.
+Which ones are you working on?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/227-0
+00:22:11.352 --> 00:22:16.780
+<v Matt Hoffman>Working on that delete last digit,
+the the A I was also confused and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/224-0
+00:22:15.472 --> 00:22:16.312
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/227-1
+00:22:16.780 --> 00:22:21.422
+<v Matt Hoffman>accidentally put in the the keyboard
+input implementation,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/227-2
+00:22:21.422 --> 00:22:25.512
+<v Matt Hoffman>so it seems to be consistently mixing
+those two up.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/225-0
+00:22:21.952 --> 00:22:22.392
+<v John Miller>Mm.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/226-0
+00:22:26.752 --> 00:22:26.912
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/228-0
+00:22:33.152 --> 00:22:35.952
+<v John Miller>How's it going, Matt?
+You're making progress.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/229-0
+00:22:37.432 --> 00:22:37.952
+<v Matt Hoffman>Yeah, I am.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/231-0
+00:22:52.712 --> 00:22:57.620
+<v Chris Bishop>I don't know if you saw this in developer
+circles,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/231-1
+00:22:57.620 --> 00:23:04.164
+<v Chris Bishop>but this blog entry was shared in mind
+about a guy who's a Blogger,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/231-2
+00:23:04.164 --> 00:23:10.227
+<v Chris Bishop>relatively influential,
+rejected a PR from a I and a I wrote a</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/231-3
+00:23:10.227 --> 00:23:12.632
+<v Chris Bishop>hit piece against him on.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/232-0
+00:23:12.632 --> 00:23:13.992
+<v Chris Bishop>On their blog.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/233-0
+00:23:13.672 --> 00:23:17.512
+<v John Miller>That sounds.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/234-0
+00:23:20.272 --> 00:23:20.592
+<v Chris Bishop>Scary.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/235-0
+00:23:21.152 --> 00:23:21.312
+<v John Miller>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/252-0
+00:24:22.632 --> 00:24:25.351
+<v John Miller>All right. So anybody else interested?
+Dan,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/252-1
+00:24:25.351 --> 00:24:28.192
+<v John Miller>you have you picked up another another
+slice?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/253-0
+00:24:30.912 --> 00:24:32.192
+<v Dan Blanchard>Uh, no, I didn't.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/254-0
+00:24:32.832 --> 00:24:33.152
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/255-0
+00:24:33.592 --> 00:24:36.632
+<v Dan Blanchard>It's sort of long for the ride now.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/256-0
+00:24:37.872 --> 00:24:38.872
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/257-0
+00:24:44.112 --> 00:24:44.352
+<v John Miller>So um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/258-0
+00:24:50.552 --> 00:24:53.392
+<v John Miller>Let me go back and look at what's taken.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/259-0
+00:24:54.392 --> 00:24:57.534
+<v Chris Bishop>John,
+would you be able because I don't have</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/259-1
+00:24:57.534 --> 00:25:01.233
+<v Chris Bishop>the copilot review,
+but I've got my PR in there now.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/259-2
+00:25:01.233 --> 00:25:05.072
+<v Chris Bishop>I was wondering if you're able to run the
+code review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/260-0
+00:25:07.072 --> 00:25:09.552
+<v John Miller>You know, let me uh, which one is it 7?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/261-0
+00:25:10.632 --> 00:25:11.032
+<v Chris Bishop>04.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/262-0
+00:25:13.312 --> 00:25:14.392
+<v John Miller>04 OK, let me look at it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/263-0
+00:25:23.112 --> 00:25:25.192
+<v Chris Bishop>Looks like it's the only current open.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/264-0
+00:25:26.792 --> 00:25:27.712
+<v Chris Bishop>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/272-0
+00:26:03.792 --> 00:26:06.112
+<v John Miller>Alright, so let me bring up.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/273-0
+00:26:09.712 --> 00:26:11.452
+<v John Miller>Uh, GitHub.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/274-0
+00:26:13.672 --> 00:26:16.632
+<v John Miller>And look at the pull requests.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/275-0
+00:26:24.912 --> 00:26:28.192
+<v John Miller>So yeah, I can request that review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/276-0
+00:26:31.272 --> 00:26:31.712
+<v Chris Bishop>Super. Thanks.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/279-0
+00:26:48.832 --> 00:26:50.832
+<v John Miller>So let's take a look at what you've got.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/280-0
+00:26:55.872 --> 00:26:56.192
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/281-0
+00:27:01.552 --> 00:27:03.352
+<v John Miller>No change the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/282-0
+00:27:05.032 --> 00:27:09.834
+<v John Miller>Looking at the prompt file,
+it made a change the prompt file and it</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/282-1
+00:27:09.834 --> 00:27:13.152
+<v John Miller>added some implementation.
+This is related to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/283-0
+00:27:15.632 --> 00:27:17.992
+<v John Miller>Uh, correcting the math precision.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/284-0
+00:27:21.832 --> 00:27:21.872
+<v John Miller>Uh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/285-0
+00:27:23.832 --> 00:27:24.832
+<v John Miller>Interesting.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/287-0
+00:27:24.232 --> 00:27:27.350
+<v Chris Bishop>Yeah,
+it asked it to merge the issue with the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/287-1
+00:27:27.350 --> 00:27:31.552
+<v Chris Bishop>prompt because there were some things
+missed between the two.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/286-0
+00:27:28.432 --> 00:27:28.552
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/288-0
+00:27:32.392 --> 00:27:34.432
+<v John Miller>Yeah, that would be something to look at.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/289-0
+00:27:36.912 --> 00:27:37.152
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/290-0
+00:27:39.032 --> 00:27:43.107
+<v John Miller>I'll mark that reviewed.
+So here's some new code.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/290-1
+00:27:43.107 --> 00:27:45.552
+<v John Miller>This is the unit test for the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/291-0
+00:27:47.472 --> 00:27:48.992
+<v John Miller>The calculator.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/292-0
+00:27:54.112 --> 00:27:56.032
+<v John Miller>So here it's checking for.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/293-0
+00:27:58.112 --> 00:28:00.072
+<v John Miller>That the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/294-0
+00:28:01.512 --> 00:28:06.406
+<v John Miller>That the actual is equals to the expected
+for the asserting the expected label.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/294-1
+00:28:06.406 --> 00:28:10.442
+<v John Miller>So that's not even part,
+that's just part of the asserting parse.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/294-2
+00:28:10.442 --> 00:28:12.032
+<v John Miller>Here's the critical tests.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/295-0
+00:28:13.512 --> 00:28:17.661
+<v John Miller>And we're looking at testing 5 + 3 is
+equal to 8,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/295-1
+00:28:17.661 --> 00:28:23.552
+<v John Miller>so we can see that we're passing tick to
+the calculate function there.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/296-0
+00:28:25.352 --> 00:28:28.112
+<v John Miller>So these tests are looking good.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/300-0
+00:28:41.792 --> 00:28:42.712
+<v John Miller>Some edge cases.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/301-0
+00:28:47.072 --> 00:28:48.792
+<v John Miller>X3X +3.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/302-0
+00:28:52.632 --> 00:28:55.192
+<v John Miller>I -, 5. Yeah, those are edge cases.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/303-0
+00:29:01.112 --> 00:29:06.912
+<v John Miller>I see that we've added in here a accept
+this file is viewed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/304-0
+00:29:15.232 --> 00:29:17.232
+<v John Miller>Added a query selector.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/305-0
+00:29:23.312 --> 00:29:27.832
+<v John Miller>It looks like some substantial changes to
+the Jason.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/307-0
+00:29:44.712 --> 00:29:45.432
+<v John Miller>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/308-0
+00:29:50.992 --> 00:29:51.152
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/309-0
+00:29:53.272 --> 00:29:57.672
+<v John Miller>My guess is that we're gonna start to see
+some conflicts related to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/310-0
+00:29:59.752 --> 00:30:03.552
+<v John Miller>files that are going to be modified by</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/311-0
+00:30:09.792 --> 00:30:11.952
+<v John Miller>Uh, separate level, level sizes.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/314-0
+00:30:27.032 --> 00:30:27.072
+<v John Miller>I.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/315-0
+00:30:35.032 --> 00:30:37.152
+<v John Miller>Yeah, I can approve it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/316-0
+00:30:40.632 --> 00:30:40.992
+<v John Miller>And.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/317-0
+00:30:43.432 --> 00:30:45.872
+<v John Miller>Copilot still thinking about it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/320-0
+00:31:05.752 --> 00:31:06.392
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/324-0
+00:31:29.752 --> 00:31:32.272
+<v Chris Bishop>Pretty cool that you can see the thought
+process.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/325-0
+00:31:33.472 --> 00:31:34.432
+<v Chris Bishop>Of the review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/326-0
+00:31:35.112 --> 00:31:37.472
+<v John Miller>You want to share and show us?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/327-0
+00:31:40.032 --> 00:31:40.352
+<v John Miller>Hello.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/329-0
+00:31:41.952 --> 00:31:45.988
+<v Chris Bishop>Yeah, yeah,
+it's it's in the the comments part or the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/330-0
+00:31:45.192 --> 00:31:49.165
+<v John Miller>Let me look at it.
+Let's see if I can show it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/329-1
+00:31:45.988 --> 00:31:47.632
+<v Chris Bishop>the history of the PR.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/330-1
+00:31:49.165 --> 00:31:50.432
+<v John Miller>You're talking.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/331-0
+00:31:49.832 --> 00:31:54.432
+<v Chris Bishop>You can see where it was requested and
+then there's a view session, yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/332-0
+00:31:54.832 --> 00:31:55.312
+<v John Miller>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/333-0
+00:32:04.472 --> 00:32:07.192
+<v John Miller>So it's identifying different things.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/335-0
+00:32:18.552 --> 00:32:21.192
+<v John Miller>Yeah,
+that's quite a process if we see that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/335-1
+00:32:21.192 --> 00:32:22.752
+<v John Miller>we're generating a lot of.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/336-0
+00:32:24.152 --> 00:32:24.232
+<v John Miller>Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/337-0
+00:32:28.232 --> 00:32:31.940
+<v John Miller>A lot of issues with with the code that's
+being created.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/337-1
+00:32:31.940 --> 00:32:37.143
+<v John Miller>That would be a signal or that we would
+want to go back to our instruction file</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/337-2
+00:32:37.143 --> 00:32:42.347
+<v John Miller>and see if there's instruction files in
+our prompts to see if there's something</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/337-3
+00:32:42.347 --> 00:32:43.712
+<v John Miller>here that we need to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/338-0
+00:32:43.912 --> 00:32:51.272
+<v John Miller>Improve so that we get closer to a clean
+code from the initial PR.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/339-0
+00:32:57.672 --> 00:32:59.432
+<v John Miller>So it reviewed this. Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/340-0
+00:33:03.792 --> 00:33:05.912
+<v John Miller>That's the session. Let's go back to the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/341-0
+00:33:07.232 --> 00:33:08.592
+<v John Miller>Pull request.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/342-0
+00:33:11.112 --> 00:33:13.778
+<v John Miller>Yeah,
+it's still not done though with the Uh</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/342-1
+00:33:13.778 --> 00:33:14.192
+<v John Miller>review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/344-0
+00:33:26.592 --> 00:33:26.752
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/345-0
+00:33:31.832 --> 00:33:37.221
+<v Chris Bishop>It's interesting that Slice 2 hasn't been
+implemented,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/345-1
+00:33:37.221 --> 00:33:42.512
+<v Chris Bishop>but I was able to do that in what I had
+put together.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/346-0
+00:33:43.832 --> 00:33:49.008
+<v John Miller>You are you are able to implement to #2
+is that what you're saying along with</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/347-0
+00:33:48.392 --> 00:33:52.221
+<v Chris Bishop>Not well, I don't know if it.
+I don't know if it implemented it cause</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/346-1
+00:33:49.008 --> 00:33:49.472
+<v John Miller>people?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/347-1
+00:33:52.221 --> 00:33:55.392
+<v Chris Bishop>#2 is just being able to input the digit
+with a keyboard.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/348-0
+00:33:55.552 --> 00:33:55.872
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/349-0
+00:33:57.632 --> 00:34:01.192
+<v Chris Bishop>And I was able to do that in slice 4.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/350-0
+00:34:01.512 --> 00:34:03.872
+<v Rockwell, Christopher L>I think that was added in.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/351-0
+00:34:05.272 --> 00:34:06.112
+<v Rockwell, Christopher L>During slice one.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/352-0
+00:34:06.992 --> 00:34:07.632
+<v Chris Bishop>Was that?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/355-0
+00:34:08.232 --> 00:34:14.027
+<v Rockwell, Christopher L>That because that was one of the things
+the review pointed out is that it looked</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/355-1
+00:34:14.027 --> 00:34:19.392
+<v Rockwell, Christopher L>like the prompt for slice one was trying
+to to do stuff that's from VSO 2.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/354-0
+00:34:21.632 --> 00:34:22.912
+<v Chris Bishop>Scope creep.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/356-0
+00:34:23.472 --> 00:34:26.551
+<v John Miller>Yeah,
+because it member was asking us that we</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/356-1
+00:34:26.551 --> 00:34:32.106
+<v John Miller>should split the split slice one into two
+slices because there was a there's a bit</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/356-2
+00:34:32.106 --> 00:34:37.728
+<v John Miller>of a conflict in the definition where the
+the script the the title and I think said</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/356-3
+00:34:37.728 --> 00:34:40.672
+<v John Miller>that it was just supposed to display the
+0.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/357-0
+00:34:41.592 --> 00:34:48.284
+<v John Miller>And slated and the number in slice one
+and and it was actually allowing for</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/357-1
+00:34:48.284 --> 00:34:53.038
+<v John Miller>input as well.
+And so that would be something that we</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/357-2
+00:34:53.038 --> 00:34:57.352
+<v John Miller>would want to try to catch in the review
+of the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/358-0
+00:34:57.352 --> 00:35:03.301
+<v John Miller>Of the the slice implementation plan and
+if we noticed that that there was a a</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/358-1
+00:35:03.301 --> 00:35:07.518
+<v John Miller>conflict there,
+we could then go back and split them up</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/358-2
+00:35:07.518 --> 00:35:12.790
+<v John Miller>into separate slices, you know,
+with the idea that our implementation</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/358-3
+00:35:12.790 --> 00:35:17.232
+<v John Miller>plan, you know,
+might have an issue with it that we would.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/359-0
+00:35:17.392 --> 00:35:21.216
+<v John Miller>Need to address in order for us to get a
+clean slices.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/359-1
+00:35:21.216 --> 00:35:24.622
+<v John Miller>So it may be that we if we try to
+implement too,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/359-2
+00:35:24.622 --> 00:35:30.392
+<v John Miller>it'll it'll basically tell us that that
+that implementation has already been done.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/360-0
+00:35:35.832 --> 00:35:41.913
+<v John Miller>So it's doing a lot of thinking to review
+those these changes as it finished that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/360-1
+00:35:41.913 --> 00:35:42.432
+<v John Miller>review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/361-0
+00:35:46.032 --> 00:35:46.152
+<v John Miller>It.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/362-0
+00:35:48.272 --> 00:35:52.127
+<v John Miller>Still says it's not.
+Let me just refresh the page just to make</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/362-1
+00:35:52.127 --> 00:35:52.432
+<v John Miller>sure.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/363-0
+00:35:56.032 --> 00:35:58.112
+<v John Miller>And it looks like that's still going on.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/368-0
+00:36:19.992 --> 00:36:23.272
+<v John Miller>And then I chose there was an option to
+review the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/369-0
+00:36:24.152 --> 00:36:26.192
+<v John Miller>View the reviewed changes.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/370-0
+00:36:29.152 --> 00:36:31.048
+<v John Miller>Oh,
+it's just telling us that I've I've</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/370-1
+00:36:31.048 --> 00:36:32.232
+<v John Miller>viewed them. That's fine.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/371-0
+00:36:41.512 --> 00:36:44.859
+<v John Miller>In Copilot,
+it looks like it's actually completed its</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/371-1
+00:36:44.859 --> 00:36:47.152
+<v John Miller>review and lets them review comments.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/372-0
+00:36:53.032 --> 00:36:55.072
+<v John Miller>So let's go back to the conversation.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/373-0
+00:36:57.712 --> 00:36:57.792
+<v John Miller>So.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/374-0
+00:37:00.552 --> 00:37:07.232
+<v John Miller>Here's the pull request overview changes
+that made reviewed those changes.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/375-0
+00:37:08.792 --> 00:37:10.872
+<v John Miller>And generated 8 comments.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/376-0
+00:37:14.792 --> 00:37:19.792
+<v John Miller>So the first one had to do with Unicode.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/381-0
+00:37:31.192 --> 00:37:37.460
+<v John Miller>That's interesting here.
+When clearing an error state in the input</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/381-1
+00:37:37.460 --> 00:37:41.482
+<v John Miller>digit,
+the code resets the message and the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/381-2
+00:37:41.482 --> 00:37:46.533
+<v John Miller>current value,
+but it it leaves the expression tokens</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/381-3
+00:37:46.533 --> 00:37:49.432
+<v John Miller>and previous operations intact.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/384-0
+00:37:58.512 --> 00:38:03.266
+<v John Miller>That's a interesting finding.
+That's a and it's certainly an edge case</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/384-1
+00:38:03.266 --> 00:38:04.672
+<v John Miller>that we didn't catch.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/385-0
+00:38:05.672 --> 00:38:08.432
+<v John Miller>And here's another one that's very
+similar.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/386-0
+00:38:12.352 --> 00:38:15.792
+<v John Miller>And notice here we have the commit
+suggestion options.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/391-0
+00:38:23.432 --> 00:38:28.576
+<v John Miller>This previously this file previously
+contained the required AI provenance</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/391-1
+00:38:28.576 --> 00:38:31.912
+<v John Miller>header,
+so this goes back to it's missing that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/392-0
+00:38:35.752 --> 00:38:36.592
+<v John Miller>And uh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/393-0
+00:38:39.272 --> 00:38:42.552
+<v John Miller>And here we have a constant that's
+declared but never used.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/394-0
+00:38:45.792 --> 00:38:47.232
+<v John Miller>Tests cover subtraction.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/395-0
+00:38:52.392 --> 00:38:59.072
+<v John Miller>To the again with the Unicode minus and
+an unused function which is a sort equal.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/396-0
+00:39:04.152 --> 00:39:09.799
+<v John Miller>It looks like this is the last one,
+which is basically another unused unused</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/396-1
+00:39:09.799 --> 00:39:10.752
+<v John Miller>function, so.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/397-0
+00:39:12.232 --> 00:39:17.312
+<v John Miller>Looks like you got a little work to do,
+so I'll let you take that on.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/400-0
+00:39:28.192 --> 00:39:33.134
+<v John Miller>And like I said, this is, you know,
+if every single pull request that we were</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/400-1
+00:39:33.134 --> 00:39:36.302
+<v John Miller>creating is generating request for
+modifications,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/400-2
+00:39:36.302 --> 00:39:41.561
+<v John Miller>then I think that that's a that would be
+a sign that our instruction files need to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/400-3
+00:39:41.561 --> 00:39:46.312
+<v John Miller>be tightened up a bit and we could
+actually feed this information back to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/401-0
+00:39:46.392 --> 00:39:52.321
+<v John Miller>AI and ask it to update our instruction
+files to ensure that this code gets in</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/401-1
+00:39:52.321 --> 00:39:54.872
+<v John Miller>the future gets created correctly.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/402-0
+00:40:04.472 --> 00:40:07.321
+<v John Miller>Alright,
+so let me know if you want me to submit</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/402-1
+00:40:07.321 --> 00:40:08.192
+<v John Miller>another review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/403-0
+00:40:10.552 --> 00:40:16.731
+<v Chris Bishop>I'm just seeing how cursor might connect
+to the PR to work through the comments</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/403-1
+00:40:16.731 --> 00:40:18.352
+<v Chris Bishop>itself first I think.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/404-0
+00:40:18.272 --> 00:40:20.632
+<v John Miller>All right. You could also just hit those.
+Uh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/405-0
+00:40:25.032 --> 00:40:27.272
+<v John Miller>Commit the suggestion buttons too.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/406-0
+00:40:34.672 --> 00:40:36.992
+<v John Miller>Anybody else have a comment or a question?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/408-0
+00:40:44.272 --> 00:40:49.200
+<v John Miller>So this this exercise really intended to
+try to get a bar real-world experience</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/408-1
+00:40:49.200 --> 00:40:53.635
+<v John Miller>and what you're likely to see when you
+start to take advantage of these</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/408-2
+00:40:53.635 --> 00:40:57.392
+<v John Miller>capabilities in your own organization,
+in your own projects.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/410-0
+00:41:03.472 --> 00:41:10.364
+<v Rockwell, Christopher L>I tried to merge in Chris's into slice 3
+and as expected they're a merge conflict,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/410-1
+00:41:10.364 --> 00:41:13.352
+<v Rockwell, Christopher L>so hopefully I'll have a PR shortly.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/411-0
+00:41:13.152 --> 00:41:16.973
+<v John Miller>Yeah.
+So this will be something that we would</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/411-1
+00:41:16.973 --> 00:41:21.872
+<v John Miller>also want to feed back into our
+implementation plan is to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/412-0
+00:41:23.912 --> 00:41:27.032
+<v John Miller>Try to slit the functionality U into
+different files.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/414-0
+00:41:28.832 --> 00:41:33.257
+<v John Miller>So that the features don't conflict with
+each other as much.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/414-1
+00:41:33.257 --> 00:41:36.955
+<v John Miller>I mean it may not be possible to do it
+completely,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/414-2
+00:41:36.955 --> 00:41:42.177
+<v John Miller>but if we can encapsulate that
+functionality into modules of some sort,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/414-3
+00:41:42.177 --> 00:41:43.192
+<v John Miller>then that way.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/415-0
+00:41:44.272 --> 00:41:46.752
+<v John Miller>We won't have those merge conflicts.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/418-0
+00:42:04.992 --> 00:42:10.287
+<v Dan Blanchard>I have a question, John.
+So I'm looking at the issue that I am</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/418-1
+00:42:10.287 --> 00:42:14.992
+<v Dan Blanchard>that I that I did with Christopher and
+it's still open.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/417-0
+00:42:12.592 --> 00:42:12.872
+<v John Miller>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/420-0
+00:42:16.752 --> 00:42:22.978
+<v Dan Blanchard>At the very bottom it says you know my
+account linked a pull request that will</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/420-1
+00:42:22.978 --> 00:42:27.628
+<v Dan Blanchard>close this issue,
+but it didn't close the issue it doesn't</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/420-2
+00:42:27.628 --> 00:42:29.992
+<v Dan Blanchard>it seems. So this is #1 BS 01.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/421-0
+00:42:31.472 --> 00:42:32.912
+<v John Miller>Yeah, I'm looking at it right now.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/422-0
+00:42:35.392 --> 00:42:35.432
+<v John Miller>Oh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/423-0
+00:42:41.672 --> 00:42:43.432
+<v John Miller>Let's see it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/424-0
+00:42:44.712 --> 00:42:46.872
+<v Dan Blanchard>Is it because I didn't assign it to
+myself?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/425-0
+00:42:47.072 --> 00:42:49.912
+<v John Miller>It could be that could I it could be.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/426-0
+00:42:51.232 --> 00:42:53.832
+<v Dan Blanchard>I just assigned it to myself.
+See what happens.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/427-0
+00:42:55.152 --> 00:43:00.112
+<v John Miller>There's also here a close issue option
+where we can close it as completed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/428-0
+00:43:03.992 --> 00:43:04.472
+<v Dan Blanchard>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/430-0
+00:43:13.672 --> 00:43:15.272
+<v John Miller>We're looking at the pull request.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/431-0
+00:43:17.152 --> 00:43:18.512
+<v John Miller>That's merged.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/435-0
+00:43:39.832 --> 00:43:42.884
+<v John Miller>Right.
+It also could be that we didn't resolve</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/435-1
+00:43:42.884 --> 00:43:44.312
+<v John Miller>all the conversations.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/436-0
+00:43:47.792 --> 00:43:47.912
+<v Dan Blanchard>So.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/437-0
+00:43:57.392 --> 00:44:00.768
+<v Dan Blanchard>So if I wanna make a new issue,
+do I just pick one or I just have to make</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/438-0
+00:44:00.032 --> 00:44:04.272
+<v John Miller>Yeah, yeah. Well,
+the protocol was that if you were working</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/437-1
+00:44:00.768 --> 00:44:02.592
+<v Dan Blanchard>sure no one else is working on it right?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/438-1
+00:44:04.272 --> 00:44:07.592
+<v John Miller>on something that you assigned it to
+yourself.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/440-0
+00:44:10.792 --> 00:44:13.532
+<v John Miller>So I would,
+I would say if it if it doesn't,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/439-0
+00:44:11.272 --> 00:44:11.512
+<v Dan Blanchard>I see.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/440-1
+00:44:13.532 --> 00:44:17.672
+<v John Miller>if it doesn't have somebody assigned to
+it, then it should be free.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/442-0
+00:44:19.032 --> 00:44:20.152
+<v John Miller>for you to pick it up.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/441-0
+00:44:19.312 --> 00:44:19.752
+<v Dan Blanchard>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/448-0
+00:44:46.912 --> 00:44:49.592
+<v John Miller>All right, let me go back to the issues.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/451-0
+00:44:57.632 --> 00:45:01.032
+<v John Miller>So it looks like we're working on six and
+seven.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/452-0
+00:45:04.472 --> 00:45:06.752
+<v John Miller>and four and three.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/453-0
+00:45:08.792 --> 00:45:10.792
+<v John Miller>And one it should be, uh, completed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/454-0
+00:45:12.992 --> 00:45:14.312
+<v John Miller>It's still open.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/455-0
+00:45:15.472 --> 00:45:15.872
+<v John Miller>So um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/456-0
+00:45:20.312 --> 00:45:23.592
+<v John Miller>If you want, Dan,
+I'll just go ahead and close this issue.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/457-0
+00:45:23.912 --> 00:45:24.032
+<v Dan Blanchard>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/458-0
+00:45:26.912 --> 00:45:30.072
+<v John Miller>Say that it's completed, so that's good.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/461-0
+00:45:50.912 --> 00:45:53.333
+<v Dan Blanchard>Oh,
+I think when it merged it didn't do a</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/461-1
+00:45:53.333 --> 00:45:54.312
+<v Dan Blanchard>squash, it did a.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/462-0
+00:45:55.792 --> 00:45:57.872
+<v Dan Blanchard>Kept all those individual.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/463-0
+00:45:58.792 --> 00:45:59.272
+<v John Miller>Commits.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/464-0
+00:45:59.872 --> 00:46:04.592
+<v Dan Blanchard>Yeah, there's only two, I guess,
+so plus the merge.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/465-0
+00:46:05.832 --> 00:46:09.089
+<v John Miller>Right,
+that might be a setting that I can change</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/465-1
+00:46:09.089 --> 00:46:10.152
+<v John Miller>in the projects.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/466-0
+00:46:12.032 --> 00:46:13.992
+<v John Miller>Uh, using a different account.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/467-0
+00:46:28.432 --> 00:46:29.912
+<v John Miller>And then this will be on.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/468-0
+00:46:36.592 --> 00:46:37.872
+<v John Miller>On our rule sets.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/472-0
+00:46:57.512 --> 00:46:57.792
+<v John Miller>Recent.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/473-0
+00:47:00.952 --> 00:47:01.632
+<v John Miller>Issues.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/474-0
+00:47:10.312 --> 00:47:14.232
+<v John Miller>Allow merge commits as a question.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/475-0
+00:47:20.152 --> 00:47:21.192
+<v John Miller>Auto merge.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/476-0
+00:47:30.552 --> 00:47:32.472
+<v John Miller>I'm not seeing.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/480-0
+00:47:54.592 --> 00:47:59.139
+<v John Miller>Yeah,
+I thought there was a way to set the the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/480-1
+00:47:59.139 --> 00:47:59.912
+<v John Miller>default.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/481-0
+00:48:04.312 --> 00:48:05.872
+<v John Miller>I'm not seeing it here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/485-0
+00:48:30.352 --> 00:48:32.352
+<v John Miller>No, well, I'll find it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/492-0
+00:49:09.872 --> 00:49:12.072
+<v John Miller>Maybe I can help me with that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/493-0
+00:49:23.312 --> 00:49:24.832
+<v John Miller>Interesting.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/494-0
+00:49:26.952 --> 00:49:29.912
+<v John Miller>And then so I'll take that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/495-0
+00:49:33.072 --> 00:49:33.192
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/505-0
+00:50:09.592 --> 00:50:14.045
+<v John Miller>Navigate to the way we got that settings
+tab, general,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/505-1
+00:50:14.045 --> 00:50:16.392
+<v John Miller>Scroll down to pull requests.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/506-0
+00:50:20.632 --> 00:50:20.792
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/507-0
+00:50:26.312 --> 00:50:32.392
+<v John Miller>So and maybe it's just remembers the last
+time we selected.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/509-0
+00:50:52.112 --> 00:50:55.268
+<v Chris Bishop>John,
+if you want to run the copilot on VS4</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/509-1
+00:50:55.268 --> 00:50:57.992
+<v Chris Bishop>again, I've got the changes committed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/510-0
+00:50:58.512 --> 00:51:00.392
+<v John Miller>All right, we'll do that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/511-0
+00:51:00.592 --> 00:51:01.632
+<v Chris Bishop>Lisa, thank you.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/512-0
+00:51:11.472 --> 00:51:12.392
+<v John Miller>All right, so.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/516-0
+00:51:32.192 --> 00:51:38.472
+<v John Miller>Yeah, Copilot, please review this.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/517-0
+00:51:51.872 --> 00:51:53.272
+<v John Miller>All right, so we've added a comment and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/518-0
+00:51:55.312 --> 00:51:57.832
+<v John Miller>Copilot should pick that up.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/519-0
+00:52:01.432 --> 00:52:02.032
+<v John Miller>And.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/520-0
+00:52:08.392 --> 00:52:09.912
+<v John Miller>Pick up that review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/523-0
+00:52:26.632 --> 00:52:26.992
+<v John Miller>Alright.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/524-0
+00:52:39.472 --> 00:52:43.043
+<v John Miller>Usually takes a little while for it to
+recognize that it's been asked to do</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/524-1
+00:52:43.043 --> 00:52:43.512
+<v John Miller>something.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/525-0
+00:52:50.592 --> 00:52:53.392
+<v John Miller>Anybody else have some progress to show?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/526-0
+00:52:58.832 --> 00:53:04.392
+<v Rockwell, Christopher L>I can show VSO 3 it's.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/528-0
+00:53:06.952 --> 00:53:07.872
+<v Rockwell, Christopher L>Not uh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/529-0
+00:53:09.232 --> 00:53:10.312
+<v Rockwell, Christopher L>Big iteration.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/531-0
+00:53:11.872 --> 00:53:14.561
+<v Rockwell, Christopher L>Um,
+but one thing I was gonna ask is if</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/531-1
+00:53:14.561 --> 00:53:19.939
+<v Rockwell, Christopher L>'cause I got things a little mixed up
+with my GitHub enterprise and my personal</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/531-2
+00:53:19.939 --> 00:53:21.552
+<v Rockwell, Christopher L>and so I can't actually.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/532-0
+00:53:23.432 --> 00:53:28.112
+<v Rockwell, Christopher L>Assign copilot to review my pull request.
+Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/533-0
+00:53:27.312 --> 00:53:30.472
+<v John Miller>Yeah, yeah. So I can,
+I can do that for you.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/534-0
+00:53:30.872 --> 00:53:30.992
+<v Rockwell, Christopher L>But.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/536-0
+00:53:36.752 --> 00:53:44.956
+<v Rockwell, Christopher L>Then after so I merged in Chris's work,
+which was basically everything you see</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/536-1
+00:53:44.956 --> 00:53:52.952
+<v Rockwell, Christopher L>here except for the clear button and so
+the the clear button is so we'll go.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/535-0
+00:53:45.032 --> 00:53:45.352
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/538-0
+00:53:53.472 --> 00:54:01.182
+<v Rockwell, Christopher L>236 and we clear it back to zero and then
+do 3 * 3 and that proves that it cleared</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/538-1
+00:54:01.182 --> 00:54:01.832
+<v Rockwell, Christopher L>it out.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/537-0
+00:54:01.592 --> 00:54:01.832
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/539-0
+00:54:02.912 --> 00:54:06.112
+<v Rockwell, Christopher L>I did not.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/540-0
+00:54:06.752 --> 00:54:09.032
+<v Rockwell, Christopher L>I haven't gone through the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/541-0
+00:54:10.832 --> 00:54:15.032
+<v Rockwell, Christopher L>The verification steps yet.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/542-0
+00:54:16.512 --> 00:54:16.992
+<v Rockwell, Christopher L>Mhm.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/543-0
+00:54:18.032 --> 00:54:22.992
+<v Rockwell, Christopher L>This, but this was a pretty easy task.
+Luckily the getting the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/545-0
+00:54:27.952 --> 00:54:34.215
+<v Rockwell, Christopher L>The issues from the merge conflicts
+resolved. copilot did it on the first try.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/545-1
+00:54:34.215 --> 00:54:40.319
+<v Rockwell, Christopher L>There were some issues afterwards where
+we had duplicate equals and and plus</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/545-2
+00:54:40.319 --> 00:54:45.392
+<v Rockwell, Christopher L>signs and things like that,
+but it was able to take care of it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/544-0
+00:54:42.632 --> 00:54:42.952
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/547-0
+00:54:46.752 --> 00:54:53.210
+<v Rockwell, Christopher L>And so there there were some acceptance
+criteria in here for adding the buttons</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/547-1
+00:54:53.210 --> 00:54:58.133
+<v Rockwell, Christopher L>and things like that,
+but that like the plus and and things,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/547-2
+00:54:58.133 --> 00:55:00.312
+<v Rockwell, Christopher L>but that was already in 04.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/546-0
+00:55:01.272 --> 00:55:01.592
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/548-0
+00:55:01.832 --> 00:55:01.912
+<v Rockwell, Christopher L>Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/549-0
+00:55:04.792 --> 00:55:10.232
+<v Rockwell, Christopher L>So really the only verification steps of
+this is that it clears out the state.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/550-0
+00:55:11.832 --> 00:55:11.872
+<v Rockwell, Christopher L>Oh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/551-0
+00:55:12.232 --> 00:55:12.472
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/552-0
+00:55:13.072 --> 00:55:16.472
+<v Rockwell, Christopher L>Which it does that fine.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/553-0
+00:55:19.232 --> 00:55:22.072
+<v Rockwell, Christopher L>So that's it from for slice 3. Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/554-0
+00:55:22.832 --> 00:55:25.832
+<v John Miller>All right. So do you have a PR?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/555-0
+00:55:25.872 --> 00:55:30.712
+<v Rockwell, Christopher L>Yes, yeah, yeah. I'll post the view.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/556-0
+00:55:32.752 --> 00:55:35.992
+<v John Miller>I see there's two now, so slice three.
+Is that true?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/557-0
+00:55:36.672 --> 00:55:37.032
+<v Rockwell, Christopher L>Correct.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/558-0
+00:55:38.432 --> 00:55:39.432
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/559-0
+00:55:42.152 --> 00:55:43.192
+<v Rockwell, Christopher L>Stop sharing them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/560-0
+00:55:46.992 --> 00:55:52.845
+<v John Miller>I think I need to go back to the other
+accounts to get that ability because only</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/560-1
+00:55:52.845 --> 00:55:58.769
+<v John Miller>one of my accounts has a subscription and
+now I see co-pilots associated with it,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/560-2
+00:55:58.769 --> 00:56:00.792
+<v John Miller>so I will then request that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/561-0
+00:56:04.072 --> 00:56:08.276
+<v John Miller>So we're looking for color comments on 2
+pull requests.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/561-1
+00:56:08.276 --> 00:56:10.752
+<v John Miller>So let me open this in a new tab.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/562-0
+00:56:17.312 --> 00:56:19.912
+<v John Miller>And look at the other PR.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/563-0
+00:56:22.472 --> 00:56:25.392
+<v John Miller>And now I can re request a review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/565-0
+00:56:27.192 --> 00:56:32.712
+<v John Miller>So now copilot is looking at working on
+reviewing of both PRS.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/569-0
+00:56:52.112 --> 00:56:54.432
+<v John Miller>Right, three and four are in progress.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/571-0
+00:57:09.152 --> 00:57:09.912
+<v John Miller>And.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/572-0
+00:57:11.592 --> 00:57:12.872
+<v John Miller>19 files changed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/573-0
+00:57:20.472 --> 00:57:22.472
+<v John Miller>No, I updated the prompts.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/575-0
+00:57:35.312 --> 00:57:39.912
+<v Rockwell, Christopher L>I don't know why it updated like it
+updated the slice one prompt.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/577-0
+00:57:41.112 --> 00:57:47.032
+<v Rockwell, Christopher L>Why do that?
+It looks like it actually just created it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/578-0
+00:57:50.992 --> 00:57:54.472
+<v John Miller>I think we created a new file still.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/579-0
+00:57:55.032 --> 00:57:55.312
+<v Rockwell, Christopher L>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/581-0
+00:58:02.312 --> 00:58:06.246
+<v Rockwell, Christopher L>Oh, it created it in the prompts.
+So mine when I run this,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/581-1
+00:58:06.246 --> 00:58:10.912
+<v Rockwell, Christopher L>it's creating them in the prompt the dot
+GitHub slash prompts folder.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/580-0
+00:58:11.232 --> 00:58:11.512
+<v John Miller>Run.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/582-0
+00:58:12.312 --> 00:58:15.152
+<v Rockwell, Christopher L>For some reason it's copying them over
+there.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/583-0
+00:58:30.512 --> 00:58:35.272
+<v Rockwell, Christopher L>So a lot of this is going to be 'cause I
+merged in Chris's work.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/584-0
+00:58:36.352 --> 00:58:39.112
+<v Rockwell, Christopher L>So while I was pulling, I said not the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/585-0
+00:58:43.752 --> 00:58:45.472
+<v Rockwell, Christopher L>Doing a lot of Chris's work.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/586-0
+00:58:46.632 --> 00:58:46.792
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/590-0
+00:59:12.152 --> 00:59:15.272
+<v John Miller>All right, so let's see.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/591-0
+00:59:16.912 --> 00:59:21.190
+<v John Miller>Waiting for Copilot to pick it up,
+but I don't know if it's actually started</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/591-1
+00:59:21.190 --> 00:59:23.912
+<v John Miller>on it. Yeah,
+it looks like it has 2 minutes ago.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/592-0
+00:59:30.152 --> 00:59:31.992
+<v John Miller>So let's die.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/593-0
+00:59:34.072 --> 00:59:36.752
+<v John Miller>Creating a plan. See what that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/594-0
+00:59:41.232 --> 00:59:46.712
+<v John Miller>Verification and then reading the code.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/595-0
+00:59:48.312 --> 00:59:49.632
+<v John Miller>Store comments.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/596-0
+00:59:50.592 --> 00:59:52.752
+<v John Miller>So it looks like it's adding comments.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/597-0
+00:59:55.472 --> 01:00:00.192
+<v John Miller>So we'll have to see what it decide that
+I'm thinking there and if we go back to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/598-0
+01:00:03.312 --> 01:00:04.632
+<v John Miller>Uh, this one.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/599-0
+01:00:06.192 --> 01:00:10.872
+<v John Miller>You can also see that it started the
+review, but it started a while ago.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/600-0
+01:00:20.472 --> 01:00:22.552
+<v John Miller>So it's reserving those files.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/604-0
+01:00:40.432 --> 01:00:42.792
+<v John Miller>So it once it looks like a unit test.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/605-0
+01:00:49.472 --> 01:00:51.512
+<v John Miller>It's like a things that found an issue.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/606-0
+01:00:54.032 --> 01:00:58.032
+<v John Miller>We add the comments,
+the correct comment for the counter room.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/607-0
+01:01:02.712 --> 01:01:04.072
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/611-0
+01:01:17.472 --> 01:01:20.872
+<v John Miller>OK. So that's proceeding.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/617-0
+01:01:45.672 --> 01:01:49.952
+<v John Miller>Still thinking about that code review,
+so put any comments in.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/618-0
+01:01:58.592 --> 01:02:00.392
+<v John Miller>Looks like I might have requested.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/619-0
+01:02:01.752 --> 01:02:03.792
+<v John Miller>A second code review.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/620-0
+01:02:15.552 --> 01:02:19.392
+<v John Miller>Alright, so who's, uh,
+working on something else? How's it going?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/624-0
+01:02:37.552 --> 01:02:40.672
+<v Chris Bishop>I'm just waiting with bated breath for
+copilot.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/625-0
+01:02:40.112 --> 01:02:40.472
+<v John Miller>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/626-0
+01:02:46.072 --> 01:02:47.432
+<v Chris Bishop>And it's done.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/627-0
+01:02:49.752 --> 01:02:50.712
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/628-0
+01:02:56.232 --> 01:02:57.752
+<v John Miller>So this is all four, right?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/629-0
+01:03:00.512 --> 01:03:04.825
+<v Chris Bishop>That's right.
+And you're not sharing your screen if</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/629-1
+01:03:04.825 --> 01:03:06.152
+<v Chris Bishop>just a heads up.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/630-0
+01:03:07.032 --> 01:03:09.192
+<v John Miller>All right, I'll do that then.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/634-0
+01:03:39.392 --> 01:03:41.872
+<v John Miller>All right, starting my screen.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/636-0
+01:03:44.192 --> 01:03:50.023
+<v Rockwell, Christopher L>Was there a specific extension people
+were using to review?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/636-1
+01:03:50.023 --> 01:03:58.186
+<v Rockwell, Christopher L>Because I I I want to I wanted Copilot to
+to fetch and and review the the PR that I</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/636-2
+01:03:58.186 --> 01:03:59.352
+<v Rockwell, Christopher L>had created.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/637-0
+01:03:59.672 --> 01:04:03.150
+<v Rockwell, Christopher L>But it's telling me there's no specific
+tools available for it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/637-1
+01:04:03.150 --> 01:04:07.388
+<v Rockwell, Christopher L>Was there a specific extension people
+were using to do that? I thought maybe,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/637-2
+01:04:07.388 --> 01:04:09.072
+<v Rockwell, Christopher L>Dan, you were able to see that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/638-0
+01:04:10.792 --> 01:04:15.673
+<v Dan Blanchard>Well, I have the pro account up on GitHub.
+I don't know if that's why,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/638-1
+01:04:15.673 --> 01:04:17.872
+<v Dan Blanchard>but I I just went to the PR and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/640-0
+01:04:18.832 --> 01:04:23.834
+<v Dan Blanchard>You know you can just assign it or you
+you can assign it to copilot or some</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/640-1
+01:04:23.834 --> 01:04:24.952
+<v Dan Blanchard>button like that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/641-0
+01:04:25.072 --> 01:04:28.830
+<v Rockwell, Christopher L>Well, sorry,
+I meant like copilot on my local like I</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/641-1
+01:04:28.830 --> 01:04:34.855
+<v Rockwell, Christopher L>there's some unresolved comments and so I
+just wanted it to go and fetch the the PR,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/641-2
+01:04:34.855 --> 01:04:37.832
+<v Rockwell, Christopher L>pull in the comments and and work on them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/642-0
+01:04:37.152 --> 01:04:41.357
+<v Dan Blanchard>Oh yeah,
+I I I opened the PR in in VS code so then</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/642-1
+01:04:41.357 --> 01:04:46.634
+<v Dan Blanchard>you can add that to your context.
+You can tell it to, you know,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/642-2
+01:04:46.634 --> 01:04:51.992
+<v Dan Blanchard>address all the issues.
+I think we had to manually resolve them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/643-0
+01:04:53.752 --> 01:04:54.272
+<v Dan Blanchard>Once at a time.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/644-0
+01:04:56.472 --> 01:04:56.792
+<v Dan Blanchard>But um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/645-0
+01:04:58.192 --> 01:05:03.792
+<v Dan Blanchard>I had we have an I had an extension to
+for GitHub to look at PRS.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/646-0
+01:05:02.592 --> 01:05:04.552
+<v John Miller>Yeah, there's a GitHub extension.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/648-0
+01:05:05.832 --> 01:05:11.232
+<v Rockwell, Christopher L>Oh, GitHub pull requests extension.
+It's aptly named.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/647-0
+01:05:07.952 --> 01:05:08.312
+<v John Miller>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/649-0
+01:05:15.032 --> 01:05:16.472
+<v Rockwell, Christopher L>OK. Thanks guys.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/654-0
+01:05:34.912 --> 01:05:43.008
+<v Chris Bishop>The only comment on that last copilot
+review was Providence metadata in the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/653-0
+01:05:42.072 --> 01:05:42.632
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/654-1
+01:05:43.008 --> 01:05:45.032
+<v Chris Bishop>package Jason file.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/655-0
+01:05:46.272 --> 01:05:48.552
+<v Chris Bishop>I think that's good to merge.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/656-0
+01:05:48.552 --> 01:05:50.832
+<v John Miller>All right, that sounds good.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/657-0
+01:05:52.112 --> 01:05:54.232
+<v John Miller>It sounds like that we need to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/658-0
+01:05:56.272 --> 01:06:02.216
+<v John Miller>Look at our instruction files to see you
+know there's a call out explicitly that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/658-1
+01:06:02.216 --> 01:06:07.352
+<v John Miller>when it generates particular files what
+what it needs to include but.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/659-0
+01:06:07.392 --> 01:06:07.752
+<v John Miller>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/660-0
+01:06:08.672 --> 01:06:10.312
+<v John Miller>Let's go. Let's go ahead and merge it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/662-0
+01:06:11.872 --> 01:06:18.253
+<v John Miller>I'm answering a question from Al in the
+the Q&amp;</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/662-1
+01:06:18.253 --> 01:06:22.632
+<v John Miller>A you asked about the the PRD file.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/671-0
+01:07:19.552 --> 01:07:23.290
+<v John Miller>All right,
+so this is a question about you know how</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/671-1
+01:07:23.290 --> 01:07:28.320
+<v John Miller>we go about in our projects,
+you know creating that that requirements</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/671-2
+01:07:28.320 --> 01:07:31.482
+<v John Miller>file.
+Cause if you remember yesterday we we</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/671-3
+01:07:31.482 --> 01:07:36.872
+<v John Miller>asked AI to you know to create a
+requirements document after invoking the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/672-0
+01:07:38.672 --> 01:07:44.655
+<v John Miller>The the the agent for the business
+analyst and or the project product</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/672-1
+01:07:44.655 --> 01:07:48.672
+<v John Miller>manager,
+we asked it to go ahead and create a.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/673-0
+01:07:49.432 --> 01:07:54.291
+<v John Miller>A requirements document for a web-based
+calculator application.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/673-1
+01:07:54.291 --> 01:08:00.061
+<v John Miller>You're you're you're probably not in a
+situation where you can ask it to to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/673-2
+01:08:00.061 --> 01:08:05.906
+<v John Miller>create a an application for a problem
+domain as as as generically as we were</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/673-3
+01:08:05.906 --> 01:08:07.272
+<v John Miller>able to yesterday.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/674-0
+01:08:07.632 --> 01:08:13.216
+<v John Miller>So it's gonna be essentially on, you know,
+on you and your team to to build those</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/674-1
+01:08:13.216 --> 01:08:18.459
+<v John Miller>requirements documents as in order to
+inform the A I about what that problem</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/674-2
+01:08:18.459 --> 01:08:22.952
+<v John Miller>domain is and and what it what the
+application is intended to do.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/675-0
+01:08:23.472 --> 01:08:30.143
+<v John Miller>What are the the things that need to be
+that need to be added to the application</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/675-1
+01:08:30.143 --> 01:08:34.508
+<v John Miller>in order to, you know,
+to improve its functionality?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/675-2
+01:08:34.508 --> 01:08:38.872
+<v John Miller>And so that's something that AI can
+assist you with.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/676-0
+01:08:39.232 --> 01:08:42.408
+<v John Miller>But it it, you know,
+it doesn't have the the subject matter</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/676-1
+01:08:42.408 --> 01:08:46.747
+<v John Miller>expertise that you know you have within
+your organization to actually build those</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/676-2
+01:08:46.747 --> 01:08:47.752
+<v John Miller>kinds of documents.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/679-0
+01:09:07.872 --> 01:09:11.992
+<v John Miller>Any other questions that I can answer?
+How's things going?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/681-0
+01:09:20.912 --> 01:09:26.658
+<v Lyle Ubben>I was looking at a way for it to.
+It can read the GitHub review comments,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/681-1
+01:09:26.658 --> 01:09:32.558
+<v Lyle Ubben>but it can't resolve each of them after
+it implements them and does another</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/681-2
+01:09:32.558 --> 01:09:36.672
+<v Lyle Ubben>commit to the PR.
+Do you know of any way to do that?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/682-0
+01:09:38.472 --> 01:09:42.192
+<v John Miller>No, I don't know of any way to do that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/684-0
+01:09:41.392 --> 01:09:44.672
+<v Lyle Ubben>I tried to tell it to do it and it said
+that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/685-0
+01:09:46.432 --> 01:09:48.152
+<v Lyle Ubben>Let me go back and see here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/686-0
+01:09:55.712 --> 01:09:59.432
+<v Lyle Ubben>It tried to run the a command,
+but then it said this.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/687-0
+01:10:00.432 --> 01:10:03.601
+<v Lyle Ubben>And the command it tried to run after
+that failed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/687-1
+01:10:03.601 --> 01:10:08.632
+<v Lyle Ubben>So I I was just it's probably a web UI
+interaction that it's not able to handle.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/689-0
+01:10:08.592 --> 01:10:12.892
+<v John Miller>Yeah,
+I was gonna ask the ask the copilot if</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/689-1
+01:10:12.892 --> 01:10:19.006
+<v John Miller>there was such a way.
+So the prompt would be can the the GitHub</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/688-0
+01:10:15.472 --> 01:10:15.792
+<v Lyle Ubben>Hmm.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/689-2
+01:10:19.006 --> 01:10:20.152
+<v John Miller>CLI resolve.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/690-0
+01:10:22.592 --> 01:10:23.312
+<v John Miller>Oh, that's.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/691-0
+01:10:24.672 --> 01:10:26.952
+<v John Miller>Um, any you are.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/692-0
+01:10:29.232 --> 01:10:31.352
+<v John Miller>Looks like I need to refresh my.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/693-0
+01:10:34.592 --> 01:10:36.072
+<v John Miller>Well, it seems to think so.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/695-0
+01:10:42.192 --> 01:10:43.512
+<v Lyle Ubben>OK, let me try that one.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/696-0
+01:10:48.952 --> 01:10:52.872
+<v John Miller>So let me post that to the chat,
+the prompt.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/703-0
+01:11:21.912 --> 01:11:23.872
+<v John Miller>O That was the prompt I used.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/705-0
+01:11:31.552 --> 01:11:33.192
+<v John Miller>There's a way of listing them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/709-0
+01:11:48.232 --> 01:11:48.312
+<v John Miller>So.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/710-0
+01:11:54.992 --> 01:11:59.072
+<v John Miller>Let me close this down.
+Give me a little bit more space here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/711-0
+01:12:02.232 --> 01:12:04.072
+<v John Miller>And get to the terminal window.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/712-0
+01:12:08.552 --> 01:12:08.992
+<v John Miller>And.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/715-0
+01:12:19.432 --> 01:12:26.032
+<v John Miller>And it looks like I've got my access
+tokens restricted in order to do that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/719-0
+01:12:41.952 --> 01:12:46.701
+<v John Miller>So I would do that and get in GitHub.
+I'd need to go to my personal access</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/719-1
+01:12:46.701 --> 01:12:51.957
+<v John Miller>token and and either modify the existing
+token or create a new one with the proper</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/719-2
+01:12:51.957 --> 01:12:55.440
+<v John Miller>permissions.
+This is why I was suggesting I'm creating</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/719-3
+01:12:55.440 --> 01:12:57.592
+<v John Miller>one that was a classic token that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/720-0
+01:12:57.872 --> 01:13:01.152
+<v John Miller>There's too many permissions potentially,
+but.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/721-0
+01:13:02.992 --> 01:13:05.512
+<v John Miller>For this, for our purposes,
+it should be fine.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/723-0
+01:13:15.432 --> 01:13:18.272
+<v Dan Blanchard>So with merge complex, um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/726-0
+01:13:20.032 --> 01:13:22.892
+<v Dan Blanchard>Is there what's the best way to to
+resolve them?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/726-1
+01:13:22.892 --> 01:13:27.211
+<v Dan Blanchard>Just I mean I in VS code I merged
+Greenfield back to my branch and I just</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/726-2
+01:13:27.211 --> 01:13:31.705
+<v Dan Blanchard>in the so there's like 3 files that have
+conflicts. So I just asked VS code,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/726-3
+01:13:31.705 --> 01:13:34.272
+<v Dan Blanchard>you know there's merge conflicts,
+fix them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/727-0
+01:13:35.392 --> 01:13:38.575
+<v Dan Blanchard>Is this the best way?
+Is there another way to do it like on</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/725-0
+01:13:36.392 --> 01:13:36.672
+<v John Miller>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/727-1
+01:13:38.575 --> 01:13:42.023
+<v Dan Blanchard>this on GitHub itself?
+Or is this like kind of the best the best</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/727-2
+01:13:42.023 --> 01:13:42.712
+<v Dan Blanchard>way to do it?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/728-0
+01:13:42.112 --> 01:13:46.893
+<v John Miller>Yeah, yeah, I either, you know,
+let I take a look at it first and then if</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/728-1
+01:13:46.893 --> 01:13:51.222
+<v John Miller>they can't resolve them,
+I'll go into the merge editor and and and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/728-2
+01:13:51.222 --> 01:13:56.325
+<v John Miller>fix them themselves or open up the file
+and see where the merge conflicts are.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/728-3
+01:13:56.325 --> 01:13:58.392
+<v John Miller>You know, usually I I find that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/729-0
+01:13:59.232 --> 01:14:03.232
+<v John Miller>Either I accepting the current changes or.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/730-0
+01:14:04.392 --> 01:14:08.230
+<v John Miller>Oh, what's the other one?
+They accept the existing changes that it</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/730-1
+01:14:08.230 --> 01:14:09.432
+<v John Miller>resolves the problem.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/731-0
+01:14:11.992 --> 01:14:12.632
+<v Dan Blanchard>Mhm.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/732-0
+01:14:14.912 --> 01:14:15.752
+<v John Miller>Yeah, I know it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/733-0
+01:14:18.352 --> 01:14:18.872
+<v John Miller>Christy.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/734-0
+01:14:18.352 --> 01:14:22.479
+<v Dan Blanchard>Yeah, I don't know JavaScript too well.
+I don't wanna be trying to parse through</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/734-1
+01:14:22.479 --> 01:14:24.312
+<v Dan Blanchard>all this JavaScript JavaScript code.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/735-0
+01:14:24.672 --> 01:14:29.213
+<v John Miller>Right, right. Yeah. And again,
+I think this goes to the architecture</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/735-1
+01:14:29.213 --> 01:14:30.792
+<v John Miller>that we're implementing.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/736-0
+01:14:32.792 --> 01:14:33.472
+<v John Miller>Mhm.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/737-0
+01:14:34.592 --> 01:14:40.152
+<v John Miller>That we, you know, I think it would.
+My approach might be to go back to the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/737-1
+01:14:40.152 --> 01:14:45.272
+<v John Miller>vertical slice implementation
+documentation and make sure that it was</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/737-2
+01:14:45.272 --> 01:14:50.392
+<v John Miller>creating a vertical slice that it
+dictates or requires that these be.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/738-0
+01:14:50.592 --> 01:14:56.520
+<v John Miller>As isolated as we can make the code bases
+so that that the code that we're writing</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/738-1
+01:14:56.520 --> 01:15:01.948
+<v John Miller>in our individual slices doesn't require
+any significant amount of merging.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/738-2
+01:15:01.948 --> 01:15:06.733
+<v John Miller>Now we'll take, you know,
+we have a very simple architecture here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/738-3
+01:15:06.733 --> 01:15:10.232
+<v John Miller>It might be easier to manage if we were
+dealing.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/739-0
+01:15:10.352 --> 01:15:14.978
+<v John Miller>With something that wasn't just a a
+static web page with just JavaScript</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/739-1
+01:15:14.978 --> 01:15:18.336
+<v John Miller>behind it,
+but we're dealing with something that was</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/739-2
+01:15:18.336 --> 01:15:22.265
+<v John Miller>a little bit more complex.
+It might be a little bit easier to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/739-3
+01:15:22.265 --> 01:15:24.672
+<v John Miller>separate things into separate modules.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/740-0
+01:15:30.912 --> 01:15:32.552
+<v John Miller>All right then.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/743-0
+01:15:47.232 --> 01:15:49.232
+<v John Miller>Let's go back to our issues.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/744-0
+01:15:55.272 --> 01:15:58.432
+<v John Miller>We're still working. Oh,
+it looks like we got.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/745-0
+01:16:01.112 --> 01:16:04.952
+<v John Miller>For merge,
+so it's just we're looking for three.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/746-0
+01:16:07.152 --> 01:16:10.192
+<v Rockwell, Christopher L>Yeah, just pushed some updates to that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/747-0
+01:16:10.992 --> 01:16:11.232
+<v Rockwell, Christopher L>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/749-0
+01:16:14.472 --> 01:16:17.992
+<v Rockwell, Christopher L>It's.
+I think the last issue is 1 related to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/750-0
+01:16:19.032 --> 01:16:22.512
+<v Rockwell, Christopher L>Uh, yeah, the provenance metadata.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/751-0
+01:16:22.832 --> 01:16:23.072
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/752-0
+01:16:25.752 --> 01:16:29.152
+<v John Miller>Do you need another review or do you
+think that you're in good shape?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/753-0
+01:16:29.112 --> 01:16:30.752
+<v Rockwell, Christopher L>Yeah, I think it's fun.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/755-0
+01:16:30.672 --> 01:16:33.329
+<v John Miller>All right,
+let's go ahead and push that one and we</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/755-1
+01:16:33.329 --> 01:16:35.152
+<v John Miller>can then move on to the next slice.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/756-0
+01:16:38.472 --> 01:16:39.752
+<v Rockwell, Christopher L>They'll merge it now.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/764-0
+01:17:12.392 --> 01:17:13.632
+<v John Miller>All right, that looks good.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/768-0
+01:17:31.912 --> 01:17:34.752
+<v John Miller>All right, so uh, looks like.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/769-0
+01:17:35.832 --> 01:17:40.299
+<v John Miller>That's done. It's our pull requests.
+There's no open pull request,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/769-1
+01:17:40.299 --> 01:17:41.232
+<v John Miller>which is good.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/770-0
+01:17:42.312 --> 01:17:46.843
+<v John Miller>So let me know how things are going with
+what you're implementing now, and then,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/770-1
+01:17:46.843 --> 01:17:49.192
+<v John Miller>if I can help you, there's something that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/771-0
+01:17:49.992 --> 01:17:51.312
+<v John Miller>You want to share?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/776-0
+01:18:13.272 --> 01:18:17.388
+<v Dan Blanchard>I have a question. Are you gonna,
+you know, talk a little bit about,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/776-1
+01:18:17.388 --> 01:18:20.250
+<v Dan Blanchard>you know,
+like what's takeaways just to kind of</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/776-2
+01:18:20.250 --> 01:18:24.783
+<v Dan Blanchard>summarize and like what's the best way to
+try to incorporate this in in our</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/776-3
+01:18:24.783 --> 01:18:29.554
+<v Dan Blanchard>organizations or in our coding? I mean,
+I know every organization is different,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/776-4
+01:18:29.554 --> 01:18:29.792
+<v Dan Blanchard>but.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/777-0
+01:18:30.512 --> 01:18:32.905
+<v Dan Blanchard>You know,
+just a way to what's the best way to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/777-1
+01:18:32.905 --> 01:18:34.432
+<v Dan Blanchard>digest all this and and to um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/779-0
+01:18:35.352 --> 01:18:40.432
+<v Dan Blanchard>To try to bring some of these some of
+this into our our daily work.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/780-0
+01:18:40.632 --> 01:18:45.532
+<v John Miller>Well, I think you know,
+I think the first step would be is to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/780-1
+01:18:45.532 --> 01:18:50.669
+<v John Miller>build your instruction files to govern
+your development process.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/780-2
+01:18:50.669 --> 01:18:56.912
+<v John Miller>So you can take a look at what we created
+in terms of those core instructions,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/780-3
+01:18:56.912 --> 01:19:00.152
+<v John Miller>you know those you you could potentially.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/781-0
+01:19:00.552 --> 01:19:07.883
+<v John Miller>Include you know directly into your your
+your into your process right now just to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/781-1
+01:19:07.883 --> 01:19:13.962
+<v John Miller>to to guide creating additional AI
+generated output and to generate</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/781-2
+01:19:13.962 --> 01:19:16.912
+<v John Miller>instruction files and agents and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/782-0
+01:19:17.032 --> 01:19:20.702
+<v John Miller>Prompts.
+So those are harmless and they won't do</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/782-1
+01:19:20.702 --> 01:19:23.472
+<v John Miller>anything unless you actually add. Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/783-0
+01:19:25.032 --> 01:19:29.512
+<v John Miller>And I should actually ask AI to generate
+some additional files.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/783-1
+01:19:29.512 --> 01:19:33.712
+<v John Miller>You can then you know,
+of course you know you might want to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/783-2
+01:19:33.712 --> 01:19:38.892
+<v John Miller>review them just to make sure that
+there's something in there in terms of</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/783-3
+01:19:38.892 --> 01:19:44.632
+<v John Miller>how the provenance is generated or the
+metadata information, whether any of that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/784-0
+01:19:45.112 --> 01:19:49.424
+<v John Miller>You either need it or you can remove it
+or if you want to expand on it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/784-1
+01:19:49.424 --> 01:19:54.094
+<v John Miller>So once you have those core files as a
+part of your solution and part of your</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/784-2
+01:19:54.094 --> 01:19:56.848
+<v John Miller>projects,
+you can then work on the technology</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/784-3
+01:19:56.848 --> 01:20:01.758
+<v John Miller>specific pieces. So which is what we did,
+you know early yesterday was to ask the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/784-4
+01:20:01.758 --> 01:20:04.392
+<v John Miller>AI to produce instruction files that
+would.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/785-0
+01:20:04.392 --> 01:20:09.003
+<v John Miller>Govern that and then I would.
+I would then do some prompts that would</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/785-1
+01:20:09.003 --> 01:20:13.745
+<v John Miller>identify where your current code base
+deviates from those standards and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/785-2
+01:20:13.745 --> 01:20:17.236
+<v John Miller>conventions that you have in your
+instruction files.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/785-3
+01:20:17.236 --> 01:20:21.912
+<v John Miller>That would be that would point out some
+technical debt that you would.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/786-0
+01:20:22.072 --> 01:20:27.781
+<v John Miller>Want to put in your backlog that you
+would like to to get resolved and you can</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/786-1
+01:20:27.781 --> 01:20:32.767
+<v John Miller>then you know start to use AI to kind of
+address those those issues.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/786-2
+01:20:32.767 --> 01:20:37.752
+<v John Miller>So that would be my the the like the the
+second step you know is to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/787-0
+01:20:37.912 --> 01:20:43.472
+<v John Miller>Start to use it to interrogate the code
+base and look for look for ways that you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/787-1
+01:20:43.472 --> 01:20:49.169
+<v John Miller>can you can basically build that backlog
+of technical debt that you want to try to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/787-2
+01:20:49.169 --> 01:20:52.738
+<v John Miller>pay down.
+If you're working on Greenfield then it's</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/787-3
+01:20:52.738 --> 01:20:56.512
+<v John Miller>it's it's it's kind of a similar process
+where you're.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/788-0
+01:20:56.552 --> 01:21:02.857
+<v John Miller>Bringing in the core instructions and
+then adding in technically specific ones</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/788-1
+01:21:02.857 --> 01:21:08.284
+<v John Miller>for the technology stacks that you intend
+to use and then you know,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/788-2
+01:21:08.284 --> 01:21:13.312
+<v John Miller>building out your requirements documents
+and going from there.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/789-0
+01:21:13.832 --> 01:21:19.021
+<v John Miller>On the on the brownfield side,
+you know you if you have existing</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/789-1
+01:21:19.021 --> 01:21:24.129
+<v John Miller>requirements documents,
+I would point AI to them and ask ask it</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/789-2
+01:21:24.129 --> 01:21:30.035
+<v John Miller>to examine those and see where those
+documents could be improved or those</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/789-3
+01:21:30.035 --> 01:21:31.312
+<v John Miller>where there are.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/790-0
+01:21:31.752 --> 01:21:37.496
+<v John Miller>No conflicting instructions or things
+that are not clear and see if you can</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/790-1
+01:21:37.496 --> 01:21:43.694
+<v John Miller>improve those requirements documents to
+get to a a point that they're usable by A</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/790-2
+01:21:43.694 --> 01:21:46.792
+<v John Miller>I in order to produce artifacts and then.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/791-0
+01:21:46.872 --> 01:21:54.012
+<v John Miller>And then if you have AI to create,
+you know, new features, you can actually,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/791-1
+01:21:54.012 --> 01:21:58.649
+<v John Miller>you know,
+use a a agent to build the requirements</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/791-2
+01:21:58.649 --> 01:22:05.232
+<v John Miller>for a new feature and break it down into
+a user stories and use cases.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/792-0
+01:22:05.672 --> 01:22:11.345
+<v John Miller>And then basically into implementation
+prompts that you can then use to to guide</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/792-1
+01:22:11.345 --> 01:22:14.637
+<v John Miller>the implementation of that particular
+feature.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/792-2
+01:22:14.637 --> 01:22:20.380
+<v John Miller>So you know it's really kind of building,
+building on top of the the instructions</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/792-3
+01:22:20.380 --> 01:22:25.352
+<v John Miller>that you initially create and then get
+work your way to a point where.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/793-0
+01:22:25.592 --> 01:22:30.500
+<v John Miller>Where you have a clear and a clear intent
+that you can give to the give to the AI</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/793-1
+01:22:30.500 --> 01:22:34.988
+<v John Miller>in order to to to do the implementation
+and you can do those kinds of test</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/793-2
+01:22:34.988 --> 01:22:39.536
+<v John Miller>implementations and like take a look at
+the output and make it an iterative</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/793-3
+01:22:39.536 --> 01:22:41.032
+<v John Miller>process. So if you don't.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/794-0
+01:22:41.152 --> 01:22:44.813
+<v John Miller>If you don't like any part of what it's
+generating,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/794-1
+01:22:44.813 --> 01:22:50.304
+<v John Miller>you can then go back to your instruction
+files and your prompt files and your</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/794-2
+01:22:50.304 --> 01:22:56.217
+<v John Miller>agents and and provide it with additional
+direction and content and that will allow</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/794-3
+01:22:56.217 --> 01:23:00.792
+<v John Miller>allow you to go back and reproduce that
+same output and and get.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/795-0
+01:23:00.872 --> 01:23:05.305
+<v John Miller>An improved implementation,
+and that's a very common practice,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/795-1
+01:23:05.305 --> 01:23:11.074
+<v John Miller>very similar to iterating on a code base.
+You're iterating on a set of guardrails</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/795-2
+01:23:11.074 --> 01:23:16.632
+<v John Miller>and problems in order for you to produce
+the output that you're interested in.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/796-0
+01:23:16.712 --> 01:23:23.211
+<v John Miller>So and then that becomes basically you
+you really kind of just build on top of</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/796-1
+01:23:23.211 --> 01:23:28.886
+<v John Miller>that every time that you have a new
+capability that you wanted to to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/796-2
+01:23:28.886 --> 01:23:33.245
+<v John Miller>implement,
+you can then create the instruction files</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/796-3
+01:23:33.245 --> 01:23:34.232
+<v John Miller>around that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/797-0
+01:23:35.272 --> 01:23:39.858
+<v John Miller>And then and then utilize those
+instruction files then to produce the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/797-1
+01:23:39.858 --> 01:23:44.050
+<v John Miller>output. So for example,
+if we wanted to deploy this application</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/797-2
+01:23:44.050 --> 01:23:48.308
+<v John Miller>into a a a into the cloud,
+we could create instruction files for</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/797-3
+01:23:48.308 --> 01:23:53.352
+<v John Miller>building a pipeline in the technology
+that you're going to be using for the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/798-0
+01:23:53.632 --> 01:23:58.200
+<v John Miller>Deployment,
+whether that be Azure DevOps or GitHub or</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/798-1
+01:23:58.200 --> 01:24:04.712
+<v John Miller>or your git bucket or whatever the tool
+is that you're using and then build.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/799-0
+01:24:05.672 --> 01:24:07.712
+<v John Miller>Instruction files for.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/800-0
+01:24:08.992 --> 01:24:14.723
+<v John Miller>Actually creating the the infrastructure
+using Terraform or Bicep or whatever the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/800-1
+01:24:14.723 --> 01:24:19.964
+<v John Miller>technology is that you're Illumi or
+whatever you're using to build that so</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/800-2
+01:24:19.964 --> 01:24:25.205
+<v John Miller>that you now have the ability to
+provision resources in the cloud and then</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/800-3
+01:24:25.205 --> 01:24:26.392
+<v John Miller>deploy resources.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/801-0
+01:24:26.632 --> 01:24:31.837
+<v John Miller>Into that infrastructure and then run
+tests against that to make sure that it's</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/801-1
+01:24:31.837 --> 01:24:35.220
+<v John Miller>actually working.
+So by by identifying a particular</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/801-2
+01:24:35.220 --> 01:24:40.230
+<v John Miller>capability that you're trying to enable,
+you can build the instruction files</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/801-3
+01:24:40.230 --> 01:24:42.832
+<v John Miller>around that and the prompts around that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/802-0
+01:24:44.672 --> 01:24:49.632
+<v John Miller>And the agents around that assist you in
+actually accomplishing those tasks.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/803-0
+01:24:51.112 --> 01:24:52.632
+<v John Miller>Is that making sense?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/804-0
+01:24:53.272 --> 01:24:54.992
+<v Dan Blanchard>Yeah, yeah, it is.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/805-0
+01:24:54.912 --> 01:24:56.912
+<v John Miller>All right, good to hear.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/806-0
+01:24:57.912 --> 01:25:01.432
+<v John Miller>All right, where do we stand?
+We got anything ready to showcase?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/809-0
+01:25:02.552 --> 01:25:07.987
+<v Rockwell, Christopher L>I don't have anything to showcase,
+but I do want to comment on on what you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/809-1
+01:25:07.987 --> 01:25:11.899
+<v Rockwell, Christopher L>were just talking about this morning
+before training.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/807-0
+01:25:09.312 --> 01:25:09.792
+<v John Miller>Sure.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/809-2
+01:25:11.899 --> 01:25:17.116
+<v Rockwell, Christopher L>I I just grabbed your generate
+instructions prompt that you have in the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/809-3
+01:25:17.116 --> 01:25:19.072
+<v Rockwell, Christopher L>repo and I applied that to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/808-0
+01:25:17.232 --> 01:25:17.392
+<v John Miller>Right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/810-0
+01:25:19.512 --> 01:25:24.669
+<v Rockwell, Christopher L>One of our existing projects,
+I pulled the two of the UI apps in the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/810-1
+01:25:24.669 --> 01:25:30.572
+<v Rockwell, Christopher L>back end API into a VS code workspace and
+just ran that prompt and it did a an</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/810-2
+01:25:30.572 --> 01:25:35.952
+<v Rockwell, Christopher L>excellent job of creating Angular
+instructions, API design, C# logging.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/812-0
+01:25:36.312 --> 01:25:40.535
+<v Rockwell, Christopher L>It it noticed that it was using the
+repository pattern and so I felt like</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/812-1
+01:25:40.535 --> 01:25:44.928
+<v Rockwell, Christopher L>that was a really good starting point
+that now I can take these files to the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/812-2
+01:25:44.928 --> 01:25:49.207
+<v Rockwell, Christopher L>rest of the team and say let's start
+refining these because we do a lot of</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/812-3
+01:25:49.207 --> 01:25:53.030
+<v Rockwell, Christopher L>angular and.net development.
+So let's start refining these kind of</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/811-0
+01:25:50.912 --> 01:25:51.392
+<v John Miller>Mhm.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/812-4
+01:25:53.030 --> 01:25:55.312
+<v Rockwell, Christopher L>like higher level ones that we can then.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/813-0
+01:25:56.832 --> 01:26:02.661
+<v Rockwell, Christopher L>Bring into all of our other projects and
+that was a super easy way to to get</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/813-1
+01:26:02.661 --> 01:26:06.672
+<v Rockwell, Christopher L>something tangible to, you know,
+start working from.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/814-0
+01:26:06.792 --> 01:26:09.552
+<v John Miller>Right.
+I mean I think that's that's like an</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/814-1
+01:26:09.552 --> 01:26:14.318
+<v John Miller>excellent point where you're you know
+with very limited amount of effort on</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/814-2
+01:26:14.318 --> 01:26:17.579
+<v John Miller>your part,
+you're producing something very tangible</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/814-3
+01:26:17.579 --> 01:26:22.658
+<v John Miller>that that that people can see value in
+and then then as you actually then as you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/814-4
+01:26:22.658 --> 01:26:23.912
+<v John Miller>take those and that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/815-0
+01:26:24.072 --> 01:26:28.704
+<v John Miller>Those instruction files that were created
+and you go to the team with them and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/815-1
+01:26:28.704 --> 01:26:31.870
+<v John Miller>refine them.
+That process will engage the rest of the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/815-2
+01:26:31.870 --> 01:26:36.618
+<v John Miller>team into understanding what those things
+are. You then can turn around and say,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/815-3
+01:26:36.618 --> 01:26:39.256
+<v John Miller>all right,
+so now that we've agreed on these</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/815-4
+01:26:39.256 --> 01:26:42.832
+<v John Miller>instruction files for Angular or whatever
+the technology is.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/817-0
+01:26:43.712 --> 01:26:48.381
+<v John Miller>That you're you're invoking.
+You can have a look at those code bases</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/817-1
+01:26:48.381 --> 01:26:51.900
+<v John Miller>and say, OK,
+tell me where those code bases deviate</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/817-2
+01:26:51.900 --> 01:26:57.178
+<v John Miller>from these or don't conform to these
+instructions that we've just agreed that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/817-3
+01:26:57.178 --> 01:26:59.072
+<v John Miller>we want to be able to adopt.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/818-0
+01:26:59.792 --> 01:27:04.923
+<v John Miller>That then is part of your backlog, right?
+You now have identified areas where you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/818-1
+01:27:04.923 --> 01:27:08.677
+<v John Miller>can improve the code base with with not a
+lot of, a lot of,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/818-2
+01:27:08.677 --> 01:27:13.245
+<v John Miller>potentially not a lot of effort,
+and then all of a sudden be able to run</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/818-3
+01:27:13.245 --> 01:27:18.312
+<v John Miller>that same prompt again and then find out
+that it's that that you don't have any.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/819-0
+01:27:20.312 --> 01:27:24.439
+<v John Miller>Any of those types of issues that you
+need to address, then your code base is,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/819-1
+01:27:24.439 --> 01:27:27.103
+<v John Miller>you know,
+closer to being Evergreen as opposed to,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/819-2
+01:27:27.103 --> 01:27:30.707
+<v John Miller>you know, something that you don't.
+It's something that's, you know,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/819-3
+01:27:30.707 --> 01:27:33.632
+<v John Miller>varies in terms of its implementation
+across the board.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/820-0
+01:27:35.312 --> 01:27:36.472
+Nice. Yep. Thanks.
+
+136052fd-22bf-408e-a12b-d0f4706e1565/821-0
+01:27:37.272 --> 01:27:41.994
+<v John Miller>Yeah, yeah, right. For for Brownfield,
+to me it's like all about creating those</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/821-1
+01:27:41.994 --> 01:27:46.951
+<v John Miller>instruction files in particularly because
+they're the ones that that you can use to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/821-2
+01:27:46.951 --> 01:27:51.672
+<v John Miller>evaluate your current implementation and
+without touching any of the code base.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/822-0
+01:27:52.432 --> 01:27:58.752
+<v John Miller>You can you can get an enormous amount of
+value out of just understanding where you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/822-1
+01:27:58.752 --> 01:28:04.696
+<v John Miller>stand and what you're facing and and
+being able to surface that information to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/822-2
+01:28:04.696 --> 01:28:08.232
+<v John Miller>the organization so that they understand
+then.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/823-0
+01:28:08.432 --> 01:28:14.670
+<v John Miller>What you're dealing with and they can you
+know and then you can then the next step</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/823-1
+01:28:14.670 --> 01:28:20.457
+<v John Miller>would be to verify how how rapidly you
+can address those types of issues and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/823-2
+01:28:20.457 --> 01:28:26.168
+<v John Miller>that will go a ways towards getting the
+the the teams that are in charge of</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/823-3
+01:28:26.168 --> 01:28:28.272
+<v John Miller>assigning resources to prod.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/824-0
+01:28:28.312 --> 01:28:33.175
+<v John Miller>To to to to grant more,
+more to bring more technical that into</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/824-1
+01:28:33.175 --> 01:28:39.581
+<v John Miller>the into the mix so that you can use a I
+to to try to tear down that pay down that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/824-2
+01:28:39.581 --> 01:28:43.671
+<v John Miller>technical debt.
+I mean that's to brownfield it's all</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/824-3
+01:28:43.671 --> 01:28:46.912
+<v John Miller>about you know paying down technical debt.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/825-0
+01:28:47.272 --> 01:28:52.579
+<v John Miller>You know, once you've got,
+once you get to a more of an Evergreen</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/825-1
+01:28:52.579 --> 01:28:56.680
+<v John Miller>position,
+then you're then you're essentially want</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/825-2
+01:28:56.680 --> 01:29:03.272
+<v John Miller>to just make sure that your instruction
+files will keep your code base Evergreen.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/826-0
+01:29:03.552 --> 01:29:08.322
+<v John Miller>And you know we could we you know after
+implementing a few of these slices we can</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/826-1
+01:29:08.322 --> 01:29:12.743
+<v John Miller>go back and we can ask you know is this
+code that we've created is it is it</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/826-2
+01:29:12.743 --> 01:29:17.222
+<v John Miller>Evergreen and what would improvements
+that we need to make and that would be</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/826-3
+01:29:17.222 --> 01:29:21.352
+<v John Miller>good information to take back into our
+instruction files and into our.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/827-0
+01:29:22.112 --> 01:29:26.291
+<v John Miller>Into our process that we're using to
+generate artifacts to try to keep it</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/827-1
+01:29:26.291 --> 01:29:28.832
+<v John Miller>Evergreen and continue to keep it
+Evergreen.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/828-0
+01:29:35.432 --> 01:29:39.032
+<v John Miller>All right.
+And where are we sending anything?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/829-0
+01:29:40.312 --> 01:29:41.792
+<v John Miller>To look at yet.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/833-0
+01:29:48.992 --> 01:29:52.498
+<v Dan Blanchard>I a pull request I made.
+I did it against main.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/833-1
+01:29:52.498 --> 01:29:55.712
+<v Dan Blanchard>I did it against main so I had to close
+it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/833-2
+01:29:55.712 --> 01:29:59.144
+<v Dan Blanchard>Now I'm making it again for issue for
+issue 7.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/832-0
+01:29:57.352 --> 01:29:57.472
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/833-3
+01:29:59.144 --> 01:30:01.992
+<v Dan Blanchard>So now I'm it's copilot's reviewing it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/834-0
+01:30:03.312 --> 01:30:08.232
+<v Dan Blanchard>Another question like what about thoughts
+on like politics around using AI?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/836-0
+01:30:09.552 --> 01:30:12.839
+<v Dan Blanchard>You know,
+and it's such like doing it this way,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/836-1
+01:30:12.839 --> 01:30:17.768
+<v Dan Blanchard>such a different way that this
+organization I consult with, they do it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/836-2
+01:30:17.768 --> 01:30:20.232
+<v Dan Blanchard>I I almost can't even envision them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/839-0
+01:30:21.792 --> 01:30:26.658
+<v Dan Blanchard>You know, embracing, embracing this,
+it would be such a different mindset and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/839-1
+01:30:26.658 --> 01:30:31.711
+<v Dan Blanchard>all the different developers. And yeah,
+and I think it can get pretty messy if I</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/839-2
+01:30:31.711 --> 01:30:35.829
+<v Dan Blanchard>if we have like, you know,
+10 different developers trying to make</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/837-0
+01:30:31.712 --> 01:30:31.832
+<v John Miller>Well.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/839-3
+01:30:35.829 --> 01:30:39.072
+<v Dan Blanchard>these instructions and prompts and this
+and that I.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/840-0
+01:30:39.152 --> 01:30:41.721
+<v Dan Blanchard>So I don't know,
+just any thoughts on that or anybody have</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/838-0
+01:30:39.392 --> 01:30:39.872
+<v John Miller>Mhm.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/840-1
+01:30:41.721 --> 01:30:42.112
+<v Dan Blanchard>thoughts?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/841-0
+01:30:43.072 --> 01:30:44.872
+<v John Miller>Anybody else have a thought on this?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/842-0
+01:30:49.992 --> 01:30:55.894
+<v John Miller>So my my perspective would be it's a
+really a confidence game, right?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/842-1
+01:30:55.894 --> 01:31:02.218
+<v John Miller>You're really trying to expose the
+organization to the process and I would</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/842-2
+01:31:02.218 --> 01:31:07.192
+<v John Miller>focus on the read aspects of it and not
+the modifications.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/843-0
+01:31:07.472 --> 01:31:12.714
+<v John Miller>That we're using a I to help us better
+understand the code base that we're in.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/843-1
+01:31:12.714 --> 01:31:17.756
+<v John Miller>We're using a I to help us identify
+technical debt that we need to pay down</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/843-2
+01:31:17.756 --> 01:31:22.732
+<v John Miller>and and and go through that those
+exercises that we've gone through in the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/843-3
+01:31:22.732 --> 01:31:23.992
+<v John Miller>brownfield side of.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/844-0
+01:31:24.032 --> 01:31:30.350
+<v John Miller>The the development process to basically
+just get people accustomed to the idea</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/844-1
+01:31:30.350 --> 01:31:36.431
+<v John Miller>that we're using AI in a limited way
+within the code base to help us improve</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/844-2
+01:31:36.431 --> 01:31:39.352
+<v John Miller>the the state of the application and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/845-0
+01:31:39.872 --> 01:31:42.792
+<v John Miller>Then it becomes a matter of.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/846-0
+01:31:44.192 --> 01:31:47.306
+<v John Miller>Do you, you know,
+you could take an approach that's more</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/846-1
+01:31:47.306 --> 01:31:50.967
+<v John Miller>iterative that says, OK,
+I've got these instruction files and I've</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/846-2
+01:31:50.967 --> 01:31:53.370
+<v John Miller>created them and it's produced all of
+this.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/846-3
+01:31:53.370 --> 01:31:57.468
+<v John Miller>It's identified all those technical debt.
+You can then leverage those same</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/846-4
+01:31:57.468 --> 01:32:00.472
+<v John Miller>instruction files when you're working on
+a particular.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/847-0
+01:32:00.712 --> 01:32:06.576
+<v John Miller>Piece of code to help you generate it and
+then but then you follow the normal</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/847-1
+01:32:06.576 --> 01:32:12.364
+<v John Miller>processes for incorporating that that
+that code into the into the code base.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/847-2
+01:32:12.364 --> 01:32:16.272
+<v John Miller>I mean the the the main the main approach
+would be.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/848-0
+01:32:16.472 --> 01:32:21.996
+<v John Miller>We're not treating AI generated code any
+different demo code that any of the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/848-1
+01:32:21.996 --> 01:32:26.659
+<v John Miller>developers would write.
+It would go through the same procedures,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/848-2
+01:32:26.659 --> 01:32:31.752
+<v John Miller>the same review and this and the and the
+like and then this is slowly.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/849-0
+01:32:32.592 --> 01:32:38.832
+<v John Miller>And get people accustomed to the idea
+that that the the A I generated code is</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/849-1
+01:32:38.832 --> 01:32:42.592
+<v John Miller>actually it doesn't cause them any any
+issues.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/849-2
+01:32:42.592 --> 01:32:48.832
+<v John Miller>But you know so if you do that then I
+think that that will help build the the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/849-3
+01:32:48.832 --> 01:32:50.832
+<v John Miller>confidence that you need.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/850-0
+01:32:51.192 --> 01:32:53.987
+<v John Miller>In order for you to expand that that
+process.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/850-1
+01:32:53.987 --> 01:32:58.726
+<v John Miller>The other way that you could do this is
+you find people in the group that are</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/850-2
+01:32:58.726 --> 01:32:59.272
+<v John Miller>that are.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/851-0
+01:33:00.752 --> 01:33:06.395
+<v John Miller>Open to the idea of doing it and then
+interested in learning some of the things</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/851-1
+01:33:06.395 --> 01:33:10.838
+<v John Miller>that we've been discussing here and then
+and and showing them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/851-2
+01:33:10.838 --> 01:33:15.352
+<v John Miller>That's kind of how a lot of things in
+software development get.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/852-0
+01:33:15.712 --> 01:33:19.999
+<v John Miller>Promulgated to the organization and
+somebody learns it and then starts to to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/852-1
+01:33:19.999 --> 01:33:24.507
+<v John Miller>advocate for it and spread it throughout
+the rest of the organization. You know,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/852-2
+01:33:24.507 --> 01:33:28.404
+<v John Miller>you know how far you be you're able to
+take it will be the, you know,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/852-3
+01:33:28.404 --> 01:33:31.632
+<v John Miller>basically based on the the speed that
+they're willing to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/853-0
+01:33:32.232 --> 01:33:35.225
+<v John Miller>Absorb that that change, Yeah,
+because I mean,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/853-1
+01:33:35.225 --> 01:33:40.128
+<v John Miller>if you were thinking this in in terms of,
+you know, how you would, you know,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/853-2
+01:33:40.128 --> 01:33:45.094
+<v John Miller>if you were to try to steer an entire
+organization towards using this kind of</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/853-3
+01:33:45.094 --> 01:33:49.232
+<v John Miller>approach, it would take, you know,
+a great deal of training and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/854-0
+01:33:49.712 --> 01:33:57.648
+<v John Miller>And just, you know,
+making people feel comfortable about that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/854-1
+01:33:57.648 --> 01:34:05.840
+<v John Miller>process. We, you know,
+I think the idea is that as as time goes</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/854-2
+01:34:05.840 --> 01:34:06.992
+<v John Miller>on, it's.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/855-0
+01:34:07.112 --> 01:34:12.977
+<v John Miller>The A I the A I generated code is is
+going to go through a process that is as</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/855-1
+01:34:12.977 --> 01:34:19.067
+<v John Miller>rigorous or more rigorous than the than
+the process that human written code will</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/855-2
+01:34:19.067 --> 01:34:23.352
+<v John Miller>go through and the the businesses are
+going to start to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/856-0
+01:34:24.232 --> 01:34:29.700
+<v John Miller>Focus more on the using AI to generate
+the code because it's it's going through</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/856-1
+01:34:29.700 --> 01:34:35.236
+<v John Miller>a process that they they understand and
+they they understand the rigor behind it</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/856-2
+01:34:35.236 --> 01:34:40.909
+<v John Miller>in order for it to be implemented and as
+the tools improve and as the review tools</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/856-3
+01:34:40.909 --> 01:34:43.232
+<v John Miller>approve and the processes improve.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/857-0
+01:34:43.592 --> 01:34:47.445
+<v John Miller>I at some point,
+and I don't know when that would be,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/857-1
+01:34:47.445 --> 01:34:52.940
+<v John Miller>it's going to be looked upon that human
+written code in some cases is not as</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/857-2
+01:34:52.940 --> 01:34:58.576
+<v John Miller>preferable as seeing the code being had
+that had been generated by A and going</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/857-3
+01:34:58.576 --> 01:34:59.432
+<v John Miller>through the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/858-0
+01:34:59.432 --> 01:35:03.594
+<v John Miller>The rigor that the AI that we've been
+showing that that we can put AI code</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/858-1
+01:35:03.594 --> 01:35:08.032
+<v John Miller>through in order for us to be able to
+make it acceptable. So I think over time.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/859-0
+01:35:09.672 --> 01:35:15.923
+<v John Miller>The politics will will switch over to
+favor AI generated code than to having to</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/859-1
+01:35:15.923 --> 01:35:18.032
+<v John Miller>write all the code by hand.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/860-0
+01:35:24.152 --> 01:35:25.232
+<v Dan Blanchard>OK, that's helpful.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/861-0
+01:35:26.392 --> 01:35:27.152
+<v John Miller>Other questions?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/862-0
+01:35:28.952 --> 01:35:31.312
+<v John Miller>Anything else?
+Anybody got something to look at?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/863-0
+01:35:38.832 --> 01:35:39.792
+<v John Miller>All right.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/867-0
+01:35:52.872 --> 01:35:58.653
+<v John Miller>So I heard that someone was using cursor.
+Anybody else using different AI tools</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/867-1
+01:35:58.653 --> 01:35:59.592
+<v John Miller>than Copilot?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/868-0
+01:36:01.312 --> 01:36:09.744
+<v Rockwell, Christopher L>I use I use cloud code and then just two
+days ago I downloaded and was using anti</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/868-1
+01:36:09.744 --> 01:36:18.072
+<v Rockwell, Christopher L>gravity which which they right now they
+have a what seems to be a very generous.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/870-0
+01:36:18.432 --> 01:36:25.234
+<v Rockwell, Christopher L>Usage limit that I was not able to hit
+the other day when I was playing with</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/870-1
+01:36:25.234 --> 01:36:29.651
+<v Rockwell, Christopher L>several different options and it's very
+familiar.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/870-2
+01:36:29.651 --> 01:36:33.272
+<v Rockwell, Christopher L>It's it seems to be a fork of of VS code.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/871-0
+01:36:33.312 --> 01:36:36.152
+<v Rockwell, Christopher L>Those those two.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/872-0
+01:36:36.512 --> 01:36:39.592
+<v John Miller>Well, that's interesting. Anybody else?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/873-0
+01:36:39.792 --> 01:36:43.870
+<v Lyle Ubben>I haven't used it,
+but one member of our group I think is</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/873-1
+01:36:43.870 --> 01:36:49.352
+<v Lyle Ubben>using Rider with the plugin for it and it
+seems to work OK from what he says.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/874-0
+01:36:52.912 --> 01:36:57.072
+<v John Miller>Is anybody using Visual Studio with
+Copilot?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/875-0
+01:36:58.512 --> 01:37:00.672
+<v Dan Blanchard>Yeah, I've been, I've been listening.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/877-0
+01:36:58.752 --> 01:37:04.032
+<v Rockwell, Christopher L>I I do when I have to work on legacy
+projects, but.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/876-0
+01:36:59.392 --> 01:37:01.352
+<v Lyle Ubben>Yeah, I'm I'm.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/878-0
+01:37:05.392 --> 01:37:09.592
+<v Rockwell, Christopher L>Like.net 48 projects, I'll do that,
+but it's not often.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/879-0
+01:37:12.032 --> 01:37:13.712
+<v John Miller>Does someone else have a comment?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/880-0
+01:37:15.232 --> 01:37:21.198
+<v Dan Blanchard>I think a couple of people did. Yeah,
+I also use Visual Studio because we have</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/880-1
+01:37:21.198 --> 01:37:25.502
+<v Dan Blanchard>some that frame 4.
+8 and also I just prefer a little bit</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/880-2
+01:37:25.502 --> 01:37:30.712
+<v Dan Blanchard>better for like more of the back end,
+but it's a lot slower I found.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/882-0
+01:37:31.072 --> 01:37:34.479
+<v Dan Blanchard>Then VS code.
+So I try to do as much as I can if I'm</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/882-1
+01:37:34.479 --> 01:37:38.914
+<v Dan Blanchard>doing AI stuff in VS code,
+but if I'm like really like developing or</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/882-2
+01:37:38.914 --> 01:37:42.513
+<v Dan Blanchard>looking through code and reviewing other
+people's code,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/882-3
+01:37:42.513 --> 01:37:44.312
+<v Dan Blanchard>I like to use Visual Studio.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/883-0
+01:37:46.512 --> 01:37:48.272
+<v John Miller>Anyone else have a comment?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/884-0
+01:37:51.312 --> 01:37:55.139
+<v Lyle Ubben>I've been using a 2026 insider and it's a
+lot faster than 2022.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/884-1
+01:37:55.139 --> 01:37:59.264
+<v Lyle Ubben>I basically threw that away,
+but we use it because it's nice because</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/884-2
+01:37:59.264 --> 01:38:03.748
+<v Lyle Ubben>it integrates with the debugger and so if
+you're having a database issues,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/884-3
+01:38:03.748 --> 01:38:07.992
+<v Lyle Ubben>it can actually interface with the
+debugger when you hit a breakpoint.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/887-0
+01:38:08.512 --> 01:38:13.846
+<v Lyle Ubben>You use that to pull context out of it.
+So and we also deal with solution based</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/887-1
+01:38:13.846 --> 01:38:17.646
+<v Lyle Ubben>and that in VS code seems to be a pain
+most of the time.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/887-2
+01:38:17.646 --> 01:38:21.512
+<v Lyle Ubben>So I'd say probably 60% of the time I'm
+in Visual Studio.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/886-0
+01:38:21.672 --> 01:38:22.032
+<v John Miller>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/888-0
+01:38:23.792 --> 01:38:26.232
+<v John Miller>Anyone else want to contribute?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/890-0
+01:38:29.552 --> 01:38:32.814
+<v John Miller>Well,
+that did remind me of something that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/890-1
+01:38:32.814 --> 01:38:38.122
+<v John Miller>might be interesting to talk about in
+that if you're working on a web</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/890-2
+01:38:38.122 --> 01:38:39.032
+<v John Miller>application.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/891-0
+01:38:41.272 --> 01:38:42.992
+<v John Miller>Wanna bring up where's chats?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/892-0
+01:38:46.112 --> 01:38:49.288
+<v John Miller>Is that?
+Let me see if I can get it to do this.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/892-1
+01:38:49.288 --> 01:38:51.272
+<v John Miller>Let me create a new chat here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/893-0
+01:38:52.752 --> 01:38:54.552
+<v John Miller>And say um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/894-0
+01:38:55.672 --> 01:38:56.592
+<v John Miller>Open now.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/895-0
+01:38:57.712 --> 01:38:58.312
+<v John Miller>Simple.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/896-0
+01:39:02.552 --> 01:39:03.312
+<v John Miller>Browser.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/897-0
+01:39:07.872 --> 01:39:10.368
+<v John Miller>I can.
+I think I can get that to one of the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/897-1
+01:39:10.368 --> 01:39:11.672
+<v John Miller>views, but the idea is.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/898-0
+01:39:13.472 --> 01:39:18.872
+<v John Miller>That there's a browser that's built into
+Via's code.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/899-0
+01:39:21.512 --> 01:39:21.872
+<v John Miller>And.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/900-0
+01:39:28.872 --> 01:39:32.472
+<v John Miller>The URL. Um</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/901-0
+01:39:35.672 --> 01:39:36.912
+<v John Miller>Say I get home.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/902-0
+01:39:39.072 --> 01:39:40.472
+<v John Miller>Directorable.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/903-0
+01:39:50.592 --> 01:39:53.732
+<v John Miller>There must be something that's blocking
+that,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/903-1
+01:39:53.732 --> 01:39:58.373
+<v John Miller>but the idea is that you can bring up a
+page in the simple browser.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/903-2
+01:39:58.373 --> 01:40:02.196
+<v John Miller>That could be something that it that
+you're working on,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/903-3
+01:40:02.196 --> 01:40:07.451
+<v John Miller>and then you could add elements to the
+chat so you could find something here</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/903-4
+01:40:07.451 --> 01:40:07.792
+<v John Miller>that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/904-0
+01:40:08.712 --> 01:40:13.388
+<v John Miller>It's on the page that you want to
+actually have the chat look at.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/904-1
+01:40:13.388 --> 01:40:19.268
+<v John Miller>You can actually select it and then that
+will actually paste that particular piece</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/904-2
+01:40:19.268 --> 01:40:24.510
+<v John Miller>from the simple browser into the chat
+window and then you could add a add</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/904-3
+01:40:24.510 --> 01:40:27.272
+<v John Miller>something to the prompt that indicates.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/905-0
+01:40:27.472 --> 01:40:32.745
+<v John Miller>What needs to change about that
+particular piece of the browser that's in</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/905-1
+01:40:32.745 --> 01:40:37.947
+<v John Miller>the browser and it will then focus its
+attention on that specific piece.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/905-2
+01:40:37.947 --> 01:40:42.792
+<v John Miller>And that was very handy when I was
+building that AI resources page.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/906-0
+01:40:43.672 --> 01:40:43.752
+<v John Miller>Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/907-0
+01:40:45.872 --> 01:40:51.236
+<v John Miller>In order for it to improve the UI was a
+matter of just bringing the page up in</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/907-1
+01:40:51.236 --> 01:40:56.532
+<v John Miller>the browser and then using it to identify
+where the where in the page that it</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/907-2
+01:40:56.532 --> 01:40:59.112
+<v John Miller>actually needed to work. I'm not sure.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/908-0
+01:41:03.192 --> 01:41:03.472
+<v John Miller>Let's.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/909-0
+01:41:05.472 --> 01:41:07.232
+<v John Miller>There must be something here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/910-0
+01:41:14.952 --> 01:41:17.872
+<v John Miller>Send elements to the chat.
+That's what we want to do.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/915-0
+01:41:36.832 --> 01:41:37.912
+<v John Miller>Yeah, I mean.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/916-0
+01:41:47.352 --> 01:41:49.872
+<v John Miller>Let me see if I can troubleshoot this.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/925-0
+01:42:15.232 --> 01:42:17.032
+<v John Miller>Well, we have a web page. Let's see.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/926-0
+01:42:20.192 --> 01:42:20.312
+<v John Miller>But.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/928-0
+01:42:25.592 --> 01:42:27.432
+<v John Miller>Um, let me.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/929-0
+01:42:29.392 --> 01:42:32.312
+<v John Miller>Get the latest code from the green.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/931-0
+01:42:42.872 --> 01:42:44.992
+<v John Miller>So let me push these changes first.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/932-0
+01:42:53.712 --> 01:42:59.312
+<v John Miller>And then get down the pull the rest of
+the changes. Hopefully no merge conflicts.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/933-0
+01:43:03.072 --> 01:43:09.232
+<v John Miller>All right, that looks good.
+So that would mean that we have.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/934-0
+01:43:19.072 --> 01:43:21.032
+<v John Miller>There's our code.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/935-0
+01:43:23.712 --> 01:43:27.952
+<v John Miller>You have uh where? Where is the web app?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/936-0
+01:43:29.552 --> 01:43:30.712
+<v John Miller>Arizona.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/937-0
+01:43:31.832 --> 01:43:32.472
+<v John Miller>Quorums.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/938-0
+01:43:34.112 --> 01:43:35.512
+<v Rockwell, Christopher L>The you say where is the web app?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/939-0
+01:43:36.432 --> 01:43:38.112
+<v John Miller>Yeah, I'm looking for the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/940-0
+01:43:37.712 --> 01:43:40.512
+<v Rockwell, Christopher L>It's in the web calculator folder.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/941-0
+01:43:40.272 --> 01:43:40.792
+<v John Miller>Well, I do.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/942-0
+01:43:42.512 --> 01:43:44.832
+<v John Miller>And there's index, so let me open that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/950-0
+01:44:14.272 --> 01:44:17.472
+<v John Miller>All right,
+so it wants to start a web server.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/951-0
+01:44:32.512 --> 01:44:34.232
+<v John Miller>And now we have it here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/952-0
+01:44:37.952 --> 01:44:43.180
+<v John Miller>We're going to add an element to chat,
+we we hit start and then it'll go through</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/952-1
+01:44:43.180 --> 01:44:47.051
+<v John Miller>and say if we want to do something with
+the display window,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/952-2
+01:44:47.051 --> 01:44:52.343
+<v John Miller>we could capture that and then it would
+have an element screenshot here in the in</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/952-3
+01:44:52.343 --> 01:44:54.472
+<v John Miller>the context that we then can use.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/953-0
+01:44:55.912 --> 01:45:00.646
+<v John Miller>As at a prompt and we could then ask it
+to do something significant, you know,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/953-1
+01:45:00.646 --> 01:45:03.643
+<v John Miller>like you know,
+change the font or change the the,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/953-2
+01:45:03.643 --> 01:45:07.957
+<v John Miller>the color, change the placement,
+whatever we wanted to we have whatever</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/953-3
+01:45:07.957 --> 01:45:11.552
+<v John Miller>issue that we wanted to address and then
+it would take the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/954-0
+01:45:11.992 --> 01:45:17.931
+<v John Miller>We take that as a a prompt and try to try
+to do that implementation for us.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/954-1
+01:45:17.931 --> 01:45:23.089
+<v John Miller>So this is I think very,
+very useful tool to take advantage of if</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/954-2
+01:45:23.089 --> 01:45:27.152
+<v John Miller>you're doing any kind of web development
+to try to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/955-0
+01:45:27.432 --> 01:45:31.352
+<v John Miller>Rapidly improve the the work that you're
+doing.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/956-0
+01:45:36.352 --> 01:45:38.872
+<v John Miller>All right. How we doing? Anything else?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/958-0
+01:45:46.032 --> 01:45:48.192
+<v Dan Blanchard>I'm still trying to merge and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/959-0
+01:45:49.312 --> 01:45:53.352
+<v Dan Blanchard>Uh,
+apply the PR comments that from GoPilot.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/960-0
+01:45:54.312 --> 01:45:56.392
+<v John Miller>All right, Chris is working on me.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/961-0
+01:45:55.472 --> 01:45:57.912
+<v Dan Blanchard>Also try to pay attention to what you're
+showing so.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/963-0
+01:45:57.552 --> 01:46:03.396
+<v John Miller>All right, no worries, no worries. I mean,
+you know, you'll have this repository,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/962-0
+01:46:01.032 --> 01:46:01.152
+<v Dan Blanchard>Look.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/963-1
+01:46:03.396 --> 01:46:08.385
+<v John Miller>you know, you know, available to you.
+And so you can at your leisure,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/963-2
+01:46:08.385 --> 01:46:13.872
+<v John Miller>you can go and try to implement as many
+slices as you want to implement and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/964-0
+01:46:14.432 --> 01:46:19.871
+<v John Miller>I think get additional experience on a on
+a code base to try to in terms of</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/964-1
+01:46:19.871 --> 01:46:25.453
+<v John Miller>actually you know writing new features
+and getting AI to produce the code and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/964-2
+01:46:25.453 --> 01:46:30.964
+<v John Miller>going through the review process and
+getting and getting approval from that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/964-3
+01:46:30.964 --> 01:46:34.112
+<v John Miller>I think all I think all valuable
+exercises.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/965-0
+01:46:34.152 --> 01:46:39.314
+<v John Miller>That you can do and there's plenty of
+plenty of material in the issues that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/965-1
+01:46:39.314 --> 01:46:44.476
+<v John Miller>that were created and some of those
+implementations are are not they're not</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/965-2
+01:46:44.476 --> 01:46:49.841
+<v John Miller>very they're not simple like the the
+beginning ones that we have here with the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/965-3
+01:46:49.841 --> 01:46:53.237
+<v John Miller>calculator.
+They get much more complex as you get</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/965-4
+01:46:53.237 --> 01:46:53.712
+<v John Miller>deeper.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/966-0
+01:46:53.752 --> 01:46:57.672
+<v John Miller>Into the the dependency tree and so you
+could take a look at.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/968-0
+01:47:00.352 --> 01:47:05.639
+<v John Miller>Doing that kind of experimentation and
+that's a good safe way to do it because</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/968-1
+01:47:05.639 --> 01:47:07.312
+<v John Miller>it's in this project and.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/969-0
+01:47:08.312 --> 01:47:13.679
+<v John Miller>And therefore it's, uh, you know,
+you can make as many modifications as you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/969-1
+01:47:13.679 --> 01:47:14.032
+<v John Miller>need.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/970-0
+01:47:19.112 --> 01:47:21.916
+<v Dan Blanchard>Yeah.
+Are we gonna get all the slides 'cause we</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/970-1
+01:47:21.916 --> 01:47:25.070
+<v Dan Blanchard>had one or two,
+but then they're not there and then I</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/971-0
+01:47:24.072 --> 01:47:27.724
+<v John Miller>No other all the slides are in the in
+this project.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/970-2
+01:47:25.070 --> 01:47:25.712
+<v Dan Blanchard>don't know.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/971-1
+01:47:27.724 --> 01:47:30.672
+<v John Miller>If you pulled it down you should see them.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/972-0
+01:47:31.752 --> 01:47:34.072
+<v John Miller>They're um, they're PDF files.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/973-0
+01:47:42.232 --> 01:47:42.472
+<v Dan Blanchard>Uh, which?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/974-0
+01:47:45.512 --> 01:47:47.192
+<v Dan Blanchard>Is it in the main branch?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/975-0
+01:47:47.672 --> 01:47:49.712
+<v John Miller>Yeah, it'll be in the main branch.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/978-0
+01:48:09.512 --> 01:48:12.011
+<v John Miller>The fundamental slides are in the main
+branch.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/978-1
+01:48:12.011 --> 01:48:16.158
+<v John Miller>I think the Greenfield slides are in the
+Greenfield branch and the Brownfield</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/978-2
+01:48:16.158 --> 01:48:18.072
+<v John Miller>slides are in the Brownfield branch.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/979-0
+01:48:18.992 --> 01:48:22.992
+<v Dan Blanchard>Oh, OK,
+so there's there's three sets of slides.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/980-0
+01:48:24.072 --> 01:48:29.665
+<v John Miller>Yeah, one one for the the first day,
+one for the brownfield 2 days and then</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/980-1
+01:48:29.665 --> 01:48:31.872
+<v John Miller>one for the Greenfield 2 days.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/981-0
+01:48:32.432 --> 01:48:35.192
+<v Dan Blanchard>OK. Yeah,
+they're in each of their own branches, OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/982-0
+01:48:42.312 --> 01:48:43.792
+<v John Miller>Other questions?</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/983-0
+01:48:56.232 --> 01:49:00.374
+<v John Miller>Recordings. Yeah, those will be.
+Those will be sent out.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/983-1
+01:49:00.374 --> 01:49:03.352
+<v John Miller>You'll get an e-mail. I'll switch to the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/984-0
+01:49:04.792 --> 01:49:08.192
+<v John Miller>The last slide,
+since that's one of the topics there.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/985-0
+01:49:12.592 --> 01:49:12.752
+<v John Miller>So.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/986-0
+01:49:15.432 --> 01:49:20.043
+<v John Miller>All right, so basically to wrap this up,
+everybody at code,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/986-1
+01:49:20.043 --> 01:49:25.269
+<v John Miller>thanks you for attending.
+I appreciate your attention and your your</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/986-2
+01:49:25.269 --> 01:49:28.881
+<v John Miller>input.
+It was it was a valuable core input for</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/986-3
+01:49:28.881 --> 01:49:31.032
+<v John Miller>building this course and my.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/987-0
+01:49:31.232 --> 01:49:36.013
+<v John Miller>Expect an e-mail with links to those
+recordings and also a link to a survey</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/987-1
+01:49:36.013 --> 01:49:40.920
+<v John Miller>and I would appreciate any feedback that
+you have both positive and negative.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/987-2
+01:49:40.920 --> 01:49:45.574
+<v John Miller>It would help us improve this course
+going forward. Just so you're aware,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/987-3
+01:49:45.574 --> 01:49:46.832
+<v John Miller>we're also building.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/988-0
+01:49:47.432 --> 01:49:51.818
+<v John Miller>A cloud code course.
+So if you're interested in further</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/988-1
+01:49:51.818 --> 01:49:58.161
+<v John Miller>information or training about cloud code,
+let us know and we'll have a we have a</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/988-2
+01:49:58.161 --> 01:50:04.112
+<v John Miller>special offer for people interested in in
+beta testing the course material.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/989-0
+01:50:04.992 --> 01:50:11.074
+<v John Miller>Also consider booking time for mentoring.
+I do this with other clients that have</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/989-1
+01:50:11.074 --> 01:50:17.230
+<v John Miller>taken the training and we spend an hour
+or two a week reviewing the the work that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/989-2
+01:50:17.230 --> 01:50:19.632
+<v John Miller>they've been able to accomplish.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/990-0
+01:50:20.032 --> 01:50:25.750
+<v John Miller>And I give them guidance in terms of how
+they how they can proceed and answer any</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/990-1
+01:50:25.750 --> 01:50:30.770
+<v John Miller>questions that they have in terms of
+their their use of A I in in their</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/990-2
+01:50:30.770 --> 01:50:35.232
+<v John Miller>environments with one of them we're going
+through and building.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/991-0
+01:50:35.672 --> 01:50:37.912
+<v John Miller>Work instructions.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/992-0
+01:50:39.712 --> 01:50:40.072
+<v John Miller>And.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/993-0
+01:50:41.512 --> 01:50:45.233
+<v John Miller>To help them create a something that is
+audible,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/993-1
+01:50:45.233 --> 01:50:51.536
+<v John Miller>auditable and something that they can use
+to document the process and confirm that</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/993-2
+01:50:51.536 --> 01:50:55.712
+<v John Miller>they're conforming to it and then we're
+gonna proceed.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/994-0
+01:50:57.352 --> 01:51:00.946
+<v John Miller>To start to actually use it to build out
+a a a either.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/994-1
+01:51:00.946 --> 01:51:05.062
+<v John Miller>We haven't haven't decided yet,
+but whether it's going to be a</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/994-2
+01:51:05.062 --> 01:51:09.700
+<v John Miller>modification to a brownfield app or a
+rewrite of the application using</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/994-3
+01:51:09.700 --> 01:51:13.032
+<v John Miller>Greenfield techniques.
+So if you're interested in.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/995-0
+01:51:13.672 --> 01:51:17.423
+<v John Miller>And getting a little assistance,
+it wouldn't be very expensive and you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/995-1
+01:51:17.423 --> 01:51:21.015
+<v John Miller>would be able to take some,
+get some guidance as you're going along</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/995-2
+01:51:21.015 --> 01:51:24.448
+<v John Miller>to help you, you know,
+get yourself out of sticky spots and then</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/995-3
+01:51:24.448 --> 01:51:24.712
+<v John Miller>I'll.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/996-0
+01:51:26.912 --> 01:51:27.032
+<v John Miller>Um.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/998-0
+01:51:29.712 --> 01:51:33.924
+<v John Miller>And then if there are any final questions,
+I'd be happy to answer them now.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/998-1
+01:51:33.924 --> 01:51:38.302
+<v John Miller>There's a question about attending a
+copilot conference in San Diego. I can't.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/998-2
+01:51:38.302 --> 01:51:40.796
+<v John Miller>I'm not committed to doing it at the
+moment,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/998-3
+01:51:40.796 --> 01:51:43.677
+<v John Miller>but it'd be something I'm very interested
+in doing.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/998-4
+01:51:43.677 --> 01:51:45.672
+<v John Miller>There was another GitHub conference.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/999-0
+01:51:46.472 --> 01:51:51.992
+<v John Miller>Earlier in the later in last year that I
+wasn't able to make, but I yeah,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/999-1
+01:51:51.992 --> 01:51:58.183
+<v John Miller>definitely interested in attending those
+kinds of events and just a final thing on</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/999-2
+01:51:58.183 --> 01:51:59.152
+<v John Miller>code is that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1000-0
+01:52:00.632 --> 01:52:03.919
+<v John Miller>You know code is we we we do this
+training.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1000-1
+01:52:03.919 --> 01:52:09.671
+<v John Miller>We also can help you with consulting if
+you have the bigger efforts that you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1000-2
+01:52:09.671 --> 01:52:15.349
+<v John Miller>would need some guidance on either
+architectural guidance or implementation</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1000-3
+01:52:15.349 --> 01:52:18.112
+<v John Miller>assistance and then there's also the.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1001-0
+01:52:18.552 --> 01:52:19.112
+<v John Miller>The uh.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1002-0
+01:52:21.232 --> 01:52:25.885
+<v John Miller>The staffing side of things,
+if you actually need to beef up your your,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1002-1
+01:52:25.885 --> 01:52:28.986
+<v John Miller>your,
+your organization in terms of just having</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1002-2
+01:52:28.986 --> 01:52:33.380
+<v John Miller>additional resources available to help
+you with your your projects,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1002-3
+01:52:33.380 --> 01:52:36.352
+<v John Miller>code is also available to help you with
+that.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1003-0
+01:52:37.512 --> 01:52:44.231
+<v John Miller>And the the last thing is a a code a
+magazine and in your your your e-mail you</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1003-1
+01:52:44.231 --> 01:52:47.632
+<v John Miller>would should receive a an invitation to.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1004-0
+01:52:50.112 --> 01:52:53.507
+<v John Miller>I need an invitation to a free
+subscription to the Code magazine,</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1004-1
+01:52:53.507 --> 01:52:54.792
+<v John Miller>so look for that as well.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1005-0
+01:52:55.752 --> 01:53:00.152
+<v John Miller>So I'm free to answer any other questions
+that you have.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1006-0
+01:53:04.152 --> 01:53:07.194
+<v John Miller>Otherwise,
+I I really appreciate your attendance and</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1006-1
+01:53:07.194 --> 01:53:12.072
+<v John Miller>I really hope this was something that you
+can use regularly in your day-to-day work.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1007-0
+01:53:13.952 --> 01:53:16.072
+<v Rockwell, Christopher L>Yeah, lots of good stuff. Thanks, John.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1010-0
+01:53:15.632 --> 01:53:18.512
+<v John Miller>You're welcome. I'm glad you liked.
+You're welcome.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1008-0
+01:53:17.112 --> 01:53:19.432
+<v Chris Bishop>Thanks, John. Thanks, everybody.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1009-0
+01:53:18.472 --> 01:53:19.032
+<v Lyle Ubben>Yeah, thank you.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1011-0
+01:53:18.792 --> 01:53:19.672
+<v Buddy Toups>Thanks, John.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1017-0
+01:53:20.272 --> 01:53:23.795
+<v John Miller>It's good meeting you all.
+I look forward to running into you in the</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1014-0
+01:53:20.912 --> 01:53:21.832
+<v Matt Hoffman>Thank you, John.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1013-0
+01:53:20.952 --> 01:53:21.592
+<v Bui, Tom>Thanks, John.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1017-1
+01:53:23.795 --> 01:53:24.152
+<v John Miller>future.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1019-0
+01:53:25.832 --> 01:53:28.232
+<v Giterman, Boris>Thank you. Thank you, John.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1020-0
+01:53:28.232 --> 01:53:28.592
+<v Rockwell, Christopher L>Take care.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1022-0
+01:53:28.672 --> 01:53:29.952
+<v Dan Blanchard>Thank you, John.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1023-0
+01:53:29.072 --> 01:53:30.432
+<v Goostree, Peter>Thanks, John. That was really great.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1027-0
+01:53:30.352 --> 01:53:33.272
+<v John Miller>I'm glad you liked it.
+Thank you very much.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1026-0
+01:53:31.032 --> 01:53:31.352
+<v Giterman, Boris>Yeah.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1029-0
+01:53:37.832 --> 01:53:41.552
+<v Dan Blanchard>Thanks for answering all my questions,
+John. Appreciate it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1031-0
+01:53:40.992 --> 01:53:43.632
+<v John Miller>I mean, no problem. I was glad to do it.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1034-0
+01:53:43.632 --> 01:53:47.672
+<v Dan Blanchard>Yeah. See you around. Take care. Bye, bye.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1035-0
+01:53:46.992 --> 01:53:48.792
+<v John Miller>All right. All right. So you're on.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1038-0
+01:53:50.712 --> 01:53:50.832
+<v Goostree, Peter>OK.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1039-0
+01:53:57.712 --> 01:53:58.232
+<v John Miller>All right. Thanks, Otto.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1040-0
+01:54:00.312 --> 01:54:01.432
+<v Otto Dobretsberger>Thank you too, John.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1041-0
+01:54:02.912 --> 01:54:06.952
+<v Otto Dobretsberger>I think, yeah,
+I think we can stop the recording here.</v>
+
+136052fd-22bf-408e-a12b-d0f4706e1565/1042-0
+01:54:07.912 --> 01:54:09.352
+<v John Miller>I'll do that.</v>
