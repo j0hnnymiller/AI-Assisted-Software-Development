@@ -411,8 +411,8 @@ Copilot helps by:
 
 **Note**: GitHub Copilot is free for students and open-source contributors but requires a subscription for most users. There's a free trial available!
 
-### Why Visual Studio Code?
-Visual Studio Code is where we will live for most of the course.
+### Why Copilot with Visual Studio Code?
+Copilot integrates seamlessly with Visual Studio Code, making it the ideal environment for leveraging AI-assisted coding. 
 
 - Information: [https://github.com/features/copilot](https://github.com/features/copilot)
 - Pricing: [https://github.com/features/copilot#pricing](https://github.com/features/copilot#pricing)
@@ -725,5 +725,3 @@ The extension works with prompt files and provides feedback directly in your edi
 - Make sure you have prompt files open in the editor (typically `.prompt`, `.md`, or similar prompt-related files).
 - Check that the Language Server is running by looking for any error messages in the VS Code Output panel (select "Chat Customizations Evaluations" from the dropdown).
 - Try reloading VS Code (`Ctrl+R` or `Cmd+R`) if you don't see analysis results.
-
-

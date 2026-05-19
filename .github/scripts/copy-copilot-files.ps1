@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Copies selected GitHub Copilot instruction/chatmode files from a source repo to a destination.
+Copies selected GitHub Copilot instruction/agent files from a source repo to a destination.
 
 .PARAMETER SourceRoot
 Root of the source repository (defaults to the path you provided).
@@ -23,13 +23,13 @@ param(
 )
 
 $patterns = @(
-    '.github\chatmodes\*.chatmode.md',
+    '.github\agents\*.agent.md',
     '.github\instructions\ai-assisted-output.instructions.md',
-    '.github\instructions\chatmode-file.instructions.md',
+    '.github\instructions\agent-file.instructions.md',
     '.github\instructions\prompt-file.instructions.md',
     '.github\instructions\instruction-prompt-files.instructions.md',
     '.github\instructions\instruction-files.instructions.md',
-    '.github\instructions\chatmode-file.instructions.md',
+    '.github\instructions\agent-file.instructions.md',
     '.github\instructions\instruction-prompt-files.instructions.md',
     '.github\prompts\check-context.prompt.md'
 )
