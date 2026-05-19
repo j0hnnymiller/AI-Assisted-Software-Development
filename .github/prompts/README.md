@@ -18,15 +18,15 @@ This directory contains standardized AI prompts for various development and anal
 
 ### Documentation & Instruction Generation
 
-| File                                                                                                   | Purpose                         | Output                                   |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------- | ---------------------------------------- |
-| [`create-ai-assisted-output-instructions.prompt.md`](create-ai-assisted-output-instructions.prompt.md) | AI Output Policy Generator      | AI provenance and logging instructions   |
-| [`create-chatmode-instructions-file.prompt.md`](create-chatmode-instructions-file.prompt.md)           | Chat Mode Guidelines Generator  | Chat mode authoring guidelines           |
-| [`create-codebase-explorer.prompt.md`](create-codebase-explorer.prompt.md)                             | Codebase Explorer Chat Mode     | GitHub Copilot chat mode definition      |
-| [`create-prompt-file-instructions-file.prompt.md`](create-prompt-file-instructions-file.prompt.md)     | Prompt Authoring Guidelines     | Instructions for creating prompts        |
-| [`create-use-case-instructions.prompt.md`](create-use-case-instructions.prompt.md)                     | Use Case Instructions Generator | Guidelines for use case documentation    |
-| [`derive-use-cases-from-conceptual-model.prompt.md`](derive-use-cases-from-conceptual-model.prompt.md) | Use Case Derivation             | Extract use cases from conceptual models |
-| [`generate-instructions.prompt.md`](generate-instructions.prompt.md)                                   | Instruction File Generator      | Comprehensive instruction files          |
+| File                                                                                                   | Purpose                         | Output                                        |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------- | --------------------------------------------- |
+| [`create-ai-assisted-output-instructions.prompt.md`](create-ai-assisted-output-instructions.prompt.md) | AI Output Policy Generator      | AI provenance and logging instructions        |
+| [`create-agent-instructions-file.prompt.md`](create-agent-instructions-file.prompt.md)                 | Agent Guidelines Generator      | Agent authoring guidelines                    |
+| [`create-codebase-explorer.prompt.md`](create-codebase-explorer.prompt.md)                             | Codebase Explorer Chat Mode     | GitHub Copilot chat mode definition           |
+| [`create-prompt-file-instructions-file.prompt.md`](create-prompt-file-instructions-file.prompt.md)     | Prompt Authoring Guidelines     | Instructions for creating prompts             |
+| [`create-use-case-instructions.prompt.md`](create-use-case-instructions.prompt.md)                     | Use Case Instructions Generator | Guidelines for use case documentation         |
+| [`derive-use-cases-from-conceptual-model.prompt.md`](derive-use-cases-from-conceptual-model.prompt.md) | Use Case Derivation             | Extract use cases from conceptual models      |
+| [`generate-instructions.prompt.md`](generate-instructions.prompt.md)                                   | Instruction File Generator      | Comprehensive instruction files               |
 | [`summarize-vti-content.prompt.md`](summarize-vti-content.prompt.md)                                   | VTI Content Summarizer          | Outline with section durations from VTI files |
 
 ### Quality & Compliance
@@ -43,18 +43,18 @@ This directory contains standardized AI prompts for various development and anal
 
 #### Solution Architect Specialized Prompts
 
-| File                                                                                                 | Purpose                                 | Output                                              |
-| ---------------------------------------------------------------------------------------------------- | --------------------------------------- | --------------------------------------------------- |
-| [`solution-architect/architecture-design.prompt.md`](solution-architect/architecture-design.prompt.md)         | System Architecture Design              | Comprehensive architectural blueprints              |
-| [`solution-architect/compliance-check.prompt.md`](solution-architect/compliance-check.prompt.md)               | Compliance Validation                   | Standards and regulatory compliance analysis        |
-| [`solution-architect/integration-design.prompt.md`](solution-architect/integration-design.prompt.md)           | System Integration and APIs             | Integration strategies and API contracts            |
-| [`solution-architect/migration-strategy.prompt.md`](solution-architect/migration-strategy.prompt.md)           | System Migration Planning               | Migration and modernization plans                   |
-| [`solution-architect/pattern-analysis.prompt.md`](solution-architect/pattern-analysis.prompt.md)               | Architectural Pattern Analysis          | Pattern recommendations with detailed justification |
-| [`solution-architect/performance-analysis.prompt.md`](solution-architect/performance-analysis.prompt.md)       | Performance Analysis                    | Performance characteristics and optimization plans  |
-| [`solution-architect/risk-assessment.prompt.md`](solution-architect/risk-assessment.prompt.md)                 | Architectural Risk Assessment           | Risk identification and mitigation strategies       |
-| [`solution-architect/scalability-planning.prompt.md`](solution-architect/scalability-planning.prompt.md)       | Scalability Planning                    | Scalability strategies and capacity plans           |
-| [`solution-architect/security-architecture.prompt.md`](solution-architect/security-architecture.prompt.md)     | Security Architecture                   | Security controls and threat mitigation             |
-| [`solution-architect/technology-evaluation.prompt.md`](solution-architect/technology-evaluation.prompt.md)     | Technology Evaluation                   | Technology assessment and selection guidance        |
+| File                                                                                                       | Purpose                        | Output                                              |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------ | --------------------------------------------------- |
+| [`solution-architect/architecture-design.prompt.md`](solution-architect/architecture-design.prompt.md)     | System Architecture Design     | Comprehensive architectural blueprints              |
+| [`solution-architect/compliance-check.prompt.md`](solution-architect/compliance-check.prompt.md)           | Compliance Validation          | Standards and regulatory compliance analysis        |
+| [`solution-architect/integration-design.prompt.md`](solution-architect/integration-design.prompt.md)       | System Integration and APIs    | Integration strategies and API contracts            |
+| [`solution-architect/migration-strategy.prompt.md`](solution-architect/migration-strategy.prompt.md)       | System Migration Planning      | Migration and modernization plans                   |
+| [`solution-architect/pattern-analysis.prompt.md`](solution-architect/pattern-analysis.prompt.md)           | Architectural Pattern Analysis | Pattern recommendations with detailed justification |
+| [`solution-architect/performance-analysis.prompt.md`](solution-architect/performance-analysis.prompt.md)   | Performance Analysis           | Performance characteristics and optimization plans  |
+| [`solution-architect/risk-assessment.prompt.md`](solution-architect/risk-assessment.prompt.md)             | Architectural Risk Assessment  | Risk identification and mitigation strategies       |
+| [`solution-architect/scalability-planning.prompt.md`](solution-architect/scalability-planning.prompt.md)   | Scalability Planning           | Scalability strategies and capacity plans           |
+| [`solution-architect/security-architecture.prompt.md`](solution-architect/security-architecture.prompt.md) | Security Architecture          | Security controls and threat mitigation             |
+| [`solution-architect/technology-evaluation.prompt.md`](solution-architect/technology-evaluation.prompt.md) | Technology Evaluation          | Technology assessment and selection guidance        |
 
 ## Meta Prompts
 
