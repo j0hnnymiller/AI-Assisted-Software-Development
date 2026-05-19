@@ -4,7 +4,7 @@ model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
 chat_id: "update-custom-agents-instructions-20260212"
 prompt: |
-  Compare chatmode-file.instructions.md with GitHub's official custom agents guidance
+  Compare agent-file.instructions.md with GitHub's official custom agents guidance
   and create new instructions file aligned with official implementation
 started: "2026-02-12T00:00:00Z"
 ended: "2026-02-12T00:30:00Z"
