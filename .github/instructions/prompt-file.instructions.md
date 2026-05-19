@@ -536,7 +536,7 @@ description: Be a helpful coding assistant
 You are a helpful assistant who helps with coding.
 ```
 
-**Why wrong:** This is an agent persona, not a task. Use `.github/copilot/chat_modes/` for agents.
+**Why wrong:** This is an agent persona, not a task. Use `.github/copilot/agents/` for agents.
 
 ### ❌ Wrong File Location
 
@@ -648,7 +648,7 @@ See [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#
 
 ## Related Documentation
 
-- `.github/copilot/chat_modes/` - For agent/persona definitions (behavioral instructions)
+- `.github/copilot/agents/` - For agent/persona definitions (behavioral instructions)
 - `.github/instructions/` - For repo-wide rules and policies
 - [GitHub Copilot Promptfiles Documentation](https://docs.github.com/copilot/customizing-copilot/promptfiles) - Official docs
 - `.github/instructions/ai-assisted-output.instructions.md` - AI provenance requirements
@@ -656,12 +656,12 @@ See [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#
 
 ## When to Use Each System
 
-| Need               | Use                                         |
-| ------------------ | ------------------------------------------- |
-| Reusable task      | Promptfile (`.github/prompts/`) |
-| Behavioral persona | Agent (`.github/copilot/chat_modes/`)       |
-| Repo-wide rule     | Instruction (`.github/instructions/`)       |
-| One-off task       | Just type it in chat                        |
+| Need               | Use                                   |
+| ------------------ | ------------------------------------- |
+| Reusable task      | Promptfile (`.github/prompts/`)       |
+| Behavioral persona | Agent (`.github/copilot/agents/`)     |
+| Repo-wide rule     | Instruction (`.github/instructions/`) |
+| One-off task       | Just type it in chat                  |
 
 ## Quick Reference
 

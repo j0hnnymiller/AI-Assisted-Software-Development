@@ -25,7 +25,7 @@ Create specialized GitHub Copilot agents (chat modes) with domain expertise.
 ### Naming & Location
 
 - Pattern: `<agent-name>.yaml` (kebab-case)
-- Location: `.github/copilot/chat_modes/` (exact casing required)
+- Location: `.github/copilot/agents/` (exact casing required)
 - Extension: `.yaml` (required)
 - Format: YAML
 
@@ -520,7 +520,7 @@ metadata:
 ## Validation Checklist
 
 - [ ] kebab-case filename with `.yaml` extension
-- [ ] Located in `.github/copilot/chat_modes/` (exact casing)
+- [ ] Located in `.github/copilot/agents/` (exact casing)
 - [ ] YAML or JSON format (NOT Markdown)
 - [ ] No YAML metadata at top (only `name:`, `instructions:`, etc.)
 - [ ] No top-level arbitrary fields
@@ -540,7 +540,7 @@ metadata:
 ## Anti-Patterns
 
 ❌ Using `.agent.md` files (UI-only, non-functional)
-❌ Wrong directory (not `.github/copilot/chat_modes/`)
+❌ Wrong directory (not `.github/copilot/agents/`)
 ❌ Markdown format instead of YAML
 ❌ YAML metadata at top of file
 ❌ Top-level arbitrary fields (use `metadata:` instead)
@@ -605,7 +605,7 @@ Pattern: `@verb-noun` or `@domain-action`
 ```
 .github/
 └── copilot/
-    └── chat_modes/
+    └── agents/
         ├── security-analyzer.yaml
         ├── documentation-assistant.yaml
         └── codebase-explorer.yaml
