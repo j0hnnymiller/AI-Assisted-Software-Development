@@ -2,36 +2,36 @@
 mode: agent
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 tools: ["create"]
-description: Generate comprehensive authoring guidelines for custom GitHub Copilot chat modes
+description: Generate comprehensive authoring guidelines for custom GitHub Copilot agents
 prompt_metadata:
-  id: create-chatmode-instructions
-  title: Generate Custom Chat Mode Instructions
+  id: create-agent-instructions
+  title: Generate Custom Agent Instructions
   owner: johnmillerATcodemag-com
   version: "1.0.0"
   created: "2025-02-05"
   updated: "2025-02-05"
-  output_path: .github/instructions/chatmode-file.instructions.md
+  output_path: .github/instructions/agent-file.instructions.md
   category: documentation
-  tags: [chatmode, copilot, documentation]
+  tags: [agent, copilot, documentation]
   output_format: markdown
 ---
 
-# Generate Custom Chat Mode Instructions
+# Generate Custom Agent Instructions
 
-Create comprehensive guidelines for authoring custom GitHub Copilot chat modes.
+Create comprehensive guidelines for authoring custom GitHub Copilot agents.
 
 ## Context
 
 Instructions for creating specialized AI assistants with specific expertise, personality, and commands.
 Must comply with `.github/instructions/ai-assisted-output.instructions.md` and `copilot-instructions.md`.
 
-## Output: `.github/instructions/chatmode-file.instructions.md`
+## Output: `.github/instructions/agent-file.instructions.md`
 
 ### Structure:
 
 1. **Overview**: Purpose, benefits, when to create vs use default, integration
 2. **File Structure**:
-   - Naming: `<chat-mode-name>.chatmode.md` (kebab-case) in `.github/chatmodes/`
+   - Naming: `<agent-name>.agent.md` (kebab-case) in `.github/agents/`
    - Header: Name, Focus, Temperature (0.0-1.0), Style
    - Sections: Mission, Core Expertise, Methodology, Commands, Response Format, Principles, Examples
 3. **Header Fields**:
@@ -64,7 +64,7 @@ Must comply with `.github/instructions/ai-assisted-output.instructions.md` and `
 
 ### Quality Checklist:
 
-- kebab-case filename with `.chatmode.md`
+- kebab-case filename with `.agent.md`
 - All header fields present
 - Mission clear, expertise listed (5-10)
 - Commands use `@kebab-case`

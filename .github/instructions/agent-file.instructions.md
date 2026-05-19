@@ -4,7 +4,7 @@ model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
 chat_id: "optimize-instructions-20251023"
 prompt: |
-  Create AI-optimized version of chatmode-file.instructions.md with minimal tokens
+  Create AI-optimized version of agent-file.instructions.md with minimal tokens
 started: "2025-10-23T04:40:00Z"
 ended: "2025-10-23T04:40:00Z"
 task_durations:
@@ -13,20 +13,20 @@ task_durations:
 total_duration: "00:01:00"
 ai_log: "ai-logs/2025/10/23/optimize-instructions-20251023/conversation.md"
 source: "optimization-task"
-applyTo: "**/*.chatmode.md"
+applyTo: "**/*.agent.md"
 ---
 
-# AI Instructions: Custom Chat Mode Creation
+# AI Instructions: Custom Agent Creation
 
-Create specialized GitHub Copilot chat modes with domain expertise.
+Create specialized GitHub Copilot agents with domain expertise.
 
 ## File Structure
 
 ### Naming & Location
 
-- Pattern: `<chat-mode-name>.chatmode.md` (kebab-case)
-- Location: `.github/chatmodes/`
-- Extension: `.chatmode.md` (required)
+- Pattern: `<agent-name>.agent.md` (kebab-case)
+- Location: `.github/agents/`
+- Extension: `.agent.md` (required)
 
 ### Required Header
 
@@ -239,8 +239,8 @@ You help understand unfamiliar codebases...
 
 ## Validation Checklist
 
-- [ ] kebab-case filename with `.chatmode.md`
-- [ ] Located in `.github/chatmodes/`
+- [ ] kebab-case filename with `.agent.md`
+- [ ] Located in `.github/agents/`
 - [ ] All header fields present (Name, Focus, Temperature, Style)
 - [ ] Mission statement clear
 - [ ] Core expertise listed (5-10 items)

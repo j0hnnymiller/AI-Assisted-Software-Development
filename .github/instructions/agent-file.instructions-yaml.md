@@ -4,7 +4,7 @@ model: "anthropic/claude-3.5-sonnet@2024-10-22"
 operator: "johnmillerATcodemag-com"
 chat_id: "optimize-instructions-20251023"
 prompt: |
-  Create AI-optimized version of chatmode-file.instructions.md with minimal tokens
+  Create AI-optimized version of agent-file.instructions.md with minimal tokens
 started: "2025-10-23T04:40:00Z"
 ended: "2025-10-23T04:40:00Z"
 task_durations:
@@ -13,7 +13,7 @@ task_durations:
 total_duration: "00:01:00"
 ai_log: "ai-logs/2025/10/23/optimize-instructions-20251023/conversation.md"
 source: "optimization-task"
-applyTo: "**/*.chatmode.md"
+applyTo: "**/*.agent.md"
 ---
 
 # AI Instructions: GitHub Copilot Agent Creation
@@ -535,11 +535,11 @@ metadata:
 - [ ] If AI-generated: `ai_log` field points to valid conversation log file
 - [ ] Temperature in `metadata` (if used) appropriate for use case
 - [ ] Style in `metadata` (if used) aligns with domain
-- [ ] No `.chatmode.md` files (they're UI-only, non-functional)
+- [ ] No `.agent.md` files (they're UI-only, non-functional)
 
 ## Anti-Patterns
 
-❌ Using `.chatmode.md` files (UI-only, non-functional)
+❌ Using `.agent.md` files (UI-only, non-functional)
 ❌ Wrong directory (not `.github/copilot/chat_modes/`)
 ❌ Markdown format instead of YAML
 ❌ YAML metadata at top of file
