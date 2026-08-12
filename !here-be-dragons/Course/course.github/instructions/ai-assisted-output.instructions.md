@@ -26,7 +26,7 @@ applyTo: "**/*"
 
 This repository requires clear provenance and reliable logging for all AI-assisted outputs. Provenance and logging protect code quality, enable audits, and help teammates understand how artifacts were produced (by whom, with what model, and from which conversation). This policy defines the required metadata, logging workflow, quality gates, and Copilot integration behaviors to make provenance automatic, consistent, and verifiable.
 
-**For GitHub Copilot Users**: See [`.github/instructions/copilot-instructions.md`](.github/instructions/copilot-instructions.md) for comprehensive Copilot-specific guidance including model identification, conversation format, and quality checklists.
+**For GitHub Copilot Users**: See [`copilot-instructions.md`](copilot-instructions.md) for comprehensive Copilot-specific guidance including model identification, conversation format, and quality checklists.
 
 ## Table of Contents
 
@@ -73,7 +73,7 @@ Contributors generating or curating AI-assisted content (code, docs, diagrams, t
 
 - Use “chat ID” in prose.
 - Use `chat_id` in embedded metadata/front matter.
-- Do not use “session” or “session-id” in paths or labels.
+- Do not use "session" or "session-id" in paths or labels.
 - Standardize placeholder paths on `<chat-id>`.
 
 ## Metadata placement policy
@@ -177,7 +177,7 @@ All AI chat transcripts and key outputs must be saved under `ai-logs/` in a date
 - Structure: `ai-logs/yyyy/mm/dd/<chat-id>/`
 - Required files per chat:
   - `conversation.md` — Full prompt/response transcript with timestamps (REQUIRED)
-  - `summary.md` — Session summary: objectives, key decisions, artifacts, outcomes (REQUIRED)
+  - `summary.md` — Chat summary: objectives, key decisions, artifacts, outcomes (REQUIRED)
   - `artifacts/` — Generated files not committed elsewhere (OPTIONAL)
 
 ### Copilot-Integrated Chat Management
@@ -262,9 +262,9 @@ Implementation Requirements for Copilot:
 ### summary.md Template
 
 ````markdown
-# Session Summary: <Session Title>
+# Chat Summary: <Chat Title>
 
-**Session ID**: <chat-id>
+**Chat ID**: <chat-id>
 **Date**: <YYYY-MM-DD>
 **Operator**: <username>
 **Model**: <provider>/<model>@<version>
@@ -372,7 +372,9 @@ files_modified: <number>
 5. Know what files were modified and why
 6. Resume work on incomplete items without re-reading the full conversation
 
-Include enough detail that someone unfamiliar with the chat can understand the "why" behind decisions, not just the "what" of artifacts created.## Capturing task durations
+Include enough detail that someone unfamiliar with the chat can understand the "why" behind decisions, not just the "what" of artifacts created.
+
+## Capturing task durations
 
 - Record the start and end timestamps for each significant task (e.g., drafting, refactor, diagram generation, test updates).
 - Compute each task duration and the overall total.
@@ -380,7 +382,7 @@ Include enough detail that someone unfamiliar with the chat can understand the "
 
 ## Placement and naming
 
-- Place this file at `.github/instructions/ai-assisted-output.instructions.md`.
+- Place this file at `instructions/ai-assisted-output.instructions.md`.
 - Place logs in `ai-logs/yyyy/mm/dd/<chat-id>/`.
 - Prefer lowercase for artifact filenames; include context (e.g., `uc-001-enrollment-diagram.md`).
 - When creating any new AI-assisted artifact, add a short bullet to the project `README.md` that links to the artifact and states its purpose. If a section like “AI-Assisted Artifacts” exists, add to it; otherwise, create one.
@@ -436,7 +438,7 @@ Matching conversation log header:
 
 - Inputs: user-requirements.md, existing-auth-flow.md
 - Targets: user-registration-flow-diagram.md
-- Constraints/Policies: .github/instructions/ai-assisted-output.instructions.md
+- Constraints/Policies: instructions/ai-assisted-output.instructions.md
 ```
 
 ## Quality Checklist
@@ -577,7 +579,7 @@ API Requirements:
 Single Identifier Approach: In the Copilot-integrated workflow, we use only one identifier.
 
 - Chat ID = Copilot chat ID: Copilot's native chat identifier serves as the chat ID.
-- No Dual IDs: Do not create separate `chat_session_id` or similar.
+- No Dual IDs: Do not create separate secondary identifiers for the same chat.
 - Simplified Metadata: All artifacts reference the same chat ID consistently (`chat_id` field).
 - Unified Logging: The `ai-logs/yyyy/mm/dd/<chat-id>/` structure uses the chat ID directly.
 

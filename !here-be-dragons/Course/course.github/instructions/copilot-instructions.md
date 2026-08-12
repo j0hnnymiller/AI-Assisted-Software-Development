@@ -118,18 +118,18 @@ Create a new feature for...
 
 ### 3. New Chat = New Conversation File
 
-**CRITICAL**: Each new AI chat session MUST create a NEW conversation log file.
+**CRITICAL**: Each new AI chat MUST create a NEW conversation log file.
 
 #### Rules
 
 - ✅ Each chat gets unique `ai-logs/yyyy/mm/dd/<chat-id>/conversation.md`
 - ✅ Each chat gets unique `ai-logs/yyyy/mm/dd/<chat-id>/summary.md`
 - ❌ NEVER reuse or append to existing conversation files
-- ❌ NEVER share conversation files across multiple chat sessions
+- ❌ NEVER share conversation files across multiple chats
 
 #### Rationale
 
-- Prevents cross-contamination between sessions
+- Prevents cross-contamination between chats
 - Maintains clear provenance trail
 - Enables proper context isolation
 - Facilitates debugging and audit
@@ -172,7 +172,7 @@ Add to `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md`:
 
 Ensure `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/summary.md` exists with:
 
-- Session objectives
+- Chat objectives
 - Work completed
 - Key decisions
 - Artifacts produced
@@ -319,7 +319,7 @@ Before completing any AI-assisted work:
 
 - [ ] ✅ Model uses `<provider>/<model>@<version>` format (not interface)
 - [ ] ✅ Operator is GitHub username (not "USER")
-- [ ] ✅ Chat ID is unique to this session
+- [ ] ✅ Chat ID is unique to this chat
 - [ ] ✅ All 11 required metadata fields present
 - [ ] ✅ Timestamps in ISO8601 format
 - [ ] ✅ Task durations calculated
@@ -360,7 +360,7 @@ model: "anthropic/claude-3.5-sonnet@2024-10-22" # CORRECT
 ### ❌ Reusing Conversation Files
 
 ```
-ai-logs/2025/10/15/session-1/conversation.md
+ai-logs/2025/10/15/reused-chat-log/conversation.md
   (appending multiple chats here)  # WRONG
 ```
 

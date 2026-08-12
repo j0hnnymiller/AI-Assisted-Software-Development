@@ -1,4 +1,17 @@
 ---
+ai_generated: true
+operator: "johnmillerATcodemag-com"
+chat_id: "apply-ai-output-conformance-20260812"
+prompt: |
+  Generate a Go-specific evergreen software development instruction file with full AI provenance requirements.
+started: "2026-08-12T12:36:49Z"
+ended: "2026-08-12T12:50:00Z"
+task_durations:
+  - task: "conformance remediation"
+    duration: "00:13:11"
+total_duration: "00:13:11"
+ai_log: "ai-logs/2026/08/12/apply-ai-output-conformance-20260812/conversation.md"
+source: "johnmillerATcodemag-com"
 mode: chat
 model: "anthropic/claude-3.5-sonnet@2024-10-22"
 tools: ["create", "edit", "read"]

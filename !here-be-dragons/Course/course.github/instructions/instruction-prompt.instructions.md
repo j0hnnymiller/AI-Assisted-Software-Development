@@ -23,7 +23,7 @@ applyTo: "**/*.instructions.prompt.md"
 
 This file provides mandatory requirements for all prompt files that generate instruction files (i.e., prompts that create `*.instructions.md` files).
 
-**Important**: Follow [`.github/instructions/copilot-instructions.md`](.github/instructions/copilot-instructions.md) for model format, conversation logging, and quality requirements.
+**Important**: Follow [`copilot-instructions.md`](copilot-instructions.md) for model format, conversation logging, and quality requirements.
 
 ## Applies To
 
