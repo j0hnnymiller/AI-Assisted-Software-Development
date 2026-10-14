@@ -1,0 +1,36 @@
+{
+  "root": "c:\\git",
+  "maxDepth": 3,
+  "include": [".github/**", "AGENTS.md", "CLAUDE.md", ".vscode/mcp.json"],
+  "exclude": [".github/.stfolder/**", ".github/github-config-sync.json"],
+  "skipDirs": [
+    "node_modules",
+    "archive",
+    "bin",
+    "obj",
+    ".venv",
+    "__pycache__",
+    ".archive",
+    "!here-be-dragons"
+  ],
+  "defaultMode": "sync",
+  "repos": {
+    "Teleflex/*": { "mode": "report" }
+  },
+  "files": {
+    ".github/instructions/ai-assisted-output.instructions.md": {
+      "supersedes": [
+        "240b85261080f5d3",
+        "3d5d8c8db92022a6",
+        "4cc935b45e0be301",
+        "555180293c57cc32",
+        "56609c1609c0e2a8",
+        "97969d80591e6cde",
+        "9858b99f2ac48081",
+        "b851678d738d071b",
+        "f645e8296592b6c1"
+      ],
+      "consolidated": "2026-10-14T15:58:18.5750549Z"
+    }
+  }
+}

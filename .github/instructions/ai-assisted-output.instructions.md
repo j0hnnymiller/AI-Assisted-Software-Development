@@ -17,6 +17,12 @@ task_durations:
 total_duration: "00:30:00"
 ai_log: "ai-logs/2026/01/20/generate-ai-output-policy-20260120/conversation.md"
 source: ".github/prompts/create-ai-assisted-output-instructions.prompt.md"
+revisions:
+  - chat_id: "create-github-config-sync-agent-20261014"
+    model: "anthropic/claude-opus-4.5"
+    date: "2026-10-14"
+    change: "Merged timestamp/YAML/summary checklist items and Chat Summary heading from zeus/zeus.academia.3b; AI-slop rule from Messer"
+    ai_log: "ai-logs/2026/10/14/create-github-config-sync-agent-20261014/conversation.md"
 applyTo: "**/*"
 ---
 
@@ -149,7 +155,7 @@ source: "<creator or prompt path>"
 ### Minimal `summary.md` template
 
 ```markdown
-# Session Summary
+# Chat Summary
 
 - Chat ID: <chat-id>
 - Date: <YYYY-MM-DD>
@@ -181,6 +187,7 @@ source: "<creator or prompt path>"
 - Prefer lowercase descriptive artifact filenames.
 - README entries are required for durable artifacts; optional for temporary drafts.
 - Files in `docs/`, all README files (e.g., `README.md`, `docs/README.md`), and files in the project root are exempt from token optimization requirements and should target human technical readers with full detail and explanation.
+- In those human-facing files, avoid AI slop: no generic filler, repetition, vague claims, inflated introductions, canned conclusions, or polished text without concrete information.
 
 ## Quality checklist
 
@@ -188,6 +195,9 @@ source: "<creator or prompt path>"
 - [ ] `model` has provider/model@version format
 - [ ] `chat_id` and `ai_log` present
 - [ ] Prompt and timestamps present
+- [ ] Timestamps are real and consistent: `ended` is later than `started`, `ended - started >= total_duration`, and task durations sum to `total_duration` (no copied placeholder timestamps)
+- [ ] Front matter parses as valid YAML; in `task_durations`, each `duration:` key aligns with the `task:` key of the same list item
+- [ ] `summary.md` chronology is consistent: any "Created" timestamp is at or after `ended` and after every event it describes
 - [ ] `conversation.md` exists at referenced path
 - [ ] `summary.md` exists for the chat
 - [ ] README updated for durable artifacts
