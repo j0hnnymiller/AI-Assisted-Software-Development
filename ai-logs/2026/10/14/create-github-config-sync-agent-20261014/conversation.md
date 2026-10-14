@@ -86,3 +86,43 @@ and "Chat Summary" heading. Merged from Messer: AI-slop rule for human-facing fi
 
 - `.github/instructions/ai-assisted-output.instructions.md` - merged canonical version (revisions entry added)
 - `.github/github-config-sync.json` - supersedes for that file
+
+### 4
+
+[2026-10-14T16:20:00Z] johnmillerATcodemag-com
+
+```text
+Set the client repo (Teleflex/*) to "mode": "report" in the settings file.
+@github-config-sync plan a sync for .github/instructions/ai-assisted-output.instructions.md
+```
+
+[2026-10-14T16:40:00Z] anthropic/claude-opus-4.5
+
+```text
+Added wildcard repo keys (Get-RepoConfig) and set Teleflex/* to report. Added -Path filter to Sync-GithubConfig.ps1
+so a rollout can be scoped to one file (unscoped -Apply would also write 28 other pending files).
+Dry-run plan: 17 repos update; 13 writable (sync), 4 Teleflex report-only. No writes made.
+```
+
+**Artifacts Produced**:
+
+- `.github/skills/github-config-distribute/scripts/Sync-GithubConfig.ps1` - `-Path` filter
+- `.github/skills/github-config-inventory/scripts/GithubConfigSync.psm1` - `Get-RepoConfig` wildcard repo keys
+
+### 5
+
+[2026-10-14T16:45:00Z] johnmillerATcodemag-com
+
+```text
+any repo starting with a date should be ignored. i.e. 20260921-aiasd-green
+repos zeus.academia.3a, zeus.academia.3, zeus.academia.2 should be ignored.
+apply it to all un-ignored repos
+```
+
+[2026-10-14T16:55:00Z] anthropic/claude-opus-4.5
+
+```text
+Added ignore rules (date-prefixed repo names, zeus.academia.2/.3/.3a). Applied scoped sync with -Apply -Commit:
+10 repos committed on chore/sync-github-config-20261014 (1 file each, trees clean); 4 Teleflex skipped (report).
+Nothing pushed.
+```

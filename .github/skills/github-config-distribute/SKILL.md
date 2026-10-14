@@ -25,9 +25,9 @@ Hub-and-spoke sync: this repo is the hub. Spokes only receive updates that are p
 1. Commit consolidation changes in this repo first (uncommitted canonical files are skipped).
 2. Plan (dry run, read-only):
    ```powershell
-   ./.github/skills/github-config-distribute/scripts/Sync-GithubConfig.ps1 [-Repo 'AIASD/*']
+   ./.github/skills/github-config-distribute/scripts/Sync-GithubConfig.ps1 [-Repo 'AIASD/*'] [-Path '.github/instructions/x.md']
    ```
-   Writes `%TEMP%/github-config-sync-plan.json`.
+   Writes `%TEMP%/github-config-sync-plan.json`. Use `-Path` (paths or globs) to scope a rollout to specific files; without it, `-Apply` writes every pending update/add in each repo.
 3. Present the plan per repo. Explain non-write actions:
    - `target-ahead` / `forked` → run `github-config-canonical` + `github-config-consolidate` for those files first
    - `target-only` → candidates to import here, or leave as repo-specific
@@ -35,8 +35,8 @@ Hub-and-spoke sync: this repo is the hub. Spokes only receive updates that are p
    - `blocked-secret` → fix the canonical `mcp.json`
 4. With user approval, apply:
    ```powershell
-   Sync-GithubConfig.ps1 -Repo <filter> -Apply            # creates branch, writes files
-   Sync-GithubConfig.ps1 -Repo <filter> -Apply -Commit    # also commits
+   Sync-GithubConfig.ps1 -Repo <filter> [-Path <files>] -Apply            # creates branch, writes files
+   Sync-GithubConfig.ps1 -Repo <filter> [-Path <files>] -Apply -Commit    # also commits
    ```
    Default branch: `chore/sync-github-config-<yyyyMMdd>` (`-Branch` to override). Repos with dirty working trees, `mode` other than `sync`, or an existing branch of the same name are skipped.
 5. Never push. List the pushes and PRs the user needs to make (for example `git -C <repo> push -u origin <branch>` then open a PR).

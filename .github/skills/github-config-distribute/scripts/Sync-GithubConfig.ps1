@@ -23,6 +23,8 @@ param(
   [string]$Root,
   # Target repo keys or wildcards, e.g. 'AIASD/*'.
   [string[]]$Repo,
+  # In-scope file paths or globs to limit the sync to, e.g. '.github/instructions/*.md'.
+  [string[]]$Path,
   [switch]$Apply,
   [switch]$Commit,
   [string]$Branch = "chore/sync-github-config-$(Get-Date -Format yyyyMMdd)",
@@ -60,6 +62,7 @@ foreach ($t in $targets) {
   $snap = Get-RepoSnapshot $t $Root $manifest $scope
 
   foreach ($c in $canon.Files.Values) {
+    if ($Path -and -not (Test-GlobMatch $c.Path $Path)) { continue }
     if (Test-GlobMatch $c.Path $repoExclude) { continue }
     $fcfg = if ($manifest.files.ContainsKey($c.Path)) { $manifest.files[$c.Path] } else { @{} }
     $distribute = if ($fcfg.ContainsKey('distribute')) { $fcfg.distribute } else { 'existing' }
@@ -85,6 +88,7 @@ foreach ($t in $targets) {
     $plan.Add([pscustomobject]@{ Repo = $key; Mode = $mode; Path = $c.Path; Action = $action; Source = $c.FullPath; Target = (Join-Path $t $c.Path) })
   }
   foreach ($tf in $snap.Files.Values) {
+    if ($Path -and -not (Test-GlobMatch $tf.Path $Path)) { continue }
     if (-not $canon.Files.ContainsKey($tf.Path)) {
       $plan.Add([pscustomobject]@{ Repo = $key; Mode = $mode; Path = $tf.Path; Action = 'target-only'; Source = $null; Target = $tf.FullPath })
     }
