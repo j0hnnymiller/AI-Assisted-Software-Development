@@ -12,7 +12,8 @@
     "__pycache__",
     ".archive",
     "!here-be-dragons",
-    "CODE-Presents"
+    "CODE-Presents",
+    "dga"
   ],
   "defaultMode": "sync",
   "repos": {
@@ -21,7 +22,10 @@
     "zeus/zeus.academia.3": { "mode": "ignore" },
     "zeus/zeus.academia.3a": { "mode": "ignore" },
     "[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*": { "mode": "ignore" },
-    "*/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*": { "mode": "ignore" }
+    "*/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*": { "mode": "ignore" },
+    "Clever.Video": { "mode": "ignore" },
+    "unslop-copilot": { "mode": "ignore" },
+    "dga/Architecture Documentation": { "mode": "ignore" }
   },
   "files": {
     ".github/instructions/ai-assisted-output.instructions.md": {
