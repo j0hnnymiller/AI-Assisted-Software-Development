@@ -14,14 +14,22 @@ total_duration: "00:01:00"
 ai_log: "ai-logs/2025/10/23/optimize-instructions-20251023/conversation.md"
 source: "optimization-task"
 applyTo: "**/*.prompt.md"
+revisions:
+  - chat_id: "convert-prompt-files-to-skills-20261016"
+    model: "OpenAI/GPT-6@Luna"
+    date: "2026-10-16"
+    change: "Clarified when to use prompt files versus workspace skills after migrating the prompt collection."
+    ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 ---
 
 # AI Instructions: GitHub Copilot Promptfile Creation
 
 Create task-oriented promptfiles for GitHub Copilot's promptfile system.
 
-**Purpose**: Promptfiles define reusable tasks that can be invoked via `@promptfile-name` in Copilot.
+**Purpose**: Prompt files define single, focused tasks that can be invoked as slash commands in Copilot.
 **Not for**: Behavioral instructions (use agents), repo-wide rules (use `.github/instructions/`), one-off chats.
+
+Use a **skill** for a repeatable multi-step workflow or when the task needs bundled scripts, templates, or reference files. Use a prompt file for a single focused task with parameterized input.
 
 ## Promptfile Structure
 
@@ -605,7 +613,7 @@ After creating a promptfile, verify:
 
 ### 2. Invocation
 
-- Type `@{your-promptfile-name}` in Copilot chat
+- Type `/{your-promptfile-name}` in Copilot chat
 - Copilot recognizes and loads it
 - Instructions are executed
 
@@ -658,7 +666,8 @@ See [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#
 
 | Need               | Use                                   |
 | ------------------ | ------------------------------------- |
-| Reusable task      | Promptfile (`.github/prompts/`)       |
+| Single focused task | Prompt file (`.github/prompts/`)       |
+| Multi-step workflow or bundled resources | Skill (`.github/skills/<name>/SKILL.md`) |
 | Behavioral persona | Agent (`.github/copilot/agents/`)     |
 | Repo-wide rule     | Instruction (`.github/instructions/`) |
 | One-off task       | Just type it in chat                  |

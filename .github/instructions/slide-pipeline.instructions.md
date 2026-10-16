@@ -16,15 +16,21 @@ total_duration: "00:15:00"
 ai_log: "ai-logs/2026/03/13/slide-pipeline-spec-20260313/conversation.md"
 source: "johnmillerATcodemag-com"
 applyTo: "slides/**"
+revisions:
+  - chat_id: "convert-prompt-files-to-skills-20261016"
+    model: "OpenAI/GPT-6@Luna"
+    date: "2026-10-16"
+    change: "Updated slide-pipeline references from the removed merge prompt to its workspace skill."
+    ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 ---
 
 # Slide Pipeline Specification
 
 This document specifies the authoring, assembling, and exporting of course slide decks
-using the Copilot agent prompt pipeline.
+using the Copilot workspace skill pipeline.
 
-The single pipeline entry point is `.github/copilot/Promptfiles/merge-marp-decks.prompt.md`, a
-Copilot agent-mode prompt that reads the YAML manifest, merges individual slide files
+The single pipeline entry point is `.github/skills/merge-marp-decks/SKILL.md`, a
+workspace skill that reads the YAML manifest, merges individual slide files
 into a single Marp deck, generates an editable PPTX using python-pptx, and finalizes the
 PPTX using PowerPoint COM automation — all in one AI-driven run.
 
@@ -59,7 +65,7 @@ PPTX using PowerPoint COM automation — all in one AI-driven run.
 6. [Merge phase — full slide order per section](#6-merge-phase--full-slide-order-per-section)
 7. [PPTX generation phase](#7-pptx-generation-phase)
 8. [PPTX finalization phase](#8-pptx-finalization-phase)
-9. [Agent prompt invocation](#9-agent-prompt-invocation)
+9. [Agent skill invocation](#9-agent-skill-invocation)
 10. [File naming conventions](#10-file-naming-conventions)
 11. [Constraints and known limitations](#11-constraints-and-known-limitations)
 12. [Verification Checklist](#12-verification-checklist)
@@ -82,8 +88,9 @@ slides/
 ├── manifests/     # YAML configuration files — EDITABLE
 │   └── <course>-<format>-<day>.manifest.md
 
-.github/prompts/
-└── merge-marp-decks.prompt.md  # Pipeline entry point: Copilot agent prompt
+.github/skills/
+└── merge-marp-decks/
+    └── SKILL.md  # Pipeline entry point: workspace skill
 ```
 
 **🚫 CRITICAL — DO NOT EDIT MERGED FILES**:
@@ -288,7 +295,7 @@ front matter and then the first section's block.
 > **⚠️ IMPORTANT**: The merged output file (e.g., `slides/merged/aiasd-311-monday-draft.md`)
 > is a **generated artifact**. Do not manually edit this file. All changes must be made
 > to individual source slide files in `slides/marp/` or to the manifest YAML
-> structure. Re-run `.github/copilot/Promptfiles/merge-marp-decks.prompt.md` to regenerate the deck.
+> structure. Re-run `.github/skills/merge-marp-decks/SKILL.md` to regenerate the deck.
 > The generated draft markdown file is **replace-only**: never update it incrementally,
 > never patch specific sections, and never treat the previous draft contents as source material.
 > Every rerun must rebuild from manifest plus source decks and replace the entire `*-draft.md` file.
@@ -535,16 +542,13 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 
 ---
 
-## 9. Agent prompt invocation
+## 9. Agent skill invocation
 
 ```
 
-1. Open .github/copilot/Promptfiles/merge-marp-decks.prompt.md in VS Code
-2. Click "Run Prompt" in the Copilot chat panel (agent mode)
-   — or —
-   Type in Copilot chat: /merge-marp-decks
-3. Optionally override $MANIFEST, $OUTPUT_FILE, $PPTX_SCRIPT, $PPTX_OUTPUT
-   by editing the Default Values section of the prompt before running
+1. Open `.github/skills/merge-marp-decks/SKILL.md` in VS Code
+2. In Copilot chat, type `/merge-marp-decks`
+3. Include a manifest path in the invocation, or omit it to use the skill's fallback source discovery
 
 ```
 
@@ -569,7 +573,7 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 │
 ▼
 ┌──────────────────────────────────────────────────────────────┐
-│ 3. Run merge-marp-decks.prompt.md in Copilot agent mode │
+│ 3. Run `/merge-marp-decks` as a workspace skill          │
 │ │
 │ Agent merge phase — for each section emits: │
 │ a. Module list slide (all modules; current highlighted) │
@@ -629,7 +633,7 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 | Slide title fallback  | If a source file has no `## H2` heading, the file stem is used as the agenda bullet. Ensure every content file has at least one `## H2` heading.                                                                                   |
 | Empty sections        | Sections with no source files produce only a module list slide and an empty PPTX section group.                                                                                                                                    |
 | Image paths           | Images referenced in individual slides must exist at `slides/marp/images/`; the merge step rewrites them to `marp/images/` so the merged deck still renders correctly.                                                             |
-| Working directory     | Run the agent prompt from the repo root: `C:\git\AIASD\AI-Assisted-Software-Development-Course`.                                                                                                                                   |
+| Working directory     | Invoke the skill from the repository root: `C:\git\AIASD\AI-Assisted-Software-Development-Course`.                                                                                                                                   |
 
 ---
 
@@ -697,6 +701,6 @@ Expected PPTX slide order:
 | Add a new slide file                  | Create `slides/marp/<topic>.md`; add its path to the YAML manifest under the appropriate section                                              |
 | Add a new section                     | Append a `- name: … decks: …` block to the YAML manifest; all module list slides update automatically on next run                             |
 | Reorder sections                      | Change the order in the YAML manifest; module list slides re-generate in the new order                                                        |
-| Skip module list slides for a section | Add a manifest flag (e.g. `no_injected_slides: true`) and update the prompt to honour it                                                      |
+| Skip module list slides for a section | Add a manifest flag (e.g. `no_injected_slides: true`) and update the skill to honour it                                                      |
 | Use a branded PPTX template           | Extend `generate_pptx.py` to load a reference `.pptx` and copy its slide master before adding slides                                          |
-| Automate on push                      | Add a GitHub Actions step that runs the agent prompt via `gh copilot suggest` or invokes the python-pptx script directly after a manual merge |
+| Automate on push                      | Add a GitHub Actions step that invokes the workspace skill or the python-pptx script directly after a manual merge |

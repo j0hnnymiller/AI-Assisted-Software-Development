@@ -13,6 +13,12 @@ task_durations:
 total_duration: "00:01:00"
 ai_log: "ai-logs/2025/10/23/optimize-instructions-20251023/conversation.md"
 source: "optimization-task"
+revisions:
+  - chat_id: "convert-prompt-files-to-skills-20261016"
+    model: "OpenAI/GPT-6@Luna"
+    date: "2026-10-16"
+    change: "Updated the instruction-prompt workflow reference to the migrated workspace skill."
+    ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 applyTo: "**/*.instructions.prompt.md"
 ---
 
@@ -153,7 +159,7 @@ prompt_metadata:
 **Option 1**: Use meta-prompt
 
 ```
-Submit .github/prompts/meta/create-instruction-files-prompt-file.prompt.md
+Use `.github/skills/create-instruction-files-prompt-file/SKILL.md`.
 ```
 
 **Option 2**: Manual

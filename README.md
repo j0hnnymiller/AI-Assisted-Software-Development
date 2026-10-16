@@ -27,35 +27,9 @@ This keybinding opens markdown files in a side-by-side preview and copies the ed
 
 This requires the `multiCommand` extension and is configured to trigger when editing Marp markdown files (`.mdc`).
 
-## Prompts
+## Agent Skills
 
-[x] #file:check-context.prompt.md apply this prompt to files in the .github/instructions folder
-
-[x] Update the readme.md file with current state of the application. Include mermaid C4 diagrams.
-
-[x] #codebase analyze the code and report any deviations from the instructions in the .github/instructions folder
-
-[x] Looking at the current #codebase, what tests are need and missing?
-
-[x] Looking at the current #codebase, what tests are need and missing in order to verify a successful migration to Vue 3.4?
-
-[x] Looking at the current #codebase, what needs refactoring?
-
-[x] Looking at the current #codebase, what are security concerns? Create issues from your findings.
-
-[x] Analyze the #codebase and create github issues for any dead code you find
-
-[x] Analyze the files in the .github/instructions folder and report where they no longer represent best practices
-
-[ ] #codebase analyze the code and report any deviations from the instructions in the .github/instructions folder
-
-[ ] Create tests for #file:validatorsCustom.js
-
-[ ] Look at the current #codebase and find the bugs?
-
-[ ] Add comprehensive error logging architecture
-
-[ ] The two branches sonnet4 and gpt5 contain implementations of the comprehensive error logging architecture. The gpt5 implementation is in commit aafed869e3c243b758d7a89cf29f19fa70c41f8a. The sonnet4 implementation is in commit fed7e9e927e458fa95f30ef91a3bbfcb201e20ea. Review each implementation and report the pros and cons of each.
+Reusable task workflows are maintained as workspace skills in [`.github/skills/`](.github/skills/). Each skill has a `SKILL.md` entry point and can include supporting scripts or references. The prompt-to-skill migration is documented in the [chat log](ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md) and [summary](ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/summary.md).
 
 ## AI-Assisted Artifacts & Provenance
 
@@ -111,12 +85,12 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Meta-Prompts (Prompt Generators)
 
-- [`.github/prompts/meta/create-instruction-files-prompt-file.prompt.md`](.github/prompts/meta/create-instruction-files-prompt-file.prompt.md) — Generates new instruction-generating prompts with AI provenance built-in ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
+- [`.github/skills/create-instruction-files-prompt-file/SKILL.md`](.github/skills/create-instruction-files-prompt-file/SKILL.md) — Generates new instruction-generating prompts with AI provenance built-in ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
 
 ### Instruction-Generating Prompts
 
-- [`.github/prompts/create-chatmode-instructions-file.prompt.md`](.github/prompts/create-chatmode-instructions-file.prompt.md) — Generates comprehensive authoring guidelines for creating custom GitHub Copilot chat modes
-- [`.github/prompts/merge-marp-decks.prompt.md`](.github/prompts/merge-marp-decks.prompt.md) — Merges individual Marp slide decks from `slides/marp/` into a single combined presentation ([chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md))
+- [`.github/skills/create-chatmode-instructions/SKILL.md`](.github/skills/create-chatmode-instructions/SKILL.md) — Generates comprehensive authoring guidelines for creating custom GitHub Copilot chat modes
+- [`.github/skills/merge-marp-decks/SKILL.md`](.github/skills/merge-marp-decks/SKILL.md) — Merges individual Marp slide decks from `slides/marp/` into a single combined presentation ([chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md))
 
 ### Notable Artifacts
 
@@ -147,7 +121,7 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes section divider slides, module progression context, and speaker notes coverage across all slide blocks
   - Provenance: [Chat log](ai-logs/2026/05/04/merge-marp-thursday-ge-20260504/conversation.md) | [Summary](ai-logs/2026/05/04/merge-marp-thursday-ge-20260504/summary.md)
 
-- **VTT Content Summarizer Promptfile** ([`.github/prompts/summarize-vti-content.prompt.md`](.github/prompts/summarize-vti-content.prompt.md))
+- **VTT Content Summarizer Skill** ([`.github/skills/summarize-vti-content/SKILL.md`](.github/skills/summarize-vti-content/SKILL.md))
   - Analyzes VTT (Video Text Track) files from class recordings and generates structured summaries
   - Extracts timing information, section breakdowns, key topics, and action items
   - Includes sample files: [VTT input](<past-class-recordings/2026-02/AI-Assisted%20Software%20Development%20with%20GitHub%20Copilot%20(Mon%20Afternoon).vtt>) | [Generated summary](<past-class-recordings/2026-02/AI-Assisted%20Software%20Development%20with%20GitHub%20Copilot%20(Mon%20Afternoon)-summary.md>)
@@ -177,7 +151,7 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - 11 slides covering inline chat (Ctrl+I), right-click explain, test code understanding, coverage report generation (calculator service example), gap identification, prioritized implementation plans, and hands-on exercises
   - Includes comprehensive speaker notes with timing guidance, live demo instructions, audience interaction points, and exercise facilitation tips
   - Provenance: [Chat log](ai-logs/2026/03/18/code-explanation-analysis-marp-20260318/conversation.md)
-- **Merge Marp Decks Promptfile** ([`.github/prompts/merge-marp-decks.prompt.md`](.github/prompts/merge-marp-decks.prompt.md))
+- **Merge Marp Decks Skill** ([`.github/skills/merge-marp-decks/SKILL.md`](.github/skills/merge-marp-decks/SKILL.md))
   - Defines the discover→strip→assemble workflow for merging `slides/marp/*.deck.md` into a combined presentation
   - Includes acceptance criteria: all decks represented, section dividers, speaker notes on every slide, valid front matter
   - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md) | [Summary](ai-logs/2026/03/18/merge-marp-decks-20260318/summary.md)
@@ -238,13 +212,13 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 - **Prompt Authoring Instructions** ([`.github/instructions/prompt-file.instructions.md`](.github/instructions/prompt-file.instructions.md))
   - Comprehensive guidelines for creating effective, well-structured repository prompts
-  - Generated from: [`.github/prompts/create-prompt-file-instructions-file.prompt.md`](.github/prompts/create-prompt-file-instructions-file.prompt.md)
+  - Generated from: [`.github/skills/create-prompt-file-instructions-file/SKILL.md`](.github/skills/create-prompt-file-instructions-file/SKILL.md)
   - Provenance: [Chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md)
 
 - **Instruction Validation Report** ([`validation-report-20251015-212137.md`](validation-report-20251015-212137.md))
   - Comprehensive analysis of instruction file conflicts and inconsistencies
   - Identifies 7 issues (1 high, 4 medium, 3 low severity) with fixes applied to critical issues
-  - Generated from: [`.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md`](.github/copilot/Promptfiles/meta/validate-and-improve-instructions.prompt.md)
+  - Generated from: [`.github/skills/meta-ai-validate-and-improve-instructions/SKILL.md`](.github/skills/meta-ai-validate-and-improve-instructions/SKILL.md)
   - Status: Critical fixes applied (Option C executed - 4 issues resolved, 3 deferred for refactoring)
   - Provenance: [Chat log](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/conversation.md) | [Summary](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/summary.md)
   - Verification: [Fixes verified 2025-10-16](validation-fixes-verified-20251016.md) ([chat log](ai-logs/2025/10/16/resume-validation-fixes-20251016/conversation.md))

@@ -31,6 +31,12 @@ tags: ["instructions", "documentation", "authoring-guide", "ai-optimization"]
 owner: "Development Team"
 reviewedDate: "2026-02-11"
 nextReview: "2026-05-11"
+revisions:
+  - chat_id: "convert-prompt-files-to-skills-20261016"
+    model: "OpenAI/GPT-6@Luna"
+    date: "2026-10-16"
+    change: "Updated the instruction-authoring workflow reference to the migrated workspace skill."
+    ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 ---
 
 # Creating New Instruction Files
@@ -341,7 +347,7 @@ Define:
 
 ### Step 2: Use Meta-Prompt
 
-Use `.github/prompts/meta/create-instruction-files-instructions.prompt.md` in GitHub Copilot chat.
+Use [the instruction-files skill](../skills/create-instruction-files-instructions/SKILL.md) in GitHub Copilot chat.
 
 ### Step 3: Execute in Copilot
 
