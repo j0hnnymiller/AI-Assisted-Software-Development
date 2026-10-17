@@ -20,6 +20,7 @@ Repair stale slide documentation paths and recover missing provenance logs witho
 ## Key decisions
 
 - Did not fabricate original transcripts, Marp chat ID, timestamps, task durations, or an unknown model version.
+- Documented the user's acceptance of unknown historical Marp provenance as an exception limited to the existing instruction file; new slide artifacts still require complete provenance.
 - Kept the original pipeline metadata and recovered its missing log at the exact path referenced by the artifact.
 - Labeled the 2026-10-17 recovery record as reconstructed; its folder name is not an original chat ID.
 

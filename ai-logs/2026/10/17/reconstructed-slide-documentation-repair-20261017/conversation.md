@@ -25,6 +25,7 @@ not a claim about the original chat ID.
 - Removed the hard-coded Course repository working-directory assumption from the slide-pipeline instructions.
 - Reconstructed the slide-pipeline history from its recorded metadata and contents without inventing conversation exchanges.
 - Recorded the Marp provenance gaps explicitly; its original chat ID, dates, and task durations remain unknown.
+- The user accepted the unrecoverable Marp historical fields as a documented exception limited to that instruction file; new Marp slide artifacts remain subject to complete provenance requirements.
 
 ## Validation record
 

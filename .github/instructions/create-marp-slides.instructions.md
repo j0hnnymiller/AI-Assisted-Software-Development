@@ -22,7 +22,7 @@ revisions:
   - chat_id: "unknown"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Corrected the PPTX generator path and recorded provenance recovery limitations."
+    change: "Corrected the PPTX generator path and documented acceptance of the unrecoverable historical provenance as an exception."
     ai_log: "ai-logs/2026/10/17/reconstructed-slide-documentation-repair-20261017/conversation.md"
 ---
 
@@ -34,6 +34,16 @@ for this repository. Generated slides should be placed under `slides/marp`.
 These instructions ensure every AI-assisted slide file includes the required
 provenance metadata defined in `.github/instructions/ai-assisted-output.instructions.md`
 and follows the Copilot-specific rules in `.github/instructions/copilot-instructions.md`.
+
+## Historical provenance exception
+
+The original creation chat for this instruction file could not be verified. Its
+chat ID, model version, timestamps, and task durations are marked `unknown`;
+this is an accepted, documented exception for this file's historical creation
+metadata, not a precedent for new artifacts. The reconstruction record is
+linked in `ai_log`. New Marp slide files must still include complete,
+verifiable provenance metadata as specified in
+`.github/instructions/ai-assisted-output.instructions.md`.
 
 ## Where to put slides
 
