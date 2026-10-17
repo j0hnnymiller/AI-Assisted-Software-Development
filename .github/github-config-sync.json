@@ -18,6 +18,7 @@
   "defaultMode": "sync",
   "repos": {
     "Teleflex/*": { "mode": "report" },
+    "Teleflex/duo-app": { "mode": "ignore" },
     "zeus/zeus.academia.2": { "mode": "ignore" },
     "zeus/zeus.academia.3": { "mode": "ignore" },
     "zeus/zeus.academia.3a": { "mode": "ignore" },
