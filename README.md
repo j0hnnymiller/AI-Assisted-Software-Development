@@ -89,7 +89,6 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Instruction-Generating Prompts
 
-- [`.github/skills/create-chatmode-instructions/SKILL.md`](.github/skills/create-chatmode-instructions/SKILL.md) — Generates comprehensive authoring guidelines for creating custom GitHub Copilot chat modes
 - [`.github/skills/merge-marp-decks/SKILL.md`](.github/skills/merge-marp-decks/SKILL.md) — Merges individual Marp slide decks from `slides/marp/` into a single combined presentation ([chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md))
 
 ### Notable Artifacts
