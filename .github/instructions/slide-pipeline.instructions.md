@@ -22,6 +22,11 @@ revisions:
     date: "2026-10-16"
     change: "Updated slide-pipeline references from the removed merge prompt to its workspace skill."
     ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
+  - chat_id: "unknown"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Corrected script paths to their repository locations and removed a repository-specific working-directory assumption."
+    ai_log: "ai-logs/2026/10/17/reconstructed-slide-documentation-repair-20261017/conversation.md"
 ---
 
 # Slide Pipeline Specification
@@ -34,7 +39,7 @@ workspace skill that reads the YAML manifest, merges individual slide files
 into a single Marp deck, generates an editable PPTX using python-pptx, and finalizes the
 PPTX using PowerPoint COM automation — all in one AI-driven run.
 
-**🔒 CRITICAL INVARIANTS**: Any modifications to `scripts/generate_pptx.py` MUST preserve:
+**🔒 CRITICAL INVARIANTS**: Any modifications to `.github/scripts/generate_pptx.py` MUST preserve:
 
 1. **First Section Exception**: The first section (idx=0) MUST NOT receive the injected module list slide. That slide is only added for idx > 0.
 2. **Slide Notes (MANDATORY)**: ALL slides (injected and content) MUST have comprehensive speaker notes:
@@ -310,7 +315,7 @@ build script to produce the final editable PPTX.
 ### 7.1 Script location
 
 ```
-scripts/generate_pptx.py            (existing script invoked by the agent)
+.github/scripts/generate_pptx.py    (existing script invoked by the agent)
 ```
 
 ### 7.2 What the script produces
@@ -484,7 +489,7 @@ Default values:
 | Variable       | Default                                           |
 | -------------- | ------------------------------------------------- |
 | `$OUTPUT_FILE` | `slides/merged/aiasd-311-monday-draft.md`         |
-| `$PPTX_SCRIPT` | `scripts/generate_pptx.py`                        |
+| `$PPTX_SCRIPT` | `.github/scripts/generate_pptx.py`                |
 | `$PPTX_OUTPUT` | `slides/output/aiasd-311-monday-draft.pptx`       |
 
 ---
@@ -498,7 +503,7 @@ automation to apply text shrink-to-fit and other formatting corrections.
 
 ```
 
-scripts/finalize_pptx_local.ps1 (PowerShell script, invoked by the agent)
+.github/scripts/finalize_pptx_local.ps1 (PowerShell script, invoked by the agent)
 
 ````
 
@@ -525,7 +530,7 @@ stop, report the lock, and instruct the user to close PowerPoint before retrying
 ### 8.5 Execution
 
 ```powershell
-pwsh -File scripts/finalize_pptx_local.ps1 -Path "slides/output/<name>-draft.pptx"
+pwsh -File .github/scripts/finalize_pptx_local.ps1 -Path "slides/output/<name>-draft.pptx"
 ````
 
 ### 8.6 Expected output
@@ -585,7 +590,7 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ Agent PPTX phase │
-│ Runs scripts/generate_pptx.py │
+│ Runs .github/scripts/generate_pptx.py │
 │ - Agenda and content slides │
 │ - <p14:section> XML groups per section │
 │ │
@@ -597,7 +602,7 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ Agent finalization phase                                     │
-│ Runs scripts/finalize_pptx_local.ps1                         │
+│ Runs .github/scripts/finalize_pptx_local.ps1                 │
 │ - Shrink-to-fit overflowing text frames                      │
 │ - Fallback font-size adjustment for overflow                 │
 │                                                              │
@@ -614,7 +619,7 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 | ------------------------------------- | ------------------------------ | -------------------------- |
 | `<course>-<format>-<day>.manifest.md` | `aiasd-311-monday.manifest.md` | Manifest file              |
 | `<course>-<format>-<day>-draft.md`    | `aiasd-311-monday-draft.md`    | Merged Marp deck           |
-| `generate_pptx.py`                    | `scripts/generate_pptx.py`     | Existing PPTX build script |
+| `generate_pptx.py`                    | `.github/scripts/generate_pptx.py`    | Existing PPTX build script |
 | `<course>-<format>-<day>-draft.pptx`  | `aiasd-311-monday-draft.pptx`  | Editable PPTX output       |
 
 `course` = identifier prefix (e.g. `aiasd`)
@@ -633,13 +638,13 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 | Slide title fallback  | If a source file has no `## H2` heading, the file stem is used as the agenda bullet. Ensure every content file has at least one `## H2` heading.                                                                                   |
 | Empty sections        | Sections with no source files produce only a module list slide and an empty PPTX section group.                                                                                                                                    |
 | Image paths           | Images referenced in individual slides must exist at `slides/marp/images/`; the merge step rewrites them to `marp/images/` so the merged deck still renders correctly.                                                             |
-| Working directory     | Invoke the skill from the repository root: `C:\git\AIASD\AI-Assisted-Software-Development-Course`.                                                                                                                                   |
+| Working directory     | Invoke the skill from the repository root so repository-relative manifest, slide, and output paths resolve correctly.                                                                                                               |
 
 ---
 
 ## 12. Verification Checklist
 
-**⚠️ USE THIS CHECKLIST** when modifying `scripts/generate_pptx.py` or the merge logic to prevent regressions:
+**⚠️ USE THIS CHECKLIST** when modifying `.github/scripts/generate_pptx.py` or the merge logic to prevent regressions:
 
 ### Before Committing Changes
 
@@ -660,9 +665,9 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 - [ ] **Markdown Bold Test**: Open PPTX and verify markdown emphasis survives in content placeholders
   - [ ] `**bold**` text renders as actual bold font, not literal asterisks
   - [ ] Bullets such as `- **Questions are always welcome — ask anytime!**` remain bold in the final PPTX
-  - [ ] Bold formatting still exists after running `finalize_pptx_local.ps1`
+  - [ ] Bold formatting still exists after running `.github/scripts/finalize_pptx_local.ps1`
 
-- [ ] **Code Verification**: Confirm the following patterns exist in `generate_pptx.py`
+- [ ] **Code Verification**: Confirm the following patterns exist in `.github/scripts/generate_pptx.py`
   - [ ] Loop uses `enumerate(sections_cfg)` to get section index
   - [ ] Injected module list slides wrapped in `if idx > 0:` check
   - [ ] All `add_*_slide()` functions accept `note` parameter

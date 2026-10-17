@@ -2,22 +2,28 @@
 ai_generated: true
 model: "openai/gpt-4o@unknown"
 operator: "johnmillerATcodemag-com"
-chat_id: "create-marp-slides-instructions-<timestamp>"
+chat_id: "unknown"
 prompt: |
   Create instructions and templates for producing Marp slide files for this
   repository. Slides must be placed in slides/marp and every
   generated slide file must include AI provenance metadata that conforms to
   `.github/instructions/ai-assisted-output.instructions.md` and follow
   Copilot guidance in `.github/instructions/copilot-instructions.md`.
-started: "<auto>"
-ended: "<auto>"
+started: "unknown"
+ended: "unknown"
 task_durations:
   - task: "authoring"
-    duration: "00:00:00"
-total_duration: "00:00:00"
-ai_log: "ai-logs/<yyyy>/<mm>/<dd>/create-marp-slides-instructions-<timestamp>/conversation.md"
+    duration: "unknown"
+total_duration: "unknown"
+ai_log: "ai-logs/2026/10/17/reconstructed-create-marp-slides-instructions-20261017/conversation.md"
 source: "johnmillerATcodemag-com"
 applyTo: "slides/marp/**"
+revisions:
+  - chat_id: "unknown"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Corrected the PPTX generator path and recorded provenance recovery limitations."
+    ai_log: "ai-logs/2026/10/17/reconstructed-slide-documentation-repair-20261017/conversation.md"
 ---
 
 # Create Marp Slides Instructions
@@ -132,7 +138,7 @@ Explain each goal briefly. Provenance ensures we can trace AI-assisted work back
 - Use `**double asterisks**` around text that should appear bold in the PPTX output
 - Bold formatting works in headings, title placeholders, body text, bullet lists, and markdown table cells
 - Multiple bold sections on one line are supported
-- The PPTX generator (`scripts/generate_pptx.py`) automatically parses bold syntax, removes the literal markers, and applies `font.bold = True` to the appropriate text runs
+- The PPTX generator (`.github/scripts/generate_pptx.py`) automatically parses bold syntax, removes the literal markers, and applies `font.bold = True` to the appropriate text runs
 - Placeholder autofit/finalization must preserve that emphasis in the final PPTX; bold markdown in bullets must stay bold after export
 
 Regression example:
