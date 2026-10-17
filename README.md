@@ -256,34 +256,9 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 This repository includes utility scripts for repository management and maintenance:
 
-### Branch Change Tracking
+### AI Instruction Synchronization
 
-Identify branches with changes that haven't been merged to main:
-
-- **Bash:** [`scripts/check_unmerged_branches.sh`](scripts/check_unmerged_branches.sh) - For Linux/Mac/WSL
-- **PowerShell:** [`scripts/check_unmerged_branches.ps1`](scripts/check_unmerged_branches.ps1) - For Windows/PowerShell Core
-
-**Usage:**
-
-```bash
-# Bash
-./scripts/check_unmerged_branches.sh
-
-# PowerShell
-.\scripts\check_unmerged_branches.ps1
-```
-
-See [`scripts/README.md`](scripts/README.md) for detailed documentation and configuration options.
-
-### Security Issue Management
-
-Scripts for managing GitHub security issues:
-
-- `close_duplicate_security_issues.ps1` - Close duplicate security issues
-- `close_latest_security_issues.ps1` - Close latest security issues
-- `close_new_security_issues.ps1` - Close new security issues
-- `close_resolved_security_issues.ps1` - Close resolved security issues
-- `emergency_security_cleanup.ps1` - Emergency security cleanup
+The PowerShell script at [`.github/scripts/sync-ai-instructions.ps1`](.github/scripts/sync-ai-instructions.ps1) synchronizes `ai-assisted-output.instructions.md` copies under `C:\git`. Preview changes with `.\.github\scripts\sync-ai-instructions.ps1 -WhatIf`. See [`.github/scripts/README.md`](.github/scripts/README.md) for parameters and details.
 
 ## Document Conversion
 
