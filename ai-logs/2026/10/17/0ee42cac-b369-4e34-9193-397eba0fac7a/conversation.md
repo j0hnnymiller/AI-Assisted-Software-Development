@@ -8,7 +8,7 @@
 
 ## Context
 
-- Inputs: divergent `.github/agents/product-manager.agent.md` and `.github/agents/senior-developer.agent.md` variants, reviewed in the config reconciliation workflow
+- Inputs: divergent `.github/agents/product-manager.agent.md`, `.github/agents/senior-developer.agent.md`, and `.github/agents/solution-architect.agent.md` variants, reviewed in the config reconciliation workflow
 - Targets: merge generally useful guidance into this repository's canonical agents
 - Constraints: retain generic scopes; exclude repo-specific or domain-specific content; do not infer unavailable model metadata
 
@@ -42,14 +42,37 @@ merge the recommended guidance into senior-developer.agent.md
 Keep the canonical agent and its current metadata as the base. Add general codebase analysis, debugging, security/performance review, and knowledge-transfer guidance; omit legacy header formatting and redundant commands.
 ```
 
+### 3 - Solution Architect
+
+[2026-10-17] User
+
+```text
+continue
+```
+
+[2026-10-17] Assistant
+
+```text
+The next fork, `.github/agents/solution-architect.agent.md`, has two independent versions and the inventory has no secret hits or uncommitted variants. I recommend retaining the current repository agent as the base, then selectively merging general content from the Course variant: identify technical/business/regulatory constraints, assess the current technology landscape, validate design against requirements and standards, and document risks/mitigations. I would exclude its obsolete prompt-file paths, legacy header format, and verbose sample commands. Should I apply this merge or move to the next divergence without editing this file?
+```
+
+[2026-10-17] User
+
+```text
+action=merge_solution_architect
+```
+
 ## Work completed
 
 - Product Manager: added clarification, decision/evidence standards, scope boundaries, escalation, and a clearer response format; excluded Academia-specific material.
 - Senior Developer: added codebase/architecture analysis, debugging, security/performance/reliability checks, and knowledge transfer; retained the canonical YAML/provenance and concise role.
+- Solution Architect: added constraint and current-system assessment, standards and technology assessment, design validation, and risk mitigation; excluded obsolete prompt paths and legacy formatting.
+- Validation passed for all three agents: front matter parsed, provenance links resolve, and `git diff --check` reported no whitespace errors.
 - Validation passed for both agents: front matter parsed, provenance links resolve, and `git diff --check` reported no whitespace errors.
 
 ## Task duration
 
 - Product Manager merge and validation: 00:01:12
 - Senior Developer merge and validation: 00:00:43
-- Total: 00:01:55
+- Solution Architect merge and validation: 00:01:00
+- Total: 00:02:55
