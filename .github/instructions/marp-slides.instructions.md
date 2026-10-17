@@ -13,6 +13,12 @@ task_durations:
 total_duration: "00:01:00"
 ai_log: "ai-logs/2025/10/23/optimize-instructions-20251023/conversation.md"
 source: "optimization-task"
+revisions:
+  - chat_id: "reconcile-diverged-files-20261016"
+    model: "OpenAI/GHT-6@Luna"
+    date: "2026-10-16"
+    change: "Added slide narrative and per-slide/deck presentation-duration requirements while preserving current provenance guidance."
+    ai_log: "ai-logs/2026/10/16/reconcile-diverged-files-20261016/conversation.md"
 applyTo: "slides/marp/**"
 ---
 
@@ -41,6 +47,7 @@ task_durations:
   - task: "draft"
     duration: "<hh:mm:ss>"
 total_duration: "<hh:mm:ss>"
+duration: "<estimated-deck-duration-hh:mm:ss>"
 ai_log: "ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md"
 source: "<source-identifier>"
 ---
@@ -62,6 +69,7 @@ task_durations:
   - task: "draft"
     duration: "00:05:00"
 total_duration: "00:05:00"
+duration: "00:02:00"
 ai_log: "ai-logs/2025/10/23/unique-id/conversation.md"
 source: "username"
 ---
@@ -71,7 +79,11 @@ source: "username"
 Content here
 
 ::: notes
-Speaker notes for this slide explaining key talking points, context, and delivery guidance. Include timing, emphasis, and audience interaction cues.
+- Time: ~00:01:00
+- Key points:
+  - Emphasize the main idea.
+  - Connect it to the audience's current work.
+- Slide narrative: Explain how the key points connect and why they matter, without simply repeating the slide text.
 :::
 
 ---
@@ -82,7 +94,11 @@ Speaker notes for this slide explaining key talking points, context, and deliver
 - More content
 
 ::: notes
-Detailed speaker notes for slide 2. Explain each bullet point, provide examples, and note any transitions to the next slide.
+- Time: ~00:01:00
+- Key points:
+  - Explain the main evidence.
+  - Transition to the next concept.
+- Slide narrative: Give a concise spoken explanation of the evidence and connect it to the next concept.
 :::
 
 ---
@@ -108,7 +124,22 @@ Speaker notes content here
 - **Audience Interaction**: Questions, polls, or discussion points
 - **Background Context**: Additional details not shown on slide
 
+**Key Points and Narrative**:
+
+- Put key points and delivery cues before a distinct `Slide narrative:` paragraph.
+- Use a short, presenter-ready narrative that connects the key points and adds relevant context; do not merely repeat slide text.
+- Keep both parts accurate, concise, and easy to scan. Use fewer key points on title or transition slides.
+
 **Placement**: Speaker notes MUST be placed immediately after each slide's content, before the next slide separator (`---`).
+
+## Presentation Duration Estimates
+
+- Each slide MUST include an estimated delivery time in its `::: notes` block using `- Time: ~HH:MM:SS`.
+- Each deck MUST include a top-level YAML `duration: "HH:MM:SS"` equal to the sum of its slide estimates. This is presentation time, not AI task `total_duration`.
+- Estimate from the speaker narrative and any examples, demos, questions, learner work, discussion, or transitions. Include only planned delivery activities; exclude breaks and logistics.
+- As a starting point, allow roughly 150-180 spoken words per minute for prepared narration, then account for visual inspection, emphasis, pauses, tool delays, learner participation, and debriefs.
+- Use concrete allocations and round to a useful 15- or 30-second increment. Do not assign the full activity duration to each slide when it spans several slides.
+- Treat estimates as a delivery plan, not a target to pad toward. Rehearse longer demos or interactive sections when practical and revise estimates from observed time.
 
 ## Generation Rules
 
@@ -120,8 +151,10 @@ Speaker notes content here
 - Capture exact prompt verbatim
 - Use ISO8601 timestamps
 - **Include comprehensive speaker notes for EVERY slide**
-- Use pandoc `:::notes` syntax for speaker notes
+- Use pandoc `::: notes` syntax for speaker notes
 - Ensure speaker notes provide delivery guidance and context
+- Put key points before a distinct `Slide narrative:` paragraph in each slide's notes
+- Include a `Time: ~HH:MM:SS` estimate in each slide's notes and set the deck `duration` to their sum
 
 **Prohibited**:
 
@@ -139,8 +172,10 @@ Speaker notes content here
 - [ ] `operator` is GitHub username
 - [ ] Timestamps in ISO8601 format
 - [ ] **Every slide has comprehensive speaker notes**
-- [ ] **Speaker notes use correct pandoc `:::notes` syntax**
+- [ ] **Speaker notes use correct pandoc `::: notes` syntax**
 - [ ] **Speaker notes include delivery guidance, timing, and context**
+- [ ] **Each slide has a plausible `Time` estimate based on its speaker notes**
+- [ ] **Deck `duration` equals the sum of its slide estimates**
 - [ ] Complete [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#post-creation-requirements-canonical)
 
 ## README Entry Template

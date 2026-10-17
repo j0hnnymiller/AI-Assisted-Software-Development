@@ -28,6 +28,14 @@
     "zeus/zeus.code-presents": { "mode": "ignore" }
   },
   "files": {
+    ".github/instructions/agent-file.instructions.md": {
+      "supersedes": [
+        "9116c4d768b08e18",
+        "b36b00a08daacd19",
+        "bf0f6a0ccf901dd8"
+      ],
+      "consolidated": "2026-10-16T22:42:43.0812365Z"
+    },
     ".github/instructions/ai-assisted-output.instructions.md": {
       "supersedes": [
         "240b85261080f5d3",
@@ -35,12 +43,29 @@
         "4cc935b45e0be301",
         "555180293c57cc32",
         "56609c1609c0e2a8",
+        "8c3d63dfc59870fd",
         "97969d80591e6cde",
         "9858b99f2ac48081",
         "b851678d738d071b",
-        "f645e8296592b6c1"
+        "f645e8296592b6c1",
+        "fba3acc115173327"
       ],
-      "consolidated": "2026-10-14T15:58:18.5750549Z"
+      "consolidated": "2026-10-16T22:42:43.0683130Z"
+    },
+    ".github/instructions/create-instruction-files.instructions.md": {
+      "supersedes": [
+        "456e567e2b422367",
+        "86efef5e7668fbf9",
+        "b968375e62585193"
+      ],
+      "consolidated": "2026-10-16T22:42:43.0871275Z"
+    },
+    ".github/instructions/marp-slides.instructions.md": {
+      "supersedes": [
+        "83a96b998adf0874",
+        "af50aef0aac027da"
+      ],
+      "consolidated": "2026-10-16T22:42:43.0981729Z"
     }
   }
 }

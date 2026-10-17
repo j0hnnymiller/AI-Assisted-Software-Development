@@ -16,6 +16,12 @@ total_duration: "00:15:00"
 ai_log: "ai-logs/2025/10/23/create-instruction-guide-20251023/conversation.md"
 source: "johnmillerATcodemag-com"
 applyTo: "**/*.instructions.md"
+revisions:
+  - chat_id: "reconcile-diverged-files-20261016"
+    model: "OpenAI/GHT-6@Luna"
+    date: "2026-10-16"
+    change: "Corrected the provenance checklist, scoped applyTo narrowly, and fixed related-document links."
+    ai_log: "ai-logs/2026/10/16/reconcile-diverged-files-20261016/conversation.md"
 ---
 
 # Creating New Instruction Files
@@ -28,9 +34,9 @@ This document provides comprehensive guidance for creating new instruction files
 
 **Related Documentation**:
 
-- [AI-Assisted Output Instructions](.github/instructions/ai-assisted-output.instructions.md)
-- [Copilot Instructions](.github/instructions/copilot-instructions.md)
-- [Instruction Prompt Requirements](.github/instructions/ai/instruction-prompt.instructions.md)
+- [AI-Assisted Output Instructions](ai-assisted-output.instructions.md)
+- [Copilot Instructions](copilot-instructions.md)
+- [Instruction Prompt Requirements](instruction-prompt.instructions.md)
 
 ## Table of Contents
 
@@ -117,7 +123,8 @@ applyTo: "**/*.{ext}" # Optional: when to auto-apply
 - `total_duration`: Sum of all task durations
 - `ai_log`: Path to conversation log
 - `source`: What created this file (username or prompt file path)
-- `applyTo`: Optional glob pattern for when to apply instructions
+- `applyTo`: Optional glob pattern controlling injection scope - **narrow this aggressively**
+  > **Token efficiency**: Each line of an instruction file multiplies across every request matching `applyTo`. A 600-line file with `applyTo: "**/*"` costs those 600 lines on every Copilot request in the repo. Prefer scoped patterns like `**/*.instructions.md` or `src/**/*.ts`.
 
 ### 3. Required Content Structure
 

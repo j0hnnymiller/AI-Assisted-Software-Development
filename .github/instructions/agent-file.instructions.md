@@ -13,290 +13,64 @@ task_durations:
 total_duration: "00:01:00"
 ai_log: "ai-logs/2025/10/23/optimize-instructions-20251023/conversation.md"
 source: "optimization-task"
+revisions:
+  - chat_id: "reconcile-diverged-files-20261016"
+    model: "OpenAI/GHT-6@Luna"
+    date: "2026-10-16"
+    change: "Replaced obsolete header-based guidance with current YAML front matter and scoped tool guidance."
+    ai_log: "ai-logs/2026/10/16/reconcile-diverged-files-20261016/conversation.md"
 applyTo: "**/*.agent.md"
 ---
 
-# AI Instructions: Custom Agent Creation
+# VS Code Custom Agent Authoring
 
-Create specialized GitHub Copilot agents with domain expertise.
+Create focused custom agents as `.agent.md` files. Use the selected harness's supported locations and current front matter schema; see [Custom agents in VS Code](https://code.visualstudio.com/docs/agent-customization/custom-agents) for authoritative, harness-specific details.
 
-## File Structure
+## Location and Naming
 
-### Naming & Location
+- Use a descriptive kebab-case filename ending in `.agent.md`.
+- Put repository/workspace agents in `.github/agents/`.
+- Do not assume workspace, user-level, organization, and enterprise agents share the same locations or capabilities.
 
-- Pattern: `<agent-name>.agent.md` (kebab-case)
-- Location: `.github/agents/`
-- Extension: `.agent.md` (required)
+## YAML Front Matter
 
-### Required Header
+Use YAML front matter for supported agent configuration. `description` is required by the repository's agent format; `name` and `tools` are common fields. Verify any additional properties against the selected harness's current schema.
 
-```markdown
-# Name: <Display Name>
-
-# Focus: <Primary domain>
-
-# Temperature: <0.0-1.0>
-
-# Style: <Communication style>
+```yaml
+---
+name: security-reviewer
+description: Review code for security issues and report evidence-based findings.
+tools: ["search", "read"]
+---
 ```
 
-### Core Sections
+- Omit `name` when the filename is a suitable display name.
+- Set the minimum `tools` needed. Omission may grant broader tool access, depending on the harness.
+- Use `model`, `target`, MCP server configuration, and other optional fields only where the selected harness documents them.
+- Do not use legacy Markdown headers such as `# Name`, `# Focus`, `# Temperature`, or `# Style` as substitutes for YAML front matter.
 
-1. Mission Statement (required)
-2. Core Expertise (required)
-3. Analysis Methodology (optional)
-4. Interactive Commands (optional)
-5. Response Format (recommended)
-6. Communication Principles (recommended)
-7. Example Interactions (recommended)
+## Agent Instructions
 
-## Header Field Specs
+In the Markdown body:
 
-### Name
+- State one focused role or a closely related set of responsibilities.
+- Describe the mission, relevant expertise, workflow, expected output, and boundaries.
+- Include examples or response structure only when they improve predictable results.
+- State what the agent should defer, ask about, or avoid when requirements are unclear.
 
-- Title Case, 2-4 words
-- Descriptive, memorable
-- Example: `# Name: Security Analyzer`
-
-### Focus
-
-- Specific domain description
-- Key capabilities, comma-separated
-- Example: `# Focus: Code security analysis, vulnerability detection, automated issue creation`
-
-### Temperature
-
-Scale:
-
-- 0.0-0.3: Deterministic (security, compliance)
-- 0.4-0.5: Balanced (documentation, analysis)
-- 0.6-0.7: Creative (brainstorming, architecture)
-- 0.8-1.0: Highly creative (rarely used)
-
-Example: `# Temperature: 0.3`
-
-### Style
-
-- 2-4 descriptive adjectives
-- Align with domain
-- Example: `# Style: Thorough, security-focused, action-oriented`
-
-## Content Structure
-
-### Mission Statement
-
-1-2 sentences defining role and value:
-
-```markdown
-You are [role] specializing in [domain]. Your mission is to [value]
-through [approach].
-```
-
-### Core Expertise
-
-5-10 specific areas:
-
-```markdown
-## Your Core Expertise
-
-- **[Area]**: Description
-- **[Area]**: Description
-```
-
-### Methodology (Optional)
-
-Multi-phase workflow:
-
-```markdown
-## Analysis Methodology
-
-### Phase 1: [Name]
-
-1. **[Step]**: Description
-2. **[Step]**: Description
-```
-
-### Interactive Commands (Optional)
-
-Command shortcuts:
-
-```markdown
-## Interactive Commands
-
-- **`@command-name`** - Description
-- **`@another-command`** - Description
-```
-
-### Response Format
-
-Output structure:
-
-```markdown
-## Response Format
-
-1. **[Icon] Section** (guidance)
-2. **[Icon] Section** (guidance)
-```
-
-### Communication Principles
-
-Behavioral guidelines:
-
-```markdown
-## Communication Guidelines
-
-- **Be [Attribute]**: Description
-- **Be [Attribute]**: Description
-```
-
-### Example Interactions
-
-Usage demonstrations:
-
-```markdown
-## Example Interactions
-
-**User**: "[request]"
-**Response**: [action/response]
-```
-
-## Templates
-
-### Security Analysis
-
-```markdown
-# Name: Security Analyzer
-
-# Focus: Code security, vulnerability detection
-
-# Temperature: 0.3
-
-# Style: Thorough, security-focused, action-oriented
-
-You are an expert security analyst...
-
-## Your Core Expertise
-
-- **Vulnerability Detection**: OWASP Top 10, CWE
-- **Static Analysis**: Security anti-patterns
-
-## Interactive Commands
-
-- **`@security-scan`** - Comprehensive assessment
-- **`@owasp-check`** - OWASP Top 10 analysis
-```
-
-### Documentation Assistant
-
-```markdown
-# Name: Documentation Assistant
-
-# Focus: Technical documentation, clarity
-
-# Temperature: 0.4
-
-# Style: Clear, helpful, detail-oriented
-
-You help create comprehensive documentation...
-
-## Capabilities
-
-- Generate API docs
-- Create READMEs
-- Produce diagrams
-
-## Interactive Commands
-
-- **`@doc-api`** - API documentation
-- **`@doc-readme`** - README creation
-```
-
-### Code Explorer
-
-```markdown
-# Name: Codebase Explorer
-
-# Focus: Rapid codebase understanding
-
-# Temperature: 0.5
-
-# Style: Systematic, educational, context-aware
-
-You help understand unfamiliar codebases...
-
-## Analysis Methodology
-
-### Phase 1: Discovery
-
-1. **Structure Mapping**: Analyze organization
-2. **Tech Stack**: Identify frameworks
-
-## Interactive Commands
-
-- **`@overview`** - Project summary
-- **`@architecture`** - Design analysis
-```
+The prose guides behavior but does not enforce authorization, sandboxing, or security boundaries. Use platform permissions and enforced controls for those requirements.
 
 ## Validation Checklist
 
-- [ ] kebab-case filename with `.agent.md`
-- [ ] Located in `.github/agents/`
-- [ ] All header fields present (Name, Focus, Temperature, Style)
-- [ ] Mission statement clear
-- [ ] Core expertise listed (5-10 items)
-- [ ] Commands use `@kebab-case` format
-- [ ] Temperature appropriate for use case
-- [ ] Style aligns with domain
+- [ ] Filename is descriptive, kebab-case, and ends in `.agent.md`.
+- [ ] File is in a location supported by the selected harness.
+- [ ] YAML front matter parses and uses documented properties.
+- [ ] Description and body state a focused role, task, and useful output expectations.
+- [ ] Tools are limited to those needed for the workflow.
+- [ ] Instructions are tested with representative in-scope and out-of-scope requests.
+- [ ] Tool availability and behavioral compliance are evaluated separately.
+- [ ] Agent appears in the picker for its intended harness and scope.
 
 ## Anti-Patterns
 
-❌ Overly broad focus
-❌ Unclear commands
-❌ Missing examples
-❌ Vague mission
-❌ Inconsistent formatting
-❌ Wrong temperature for task
-
-## Quality Rules
-
-**Be Specific**:
-
-- ❌ "Validate input"
-- ✅ "Validate email format (RFC 5322) and uniqueness"
-
-**Be Testable**:
-
-- ❌ "System works correctly"
-- ✅ "Given valid input, returns 201 with user ID"
-
-**Flag Ambiguities**:
-
-```markdown
-⚠️ **NEEDS CLARIFICATION**
-**Current**: "Password must be secure"
-**Issue**: Definition unclear
-**Suggested**: "8-20 chars, uppercase, lowercase, digit, special"
-```
-
-## Command Naming
-
-Pattern: `@verb-noun` or `@domain-action`
-
-- Use kebab-case
-- 2-3 words max
-- Group with common prefixes
-- Examples:
-  - `@security-scan`
-  - `@doc-api`
-  - `@overview`
-
-## Integration
-
-Activate: `@<modename>`
-Commands: `@security-scan`
-Switch: Activate different mode
-Context: Accesses open files, workspace
-
-## Reference
-
-See human guide for comprehensive examples and patterns.
+Avoid broad or vague roles, unnecessary tools, unsupported front matter, redundant templates, and claims that natural-language instructions guarantee safe or compliant behavior.
