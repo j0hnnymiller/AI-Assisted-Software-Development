@@ -136,10 +136,63 @@ Speaker notes content here
 
 - Each slide MUST include an estimated delivery time in its `::: notes` block using `- Time: ~HH:MM:SS`.
 - Each deck MUST include a top-level YAML `duration: "HH:MM:SS"` equal to the sum of its slide estimates. This is presentation time, not AI task `total_duration`.
-- Estimate from the speaker narrative and any examples, demos, questions, learner work, discussion, or transitions. Include only planned delivery activities; exclude breaks and logistics.
+- Use the speaker notes as the primary input. Estimate the spoken narrative and any examples, demos, questions, learner work, discussion, and transitions they call for. Check that the slide's time cue is plausible for its actual delivery plan; exclude breaks and logistics.
 - As a starting point, allow roughly 150-180 spoken words per minute for prepared narration, then account for visual inspection, emphasis, pauses, tool delays, learner participation, and debriefs.
 - Use concrete allocations and round to a useful 15- or 30-second increment. Do not assign the full activity duration to each slide when it spans several slides.
 - Treat estimates as a delivery plan, not a target to pad toward. Rehearse longer demos or interactive sections when practical and revise estimates from observed time.
+
+## Tables
+
+Use standard Markdown pipe tables for compact comparisons. The PowerPoint generator renders supported tables as native tables at 80% of slide width, so keep the number of columns and cell text small enough to remain readable.
+
+```markdown
+| Aspect  | Instructions | Prompts |
+| ------- | ------------ | ------- |
+| Scope   | Repository   | Task    |
+| Purpose | Define rules | Execute |
+```
+
+## Diagrams
+
+Use fenced Mermaid blocks for diagrams instead of ASCII art or manually aligned text. The PowerPoint generator renders Mermaid when `mmdc` or `npx` is available; without Mermaid CLI, the diagram remains code in the output. Verify the generated slide deck when a diagram is important to the presentation.
+
+For clarity, use explicit node and branch labels, restrained contrast-safe colors, and do not rely on color alone to convey meaning.
+
+````markdown
+```mermaid
+flowchart TD
+  A[Review request] --> B{Approved?}
+  B -->|Yes| C[Implement]
+  B -->|No| D[Revise]
+```
+````
+
+## Exercise Slides
+
+For exercises that need separate setup/objectives and activity/success-criteria columns, use the `Two Content` layout and `::: column` divider supported by the PowerPoint generator:
+
+```markdown
+## Exercise: <Title>
+
+**Setup and Objectives**
+
+- Prerequisite or objective
+
+::: column
+
+**Activities and Success Criteria**
+
+1. Complete the activity.
+2. Verify the result.
+
+::: notes
+- Time: ~00:05:00
+- Key point: State what participants should achieve.
+- Slide narrative: Explain how the activity applies the concept and how participants will confirm success.
+:::
+```
+
+Use `<!-- layout: Two Content -->` only when needed; if specified, the name must match a layout in the selected PowerPoint template. Divide activity time across the slides that actually carry each part of the exercise.
 
 ## Generation Rules
 
