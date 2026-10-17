@@ -8,7 +8,7 @@
 
 ## Context
 
-- Inputs: divergent `.github/agents/product-manager.agent.md`, `.github/agents/senior-developer.agent.md`, and `.github/agents/solution-architect.agent.md` variants, reviewed in the config reconciliation workflow
+- Inputs: divergent `.github/agents/product-manager.agent.md`, `.github/agents/senior-developer.agent.md`, `.github/agents/solution-architect.agent.md`, and `.github/agents/technical-writer.agent.md` variants, reviewed in the config reconciliation workflow
 - Targets: merge generally useful guidance into this repository's canonical agents
 - Constraints: retain generic scopes; exclude repo-specific or domain-specific content; do not infer unavailable model metadata
 
@@ -62,12 +62,33 @@ The next fork, `.github/agents/solution-architect.agent.md`, has two independent
 action=merge_solution_architect
 ```
 
+### 4 - Technical Writer
+
+[2026-10-17] User
+
+```text
+continue
+```
+
+[2026-10-17] Assistant
+
+```text
+The `technical-writer.agent.md` fork also has two independent versions, with no secret hits or uncommitted variants. The Course variant has useful general details missing from the canonical agent: verify documentation against actual implementation, check links and runnable examples, cover prerequisites/errors/limitations, keep docs synchronized with code changes, and write accessibly and honestly. I recommend merging those concise practices into the current agent while excluding the legacy header format, obsolete interactive-command list, and verbose generic checklists. Should I apply this merge or leave the file unchanged and move on?
+```
+
+[2026-10-17] User
+
+```text
+action=merge_technical_writer
+```
+
 ## Work completed
 
 - Product Manager: added clarification, decision/evidence standards, scope boundaries, escalation, and a clearer response format; excluded Academia-specific material.
 - Senior Developer: added codebase/architecture analysis, debugging, security/performance/reliability checks, and knowledge transfer; retained the canonical YAML/provenance and concise role.
 - Solution Architect: added constraint and current-system assessment, standards and technology assessment, design validation, and risk mitigation; excluded obsolete prompt paths and legacy formatting.
-- Validation passed for all three agents: front matter parsed, provenance links resolve, and `git diff --check` reported no whitespace errors.
+- Technical Writer: added accuracy, implementation-based verification, link/example checking, synchronization, and accessibility guidance; excluded legacy headers, obsolete commands, and verbose checklists.
+- Validation passed for all four agents: front matter parsed, provenance links resolve, and `git diff --check` reported no whitespace errors.
 - Validation passed for both agents: front matter parsed, provenance links resolve, and `git diff --check` reported no whitespace errors.
 
 ## Task duration
@@ -75,4 +96,5 @@ action=merge_solution_architect
 - Product Manager merge and validation: 00:01:12
 - Senior Developer merge and validation: 00:00:43
 - Solution Architect merge and validation: 00:01:00
-- Total: 00:02:55
+- Technical Writer merge and validation: 00:00:39
+- Total: 00:03:34
