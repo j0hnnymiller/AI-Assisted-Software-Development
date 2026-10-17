@@ -29,6 +29,10 @@ This document provides comprehensive instructions for GitHub Copilot when workin
 
 ## Core Principles
 
+### Excluded Context
+
+- Never read, search, quote, summarize, attach, or otherwise include files or content from `!here-be-dragons/` in any request, prompt, tool call, or response. Apply this exclusion to every task. If relevant material is needed, ask the user to provide it outside that folder.
+
 ### 1. Underlying Model Identification
 
 **CRITICAL**: Always identify and use the **underlying AI model**, not the interface.
