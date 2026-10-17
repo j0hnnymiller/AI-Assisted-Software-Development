@@ -47,7 +47,7 @@ task_durations:
 total_duration: "00:45:00"
 ai_log: "ai-logs/2026/02/05/dependency-management-policy-20260205/conversation.md"
 source: "johnmillerATcodemag-com"
-applyTo: "**/*"
+applyTo: "**/{package.json,requirements.txt,*.csproj,*.toml,Gemfile,go.mod}"
 ---
 
 # Dependency Management Policy
@@ -855,10 +855,6 @@ jobs:
         with:
           api-key: ${{ secrets.FOSSA_API_KEY }}
 
-      - name: Policy Validation
-        run: |
-          python scripts/validate-dependencies.py
-          python scripts/check-license-compatibility.py
 ```
 
 ### 3. Compliance Reporting
