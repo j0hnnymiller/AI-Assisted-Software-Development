@@ -24,6 +24,11 @@ revisions:
     date: "2026-10-18"
     change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
     ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
+  - chat_id: "create-implementation-skills-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Documented the implementation-skill authoring workflow in the skills overview."
+    ai_log: "ai-logs/2026/10/18/create-implementation-skills-20261018/conversation.md"
 ---
 
 # AI-Assisted-Software-Development-Course
@@ -60,6 +65,8 @@ This requires the `multiCommand` extension and is configured to trigger when edi
 Reusable task workflows are maintained as workspace skills in [`.github/skills/`](.github/skills/). Each skill has a `SKILL.md` entry point and can include supporting scripts or references. Legacy prompts are migration-only; see the [prompt migration index](.github/prompts/README.md) and the [migration log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/summary.md).
 
 Skill names use lowercase kebab-case, and each folder name matches the `name` in its `SKILL.md`. Related domain and platform skills retain shared prefixes; task workflows use descriptive action names. The [approved naming decisions and rename record](ai-logs/2026/10/18/skill-naming-convention-20261018/summary.md) cover all 80 skills: 50 renamed and 30 kept. A `deprecate-` prefix is a naming label only; these renames do not disable skills or change their workflows.
+
+Use [`create-implementation-skills`](.github/skills/create-implementation-skills/SKILL.md) to author or update focused, repository-grounded implementation workflows.
 
 ## AI-Assisted Artifacts & Provenance
 
