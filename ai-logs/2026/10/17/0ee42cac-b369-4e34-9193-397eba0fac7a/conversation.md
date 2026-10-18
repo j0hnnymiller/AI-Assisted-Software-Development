@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-17T18:37:09.0441419-07:00
+- Ended: 2026-10-17T19:05:33.5168182-07:00
 
 ## Context
 
@@ -239,6 +239,8 @@ create-instruction-files-instructions
 - Total for earlier reconciliation: not reconstructable from summarized history.
 - Prompt-to-skill migration and sync guidance: 00:16:02 (measured from its recorded start to 2026-10-17T18:37:09.0441419-07:00)
 
+- Cross-repository review continuation: 00:08:26 (measured from 2026-10-17T18:57:07.391-07:00 to 2026-10-17T19:05:33.5168182-07:00)
+
 ## Prompt-to-Skill Migration Update
 
 ### User direction
@@ -255,3 +257,23 @@ create-instruction-files-instructions
 - A dry-run of the sync script confirmed neither legacy prompt is planned as an update or add. Front matter, manifest JSON, new skill names/provenance paths, README links, and `git diff --check` were validated.
 
 The underlying model/version was not exposed in the runtime and is recorded as unknown rather than inferred. No commit or spoke-repository writes were made.
+
+## Cross-Repository Review Continuation
+
+### User direction
+
+> continue
+
+### Inventory and review
+
+- Refreshed the read-only inventory: 16 repositories, 455 config paths, 63 diverged, 337 missing here, 50 canonical-only, and 5 identical.
+- Confirmed the Slide Master agent recommendation: keep this repository's current version. The Messer copy is stale and points to deprecated prompt files.
+- Reviewed the remaining instruction and skill candidates against their variants and history. Kept the current canonical versions for custom-agent guidance, use-case generation, PPTX/Marp workflows, instruction generation, integration/security architecture, migration, patterns, performance, risk, scalability, tests, and issue-analysis skills. Spoke variants were stale, shorter, less safe, prompt-dependent, or repository-specific; no spoke content was imported.
+- Found that `.github/instructions/instruction-prompt.instructions.md` still contained a workflow for creating prompt generators. Replaced that body with migration-only guidance that routes reusable workflows to skills.
+- Found that `.github/skills/validate-and-improve-instructions/SKILL.md` still instructed agents to generate files from retired prompts and to commit/create PRs. Replaced it with a bounded, evidence-based validation process using current canonical instruction and skill sources and explicit approval gates.
+- No other reviewed divergence required changes. No commit, push, branch creation, or spoke-repository write was performed.
+
+### Validation
+
+- YAML/revision provenance, referenced chat log, relative links, obsolete generation/commit directives, and `git diff --check` passed for the two revised Markdown files.
+- The inventory reported 9 potential secret-like matches across 5 paths. Values were not inspected or reproduced; those alerts remain separate triage items.

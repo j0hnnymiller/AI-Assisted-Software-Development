@@ -1,6 +1,6 @@
 ---
 name: validate-and-improve-instructions
-description: "Orchestrate iterative validation and improvement of instruction files through automated cycles"
+description: "Validate a bounded set of repository instructions and related skills for conflicts, stale guidance, and unsupported claims; propose and apply approved improvements with evidence and a capped review cycle."
 
 ai_generated: true
 model: "OpenAI/GPT-6@Luna"
@@ -16,106 +16,34 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/validate-and-improve-instructions.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Replaced retired prompt-generation cycles with evidence-based instruction and skill validation, approval gates, and bounded iteration."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
-# Validate and Improve Instruction Files
+# Validate and Improve Instructions
 
-Automate quality improvement workflow for instruction files through iterative generation, validation, refinement.
+Review a defined set of repository instruction files and related skills for conflicts, unsupported requirements, stale paths, and unclear scope. Use current repository evidence and applicable policy; legacy prompt files are migration inputs only, never generation sources.
 
-## Context
+## Procedure
 
-Ensure quality/consistency through automated workflow:
+1. **Bound the scope.** Confirm the target files or directories. Inspect applicable policies and directly related skills, agents, and references only.
+2. **Establish current behavior.** Verify file paths, scripts, schemas, host features, and referenced workflows against the repository or authoritative documentation. Mark unverified claims as unknown; do not infer current behavior from legacy prompts.
+3. **Find issues.** Identify conflicts, inaccuracies, duplication, stale paths, missing constraints, and unsupported mandatory rules. Record evidence and impact for each finding.
+4. **Propose a focused change set.** Map each finding to its canonical owning instruction or skill. Prefer fixing the source rule and any tightly coupled references; avoid broad rewrites.
+5. **Get approval before edits** unless the user has already explicitly authorized implementation. Preserve unrelated user changes and staged/unstaged distinctions.
+6. **Validate each approved iteration.** Check front matter, links, examples, and consistency with affected files. Re-run the scoped conflict review after edits; stop after three iterations or when no material issues remain.
+7. **Report results.** Summarize files reviewed, findings, changes, validation evidence, unresolved questions, assumptions, and iteration count.
 
-1. Generate all instruction files from source prompts
-2. Analyze for conflicts, inconsistencies, redundancy
-3. Fix root causes in source prompts (not generated files)
-4. Validate improvements via re-generation
-5. Iterate until resolved or max attempts (3)
+## Boundaries
 
-Must comply with `.github/instructions/ai-assisted-output.instructions.md` and `copilot-instructions.md`.
-
-## Workflow Steps
-
-### Phase 1: Branch Creation
-
-```bash
-git checkout -b feature/validate-improve-instructions-$(date +%Y%m%d-%H%M%S)
-```
-
-Record initial state (file count, baseline), initialize iteration counter (max: 3)
-
-### Phase 2: Generation Cycle
-
-Execute prompts in sequence:
-
-1. `.github/copilot/Promptfiles/create-ai-assisted-output-instructions.prompt.md` → `ai-assisted-output.instructions.md`
-2. `.github/copilot/Promptfiles/meta/create-instruction-files-instructions.prompt.md` → `instruction-standards.instruction.md`
-3. `.github/copilot/Promptfiles/create-prompt-file-instructions-file.prompt.md` → `prompt-file.instructions.md`
-4. `.github/copilot/Promptfiles/create-use-case-instructions.prompt.md` → `create-use-case.instructions.md`
-
-Wait for completion, verify each created successfully.
-
-### Phase 3: Validation & Analysis
-
-Submit `.github/copilot/Promptfiles/check-context.prompt.md` targeting `.github/instructions/`
-Analyze output for:
-
-- Conflicting instructions
-- Factual inconsistencies
-- Logical contradictions
-- Scope/priority conflicts
-- Duplication/redundancy
-- Communication gaps
-
-### Phase 4: Root Cause Analysis
-
-If issues found:
-
-- Categorize by severity (Critical/High/Medium/Low)
-- Trace to source prompts
-- Document specific conflicts
-- Propose prompt fixes (NOT instruction fixes)
-
-### Phase 5: Iterative Improvement
-
-For each issue:
-
-1. Edit source prompt to address root cause
-2. Re-run affected prompts
-3. Re-validate
-4. Track improvements
-5. Repeat if needed (max 3 iterations)
-
-### Phase 6: Finalization
-
-- Commit all changes with detailed message
-- Create/update PR with validation summary
-- Document remaining issues (if any)
-- Tag for review
-
-## Output Format
-
-Report per iteration:
-
-- Issues found (count by severity)
-- Prompts modified
-- Files re-generated
-- Improvements validated
-- Remaining issues
-
-Final report:
-
-- Initial vs final state
-- All modifications made
-- Validation results
-- Recommendations for remaining issues
-
-## Constraints
-
-- Max 3 iterations
-- Fix prompts, not generated files
-- Preserve functionality while improving quality
-- Document all changes
-
+- Do not generate or re-generate instruction files from prompts.
+- Do not make edits, create branches, stage, commit, push, or create/update pull requests without explicit user authorization.
+- Do not alter unrelated files or claim validation that was not performed.
+- For conflict analysis, reuse [`check-context-conflicts`](../check-context-conflicts/SKILL.md).
+- Follow [`ai-assisted-output.instructions.md`](../../instructions/ai-assisted-output.instructions.md) for provenance and logging requirements.
 
 
 

@@ -4,7 +4,7 @@
 - Date: 2026-10-17
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
-- Duration: Earlier work is not fully reconstructable from summarized history; prompt-to-skill migration lasted 00:16:02.
+- Duration: Earlier work is not fully reconstructable; prompt-to-skill migration lasted 00:16:02 and the cross-repository review continuation lasted 00:08:26.
 
 ## Objective
 
@@ -56,5 +56,14 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 
 ## Next steps
 
-- Review the uncommitted changes; no commit or spoke-repository writes were made.
-- Final validation: passed - 19 provenance front matters and chronology, `ai_log` targets, manifest JSON and prompt exclusions, all newly added index links, 15 skill files, and `git diff --check`. The root README still has 21 broken local links that were already present at `HEAD`; they are outside this migration's scope.
+- Prompt-to-skill migration validation passed: 19 provenance front matters and chronology, `ai_log` targets, manifest JSON and prompt exclusions, all newly added index links, 15 skill files, and `git diff --check`. The root README still has 21 broken local links that were already present at `HEAD`; they are outside the migration's scope.
+
+## Cross-Repository Review Continuation
+
+- Refreshed the read-only inventory: 16 repositories and 455 config paths (63 diverged, 337 missing here, 50 canonical-only, 5 identical).
+- Reviewed divergent Slide Master, custom-agent, instruction-authoring, use-case, Marp, PPTX, architecture, security, scalability, risk, performance, migration, testing, and analysis workflows. Kept canonical hub versions when alternatives were stale, prompt-based, repository-specific, or less safe; no spoke content was imported.
+- Updated `.github/instructions/instruction-prompt.instructions.md` to prohibit new instruction-generating prompts and define prompt-to-skill migration.
+- Updated `.github/skills/validate-and-improve-instructions/SKILL.md` to remove retired prompt regeneration and automatic branch/commit/PR instructions, and to require bounded evidence-based review and approval for changes.
+- Final checks passed for YAML/revision provenance, referenced chat log, relative links, obsolete generation/commit directives, and `git diff --check`.
+- The inventory reported 9 potential secret-like matches across 5 paths; their values were not inspected or reproduced.
+- No commits or spoke-repository writes were made. The 337 `missing-here` entries and secret-like alerts are separate follow-up work beyond this divergence review.
