@@ -4,7 +4,7 @@
 - Date: 2026-10-18
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
-- Duration: 00:21:33 (recorded authoring across ten implementation updates; read-only reviews and final bookkeeping excluded)
+- Duration: 00:26:47 (recorded authoring across eleven implementation updates; read-only reviews and final bookkeeping excluded)
 
 ## Objective
 
@@ -124,7 +124,25 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - Adapted stable operating guidance only. The Course source remains unchanged;
   no supersession record, spoke edit, distribution, or commit was made.
 - Indexed in root README and canonical instruction README.
-- Provenance interval 00:05:43; YAML, local links, eight behavioral checks,
+- Provenance interval 00:10:57; YAML, local links, eight behavioral checks,
   `git diff --check`, and editor diagnostics passed.
 - No project code or tests were run; VS Code runtime discovery and behavior were
   not interactively tested.
+
+### Inventory review and supersession
+
+- Refreshed inventory: 16 repositories, 498 files. The Agent Host path initially
+  had two independent variants and low-confidence canonical recommendation.
+- Compared the full variants. The Course copy's reusable additions were a user
+  approval gate before broad/risky implementation and checking the supported
+  course/tool version for training materials; both are now in the canonical
+  guide. Its outdated prompt-file lifecycle claim was excluded.
+- Added only Course's exact normalized hash `1e00fac7441b7917` to the canonical
+  sync manifest's `supersedes` entry using the consolidation script in
+  record-only mode. No files were distributed.
+- Final inventory recognizes the Course copy as stale via the manifest and
+  recommends canonical with high confidence.
+- The original Agent Host adaptation was committed as `0c4b93b`; the workspace
+  was clean at the start of this review, so there were no earlier pending
+  changes to regroup. Approved this new four-file group for staging; the staged
+  diff is reviewed, and commit confirmation is still pending.

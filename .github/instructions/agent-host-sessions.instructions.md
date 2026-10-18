@@ -6,13 +6,15 @@ chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
 prompt: |
   proceed
 started: "2026-10-18T21:49:51.822Z"
-ended: "2026-10-18T21:55:35.6225522Z"
+ended: "2026-10-18T22:31:00.0558054Z"
 task_durations:
   - task: "Agent Host guidance adaptation and verification"
     duration: "00:05:43"
-total_duration: "00:05:43"
+  - task: "Inventory-driven merge and supersession review"
+    duration: "00:05:14"
+total_duration: "00:10:57"
 ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
-source: "User approval; adapted from the Course Agent Host session guide and checked against current VS Code documentation"
+source: "User approval; merged reusable Course guidance, checked current VS Code documentation, and recorded the superseded source variant"
 description: "Use when planning, starting, directing, reviewing, or handing off VS Code Agent Host work; covers workspace and harness selection, isolation, permissions, parallel work, validation, and continuity."
 ---
 
@@ -42,8 +44,8 @@ controls; verify them before relying on a capability.
 ## Bound scope and permissions
 
 - Begin with relevant requirements and repository context. State material
-  assumptions and missing information; for broad or risky work, establish a
-  bounded plan before implementation.
+  assumptions and missing information; for broad or risky work, propose a
+  bounded plan and wait for user direction before implementation.
 - Keep edits and tool use within the requested scope. Instructions describe
   expected behavior but do not enforce permissions, sandboxing, or security
   boundaries.
@@ -95,7 +97,8 @@ controls; verify them before relying on a capability.
 ## Harness and customization compatibility
 
 - Verify current VS Code documentation for harness-specific UI, tool, permission,
-  session, and customization behavior; these details can change.
+  session, and customization behavior; these details can change. For course or
+  training materials, verify the supported course/tool version as well.
 - As checked on 2026-10-18, VS Code documents prompt files as supported only in
   Local harness sessions and recommends Agent Skills for reusable workflows in
   other harnesses. Confirm the current support and migration guidance before
