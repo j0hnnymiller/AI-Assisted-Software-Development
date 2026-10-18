@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-17T19:52:32.094572-07:00
+- Ended: 2026-10-17T20:21:15.8398024-07:00
 
 ## Context
 
@@ -302,3 +302,22 @@ The user selected: “Merge useful gaps and create proposed new skills.”
 
 - Validated skill front matter, names, provenance chronology, `ai_log` targets, README links, applicable relative links, and whitespace before finalizing.
 - The runtime did not expose a model/version; provenance records it as unknown rather than guessing.
+
+## Focused Validation-Skill Clarification
+
+### User direction
+
+> continue
+
+The user tagged `.github/skills/validate-and-improve-instructions/SKILL.md`. After a read-only review, the user approved the focused clarification to its legacy prompt migration boundaries.
+
+### Finding and change
+
+- No confirmed contradictions were found. One medium-scope ambiguity was identified: “Keep the source prompt visible as a deprecated migration record” could be read as permission to edit a spoke prompt.
+- Clarified that source prompts remain unchanged in their owning repositories unless separately approved; spoke prompts are not imported or distributed; retained hub prompt records remain deprecated/indexed and subject to the manifest's no-distribution rule.
+
+### Validation
+
+- Front matter and revision metadata, skill links, and `git diff --check` validated after the focused edit.
+- The bounded clarification and validation took 00:02:18 from 20:18:57.558-07:00 to 20:21:15.8398024-07:00.
+- No other files or repositories were in scope.

@@ -77,3 +77,10 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - No prompt file was imported or distributed; no spoke repository was modified and no commit was created.
 - Potential secret-like keyword matches were noted in two audit groups; no verified live credentials were reported or reproduced.
 - Model/version remains recorded as unknown because the runtime did not expose it. The implementation duration is measured in the provenance metadata.
+
+## Focused Validation-Skill Clarification
+
+- Reviewed the tagged validation skill and directly related context-conflict and prompt-consolidation guidance. Found no confirmed contradictions and one medium-scope ambiguity: the instruction to keep source prompts visible as deprecated migration records could be interpreted as permission to edit spoke prompts.
+- With approval, clarified that spoke prompts remain unchanged unless separately authorized, are not imported or distributed, and retained hub prompts stay indexed as deprecated with the manifest's no-distribution setting.
+- Scope was limited to the validation skill and its revision entry, plus this chat log. No other files or repositories were changed.
+- Validation passed for front matter/revision metadata, links, and `git diff --check`. This clarification task took 00:02:18.
