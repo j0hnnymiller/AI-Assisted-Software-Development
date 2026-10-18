@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-17T19:05:33.5168182-07:00
+- Ended: 2026-10-17T19:52:32.094572-07:00
 
 ## Context
 
@@ -277,3 +277,28 @@ The underlying model/version was not exposed in the runtime and is recorded as u
 
 - YAML/revision provenance, referenced chat log, relative links, obsolete generation/commit directives, and `git diff --check` passed for the two revised Markdown files.
 - The inventory reported 9 potential secret-like matches across 5 paths. Values were not inspected or reproduced; those alerts remain separate triage items.
+
+## Approved Spoke-Prompt Migration
+
+### User direction
+
+The user selected: “Merge useful gaps and create proposed new skills.”
+
+### Audit reconciliation
+
+- Consolidated five read-only reports covering Zeus Academia, Messer, AI Practitioner, Teleflex, MusicBot, AIASD Brownfield Example, Fleetly, V&S, and one repository without a prompt directory.
+- The reports' scope headings sum to 150 prompt-file instances. Row-level tables contain 151 classified entries because the Zeus report states 48 files but lists 49. The normalized relative-path set contains 131 distinct paths, matching the inventory count.
+- Classified the listed entries as 88 covered by existing canonical skills, 27 useful gaps, 19 new-skill candidates, and 17 repo-specific/obsolete items. Shared relative paths account for repeated appearances across repositories.
+- Potential secret-like keyword matches were reported in two audit groups; no verified live credential values were reproduced.
+
+### Implementation
+
+- Created 19 canonical skills for AI-assisted development process, PRD authoring, CQRS/event sourcing, Databricks CI/CD/IaC/hosting, cloud readiness, Mermaid-to-DOCX conversion, meeting briefs, ownership/support models, SDLC stabilization, Vue migration testing, blog-section authoring, issue readiness, workflow path counting, AI-practitioner resource catalogs, chat-mode authoring, IEC 62304 assessment, and SME scheduling.
+- Merged the 27 useful gaps into 16 existing skills covering architecture and Academia implementation planning, instruction/agent authoring, Git workflow guidance, prompt migration, GitHub configuration optimization, issue independence, code/testability review, IEC 62304 compliance boundaries, and structured summarization.
+- Added the migration-to-skill index to `.github/prompts/README.md`. The chat-mode candidate was created as a new skill because no matching workspace skill existed.
+- Kept all spoke prompt files untouched, did not import or distribute prompts, made no spoke-repository writes, and created no commits.
+
+### Validation
+
+- Validated skill front matter, names, provenance chronology, `ai_log` targets, README links, applicable relative links, and whitespace before finalizing.
+- The runtime did not expose a model/version; provenance records it as unknown rather than guessing.

@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/generate-instructions.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added evidence-based Git workflow and C# instruction-generation guidance."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Generate Project Instruction Files
 
@@ -121,6 +127,12 @@ triggers: ["<keyword1>", "<keyword2>"]
    - Include AI-specific guidance
 5. **Report**: List generated files with brief summary per file
 
+When documenting Git workflows, inspect repository evidence such as branch conventions, commit history, contribution guidance, hooks, and CI policy. Distinguish current enforced rules from suggested conventions; do not invent branch names, approval requirements, merge strategies, or release procedures. Include safe examples only when supported by the repo.
+
+For language-specific guidance such as C#, verify the target framework/SDK, compiler settings, analyzers, formatters, project conventions, and representative code. Explain which rules are repository requirements versus recommendations, and include focused validation commands only when confirmed.
+
+For C# projects, consider documenting nullable-reference settings, async/cancellation patterns, dependency injection, exception/logging conventions, API and persistence boundaries, test conventions, analyzers/formatting, and target-framework compatibility when those topics apply. Treat them as evidence-gathering categories, not mandatory rules; derive each rule from repository configuration, approved standards, or verified platform documentation.
+
 ## Quality Standards
 - Evidence-based (reference actual codebase patterns)
 - Specific and actionable (not generic advice)
@@ -136,8 +148,6 @@ List generated files with:
 - Key conventions documented
 - Example patterns included
 - Integration points with other instructions
-
-
 
 
 

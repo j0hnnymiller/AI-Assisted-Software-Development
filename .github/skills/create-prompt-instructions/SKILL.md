@@ -20,11 +20,13 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Deprecated new prompt authoring and redirected reusable workflows to skills."
+    change: "Deprecated new prompt authoring and redirected reusable workflows to skills.; Redirected implementation-prompt requests to requirements-derived chat guidance or reusable skills."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Retired Prompt-Authoring Workflow
 
 Do not create new prompt files or prompt-authoring guides. Use [`create-instruction-files-instructions`](../create-instruction-files-instructions/SKILL.md) for instruction documents and [`prompt-file.instructions.md`](../../instructions/prompt-file.instructions.md) only as a legacy-format migration reference.
 
-Reusable task workflows belong in skills; one-off tasks belong in chat.
+Reusable task workflows belong in skills; one-off tasks belong in chat. When a request asks for an implementation prompt, convert it into a requirements-derived execution checklist or plan in the conversation, or into a skill if it is a reusable multi-step workflow. Do not create a `.prompt.md` file as a workaround for the deprecated format.
+
+Before deriving steps, identify the authoritative requirements, scope, dependencies, acceptance criteria, test expectations, and safety constraints. Separate known facts from assumptions and ask for unresolved decisions that materially affect implementation. Keep the resulting guidance actionable but do not prescribe unverified files, commands, APIs, or outputs.

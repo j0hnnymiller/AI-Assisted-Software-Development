@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/create-issues-for-found-bugs.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added evidence-based issue independence and dependency assessment."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Bug Hunt — Findings to GitHub Issues
 
@@ -38,6 +44,8 @@ Perform static analysis to surface bugs with evidence and create GitHub issue dr
 3. Classify (Critical/High/Medium/Low severity + impact)
 4. Create GitHub issue drafts (title, evidence, impact, fix, labels)
 5. Summarize + durations
+
+For related findings, assess whether proposed issues can be implemented independently. Cite shared files, APIs, data contracts, or prerequisite fixes that create coordination or sequencing needs. Recommend splitting or linking issues only when that improves independent verification; mark parallel-safety as conditional rather than guaranteed.
 
 ## Output (Markdown)
 
@@ -69,7 +77,6 @@ Per-step + total
 - Evidence-based with file:line refs
 - Conservative classification
 - No external calls/edits
-
 
 
 

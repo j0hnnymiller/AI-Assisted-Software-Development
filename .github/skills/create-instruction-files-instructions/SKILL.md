@@ -20,7 +20,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Added current-repository verification, required-versus-recommended distinction, overwrite approval, and example/link validation; removed unsupported fixed metadata and length requirements."
+    change: "Added current-repository verification, required-versus-recommended distinction, overwrite approval, and example/link validation; removed unsupported fixed metadata and length requirements.; Added AI-assisted development, Git workflow, vertical-slice, and language-specific guide structures."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Generate Instruction-File Creation Guide
@@ -198,12 +198,23 @@ Link to related documentation:
 4. Ask before overwriting an existing guide or creating a competing canonical guide.
 5. Validate structure, YAML examples, links, and example consistency before finalizing.
 
+## Cross-Cutting Development Workflow Guides
+
+When a guide covers AI-assisted development, Git practices, vertical slices, or a language such as C#:
+
+- Derive requirements from the repository's actual workflow, tools, configuration, and representative code; identify unsupported details as questions.
+- Separate required controls from recommendations and optional examples.
+- For AI-assisted development, cover lifecycle stages, human review, privacy, verification, and provenance without asserting unapproved organizational policy.
+- A work instruction for AI-assisted development should make purpose/scope, roles, permitted tasks and data, human decision gates, stage-by-stage workflow, verification/release controls, exception escalation, provenance/logging, and review ownership explicit. Tailor gates to the organization's approved policies.
+- For Git workflow guidance, distinguish observed branch/commit/review practice from proposed conventions; never invent required branch names or approval gates.
+- A Git workflow guide can cover branch creation/naming, keeping work isolated, commit scope/messages, pull-request review, required checks, merge/release practices, conflict recovery, and safe rollback. Include only practices evidenced in the repository or explicitly approved by maintainers.
+- For vertical-slice guidance, explain feature boundaries, end-to-end behavior, cross-cutting dependencies, and test evidence without prescribing an unsupported architecture.
+- For language-specific instructions, verify versions and analyzers and keep examples compatible with the repository's target framework.
+- Include a focused validation checklist and identify the source evidence used.
+
 ## Boundaries
 
 - Do not create or edit unrelated instruction files.
 - Do not treat a guide-generation skill as permission to overwrite its target.
 - Do not claim host behavior or metadata support without current evidence.
-
-
-
 

@@ -20,7 +20,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Added explicit audit scope, rule mapping, missing-instructions fallback, and read-only/report-save boundaries."
+    change: "Added explicit audit scope, rule mapping, missing-instructions fallback, and read-only/report-save boundaries.; Added scoped instruction drift, provenance, broad quality, and evergreen review dimensions."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Codebase vs. Instructions Audit
@@ -82,12 +82,18 @@ If no instructions found:
 - **Observability**: Structured logging, error handling, trace/metrics
 - **Documentation**: README, contribution guidelines, ADRs
 
+## Supplemental Review Dimensions
+
+- Compare implementation with applicable instructions at the requested repository/folder scope. Map each finding to the exact instruction and code evidence; report ambiguity or conflicts in the instruction itself separately from implementation drift.
+- Validate applicable instruction metadata and provenance against the repository policy when requested; distinguish a missing/invalid instruction from code nonconformance, and report provenance gaps without copying sensitive prompt or log content.
+- For a broad code review, consider architecture, correctness, maintainability, testability, security, performance, error handling, operations, and documentation. Report only material findings supported by evidence.
+- Use an evergreen-code lens where relevant: adaptability to likely change, clear extension points, testability, operability, dependency sustainability, and maintainability. Avoid predicting future needs without evidence.
+- When discussing issue independence or remediation sequencing, identify shared files, APIs, data contracts, and prerequisites rather than asserting conflict-free parallel work.
+
 ## Boundaries
 - Keep the audit read-only; do not edit code, instructions, or configuration unless the user explicitly requests remediation.
 - Do not make network calls or run commands that write to the workspace.
 - Distinguish verified facts from recommendations and unknowns; avoid generic findings without repository evidence.
 - Respect the exclusions above.
-
-
 
 

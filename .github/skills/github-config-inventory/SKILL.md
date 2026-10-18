@@ -13,7 +13,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Clarified that legacy prompts are migration inputs, not import or distribution targets."
+    change: "Clarified that legacy prompts are migration inputs, not import or distribution targets.; Added read-only signals for duplicate rules, overlapping scopes, and excessive tool access."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
@@ -58,10 +58,14 @@ Defined in the manifest [.github/github-config-sync.json](../../github-config-sy
 1. Repos scanned: key, branch, HEAD, dirty, mode, file count
 2. Status counts
 3. Table of `diverged` + `missing-here`: path, variants, repos, recommended repo(s), confidence
-4. Flags: `SecretHits > 0` (never print values), uncommitted copies, repos on non-default branches, and legacy prompt paths with likely skill replacements
+4. Flags: `SecretHits > 0` (never print values), uncommitted copies, repos on non-default branches, legacy prompt paths with likely skill replacements, and likely duplicate/overlapping instructions or unnecessarily broad agent tool scopes
 5. Next step: hand diverged files to the `github-config-canonical` skill
 
 ## Implementation
 
 - [Get-GithubConfigInventory.ps1](./scripts/Get-GithubConfigInventory.ps1)
 - [GithubConfigSync.psm1](./scripts/GithubConfigSync.psm1) — shared module used by all `github-config-*` skills
+
+## Optimization Signals
+
+When the user requests an optimization review, use inventory evidence to flag (not automatically change) likely duplicate rules, overlapping `applyTo` patterns, redundant skills/agents, overly broad declared tool lists, conflicting ownership, and stale cross-links. Compare semantics, scope, and behavior rather than relying on filenames or text similarity alone. Report evidence, impact, consolidation options, and files that must remain separate; do not remove or rewrite files as part of this read-only inventory.

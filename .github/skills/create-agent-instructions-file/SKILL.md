@@ -16,67 +16,37 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/create-agent-instructions-file.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Replaced unsupported legacy agent headers with current schema verification, scoped design, examples, and behavior review."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Generate Custom Agent Instructions
 
-Create comprehensive guidelines for authoring custom GitHub Copilot agents.
+Create or revise guidance for authoring focused custom agents. Follow the repository's [agent-file instructions](../../instructions/agent-file.instructions.md), the selected host's current schema, and the AI provenance policy.
 
-## Context
+## Workflow
 
-Instructions for creating specialized AI assistants with specific expertise, personality, and commands.
-Must comply with `.github/instructions/ai-assisted-output.instructions.md` and `copilot-instructions.md`.
+1. Confirm whether the requested deliverable is an authoring guide or a specific `.agent.md` file, and identify the intended host and scope.
+2. Review existing agents and instructions to avoid duplicate roles and conflicting behavior.
+3. Verify the supported file location, frontmatter properties, tool configuration, and activation behavior from current host documentation.
+4. Define a focused mission, intended users/triggers, expertise, bounded workflow, expected output, and out-of-scope requests.
+5. Specify only supported frontmatter. Do not require legacy `Focus`, `Temperature`, or `Style` headers, or invent `@command` activation syntax.
+6. Select the minimum host-supported tools needed. Explain that natural-language instructions do not enforce authorization or isolation.
+7. Include realistic examples, templates, or behavior checks only when they improve predictable use. For persona agents, test evidence-based decisions, clarification behavior, and prioritization boundaries.
+8. Validate YAML, links, scope, and representative in-scope/out-of-scope interactions. Ask before overwriting canonical guidance.
 
-## Output: `.github/instructions/agent-file.instructions.md`
+## Expected Content
 
-### Structure:
+An agent authoring guide should cover purpose and when to use an agent, naming/location, supported YAML fields, role and workflow design, tool scope, response expectations, examples, validation, maintenance, and common anti-patterns. Keep recommendations distinct from host requirements.
 
-1. **Overview**: Purpose, benefits, when to create vs use default, integration
-2. **File Structure**:
-   - Naming: `<agent-name>.agent.md` (kebab-case) in `.github/agents/`
-   - Header: Name, Focus, Temperature (0.0-1.0), Style
-   - Sections: Mission, Core Expertise, Methodology, Commands, Response Format, Principles, Examples
-3. **Header Fields**:
-   - **Name**: Display name, Title Case, 2-4 words
-   - **Focus**: Primary domain, specific capabilities
-   - **Temperature**: 0.3 (security/compliance), 0.4-0.5 (docs/analysis), 0.6-0.7 (brainstorming)
-   - **Style**: 2-4 descriptive adjectives (tone, approach, focus)
-4. **Content Structure**:
-   - Mission: 1-2 sentences, role + value + approach
-   - Core Expertise: 5-10 specific areas (bold + description)
-   - Methodology: Multi-phase workflow (if applicable)
-   - Commands: `@kebab-case` format, clear descriptions
-   - Response Format: Structured output template
-   - Principles: Behavioral guidelines
-   - Examples: Realistic usage demonstrations
-5. **Best Practices**: Clarity, consistency, scope definition, intuitive commands
-6. **Quality Assurance**: Validation checklist, testing, review process
-7. **Examples**: Simple template, advanced template, domain-specific (security, docs, code exploration, architecture)
-8. **Common Patterns**: Command-driven interaction, phased methodology, clear response format
-9. **Anti-Patterns**: Overly broad scope, unclear commands, missing examples, vague mission
-10. **Integration**: Activation (`@modename`), switching, combining with Copilot features
-11. **Maintenance**: Versioning, feedback loop, iteration, deprecation
+## Guardrails
 
-### Templates to Include:
-
-- Security analyzer pattern
-- Documentation assistant pattern
-- Code exploration pattern
-- Architecture review pattern
-
-### Quality Checklist:
-
-- kebab-case filename with `.agent.md`
-- All header fields present
-- Mission clear, expertise listed (5-10)
-- Commands use `@kebab-case`
-- Temperature appropriate
-- Style aligns with domain
-
-## Deliverable
-
-Complete file with YAML front matter per ai-assisted-output policy, all sections, templates, checklists, examples.
-
-
+- Do not assume frontmatter fields or activation syntax across hosts.
+- Avoid broad personas, excessive tools, redundant sections, private organizational details, and fabricated metrics.
+- Preserve provenance and existing user changes; do not overwrite a canonical guide without approval.
 
 
 

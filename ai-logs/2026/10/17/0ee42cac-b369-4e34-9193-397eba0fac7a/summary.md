@@ -4,7 +4,7 @@
 - Date: 2026-10-17
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
-- Duration: Earlier work is not fully reconstructable; prompt-to-skill migration lasted 00:16:02 and the cross-repository review continuation lasted 00:08:26.
+- Duration: Earlier work is not fully reconstructable; the approved prompt migration implementation took 00:19:26.
 
 ## Objective
 
@@ -67,3 +67,13 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - Final checks passed for YAML/revision provenance, referenced chat log, relative links, obsolete generation/commit directives, and `git diff --check`.
 - The inventory reported 9 potential secret-like matches across 5 paths; their values were not inspected or reproduced.
 - No commits or spoke-repository writes were made. The 337 `missing-here` entries and secret-like alerts are separate follow-up work beyond this divergence review.
+
+## Approved Spoke-Prompt Migration
+
+- Reconciled five delegated, read-only audit reports: 150 instances by report headers, 151 classified rows due to a one-row Zeus count discrepancy, and 131 distinct normalized relative paths.
+- Review classification: 88 entries covered by canonical skills, 27 useful gaps, 19 new-skill candidates, and 17 repo-specific/obsolete entries. Shared relative paths explain repeated repository instances.
+- Created 19 canonical skills and integrated the 27 useful gaps into 16 existing skills. Added a linked migration index to `.github/prompts/README.md`.
+- The chat-mode candidate was added as a new skill after checking that the hub had no matching skill.
+- No prompt file was imported or distributed; no spoke repository was modified and no commit was created.
+- Potential secret-like keyword matches were noted in two audit groups; no verified live credentials were reported or reproduced.
+- Model/version remains recorded as unknown because the runtime did not expose it. The implementation duration is measured in the provenance metadata.

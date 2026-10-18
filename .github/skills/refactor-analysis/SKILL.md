@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/refactor-analysis.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added evidence-grounded adaptability, testability, operability, and dependency-sustainability lens."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Refactoring Opportunities Analysis
 
@@ -44,6 +50,8 @@ Repo (source, tests, configs, build/CI), signals (file size, complexity, duplica
 3. **Propose refactors**: Type (extract, interface, inversion, composition, rename, dedupe, move, add tests), targets, outcome (readability/testability/reliability/performance), effort (S/M/L), risk (Low/Med/High)
 4. **Prioritize**: Quick wins (S, low risk), Phase 1 (test enablers), Phase 2 (structural), Phase 3 (nice-to-have), safety net strategy
 5. **Summarize**: Executive summary + durations
+
+When requested, assess whether the design is likely to remain maintainable as requirements evolve: adaptability, extension points, testability, operability, and sustainability of dependencies. Tie each observation to current evidence and an explicit change scenario; do not predict unspecified future requirements or equate novelty with maintainability.
 
 ## Output (Markdown)
 
@@ -74,7 +82,6 @@ Per-step + total
 - Evidence-based, concrete file refs
 - Prefer incremental, reversible refactors
 - No code edits/network calls
-
 
 
 

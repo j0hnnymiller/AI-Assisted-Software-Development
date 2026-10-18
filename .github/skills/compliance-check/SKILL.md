@@ -20,7 +20,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Added scope/applicability checks, evidence-status classification, and legal/certification claim boundaries."
+    change: "Added scope/applicability checks, evidence-status classification, and legal/certification claim boundaries.; Added IEC 62304 scope/evidence boundaries and linked clause-level assessment workflow."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Compliance Validation and Standards Alignment
@@ -96,6 +96,8 @@ Assess architecture and implementation evidence against the frameworks and organ
 - Classify each control as **evidenced**, **partially evidenced**, **not evidenced**, **not applicable** (with rationale), or **needs expert verification**.
 - Distinguish facts, assumptions, gaps, and unknowns. Mark owners, costs, deadlines, and audit or certification dates unknown unless supplied or verified.
 - Treat this as a structured gap review, not legal advice, an audit, or certification. Refer legal, privacy, security, or audit determinations to qualified reviewers.
+- For medical-device software lifecycle assessments against IEC 62304, confirm the exact edition, amendments, software scope/classification, and controlled requirement source. Use [`iec62304-compliance-assessment`](../iec62304-compliance-assessment/SKILL.md) for clause-level mapping; this general skill should capture applicability, evidence status, risk, and assurance boundaries without duplicating the clause checklist.
+- A cross-clause summary may group evidence for legacy-software assessment, development, maintenance, software risk management, configuration management, and problem resolution, then synthesize executive priorities and remediation phases. Treat these as assessment topics, not a substitute for the controlled clause text or qualified quality/regulatory review.
 
 ## Output Structure
 
@@ -250,7 +252,5 @@ Assess architecture and implementation evidence against the frameworks and organ
 - **Vendor Solutions**: Leverage managed compliance tools
 - **External Audit**: Engage auditors for gap assessment
 - **Certification**: Pursue recognized certifications
-
-
 
 

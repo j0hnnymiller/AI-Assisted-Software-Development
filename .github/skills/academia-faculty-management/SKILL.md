@@ -15,6 +15,12 @@ task_durations:
 total_duration: "00:16:02"
 ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 source: ".github/prompts/generate-implementation-prompts-prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added evidence-grounded artifact and dependency mapping for faculty implementation plans."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Academia Faculty Management
@@ -30,12 +36,14 @@ Use for faculty profiles, affiliations, teaching assignments, or faculty adminis
 3. Implement the requested change across existing service, API, and UI layers; preserve links to courses and terms.
 4. Protect staff and student information according to existing access and data-handling policies.
 5. Add tests for lifecycle transitions, assignment validation, permissions, and relevant data integrity constraints.
+6. For a requested implementation map, identify the feature's domain rules, affected layers/artifacts, dependencies, test evidence, and acceptance checks. Keep the map aligned with the repository's current structure and label proposed artifacts as such.
 
 ## Acceptance Checks
 
 - Faculty records and assignments cannot become inconsistent with course/term state.
 - Administrative actions follow existing authorization and audit conventions.
 - Unknown employment or workload policy is explicitly surfaced rather than inferred.
+- Execution maps identify prerequisites and artifact ownership without duplicating the feature's business rules or asserting unverified files.
 
 ## Cross-Cutting Validation
 

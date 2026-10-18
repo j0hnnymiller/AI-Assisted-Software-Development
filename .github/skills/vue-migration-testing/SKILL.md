@@ -1,0 +1,42 @@
+---
+name: vue-migration-testing
+description: "Plan or implement tests for a Vue application migration, including compatibility inventory, risk mapping, prioritized regression coverage, and verification."
+ai_generated: true
+model: "unknown/unknown@unknown"
+operator: "johnmillerATcodemag-com"
+chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+prompt: |
+  Merge useful gaps and create proposed new skills
+started: "2026-10-17T19:33:05.9169653-07:00"
+ended: "2026-10-17T19:52:32.094572-07:00"
+task_durations:
+  - task: "Approved cross-repository prompt-to-skill migration"
+    duration: "00:19:26"
+total_duration: "00:19:26"
+ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+source: "Messer/.github/prompts/vue-3.4-migration-tests.prompt.md"
+---
+
+# Vue Migration Testing
+
+Use this skill to build a test strategy for a Vue version migration. Confirm the actual source and target versions, libraries, and build tools from the repository before relying on version-specific behavior.
+
+## Procedure
+
+1. Inventory framework versions, plugins, component libraries, router/state tools, build configuration, tests, and migration notes.
+2. Identify changed APIs, removed/deprecated behavior, compatibility constraints, and third-party dependencies; verify against official release and migration documentation.
+3. Map affected components and user flows to risks, existing tests, and missing coverage.
+4. Prioritize tests for critical workflows, routing/state, forms, rendering, accessibility, SSR/hydration if used, error states, and integration boundaries.
+5. Propose focused unit/component/integration/e2e cases with setup, action, expected result, and risk rationale.
+6. If asked to add tests, follow repository conventions and run the narrowest relevant test/build commands; report failures and environmental blockers.
+7. Confirm the test plan covers migration regressions without duplicating equivalent coverage.
+
+## Output
+
+Provide a version/dependency inventory, migration risk matrix, prioritized test plan, suggested scaffolds (if requested), validation commands, and known gaps.
+
+## Guardrails
+
+- Do not assume a migration path, API change, or library compatibility from the target version alone.
+- Do not claim a test passes unless it was executed successfully.
+- Do not modify production code when the request is limited to test planning.

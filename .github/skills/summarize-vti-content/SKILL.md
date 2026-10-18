@@ -1,7 +1,7 @@
 ---
 name: summarize-vti-content
-description: "Analyze VTT (Video Text Track) files and generate structured outlines with section durations and key topics"
-argument-hint: "Path to a VTT file to analyze"
+description: "Analyze VTT (Video Text Track) files or aggregate supplied structured response files into evidence-grounded summaries."
+argument-hint: "Path to a VTT file or response-file set to summarize"
 ai_generated: true
 model: "OpenAI/GPT-6@Luna"
 operator: "johnmillerATcodemag-com"
@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/summarize-vti-content.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added optional multi-file response aggregation, attribution, traceability, and regeneration safeguards."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # VTT Content Summarizer
 
@@ -99,6 +105,16 @@ Provide a quick-reference timeline:
 6. Flag any audio quality issues noted in the text
 7. Identify questions from participants (if present)
 
+## Optional Multi-File Response Aggregation
+
+When the input is a set of questionnaire or feedback responses rather than a VTT:
+
+1. Inventory each supplied response file and preserve its source identity for traceability.
+2. Summarize each response separately before aggregating common themes, disagreements, and unanswered questions.
+3. Attribute contributors only when the source explicitly identifies them and the user authorizes attribution; otherwise anonymize or use source IDs.
+4. Ground clarifications in the supplied material and mark missing or ambiguous answers rather than filling them in.
+5. Regenerate only the requested summary outputs, following the user's filename and directory conventions; do not overwrite existing summaries without approval.
+
 ## Quality Checks
 
 - Ensure all sections have accurate timestamps
@@ -106,6 +122,7 @@ Provide a quick-reference timeline:
 - Check that no content gaps exist
 - Confirm logical flow between sections
 - Validate that key points accurately represent the content
+- For response aggregation, check that every source was considered, duplicated themes are consolidated, minority views are retained, and each claim can be traced to its response source
 
 ## Output File
 
@@ -123,7 +140,6 @@ total_duration: [HH:MM:SS]
 section_count: [Number]
 ---
 ```
-
 
 
 

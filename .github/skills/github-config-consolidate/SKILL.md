@@ -13,7 +13,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Prohibited importing prompt files and documented skill migration instead."
+    change: "Prohibited importing prompt files and documented skill migration instead.; Added approval and preservation safeguards for configuration optimization."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
@@ -55,6 +55,7 @@ Writes approved versions into this repo and records which other versions they re
 - Strip repo-specific values; never copy literal secrets.
 - `.vscode/mcp.json`: use `${input:...}` / `${env:...}` for credentials.
 - Keep legacy prompt paths visible in inventory but set their manifest `distribute` value to `none`; do not delete them or propagate them as active prompts.
+- For approved optimization, consolidate only rules shown to be semantically duplicate or conflicting. Preserve unique behavior and ownership, update inbound links and indexes, and ask before deleting or broadening distribution of any file.
 
 ## Implementation
 

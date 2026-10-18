@@ -20,7 +20,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Replaced retired prompt-generation cycles with evidence-based instruction and skill validation, approval gates, and bounded iteration."
+    change: "Replaced retired prompt-generation cycles with evidence-based instruction and skill validation, approval gates, and bounded iteration.; Added bounded legacy prompt-to-skill migration and validation procedure."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Validate and Improve Instructions
@@ -37,6 +37,16 @@ Review a defined set of repository instruction files and related skills for conf
 6. **Validate each approved iteration.** Check front matter, links, examples, and consistency with affected files. Re-run the scoped conflict review after edits; stop after three iterations or when no material issues remain.
 7. **Report results.** Summarize files reviewed, findings, changes, validation evidence, unresolved questions, assumptions, and iteration count.
 
+## Legacy Prompt Migration
+
+When the scope includes `.github/prompts/**`, treat each file as a migration input, not a source for regenerating prompts:
+
+1. Compare its purpose, inputs, procedure, outputs, and constraints with canonical skills.
+2. Map it to an existing skill to update, a new skill candidate, or a repo-specific/obsolete disposition.
+3. Keep the source prompt visible as a deprecated migration record and preserve the sync manifest's no-distribution rule.
+4. Obtain approval before changing skills or indexes. Never copy the prompt into an active workflow or create a replacement prompt file.
+5. Validate skill coverage, migration links, provenance, and inventory/sync behavior after approved changes.
+
 ## Boundaries
 
 - Do not generate or re-generate instruction files from prompts.
@@ -44,7 +54,6 @@ Review a defined set of repository instruction files and related skills for conf
 - Do not alter unrelated files or claim validation that was not performed.
 - For conflict analysis, reuse [`check-context-conflicts`](../check-context-conflicts/SKILL.md).
 - Follow [`ai-assisted-output.instructions.md`](../../instructions/ai-assisted-output.instructions.md) for provenance and logging requirements.
-
 
 
 

@@ -20,7 +20,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Merged requirements-grounded design, evidence/assumption handling, and implementation boundaries from the Course variant; corrected skill invocation wording."
+    change: "Merged requirements-grounded design, evidence/assumption handling, and implementation boundaries from the Course variant; corrected skill invocation wording.; Added phased execution maps, shared-kernel and host/persistence composition, and vertical-slice planning guidance."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Comprehensive System Architecture Design
@@ -135,6 +135,15 @@ When the user's requirements are unclear, ask about:
 - Regulatory and compliance requirements
 - Disaster recovery and business continuity needs
 
+## Delivery Planning and Component Composition
+
+For phased execution or implementation maps:
+
+- Break the validated scope into deliverables with explicit dependencies, sequence, acceptance evidence, and decision gates.
+- Map each deliverable to likely artifacts or components only when repository evidence supports the mapping; label estimates and ownership as unknown unless supplied.
+- Identify shared-kernel concerns separately from application-host and persistence composition. Define dependency direction, composition roots, persistence boundaries, and integration contracts without assuming a specific framework.
+- For vertical slices, organize work around end-to-end user/domain capabilities and their tests; identify cross-cutting prerequisites without turning the roadmap into a layer-by-layer waterfall.
+- Treat execution maps as planning artifacts, not proof that an implementation exists. Revalidate them against the repository before use.
 
 
 

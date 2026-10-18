@@ -13,7 +13,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Added semantic prompt-to-skill comparison instead of importing legacy prompts."
+    change: "Added semantic prompt-to-skill comparison instead of importing legacy prompts.; Added evidence-based optimization comparisons while preserving user approval and file-scope boundaries."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
@@ -37,6 +37,8 @@ Recommends one version per diverged file using git history first, then content. 
    ```
 3. Apply the decision rules below; verify the script's recommendation by reading the full diff.
 4. For ordinary config files, output a decision per file: `keep-canonical`, `import <repo>`, or `merge <variants>`, with one-line rationale. For legacy prompts, report `migrate to <skill>` or `new skill required` and get approval before writing.
+
+When asked to optimize a configuration set, also identify overlapping rules, redundant files, stale links, unclear canonical ownership, and tool lists broader than the workflow requires. Treat these as evidence-based proposals, not permission to delete or edit files. Recommend consolidation only after comparing behavior and preserving unique constraints; keep files separate when their scopes or host capabilities differ.
 
 ## Decision Rules (in order)
 
