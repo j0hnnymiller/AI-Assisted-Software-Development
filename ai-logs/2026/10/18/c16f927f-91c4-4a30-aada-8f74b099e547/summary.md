@@ -4,7 +4,7 @@
 - Date: 2026-10-18
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
-- Duration: 00:06:22 (active work across four updates)
+- Duration: 00:10:12 (active work across five implementation updates; read-only review excluded)
 
 ## Objective
 
@@ -43,4 +43,18 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 ## Next steps
 
 - Use the skill to conduct a Marp review when requested.
-- Resume the broader configuration review; stale spoke script documentation remains a separate follow-up.
+- The 182-path disposition review is complete; its external report/ledger separates six proposed reusable families from local-only content.
+- Skill-authoring and Mermaid guidance are now adapted; Slide Master routing is repaired.
+- Remaining explorer/investigator, ORM, Vision and Scope, and Agent Host adaptations require separate approval. Spoke-local workflow repairs and distribution are not approved in this batch.
+
+## Approved guidance batch
+
+- `.github/agents/slide-master.agent.md`: corrected course-build versus standalone-merge routing; added the three-mode review skill and validation-only boundary.
+- `.github/instructions/agent-skills.instructions.md`: added scoped naming, capability/use-case descriptions, resource safety, and validation rules.
+- `.github/instructions/mermaid.instructions.md`: added semantic-role palette, non-color cues, contrast, and renderer checks. Auto-attachment targets `.mmd`; embedded diagrams use task relevance or explicit attachment.
+- Root and instruction README indexes updated; sync manifest records the three approved adaptations.
+- YAML, instruction links, four routing contracts, narrow scopes, old manifest preservation, and whitespace checks passed.
+- Mermaid CLI 11.12.0 rendered the example successfully; visual inspection found clear branches/labels and no clipping. All six palette text/fill pairs exceed 4.5:1.
+- Host picker discovery/invocation and all renderer/theme combinations were not tested.
+- Editor diagnostics found no errors. Refreshed inventory recommends canonical for all three adaptations with high confidence; spoke divergence remains until approved distribution.
+- Other canonical gaps and spoke-local repairs remain deferred. No commits or distribution.

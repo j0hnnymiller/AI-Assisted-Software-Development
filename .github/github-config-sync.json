@@ -61,6 +61,25 @@
     ".github/skills/app-hosting-decision-tree/SKILL.md": {
       "consolidated": "2026-10-18T19:49:39.2481571Z",
       "supersedes": []
+    },
+    ".github/agents/slide-master.agent.md": {
+      "supersedes": [
+        "5847cbdf153adf91",
+        "e69168d83185bc15"
+      ],
+      "consolidated": "2026-10-18T20:35:21.1066886Z"
+    },
+    ".github/instructions/agent-skills.instructions.md": {
+      "supersedes": [
+        "9848f26db3650786"
+      ],
+      "consolidated": "2026-10-18T20:35:21.1343846Z"
+    },
+    ".github/instructions/mermaid.instructions.md": {
+      "supersedes": [
+        "4d66aec820a41f30"
+      ],
+      "consolidated": "2026-10-18T20:35:21.1452616Z"
     }
   }
 }

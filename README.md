@@ -14,6 +14,11 @@ total_duration: "00:16:02"
 ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 source: "user request"
 revisions:
+  - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Documented scoped skill and Mermaid authoring guidance and corrected slide workflow routing."
+    ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
@@ -48,6 +53,9 @@ This repo was created for the AIASD CODE Training Course
 
 ## Guidance & Instructions
 
+- [Agent Skill authoring](.github/instructions/agent-skills.instructions.md) defines entry-point naming, discovery descriptions, resource safety, and validation for repository skills.
+- [Mermaid authoring](.github/instructions/mermaid.instructions.md) covers semantic colors, non-color cues, and rendering checks. It automatically targets standalone `.mmd` sources; attach it or load it by task relevance for diagrams embedded in Markdown.
+- [Slide Master](.github/agents/slide-master.agent.md) routes course-manifest PPTX builds to [build-course-slide-deck](.github/skills/build-course-slide-deck/SKILL.md), standalone Markdown merges to [merge-marp-decks](.github/skills/merge-marp-decks/SKILL.md), and read-only reviews to [review-marp-course-materials](.github/skills/review-marp-course-materials/SKILL.md).
 - [`.github/instructions/marp-slides.instructions.md`](.github/instructions/marp-slides.instructions.md) — Instructions and templates for creating Marp slide files. Slides created using these instructions must be placed in `slides/marp/` and include AI provenance metadata linking to an `ai-logs/` conversation (see `.github/instructions/ai-assisted-output.instructions.md` and `.github/instructions/copilot-instructions.md`).
 
 ## Useful Keybinding

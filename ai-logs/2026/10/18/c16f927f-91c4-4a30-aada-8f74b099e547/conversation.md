@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
 - Started: 2026-10-18T12:35:07.776-07:00
-- Ended: 2026-10-18T12:57:39.092-07:00
+- Ended: 2026-10-18T20:36:28.2314286Z
 
 ## Context
 
@@ -79,3 +79,48 @@ treated as enumeration failures; changed discovery to parent-directory enumerati
 with a filename filter. All eight tests then passed. No actual repository was
 used as a copy destination, no dependencies were installed, and no commits or
 distribution occurred.
+
+### 5
+
+[2026-10-18T13:32:10.128-07:00] User
+
+```text
+go ahead
+```
+
+Approved scope, following the completed 182-path disposition report: repair
+canonical Slide Master routing, then adapt skill-authoring and general Mermaid
+guidance. Other proposed gap families and spoke-local repairs remain deferred.
+
+[2026-10-18T20:36:28.2314286Z] Assistant
+
+Updated Slide Master to distinguish standalone `sources` merges, course
+`sections`/`decks` builds, three-mode read-only reviews, and existing-PPTX
+finalization. Preserved existing tools and source-edit boundaries.
+
+Adapted Course skill-authoring and Mermaid instructions into canonical guidance.
+Skill rules target `.github/skills/**/SKILL.md`; Mermaid rules target standalone
+`.mmd` files and use task relevance or explicit attachment for fenced diagrams.
+This deliberately avoids applying diagram guidance to every Markdown edit.
+Preserved semantic role colors, labels/non-color cues, resource safety, and
+separate discovery/behavior checks. Verified name/description constraints against
+the official Agent Skills specification.
+
+Updated root/instruction README entries and recorded three supersession records
+using the consolidation helper. Restored unrelated JSON layout, ordering, and
+timestamp representation altered by that helper; checked existing manifest
+values are unchanged.
+
+Validation: YAML and local instruction links passed; four command-routing
+contracts and narrow scopes passed static checks. Mermaid CLI 11.12.0 rendered
+the example successfully; inspected the PNG for labels, branch outcomes, and
+clipping. All six palette text/fill pairs exceed 4.5:1 contrast (10.76-15.11:1).
+Whitespace checks passed. These checks do not establish live host discovery,
+automatic invocation, or accessibility across every renderer/theme.
+
+No spoke writes, dependency installation, commits, or distribution.
+
+Final checks: editor diagnostics reported no errors in the agent, both new
+instructions, or sync manifest. Refreshed inventory recommends canonical for
+all three adaptations with high confidence through their supersession records;
+they remain diverged until separately approved distribution.

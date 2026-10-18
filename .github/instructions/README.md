@@ -13,6 +13,12 @@ task_durations:
 total_duration: "00:16:02"
 ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 source: "user request"
+revisions:
+  - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Indexed skill-authoring and task-scoped Mermaid guidance."
+    ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
 ---
 
 # Canonical AI Instructions
@@ -26,6 +32,8 @@ This folder contains the canonical versions of all AI-assisted development instr
 | File                                                                                   | Purpose                       | Description                                                             |
 | -------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------- |
 | [`ai-assisted-output.instructions.md`](ai-assisted-output.instructions.md)             | AI Provenance Policy          | Main AI provenance and logging policy with chat management requirements |
+| [`agent-skills.instructions.md`](agent-skills.instructions.md) | Skill Authoring | Entry-point naming, discovery descriptions, resources, safety, and validation |
+| [`mermaid.instructions.md`](mermaid.instructions.md) | Diagram Authoring | Semantic colors and target-renderer checks; `.mmd` matching, with task-based or explicit loading for Markdown diagrams |
 | [`business-rules-to-slices.instructions.md`](business-rules-to-slices.instructions.md) | Vertical Slice Guidelines     | Convert business rules into vertical slice implementations              |
 | [`custom-agents.instructions.md`](custom-agents.instructions.md)                      | Agent Authoring               | Guidelines for creating focused custom agents using verified host support |
 | [`instruction-files.instructions.md`](instruction-files.instructions.md)               | Instruction Standards         | Standards for creating and maintaining instruction files                |
