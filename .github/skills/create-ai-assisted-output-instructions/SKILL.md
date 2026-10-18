@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/create-ai-assisted-output-instructions.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added host-capability verification, clear mandatory/recommended status, safe examples, and an approval boundary for policy replacement."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Generate AI-Assisted Output Policy
 
@@ -69,7 +75,18 @@ Clear provenance and reliable logging for all AI-assisted artifacts to enable au
 ## Deliverable
 Complete policy with YAML front matter per its own requirements, all sections, templates, enforcement examples.
 
+## Authoring Workflow
 
+- Read the existing policy, relevant Copilot guidance, CI workflows, and log conventions. Distinguish implemented automation from recommended practice.
+- Separate mandatory requirements from recommendations. Verify host capabilities before claiming automatic transcript export, model discovery, file interception, or enforcement.
+- Ensure metadata, conversation, summary, and CI examples use valid YAML and commands that exist in the repository. Do not include credentials, private chat content, or sensitive personal data.
+- Validate links, examples, metadata, and referenced scripts or workflows.
+
+## Boundaries
+
+- Do not create a competing policy.
+- Do not promise automation or enforcement without implementation evidence.
+- Preserve the existing canonical policy unless the user explicitly approves replacing it.
 
 
 
