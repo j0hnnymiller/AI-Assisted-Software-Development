@@ -16,10 +16,16 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/bug-hunt-issues.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Resolved the issue-creation/read-only conflict and clarified requested report saving and overwrite behavior."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
-# Prompt: Bug Hunt — Findings to GitHub Issues
+# Bug Hunt — Findings to GitHub Issues
 
-Look at the current #codebase and find bugs. Create GitHub issues for any bugs that you find.
+Review the current codebase for likely bugs using static analysis heuristics. Produce evidence-backed findings and GitHub issue drafts; do not create issues automatically.
 
 ## Objective
 
@@ -37,7 +43,7 @@ Perform a read-only, static analysis to surface likely bugs with concrete eviden
 - Security-adjacent bugs: input not validated where required
 - UI logic pitfalls: stale state, missing dependency arrays, uncontrolled/controlled mismatches (web)
 
-## Steps
+## Procedure
 
 1. Map key modules and contracts
    - Identify public APIs, core services, critical flows
@@ -48,11 +54,15 @@ Perform a read-only, static analysis to surface likely bugs with concrete eviden
 3. Validate and classify
    - Assign severity (Critical/High/Medium/Low) and impact description
 
-4. Create GitHub issue drafts
-   - Provide issue titles, descriptions (evidence, impact), remediation steps, and labels
+4. Draft GitHub issues
+   - Provide issue titles, descriptions (evidence, impact), remediation steps, and labels; do not submit them
 
 5. Summarize and durations
-   - Executive summary and time breakdown per step and total
+   - Provide an executive summary and report per-step/total time only when measured
+
+6. Save only if requested
+   - Write a report only when the user explicitly asks and provides or approves a destination path
+   - Ask before overwriting an existing report
 
 ## Output format (Markdown)
 
@@ -100,19 +110,14 @@ Labels:
 
 ### Durations
 
-- Step 1: <duration>
-- Step 2: <duration>
-- Step 3: <duration>
-- Step 4: <duration>
-- Step 5: <duration>
-- Total: <duration>
+- Report measured per-step and total durations; do not estimate or fabricate elapsed time.
 
-## Constraints
+## Boundaries
 
-- Evidence-based; include file:line references
-- Conservative classification; call out uncertainty when applicable
-- No external calls or edits
-
+- Keep the review read-only. Do not create GitHub issues, make external calls, or modify code/infrastructure unless the user explicitly requests that action.
+- Drafting an issue is not permission to submit or publish it.
+- Do not write to the workspace unless a report is explicitly requested; use the user's requested path and ask before overwriting an existing report.
+- Keep findings evidence-based with file/line references and conservative classifications; call out uncertainty when applicable.
 
 
 
