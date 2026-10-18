@@ -73,6 +73,8 @@ Skill names use lowercase kebab-case, and each folder name matches the `name` in
 
 Use [`create-implementation-skills`](.github/skills/create-implementation-skills/SKILL.md) to author or update focused, repository-grounded implementation workflows.
 
+- Use [`review-marp-course-materials`](.github/skills/review-marp-course-materials/SKILL.md) to review a source deck, one course manifest, or a related multi-manifest sequence.
+
 ## AI-Assisted Artifacts & Provenance
 
 This repository enforces provenance and logging for any AI-assisted outputs (code, docs, diagrams, tests, data).
