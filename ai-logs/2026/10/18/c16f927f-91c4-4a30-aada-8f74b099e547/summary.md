@@ -4,7 +4,7 @@
 - Date: 2026-10-18
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
-- Duration: 00:15:50 (recorded authoring across nine implementation updates; read-only reviews and final bookkeeping excluded)
+- Duration: 00:21:33 (recorded authoring across ten implementation updates; read-only reviews and final bookkeeping excluded)
 
 ## Objective
 
@@ -45,7 +45,7 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - Use the skill to conduct a Marp review when requested.
 - The 182-path disposition review is complete; its external report/ledger separates six proposed reusable families from local-only content.
 - Skill-authoring and Mermaid guidance are now adapted; Slide Master routing is repaired.
-- Explorer/investigator and ORM authoring adaptations are now implemented. Vision and Scope and Agent Host guidance still require separate approval. Spoke-local workflow repairs and distribution are not approved.
+- Explorer/investigator, ORM authoring, Vision and Scope, and Agent Host adaptations are implemented. Spoke-local workflow repairs and distribution are not approved.
 
 ## Approved guidance batch
 
@@ -109,3 +109,22 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
   boundaries, and whitespace checks passed.
 - Automatic host matching for `**/*.VnS.md` was not interactively tested.
 - No client document edited, no distribution, and no commit.
+
+## Approved Agent Host batch
+
+- Added `.github/instructions/agent-host-sessions.instructions.md` for session,
+  workspace, harness, execution environment, isolation, permissions, parallel
+  coordination, review, validation, and handoff.
+- Checked current VS Code documentation for Agent Host architecture, harnesses,
+  Agents window, approvals, sessions, prompt files, and Agent Skills.
+- Corrected the source's outdated prompt-file framing: current documentation
+  describes prompt files as Local-harness-only and recommends Agent Skills for
+  reusable workflows in other harnesses. Removed the unsupported Local-agent
+  future-removal claim.
+- Adapted stable operating guidance only. The Course source remains unchanged;
+  no supersession record, spoke edit, distribution, or commit was made.
+- Indexed in root README and canonical instruction README.
+- Provenance interval 00:05:43; YAML, local links, eight behavioral checks,
+  `git diff --check`, and editor diagnostics passed.
+- No project code or tests were run; VS Code runtime discovery and behavior were
+  not interactively tested.

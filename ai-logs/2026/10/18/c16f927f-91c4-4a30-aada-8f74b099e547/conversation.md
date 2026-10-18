@@ -245,3 +245,38 @@ The first broad README link check also surfaced a pre-existing dangling link to
 outside this change; validation was narrowed to new/changed links and passed.
 An initial script used Windows' default text encoding for one existing Markdown
 file; rerunning with explicit UTF-8 passed.
+
+### 9
+
+[2026-10-18T14:49:51.822-07:00] User
+
+```text
+proceed
+```
+
+Approved the remaining proposed reusable configuration gap: canonical Agent
+Host operating guidance adapted from the Course source, with version-sensitive
+claims checked against current documentation.
+
+[2026-10-18T21:55:35.6225522Z] Assistant
+
+Added `.github/instructions/agent-host-sessions.instructions.md` with guidance
+for identifying the active session, workspace, harness, execution environment,
+and isolation; checking approval/sandbox controls; coordinating parallel work;
+reviewing changes; and recording handoffs. Updated root and instruction README
+indexes.
+
+Compared the Course source at
+`AI-Assisted-Software-Development-Course/.github/instructions/agent-host-sessions.instructions.md`
+with current VS Code documentation for Agent Host architecture, harness choice,
+Agents window, approvals, session management, prompt files, and Agent Skills.
+The current documentation describes prompt files as Local-harness-only and
+directs reusable workflows in other harnesses to Agent Skills; removed the
+source's unsupported future-removal claim. No Course files were changed.
+
+Validation: front matter/YAML, required provenance, duration arithmetic
+(00:05:43 task duration within the recorded interval), chat artifacts, changed
+local Markdown links, eight behavioral checks, and
+`git diff --check` passed. VS Code diagnostics found no errors in the guide or
+indexes. The source variant was not modified, no supersession record or
+distribution was made, and no commit or code tests were run.
