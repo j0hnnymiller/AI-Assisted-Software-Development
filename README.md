@@ -37,7 +37,7 @@ revisions:
   - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
     model: "unknown/unknown@unknown"
     date: "2026-10-18"
-    change: "Documented the canonical Marp review workflow and VTI training-index support in the transcript summarizer."
+    change: "Documented the canonical Marp review workflow, VTI training-index support, and approved Azure hosting skill import from Messer."
     ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
 ---
 
@@ -80,6 +80,7 @@ Use [`create-implementation-skills`](.github/skills/create-implementation-skills
 
 - Use [`review-marp-course-materials`](.github/skills/review-marp-course-materials/SKILL.md) to review a source deck, one course manifest, or a related multi-manifest sequence.
 - Use [`summarize-transcript-content`](.github/skills/summarize-transcript-content/SKILL.md) for VTT transcripts, VTI training indices with nested duration markers, or structured response aggregation. VTI summaries preserve hierarchy, distinguish declared and calculated durations, and flag incomplete or conflicting timing.
+- Use [`app-hosting-decision-tree`](.github/skills/app-hosting-decision-tree/SKILL.md) for a citizen-developer Azure app-host selection interview with functional-fit and cost screening. Imported unchanged from Messer, including its East US 2 pricing default. Use [`databricks-hosting-decisions`](.github/skills/databricks-hosting-decisions/SKILL.md) for a broader evidence-based hosting comparison without a fixed pricing-region default.
 
 ## AI-Assisted Artifacts & Provenance
 

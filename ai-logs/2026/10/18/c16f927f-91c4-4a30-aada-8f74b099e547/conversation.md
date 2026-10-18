@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
 - Started: 2026-10-18T12:35:07.776-07:00
-- Ended: 2026-10-18T12:45:44.678-07:00
+- Ended: 2026-10-18T12:49:47.879-07:00
 
 ## Context
 
@@ -39,3 +39,15 @@ extend summarize-transcript-content to support VTI structure and duration marker
 Extended `.github/skills/summarize-transcript-content/SKILL.md` with VTI content detection, source hierarchy preservation, explicit duration-marker interpretation, and non-overlapping duration statistics. Added handling of missing, invalid, ambiguous, and conflicting timing; preserved VTT analysis and response aggregation. Distinguished source duration from AI provenance task duration. Updated `README.md`.
 
 Validation: YAML parsing, discovery metadata, folder/name agreement, provenance-policy link, existing VTT/aggregation sections, and `git diff --check` passed. Checked `docs/sample-training.vti`: five sections sum to 45:00, average 9:00, longest 12:15, shortest 4:10, with timed children matching their parent sections. This was a documentation and sample-arithmetic check, not an executed summarization or parser test. No source sample was modified.
+
+### 3
+
+[2026-10-18T12:48:43.804-07:00] User
+
+```text
+The Azure app-host selection should be copied to canonical
+```
+
+[2026-10-18T12:49:47.879-07:00] Assistant
+
+Refreshed the cross-repository inventory, previewed the import, and copied Messer's `.github/skills/app-hosting-decision-tree/SKILL.md` with the canonical import script. Preserved its content, original provenance, Azure-only scope, one-question-at-a-time flow, and East US 2 pricing default. Recorded consolidation in `.github/github-config-sync.json` and documented the distinct use cases in `README.md`. Did not copy the ZIP, import historical conversations, edit spoke repositories, distribute files, or commit. The imported skill's historical `ai_log` paths remain relative to Messer, where both referenced conversations exist; this local conversation records the transfer rather than reconstructing source history.

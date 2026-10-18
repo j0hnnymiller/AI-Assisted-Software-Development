@@ -57,6 +57,10 @@
         "af50aef0aac027da"
       ],
       "consolidated": "2026-10-16T22:42:43.0981729Z"
+    },
+    ".github/skills/app-hosting-decision-tree/SKILL.md": {
+      "consolidated": "2026-10-18T19:49:39.2481571Z",
+      "supersedes": []
     }
   }
 }

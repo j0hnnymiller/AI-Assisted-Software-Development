@@ -4,7 +4,7 @@
 - Date: 2026-10-18
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
-- Duration: 00:03:14 (active work across two updates)
+- Duration: 00:04:18 (active work across three updates)
 
 ## Objective
 
@@ -17,6 +17,9 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - `README.md` - Added the canonical review skill to the Agent Skills overview.
 - `.github/skills/summarize-transcript-content/SKILL.md` - Added VTI detection, hierarchy preservation, explicit duration parsing, missing/conflicting timing handling, and non-overlapping statistics without removing VTT or response aggregation.
 - `README.md` - Documented VTI support in the existing summarizer.
+- `.github/skills/app-hosting-decision-tree/SKILL.md` - Imported the approved Azure app-host chooser unchanged from Messer.
+- `.github/github-config-sync.json` - Recorded the Azure hosting skill consolidation; no alternate variants were superseded.
+- `README.md` - Documented the Azure chooser's audience and pricing default separately from the broader hosting comparison.
 
 ## Key decisions
 
@@ -25,6 +28,7 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - Fixed exercise-count and duration requirements are not generalized; apply them only when supplied requirements or repository policy require them.
 - VTI indices retain source structure; no universal VTI schema or invented timeline is assumed.
 - Source duration uses `source_duration`, separate from provenance `total_duration`. Parent/child times are not double-counted; incomplete coverage yields a labeled subtotal.
+- Preserve the Azure chooser's existing behavior and original provenance. Historical conversation paths resolve in Messer, not canonical; this chat records the import. Do not copy the ZIP or distribute the skill.
 
 ## Validation
 
