@@ -4,7 +4,7 @@
 - Date: 2026-10-18
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
-- Duration: 00:10:12 (active work across five implementation updates; read-only review excluded)
+- Duration: 00:11:40 (recorded authoring across six implementation updates; read-only review and final bookkeeping excluded)
 
 ## Objective
 
@@ -45,7 +45,7 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - Use the skill to conduct a Marp review when requested.
 - The 182-path disposition review is complete; its external report/ledger separates six proposed reusable families from local-only content.
 - Skill-authoring and Mermaid guidance are now adapted; Slide Master routing is repaired.
-- Remaining explorer/investigator, ORM, Vision and Scope, and Agent Host adaptations require separate approval. Spoke-local workflow repairs and distribution are not approved in this batch.
+- Explorer/investigator adaptation is now implemented. ORM, Vision and Scope, and Agent Host adaptations still require separate approval. Spoke-local workflow repairs and distribution are not approved.
 
 ## Approved guidance batch
 
@@ -58,3 +58,19 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - Host picker discovery/invocation and all renderer/theme combinations were not tested.
 - Editor diagnostics found no errors. Refreshed inventory recommends canonical for all three adaptations with high confidence; spoke divergence remains until approved distribution.
 - Other canonical gaps and spoke-local repairs remain deferred. No commits or distribution.
+
+## Approved explorer/investigator batch
+
+- Added `.github/agents/codebase-explorer.agent.md`: one focused read/search-only
+  profile combining orientation, bounded behavior/dependency investigation,
+  and history/intent reconstruction when authorized evidence is available.
+- Explicit stop conditions; fact/inference/open-question evidence ledger;
+  disconfirming checks; no assumed dead code or automatic changes.
+- Kept history tool limitations explicit instead of adding shell access.
+- Updated the existing authoring skill and README to reuse one canonical profile.
+- YAML, naming, tool scope, links, descriptions, provenance, and six static
+  request-contract checks passed. Initial literal check required whitespace
+  normalization because of Markdown line wrapping.
+- Live host discovery and model behavior were not tested. No source variants
+  were overwritten or marked safe for distribution; local broader roles remain.
+- No commits, dependency installation, or spoke changes.

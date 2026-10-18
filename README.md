@@ -17,6 +17,11 @@ revisions:
   - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
     model: "unknown/unknown@unknown"
     date: "2026-10-18"
+    change: "Documented the unified read-only codebase explorer and clarified its authoring skill."
+    ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
+  - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
     change: "Documented scoped skill and Mermaid authoring guidance and corrected slide workflow routing."
     ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
@@ -53,6 +58,7 @@ This repo was created for the AIASD CODE Training Course
 
 ## Guidance & Instructions
 
+- [Codebase Explorer](.github/agents/codebase-explorer.agent.md) combines unfamiliar-code orientation, bounded behavior/dependency tracing, and evidence-based archaeology. It requests only read/search tools, returns findings in chat, and reports unavailable history instead of adding command execution. Use [create-codebase-explorer-agent](.github/skills/create-codebase-explorer-agent/SKILL.md) only to create or adapt a profile, not to perform an investigation.
 - [Agent Skill authoring](.github/instructions/agent-skills.instructions.md) defines entry-point naming, discovery descriptions, resource safety, and validation for repository skills.
 - [Mermaid authoring](.github/instructions/mermaid.instructions.md) covers semantic colors, non-color cues, and rendering checks. It automatically targets standalone `.mmd` sources; attach it or load it by task relevance for diagrams embedded in Markdown.
 - [Slide Master](.github/agents/slide-master.agent.md) routes course-manifest PPTX builds to [build-course-slide-deck](.github/skills/build-course-slide-deck/SKILL.md), standalone Markdown merges to [merge-marp-decks](.github/skills/merge-marp-decks/SKILL.md), and read-only reviews to [review-marp-course-materials](.github/skills/review-marp-course-materials/SKILL.md).

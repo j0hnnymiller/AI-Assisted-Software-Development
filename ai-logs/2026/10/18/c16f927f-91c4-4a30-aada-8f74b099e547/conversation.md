@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
 - Started: 2026-10-18T12:35:07.776-07:00
-- Ended: 2026-10-18T20:36:28.2314286Z
+- Ended: 2026-10-18T20:52:28.4367056Z
 
 ## Context
 
@@ -124,3 +124,44 @@ Final checks: editor diagnostics reported no errors in the agent, both new
 instructions, or sync manifest. Refreshed inventory recommends canonical for
 all three adaptations with high confidence through their supersession records;
 they remain diverged until separately approved distribution.
+
+### 6
+
+[2026-10-18T13:50:28.008-07:00] User
+
+```text
+go ahead
+```
+
+Approved scope: one canonical explorer/investigator, following the recommendation
+to combine unfamiliar-code exploration and archaeology with read-only defaults,
+an explicit boundary/stop condition, and evidence-linked findings.
+
+[2026-10-18T20:52:28.4367056Z] Assistant
+
+Created `.github/agents/codebase-explorer.agent.md` with only read/search tools.
+The agent returns chat findings, not files or issues, and does not run commands,
+tests, installations, fetches, or implementation. It covers bounded onboarding,
+control/data/dependency tracing, optional history/intent analysis, uncertainty,
+disconfirming checks, and at most three follow-up checks.
+
+History support is conditional on authorized read-only tools or supplied records.
+No claim that read/search necessarily exposes Git history; no shell added just
+for archaeology. No model pin, invented interactive commands, local entrypoint
+assumptions, or separate archeologist profile.
+
+Expanded the existing `create-codebase-explorer-agent` authoring skill to reuse
+this profile and distinguish authoring from investigation. Updated the README.
+No spoke variants were overwritten or marked superseded: the narrower new
+profile is not approval to remove their broader local roles.
+
+Validation: YAML, filename/name agreement, exact read/search tool scope, local
+links, discovery descriptions, and provenance arithmetic passed. Six static
+scenario-contract checks cover onboarding, behavior tracing, missing history,
+implementation refusal, unsupported dead-code claims, and evidence/stop rules.
+An initial literal-text check failed because Markdown wrapped a sentence; after
+normalizing whitespace, all six checks passed without changing the instructions.
+These checks are not live model-behavior or picker-discovery tests.
+
+No commits, distribution, spoke changes, or dependency installation. ORM,
+Vision and Scope, and Agent Host guidance remain deferred.
