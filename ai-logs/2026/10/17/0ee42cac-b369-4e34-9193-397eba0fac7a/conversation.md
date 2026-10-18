@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-18T10:05:54.310-07:00
+- Ended: 2026-10-18T10:18:09.845-07:00
 
 ## Context
 
@@ -481,3 +481,60 @@ source prompt paths. `git diff --check` passed; Git reported only the existing w
 skill line-ending conversion warning. No tests were run for documentation changes. The
 pre-existing `create-implementation-skills` metadata has a 32 ms rounding discrepancy;
 its historical timestamps were preserved rather than fabricated.
+
+### 14 - Readiness, IEC Assessment, and Review Workflows
+
+[2026-10-18] Assistant
+
+Continued the inventory-driven prompt comparison. Mapped the Databricks Apps CI/CD
+advisory to its existing skill and merged reusable requirements from the prompt:
+evidence-based gates, human decision rights, a leadership/platform evidence view,
+immutable artifact promotion, explicit exception handling, and traceability for
+out-of-band changes. Updated the root README skill index.
+
+Confirmed other workflows in this batch are covered by existing canonical skills:
+the IEC 62304 clause 4.4, 5, 6, 7, 8, and 9 assessments and executive synthesis map to
+`iec62304-compliance-assessment`; cloud checklist variants map to
+`cloud-readiness-checklist-authoring`; context conflict analysis maps to
+`check-context-conflicts`; and the AI-assisted development lifecycle maps to
+`design-ai-assisted-development-process`. Specific Teleflex procedure cross-references
+remain source context, not hub requirements. No new skill was warranted for those
+workflows.
+
+The updated Databricks skill front matter and local links were validated, along with
+`git diff --check`. Prompt inventory review remains incomplete; no source prompt or
+spoke repository was modified.
+
+### 15 - TDD and Publication Migration Coverage
+
+[2026-10-18] Assistant
+
+Reviewed another inventory batch. Added an explicit link to the repository's TDD
+instruction in `implement-vertical-slice`, with focused RED-GREEN-REFACTOR expectations
+for changed behavior; preserved the skill's approval gate and clarified not to make
+existing behavior fail merely to manufacture a RED test.
+
+Mapped `movePost.prompt.md` to `transfer-blog-publication` rather than creating a
+duplicate. Extended that skill to accept explicitly confirmed custom filename rules
+(including date/slug names), front-matter updates, and approved media-asset copying with
+source/destination validation and collision handling. The migration prompts contain
+different contact transformations, so no prompt's literal contact value is treated as
+canonical.
+
+Also confirmed: dead-code issue drafting maps to `create-dead-code-issues`; security
+issue drafting maps to `create-security-audit-issues` (no security audit was performed);
+slice implementation maps to `implement-vertical-slice` plus TDD guidance; instruction
+and agent authoring prompts map to existing authoring skills or the retired prompt
+workflow. The parallel slice prompt and its fixed calculator dependencies are
+repository-specific and do not warrant a reusable parallel-orchestration skill. The
+two discovered `create_chatmode_guidance.md` files are empty, so they contain no
+workflow to migrate.
+
+Reviewed the remaining architecture/delivery batch: migration strategy, architectural
+risk, security architecture, Vue migration tests, scalability planning, technology
+evaluation, ownership/support, and SDLC stabilization prompts map to their corresponding
+existing skills. No additional reusable workflow gap was identified in this batch.
+Validated updated skill front matter, required provenance, folder/name matching, local
+links, the TDD instruction reference, the `movePost` source path, the README entry, and
+`git diff --check`. The inventory's 138 prompt-related paths remain only partially
+reviewed; no spoke prompt was edited or distributed.

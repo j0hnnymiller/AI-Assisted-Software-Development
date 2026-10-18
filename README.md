@@ -196,6 +196,7 @@ For legacy prompt migration history, see the [migration log](ai-logs/2026/10/17/
   - [Vue Migration Testing](.github/skills/vue-migration-test-coverage/SKILL.md) adds evidence-checked Vue 3.4 regression surfaces.
   - [Tests Gap Analysis](.github/skills/analyze-test-gaps/SKILL.md) adds an optional eight-dimension brownfield testability scorecard.
   - [Databricks and Cloud Hosting Decisions](.github/skills/databricks-hosting-decisions/SKILL.md) adds decision-relevant clarification and comparable cost screening.
+  - [Databricks Apps CI/CD Advisory](.github/skills/databricks-apps-cicd-advisory/SKILL.md) defines evidence-based promotion gates, decision rights, exception handling, and release traceability.
   - [Generate Project Instruction Files](.github/skills/generate-instructions/SKILL.md) adds `applyTo` scope examples for both matching and non-matching paths.
 
 - **VS Code Copilot Agents Overview Slides** ([`slides/marp/vscode-copilot-agents-overview.deck.md`](slides/marp/vscode-copilot-agents-overview.deck.md))

@@ -125,6 +125,12 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - Refreshed the cross-repository inventory: 16 repositories, 493 configuration paths (95 canonical-only, 29 diverged, 4 identical, 365 missing here), including 138 legacy prompt-related paths in spokes.
 - Mapped the PM issue-review prompt to `review-issue-readiness`, multi-response summaries to `summarize-transcript-content` with privacy/attribution safeguards, and evergreen code review to existing instruction-compliance/refactoring skills. Kept DGA status reporting and issue-intake test artifacts repository-specific; the PM JSON schema remains a companion contract, not a separate skill.
 - Removed a stale reference to the deleted prompt migration index from `create-implementation-skills`; its revised guidance uses current skills and authoritative requirements.
+- Extended `databricks-apps-cicd-advisory` with evidence-backed promotion gates, decision rights, exception handling, immutable artifact promotion, release traceability, and leadership/platform reporting; added it to the root README's skill index.
+- Confirmed mappings for the IEC clause assessment/executive-summary prompt family (`iec62304-compliance-assessment`), cloud checklist variants (`cloud-readiness-checklist-authoring`), context conflict analysis (`check-context-conflicts`), and AI-assisted SDLC design (`design-ai-assisted-development-process`). No new skills were needed for these candidates.
+- Updated `implement-vertical-slice` to reference repository TDD guidance and require behavior-focused RED-GREEN-REFACTOR verification where applicable; no failing test is manufactured when existing behavior already satisfies the requirement.
+- Mapped the Jekyll `movePost` migration prompt to `transfer-blog-publication`; expanded the skill for confirmed date/slug naming, front-matter updates, and explicitly scoped media-asset copying. Contact values in the legacy publication prompts conflict, so none was adopted as canonical.
+- Mapped dead-code and security issue-drafting prompts to existing skills. Parallel slice prompts are tied to a specific calculator plan/dependency graph, and two discovered chatmode guidance prompt files are empty; neither warranted a new reusable skill.
+- Mapped remaining migration, architecture risk, security architecture, Vue migration testing, scalability, technology evaluation, ownership/support, and SDLC stabilization prompts to existing skills; no additional skill was warranted.
 
 ### Prompt review findings
 
@@ -132,6 +138,8 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - The note audit found existing gaps: Monday 32 of 102 notes, Tuesday 28 of 97, Wednesday 6 of 52 plus one source without notes, Thursday 24 of 62 plus one source without notes, and Friday 3 of 56 were below the documented three-sentence minimum.
 - The blog preparation and restoration prompts conflict on a destination contact value and do not define the inverse image conversion; the new skill requires confirmation instead of guessing.
 - The medical-device work-instruction prompt relies on a spoke-specific approved template and QMS requirements. The new skill requires those controlled sources and qualified review; it does not make compliance, release, or approval claims.
+- The IEC modular prompts include Teleflex-specific procedures and document identifiers; these remain organization-specific evidence inputs rather than universal requirements.
+- Security-related prompt comparison was limited to mapping the prompt to the existing issue-drafting skill; no repository security audit or vulnerability review was performed.
 - The additional prompt batch did not require a new general skill beyond the three already created. Repository-specific status reporting, historical test results, and schema artifacts were not imported.
 - Prompt-to-skill coverage is not complete. Current inventory counts varied between refreshes; no claim is made that all prompt files were analyzed.
 
@@ -140,3 +148,4 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - New/updated skill front matter, metadata fields, source prompt paths, and local links parsed and validated. `git diff --check` passed (with the existing weekly-skill LF-to-CRLF warning); no tests were run for these documentation-only changes.
 - The older `create-implementation-skills` artifact has a historical 32 ms discrepancy between its recorded elapsed time and rounded `total_duration`; it was not rewritten to avoid fabricating historical timestamps.
 - Prompt-gap review, skill authoring, and final provenance validation: 00:10:41 from 2026-10-18T09:55:12.922-07:00 to 2026-10-18T10:05:54.310-07:00.
+- Prompt-to-skill continuation and skill refinement: 00:06:12 from 2026-10-18T10:11:57.492-07:00 to 2026-10-18T10:18:09.845-07:00.
