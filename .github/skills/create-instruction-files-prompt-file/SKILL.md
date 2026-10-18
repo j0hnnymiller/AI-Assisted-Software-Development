@@ -22,9 +22,14 @@ revisions:
     date: "2026-10-17"
     change: "Deprecated prompt generation and redirected to the canonical instruction-authoring skill."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 # Retired Prompt-Authoring Workflow
 
-Do not create prompt files or prompt-authoring guides. For current instruction creation and maintenance, use [`create-instruction-files-instructions`](../create-instruction-files-instructions/SKILL.md). Consult [`prompt-file.instructions.md`](../../instructions/prompt-file.instructions.md) only when migrating an existing prompt.
+Do not create prompt files or prompt-authoring guides. For current instruction creation and maintenance, use [`create-instruction-file-authoring-instructions`](../create-instruction-file-authoring-instructions/SKILL.md). Consult [`prompt-file.instructions.md`](../../instructions/prompt-file.instructions.md) only when migrating an existing prompt.
 
 For a new reusable workflow, create or update a skill after approval and update the relevant README index.

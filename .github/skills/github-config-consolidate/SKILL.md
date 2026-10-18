@@ -15,6 +15,11 @@ revisions:
     date: "2026-10-17"
     change: "Prohibited importing prompt files and documented skill migration instead.; Added approval and preservation safeguards for configuration optimization."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 # Consolidate into the Canonical Repo
@@ -23,7 +28,7 @@ Writes approved versions into this repo and records which other versions they re
 
 ## When to Use
 
-- After decisions from `github-config-canonical` are approved by the user
+- After decisions from `github-config-select-canonical` are approved by the user
 - "Import X from repo Y", "adopt the newest version", "merge these copies"
 
 ## Preconditions

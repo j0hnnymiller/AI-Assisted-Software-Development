@@ -1,17 +1,34 @@
-# Example Usage: VTI Content Summarizer Prompt
+---
+ai_generated: true
+model: "unknown/unknown@unknown"
+operator: "johnmillerATcodemag-com"
+chat_id: "skill-naming-convention-20261018"
+prompt: |
+  go ahead with the plan
+started: "2026-10-18T15:17:01+00:00"
+ended: "2026-10-18T15:23:01+00:00"
+task_durations:
+  - task: "Approved skill renaming and active reference verification"
+    duration: "00:06:00"
+total_duration: "00:06:00"
+ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
+source: "user"
+---
+
+# Example Usage: Transcript Content Summarizer Skill
 
 ## Invocation
 
-To use the VTI content summarizer prompt in GitHub Copilot:
+To use the [transcript content summarizer skill](../.github/skills/summarize-transcript-content/SKILL.md) in GitHub Copilot:
 
 ```
-@summarize-vti-content vti_file="docs/sample-training.vti"
+/summarize-transcript-content vti_file="docs/sample-training.vti"
 ```
 
 Or via parameter:
 
 ```
-@summarize-vti-content
+/summarize-transcript-content
 ```
 
 Then provide the file path when prompted: `docs/sample-training.vti`

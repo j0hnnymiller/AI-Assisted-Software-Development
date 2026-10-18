@@ -42,6 +42,11 @@ revisions:
     date: "2026-10-17"
     change: "Replaced obsolete promptfile authoring guidance with skill-based workflows."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 # Creating New Instruction Files
@@ -352,7 +357,7 @@ Define:
 
 ### Step 2: Use Meta-Prompt
 
-Use [the instruction-files skill](../skills/create-instruction-files-instructions/SKILL.md) in GitHub Copilot chat.
+Use [the instruction-files skill](../skills/create-instruction-file-authoring-instructions/SKILL.md) in GitHub Copilot chat.
 
 ### Step 3: Execute in Copilot
 

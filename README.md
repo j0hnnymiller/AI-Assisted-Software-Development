@@ -19,6 +19,11 @@ revisions:
     date: "2026-10-17"
     change: "Added approved technical-debt and vertical-slice skills, updated four existing skills, and documented the new workflows."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 # AI-Assisted-Software-Development-Course
@@ -53,6 +58,8 @@ This requires the `multiCommand` extension and is configured to trigger when edi
 ## Agent Skills
 
 Reusable task workflows are maintained as workspace skills in [`.github/skills/`](.github/skills/). Each skill has a `SKILL.md` entry point and can include supporting scripts or references. Legacy prompts are migration-only; see the [prompt migration index](.github/prompts/README.md) and the [migration log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/summary.md).
+
+Skill names use lowercase kebab-case, and each folder name matches the `name` in its `SKILL.md`. Related domain and platform skills retain shared prefixes; task workflows use descriptive action names. The [approved naming decisions and rename record](ai-logs/2026/10/18/skill-naming-convention-20261018/summary.md) cover all 80 skills: 50 renamed and 30 kept. A `deprecate-` prefix is a naming label only; these renames do not disable skills or change their workflows.
 
 ## AI-Assisted Artifacts & Provenance
 
@@ -108,8 +115,8 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 
 ### Legacy Prompt-Authoring Redirects
 
-- [`.github/skills/create-instruction-files-instructions/SKILL.md`](.github/skills/create-instruction-files-instructions/SKILL.md) — Create or update instruction files directly; use this instead of generating prompt files
-- [`.github/skills/create-use-case-instructions/SKILL.md`](.github/skills/create-use-case-instructions/SKILL.md) — Create or update use-case authoring guidance directly
+- [`.github/skills/create-instruction-file-authoring-instructions/SKILL.md`](.github/skills/create-instruction-file-authoring-instructions/SKILL.md) — Create or update instruction files directly; use this instead of generating prompt files
+- [`.github/skills/create-use-case-authoring-instructions/SKILL.md`](.github/skills/create-use-case-authoring-instructions/SKILL.md) — Create or update use-case authoring guidance directly
 
 ### Prompt Migration Replacements
 
@@ -144,20 +151,20 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes section divider slides, module progression context, and speaker notes coverage across all slide blocks
   - Provenance: [Chat log](ai-logs/2026/05/04/merge-marp-thursday-ge-20260504/conversation.md) | [Summary](ai-logs/2026/05/04/merge-marp-thursday-ge-20260504/summary.md)
 
-- **VTT Content Summarizer Skill** ([`.github/skills/summarize-vti-content/SKILL.md`](.github/skills/summarize-vti-content/SKILL.md))
+- **VTT Content Summarizer Skill** ([`.github/skills/summarize-transcript-content/SKILL.md`](.github/skills/summarize-transcript-content/SKILL.md))
   - Analyzes VTT (Video Text Track) files from class recordings and generates structured summaries
   - Extracts timing information, section breakdowns, key topics, and action items
   - Includes sample files: [VTT input](<past-class-recordings/2026-02/AI-Assisted%20Software%20Development%20with%20GitHub%20Copilot%20(Mon%20Afternoon).vtt>) | [Generated summary](<past-class-recordings/2026-02/AI-Assisted%20Software%20Development%20with%20GitHub%20Copilot%20(Mon%20Afternoon)-summary.md>)
   - Documentation: [Usage Guide](past-class-recordings/USAGE.md) | [Live Demo](past-class-recordings/DEMO.md)
   - Provenance: [Chat log](ai-logs/2026/02/17/create-vtt-summarizer-20260217/conversation.md)
 
-- **Technical Debt Remediation Skill** ([`.github/skills/technical-debt-remediation/SKILL.md`](.github/skills/technical-debt-remediation/SKILL.md))
+- **Technical Debt Remediation Skill** ([`.github/skills/remediate-technical-debt/SKILL.md`](.github/skills/remediate-technical-debt/SKILL.md))
   - Plans and implements bounded debt fixes after approval, with focused tests and verification.
 - **Vertical Slice Implementation Skill** ([`.github/skills/implement-vertical-slice/SKILL.md`](.github/skills/implement-vertical-slice/SKILL.md))
   - Implements one approved slice at a time with explicit acceptance coverage and handoff evidence.
 - **Updated Existing Skills**
-  - [Vue Migration Testing](.github/skills/vue-migration-testing/SKILL.md) adds evidence-checked Vue 3.4 regression surfaces.
-  - [Tests Gap Analysis](.github/skills/tests-gap-analysis/SKILL.md) adds an optional eight-dimension brownfield testability scorecard.
+  - [Vue Migration Testing](.github/skills/vue-migration-test-coverage/SKILL.md) adds evidence-checked Vue 3.4 regression surfaces.
+  - [Tests Gap Analysis](.github/skills/analyze-test-gaps/SKILL.md) adds an optional eight-dimension brownfield testability scorecard.
   - [Databricks and Cloud Hosting Decisions](.github/skills/databricks-hosting-decisions/SKILL.md) adds decision-relevant clarification and comparable cost screening.
   - [Generate Project Instruction Files](.github/skills/generate-instructions/SKILL.md) adds `applyTo` scope examples for both matching and non-matching paths.
 
@@ -250,7 +257,7 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 - **Instruction Validation Report** ([`validation-report-20251015-212137.md`](validation-report-20251015-212137.md))
   - Comprehensive analysis of instruction file conflicts and inconsistencies
   - Identifies 7 issues (1 high, 4 medium, 3 low severity) with fixes applied to critical issues
-  - Generated from: [`.github/skills/meta-ai-validate-and-improve-instructions/SKILL.md`](.github/skills/meta-ai-validate-and-improve-instructions/SKILL.md)
+  - Generated from: [`.github/skills/orchestrate-instruction-improvement/SKILL.md`](.github/skills/orchestrate-instruction-improvement/SKILL.md)
   - Status: Critical fixes applied (Option C executed - 4 issues resolved, 3 deferred for refactoring)
   - Provenance: [Chat log](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/conversation.md) | [Summary](ai-logs/2025/10/15/validate-improve-instructions-20251015-212137/summary.md)
   - Verification: [Fixes verified 2025-10-16](validation-fixes-verified-20251016.md) ([chat log](ai-logs/2025/10/16/resume-validation-fixes-20251016/conversation.md))

@@ -15,6 +15,11 @@ revisions:
     date: "2026-10-17"
     change: "Excluded legacy prompt files from distribution while keeping them visible to inventory."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 # Distribute Canonical Config to Other Repos
@@ -36,7 +41,7 @@ Hub-and-spoke sync: this repo is the hub. Spokes only receive updates that are p
    Writes `%TEMP%/github-config-sync-plan.json`. Use `-Path` (paths or globs) to scope a rollout to specific files; without it, `-Apply` writes every pending update/add in each repo.
    Known legacy prompt files have `distribute: "none"` and must not appear as rollout writes.
 3. Present the plan per repo. Explain non-write actions:
-   - `target-ahead` / `forked` → run `github-config-canonical` + `github-config-consolidate` for those files first
+   - `target-ahead` / `forked` → run `github-config-select-canonical` + `github-config-consolidate` for those files first
    - `target-only` → candidates for approved imports or repo-specific files; target-only `.github/prompts/**` files are migration candidates, never import targets
    - `uncommitted` / dirty repo → owner must commit or stash
    - `blocked-secret` → fix the canonical `mcp.json`

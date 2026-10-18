@@ -1,6 +1,6 @@
 ---
 name: slide-master
-description: "Use when working with PPTX files, PowerPoint templates, Marp slide decks, Pandoc conversions, or slide pipeline skills. Expert at running the merge-marp-decks and finalize-pptx-local skills for repeatable slide automation workflows."
+description: "Use when working with PPTX files, PowerPoint templates, Marp slide decks, Pandoc conversions, or slide pipeline skills. Expert at running the merge-marp-decks and finalize-pptx-locally skills for repeatable slide automation workflows."
 tools:
   [
     vscode/extensions,
@@ -62,6 +62,12 @@ tools:
     todo,
   ]
 argument-hint: "Describe the slide task, manifest path, PPTX path, template issue, or Pandoc conversion goal."
+revisions:
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 You are Slide Master, a workspace custom agent for PPTX production and repair workflows.
@@ -87,7 +93,7 @@ You are Slide Master, a workspace custom agent for PPTX production and repair wo
 - `/merge-marp-decks` via [merge-marp-decks](../skills/merge-marp-decks/SKILL.md)
   - Full mode runs all phases: Phase 0 (validate sources), Phase 1 (merge), Phase 1.5 (validate merged), Phase 2 (generate PPTX), Phase 3 (finalize PPTX).
   - Validate-only mode stops after Phase 1.5.
-- `/finalize-pptx-local` via [finalize-pptx-local](../skills/finalize-pptx-local/SKILL.md)
+- `/finalize-pptx-locally` via [finalize-pptx-locally](../skills/finalize-pptx-locally/SKILL.md)
   - Standalone command for re-running Phase 3 without regenerating the PPTX (e.g., after manual edits).
 
 ## Operating Rules

@@ -13,6 +13,12 @@ task_durations:
 total_duration: "00:16:02"
 ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 source: "user request"
+revisions:
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 # Legacy Prompt-Generator Index (Deprecated)
@@ -23,10 +29,10 @@ This folder contains no active prompt generators. Do not add prompt files here; 
 
 | Legacy generator workflow | Current skill |
 | --- | --- |
-| Create or update instruction-authoring guidance | [`create-instruction-files-instructions`](../../skills/create-instruction-files-instructions/SKILL.md) |
-| Create or update use-case authoring guidance | [`create-use-case-instructions`](../../skills/create-use-case-instructions/SKILL.md) |
+| Create or update instruction-authoring guidance | [`create-instruction-file-authoring-instructions`](../../skills/create-instruction-file-authoring-instructions/SKILL.md) |
+| Create or update use-case authoring guidance | [`create-use-case-authoring-instructions`](../../skills/create-use-case-authoring-instructions/SKILL.md) |
 | Generate general instruction files | [`generate-instructions`](../../skills/generate-instructions/SKILL.md) |
-| Add AI provenance policy guidance | [`create-ai-assisted-output-instructions`](../../skills/create-ai-assisted-output-instructions/SKILL.md) |
+| Add AI provenance policy guidance | [`create-ai-assisted-output-policy`](../../skills/create-ai-assisted-output-policy/SKILL.md) |
 | Review and improve existing instructions | [`validate-and-improve-instructions`](../../skills/validate-and-improve-instructions/SKILL.md) |
 
 The legacy prompt-authoring generator skills are migration references only. They must not create `.prompt.md` or `*.instructions.prompt.md` files; route new reusable workflows to skills and one-off requests to chat.

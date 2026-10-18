@@ -15,6 +15,11 @@ revisions:
     date: "2026-10-17"
     change: "Clarified that legacy prompts are migration inputs, not import or distribution targets.; Added read-only signals for duplicate rules, overlapping scopes, and excessive tool access."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 # GitHub Config Inventory
@@ -59,7 +64,7 @@ Defined in the manifest [.github/github-config-sync.json](../../github-config-sy
 2. Status counts
 3. Table of `diverged` + `missing-here`: path, variants, repos, recommended repo(s), confidence
 4. Flags: `SecretHits > 0` (never print values), uncommitted copies, repos on non-default branches, legacy prompt paths with likely skill replacements, and likely duplicate/overlapping instructions or unnecessarily broad agent tool scopes
-5. Next step: hand diverged files to the `github-config-canonical` skill
+5. Next step: hand diverged files to the `github-config-select-canonical` skill
 
 ## Implementation
 

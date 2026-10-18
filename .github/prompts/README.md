@@ -19,6 +19,11 @@ revisions:
     date: "2026-10-17"
     change: "Added approved cross-repository prompt migration index for canonical skills."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 # Legacy Prompt Archive (Deprecated)
@@ -68,26 +73,26 @@ The following canonical skills incorporate reusable workflows identified in the 
 
 | Workflow | Canonical skill |
 | --- | --- |
-| AI-assisted development process | [`ai-assisted-development-process`](../skills/ai-assisted-development-process/SKILL.md) |
-| Product requirements document authoring | [`prd-authoring`](../skills/prd-authoring/SKILL.md) |
-| CQRS and event-sourcing guidance | [`cqrs-event-sourcing-guidance`](../skills/cqrs-event-sourcing-guidance/SKILL.md) |
+| AI-assisted development process | [`design-ai-assisted-development-process`](../skills/design-ai-assisted-development-process/SKILL.md) |
+| Product requirements document authoring | [`author-product-requirements`](../skills/author-product-requirements/SKILL.md) |
+| CQRS and event-sourcing guidance | [`cqrs-and-event-sourcing-guidance`](../skills/cqrs-and-event-sourcing-guidance/SKILL.md) |
 | Databricks Apps CI/CD advisory | [`databricks-apps-cicd-advisory`](../skills/databricks-apps-cicd-advisory/SKILL.md) |
-| Cloud readiness checklist variants | [`cloud-readiness-checklists`](../skills/cloud-readiness-checklists/SKILL.md) |
-| Mermaid Markdown to DOCX conversion | [`mermaid-markdown-to-docx`](../skills/mermaid-markdown-to-docx/SKILL.md) |
+| Cloud readiness checklist variants | [`cloud-readiness-checklist-authoring`](../skills/cloud-readiness-checklist-authoring/SKILL.md) |
+| Mermaid Markdown to DOCX conversion | [`convert-mermaid-markdown-to-docx`](../skills/convert-mermaid-markdown-to-docx/SKILL.md) |
 | Databricks/cloud hosting decisions | [`databricks-hosting-decisions`](../skills/databricks-hosting-decisions/SKILL.md) |
 | Databricks Apps infrastructure as code | [`databricks-apps-iac-advisory`](../skills/databricks-apps-iac-advisory/SKILL.md) |
-| Meeting briefs from transcripts | [`meeting-briefs-from-transcripts`](../skills/meeting-briefs-from-transcripts/SKILL.md) |
-| Ownership and support model guidance | [`ownership-support-model-guidance`](../skills/ownership-support-model-guidance/SKILL.md) |
-| SDLC stabilization | [`sdlc-stabilization-guidance`](../skills/sdlc-stabilization-guidance/SKILL.md) |
-| Vue migration testing | [`vue-migration-testing`](../skills/vue-migration-testing/SKILL.md) |
-| Technical blog section authoring | [`blog-section-authoring`](../skills/blog-section-authoring/SKILL.md) |
-| Issue readiness review | [`issue-readiness-review`](../skills/issue-readiness-review/SKILL.md) |
-| Workflow path counting | [`workflow-path-counting`](../skills/workflow-path-counting/SKILL.md) |
-| AI practitioner resource catalog | [`ai-practitioner-resource-catalog`](../skills/ai-practitioner-resource-catalog/SKILL.md) |
-| Chat mode authoring | [`chatmode-authoring`](../skills/chatmode-authoring/SKILL.md) |
+| Meeting briefs from transcripts | [`create-meeting-brief-from-transcript`](../skills/create-meeting-brief-from-transcript/SKILL.md) |
+| Ownership and support model guidance | [`design-ownership-and-support-model`](../skills/design-ownership-and-support-model/SKILL.md) |
+| SDLC stabilization | [`plan-sdlc-stabilization`](../skills/plan-sdlc-stabilization/SKILL.md) |
+| Vue migration testing | [`vue-migration-test-coverage`](../skills/vue-migration-test-coverage/SKILL.md) |
+| Technical blog section authoring | [`author-blog-section`](../skills/author-blog-section/SKILL.md) |
+| Issue readiness review | [`review-issue-readiness`](../skills/review-issue-readiness/SKILL.md) |
+| Workflow path counting | [`count-workflow-paths`](../skills/count-workflow-paths/SKILL.md) |
+| AI practitioner resource catalog | [`curate-ai-practitioner-resources`](../skills/curate-ai-practitioner-resources/SKILL.md) |
+| Chat mode authoring | [`deprecate-chatmode-authoring`](../skills/deprecate-chatmode-authoring/SKILL.md) |
 | IEC 62304 lifecycle assessment | [`iec62304-compliance-assessment`](../skills/iec62304-compliance-assessment/SKILL.md) |
-| SME introduction scheduling | [`sme-intro-scheduling`](../skills/sme-intro-scheduling/SKILL.md) |
-| Multi-file response summarization | [`summarize-vti-content`](../skills/summarize-vti-content/SKILL.md) |
+| SME introduction scheduling | [`schedule-sme-introductions`](../skills/schedule-sme-introductions/SKILL.md) |
+| Multi-file response summarization | [`summarize-transcript-content`](../skills/summarize-transcript-content/SKILL.md) |
 
 ## Migration and Sync Policy
 

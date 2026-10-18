@@ -22,6 +22,11 @@ revisions:
     date: "2026-10-17"
     change: "Deprecated authoring instruction-generating prompts and redirected reusable workflows to skills."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 applyTo: "**/*.instructions.prompt.md"
 ---
 
@@ -44,7 +49,7 @@ The historical sections below describe expectations the old prompt format attemp
 
 ### Provenance
 
-Instruction files that are created or revised must follow [`ai-assisted-output.instructions.md`](ai-assisted-output.instructions.md), including embedded YAML provenance and a traceable conversation log. Generate or update instruction files through [`create-instruction-files-instructions`](../skills/create-instruction-files-instructions/SKILL.md), not through a prompt generator.
+Instruction files that are created or revised must follow [`ai-assisted-output.instructions.md`](ai-assisted-output.instructions.md), including embedded YAML provenance and a traceable conversation log. Generate or update instruction files through [`create-instruction-file-authoring-instructions`](../skills/create-instruction-file-authoring-instructions/SKILL.md), not through a prompt generator.
 
 ### Historical Prompt Content
 

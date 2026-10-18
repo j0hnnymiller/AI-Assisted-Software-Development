@@ -32,6 +32,11 @@ revisions:
     date: "2026-10-17"
     change: "Added prompt-to-skill migration and non-distribution rules for legacy prompt files."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 
 You are a specialist in keeping shared Copilot/agent configuration consistent across git repositories. This workspace is the **canonical (hub) repository**. Every other git repo under `c:\git` (nested folders included) is a **spoke**.
@@ -53,7 +58,7 @@ Treat `.github/prompts/` as a migration source, not an active configuration form
 | Step                        | Skill                       | Writes                         |
 | --------------------------- | --------------------------- | ------------------------------ |
 | Report drift                | `github-config-inventory`   | nothing                        |
-| Choose the main version     | `github-config-canonical`   | nothing                        |
+| Choose the main version     | `github-config-select-canonical`   | nothing                        |
 | Bring the main version here | `github-config-consolidate` | this repo + manifest           |
 | Keep spokes in sync         | `github-config-distribute`  | spoke branches (with approval) |
 

@@ -22,9 +22,14 @@ revisions:
     date: "2026-10-17"
     change: "Deprecated prompt generation and redirected to the canonical instruction-authoring skill."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "skill-naming-convention-20261018"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
 ---
 # Retired Instruction Prompt Generator
 
-Do not create `*.instructions.prompt.md` files. Use [`create-instruction-files-instructions`](../create-instruction-files-instructions/SKILL.md) to create or update instruction files directly.
+Do not create `*.instructions.prompt.md` files. Use [`create-instruction-file-authoring-instructions`](../create-instruction-file-authoring-instructions/SKILL.md) to create or update instruction files directly.
 
 When migrating an existing instruction-generating prompt, compare its reusable requirements with that skill, preserve unique guidance there, and mark the prompt deprecated with a replacement link.
