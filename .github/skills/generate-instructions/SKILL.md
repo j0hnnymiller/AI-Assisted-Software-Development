@@ -20,7 +20,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Added evidence-based Git workflow and C# instruction-generation guidance."
+    change: "Added evidence-based Git workflow and C# guidance plus host-verified applyTo scope selection with positive/negative path validation."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Generate Project Instruction Files
@@ -125,6 +125,7 @@ triggers: ["<keyword1>", "<keyword2>"]
    - Document detected patterns
    - Provide concrete examples
    - Include AI-specific guidance
+   - For `applyTo`, verify the intended host supports the syntax, choose the narrowest useful pattern, and validate at least one in-scope path and one out-of-scope path. Do not add `applyTo` when it is unsupported or unnecessary.
 5. **Report**: List generated files with brief summary per file
 
 When documenting Git workflows, inspect repository evidence such as branch conventions, commit history, contribution guidance, hooks, and CI policy. Distinguish current enforced rules from suggested conventions; do not invent branch names, approval requirements, merge strategies, or release procedures. Include safe examples only when supported by the repo.
@@ -136,6 +137,7 @@ For C# projects, consider documenting nullable-reference settings, async/cancell
 ## Quality Standards
 - Evidence-based (reference actual codebase patterns)
 - Specific and actionable (not generic advice)
+- `applyTo` scope is demonstrated with matching and non-matching paths
 - Include code examples from codebase
 - Follow GitHub Copilot instruction format
 - Clear AI assistant directives
@@ -147,7 +149,5 @@ List generated files with:
 - ApplyTo pattern
 - Key conventions documented
 - Example patterns included
+- For files with `applyTo`, one matching and one non-matching path
 - Integration points with other instructions
-
-
-

@@ -84,3 +84,22 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - With approval, clarified that spoke prompts remain unchanged unless separately authorized, are not imported or distributed, and retained hub prompts stay indexed as deprecated with the manifest's no-distribution setting.
 - Scope was limited to the validation skill and its revision entry, plus this chat log. No other files or repositories were changed.
 - Validation passed for front matter/revision metadata, links, and `git diff --check`. This clarification task took 00:02:18.
+
+## Continued Missing-Config Review and Approved Skill Updates
+
+- Refreshed inventory: 16 repositories, 474 paths, 69 canonical-only, 63 diverged, 5 identical, and 337 missing-here. No repositories were dirty; Lore was on `generate-workitems`. Five paths had possible secret-pattern hits; values were not inspected or reproduced.
+- Reviewed the 41 missing-here skill paths and the 69 missing-here instruction paths. Skill review identified the `finalize-pptx-local` command-path mismatch, prompt-generation workflows to exclude, course-specific Marp/manifest schema boundaries, and five byte-identical course deck-validator copies. The instruction review identified legacy prompt guidance and stale instruction-authoring metadata, with repo-specific medical-device, DGA, Zeus, and Lore rules left local.
+- The instruction review was bounded: inventory outlines and representative files were examined, but not every spoke instruction body was read.
+- The user approved all skill changes previously presented and chose to continue the read-only instruction review.
+- Created `technical-debt-remediation` and `implement-vertical-slice`; updated Vue migration tests, test-gap analysis, Databricks hosting decisions, and instruction generation skills. Updated root README links.
+- No spoke repository was edited, no distribution or commit was performed, and the unapproved finalizer command correction remains outstanding.
+- Front matter, skill names, metadata fields, description lengths, log targets, duration arithmetic, and new local links were checked; `git diff --check` passed.
+
+## Agent, Chatmode, and Workflow Inventory Review
+
+- Full inventory refresh: 16 repos, 474 paths; 69 canonical-only, 65 diverged, 5 identical, 335 missing-here. Only the canonical repo is dirty from this work; Lore is on `generate-workitems`. Five paths have possible secret-pattern hits; values were not inspected, and the 62304 chatmode was skipped.
+- Compared seven diverged agents; keep the current canonical version for all seven. They are newer and already incorporate reusable guidance; the older Slide Master variant refers to deprecated prompts. No agent was imported.
+- The 31 missing agent paths are mostly domain-specific, tool-bound, duplicated, legacy, or test/demo definitions. `software-archeologist` is a possible generic candidate but needs host-ready authoring; `codebase-explorer` overlaps an existing skill.
+- Twelve chatmodes are missing. The PM mode set has an approval-label contradiction (one section requires human-only approval, another tells the PM to apply it) and a priority score normalization gap (formula max 25 versus labels 0-100). Many persona files lack supported front matter; do not import as-is.
+- The 21 workflow files are bound to the AI Practitioner Resources repository. Flagged command injection from direct PR body/ref interpolation in `capture-copilot-session.yml`, and untrusted PR code execution in the same workflow trust context as model API keys in `ai-code-review.yml`. The remaining workflows and guides were not imported; several guides reference legacy prompts.
+- Review was read-only in spoke repositories. Other instruction/skill variants, prompt mappings, and remaining GitHub config paths remain for later review.

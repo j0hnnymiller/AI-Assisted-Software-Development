@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-17T20:21:15.8398024-07:00
+- Ended: 2026-10-17T20:56:46.0719296-07:00
 
 ## Context
 
@@ -321,3 +321,89 @@ The user tagged `.github/skills/validate-and-improve-instructions/SKILL.md`. Aft
 - Front matter and revision metadata, skill links, and `git diff --check` validated after the focused edit.
 - The bounded clarification and validation took 00:02:18 from 20:18:57.558-07:00 to 20:21:15.8398024-07:00.
 - No other files or repositories were in scope.
+
+## Continued Missing-Config Review and Approved Skill Updates
+
+### User direction
+
+```text
+Continue broader config review
+```
+
+The refreshed inventory covered 16 repositories and 474 paths: 69 canonical-only, 63 diverged, 5 identical, and 337 missing-here. No repository was dirty; `Lore` was on the non-default `generate-workitems` branch. Five paths had possible secret-pattern hits; values were not inspected or reproduced.
+
+### Missing skill review
+
+- Reviewed the 41 missing-here skill paths (26 `SKILL.md` files and 15 supporting assets) for overlap, useful gaps, and repository-specific scope.
+- Found a command-path inconsistency in `.github/skills/finalize-pptx-local/SKILL.md`: the linked script resolves to `.github/scripts/finalize_pptx_local.ps1`, while the example command invokes a nonexistent root `scripts/finalize_pptx_local.ps1`. This was reported but not changed.
+- Kept prompt-generator workflows out of active skills because the hub deprecates prompt files.
+- Distinguished course-manifest review and deck authoring from the hub's Marp merge workflow; did not port course-specific manifest schemas or scripts.
+- Confirmed five course `validate_source_decks.py` helpers are byte-identical; a separate merge helper is a different variant.
+
+### Missing instruction review
+
+- Refreshed the 69 missing-here instruction paths and examined outlines plus representative reusable, legacy, and domain-specific sources.
+- Identified legacy prompt-generation and prompt-metadata instructions that conflict with the hub's prompt-deprecation policy; did not import them.
+- Identified stale instruction-authoring guidance that uses the singular `.instruction.md` suffix or unsupported generic metadata, unlike the hub's plural `.instructions.md` convention and host/schema verification guidance.
+- Kept repository-specific rules (including Zeus persistence gates, medical-device testing, DGA workflows, and Lore secrets) in their owning repositories. Possible secret-pattern paths were not opened.
+- The broader instruction review was bounded; not every spoke instruction body was fully read.
+
+### User approval and changes
+
+The user selected `continue` and approved `all of them` for the previously listed skill changes. The source repositories remained read-only.
+
+- Created `.github/skills/technical-debt-remediation/SKILL.md` and `.github/skills/implement-vertical-slice/SKILL.md`.
+- Added Vue 3.4 migration surfaces to `.github/skills/vue-migration-testing/SKILL.md`.
+- Added an optional evidence-backed eight-dimension rubric to `.github/skills/tests-gap-analysis/SKILL.md`, separate from its simple heuristic.
+- Added decision-relevant clarification and comparable-cost guidance to `.github/skills/databricks-hosting-decisions/SKILL.md`, without adopting a fixed region.
+- Added positive/negative `applyTo` path validation to `.github/skills/generate-instructions/SKILL.md`.
+- Updated the root `README.md` with the new skill links and descriptions.
+- No finalizer path correction, spoke edit, commit, or distribution was authorized or performed.
+
+### Validation
+
+- Parsed front matter and checked required provenance fields, skill names, description lengths, task-duration arithmetic, `ai_log` targets, and the new README/skill links.
+- Ran `git diff --check`.
+- The runtime did not expose a model/version; new provenance records it as unknown.
+
+## Agent, Chatmode, and Workflow Inventory Review
+
+### Inventory refresh
+
+- Refreshed all 16 repositories and 474 paths. Current counts: 69 canonical-only, 65 diverged, 5 identical, and 335 missing-here.
+- The canonical repo is dirty because of this approved work; other scanned repos were clean. `Lore` remains on the non-default `generate-workitems` branch.
+- Five paths have possible secret-pattern hits. Values were not inspected or reproduced; the 62304 chatmode with two hits was not opened.
+- Group counts: agents 7 diverged/31 missing; chatmodes 12 missing; workflows 21 missing; instructions 18 diverged/69 missing; skills 35 diverged/39 missing; prompts 3 diverged/131 missing; other GitHub config 2 diverged/32 missing.
+
+### Agent decisions
+
+Compared the seven diverged agents using inventory lineage, canonical revision notes, and targeted diffs. Decision for each: keep the current canonical version.
+
+- `.github/agents/devops-engineer.agent.md` — current version contains newer infrastructure assessment and decision guidance; older forks add generic AI-centric material.
+- `.github/agents/devtest-engineer.agent.md` — current version already includes test-data/environment, defect, metrics, and maintenance guidance; the Teleflex variant remains outside this general-purpose scope.
+- `.github/agents/product-manager.agent.md` — current version already includes general evidence, boundaries, escalation, and output guidance; the Academia fork includes domain and legacy-prompt references.
+- `.github/agents/senior-developer.agent.md` — current version includes the reusable codebase, debugging, quality, and knowledge-transfer guidance from older variants.
+- `.github/agents/solution-architect.agent.md` — current version includes general constraint, pattern, and trade-off guidance; older forks add no required general rule.
+- `.github/agents/technical-writer.agent.md` — current version already incorporates general accuracy, verification, synchronization, and accessibility guidance; the longer course variant is mostly repeated checklists.
+- `.github/agents/slide-master.agent.md` — keep the current version with high confidence; the older variant points back to deprecated prompt files rather than the canonical skills.
+
+For the 31 missing agent paths, the targeted inventory review found most to be repository-bound: Academia vertical-slice roles, courseware authoring, Azure DevOps tool bindings, blog/documentation personas, or demo agents. `software-archeologist` is a possible generic candidate but is not formatted as a host-ready agent; `codebase-explorer` overlaps the existing creation skill and also lacks agent front matter. The prompt-model updater conflicts with prompt deprecation, and the config optimizer substantially overlaps the current inventory skill. No agent was imported.
+
+### Chatmode observations
+
+- The twelve missing chatmode paths are mostly role duplicates or repository-specific issue-management and regulatory workflows. Most reviewed persona files use heading-based content rather than supported YAML front matter and are not import-ready.
+- The two PM modes are described as equivalent but contain a conflicting approval rule: `project-manager.chatmode.md` says human contributors alone apply `implementation ready`, then instructs the PM to apply it; `ai-assistant-pm.chatmode.md` explicitly reserves that label for humans.
+- Their priority formula also lacks one consistent scale: the component formula totals at most 25, while labels are `priority:NN` on a 0-100 scale; one mode says to normalize, the other does not.
+- `update-prompt-models.chatmode.md` edits legacy prompt files and should not be imported as an active workflow. The 62304 chatmode was not read because inventory reported possible secret-pattern hits.
+
+### Workflow observations
+
+- The 21 missing workflow paths belong to the AI Practitioner Resources repository and depend on its labels, issue/project numbers, scripts, models, Pages deployment, and process documentation; none is a direct hub import.
+- `.github/workflows/capture-copilot-session.yml` interpolates the PR body and branch name directly into shell commands and a `git push` command. This is untrusted-input command-injection risk; use environment variables and validation rather than inline expressions.
+- `.github/workflows/ai-code-review.yml` checks out PR code, runs `npm ci`, and executes review scripts in a workflow that supplies model API keys. Do not execute PR-controlled package hooks or scripts in the same trust context as those secrets; isolate untrusted PR data from privileged model/API calls.
+- The PR workflow Markdown guides still reference `.github/prompts/...` paths. Treat those as migration/documentation debt, not files to distribute.
+- These were read-only observations; no spoke repository or workflow was changed.
+
+### Remaining review scope
+
+Other skill and instruction variants, prompt-to-skill mappings, and remaining GitHub configuration paths are not yet fully reviewed. Inventory counts above are discovery data, not a claim that every remaining file body was analyzed.

@@ -1,6 +1,6 @@
 ---
 name: vue-migration-testing
-description: "Plan or implement tests for a Vue application migration, including compatibility inventory, risk mapping, prioritized regression coverage, and verification."
+description: "Plan or implement behavior-focused regression tests for Vue migrations, including Vue 3.4 migrations; use when assessing migration readiness, coverage gaps, or requested test changes."
 ai_generated: true
 model: "unknown/unknown@unknown"
 operator: "johnmillerATcodemag-com"
@@ -15,6 +15,12 @@ task_durations:
 total_duration: "00:19:26"
 ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 source: "Messer/.github/prompts/vue-3.4-migration-tests.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added Vue 3.4 migration-risk surfaces as evidence-driven checks, not assumed breaking changes."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Vue Migration Testing
@@ -24,7 +30,7 @@ Use this skill to build a test strategy for a Vue version migration. Confirm the
 ## Procedure
 
 1. Inventory framework versions, plugins, component libraries, router/state tools, build configuration, tests, and migration notes.
-2. Identify changed APIs, removed/deprecated behavior, compatibility constraints, and third-party dependencies; verify against official release and migration documentation.
+2. Identify changed APIs, removed/deprecated behavior, compatibility constraints, and third-party dependencies; verify against official release and migration documentation. For Vue 3.4 migrations, explicitly consider Composition/Options API interop, props/emits/`v-model`, slots/Teleport/Suspense, reactivity and watcher cleanup, router/state behavior, directives, async errors, and critical user flows; include only risks supported by the target code and current documentation.
 3. Map affected components and user flows to risks, existing tests, and missing coverage.
 4. Prioritize tests for critical workflows, routing/state, forms, rendering, accessibility, SSR/hydration if used, error states, and integration boundaries.
 5. Propose focused unit/component/integration/e2e cases with setup, action, expected result, and risk rationale.

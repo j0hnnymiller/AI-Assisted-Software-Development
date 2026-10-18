@@ -13,6 +13,12 @@ task_durations:
 total_duration: "00:16:02"
 ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 source: "user request"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added approved technical-debt and vertical-slice skills, updated four existing skills, and documented the new workflows."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # AI-Assisted-Software-Development-Course
@@ -144,6 +150,16 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes sample files: [VTT input](<past-class-recordings/2026-02/AI-Assisted%20Software%20Development%20with%20GitHub%20Copilot%20(Mon%20Afternoon).vtt>) | [Generated summary](<past-class-recordings/2026-02/AI-Assisted%20Software%20Development%20with%20GitHub%20Copilot%20(Mon%20Afternoon)-summary.md>)
   - Documentation: [Usage Guide](past-class-recordings/USAGE.md) | [Live Demo](past-class-recordings/DEMO.md)
   - Provenance: [Chat log](ai-logs/2026/02/17/create-vtt-summarizer-20260217/conversation.md)
+
+- **Technical Debt Remediation Skill** ([`.github/skills/technical-debt-remediation/SKILL.md`](.github/skills/technical-debt-remediation/SKILL.md))
+  - Plans and implements bounded debt fixes after approval, with focused tests and verification.
+- **Vertical Slice Implementation Skill** ([`.github/skills/implement-vertical-slice/SKILL.md`](.github/skills/implement-vertical-slice/SKILL.md))
+  - Implements one approved slice at a time with explicit acceptance coverage and handoff evidence.
+- **Updated Existing Skills**
+  - [Vue Migration Testing](.github/skills/vue-migration-testing/SKILL.md) adds evidence-checked Vue 3.4 regression surfaces.
+  - [Tests Gap Analysis](.github/skills/tests-gap-analysis/SKILL.md) adds an optional eight-dimension brownfield testability scorecard.
+  - [Databricks and Cloud Hosting Decisions](.github/skills/databricks-hosting-decisions/SKILL.md) adds decision-relevant clarification and comparable cost screening.
+  - [Generate Project Instruction Files](.github/skills/generate-instructions/SKILL.md) adds `applyTo` scope examples for both matching and non-matching paths.
 
 - **VS Code Copilot Agents Overview Slides** ([`slides/marp/vscode-copilot-agents-overview.deck.md`](slides/marp/vscode-copilot-agents-overview.deck.md))
   - Comprehensive Marp slide deck covering VS Code Copilot Agents ecosystem with interactive workflows

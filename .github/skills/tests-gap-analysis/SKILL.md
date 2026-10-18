@@ -20,7 +20,7 @@ revisions:
   - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
     model: "unknown/unknown@unknown"
     date: "2026-10-17"
-    change: "Added design-for-testability analysis and an explicitly heuristic optional score."
+    change: "Added design-for-testability analysis, an optional heuristic score, and an optional evidence-backed eight-dimension brownfield testability scorecard."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Tests Gap Analysis
@@ -46,6 +46,23 @@ For testability analysis, inspect evidence of tight coupling, hidden dependencie
 
 If a simple default score is requested, use a clearly labeled heuristic from 1 (behavior is difficult to isolate and relies on uncontrolled dependencies/state) to 5 (behavior is deterministic and has clear seams for isolated tests). Explain the evidence and do not present this score as test coverage, defect risk, or an objective quality metric.
 
+## Optional Brownfield Testability Scorecard
+
+Use this rubric only when the user requests a scored brownfield assessment or approves this rubric. Score each dimension from 1 (poor) to 5 (excellent) with inspected evidence and a concise rationale:
+
+- Dependency Control
+- Determinism
+- Observability
+- Isolation Cost
+- State Management Clarity
+- Side-Effect Boundaries
+- Existing Test Suite Effectiveness
+- Change Safety
+
+Report the total out of 40 as a heuristic posture: 32-40 strong, 24-31 moderate, 16-23 high-risk, or 8-15 critical. Explain evidence gaps and score limits; do not present the total as test coverage, defect probability, or an objective quality metric. Do not force a score when a dimension cannot be supported by repository evidence.
+
+Use either the simple 1-5 heuristic or this eight-dimension rubric for a given assessment, not both.
+
 ## Output (Markdown)
 
 ### Executive summary
@@ -61,6 +78,8 @@ Counts by type, notable files/components and their tests
 | Area/Target | Missing type | Scenario | Risk/Impact | Effort |
 |-------------|--------------|----------|-------------|--------|
 | auth/login | e2e | Invalid creds show error | Auth regressions | M |
+
+When the brownfield scorecard is requested, include `Dimension | Score (1-5) | Evidence | Primary Risk | Recommendation` and a prioritized remediation backlog. Add a 30/60/90-day plan only when scope and evidence support it.
 
 ### Recommended tests (prioritized)
 Grouped by High/Medium/Low priority with scenario outlines
@@ -78,6 +97,3 @@ Per-step + total
 - Concrete, evidence-based (file paths, components)
 - Prefer small, high-signal tests early
 - No network calls/code modifications
-
-
-
