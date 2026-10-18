@@ -16,10 +16,16 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/codebase-review.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added explicit audit scope, rule mapping, missing-instructions fallback, and read-only/report-save boundaries."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Codebase vs. Instructions Audit
 
-Analyze repo and report deviations from `.github/instructions` rules.
+Audit the repository against `.github/instructions` and report evidence-backed deviations without modifying files by default.
 
 ## Inputs
 - Instructions: `.github/instructions/**/*` (md, mdx, yml, yaml, json)
@@ -28,12 +34,13 @@ Analyze repo and report deviations from `.github/instructions` rules.
 ## Exclusions
 `.git/`, `.github/` (except instructions), `node_modules/`, `dist/`, `build/`, `.venv/`, `.env/`, `.cache/`, `coverage/`, `out/`
 
-## Process
-1. **Discover**: Read instructions, extract rules (MUST, SHOULD, SHALL, REQUIRED, RECOMMENDED, MAY, OPTIONAL), assign Rule IDs
-2. **Map**: Define concrete checks per rule
-3. **Analyze**: Traverse files, gather evidence (file:line)
-4. **Compile**: Classify deviations (Critical/High/Medium/Low), explain impact, propose fixes (S/M/L effort)
-5. **Summarize**: Executive summary + durations
+## Procedure
+1. **Discover instructions.** Extract explicit MUST/SHOULD/SHALL/REQUIRED/RECOMMENDED/MAY/OPTIONAL rules and assign stable Rule IDs for this review.
+2. **Map rules to checks.** Define a concrete verification question or pattern for each rule.
+3. **Analyze relevant files.** Inspect only in-scope files and cite evidence with file paths and line references.
+4. **Classify deviations.** Record rule ID, instruction source, evidence, severity (Critical/High/Medium/Low), impact, remediation, and effort (S/M/L).
+5. **Summarize.** Include the executive summary, deviations table, quick wins, larger initiatives, instruction gaps, and sources scanned.
+6. **Save only if requested.** If the user explicitly asks for a report file, use the destination they provide or approve and ask before overwriting an existing file.
 
 ## Output (Markdown)
 
@@ -58,14 +65,14 @@ Gaps vs. best practices, suggest updates
 Instruction files + key configs
 
 ### Durations
-Per-step + total
+Report per-step and total elapsed time only when measured; do not estimate or fabricate durations.
 
 ## Missing Instructions Fallback
 If no instructions found:
-- State clearly
-- Audit using generic best practices
-- Same output format + "Limitations" note
-- Recommend creating initial instruction docs
+- State that no repository instructions were found.
+- If the user still wants an audit, use generic best practices and label them as such.
+- Keep the same output structure and include a limitations note.
+- Recommend creating initial instruction documents.
 
 ## Check Examples
 - **Security**: No secrets in repo, `.env` in `.gitignore`, dep audit, parameterized queries, input validation
@@ -75,11 +82,11 @@ If no instructions found:
 - **Observability**: Structured logging, error handling, trace/metrics
 - **Documentation**: README, contribution guidelines, ADRs
 
-## Constraints
-- Concise, specific, evidence-based
-- No external calls
-- Respect exclusions
-
+## Boundaries
+- Keep the audit read-only; do not edit code, instructions, or configuration unless the user explicitly requests remediation.
+- Do not make network calls or run commands that write to the workspace.
+- Distinguish verified facts from recommendations and unknowns; avoid generic findings without repository evidence.
+- Respect the exclusions above.
 
 
 
