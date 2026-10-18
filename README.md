@@ -17,6 +17,11 @@ revisions:
   - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
     model: "unknown/unknown@unknown"
     date: "2026-10-18"
+    change: "Added focused Vision and Scope authoring/review guidance, distinct from feature-level PRD authoring."
+    ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
+  - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
     change: "Added Object Role Modeling authoring and validation guidance, distinct from model-to-use-case derivation."
     ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
   - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
@@ -67,6 +72,7 @@ This repo was created for the AIASD CODE Training Course
 - [Agent Skill authoring](.github/instructions/agent-skills.instructions.md) defines entry-point naming, discovery descriptions, resource safety, and validation for repository skills.
 - [Mermaid authoring](.github/instructions/mermaid.instructions.md) covers semantic colors, non-color cues, and rendering checks. It automatically targets standalone `.mmd` sources; attach it or load it by task relevance for diagrams embedded in Markdown.
 - [Object Role Modeling](.github/instructions/object-role-modeling.instructions.md) guides conceptual fact-model creation and validation; [use-cases-from-conceptual-model](.github/skills/use-cases-from-conceptual-model/SKILL.md) separately derives use cases from a model that already exists.
+- [Vision and Scope guidance](.github/instructions/vision-and-scope.instructions.md) supports evidence-based system assessment, options, and delivery direction; use [PRD authoring](.github/skills/author-product-requirements/SKILL.md) for focused product/feature requirements.
 - [Slide Master](.github/agents/slide-master.agent.md) routes course-manifest PPTX builds to [build-course-slide-deck](.github/skills/build-course-slide-deck/SKILL.md), standalone Markdown merges to [merge-marp-decks](.github/skills/merge-marp-decks/SKILL.md), and read-only reviews to [review-marp-course-materials](.github/skills/review-marp-course-materials/SKILL.md).
 - [`.github/instructions/marp-slides.instructions.md`](.github/instructions/marp-slides.instructions.md) — Instructions and templates for creating Marp slide files. Slides created using these instructions must be placed in `slides/marp/` and include AI provenance metadata linking to an `ai-logs/` conversation (see `.github/instructions/ai-assisted-output.instructions.md` and `.github/instructions/copilot-instructions.md`).
 

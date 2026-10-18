@@ -4,7 +4,7 @@
 - Date: 2026-10-18
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
-- Duration: 00:14:43 (recorded authoring across eight implementation updates; read-only reviews and final bookkeeping excluded)
+- Duration: 00:15:50 (recorded authoring across nine implementation updates; read-only reviews and final bookkeeping excluded)
 
 ## Objective
 
@@ -93,3 +93,19 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - A full pre-existing README link check exposed an unrelated dangling link to
   `.github/instructions/business-rules-to-vertical-slices.instructions.md`.
   It was not changed; newly added links all pass.
+
+## Approved Vision and Scope batch
+
+- Added `.github/instructions/vision-and-scope.instructions.md` for system
+  assessment, scope, evidence, requirements, options, recommendations, and delivery.
+- Automatically applies to `**/*.VnS.md`; also supports task-based discovery.
+- Explicitly separates assessment scope from implementation authorization and
+  uses applicable written client commitments without making them universal policy.
+- Omits V&S-specific register-ID rules, fixed structure/page count, and local
+  client assumptions.
+- Indexed in root README and canonical instruction README. Links to PRD authoring
+  as a narrower, complementary workflow.
+- Provenance interval 00:01:07; YAML, links, timing, nine semantic scope
+  boundaries, and whitespace checks passed.
+- Automatic host matching for `**/*.VnS.md` was not interactively tested.
+- No client document edited, no distribution, and no commit.

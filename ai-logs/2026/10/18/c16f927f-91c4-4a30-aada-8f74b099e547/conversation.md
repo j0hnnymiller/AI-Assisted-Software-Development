@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
 - Started: 2026-10-18T12:35:07.776-07:00
-- Ended: 2026-10-18T21:22:48.4010672Z
+- Ended: 2026-10-18T21:41:17.6182676Z
 
 ## Context
 
@@ -201,6 +201,41 @@ model or tool was executed, no domain expert reviewed an example, and no
 particular ORM dialect/tool conformance is asserted.
 
 No distribution, commit, or dependency installation.
+
+### 8
+
+[2026-10-18T14:39:12.029-07:00] User
+
+```text
+proceed
+```
+
+Approved the recommended reusable Vision and Scope authoring/review guide,
+distinct from feature-level PRD authoring. Preserve client-specific commitments
+as locally governed inputs rather than global policy.
+
+[2026-10-18T21:40:31.4195000Z] Assistant
+
+Created `.github/instructions/vision-and-scope.instructions.md` from the single
+V&S spoke variant. Kept evidence traceability, scope and decision boundaries,
+current/transition/target analysis, justified alternatives, risks, dependencies,
+costs, owners, approvals, and delivery/transition validation. Omitted fixed ID
+syntax, blanket commitment tracker, imposed heading sequence/page count, and
+other locally specific rules. Engagement commitment reconciliation applies only
+when written agreements or commitments exist.
+
+The guide automatically targets `*.VnS.md` documents and is also discoverable
+for drafting/review tasks. It distinguishes assessment from implementation scope
+and links to the narrower PRD workflow. Added entries to the root README and
+instruction index.
+
+Validation: provenance front matter parses; the 00:01:07 task duration sums
+correctly and is within the recorded interval; chat log and summary exist.
+All local links in the new guide and newly added README index lines resolve.
+Nine semantic boundary checks and `git diff --check` passed. No external claims
+were added; source-specific constraints were generalized only where appropriate.
+No project-specific document was edited. VS Code automatic matching for the
+`**/*.VnS.md` glob was not interactively tested.
 
 Final index and documentation checks completed at 2026-10-18T21:22:48.4010672Z.
 An initial duration check found that rounding exceeded elapsed time by a fraction
