@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-18T10:45:58.102-07:00
+- Ended: 2026-10-18T10:52:25.731-07:00
 
 ## Context
 
@@ -668,3 +668,76 @@ inventory paths remains in progress.
   All four are migration inputs only. No spoke promptfiles or canonical skills were
   changed. This completes review of the four promptfile entries, not the remaining
   `.github/prompts` inventory.
+
+  ### 21 - Prompt Authoring and Generation Family
+
+  [2026-10-18T10:47:32-07:00] User
+
+  ```text
+  proceed with 2
+  ```
+
+  [2026-10-18T10:49:47-07:00] Assistant
+
+  Compared the instruction/prompt/agent authoring and generation family with current
+  canonical skills and instructions. Reviewed representative prompt variants from
+  Messer, Zeus Academia, and AIASD-Brownfield, including custom-agent authoring, prompt
+  authoring, instruction-file authoring, project/technology instructions, use-case
+  guidance, vertical-slice guidance, and implementation-prompt generation.
+
+  Classifications:
+
+  - Prompt-file and instruction-prompt generator variants are retired. Existing redirect
+    skills prohibit new prompt files, route instruction requests to
+    `create-instruction-file-authoring-instructions`, and route new reusable workflows
+    through skill authoring.
+  - Custom-agent authoring prompts map to `create-agent-authoring-instructions` and
+    `custom-agents.instructions.md`; codebase-explorer creation also has a focused
+    existing skill. Legacy `Focus`/`Temperature`/`Style` and `@command` requirements are
+    not current host guidance.
+  - General project, technology, Git, C#, and vertical-slice instruction-generation
+    prompts map to `generate-instructions` and the corresponding canonical authoring
+    instructions; repository-specific technology rules should not be imported without
+    evidence.
+  - Use-case writing guidance maps to `create-use-case-authoring-instructions`;
+    conceptual-model-derived use-case production is separately covered by
+    `use-cases-from-conceptual-model`.
+  - Academia implementation-prompt generation is superseded by `create-implementation-skills`
+    for reusable component workflows, while bounded implementation itself is covered by
+    `implement-vertical-slice`. Slice-specific prompts remain project requirements, not
+    reusable skills.
+
+  One canonical overlap needs a maintainer decision: `create-instruction-file-policy`
+  and `create-instruction-file-authoring-instructions` both create instruction-authoring
+  guides. The former retains the stale fixed target
+  `.github/instructions/instruction-standards.instruction.md` and singular
+  `.instruction.md` naming rule, while the latter directs users to the canonical
+  `instruction-files.instructions.md` guide and current plural `.instructions.md`
+  conventions. Recommend merging any useful template/checklist material into the latter
+  and retiring/updating the former, with links and index references reconciled. No skill
+  or prompt file was changed in this review.
+
+  This is a workflow-family review, not evidence that every one of the 134 prompt paths
+  has been individually checked.
+
+  [2026-10-18] User
+
+  ```text
+  consolidate
+  ```
+
+  [2026-10-18] Assistant
+
+  Retired the duplicate `create-instruction-file-policy` workflow as a redirect to
+  `create-instruction-file-authoring-instructions`. No unique operational guidance needed
+  to be merged: the canonical authoring skill already supports a practical template,
+  examples, checklists, repository-specific requirements, host validation, current
+  `.instructions.md` naming, and overwrite approval. Preserved the retired skill path,
+  provenance history, and migration traceability. The repository README already lists
+  the canonical skill and did not reference the retired duplicate.
+
+  Validation passed: the retired skill's YAML/provenance parsed, both relative links
+  resolve, and `git diff --check` passed (Git reported the existing LF-to-CRLF conversion
+  warning for the edited skill). A separate stale prompt-execution workflow remains in
+  `orchestrate-instruction-improvement`; it references legacy Promptfiles and is outside
+  this narrowly approved duplicate consolidation.

@@ -1,6 +1,6 @@
 ---
 name: create-instruction-file-policy
-description: "Generates a Markdown authoring guide for creating instruction files with recommended sections, placement, naming, and a validation checklist"
+description: "Deprecated alias for create-instruction-file-authoring-instructions; use the canonical skill to create or update instruction-file guidance."
 
 ai_generated: true
 model: "OpenAI/GPT-6@Luna"
@@ -17,192 +17,28 @@ total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/create-instruction-file-instructions.prompt.md"
 revisions:
-  - chat_id: "skill-naming-convention-20261018"
-    model: "unknown/unknown@unknown"
-    date: "2026-10-18"
-    change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
-    ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
+- chat_id: "skill-naming-convention-20261018"
+  model: "unknown/unknown@unknown"
+  date: "2026-10-18"
+  change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
+  ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
+- chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+  model: "unknown/unknown@unknown"
+  date: "2026-10-18"
+  change: "Retired this duplicate workflow and redirected it to the canonical instruction-file authoring skill."
+  ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
-# Generate Instruction-File Authoring Instructions (Markdown)
+# Deprecated Instruction-File Policy Generator
 
-You are an expert technical writer. Produce a single Markdown instruction file that guides contributors on how to create repository instruction files consistently.
+This skill duplicated the canonical instruction-file authoring workflow and prescribed
+the retired `.instruction.md` suffix and a fixed output path. Do not use it to create
+instruction guides.
 
-## Output requirements
-
-- Create or overwrite the file at: `.github/instructions/instruction-standards.instruction.md`.
-- Output only the final `.github/instructions/instruction-standards.instruction.md` content as Markdown. Do not include any additional commentary, wrapper text, or code fences around the whole file.
-- The instruction file must be self-contained, readable, and render correctly in Markdown preview.
-
-## Audience and scope
-
-- Audience: Contributors authoring instruction files for this repository.
-- Scope: Defines standard sections, directory placement, naming conventions, a reusable template, examples, and a quality checklist for instruction files.
-
-## Structure of the generated instruction file
-
-The generated `.md` file must follow this outline and headings (all required unless marked optional):
-
-1. Title: "Instruction File Authoring Guide"
-2. Introduction (purpose and when to use)
-3. Audience and Scope
-4. File Placement and Naming Conventions
-5. Standard Sections (overview)
-6. Copy/Paste Template (complete skeleton)
-7. Section-by-Section Guidance
-8. Example (concise but realistic)
-9. Quality Checklist
-10. Versioning and Ownership
-11. Security and Privacy
-12. References / Glossary (optional)
-
-## Directory and naming conventions (must include in the generated file)
-
-- Folder: `.github/instructions/`.
-- Filenames: hyphenated lowercase and must end with `.instruction.md`.
-- One instruction file per topic.
-
-## Standard sections to document (must include in the generated file)
-
-- Introduction: What this instruction covers and when to use it.
-- Audience and Scope: Who should use it; what's included/excluded.
-- Prerequisites: Tools, permissions, or context needed.
-- Output Requirements: Exact outputs, formats, and constraints.
-- Steps / Procedure: Ordered steps with sub-steps if needed.
-- Examples / Samples: Minimal but complete examples.
-- Templates / Snippets: Copy-paste blocks authors can reuse.
-- Validation / Quality Checklist: Criteria to confirm completeness and quality.
-- File Placement and Naming: Where to store and how to name files.
-- Versioning and Ownership: How to update and who maintains the doc.
-- Security and Privacy: Sensitive data guidelines and redaction.
-- References / Glossary: Linked resources and definitions (optional).
-
-## Copy/Paste template (to include verbatim in the output)
-
-Provide this template as a fenced Markdown block for users to copy:
-
-````
-# Instruction File Title
-
-## Introduction
-<Brief purpose, when to use, and outcomes.>
-
-## Audience and Scope
-- Audience: <Who>
-- Scope: <What's included>
-- Out of scope: <What's not covered>
-
-## Prerequisites
-- <Tool/permission/context>
-
-## Output Requirements
-- <Exact output path(s)/formats>
-- <No extra commentary/wrappers>
-
-## Steps / Procedure
-1. <Step>
-2. <Step>
-3. <Step>
-
-## Examples / Samples
-```example
-<Short, complete example>
-```
-````
-
-## Templates / Snippets
-
-```markdown
-<Reusable snippet or section>
-```
-
-## Validation / Quality Checklist
-
-- [ ] Outputs and formats match requirements
-- [ ] Steps are actionable and ordered
-- [ ] Examples run or render as expected
-- [ ] No secrets or sensitive data
-- [ ] Naming and placement adhere to conventions
-
-## File Placement and Naming
-
-- Folder: `.github/instructions/`
-- Filename: `<topic-name>.instruction.md`
-
-## Versioning and Ownership
-
-- Owner: <name/role>
-- Last updated: YYYY-MM-DD
-- Change policy: <how to propose changes>
-
-## Security and Privacy
-
-- <Redaction, secrets handling, PII guidance>
-
-## References / Glossary
-
-- <Links and definitions>
-
-````
-
-## Section-by-Section Guidance (what to write)
-
-- Title: Be specific; reflect the topic (e.g., "CI Pipeline Instructions").
-- Prerequisites: List only what's truly required; link to setup docs.
-- Output Requirements: State exact paths and formats; specify overwrite behavior.
-- Steps: Use numbered steps; one action per step; include expected outcomes.
-- Examples: Keep minimal and runnable/renderable where applicable.
-- Templates: Provide copy-paste blocks with placeholders and short comments.
-- Quality Checklist: Focus on verifiable criteria; keep it short and scannable.
-- Versioning and Ownership: Name an accountable owner; require date updates.
-- Security and Privacy: Avoid secrets; show redacted examples; reference policy.
-
-## Example (concise)
-
-Title: Linting Instructions
-
-- Audience: Contributors
-- Scope: How to run and interpret linting locally
-
-- Output Requirements:
-  - Provide a passing lint run example output excerpt
-
-- Steps / Procedure:
-  1. Install dependencies
-  2. Run linter
-  3. Fix reported issues and re-run
-
-- Example:
-```text
-$ tool lint
-✔ No issues found
-````
-
-## Quality Checklist (for authors)
-
-- Title and purpose are clear
-- Steps are ordered and testable
-- Examples render/run
-- Output path and format are explicit
-- File lives under `.github/instructions/` and ends with `.instruction.md`
-
-## Versioning and Ownership
-
-- Update "Last updated" whenever the file changes
-- List an owner responsible for maintenance
-
-## Security and Privacy
-
-- Do not include secrets, tokens, or personal data
-- Redact or omit sensitive content in examples and logs
-
-## Acceptance criteria for the generated instruction file
-
-- Includes all sections listed above
-- Uses kebab-case filename ending with `.instruction.md`
-- Stored under `.github/instructions/`
-- Renders correctly in Markdown preview and is self-contained
-- Contains a copy-paste template and a quality checklist
-
+Use [`create-instruction-file-authoring-instructions`](../create-instruction-file-authoring-instructions/SKILL.md)
+to create or revise instruction-file guidance. Follow the current
+[instruction-file conventions](../../instructions/instruction-files.instructions.md)
+and adapt sections, templates, examples, and checklists to the verified repository
+requirements rather than copying a fixed legacy template.
 
 
 
