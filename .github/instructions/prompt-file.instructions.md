@@ -20,18 +20,23 @@ revisions:
     date: "2026-10-16"
     change: "Clarified when to use prompt files versus workspace skills after migrating the prompt collection."
     ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Deprecated new prompt files and converted the authoring guidance into a migration-only reference."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
-# AI Instructions: GitHub Copilot Promptfile Creation
+# Legacy Promptfile Reference (Deprecated)
 
-Create task-oriented promptfiles for GitHub Copilot's promptfile system.
+> **Deprecated:** Do not create new prompt files. Use a workspace skill for reusable workflows and chat for one-off tasks. This file is retained only to understand and migrate existing prompt files.
+> All format requirements, examples, and validation guidance below apply only when inspecting or maintaining a legacy prompt.
 
-**Purpose**: Prompt files define single, focused tasks that can be invoked as slash commands in Copilot.
-**Not for**: Behavioral instructions (use agents), repo-wide rules (use `.github/instructions/`), one-off chats.
+**Purpose**: Document the legacy prompt-file format so existing files can be assessed and replaced safely.
 
-Use a **skill** for a repeatable multi-step workflow or when the task needs bundled scripts, templates, or reference files. Use a prompt file for a single focused task with parameterized input.
+For a repeatable workflow, use or create a skill in `.github/skills/<name>/SKILL.md`. For behavior/persona guidance, use an agent; for repository-wide rules, use an instruction file. Do not add a `.prompt.md` file to `.github/prompts/`.
 
-## Promptfile Structure
+## Legacy Promptfile Structure
 
 A promptfile has two parts:
 
@@ -40,7 +45,7 @@ A promptfile has two parts:
 
 See **[Template Examples](#template-examples)** below for complete working examples.
 
-## Field Requirements
+## Legacy Field Requirements
 
 ### Core Promptfile Fields (Required by Copilot)
 
@@ -139,7 +144,7 @@ created: "2026-01-15"
 updated: "2026-02-12"
 ```
 
-## Template Examples
+## Legacy Template Examples (Do Not Use for New Work)
 
 ### Complete Example (All Fields)
 
@@ -320,7 +325,7 @@ Identify areas where coupling may cause maintenance issues.
 Provide actionable improvements.
 ```
 
-## Promptfile Body (Markdown Content)
+## Legacy Promptfile Body (Markdown Content)
 
 ### Writing Guidelines
 
@@ -377,11 +382,11 @@ Do not define personas or tone:
 - ✅ "Generate tests with descriptive names"
 - ❌ "You are a friendly testing expert who loves clean code"
 
-## Location Requirements
+## Legacy Location Requirements (Migration Only)
 
 ### Directory
 
-**MUST** be in:
+When preserving an existing legacy prompt, its historical location is:
 
 ```
 .github/prompts/
@@ -393,7 +398,7 @@ Do not define personas or tone:
 - `.github/prompts/subfolder/` ❌
 - Anywhere else ❌
 
-Copilot only scans the exact directory above.
+Do not create new files in this directory. A migrated prompt should identify its replacement skill and remain only as a deprecated source record until maintainers decide otherwise.
 
 ### File Format
 
@@ -423,7 +428,7 @@ genTests.md → name: generate-tests ❌ (filename doesn't match name field)
 generate_tests.md → name: generate-tests ❌ (use kebab-case)
 ```
 
-## Validation Checklist
+## Legacy Validation Checklist
 
 ### Structure
 
@@ -478,7 +483,7 @@ generate_tests.md → name: generate-tests ❌ (use kebab-case)
 - [ ] Arguments are prompted correctly
 - [ ] Output is consistent across runs
 
-## Anti-Patterns (Avoid These)
+## Legacy Anti-Patterns (Avoid These When Migrating)
 
 ### ❌ Behavioral Instructions
 
@@ -560,7 +565,7 @@ You are a helpful assistant who helps with coding.
 .github/prompts/generate-tests.md ✅
 ```
 
-## File Naming Rules
+## Legacy File Naming Rules
 
 **Pattern:** `{action}-{target}.md`
 
@@ -581,7 +586,7 @@ You are a helpful assistant who helps with coding.
 - ❌ `generateTests.md` (not kebab-case)
 - ❌ `test.md` (too vague)
 
-## Directory Structure
+## Legacy Directory Structure
 
 **Correct structure:**
 
@@ -600,9 +605,9 @@ You are a helpful assistant who helps with coding.
 - Only `.md` files will be loaded
 - Copilot scans this exact path only
 
-## Testing Your Promptfile
+## Testing a Legacy Promptfile
 
-After creating a promptfile, verify:
+If a maintainer explicitly needs to preserve a legacy prompt, verify:
 
 ### 1. Discoverability
 
@@ -642,15 +647,15 @@ After creating a promptfile, verify:
 - **Arguments not prompted** → Check YAML syntax in `arguments:` section
 - **Behaves inconsistently** → Remove behavioral instructions, make deterministic
 
-### 6. Post-Creation Requirements
+### 6. Post-Migration Requirements
 
-After creating a promptfile, complete these steps:
+When migrating an existing prompt:
 
-1. **Create Conversation Log**: `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md`
-2. **Create Summary**: Session summary with resumability context
-3. **Update README**: Add entry to appropriate README.md section with description and chat log link
-4. **Verify Metadata**: Ensure all required AI provenance fields are present
-5. **Test Links**: Verify all internal links work correctly
+1. Compare its behavior, inputs, outputs, and constraints with existing skills.
+2. Update the closest skill or create a focused skill only with user approval.
+3. Add a deprecation notice and replacement link to the legacy prompt.
+4. Update the README index and AI conversation/summary logs.
+5. Validate replacement links and skill metadata.
 
 See [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#post-creation-requirements-canonical) for complete details.
 
@@ -662,19 +667,20 @@ See [Post-Creation Requirements (CANONICAL)](ai-assisted-output.instructions.md#
 - `.github/instructions/ai-assisted-output.instructions.md` - AI provenance requirements
 - `.github/instructions/copilot-instructions.md` - Copilot-specific guidance
 
-## When to Use Each System
+## Choose the Current Customization
 
 | Need               | Use                                   |
 | ------------------ | ------------------------------------- |
-| Single focused task | Prompt file (`.github/prompts/`)       |
-| Multi-step workflow or bundled resources | Skill (`.github/skills/<name>/SKILL.md`) |
-| Behavioral persona | Agent (`.github/copilot/agents/`)     |
-| Repo-wide rule     | Instruction (`.github/instructions/`) |
-| One-off task       | Just type it in chat                  |
+| Reusable task or workflow | Skill (`.github/skills/<name>/SKILL.md`) |
+| Behavioral persona | Agent (`.github/agents/`) |
+| Repo-wide rule | Instruction (`.github/instructions/`) |
+| One-off task | Chat |
+
+Prompt files are legacy migration inputs only; do not choose them for new work.
 
 ## Quick Reference
 
-**Minimal working promptfile:**
+**Minimal legacy format sample (do not use for new work):**
 
 ```yaml
 ---

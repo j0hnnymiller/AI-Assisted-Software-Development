@@ -13,6 +13,12 @@ task_durations:
 total_duration: "00:10:00"
 ai_log: "ai-logs/2026/10/14/create-github-config-sync-agent-20261014/conversation.md"
 source: "johnmillerATcodemag-com"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Documented inventory visibility and manifest-based non-distribution for legacy prompts."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Sync Strategy: Canonical Hub, Repo Spokes
@@ -22,6 +28,7 @@ source: "johnmillerATcodemag-com"
 - **Hub**: this repo holds the canonical copy of every shared config file.
 - **Spokes**: every git repo under `root` (default `c:\git`). Spokes may hold repo-specific files; they are never deleted.
 - **Changes flow one way**: spoke edits come back to the hub through _consolidate_, then go out through _distribute_. Do not edit shared files in spokes and forget to consolidate them.
+- **Legacy prompts**: `.github/prompts/` remains visible to inventory as migration input, but prompt files are not imported or distributed. Compare each prompt with canonical skills and set its manifest entry to `distribute: "none"`.
 
 ## Lifecycle Loop
 
@@ -62,6 +69,9 @@ flowchart LR
     },
   },
   "files": {
+    ".github/prompts/update-application-c4-diagrams.md": {
+      "distribute": "none"
+    },
     ".github/instructions/ai-assisted-output.instructions.md": {
       "distribute": "all",
     },

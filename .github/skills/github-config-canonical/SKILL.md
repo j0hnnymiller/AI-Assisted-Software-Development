@@ -9,6 +9,12 @@ metadata:
   chat_id: "create-github-config-sync-agent-20261014"
   ai_log: "ai-logs/2026/10/14/create-github-config-sync-agent-20261014/conversation.md"
   source: "johnmillerATcodemag-com"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added semantic prompt-to-skill comparison instead of importing legacy prompts."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Choose the Canonical Version
@@ -23,13 +29,14 @@ Recommends one version per diverged file using git history first, then content. 
 ## Procedure
 
 1. Ensure a fresh inventory exists (run `github-config-inventory` if older than the last change).
+   - For `.github/prompts/**`, compare the full prompt's purpose, workflow, inputs, and outputs with potentially related canonical skills; same-path git history is not enough. Recommend an existing skill to update or a new skill to create; do not recommend importing or distributing the prompt file.
 2. Show evidence and diffs:
    ```powershell
    ./.github/skills/github-config-canonical/scripts/Compare-GithubConfigVariant.ps1 -Path <rel-path>[, ...]        # --stat
    ./.github/skills/github-config-canonical/scripts/Compare-GithubConfigVariant.ps1 -Path <rel-path> -Full         # full diff
    ```
 3. Apply the decision rules below; verify the script's recommendation by reading the full diff.
-4. Output a decision per file: `keep-canonical`, `import <repo>`, or `merge <variants>`, with one-line rationale.
+4. For ordinary config files, output a decision per file: `keep-canonical`, `import <repo>`, or `merge <variants>`, with one-line rationale. For legacy prompts, report `migrate to <skill>` or `new skill required` and get approval before writing.
 
 ## Decision Rules (in order)
 

@@ -5,7 +5,15 @@ tools: ["search", "edit", "create"]
 description: "Update application documentation with current-state details and Mermaid C4 diagrams"
 title: "Docs: Update application overview with Mermaid C4 diagrams"
 labels: [documentation, architecture, diagram]
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Deprecated this prompt and linked its skill replacement."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
+
+> **Deprecated:** Do not use or distribute this prompt. Its maintained workflow is [`update-application-c4-diagrams`](../skills/update-application-c4-diagrams/SKILL.md). This file remains only as a migration record.
 
 Update application documentation to include current-state details and Mermaid C4 diagrams.
 

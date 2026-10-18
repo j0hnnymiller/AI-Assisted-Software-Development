@@ -19,24 +19,31 @@ revisions:
     date: "2026-10-16"
     change: "Updated the instruction-prompt workflow reference to the migrated workspace skill."
     ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Deprecated new instruction-generating prompts and documented skill-based migration."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 applyTo: "**/*.instructions.prompt.md"
 ---
 
-# AI Instructions: Creating Instruction-Generating Prompts
+# Legacy Instruction-Prompt Reference (Deprecated)
 
-## Purpose
+> **Deprecated:** Do not create new `*.instructions.prompt.md` files or other prompt generators. Use the existing skill workflows under `.github/skills/` to create or update instruction files. This document is retained only for migrating existing instruction-generating prompts.
 
-This file provides requirements for creating prompts that generate `*.instructions.md` files. These are **meta-prompts** - prompts whose purpose is to create instruction files for developers and AI assistants.
+## Legacy Purpose
+
+This legacy guidance describes prompt files that generated `*.instructions.md` files. It remains only to support safe review and migration of existing prompt files.
 
 ## Why This Exists
 
 Instruction files (`*.instructions.md`) require strict AI provenance compliance and standardized structure. This file ensures that prompts generating such files automatically include all required metadata and compliance elements, preventing non-compliant instruction files.
 
-## Scope & Application
+## Legacy Scope & Application
 
-- **Applies To**: Prompts matching pattern `**/*.instructions.prompt.md`
-- **Purpose**: Generate compliant `*.instructions.md` files with full AI provenance
-- **Distinction**: This is NOT for general prompt creation (see `prompt-file.instructions.md` for that)
+- **Applies To**: Existing prompts matching pattern `**/*.instructions.prompt.md` during migration only
+- **Purpose**: Preserve provenance and output requirements while replacing legacy prompt files with skills
+- **Current workflow**: Use `.github/skills/create-instruction-files-instructions/SKILL.md`; do not create another prompt file
 
 ## Target Audience
 
@@ -44,7 +51,7 @@ Instruction files (`*.instructions.md`) require strict AI provenance compliance 
 - AI assistants tasked with generating instruction files
 - Anyone building meta-prompts for documentation generation
 
-## Mandatory Requirements
+## Legacy Output Requirements (Migration Only)
 
 ### 1. Context Section
 
@@ -154,21 +161,9 @@ prompt_metadata:
 ❌ Vague deliverable → Be explicit about metadata fields
 ❌ Forgetting applyTo field → Include when applicable
 
-## Creation Options
+## Migrating an Existing Instruction-Generating Prompt
 
-**Option 1**: Use meta-prompt
-
-```
-Use `.github/skills/create-instruction-files-prompt-file/SKILL.md`.
-```
-
-**Option 2**: Manual
-
-1. Copy existing instruction prompt
-2. Update domain-specific content
-3. Ensure Context references AI policy
-4. Ensure Deliverable includes provenance template
-5. Validate against checklist
+Do not create a new prompt. Compare an existing prompt with the instruction-authoring skill, migrate unique reusable guidance into that skill, and add a deprecation notice and replacement link to the legacy prompt.
 
 ## Reference
 

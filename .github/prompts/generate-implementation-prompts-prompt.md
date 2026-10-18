@@ -1,3 +1,7 @@
+# Deprecated: Academia Implementation Prompt Generator
+
+Do not generate new prompt files. This source is retained for migration reference; its component workflows now live in canonical skills under `.github/skills/`. See the [prompt migration index](README.md) for all replacements.
+
 # Generate Implementation Prompts for Academia System
 
 ## Objective

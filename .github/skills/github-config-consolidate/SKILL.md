@@ -9,6 +9,12 @@ metadata:
   chat_id: "create-github-config-sync-agent-20261014"
   ai_log: "ai-logs/2026/10/14/create-github-config-sync-agent-20261014/conversation.md"
   source: "johnmillerATcodemag-com"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Prohibited importing prompt files and documented skill migration instead."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Consolidate into the Canonical Repo
@@ -25,10 +31,11 @@ Writes approved versions into this repo and records which other versions they re
 - Fresh inventory JSON (`github-config-inventory`)
 - Explicit user approval per file or per approved batch
 - Canonical copies of target files have no uncommitted changes (script refuses unless `-Force`)
+- Prompt files are never imported: migrate approved prompt behavior into an existing or new skill, and keep the source prompt as a deprecated migration record.
 
 ## Procedure
 
-1. Preview: `./.github/skills/github-config-consolidate/scripts/Import-GithubConfigFile.ps1 -Path <paths> -WhatIf`
+1. For ordinary config files, preview: `./.github/skills/github-config-consolidate/scripts/Import-GithubConfigFile.ps1 -Path <paths> -WhatIf`. For `.github/prompts/**`, do not use the import script; update/create the approved skill and add the replacement link to the legacy prompt and README.
 2. Apply by decision:
    | Decision | Command |
    |---|---|
@@ -47,6 +54,7 @@ Writes approved versions into this repo and records which other versions they re
 - Keep this repo's conventions (front matter fields, headings, file naming).
 - Strip repo-specific values; never copy literal secrets.
 - `.vscode/mcp.json`: use `${input:...}` / `${env:...}` for credentials.
+- Keep legacy prompt paths visible in inventory but set their manifest `distribute` value to `none`; do not delete them or propagate them as active prompts.
 
 ## Implementation
 

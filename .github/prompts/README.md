@@ -1,113 +1,65 @@
-# AI Prompts Collection
-
-This directory contains standardized AI prompts for various development and analysis tasks. All prompts follow the structure defined in [`.github/instructions/prompt-file.instructions.md`](../instructions/prompt-file.instructions.md).
-
-## Categories
-
-### Analysis & Audit Prompts
-
-| File                                                                               | Purpose                                 | Output                                           |
-| ---------------------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------ |
-| [`check-context.prompt.md`](check-context.prompt.md)                               | Context Analysis and Conflict Detection | Analysis report of conflicts and inconsistencies |
-| [`codebase-review.prompt.md`](codebase-review.prompt.md)                           | Codebase vs Instructions Audit          | Compliance audit report                          |
-| [`create-issues-for-dead-code.prompt.md`](create-issues-for-dead-code.prompt.md)   | Dead Code Analysis to GitHub Issues     | Dead code analysis with GitHub issue drafts      |
-| [`create-issues-for-found-bugs.prompt.md`](create-issues-for-found-bugs.prompt.md) | Bug Analysis to GitHub Issues           | Bug analysis with GitHub issue drafts            |
-| [`refactor-analysis.prompt.md`](refactor-analysis.prompt.md)                       | Code Refactoring Analysis               | Refactoring recommendations and analysis         |
-| [`security-audit-issues.prompt.md`](security-audit-issues.prompt.md)               | Security Audit Analysis                 | Security vulnerabilities and GitHub issues       |
-| [`tests-gap-analysis.prompt.md`](tests-gap-analysis.prompt.md)                     | Test Coverage Gap Analysis              | Testing recommendations and gap analysis         |
-
-### Documentation & Instruction Generation
-
-| File                                                                                                   | Purpose                         | Output                                        |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------- | --------------------------------------------- |
-| [`create-ai-assisted-output-instructions.prompt.md`](create-ai-assisted-output-instructions.prompt.md) | AI Output Policy Generator      | AI provenance and logging instructions        |
-| [`create-agent-instructions-file.prompt.md`](create-agent-instructions-file.prompt.md)                 | Agent Guidelines Generator      | Agent authoring guidelines                    |
-| [`create-codebase-explorer.prompt.md`](create-codebase-explorer.prompt.md)                             | Codebase Explorer Chat Mode     | GitHub Copilot chat mode definition           |
-| [`create-prompt-file-instructions-file.prompt.md`](create-prompt-file-instructions-file.prompt.md)     | Prompt Authoring Guidelines     | Instructions for creating prompts             |
-| [`create-use-case-instructions.prompt.md`](create-use-case-instructions.prompt.md)                     | Use Case Instructions Generator | Guidelines for use case documentation         |
-| [`derive-use-cases-from-conceptual-model.prompt.md`](derive-use-cases-from-conceptual-model.prompt.md) | Use Case Derivation             | Extract use cases from conceptual models      |
-| [`generate-instructions.prompt.md`](generate-instructions.prompt.md)                                   | Instruction File Generator      | Comprehensive instruction files               |
-| [`summarize-vti-content.prompt.md`](summarize-vti-content.prompt.md)                                   | VTI Content Summarizer          | Outline with section durations from VTI files |
-
-### Quality & Compliance
-
-| File                                                                                         | Purpose                    | Output                                           |
-| -------------------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------------ |
-| [`instructions-bestpractices-issues.prompt.md`](instructions-bestpractices-issues.prompt.md) | Instruction Best Practices | Analysis of instruction quality and improvements |
-
-### Architecture & Design
-
-| File                                                                     | Purpose                  | Output                                     |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------------------------------ |
-| [`update-application-c4-diagrams.md`](update-application-c4-diagrams.md) | C4 Architecture Diagrams | Updated C4 model diagrams for applications |
-
-#### Solution Architect Specialized Prompts
-
-| File                                                                                                       | Purpose                        | Output                                              |
-| ---------------------------------------------------------------------------------------------------------- | ------------------------------ | --------------------------------------------------- |
-| [`solution-architect/architecture-design.prompt.md`](solution-architect/architecture-design.prompt.md)     | System Architecture Design     | Comprehensive architectural blueprints              |
-| [`solution-architect/compliance-check.prompt.md`](solution-architect/compliance-check.prompt.md)           | Compliance Validation          | Standards and regulatory compliance analysis        |
-| [`solution-architect/integration-design.prompt.md`](solution-architect/integration-design.prompt.md)       | System Integration and APIs    | Integration strategies and API contracts            |
-| [`solution-architect/migration-strategy.prompt.md`](solution-architect/migration-strategy.prompt.md)       | System Migration Planning      | Migration and modernization plans                   |
-| [`solution-architect/pattern-analysis.prompt.md`](solution-architect/pattern-analysis.prompt.md)           | Architectural Pattern Analysis | Pattern recommendations with detailed justification |
-| [`solution-architect/performance-analysis.prompt.md`](solution-architect/performance-analysis.prompt.md)   | Performance Analysis           | Performance characteristics and optimization plans  |
-| [`solution-architect/risk-assessment.prompt.md`](solution-architect/risk-assessment.prompt.md)             | Architectural Risk Assessment  | Risk identification and mitigation strategies       |
-| [`solution-architect/scalability-planning.prompt.md`](solution-architect/scalability-planning.prompt.md)   | Scalability Planning           | Scalability strategies and capacity plans           |
-| [`solution-architect/security-architecture.prompt.md`](solution-architect/security-architecture.prompt.md) | Security Architecture          | Security controls and threat mitigation             |
-| [`solution-architect/technology-evaluation.prompt.md`](solution-architect/technology-evaluation.prompt.md) | Technology Evaluation          | Technology assessment and selection guidance        |
-
-## Meta Prompts
-
-The [`meta/`](meta/) subdirectory contains prompts that generate other prompts or instruction files. See [meta/README.md](meta/README.md) for details.
-
-## Prompt Structure
-
-All prompts follow this standardized structure:
-
-```yaml
 ---
-mode: agent|chat
-model: "provider/model-name@version"
-tools: ["array", "of", "tools"]
-description: "Clear description of prompt purpose"
-prompt_metadata:
-  id: kebab-case-identifier
-  title: Human Readable Title
-  owner: author-name
-  version: "1.0.0"
-  created: "YYYY-MM-DD"
-  updated: "YYYY-MM-DD"
-  output_path: path/to/output
-  category: category-name
-  tags: ["tag1", "tag2", "tag3"]
-  output_format: markdown
+ai_generated: true
+model: "unknown/unknown@unknown"
+operator: "johnmillerATcodemag-com"
+chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+prompt: |
+  files in the .github/prompts folder should be campared with the canonical skills. If a skill does not exist for the prompt, create a new skill. Prompt files are being deprecated. update the instructions, skills, and agents, responsible for syncing .github files.
+started: "2026-10-17T18:21:06.8108325-07:00"
+ended: "2026-10-17T18:37:09.0441419-07:00"
+task_durations:
+  - task: "Prompt-to-skill migration and sync guidance"
+    duration: "00:16:02"
+total_duration: "00:16:02"
+ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+source: "user request"
 ---
-```
 
-## Usage
+# Legacy Prompt Archive (Deprecated)
 
-These prompts are designed to be used with AI assistants that support:
+> Do not create new prompt files. Reusable workflows belong in `.github/skills/<name>/SKILL.md`; one-off work belongs in chat. This directory is retained only for prompt migration records.
 
-- File operations (create, edit, search)
-- Repository analysis
-- Structured output generation
+## Retained Migration Sources
 
-## Quality Standards
+| Legacy source | Canonical replacement |
+| --- | --- |
+| [`update-application-c4-diagrams.md`](update-application-c4-diagrams.md) | [`update-application-c4-diagrams`](../skills/update-application-c4-diagrams/SKILL.md) |
+| [`generate-implementation-prompts-prompt.md`](generate-implementation-prompts-prompt.md) | 14 Academia component skills listed below |
 
-All prompts in this directory:
+### Academia Component Skills
 
-- ✅ Follow the standard structure from prompt-file.instructions.md
-- ✅ Include complete metadata sections
-- ✅ Use explicit model specifications
-- ✅ Have clear, actionable descriptions
-- ✅ Include appropriate tool selections
+**Core infrastructure**
 
-## Contributing
+- [`academia-database-migrations`](../skills/academia-database-migrations/SKILL.md)
+- [`academia-identity-and-permissions`](../skills/academia-identity-and-permissions/SKILL.md) - combines authentication, authorization, user management, and permissions
+- [`academia-api-gateway-routing`](../skills/academia-api-gateway-routing/SKILL.md)
+- [`academia-logging-monitoring`](../skills/academia-logging-monitoring/SKILL.md)
 
-When adding new prompts:
+**Academic management**
 
-1. Follow the structure defined in [prompt-file.instructions.md](../instructions/prompt-file.instructions.md)
-2. Use descriptive kebab-case file names
-3. Include complete metadata
-4. Test the prompt before committing
-5. Update this README with the new prompt entry
+- [`academia-student-enrollment`](../skills/academia-student-enrollment/SKILL.md)
+- [`academia-course-scheduling`](../skills/academia-course-scheduling/SKILL.md)
+- [`academia-grades-transcripts`](../skills/academia-grades-transcripts/SKILL.md)
+- [`academia-faculty-management`](../skills/academia-faculty-management/SKILL.md)
+
+**Administration**
+
+- [`academia-reporting-analytics`](../skills/academia-reporting-analytics/SKILL.md)
+- [`academia-system-configuration`](../skills/academia-system-configuration/SKILL.md)
+- [`academia-data-import-export`](../skills/academia-data-import-export/SKILL.md)
+
+**Interfaces and delivery**
+
+- [`academia-web-portals`](../skills/academia-web-portals/SKILL.md) - combines student, faculty, and administrative web interfaces
+- [`academia-mobile-apps`](../skills/academia-mobile-apps/SKILL.md)
+- [`academia-integration-deployment`](../skills/academia-integration-deployment/SKILL.md) - combines system integration and deployment automation
+
+Only these two prompt source files currently exist in this directory. The previous category listings described files that are no longer present and are intentionally removed.
+
+## Migration and Sync Policy
+
+- Compare prompts by purpose, workflow, inputs, outputs, and constraints, not by filename.
+- Update a matching canonical skill or propose a new focused skill when no equivalent exists; obtain approval before creating it.
+- Keep each source prompt marked as deprecated with links to its replacement until maintainers decide otherwise.
+- Prompt files remain visible to cross-repository inventory but have `distribute: "none"` in the sync manifest. Do not import, propagate, or delete them through the sync workflow.
+- Keep this index accurate and validate all replacement links.

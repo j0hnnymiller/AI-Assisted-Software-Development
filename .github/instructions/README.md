@@ -1,3 +1,20 @@
+---
+ai_generated: true
+model: "unknown/unknown@unknown"
+operator: "johnmillerATcodemag-com"
+chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+prompt: |
+  files in the .github/prompts folder should be campared with the canonical skills. If a skill does not exist for the prompt, create a new skill. Prompt files are being deprecated. update the instructions, skills, and agents, responsible for syncing .github files.
+started: "2026-10-17T18:21:06.8108325-07:00"
+ended: "2026-10-17T18:37:09.0441419-07:00"
+task_durations:
+  - task: "Prompt-to-skill migration and sync guidance"
+    duration: "00:16:02"
+total_duration: "00:16:02"
+ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+source: "user request"
+---
+
 # Canonical AI Instructions
 
 **⚠️ SINGLE SOURCE OF TRUTH ⚠️**
@@ -12,9 +29,9 @@ This folder contains the canonical versions of all AI-assisted development instr
 | [`business-rules-to-slices.instructions.md`](business-rules-to-slices.instructions.md) | Vertical Slice Guidelines     | Convert business rules into vertical slice implementations              |
 | [`agent-file.instructions.md`](agent-file.instructions.md)                             | Agent Authoring               | Guidelines for creating custom GitHub Copilot agents                    |
 | [`instruction-files.instructions.md`](instruction-files.instructions.md)               | Instruction Standards         | Standards for creating and maintaining instruction files                |
-| [`instruction-prompt-files.instructions.md`](instruction-prompt-files.instructions.md) | Instruction Prompt Guidelines | Creating prompts that generate instruction files                        |
+| [`instruction-prompt-files.instructions.md`](instruction-prompt-files.instructions.md) | Legacy Prompt Migration | Replacing existing instruction-generating prompts with skills |
 | [`marp-slides.instructions.md`](marp-slides.instructions.md)                           | Slide Creation                | Guidelines for creating Marp-based presentation slides                  |
-| [`prompt-file.instructions.md`](prompt-file.instructions.md)                           | Prompt File Standards         | Structure and requirements for AI prompt files                          |
+| [`prompt-file.instructions.md`](prompt-file.instructions.md)                           | Legacy Prompt Migration | Historical prompt-file format and migration guidance |
 | [`vertical-slice.instructions.md`](vertical-slice.instructions.md)                     | Vertical Slice Architecture   | Implementation guidelines for vertical slice patterns                   |
 
 ## Purpose

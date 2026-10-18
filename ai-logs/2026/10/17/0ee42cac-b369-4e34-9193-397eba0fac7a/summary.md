@@ -4,11 +4,11 @@
 - Date: 2026-10-17
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
-- Duration: pending validation
+- Duration: Earlier work is not fully reconstructable from summarized history; prompt-to-skill migration lasted 00:16:02.
 
 ## Objective
 
-Merge applicable guidance from independent agent and skill variants into the canonical workspace customizations.
+Reconcile applicable guidance from divergent agent and skill variants, then migrate retained `.github/prompts` workflows to canonical skills and prevent deprecated prompts from being redistributed.
 
 ## Completed
 
@@ -25,6 +25,11 @@ Merge applicable guidance from independent agent and skill variants into the can
 - `.github/skills/compliance-check/SKILL.md` - added applicability checks, evidence-status classification, unknown handling, and legal/audit/certification boundaries.
 - `.github/skills/create-ai-assisted-output-instructions/SKILL.md` - added host-capability verification, mandatory/recommended separation, safe examples, and an approval boundary for policy replacement.
 - `.github/skills/create-instruction-files-instructions/SKILL.md` - added current-repository/schema verification, required-versus-recommended distinction, overwrite approval, and validation; removed unsupported fixed metadata and output-length requirements.
+- `.github/skills/update-application-c4-diagrams/SKILL.md` - created a repository-evidence-based C4 documentation workflow from the retained architecture prompt.
+- Fourteen Academia implementation skills - created focused skills for database migrations; identity and permissions; API gateway and routing; logging and monitoring; student enrollment; course scheduling; grades and transcripts; faculty management; reporting and analytics; system configuration; data import/export; web portals; mobile apps; and system integration/deployment.
+- `.github/agents/github-config-sync.agent.md` and the inventory, canonical, consolidate, and distribute skills - added semantic prompt-to-skill comparison, approval gates, and rules not to import or distribute legacy prompts.
+- `.github/github-config-sync.json` and the sync strategy - kept prompt paths visible to inventory and set both canonical legacy prompt files to `distribute: "none"`.
+- Prompt-authoring instructions, legacy prompt indexes, and related prompt-generator skills - marked prompt creation deprecated, routed reusable workflows to skills, and replaced obsolete README listings with links to existing files and skill replacements.
 
 ## Key decisions
 
@@ -41,6 +46,9 @@ Merge applicable guidance from independent agent and skill variants into the can
 - Kept canonical skill metadata and merged evidence-based compliance and policy-authoring guardrails without importing the Course variants' invalid nested metadata.
 - Kept the Instruction-File Authoring skill's canonical workflow while replacing stale fixed schema/length prescriptions with current-policy and host verification.
 - Left the two adjacent prompt-authoring skills unchanged because they were not selected for merging.
+- The two retained `.github/prompts` source files had no equivalent canonical skill: the C4 documentation task received one skill; the Academia component-generator was replaced with the approved 14 grouped implementation skills.
+- Grouped authentication/authorization with user management/permissions; grouped the three web portals; grouped system integration with deployment automation.
+- Legacy prompts remain as deprecated migration records. They remain visible to inventory but are neither imported nor distributed; no prompt files were deleted.
 - Kept the canonical agent-file, AI-output, instruction-authoring, and Marp instructions; lineage and current content showed the variants were stale or superseded.
 - Kept the canonical slide-pipeline instructions because the Course-specific optional-duration/PPTX-insert behavior is not implemented here and its copy contains a Course-specific absolute path.
 - Kept the canonical vertical-slice instructions because the Course copy is explicitly deprecated and disables automatic application.
@@ -48,4 +56,5 @@ Merge applicable guidance from independent agent and skill variants into the can
 
 ## Next steps
 
-- Continue reviewing the remaining divergent skills and configuration files; do not commit unless explicitly requested.
+- Review the uncommitted changes; no commit or spoke-repository writes were made.
+- Final validation: passed - 19 provenance front matters and chronology, `ai_log` targets, manifest JSON and prompt exclusions, all newly added index links, 15 skill files, and `git diff --check`. The root README still has 21 broken local links that were already present at `HEAD`; they are outside this migration's scope.

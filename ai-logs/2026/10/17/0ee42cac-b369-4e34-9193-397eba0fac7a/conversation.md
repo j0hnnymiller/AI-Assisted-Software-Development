@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: pending final validation
+- Ended: 2026-10-17T18:37:09.0441419-07:00
 
 ## Context
 
@@ -233,7 +233,25 @@ create-instruction-files-instructions
 - Architecture Design skill merge and validation: 00:00:52
 - Bug Hunt skill merge and validation: 00:01:57
 - Codebase Review skill merge and validation: 00:01:14
-- Logical Commits skill merge and validation: pending final review closure
-- DevOps and DevTest agent merges and validation: pending final review closure
-- Compliance and AI Output skill merges and validation: pending final review closure
-- Total: pending
+- Logical Commits skill merge and validation: not recorded in retained history
+- DevOps and DevTest agent merges and validation: not recorded in retained history
+- Compliance and AI Output skill merges and validation: not recorded in retained history
+- Total for earlier reconciliation: not reconstructable from summarized history.
+- Prompt-to-skill migration and sync guidance: 00:16:02 (measured from its recorded start to 2026-10-17T18:37:09.0441419-07:00)
+
+## Prompt-to-Skill Migration Update
+
+### User direction
+
+> files in the .github/prompts folder should be campared with the canonical skills. If a skill does not exist for the prompt, create a new skill. Prompt files are being deprecated. update the instructions, skills, and agents, responsible for syncing .github files.
+
+### Work completed
+
+- Compared the two retained prompt sources with the existing skill workflows. Neither had an equivalent skill.
+- Created one C4 documentation skill and fourteen Academia implementation skills, grouped as approved.
+- Kept the prompt sources with deprecation notices and replacement links; refreshed both prompt README indexes to list only existing artifacts.
+- Updated prompt-authoring instructions and retired prompt-generator skills so new reusable workflows use skills.
+- Updated the GitHub config sync agent, four sync skills, sync-strategy reference, and manifest. Prompt paths remain visible to inventory, while the two canonical prompt sources are set to `distribute: "none"`.
+- A dry-run of the sync script confirmed neither legacy prompt is planned as an update or add. Front matter, manifest JSON, new skill names/provenance paths, README links, and `git diff --check` were validated.
+
+The underlying model/version was not exposed in the runtime and is recorded as unknown rather than inferred. No commit or spoke-repository writes were made.

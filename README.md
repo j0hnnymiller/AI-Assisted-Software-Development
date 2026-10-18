@@ -1,3 +1,20 @@
+---
+ai_generated: true
+model: "unknown/unknown@unknown"
+operator: "johnmillerATcodemag-com"
+chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+prompt: |
+  files in the .github/prompts folder should be campared with the canonical skills. If a skill does not exist for the prompt, create a new skill. Prompt files are being deprecated. update the instructions, skills, and agents, responsible for syncing .github files.
+started: "2026-10-17T18:21:06.8108325-07:00"
+ended: "2026-10-17T18:37:09.0441419-07:00"
+task_durations:
+  - task: "Prompt-to-skill migration and sync guidance"
+    duration: "00:16:02"
+total_duration: "00:16:02"
+ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+source: "user request"
+---
+
 # AI-Assisted-Software-Development-Course
 
 Files suppoting the CODE Training AI Assisted Software Development not included in the public repos.-Course
@@ -29,7 +46,7 @@ This requires the `multiCommand` extension and is configured to trigger when edi
 
 ## Agent Skills
 
-Reusable task workflows are maintained as workspace skills in [`.github/skills/`](.github/skills/). Each skill has a `SKILL.md` entry point and can include supporting scripts or references. The prompt-to-skill migration is documented in the [chat log](ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md) and [summary](ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/summary.md).
+Reusable task workflows are maintained as workspace skills in [`.github/skills/`](.github/skills/). Each skill has a `SKILL.md` entry point and can include supporting scripts or references. Legacy prompts are migration-only; see the [prompt migration index](.github/prompts/README.md) and the [migration log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/summary.md).
 
 ## AI-Assisted Artifacts & Provenance
 
@@ -45,8 +62,8 @@ This repository enforces provenance and logging for any AI-assisted outputs (cod
 - [`.github/instructions/github-cli.instructions.md`](.github/instructions/github-cli.instructions.md) — Comprehensive guidance for using GitHub CLI effectively in development workflows, including authentication, repository operations, PR management, and automation ([chat log](ai-logs/2026/02/06/github-cli-instructions-20260206/conversation.md))
 - [`.github/instructions/cqrs-architecture.instructions.md`](.github/instructions/cqrs-architecture.instructions.md) — CQRS architecture guidance for command/query separation, consistency, and implementation checklists ([chat log](ai-logs/2026/02/07/cqrs-architecture-instructions-20260207/conversation.md))
 - [`.github/instructions/chatmode-file.instructions.md`](.github/instructions/chatmode-file.instructions.md) — Comprehensive authoring guidelines for creating custom GitHub Copilot chat modes ([chat log](ai-logs/2025/10/21/create-chatmode-instructions-20251021/conversation.md))
-- [`.github/instructions/create-prompt.instructions.md`](.github/instructions/create-prompt.instructions.md) — Comprehensive guidelines for authoring effective repository prompts ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
-- [`.github/instructions/instruction-prompt-files.instructions.md`](.github/instructions/instruction-prompt-files.instructions.md) — Requirements for creating prompts that generate instruction files ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
+- [`.github/instructions/prompt-file.instructions.md`](.github/instructions/prompt-file.instructions.md) — Deprecated prompt-file format and migration guidance; do not create new prompts
+- [`.github/instructions/instruction-prompt-files.instructions.md`](.github/instructions/instruction-prompt-files.instructions.md) — Migration guidance for existing instruction-generating prompts
 - [`.github/instructions/vertical-slice-architecture.instructions.md`](.github/instructions/vertical-slice-architecture.instructions.md) — Comprehensive guide for implementing vertical slice architecture with feature-centric code organization ([chat log](ai-logs/2025/10/22/vertical-slice-instructions-20251022/conversation.md))
 
 ### Custom GitHub Copilot Chat Modes
@@ -83,13 +100,14 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 - [`.github/agents/devtest-engineer.agent.md`](.github/agents/devtest-engineer.agent.md) — Test automation, QA strategy, and coverage guidance ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
 - [`.github/agents/sre-engineer.agent.md`](.github/agents/sre-engineer.agent.md) — Site reliability, monitoring, and incident response ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
 
-### Meta-Prompts (Prompt Generators)
+### Legacy Prompt-Authoring Redirects
 
-- [`.github/skills/create-instruction-files-prompt-file/SKILL.md`](.github/skills/create-instruction-files-prompt-file/SKILL.md) — Generates new instruction-generating prompts with AI provenance built-in ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
+- [`.github/skills/create-instruction-files-instructions/SKILL.md`](.github/skills/create-instruction-files-instructions/SKILL.md) — Create or update instruction files directly; use this instead of generating prompt files
+- [`.github/skills/create-use-case-instructions/SKILL.md`](.github/skills/create-use-case-instructions/SKILL.md) — Create or update use-case authoring guidance directly
 
-### Instruction-Generating Prompts
+### Prompt Migration Replacements
 
-- [`.github/skills/merge-marp-decks/SKILL.md`](.github/skills/merge-marp-decks/SKILL.md) — Merges individual Marp slide decks from `slides/marp/` into a single combined presentation ([chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md))
+- [`.github/prompts/README.md`](.github/prompts/README.md) — Index of the retained legacy prompt sources and their canonical skill replacements
 
 ### Notable Artifacts
 
@@ -209,9 +227,8 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Includes comprehensive speaker notes with timing guidance, live demo instructions, audience interaction points, and exercise facilitation tips
   - Provenance: [Chat log](ai-logs/2026/03/18/code-explanation-analysis-marp-20260318/conversation.md)
 
-- **Prompt Authoring Instructions** ([`.github/instructions/prompt-file.instructions.md`](.github/instructions/prompt-file.instructions.md))
-  - Comprehensive guidelines for creating effective, well-structured repository prompts
-  - Generated from: [`.github/skills/create-prompt-file-instructions-file/SKILL.md`](.github/skills/create-prompt-file-instructions-file/SKILL.md)
+- **Legacy Prompt Migration Instructions** ([`.github/instructions/prompt-file.instructions.md`](.github/instructions/prompt-file.instructions.md))
+  - Historical prompt-file format and migration guidance; new reusable workflows must be skills
   - Provenance: [Chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md)
 
 - **Instruction Validation Report** ([`validation-report-20251015-212137.md`](validation-report-20251015-212137.md))

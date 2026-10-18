@@ -9,6 +9,12 @@ metadata:
   chat_id: "create-github-config-sync-agent-20261014"
   ai_log: "ai-logs/2026/10/14/create-github-config-sync-agent-20261014/conversation.md"
   source: "johnmillerATcodemag-com"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Excluded legacy prompt files from distribution while keeping them visible to inventory."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Distribute Canonical Config to Other Repos
@@ -28,9 +34,10 @@ Hub-and-spoke sync: this repo is the hub. Spokes only receive updates that are p
    ./.github/skills/github-config-distribute/scripts/Sync-GithubConfig.ps1 [-Repo 'AIASD/*'] [-Path '.github/instructions/x.md']
    ```
    Writes `%TEMP%/github-config-sync-plan.json`. Use `-Path` (paths or globs) to scope a rollout to specific files; without it, `-Apply` writes every pending update/add in each repo.
+   Known legacy prompt files have `distribute: "none"` and must not appear as rollout writes.
 3. Present the plan per repo. Explain non-write actions:
    - `target-ahead` / `forked` → run `github-config-canonical` + `github-config-consolidate` for those files first
-   - `target-only` → candidates to import here, or leave as repo-specific
+   - `target-only` → candidates for approved imports or repo-specific files; target-only `.github/prompts/**` files are migration candidates, never import targets
    - `uncommitted` / dirty repo → owner must commit or stash
    - `blocked-secret` → fix the canonical `mcp.json`
 4. With user approval, apply:
@@ -46,6 +53,7 @@ Hub-and-spoke sync: this repo is the hub. Spokes only receive updates that are p
 
 - Overwrite only when the target's content is in canonical history or listed in `supersedes`
 - Never delete files; never touch files outside the manifest scope
+- Legacy prompt source files under `.github/prompts/**` are migration-only (README indexes may still sync). Keep prompt sources in inventory, set their canonical manifest entries to `distribute: "none"`, and exclude them from rollout plans.
 - Add new files only when the manifest says `distribute: "all"` or lists the repo
 - Only the user pushes or merges
 

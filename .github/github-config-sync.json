@@ -29,6 +29,12 @@
     "zeus/zeus.code-presents": { "mode": "ignore" }
   },
   "files": {
+    ".github/prompts/update-application-c4-diagrams.md": {
+      "distribute": "none"
+    },
+    ".github/prompts/generate-implementation-prompts-prompt.md": {
+      "distribute": "none"
+    },
     ".github/instructions/agent-file.instructions.md": {
       "supersedes": [
         "9116c4d768b08e18",

@@ -9,11 +9,17 @@ metadata:
   chat_id: "create-github-config-sync-agent-20261014"
   ai_log: "ai-logs/2026/10/14/create-github-config-sync-agent-20261014/conversation.md"
   source: "johnmillerATcodemag-com"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Clarified that legacy prompts are migration inputs, not import or distribution targets."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # GitHub Config Inventory
 
-Read-only scan that compares every in-scope file across repos and classifies drift against this (canonical) repo.
+Read-only scan that compares every in-scope file across repos and classifies drift against this (canonical) repo. Legacy prompt files remain visible for migration review but are not active sync targets.
 
 ## When to Use
 
@@ -23,6 +29,8 @@ Read-only scan that compares every in-scope file across repos and classifies dri
 ## Scope
 
 Defined in the manifest [.github/github-config-sync.json](../../github-config-sync.json): `root`, `maxDepth`, `include`/`exclude` globs, `skipDirs`, per-repo `mode` (`sync` | `report` | `ignore`). Defaults: `.github/**`, `AGENTS.md`, `CLAUDE.md`, `.vscode/mcp.json`. Repo discovery stops at the first folder with a `.git` directory, skipping `*.worktrees`, dot folders, and `skipDirs`.
+
+`.github/prompts/**` stays in inventory scope so legacy files can be found, but prompt files are migration inputs. Compare each prompt's workflow with canonical skills before recommending action. A spoke-only prompt is a migration candidate, never an automatic import candidate; do not distribute prompt files.
 
 ## Procedure
 
@@ -50,7 +58,7 @@ Defined in the manifest [.github/github-config-sync.json](../../github-config-sy
 1. Repos scanned: key, branch, HEAD, dirty, mode, file count
 2. Status counts
 3. Table of `diverged` + `missing-here`: path, variants, repos, recommended repo(s), confidence
-4. Flags: `SecretHits > 0` (never print values), uncommitted copies, repos on non-default branches
+4. Flags: `SecretHits > 0` (never print values), uncommitted copies, repos on non-default branches, and legacy prompt paths with likely skill replacements
 5. Next step: hand diverged files to the `github-config-canonical` skill
 
 ## Implementation

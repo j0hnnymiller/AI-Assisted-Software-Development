@@ -1,95 +1,32 @@
-# Meta Prompts - Prompt and Instruction Generators
+---
+ai_generated: true
+model: "unknown/unknown@unknown"
+operator: "johnmillerATcodemag-com"
+chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+prompt: |
+  files in the .github/prompts folder should be campared with the canonical skills. If a skill does not exist for the prompt, create a new skill. Prompt files are being deprecated. update the instructions, skills, and agents, responsible for syncing .github files.
+started: "2026-10-17T18:21:06.8108325-07:00"
+ended: "2026-10-17T18:37:09.0441419-07:00"
+task_durations:
+  - task: "Prompt-to-skill migration and sync guidance"
+    duration: "00:16:02"
+total_duration: "00:16:02"
+ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+source: "user request"
+---
 
-This directory contains meta-prompts that generate other prompts and instruction files. These are specialized prompts designed to create standardized documentation and guidelines.
+# Legacy Prompt-Generator Index (Deprecated)
 
-## Meta Prompt Files
+This folder contains no active prompt generators. Do not add prompt files here; use reusable skills directly.
 
-| File                                                                                                                 | Purpose                        | Generates                                  | Output Location                |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------ | ------------------------------ |
-| [`create-instruction-files-instructions.prompt.md`](create-instruction-files-instructions.prompt.md)                 | Instruction File Generator     | Guidelines for creating instruction files  | `.github/instructions/`        |
-| [`create-instruction-files-prompt-file.prompt.md`](create-instruction-files-prompt-file.prompt.md)                   | Instruction Prompt Generator   | Prompts that create instruction files      | `.github/copilot/Promptfiles/` |
-| [`create-use-case-instructions-file-prompt-file.prompt.md`](create-use-case-instructions-file-prompt-file.prompt.md) | Use Case Instruction Generator | Use case documentation guidelines          | `.github/instructions/`        |
-| [`validate-and-improve-instructions.prompt.md`](validate-and-improve-instructions.prompt.md)                         | Instruction Validator          | Improved versions of existing instructions | Various locations              |
+## Skill Replacements
 
-## What Are Meta Prompts?
+| Legacy generator workflow | Current skill |
+| --- | --- |
+| Create or update instruction-authoring guidance | [`create-instruction-files-instructions`](../../skills/create-instruction-files-instructions/SKILL.md) |
+| Create or update use-case authoring guidance | [`create-use-case-instructions`](../../skills/create-use-case-instructions/SKILL.md) |
+| Generate general instruction files | [`generate-instructions`](../../skills/generate-instructions/SKILL.md) |
+| Add AI provenance policy guidance | [`create-ai-assisted-output-instructions`](../../skills/create-ai-assisted-output-instructions/SKILL.md) |
+| Review and improve existing instructions | [`validate-and-improve-instructions`](../../skills/validate-and-improve-instructions/SKILL.md) |
 
-Meta prompts are prompts whose purpose is to generate other prompts or instruction files. They serve as:
-
-- **Standardization Tools**: Ensure consistency across generated documentation
-- **Template Generators**: Create structured starting points for new content
-- **Quality Enforcers**: Apply best practices and compliance requirements automatically
-- **Workflow Accelerators**: Speed up the creation of repetitive documentation types
-
-## Key Features
-
-### Compliance Integration
-
-All meta prompts automatically include:
-
-- ✅ AI provenance requirements from [ai-assisted-output.instructions.md](../../instructions/ai-assisted-output.instructions.md)
-- ✅ Proper metadata structure and YAML front matter
-- ✅ Required fields and formatting standards
-- ✅ Quality checklists and validation steps
-
-### Template-Driven Output
-
-Meta prompts generate files that include:
-
-- Standardized structure and sections
-- Required metadata fields
-- Compliance with instruction standards
-- Copy-paste ready templates and examples
-
-### Self-Referential Design
-
-These prompts follow the same standards they generate:
-
-- Complete `prompt_metadata` sections
-- Proper tool selection and descriptions
-- Explicit model specifications
-- Comprehensive documentation
-
-## Usage Pattern
-
-Meta prompts typically follow this workflow:
-
-1. **Context Gathering**: Read existing instruction files and standards
-2. **Structure Definition**: Define output file structure and required sections
-3. **Content Generation**: Create comprehensive content following templates
-4. **Compliance Integration**: Embed all required AI provenance metadata
-5. **Quality Assurance**: Include validation steps and checklists
-
-## Relationship to Main Prompts
-
-Meta prompts in this directory generate some of the prompts in the parent [`../`](../) directory:
-
-```
-meta/create-instruction-files-prompt-file.prompt.md
-  ↓ generates
-../create-prompt-file-instructions-file.prompt.md
-  ↓ which generates
-../../instructions/prompt-file.instructions.md
-```
-
-This creates a hierarchy of documentation generation that ensures consistency and compliance across the repository.
-
-## When to Create Meta Prompts
-
-Consider creating a meta prompt when you need to:
-
-- **Generate multiple similar files** with consistent structure
-- **Enforce compliance** across generated documentation
-- **Standardize creation** of specific file types
-- **Reduce manual work** in documentation workflows
-- **Ensure quality** through automated best practices
-
-## Contributing
-
-When adding meta prompts:
-
-1. Follow the naming pattern: `create-{target-type}-{purpose}.prompt.md`
-2. Include comprehensive context sections referencing relevant instruction files
-3. Define clear output structure and requirements
-4. Include quality checklists and validation steps
-5. Test the generated output for compliance
-6. Update this README with the new meta prompt entry
+The legacy prompt-authoring generator skills are migration references only. They must not create `.prompt.md` or `*.instructions.prompt.md` files; route new reusable workflows to skills and one-off requests to chat.

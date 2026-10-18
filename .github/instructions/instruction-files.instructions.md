@@ -37,6 +37,11 @@ revisions:
     date: "2026-10-16"
     change: "Updated the instruction-authoring workflow reference to the migrated workspace skill."
     ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Replaced obsolete promptfile authoring guidance with skill-based workflows."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Creating New Instruction Files
@@ -95,7 +100,7 @@ Instruction files (`.instructions.md`) define rules, workflows, and best practic
 - Project-specific README content
 - Configuration files or tool settings
 - Personal preferences or style guides
-- Content better suited to promptfiles or agents
+- Content better suited to skills or agents
 
 ## File Structure Requirements
 
