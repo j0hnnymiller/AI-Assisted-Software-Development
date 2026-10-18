@@ -17,6 +17,11 @@ revisions:
   - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
     model: "unknown/unknown@unknown"
     date: "2026-10-18"
+    change: "Indexed the Object Role Modeling authoring and validation guide."
+    ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
+  - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
     change: "Indexed skill-authoring and task-scoped Mermaid guidance."
     ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
 ---
@@ -34,6 +39,7 @@ This folder contains the canonical versions of all AI-assisted development instr
 | [`ai-assisted-output.instructions.md`](ai-assisted-output.instructions.md)             | AI Provenance Policy          | Main AI provenance and logging policy with chat management requirements |
 | [`agent-skills.instructions.md`](agent-skills.instructions.md) | Skill Authoring | Entry-point naming, discovery descriptions, resources, safety, and validation |
 | [`mermaid.instructions.md`](mermaid.instructions.md) | Diagram Authoring | Semantic colors and target-renderer checks; `.mmd` matching, with task-based or explicit loading for Markdown diagrams |
+| [`object-role-modeling.instructions.md`](object-role-modeling.instructions.md) | Object Role Modeling | Create and validate fact-oriented conceptual models; distinct from deriving use cases |
 | [`business-rules-to-slices.instructions.md`](business-rules-to-slices.instructions.md) | Vertical Slice Guidelines     | Convert business rules into vertical slice implementations              |
 | [`custom-agents.instructions.md`](custom-agents.instructions.md)                      | Agent Authoring               | Guidelines for creating focused custom agents using verified host support |
 | [`instruction-files.instructions.md`](instruction-files.instructions.md)               | Instruction Standards         | Standards for creating and maintaining instruction files                |

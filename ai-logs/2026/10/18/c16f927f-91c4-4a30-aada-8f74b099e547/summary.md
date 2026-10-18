@@ -4,7 +4,7 @@
 - Date: 2026-10-18
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
-- Duration: 00:11:40 (recorded authoring across six implementation updates; read-only review and final bookkeeping excluded)
+- Duration: 00:14:43 (recorded authoring across eight implementation updates; read-only reviews and final bookkeeping excluded)
 
 ## Objective
 
@@ -45,7 +45,7 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - Use the skill to conduct a Marp review when requested.
 - The 182-path disposition review is complete; its external report/ledger separates six proposed reusable families from local-only content.
 - Skill-authoring and Mermaid guidance are now adapted; Slide Master routing is repaired.
-- Explorer/investigator adaptation is now implemented. ORM, Vision and Scope, and Agent Host adaptations still require separate approval. Spoke-local workflow repairs and distribution are not approved.
+- Explorer/investigator and ORM authoring adaptations are now implemented. Vision and Scope and Agent Host guidance still require separate approval. Spoke-local workflow repairs and distribution are not approved.
 
 ## Approved guidance batch
 
@@ -74,3 +74,22 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - Live host discovery and model behavior were not tested. No source variants
   were overwritten or marked safe for distribution; local broader roles remain.
 - No commits, dependency installation, or spoke changes.
+
+## Approved Object Role Modeling batch
+
+- Added `.github/instructions/object-role-modeling.instructions.md` with
+  evidence/scope, object/fact types, constraints, objectification/derivation,
+  verbalization, population tests, conceptual queries, and separate mapping.
+- Added a cross-link from `use-cases-from-conceptual-model`, which continues to
+  consume an existing model rather than author it.
+- Indexed the guide in both README locations.
+- Verified concepts against `orm.net` overview, issues, queries, and UML/ORM pages.
+- Provenance interval is 00:03:03; YAML, local links, provenance arithmetic, and
+  whitespace checks passed. No ORM tool or model was run; no dialect conformance
+  or domain validation is claimed.
+- The original spoke path uses a singular suffix and remains untouched; no
+  same-path supersession record was added for this renamed canonical file.
+- No distribution, commit, or dependency installation.
+- A full pre-existing README link check exposed an unrelated dangling link to
+  `.github/instructions/business-rules-to-vertical-slices.instructions.md`.
+  It was not changed; newly added links all pass.

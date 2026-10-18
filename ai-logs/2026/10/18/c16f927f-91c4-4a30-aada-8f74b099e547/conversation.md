@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
 - Started: 2026-10-18T12:35:07.776-07:00
-- Ended: 2026-10-18T20:52:28.4367056Z
+- Ended: 2026-10-18T21:22:48.4010672Z
 
 ## Context
 
@@ -165,3 +165,48 @@ These checks are not live model-behavior or picker-discovery tests.
 
 No commits, distribution, spoke changes, or dependency installation. ORM,
 Vision and Scope, and Agent Host guidance remain deferred.
+
+### 7
+
+[2026-10-18T14:17:40.780-07:00] User
+
+```text
+go ahead
+```
+
+Approved the next proposed reusable configuration item: Object Role Modeling
+authoring guidance, distinct from use-case derivation.
+
+[2026-10-18T21:20:28.5418419Z] Assistant
+
+Added `.github/instructions/object-role-modeling.instructions.md`, adapting
+the Fleetly guide to canonical plural `.instructions.md` naming, current
+provenance, and an on-demand description without invented host fields.
+Covered evidence/scope, object types and identifiers, elementary fact types,
+source-grounded constraints, objectification/derivation, verbalization,
+synthetic populations/counterexamples, conceptual queries, and separate
+logical/physical mapping. Kept dialect/tool support conditional, and distinguished
+Object Role Modeling from object-relational mapping.
+
+Verified terminology with the primary `orm.net` overview, modeling-issues,
+conceptual-query, and UML/ORM pages. Linked the new guide from both README
+indexes and clarified that `use-cases-from-conceptual-model` consumes an
+existing model rather than authoring or validating it. The source spoke's
+singular-suffix path remains a distinct legacy path; no spoke file or same-path
+supersession record was modified.
+
+Validation: provenance YAML and timestamps, local links, original model-to-use-case
+contract, and `git diff --check` passed. This is documentation validation; no ORM
+model or tool was executed, no domain expert reviewed an example, and no
+particular ORM dialect/tool conformance is asserted.
+
+No distribution, commit, or dependency installation.
+
+Final index and documentation checks completed at 2026-10-18T21:22:48.4010672Z.
+An initial duration check found that rounding exceeded elapsed time by a fraction
+of a second; metadata was corrected to 00:03:03, summing the single recorded task.
+The first broad README link check also surfaced a pre-existing dangling link to
+`.github/instructions/business-rules-to-vertical-slices.instructions.md`. It is
+outside this change; validation was narrowed to new/changed links and passed.
+An initial script used Windows' default text encoding for one existing Markdown
+file; rerunning with explicit UTF-8 passed.

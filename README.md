@@ -17,6 +17,11 @@ revisions:
   - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
     model: "unknown/unknown@unknown"
     date: "2026-10-18"
+    change: "Added Object Role Modeling authoring and validation guidance, distinct from model-to-use-case derivation."
+    ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
+  - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
     change: "Documented the unified read-only codebase explorer and clarified its authoring skill."
     ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
   - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
@@ -61,6 +66,7 @@ This repo was created for the AIASD CODE Training Course
 - [Codebase Explorer](.github/agents/codebase-explorer.agent.md) combines unfamiliar-code orientation, bounded behavior/dependency tracing, and evidence-based archaeology. It requests only read/search tools, returns findings in chat, and reports unavailable history instead of adding command execution. Use [create-codebase-explorer-agent](.github/skills/create-codebase-explorer-agent/SKILL.md) only to create or adapt a profile, not to perform an investigation.
 - [Agent Skill authoring](.github/instructions/agent-skills.instructions.md) defines entry-point naming, discovery descriptions, resource safety, and validation for repository skills.
 - [Mermaid authoring](.github/instructions/mermaid.instructions.md) covers semantic colors, non-color cues, and rendering checks. It automatically targets standalone `.mmd` sources; attach it or load it by task relevance for diagrams embedded in Markdown.
+- [Object Role Modeling](.github/instructions/object-role-modeling.instructions.md) guides conceptual fact-model creation and validation; [use-cases-from-conceptual-model](.github/skills/use-cases-from-conceptual-model/SKILL.md) separately derives use cases from a model that already exists.
 - [Slide Master](.github/agents/slide-master.agent.md) routes course-manifest PPTX builds to [build-course-slide-deck](.github/skills/build-course-slide-deck/SKILL.md), standalone Markdown merges to [merge-marp-decks](.github/skills/merge-marp-decks/SKILL.md), and read-only reviews to [review-marp-course-materials](.github/skills/review-marp-course-materials/SKILL.md).
 - [`.github/instructions/marp-slides.instructions.md`](.github/instructions/marp-slides.instructions.md) — Instructions and templates for creating Marp slide files. Slides created using these instructions must be placed in `slides/marp/` and include AI provenance metadata linking to an `ai-logs/` conversation (see `.github/instructions/ai-assisted-output.instructions.md` and `.github/instructions/copilot-instructions.md`).
 
@@ -105,6 +111,7 @@ This repository enforces provenance and logging for any AI-assisted outputs (cod
 - [`.github/instructions/ai-assisted-output.instructions.md`](.github/instructions/ai-assisted-output.instructions.md) — How to generate AI-assisted outputs with required metadata, logging, and CI enforcement
 - [`.github/instructions/business-rules-to-slices.instructions.md`](.github/instructions/business-rules-to-slices.instructions.md) — **AI Assistants**: Explicit procedures for analyzing business rules, extracting use cases, and designing vertical slices ([chat log](ai-logs/2025/10/22/business-rules-vertical-slices-20251022/conversation.md))
 - [`.github/instructions/vertical-slice.instructions.md`](.github/instructions/vertical-slice.instructions.md) — **AI Assistants**: Comprehensive guide for generating vertical slice code with rules, templates, and validation checklists ([chat log](ai-logs/2025/10/22/ai-vertical-slice-implementation-20251022/conversation.md))
+- [`.github/instructions/object-role-modeling.instructions.md`](.github/instructions/object-role-modeling.instructions.md) — Create and validate evidence-backed Object Role Modeling conceptual models; the use-case skill consumes an existing model.
 - [`.github/instructions/business-rules-to-vertical-slices.instructions.md`](.github/instructions/business-rules-to-vertical-slices.instructions.md) — **Developers**: Guide for analyzing business requirements, extracting rules, and designing implementable vertical slices ([chat log](ai-logs/2025/10/22/business-rules-vertical-slices-20251022/conversation.md))
 - [`.github/instructions/copilot-instructions.md`](.github/instructions/copilot-instructions.md) — Repository-wide Copilot constraints; task-specific guidance is maintained in instruction files and skills
 - [`.github/instructions/custom-agents.instructions.md`](.github/instructions/custom-agents.instructions.md) — Guidance for authoring focused custom-agent profiles using verified host support

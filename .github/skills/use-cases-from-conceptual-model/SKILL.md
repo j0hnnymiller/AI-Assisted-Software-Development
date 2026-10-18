@@ -17,6 +17,11 @@ total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/derive-use-cases-from-conceptual-model.prompt.md"
 revisions:
+  - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Linked the separate conceptual ORM authoring and validation guidance."
+    ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
   - chat_id: "skill-naming-convention-20261018"
     model: "unknown/unknown@unknown"
     date: "2026-10-18"
@@ -26,6 +31,9 @@ revisions:
 # Generate Use Cases from conceptual model
 
 Read business rules from conceptual ORM model, derive user-goal use cases, generate use case files.
+
+This skill consumes an existing model; it does not author or validate the model.
+For that separate workflow, use [Object Role Modeling instructions](../../instructions/object-role-modeling.instructions.md).
 
 ## Prerequisites - Locate Model
 1. Use `file_search` for .txt files in `Model/orm/`
@@ -73,7 +81,6 @@ flowchart TD
 - Index exists with table linking all use cases
 - Each file under `Model/use-cases/`, follows template, includes Mermaid
 - README updated with link
-
 
 
 
