@@ -34,6 +34,11 @@ revisions:
     date: "2026-10-18"
     change: "Separated standalone Marp merging from the course-manifest pipeline and added roadmap-planning and publication-transfer skills."
     ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
+  - chat_id: "c16f927f-91c4-4a30-aada-8f74b099e547"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Documented the canonical Marp review workflow and VTI training-index support in the transcript summarizer."
+    ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
 ---
 
 # AI-Assisted-Software-Development-Course
@@ -74,6 +79,7 @@ Skill names use lowercase kebab-case, and each folder name matches the `name` in
 Use [`create-implementation-skills`](.github/skills/create-implementation-skills/SKILL.md) to author or update focused, repository-grounded implementation workflows.
 
 - Use [`review-marp-course-materials`](.github/skills/review-marp-course-materials/SKILL.md) to review a source deck, one course manifest, or a related multi-manifest sequence.
+- Use [`summarize-transcript-content`](.github/skills/summarize-transcript-content/SKILL.md) for VTT transcripts, VTI training indices with nested duration markers, or structured response aggregation. VTI summaries preserve hierarchy, distinguish declared and calculated durations, and flag incomplete or conflicting timing.
 
 ## AI-Assisted Artifacts & Provenance
 
