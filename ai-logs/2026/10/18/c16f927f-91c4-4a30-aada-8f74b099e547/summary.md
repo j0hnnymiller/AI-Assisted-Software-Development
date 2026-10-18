@@ -4,7 +4,7 @@
 - Date: 2026-10-18
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown
-- Duration: 00:04:18 (active work across three updates)
+- Duration: 00:06:22 (active work across four updates)
 
 ## Objective
 
@@ -20,6 +20,9 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - `.github/skills/app-hosting-decision-tree/SKILL.md` - Imported the approved Azure app-host chooser unchanged from Messer.
 - `.github/github-config-sync.json` - Recorded the Azure hosting skill consolidation; no alternate variants were superseded.
 - `README.md` - Documented the Azure chooser's audience and pricing default separately from the broader hosting comparison.
+- `.github/scripts/copy-copilot-files.ps1` - Excluded deprecated prompts; made preview write-free; separated plans from completed copies; returned nonzero for failures.
+- `.github/scripts/tests/copy-copilot-files.Tests.ps1` - Added eight isolated Pester regression tests.
+- `.github/scripts/README.md` - Documented helper usage, preview, overwrite/Force behavior, exit codes, and test command.
 
 ## Key decisions
 
@@ -35,7 +38,9 @@ Extend the existing transcript summarizer with VTI training-index hierarchy and 
 - Summarizer YAML, discovery metadata, folder/name agreement, provenance-policy link, retained VTT/aggregation sections, and whitespace checks passed.
 - Repository VTI sample arithmetic verified: five top-level sections total 45:00, average 9:00, longest 12:15, shortest 4:10; timed subsection sums match parents.
 - No automated VTI parser or end-to-end summarization was executed; this is a skill documentation update.
+- Copy-helper Pester 5.7.1 suite: eight passed, zero failed. Preview creates no destination or agent directory and preserves existing file content; normal copies exclude prompts; directory and copy failures return 1; missing optional paths remain non-failing; Force still overwrites read-only files.
 
 ## Next steps
 
 - Use the skill to conduct a Marp review when requested.
+- Resume the broader configuration review; stale spoke script documentation remains a separate follow-up.
