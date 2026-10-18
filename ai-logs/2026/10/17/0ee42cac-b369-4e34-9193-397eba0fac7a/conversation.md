@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-18T10:52:25.731-07:00
+- Ended: 2026-10-18T12:01:07-07:00
 
 ## Context
 
@@ -741,3 +741,29 @@ inventory paths remains in progress.
   warning for the edited skill). A separate stale prompt-execution workflow remains in
   `orchestrate-instruction-improvement`; it references legacy Promptfiles and is outside
   this narrowly approved duplicate consolidation.
+
+[2026-10-18T11:54:18-07:00] User
+
+```text
+Continue through the remaining prompt families, recording each path as reviewed, duplicate/variant, supporting artifact, or needs skill coverage.
+Only after the ledger is complete, summarize genuine skill gaps and propose changes.
+```
+
+[2026-10-18T12:01:07-07:00] Assistant
+
+Refreshed the cross-repository inventory and reconciled all 138 unique prompt-artifact
+paths: 134 under `.github/prompts/` and 4 under `.github/promptfiles/`. Recorded every
+path, repository location, disposition, and canonical coverage/evidence in
+[`prompt-review-ledger.md`](artifacts/prompt-review-ledger.md). Disposition counts:
+82 duplicate/variant, 43 reviewed, 13 supporting artifacts, and 0 needing skill coverage.
+
+The review confirmed that testability guidance is now included in `analyze-test-gaps`;
+the code-review prompt is specific to the AI Practitioner Resources application's
+architecture and generic GitHub PR review is already available; the Academia slice
+prompts are project requirements rather than reusable workflows; and divergent copies
+of context analysis, output policy, prompt indexes, and refactoring prompts are
+variants of existing canonical workflows. No new canonical skill is recommended.
+Spoke prompts remain migration inputs and were not changed or distributed.
+
+Validated the ledger against the refreshed inventory: 138 rows, 138 unique paths,
+no missing or extra paths, valid YAML provenance, and `git diff --check` passed.

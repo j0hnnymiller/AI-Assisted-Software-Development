@@ -140,6 +140,7 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - Completed review of all 4 `.github/promptfiles` entries in `Teleflex/agentsolution`: context analysis maps to `check-context-conflicts`; regulated-work-instruction drafting maps to `author-iec62304-work-instruction`; provenance policy generation maps to `create-ai-assisted-output-policy`; and `create_chatmode_guidance.md` is empty with no reusable workflow to migrate. No files outside the ongoing review log were changed.
 - Reviewed representative instruction/prompt/agent authoring prompts across Messer, Zeus Academia, and AIASD-Brownfield. Mapped prompt-authoring redirects, custom-agent creation, project/technology instruction generation, use-case guidance, and implementation workflows to existing skills/instructions; no new skill was needed. Consolidated the duplicate `create-instruction-file-policy` by replacing it with a provenance-preserving redirect to `create-instruction-file-authoring-instructions`; the canonical workflow already covers its useful templates, examples, checklists, host validation, current naming, and overwrite approval. This review was by workflow family, not a per-path audit of all 134 prompt files.
 - Retained the obsolete `orchestrate-instruction-improvement` prompt-execution workflow as a separate follow-up; it still references legacy Promptfiles and was not part of the approved duplicate consolidation.
+- Created a per-path prompt review ledger at [`artifacts/prompt-review-ledger.md`](artifacts/prompt-review-ledger.md). The refreshed inventory reconciles to 138 unique paths: 134 `.github/prompts/` and 4 `.github/promptfiles/`. Ledger dispositions: 82 duplicate/variant, 43 reviewed, 13 supporting artifacts, and 0 needing skill coverage. The ledger compares divergent context-analysis, output-policy, prompt-index, and refactoring variants and maps each reusable workflow to existing coverage.
 
 ### Prompt review findings
 
@@ -150,7 +151,7 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - The IEC modular prompts include Teleflex-specific procedures and document identifiers; these remain organization-specific evidence inputs rather than universal requirements.
 - Security-related prompt comparison was limited to mapping the prompt to the existing issue-drafting skill; no repository security audit or vulnerability review was performed.
 - The additional prompt batch did not require a new general skill beyond the three already created. Repository-specific status reporting, historical test results, and schema artifacts were not imported.
-- Prompt-to-skill coverage is not complete. Current inventory counts varied between refreshes; no claim is made that all prompt files were analyzed.
+- Prompt-artifact review is complete for the refreshed 138-path inventory. No new canonical skill is recommended: testability is covered by the revised `analyze-test-gaps`; the code-review prompt is application-specific and generic PR review is available; and the Academia slice prompts are project requirements rather than reusable workflows. Legacy prompts remain migration inputs and were not imported or distributed.
 
 ### Validation
 
@@ -165,3 +166,4 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - Four promptfiles review: 00:00:45 from 2026-10-18T10:45:13.336-07:00 to 2026-10-18T10:45:58.102-07:00.
 - Prompt-authoring and prompt-generation family review: 00:02:15 from 2026-10-18T10:47:32.731-07:00 to 2026-10-18T10:49:47.793-07:00.
 - Instruction-authoring skill consolidation and focused validation: 00:02:38 from 2026-10-18T10:49:47.793-07:00 to 2026-10-18T10:52:25.731-07:00.
+- Prompt-family ledger reconciliation and coverage review: 00:06:49 from 2026-10-18T11:54:18-07:00 to 2026-10-18T12:01:07-07:00.
