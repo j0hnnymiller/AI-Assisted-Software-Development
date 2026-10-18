@@ -4,11 +4,11 @@
 - Date: 2026-10-17
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
-- Duration: 00:03:34
+- Duration: pending validation
 
 ## Objective
 
-Merge applicable general guidance from independent Product Manager, Senior Developer, Solution Architect, and Technical Writer agent variants into the canonical agents.
+Merge applicable guidance from independent agent and skill variants into the canonical workspace customizations.
 
 ## Completed
 
@@ -16,6 +16,15 @@ Merge applicable general guidance from independent Product Manager, Senior Devel
 - `.github/agents/senior-developer.agent.md` - added codebase analysis, debugging, security/performance review, and knowledge-transfer guidance.
 - `.github/agents/solution-architect.agent.md` - added constraint assessment, standards/technology review, architecture validation, and risk mitigation.
 - `.github/agents/technical-writer.agent.md` - added accuracy, verification, synchronization, and accessibility practices.
+- `.github/skills/architecture-design/SKILL.md` - added evidence/assumption guardrails, brownfield review, careful technology/compliance claims, and implementation boundaries.
+- `.github/skills/bug-hunt-issues/SKILL.md` - clarified read-only behavior, issue draft vs. submission, requested report saving, and overwrite confirmation.
+- `.github/skills/codebase-review/SKILL.md` - added scope/exclusions, rule mapping, fallback, and read-only/report-save boundaries.
+- `.github/skills/commit-workspace-changes-logical-groups/SKILL.md` - added approval gates, staged/unstaged preservation, and staged-diff review before commits.
+- `.github/agents/devops-engineer.agent.md` - added current-infrastructure assessment, security/reliability/performance/cost trade-offs, and assumptions/risks.
+- `.github/agents/devtest-engineer.agent.md` - added test data/environment management, defect analysis, quality metrics, and test-maintenance guidance.
+- `.github/skills/compliance-check/SKILL.md` - added applicability checks, evidence-status classification, unknown handling, and legal/audit/certification boundaries.
+- `.github/skills/create-ai-assisted-output-instructions/SKILL.md` - added host-capability verification, mandatory/recommended separation, safe examples, and an approval boundary for policy replacement.
+- `.github/skills/create-instruction-files-instructions/SKILL.md` - added current-repository/schema verification, required-versus-recommended distinction, overwrite approval, and validation; removed unsupported fixed metadata and output-length requirements.
 
 ## Key decisions
 
@@ -24,8 +33,19 @@ Merge applicable general guidance from independent Product Manager, Senior Devel
 - Kept the canonical Senior Developer agent as the base; excluded the Course variant's legacy header format and redundant interactive-command examples.
 - Kept the canonical Solution Architect agent as the base; excluded obsolete prompt-file paths and the Course variant's legacy headers and verbose examples.
 - Kept the canonical Technical Writer agent as the base; excluded the Course variant's legacy headers, obsolete commands, and verbose generic checklists.
+- Kept the canonical Architecture Design skill and its valid top-level metadata; merged useful evidence/uncertainty safeguards from the Course variant and corrected `@` invocation wording to `/`.
+- Kept the canonical Bug Hunt skill's valid top-level provenance; reconciled issue drafting with the read-only boundary and omitted the Course variant's nested metadata and fixed report path.
+- Kept the canonical Codebase Review skill's valid top-level metadata; ported useful audit procedure and boundaries without the Course version's invalid metadata nesting or fixed output path.
+- Kept the canonical Logical Commits skill's top-level provenance and commit-message guidance; ported the Course variant's explicit approval and Git-state safeguards.
+- Kept the canonical DevOps and DevTest agents' valid YAML front matter and concise workflows; selectively merged general expertise from the Course variants while excluding legacy headers and verbose examples.
+- Kept canonical skill metadata and merged evidence-based compliance and policy-authoring guardrails without importing the Course variants' invalid nested metadata.
+- Kept the Instruction-File Authoring skill's canonical workflow while replacing stale fixed schema/length prescriptions with current-policy and host verification.
+- Left the two adjacent prompt-authoring skills unchanged because they were not selected for merging.
+- Kept the canonical agent-file, AI-output, instruction-authoring, and Marp instructions; lineage and current content showed the variants were stale or superseded.
+- Kept the canonical slide-pipeline instructions because the Course-specific optional-duration/PPTX-insert behavior is not implemented here and its copy contains a Course-specific absolute path.
+- Kept the canonical vertical-slice instructions because the Course copy is explicitly deprecated and disables automatic application.
 - Recorded the unavailable model/version as unknown rather than inferring it.
 
 ## Next steps
 
-- Continue reviewing divergent configs, then review/commit the completed agent merges if desired.
+- Continue reviewing the remaining divergent skills and configuration files; do not commit unless explicitly requested.
