@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-18T10:26:21.010-07:00
+- Ended: 2026-10-18T10:45:58.102-07:00
 
 ## Context
 
@@ -565,3 +565,106 @@ purpose:
 No new skill or source-file edit was warranted. The prior skill refinements and this
 classification pass are recorded in the summary. Review is still incomplete across the
 138 prompt-related inventory paths.
+
+### 17 - Refreshed Prompt Scope and Tagged Slide Skill
+
+[2026-10-18T10:28:01-07:00] User
+
+```text
+help me review the 138 prompt-related paths
+```
+
+[2026-10-18T10:31:52-07:00] Assistant
+
+Refreshed the read-only GitHub config inventory and reconciled the scope: 134 distinct
+`.github/prompts/` path entries plus 4 `.github/promptfiles/` entries, for 138 prompt
+artifacts. All 134 prompt-directory entries are absent from the canonical repository
+and reside in spokes. The larger count of 160 paths containing the word `prompt` also
+includes agents, instructions, and skills, so it is not the prompt-file total.
+
+Reviewed the user-tagged `build-course-slide-deck` contract against the related slide
+workflows discovered during the cross-repo check:
+
+- The canonical skill builds from its repository's `sections`/`decks` manifest and
+  checked-in pipeline; it is distinct from standalone `sources` merging.
+- Course-repository slide skills cover source-deck authoring, a class-specific setup
+  deck, and a pipeline explainer/manifest. They are repository-specific workflows, and
+  corresponding skills already exist in the Course repository; no general canonical
+  skill gap was established.
+- The Course pipeline supports top-level manifest `variables` substitution, while the
+  canonical repository's pipeline scripts do not. The Course `course_name`/`course_id`
+  requirements must not be added to the canonical skill's different manifest contract.
+- The older weekly-pipeline prompt still refers to deprecated prompt execution and lacks
+  the current script/finalization contract; the canonical weekly skill has already been
+  corrected. These manually inspected Course prompt copies were not identified as
+  entries in the refreshed 138-path inventory.
+
+No code, skill, prompt source, or spoke was changed. The overall review of all 138
+inventory paths remains in progress.
+
+  ### 18 - Academia Slice Prompt Family
+
+  [2026-10-18T10:31:52-07:00] Assistant
+
+  Reviewed the 36-entry `academia-implementation` prompt family using its README index,
+  the ManageUniversities execution map and implementation prompt, and a reporting-slice
+  prompt as representative examples. The folder contains 33 feature/slice-specific
+  implementation prompts, two coordination/execution maps, and an index README. The
+  prompts are derived from one project execution plan and encode dependencies, artifact
+  ownership, business decisions, and acceptance/verification criteria for individual
+  Zeus Academia slices.
+
+  Classification: retain these files only as spoke-local requirements and implementation
+  history; do not create 33 prompt-shaped skills. The reusable implementation workflow is
+  already covered by `implement-vertical-slice`, while domain-level reusable capabilities
+  are represented by the 14 Academia skills in this repository. The execution maps and
+  README are planning/index artifacts rather than assistant workflows. No prompt source or
+  skill was modified.
+
+  ### 19 - Product, Editorial, Scheduling, and DOCX Workflows
+
+  [2026-10-18T10:33:23-07:00] Assistant
+
+  Compared five inventory prompts with their canonical skill counterparts:
+
+  - `create-prd` maps to `author-product-requirements`. The skill retains the useful
+    problem/goals/non-goals/metrics structure but avoids imposing fixed counts and
+    unsupported metrics when the supplied evidence or team template differs.
+  - `create-blog-section` maps to `author-blog-section`; both bound edits to one section
+    and ground claims in sources.
+  - `meeting-brief-from-transcript` maps to `create-meeting-brief-from-transcript`; the
+    skill preserves attribution and uncertainty safeguards without requiring every
+    source to fit a rigid visual template.
+  - `sme-intro-invites` maps to `schedule-sme-introductions`; the canonical skill
+    deliberately replaces unconditional scheduling optimization and invite dispatch
+    with explicit constraints, privacy, proposal, and authorization checks.
+  - `convert-mermaid-markdown-to-templated-docx` maps to
+    `convert-mermaid-markdown-to-docx`. The legacy prompt's 8-inch diagrams, Word styles,
+    table-layout rules, and PowerShell script are tied to the Messer pipeline and were
+    not copied into the tool-independent canonical workflow.
+
+  No missing reusable skill or cross-repository change was identified.
+
+  ### 20 - Four Promptfiles
+
+  [2026-10-18T10:45:13-07:00] User
+
+  ```text
+  proceed with 1
+  ```
+
+  [2026-10-18T10:45:58-07:00] Assistant
+
+  Reviewed all four `.github/promptfiles` paths from the refreshed inventory; each is in
+  `Teleflex/agentsolution`:
+
+  | Path | Classification |
+  | --- | --- |
+  | `.github/promptfiles/check-context.prompt.md` | Covered by canonical `check-context-conflicts`; the skill adds explicit scope, precedence, finding categories, severity/confidence, evidence, and limitations. |
+  | `.github/promptfiles/create_chatmode_guidance.md` | Empty file (0 bytes); no workflow to map and no basis for authoring a skill. |
+  | `.github/promptfiles/create-ai-assisted-dev-wi-20260209.prompt.md` | Covered by `author-iec62304-work-instruction`; the canonical skill requires approved QMS sources and authorized classifications, and does not claim compliance or immediate implementation readiness. |
+  | `.github/promptfiles/create-ai-assisted-output-instructions.prompt.md` | Covered by `create-ai-assisted-output-policy`; the canonical policy-authoring workflow adds host-capability checks and separates implemented enforcement from recommendations. |
+
+  All four are migration inputs only. No spoke promptfiles or canonical skills were
+  changed. This completes review of the four promptfile entries, not the remaining
+  `.github/prompts` inventory.
