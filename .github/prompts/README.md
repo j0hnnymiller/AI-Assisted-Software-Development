@@ -89,7 +89,6 @@ The following canonical skills incorporate reusable workflows identified in the 
 | Issue readiness review | [`review-issue-readiness`](../skills/review-issue-readiness/SKILL.md) |
 | Workflow path counting | [`count-workflow-paths`](../skills/count-workflow-paths/SKILL.md) |
 | AI practitioner resource catalog | [`curate-ai-practitioner-resources`](../skills/curate-ai-practitioner-resources/SKILL.md) |
-| Chat mode authoring | [`deprecate-chatmode-authoring`](../skills/deprecate-chatmode-authoring/SKILL.md) |
 | IEC 62304 lifecycle assessment | [`iec62304-compliance-assessment`](../skills/iec62304-compliance-assessment/SKILL.md) |
 | SME introduction scheduling | [`schedule-sme-introductions`](../skills/schedule-sme-introductions/SKILL.md) |
 | Multi-file response summarization | [`summarize-transcript-content`](../skills/summarize-transcript-content/SKILL.md) |
