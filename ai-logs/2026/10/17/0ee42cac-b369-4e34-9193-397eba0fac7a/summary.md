@@ -167,3 +167,13 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - Prompt-authoring and prompt-generation family review: 00:02:15 from 2026-10-18T10:47:32.731-07:00 to 2026-10-18T10:49:47.793-07:00.
 - Instruction-authoring skill consolidation and focused validation: 00:02:38 from 2026-10-18T10:49:47.793-07:00 to 2026-10-18T10:52:25.731-07:00.
 - Prompt-family ledger reconciliation and coverage review: 00:06:49 from 2026-10-18T11:54:18-07:00 to 2026-10-18T12:01:07-07:00.
+- Instruction-orchestration skill update and broader config review continuation: 00:05:14 from 2026-10-18T12:15:07-07:00 to 2026-10-18T12:20:22-07:00.
+
+## Broader Cross-Repository Config Review (2026-10-18)
+
+- Updated `orchestrate-instruction-improvement` to sequence the canonical bounded validation and instruction-authoring skills. Removed obsolete prompt regeneration, source-prompt editing, and automatic branch/commit/PR instructions. YAML, relative links, legacy-directive absence, focused consistency review, and `git diff --check` passed.
+- Refreshed inventory: 16 repositories, 493 config paths (95 canonical-only, 29 diverged, 4 identical, 365 missing here). All repositories are on `main`; only the canonical repository is dirty. Five paths have heuristic secret-pattern matches; these are unverified and not treated as credentials (the user previously clarified flagged examples are not secrets).
+- Reviewed `.github/scripts/copy-copilot-files.ps1` and its variants. Keep the canonical version as the base, but the shared file still includes a deprecated prompt in its copy list, its `-WhatIf` creates directories and reports copies as completed, and caught copy failures can still result in exit code 0. Recommend a separately approved fix.
+- Reviewed divergent `.github/scripts/README.md` variants. Spoke versions list absent `quick-sync.ps1`; their branch-script paths differ, and the Messer paths checked are absent while Course `tools/git` paths exist. Keep the concise canonical README as the base if reconciling.
+- Classified eight spoke-only script/support files as repository-bound Mermaid-to-DOCX and security scanning/issue-generation artifacts, not shared Copilot customization candidates. No spoke files were changed or imported.
+- Next bounded review: assess the 67 current `missing-here` skill paths by family; broader inventory review remains incomplete.

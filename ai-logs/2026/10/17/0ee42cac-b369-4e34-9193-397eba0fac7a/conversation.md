@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-18T12:01:07-07:00
+- Ended: 2026-10-18T12:20:22-07:00
 
 ## Context
 
@@ -767,3 +767,51 @@ Spoke prompts remain migration inputs and were not changed or distributed.
 
 Validated the ledger against the refreshed inventory: 138 rows, 138 unique paths,
 no missing or extra paths, valid YAML provenance, and `git diff --check` passed.
+
+[2026-10-18T12:15:07-07:00] User
+
+```text
+update orchestrate-instruction-improvement to the current instruction-validation and authoring workflows
+
+then resume the broader cross-repository config review
+```
+
+[2026-10-18T12:20:22-07:00] Assistant
+
+Updated `.github/skills/orchestrate-instruction-improvement/SKILL.md`: removed prompt
+regeneration, prompt-as-root-cause edits, and automatic branch/commit/PR steps; it now
+orchestrates the bounded `validate-and-improve-instructions` and
+`create-instruction-file-authoring-instructions` workflows with approval and side-effect
+boundaries. YAML, relative links, obsolete directive absence, and `git diff --check`
+passed. Focused conflict review found no confirmed conflict with the linked canonical
+skills.
+
+Resumed the broader inventory review. Current inventory: 16 repositories, 493 config
+paths (95 canonical-only, 29 diverged, 4 identical, 365 missing here); all repositories
+are on `main`, and this canonical working tree is the only dirty repository. Heuristic
+secret-pattern matches remain unverified and are not treated as credentials; the user
+has previously clarified that the flagged examples are not secrets.
+
+Reviewed the `.github/scripts/` utility-script family:
+
+- `.github/scripts/copy-copilot-files.ps1` remains a fork between the canonical and
+  Messer/Course copies. Keep the canonical direction; its current patterns target the
+  active `custom-agents` and Marp instructions, whereas spoke variants reference
+  removed instruction files. However, all variants still include the legacy
+  `check-context.prompt.md`, contrary to the no-prompt-distribution policy. The
+  canonical script's `-WhatIf` also creates destination directories and reports
+  planned copies as copied; per-file failures are warnings followed by `exit 0`.
+  Recommend a separately approved script fix, not copying a spoke variant.
+- `.github/scripts/README.md` spoke variants describe missing `quick-sync.ps1` files.
+  Their branch-script commands diverge; Course's `tools/git` paths exist, while the
+  corresponding Messer root `scripts` paths do not. Keep the concise canonical README
+  as the base if these docs are ever reconciled.
+- Eight spoke-only script/support paths belong to Messer's Mermaid-to-DOCX or security
+  scan/issue-generation toolchains (converter, Pandoc filter/styles, dependencies,
+  scanner/configuration, and issue creator). They are repository-bound support
+  artifacts, not candidates for importing as shared Copilot configuration.
+
+No spoke repository was edited and no additional config changes were made. The wider
+inventory remains open; next useful batch is a family-based review of the 67
+`missing-here` skill paths, with import/distribution decisions kept separate and
+approval-gated.
