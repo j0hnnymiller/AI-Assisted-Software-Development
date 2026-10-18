@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-18T10:18:09.845-07:00
+- Ended: 2026-10-18T10:26:21.010-07:00
 
 ## Context
 
@@ -538,3 +538,30 @@ Validated updated skill front matter, required provenance, folder/name matching,
 links, the TDD instruction reference, the `movePost` source path, the README entry, and
 `git diff --check`. The inventory's 138 prompt-related paths remain only partially
 reviewed; no spoke prompt was edited or distributed.
+
+### 16 - PM Support Guides and Remaining Migration Inputs
+
+[2026-10-18] Assistant
+
+Reviewed the remaining AI Practitioner PM support materials and classified them by
+purpose:
+
+- `ERROR_HANDLING_GUIDE.md`, `INDEPENDENCE_GUIDE.md`, and `LABEL_VALIDATION_GUIDE.md`
+  are project-specific operational documentation tied to its scripts, labels, and
+  workflow; they are not reusable assistant skills. General issue-readiness and
+  independence evaluation is already covered by `review-issue-readiness`.
+- `PROMPT_ARCHITECTURE_MIGRATION_GUIDE.md` prescribes the legacy prompt-as-business-logic
+  pattern and references deprecated prompt files. It is migration history, not active
+  reusable guidance, so it was not imported.
+- `issue-intake-testing.md` and `session-recap-2025-11-07.md` are historical test/chat
+  reports; `pm-review.schema.json` is an automation contract consumed by its PM tooling.
+  None is a standalone reusable workflow or a new skill gap.
+- The DGA status-report generator is bound to the V&S contact data, deadlines, private
+  repository memory, and document layout; it remains project-specific.
+- The instruction-prompt generator routes to the existing retired prompt workflow and
+  canonical authoring skill. A Brownfield technology-instruction prompt maps to
+  `generate-instructions`. The two `create_chatmode_guidance.md` files are empty.
+
+No new skill or source-file edit was warranted. The prior skill refinements and this
+classification pass are recorded in the summary. Review is still incomplete across the
+138 prompt-related inventory paths.

@@ -131,6 +131,8 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - Mapped the Jekyll `movePost` migration prompt to `transfer-blog-publication`; expanded the skill for confirmed date/slug naming, front-matter updates, and explicitly scoped media-asset copying. Contact values in the legacy publication prompts conflict, so none was adopted as canonical.
 - Mapped dead-code and security issue-drafting prompts to existing skills. Parallel slice prompts are tied to a specific calculator plan/dependency graph, and two discovered chatmode guidance prompt files are empty; neither warranted a new reusable skill.
 - Mapped remaining migration, architecture risk, security architecture, Vue migration testing, scalability, technology evaluation, ownership/support, and SDLC stabilization prompts to existing skills; no additional skill was warranted.
+- Reviewed the remaining PM support materials: issue-readiness/independence guidance maps to `review-issue-readiness`; legacy prompt-architecture notes, historical issue-intake/session reports, and the PM JSON schema are respectively migration documentation, historical evidence, and an automation contract, not new assistant skills.
+- Kept the DGA status-report generator repository-specific due to its V&S data, dates, memory, and output structure. Mapped the Brownfield technology-instruction generator to `generate-instructions`; the instruction-prompt generator is covered by the retired prompt-authoring workflow and canonical instruction-authoring skill. Two chatmode-guidance files are empty.
 
 ### Prompt review findings
 
@@ -149,3 +151,4 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - The older `create-implementation-skills` artifact has a historical 32 ms discrepancy between its recorded elapsed time and rounded `total_duration`; it was not rewritten to avoid fabricating historical timestamps.
 - Prompt-gap review, skill authoring, and final provenance validation: 00:10:41 from 2026-10-18T09:55:12.922-07:00 to 2026-10-18T10:05:54.310-07:00.
 - Prompt-to-skill continuation and skill refinement: 00:06:12 from 2026-10-18T10:11:57.492-07:00 to 2026-10-18T10:18:09.845-07:00.
+- PM support-material classification: 00:00:44 from 2026-10-18T10:25:37.478-07:00 to 2026-10-18T10:26:21.010-07:00.
