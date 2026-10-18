@@ -152,6 +152,10 @@ Use standard Markdown pipe tables for compact comparisons. The PowerPoint genera
 | Purpose | Define rules | Execute |
 ```
 
+## PowerPoint Output
+
+When using `.github/scripts/generate_pptx.py`, supported Markdown bold markers are rendered as native emphasis in headings, body text, lists, and table cells. Verify the exported deck when formatting is important; do not assume unsupported Markdown renders as intended.
+
 ## Diagrams
 
 Use fenced Mermaid blocks for diagrams instead of ASCII art or manually aligned text. The PowerPoint generator renders Mermaid when `mmdc` or `npx` is available; without Mermaid CLI, the diagram remains code in the output. Verify the generated slide deck when a diagram is important to the presentation.

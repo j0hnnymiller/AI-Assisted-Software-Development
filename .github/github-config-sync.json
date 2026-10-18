@@ -35,14 +35,6 @@
     ".github/prompts/generate-implementation-prompts-prompt.md": {
       "distribute": "none"
     },
-    ".github/instructions/agent-file.instructions.md": {
-      "supersedes": [
-        "9116c4d768b08e18",
-        "b36b00a08daacd19",
-        "bf0f6a0ccf901dd8"
-      ],
-      "consolidated": "2026-10-16T22:42:43.0812365Z"
-    },
     ".github/instructions/ai-assisted-output.instructions.md": {
       "supersedes": [
         "240b85261080f5d3",
@@ -58,14 +50,6 @@
         "fba3acc115173327"
       ],
       "consolidated": "2026-10-16T22:42:43.0683130Z"
-    },
-    ".github/instructions/create-instruction-files.instructions.md": {
-      "supersedes": [
-        "456e567e2b422367",
-        "86efef5e7668fbf9",
-        "b968375e62585193"
-      ],
-      "consolidated": "2026-10-16T22:42:43.0871275Z"
     },
     ".github/instructions/marp-slides.instructions.md": {
       "supersedes": [

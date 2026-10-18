@@ -27,9 +27,8 @@ This folder contains the canonical versions of all AI-assisted development instr
 | -------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------- |
 | [`ai-assisted-output.instructions.md`](ai-assisted-output.instructions.md)             | AI Provenance Policy          | Main AI provenance and logging policy with chat management requirements |
 | [`business-rules-to-slices.instructions.md`](business-rules-to-slices.instructions.md) | Vertical Slice Guidelines     | Convert business rules into vertical slice implementations              |
-| [`agent-file.instructions.md`](agent-file.instructions.md)                             | Agent Authoring               | Guidelines for creating custom GitHub Copilot agents                    |
+| [`custom-agents.instructions.md`](custom-agents.instructions.md)                      | Agent Authoring               | Guidelines for creating focused custom agents using verified host support |
 | [`instruction-files.instructions.md`](instruction-files.instructions.md)               | Instruction Standards         | Standards for creating and maintaining instruction files                |
-| [`instruction-prompt-files.instructions.md`](instruction-prompt-files.instructions.md) | Legacy Prompt Migration | Replacing existing instruction-generating prompts with skills |
 | [`marp-slides.instructions.md`](marp-slides.instructions.md)                           | Slide Creation                | Guidelines for creating Marp-based presentation slides                  |
 | [`prompt-file.instructions.md`](prompt-file.instructions.md)                           | Legacy Prompt Migration | Historical prompt-file format and migration guidance |
 | [`vertical-slice.instructions.md`](vertical-slice.instructions.md)                     | Vertical Slice Architecture   | Implementation guidelines for vertical slice patterns                   |

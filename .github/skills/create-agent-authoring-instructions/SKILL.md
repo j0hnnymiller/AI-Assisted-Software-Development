@@ -30,7 +30,7 @@ revisions:
 ---
 # Generate Custom Agent Instructions
 
-Create or revise guidance for authoring focused custom agents. Follow the repository's [agent-file instructions](../../instructions/agent-file.instructions.md), the selected host's current schema, and the AI provenance policy.
+Create or revise guidance for authoring focused custom agents. Follow the repository's [custom-agent instructions](../../instructions/custom-agents.instructions.md), the selected host's current schema, and the AI provenance policy.
 
 ## Workflow
 
@@ -52,6 +52,5 @@ An agent authoring guide should cover purpose and when to use an agent, naming/l
 - Do not assume frontmatter fields or activation syntax across hosts.
 - Avoid broad personas, excessive tools, redundant sections, private organizational details, and fabricated metrics.
 - Preserve provenance and existing user changes; do not overwrite a canonical guide without approval.
-
 
 

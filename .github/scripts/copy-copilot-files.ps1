@@ -25,12 +25,10 @@ param(
 $patterns = @(
     '.github\agents\*.agent.md',
     '.github\instructions\ai-assisted-output.instructions.md',
-    '.github\instructions\agent-file.instructions.md',
+    '.github\instructions\custom-agents.instructions.md',
     '.github\instructions\prompt-file.instructions.md',
-    '.github\instructions\instruction-prompt-files.instructions.md',
     '.github\instructions\instruction-files.instructions.md',
-    '.github\instructions\agent-file.instructions.md',
-    '.github\instructions\instruction-prompt-files.instructions.md',
+    '.github\instructions\marp-slides.instructions.md',
     '.github\prompts\check-context.prompt.md'
 )
 

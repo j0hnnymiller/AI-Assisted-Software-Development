@@ -43,7 +43,7 @@ Clear provenance and reliable logging for all AI-assisted artifacts to enable au
    - Formats supporting front matter (Markdown): embed YAML at top
    - Formats not supporting (images, binaries): sidecar `<artifact>.meta.md`
    - No sidecars for Markdown
-3. **Required Provenance Metadata** (10 fields):
+3. **Required Provenance Metadata** (11 fields):
    - `ai_generated: true` (boolean)
    - `model: "<provider>/<model-name>@<version>"` (explicit format, e.g., "openai/gpt-4o@2024-11-20")
    - `operator: "<github-username>"`
@@ -54,13 +54,14 @@ Clear provenance and reliable logging for all AI-assisted artifacts to enable au
    - `task_durations:` (array of task/duration objects)
    - `total_duration: "<hh:mm:ss>"`
    - `ai_log: "ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md"`
+   - `source: "<creator or prompt path>"`
 4. **Chat Logging Workflow**:
    - Structure: `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/` with `conversation.md` and `summary.md`
    - Conversation format: Chat ID, operator, model, timestamps, context, exchanges, work burst closure, artifacts
    - Summary format: Overview, methodology, decisions, alternatives, edge cases, testing, validation, next steps
 5. **Task Durations**: Capture per-task (analysis, design, implementation, testing) and total
 6. **Placement & Naming**: Conventions for different artifact types
-7. **Quality Checklist**: All 10 fields present, model explicit format, chat_id matches ai_log path, timestamps ISO8601
+7. **Quality Checklist**: All 11 fields present, model explicit format, chat_id matches ai_log path, timestamps ISO8601
 8. **Copilot Integration**: Model identification, chat management, file generation workflow
 9. **Enforcement (CI)**: Example validation scripts (Linux/Mac, PowerShell)
 10. **Non-Compliance & Remediation**: What happens if missing, how to fix
@@ -92,6 +93,5 @@ Complete policy with YAML front matter per its own requirements, all sections, t
 - Do not create a competing policy.
 - Do not promise automation or enforcement without implementation evidence.
 - Preserve the existing canonical policy unless the user explicitly approves replacing it.
-
 
 

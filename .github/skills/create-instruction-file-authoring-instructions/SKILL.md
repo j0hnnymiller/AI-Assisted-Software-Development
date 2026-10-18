@@ -30,95 +30,56 @@ revisions:
 ---
 # Generate Instruction-File Creation Guide
 
-Create comprehensive Markdown guide for creating new `.instructions.md` files in the repository.
+Create comprehensive Markdown guidance for creating or revising `.instructions.md` files in the repository.
 
 ## Output
 
 File: `.github/instructions/instruction-files.instructions.md`
-Complete, self-contained guide optimized for both AI assistants and to minimize token consumption
+Follow the canonical guide and current AI provenance policy. Do not prescribe unsupported host metadata or legacy prompt workflows.
 
-## Complete Structure Required:
+## Recommended Guide Structure
 
-1. **Title**: "Creating New Instruction Files"
-2. **Overview**: Purpose, target audience, related documentation
-3. **Table of Contents**: Full navigation structure
-4. **When to Create Instruction Files**: Use cases, examples of good instruction files
-5. **File Structure Requirements**:
-   - Location and naming: `.github/instructions/`
-   - Required YAML front matter: Complete AI provenance + Copilot metadata + governance fields
-   - Required content structure: Template with all standard sections
-6. **Content Guidelines**:
-   - Writing principles: Imperative language, examples, structure
-   - Content organization: Standard sections breakdown
-   - Target audience: AI agents (primary), token optimization strategies
-7. **Creation Process**:
-   - Using meta-prompt
-8. **Quality Standards**:
-   - Content quality checklist
-   - Technical quality checklist
-   - Process quality checklist
-9. **Common Patterns**:
-   - Process instructions pattern
-   - Standard templates pattern
-   - Validation rules pattern
-10. **AI-Specific Considerations**:
-    - Critical safety rule ("When uncertain, ask")
-    - Rules format for AI consumption
-    - Validation checklists
-    - Token optimization techniques
-11. **Known Limitations and Constraints**: Document constraints affecting instruction effectiveness
-12. **Security and Compliance (NON-NEGOTIABLE)**: Mandatory security rules for code generation
-13. **Integration Requirements**:
-    - README updates (reference canonical post-creation requirements)
-    - Related file updates
-    - Prompt file creation
-14. **Validation Checklist**:
-    - Process validation
-    - Content validation
-    - Technical validation
-    - Compliance validation
-15. **Common Mistakes to Avoid**:
-    - Content mistakes (vague requirements, missing examples)
-    - Technical mistakes (incomplete metadata, wrong location)
-    - Process mistakes (no documentation, reused chat logs)
-16. **Examples**:
-    - Example 1: Code Review Instructions (complete with metadata)
-    - Example 2: API Documentation Instructions (complete with metadata)
-17. **Maintenance and Updates**:
-    - When to update
-    - Update process
-    - Version control
-18. **File Length Management**: Guidelines for when files exceed 300-500 line limit
-19. **Summary**: Key requirements checklist
-20. **Document Footer**: Version, last updated, maintainer, related instructions
+Tailor the guide to the task. Cover relevant items from this list rather than requiring every section:
 
-## YAML Front Matter Fields:
+1. Purpose, audience, scope, and when to create an instruction file
+2. Supported location, naming, and host-specific front matter
+3. Content organization, actionable rules, and examples
+4. Authoring, review, and update workflow
+5. Security, privacy, or compliance requirements relevant to the domain
+6. Validation checklist, references, and maintenance
+
+## YAML Front Matter Fields
 
 Document the provenance fields required by the current AI-assisted output policy. Describe additional fields, such as `applyTo`, only when they are supported and relevant to the target harness. Do not prescribe generic fields such as `name`, `version`, `author`, `tags`, `owner`, or review dates unless current repository policy or host documentation requires them.
 
-## Content Guidelines to Document:
+## Content Guidelines to Document
 
-### Writing Principles:
-- Use imperative, declarative language (ALWAYS/NEVER/MUST)
+### Writing Principles
+- Use clear, actionable language; reserve MUST/NEVER for actual requirements
 - Provide concrete examples
-- Avoid tentative language ("please try", "consider")
 - Structure: Overview → Rules → Examples → Quality checklist
 
-### AI Optimization:
-- Token efficiency: imperative commands, structured formats, minimal prose
-- Keep files under 300-500 lines
+### AI Optimization
+- Keep instructions focused and use structured formats when they improve clarity
+- If a guide grows substantially, consider splitting only when scopes and workflows remain distinct
 - Use YAML/JSON schemas over verbose examples
 - Target audience: AI agents
 
-### Security:
+### Security
 - Include security requirements appropriate to the instruction's scope.
 - Put controls that must apply across tasks in repository-level instructions; task-specific instructions should reference canonical security guidance rather than duplicate it.
 
-## Creation Methods to Document:
+## Authoring Workflow
 
-1. **Meta-Prompt Method**: Use `.github/skills/create-instruction-files-prompt-file/SKILL.md`
+1. Review the canonical [instruction-file guide](../../instructions/instruction-files.instructions.md), related guidance, and existing skills.
+2. Verify required fields and supported front matter against repository policy and the selected host.
+3. Draft or revise only the necessary scope; prefer linking to canonical rules over duplicating them.
+4. Validate YAML, links, examples, applicability, and consistency with existing instructions.
+5. Update indexes and related files when needed. Follow repository provenance requirements for the resulting artifact.
 
-## Common Patterns to Include:
+Do not create prompt generators. For migration of an existing prompt, compare its purpose, inputs, workflow, and outputs with skills; use the [retired prompt-authoring workflow](../create-instruction-files-prompt-file/SKILL.md) when needed.
+
+## Common Patterns to Include
 
 ### Pattern 1: Process Instructions
 ```markdown
@@ -129,7 +90,7 @@ Document the provenance fields required by the current AI-assisted output policy
 ```
 
 ### Pattern 2: Standard Templates
-Include complete template skeleton with all required sections
+Include a complete template skeleton only when the workflow needs reusable structure; identify required fields from current policy.
 
 ### Pattern 3: Validation Rules
 ```markdown
@@ -139,34 +100,24 @@ Include complete template skeleton with all required sections
 - **Examples**: ✅ Good / ❌ Bad
 ```
 
-## Examples to Include:
+## Examples to Include
 
-### Example 1: Code Review Instructions
-- Complete YAML front matter
-- Review criteria (functional, code quality, testing)
-- Review process steps
-- Security requirements (NON-NEGOTIABLE)
+Include a concise example only when it demonstrates a pattern that prose cannot explain clearly.
 
-### Example 2: API Documentation Instructions
-- Complete YAML front matter
-- Required fields for each endpoint
-- Example format with code blocks
-- Security requirements (NON-NEGOTIABLE)
+## Quality Checklist Items
 
-## Quality Checklist Items:
-
-### Content Quality:
+### Content Quality
 - Clear purpose, actionable guidance, complete coverage
 - Consistent structure, concrete examples, quality criteria
 
-### Technical Quality:
+### Technical Quality
 - Complete metadata (all 11 AI provenance fields)
 - Correct format, valid links, proper location
 
-### Process Quality:
-- Conversation log created and linked
-- Summary created, README updated
-- Git integration with semantic commit
+### Process Quality
+- Provenance and logging follow repository policy
+- README or index updated for durable guidance where required
+- Commit changes only when requested or part of the approved workflow
 
 ## Common Mistakes Section:
 
@@ -175,8 +126,8 @@ Document these anti-patterns:
 - ❌ Missing examples vs ✅ Concrete examples
 - ❌ Incomplete metadata vs ✅ Complete metadata
 - ❌ Wrong location vs ✅ Correct location
-- ❌ Interface as model (`"github/copilot"`) vs ✅ Actual model
-- ❌ No documentation vs ✅ Complete post-creation requirements
+- ❌ Unsupported host metadata vs ✅ Verified host-supported fields
+- ❌ No documentation vs ✅ Relevant post-creation requirements
 - ❌ Reused chat logs vs ✅ Unique chat logs
 
 ## References:
@@ -184,7 +135,6 @@ Document these anti-patterns:
 Link to related documentation:
 - `.github/instructions/ai-assisted-output.instructions.md` (canonical post-creation requirements)
 - `.github/instructions/copilot-instructions.md`
-- `.github/instructions/instruction-prompt-files.instructions.md`
 
 ## Output Requirements:
 
@@ -222,4 +172,3 @@ When a guide covers AI-assisted development, Git practices, vertical slices, or 
 - Do not create or edit unrelated instruction files.
 - Do not treat a guide-generation skill as permission to overwrite its target.
 - Do not claim host behavior or metadata support without current evidence.
-

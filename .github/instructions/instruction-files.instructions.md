@@ -219,7 +219,7 @@ source: "<creator-identifier>"
 ```yaml
 name: "[kebab-case-name]"
 description: "[One-line purpose, shown in tooling]"
-appliesTo: "[glob pattern - e.g., '**/*.instructions.md']"
+applyTo: "[glob pattern - e.g., '**/*.instructions.md']"
 version: "[semantic version]"
 author: "[creator name or team]"
 tags: ["[tag1]", "[tag2]"]
@@ -233,7 +233,7 @@ nextReview: "[YYYY-MM-DD - 3 months from review]"
 ```yaml
 name: api-documentation-standards
 description: Guidelines for documenting REST APIs
-appliesTo: "**/*.md"
+applyTo: "**/*.md"
 version: "1.2.0"
 author: "api-team"
 tags: ["api", "documentation", "standards"]
@@ -355,9 +355,9 @@ Define:
 - **Audience**: AI agents, developers, both?
 - **Related Files**: What existing docs are related?
 
-### Step 2: Use Meta-Prompt
+### Step 2: Use the Authoring Skill
 
-Use [the instruction-files skill](../skills/create-instruction-file-authoring-instructions/SKILL.md) in GitHub Copilot chat.
+Use the [instruction-file authoring skill](../skills/create-instruction-file-authoring-instructions/SKILL.md) when its workflow fits. It helps reconcile requirements with existing guidance; manual authoring or adapting a verified, relevant instruction file is also appropriate. Do not create or revive prompt generators.
 
 ### Step 3: Execute in Copilot
 
@@ -385,7 +385,7 @@ See [Integration Requirements](#integration-requirements) below.
 
 ### Technical Quality Checklist
 
-- [ ] All 12 AI provenance fields present and correct
+- [ ] All 11 required AI provenance fields present and correct
 - [ ] Correct file location (`.github/instructions/`)
 - [ ] Valid YAML front matter
 - [ ] Correct file naming (kebab-case)
@@ -557,7 +557,7 @@ After creating any instruction file, complete these steps:
 1. **Create Conversation Log**: `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md`
 2. **Create Summary**: `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/summary.md`
 3. **Update README**: Add brief entry to appropriate README section with link to chat log
-4. **Verify Metadata**: Ensure all 12 AI provenance fields present and correct
+4. **Verify Metadata**: Ensure all 11 required AI provenance fields are present and correct
 5. **Test Links**: Verify all internal links function correctly
 
 See [AI-Assisted Output Instructions - Post-Creation Requirements](ai-assisted-output.instructions.md#post-creation-requirements-canonical) for complete procedures.
@@ -585,7 +585,7 @@ See [AI-Assisted Output Instructions - Post-Creation Requirements](ai-assisted-o
 **Technical Validation**:
 
 - [ ] Correct file location (`.github/instructions/`)
-- [ ] Valid YAML front matter (all 12 fields)
+- [ ] Valid YAML front matter (all 11 required fields)
 - [ ] Correct file naming (kebab-case)
 - [ ] All markdown links format correctly
 - [ ] No sensitive data included
@@ -607,7 +607,7 @@ See [AI-Assisted Output Instructions - Post-Creation Requirements](ai-assisted-o
 | ❌ Incomplete rules        | Gaps and edge cases   | ✅ Document all variations and exceptions                 |
 | ❌ Inconsistent structure  | Confusing navigation  | ✅ Use consistent sections throughout                     |
 | ❌ Wrong location          | File not found        | ✅ Use `.github/instructions/`                            |
-| ❌ Missing AI metadata     | Violates policy       | ✅ Include all 12 provenance fields                       |
+| ❌ Missing AI metadata     | Violates policy       | ✅ Include all 11 required provenance fields               |
 | ❌ No README update        | File not discoverable | ✅ Add entry to README with link                          |
 
 ## Complete Examples
@@ -631,7 +631,7 @@ ai_log: "ai-logs/2026/02/11/code-review-standards-20260211/conversation.md"
 source: "johnmillerATcodemag-com"
 name: code-review-standards
 description: Standards and procedures for code review
-appliesTo: "**/*.md"
+applyTo: "**/*.md"
 version: "1.0.0"
 author: "engineering-team"
 tags: ["code-review", "quality"]
@@ -675,7 +675,7 @@ ai_log: "ai-logs/2026/02/11/api-documentation-standards-20260211/conversation.md
 source: "johnmillerATcodemag-com"
 name: api-documentation-standards
 description: Standards for documenting REST API endpoints
-appliesTo: "**/*.md"
+applyTo: "**/*.md"
 version: "1.0.0"
 author: "api-team"
 tags: ["api", "documentation", "rest"]
