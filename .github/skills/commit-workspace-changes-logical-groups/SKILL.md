@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/commit-workspace-changes-logical-groups.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added explicit approval gates, staged/unstaged preservation, and staged-diff review before committing."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Commit Workspace Changes In Logical Groups
 
@@ -36,14 +42,16 @@ Produce a set of commits that:
    - Run `git status --short`.
    - Run `git diff --name-status`.
    - Run `git diff --cached --name-status`.
-2. Build a grouping plan before committing:
+   - Preserve staged and unstaged distinctions; do not reset, unstage, or otherwise alter existing user work.
+2. Build and present a grouping plan before staging:
    - Identify coherent change groups (feature, fix, docs, refactor, generated assets, formatting).
    - Keep generated output files with the source changes that produced them.
    - Keep unrelated cleanup in a separate commit.
-3. Stage and commit each group in order:
+   - List the proposed files and commit message for each group, then ask for approval.
+3. For each approved group:
    - Stage only files for one group.
-   - Confirm staged set with `git diff --cached --name-only`.
-   - Commit with a concise message.
+   - Inspect `git diff --cached --name-only` and the staged diff.
+   - Request explicit approval for that commit; commit only after approval.
 4. Validate completion:
    - Run `git status -sb`.
    - Report commit SHAs, titles, and grouped files.
@@ -71,6 +79,8 @@ Examples:
 - Do not use destructive commands (`git reset --hard`, `git checkout --`, force push) unless explicitly requested.
 - Do not combine unrelated edits into one commit.
 - If a file has mixed changes for different intents, use partial staging (`git add -p`) or ask for guidance when safe splitting is ambiguous.
+- Do not stage or commit unrelated work without specific approval.
+- Invocation of this skill is not permission to alter Git state or create commits.
 
 ## Expected Output
 
@@ -83,7 +93,6 @@ At the end, provide:
    - short rationale
    - files included
 3. Final repository state from `git status -sb`.
-
 
 
 
