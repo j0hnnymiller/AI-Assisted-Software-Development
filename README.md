@@ -29,6 +29,11 @@ revisions:
     date: "2026-10-18"
     change: "Documented the implementation-skill authoring workflow in the skills overview."
     ai_log: "ai-logs/2026/10/18/create-implementation-skills-20261018/conversation.md"
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Separated standalone Marp merging from the course-manifest pipeline and added roadmap-planning and publication-transfer skills."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # AI-Assisted-Software-Development-Course
@@ -62,7 +67,7 @@ This requires the `multiCommand` extension and is configured to trigger when edi
 
 ## Agent Skills
 
-Reusable task workflows are maintained as workspace skills in [`.github/skills/`](.github/skills/). Each skill has a `SKILL.md` entry point and can include supporting scripts or references. Legacy prompts are migration-only; see the [prompt migration index](.github/prompts/README.md) and the [migration log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/summary.md).
+Reusable task workflows are maintained as workspace skills in [`.github/skills/`](.github/skills/). Each skill has a `SKILL.md` entry point and can include supporting scripts or references. Legacy prompts are migration-only; see the [migration log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/summary.md).
 
 Skill names use lowercase kebab-case, and each folder name matches the `name` in its `SKILL.md`. Related domain and platform skills retain shared prefixes; task workflows use descriptive action names. The [approved naming decisions and rename record](ai-logs/2026/10/18/skill-naming-convention-20261018/summary.md) cover all 80 skills: 50 renamed and 30 kept. A `deprecate-` prefix is a naming label only; these renames do not disable skills or change their workflows.
 
@@ -78,12 +83,14 @@ This repository enforces provenance and logging for any AI-assisted outputs (cod
 - [`.github/instructions/business-rules-to-slices.instructions.md`](.github/instructions/business-rules-to-slices.instructions.md) — **AI Assistants**: Explicit procedures for analyzing business rules, extracting use cases, and designing vertical slices ([chat log](ai-logs/2025/10/22/business-rules-vertical-slices-20251022/conversation.md))
 - [`.github/instructions/vertical-slice.instructions.md`](.github/instructions/vertical-slice.instructions.md) — **AI Assistants**: Comprehensive guide for generating vertical slice code with rules, templates, and validation checklists ([chat log](ai-logs/2025/10/22/ai-vertical-slice-implementation-20251022/conversation.md))
 - [`.github/instructions/business-rules-to-vertical-slices.instructions.md`](.github/instructions/business-rules-to-vertical-slices.instructions.md) — **Developers**: Guide for analyzing business requirements, extracting rules, and designing implementable vertical slices ([chat log](ai-logs/2025/10/22/business-rules-vertical-slices-20251022/conversation.md))
-- [`.github/instructions/copilot-instructions.md`](.github/instructions/copilot-instructions.md) — **GitHub Copilot Users Start Here** - Comprehensive Copilot-specific guidance for model format, conversation logging, and quality standards ([chat log](ai-logs/2025/10/15/prompt-file.instructions-2025-10-15/conversation.md))
+- [`.github/instructions/copilot-instructions.md`](.github/instructions/copilot-instructions.md) — Repository-wide Copilot constraints; task-specific guidance is maintained in instruction files and skills
+- [`.github/instructions/custom-agents.instructions.md`](.github/instructions/custom-agents.instructions.md) — Guidance for authoring focused custom-agent profiles using verified host support
+- [`.github/instructions/instruction-files.instructions.md`](.github/instructions/instruction-files.instructions.md) — Standards for creating and maintaining repository instruction files
+- [`.github/instructions/marp-slides.instructions.md`](.github/instructions/marp-slides.instructions.md) — Guidance for creating Marp-based presentation slides
 - [`.github/instructions/github-cli.instructions.md`](.github/instructions/github-cli.instructions.md) — Comprehensive guidance for using GitHub CLI effectively in development workflows, including authentication, repository operations, PR management, and automation ([chat log](ai-logs/2026/02/06/github-cli-instructions-20260206/conversation.md))
 - [`.github/instructions/cqrs-architecture.instructions.md`](.github/instructions/cqrs-architecture.instructions.md) — CQRS architecture guidance for command/query separation, consistency, and implementation checklists ([chat log](ai-logs/2026/02/07/cqrs-architecture-instructions-20260207/conversation.md))
 - [`.github/instructions/chatmode-file.instructions.md`](.github/instructions/chatmode-file.instructions.md) — Comprehensive authoring guidelines for creating custom GitHub Copilot chat modes ([chat log](ai-logs/2025/10/21/create-chatmode-instructions-20251021/conversation.md))
 - [`.github/instructions/prompt-file.instructions.md`](.github/instructions/prompt-file.instructions.md) — Deprecated prompt-file format and migration guidance; do not create new prompts
-- [`.github/instructions/instruction-prompt-files.instructions.md`](.github/instructions/instruction-prompt-files.instructions.md) — Migration guidance for existing instruction-generating prompts
 - [`.github/instructions/vertical-slice-architecture.instructions.md`](.github/instructions/vertical-slice-architecture.instructions.md) — Comprehensive guide for implementing vertical slice architecture with feature-centric code organization ([chat log](ai-logs/2025/10/22/vertical-slice-instructions-20251022/conversation.md))
 
 ### Custom GitHub Copilot Chat Modes
@@ -120,14 +127,12 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
 - [`.github/agents/devtest-engineer.agent.md`](.github/agents/devtest-engineer.agent.md) — Test automation, QA strategy, and coverage guidance ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
 - [`.github/agents/sre-engineer.agent.md`](.github/agents/sre-engineer.agent.md) — Site reliability, monitoring, and incident response ([chat log](ai-logs/2026/02/12/create-custom-agents-20260212/conversation.md))
 
-### Legacy Prompt-Authoring Redirects
+### Instruction-Authoring Skills
 
 - [`.github/skills/create-instruction-file-authoring-instructions/SKILL.md`](.github/skills/create-instruction-file-authoring-instructions/SKILL.md) — Create or update instruction files directly; use this instead of generating prompt files
 - [`.github/skills/create-use-case-authoring-instructions/SKILL.md`](.github/skills/create-use-case-authoring-instructions/SKILL.md) — Create or update use-case authoring guidance directly
 
-### Prompt Migration Replacements
-
-- [`.github/prompts/README.md`](.github/prompts/README.md) — Index of the retained legacy prompt sources and their canonical skill replacements
+For legacy prompt migration history, see the [migration log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/summary.md).
 
 ### Notable Artifacts
 
@@ -169,6 +174,24 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - Plans and implements bounded debt fixes after approval, with focused tests and verification.
 - **Vertical Slice Implementation Skill** ([`.github/skills/implement-vertical-slice/SKILL.md`](.github/skills/implement-vertical-slice/SKILL.md))
   - Implements one approved slice at a time with explicit acceptance coverage and handoff evidence.
+- **Implementation Roadmap Planning Skill** ([`.github/skills/plan-implementation-roadmap/SKILL.md`](.github/skills/plan-implementation-roadmap/SKILL.md))
+  - Converts authoritative requirements and dependency maps into phased execution plans with testable exit gates; does not implement work.
+- **Blog Publication Transfer Skill** ([`.github/skills/transfer-blog-publication/SKILL.md`](.github/skills/transfer-blog-publication/SKILL.md))
+  - Creates reversible publication-format copies using confirmed transformation rules while preserving source posts.
+- **IEC 62304 Work Instruction Authoring Skill** ([`.github/skills/author-iec62304-work-instruction/SKILL.md`](.github/skills/author-iec62304-work-instruction/SKILL.md))
+  - Drafts an AI-assisted medical-device software work instruction from an approved QMS template and verified sources; it does not make compliance or approval claims.
+  - Provenance: [Chat log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md)
+- **Course Slide Deck Skill** ([`.github/skills/build-course-slide-deck/SKILL.md`](.github/skills/build-course-slide-deck/SKILL.md))
+  - Builds course-manifest merged Markdown and PPTX outputs with the checked-in scripts; PPTX generation reads the manifest and source slides directly.
+  - Documents the `sections`/`decks` schema, derived outputs, note validation, and local finalization.
+  - Provenance: [Chat log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md)
+- **AIASD Weekly Slide Pipeline Skill** ([`.github/skills/run-aiasd-weekly-slide-pipeline/SKILL.md`](.github/skills/run-aiasd-weekly-slide-pipeline/SKILL.md))
+  - Runs the five Monday-Friday course manifests in parallel through merge, PPTX generation, and available local finalization.
+  - Provenance: [Chat log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md)
+- **Merge Marp Decks Skill** ([`.github/skills/merge-marp-decks/SKILL.md`](.github/skills/merge-marp-decks/SKILL.md))
+  - Creates a standalone combined Marp deck from a `sources` manifest or explicitly requested source discovery.
+  - Documents source ordering, topic dividers, presenter notes, provenance, and README/log updates.
+  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md) | [Summary](ai-logs/2026/03/18/merge-marp-decks-20260318/summary.md)
 - **Updated Existing Skills**
   - [Vue Migration Testing](.github/skills/vue-migration-test-coverage/SKILL.md) adds evidence-checked Vue 3.4 regression surfaces.
   - [Tests Gap Analysis](.github/skills/analyze-test-gaps/SKILL.md) adds an optional eight-dimension brownfield testability scorecard.
@@ -198,10 +221,6 @@ Custom chat modes are specialized AI assistants that extend GitHub Copilot's cap
   - 11 slides covering inline chat (Ctrl+I), right-click explain, test code understanding, coverage report generation (calculator service example), gap identification, prioritized implementation plans, and hands-on exercises
   - Includes comprehensive speaker notes with timing guidance, live demo instructions, audience interaction points, and exercise facilitation tips
   - Provenance: [Chat log](ai-logs/2026/03/18/code-explanation-analysis-marp-20260318/conversation.md)
-- **Merge Marp Decks Skill** ([`.github/skills/merge-marp-decks/SKILL.md`](.github/skills/merge-marp-decks/SKILL.md))
-  - Defines the discover→strip→assemble workflow for merging `slides/marp/*.deck.md` into a combined presentation
-  - Includes acceptance criteria: all decks represented, section dividers, speaker notes on every slide, valid front matter
-  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md) | [Summary](ai-logs/2026/03/18/merge-marp-decks-20260318/summary.md)
 
 - **AI-Assisted Output Slides** ([`slides/marp/ai-assisted-output.deck.md`](slides/marp/ai-assisted-output.deck.md))
   - 10-slide Marp deck on provenance metadata, placement policy, logging workflow, quality gates, and CI enforcement

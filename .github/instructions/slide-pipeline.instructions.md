@@ -27,6 +27,11 @@ revisions:
     date: "2026-10-17"
     change: "Corrected script paths to their repository locations and removed a repository-specific working-directory assumption."
     ai_log: "ai-logs/2026/10/17/reconstructed-slide-documentation-repair-20261017/conversation.md"
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Separated the course-manifest skill from standalone Marp merging and clarified that Phase 2 reads the manifest and source decks directly."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Slide Pipeline Specification
@@ -34,10 +39,12 @@ revisions:
 This document specifies the authoring, assembling, and exporting of course slide decks
 using the Copilot workspace skill pipeline.
 
-The single pipeline entry point is `.github/skills/merge-marp-decks/SKILL.md`, a
-workspace skill that reads the YAML manifest, merges individual slide files
-into a single Marp deck, generates an editable PPTX using python-pptx, and finalizes the
-PPTX using PowerPoint COM automation — all in one AI-driven run.
+The workspace skill `.github/skills/build-course-slide-deck/SKILL.md` orchestrates the repository
+pipeline. Phase 1 (`.github/scripts/phase1_merge_marp_decks.py`) creates merged Markdown
+from the manifest. Phase 2 (`.github/scripts/generate_pptx.py`) independently reads the same
+manifest and original source decks to create the editable PPTX; it does not consume the
+Phase 1 output. The local finalization step uses `.github/scripts/finalize_pptx_local.ps1`
+and PowerPoint COM automation.
 
 **🔒 CRITICAL INVARIANTS**: Any modifications to `.github/scripts/generate_pptx.py` MUST preserve:
 
@@ -94,7 +101,7 @@ slides/
 │   └── <course>-<format>-<day>.manifest.md
 
 .github/skills/
-└── merge-marp-decks/
+└── build-course-slide-deck/
     └── SKILL.md  # Pipeline entry point: workspace skill
 ```
 
@@ -300,7 +307,7 @@ front matter and then the first section's block.
 > **⚠️ IMPORTANT**: The merged output file (e.g., `slides/merged/aiasd-311-monday-draft.md`)
 > is a **generated artifact**. Do not manually edit this file. All changes must be made
 > to individual source slide files in `slides/marp/` or to the manifest YAML
-> structure. Re-run `.github/skills/merge-marp-decks/SKILL.md` to regenerate the deck.
+> structure. Re-run `.github/skills/build-course-slide-deck/SKILL.md` to regenerate the deck.
 > The generated draft markdown file is **replace-only**: never update it incrementally,
 > never patch specific sections, and never treat the previous draft contents as source material.
 > Every rerun must rebuild from manifest plus source decks and replace the entire `*-draft.md` file.
@@ -309,8 +316,8 @@ front matter and then the first section's block.
 
 ## 7. PPTX generation phase
 
-After the merged Marp deck is written the agent generates and executes a python-pptx
-build script to produce the final editable PPTX.
+The PPTX is built from the manifest and source slide files, not from the Phase 1 merged
+Markdown. Keep both script runs pointed at the same validated manifest.
 
 ### 7.1 Script location
 
@@ -320,7 +327,11 @@ build script to produce the final editable PPTX.
 
 ### 7.2 What the script produces
 
-- One PPTX slide per Marp slide in the merged deck.
+- A PPTX initialized from the manifest's template (or a blank presentation when no template
+  is configured), with the manifest title and subtitle populated when provided.
+- Slides rendered from the original source files listed in the manifest. This is a separate
+  read of those files; changes or transformations present only in the Phase 1 merged Markdown
+  are not passed to the PPTX generator.
 - For each section in the manifest: a named `<p14:section>` XML group in the PPTX
   covering all slides belonging to that section (module list + content).
 - **Empty sections** (no source files) receive a section group containing only the
@@ -468,14 +479,17 @@ left = int((prs.slide_width - width) / 2)
 
 ### 7.5 Execution
 
-```bash
-pip install python-pptx pyyaml --quiet
-python $PPTX_SCRIPT $MANIFEST $PPTX_OUTPUT
-    decks:
+Run from the repository root. Dependencies are listed in the script header; install them
+only if the environment does not already provide them.
 
-The agent runs both commands, reports any missing-file warnings, and confirms
-`$PPTX_OUTPUT` on success.
-    decks:
+```powershell
+python .github\scripts\phase1_merge_marp_decks.py $MANIFEST $OUTPUT_FILE
+python .github\scripts\generate_pptx.py $MANIFEST $PPTX_OUTPUT
+```
+
+Phase 1 writes the merged Markdown. Phase 2 reads the manifest and its original sources
+directly; it does not use `$OUTPUT_FILE` as an input. The agent validates inputs first,
+reports missing-source warnings, and confirms both generated outputs on success.
 ### 7.5 Outputs
 
 | File           | Description                                            |
@@ -551,9 +565,9 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 
 ```
 
-1. Open `.github/skills/merge-marp-decks/SKILL.md` in VS Code
-2. In Copilot chat, type `/merge-marp-decks`
-3. Include a manifest path in the invocation, or omit it to use the skill's fallback source discovery
+1. Open `.github/skills/build-course-slide-deck/SKILL.md` in VS Code
+2. In Copilot chat, type `/build-course-slide-deck`
+3. Include a supported `sections`/`decks` manifest path in the invocation.
 
 ```
 
@@ -578,7 +592,7 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 │
 ▼
 ┌──────────────────────────────────────────────────────────────┐
-│ 3. Run `/merge-marp-decks` as a workspace skill          │
+│ 3. Run `/build-course-slide-deck` as a workspace skill   │
 │ │
 │ Agent merge phase — for each section emits: │
 │ a. Module list slide (all modules; current highlighted) │
@@ -590,6 +604,7 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ Agent PPTX phase │
+│ Reads the same manifest and source decks │
 │ Runs .github/scripts/generate_pptx.py │
 │ - Agenda and content slides │
 │ - <p14:section> XML groups per section │
@@ -610,6 +625,9 @@ Updated X text frames, Fallback-adjusted Y, Skipped Z
 └──────────────────────────────────────────────────────────────┘
 
 ```
+
+Phase 2 reads the manifest and original source files directly; the Phase 1 merged Markdown
+is a separate generated artifact, not the PPTX generator's input.
 
 ---
 

@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:03:56"
 ai_log: "ai-logs/2026/10/18/create-implementation-skills-20261018/conversation.md"
 source: "user request"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Removed a link to the deleted prompt migration index and clarified that legacy prompts are migration inputs, not implementation guidance."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Create Implementation Skills
@@ -26,13 +32,13 @@ Create reusable workspace skills that guide implementation of a specific system 
 
 - A system, domain, or feature needs a reusable implementation workflow.
 - An existing implementation skill is missing verified requirements or needs a focused update.
-- Academia System implementation work needs a component skill; consult the [legacy prompt migration index](../../prompts/README.md) for the existing component skill map.
+- Academia System implementation work needs a component skill; use the current Academia skills and authoritative system requirements to establish component boundaries. Treat any legacy prompt as migration input, not active implementation guidance.
 
 ## Procedure
 
 1. **Resolve the scope.** Identify the system, component, intended implementers, authoritative requirements, expected behavior, and desired skill path. If the component boundary or governing requirements are unclear, ask before drafting.
 2. **Ground the workflow in evidence.** Read the relevant requirements, business rules, architecture, existing code and tests, applicable repository instructions, and neighboring skills. Separate verified facts from assumptions and open decisions.
-3. **Check for existing coverage.** Search `.github/skills/` by purpose, workflow, inputs, outputs, and constraints, not just by name. Extend the canonical skill when appropriate; do not create a duplicate. For Academia System components, preserve the current domain boundaries and combinations documented in the migration index.
+3. **Check for existing coverage.** Search `.github/skills/` by purpose, workflow, inputs, outputs, and constraints, not just by name. Extend the canonical skill when appropriate; do not create a duplicate. For Academia System components, preserve the domain boundaries of the existing skills and verify scope against authoritative requirements; do not rely on deprecated prompt files as implementation specifications.
 4. **Define a bounded skill.** Use one skill per cohesive implementation capability. Identify prerequisites and dependencies from evidence, and order multiple requested skills by those dependencies. Do not invent a fixed implementation sequence when the system requirements do not establish one.
 5. **Write the skill** at `.github/skills/<kebab-case-name>/SKILL.md`. The folder name must match the frontmatter `name`. Include:
    - A discovery-focused `description` stating the capability and trigger phrases.

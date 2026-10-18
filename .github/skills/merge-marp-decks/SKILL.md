@@ -1,7 +1,7 @@
 ---
 name: merge-marp-decks
-description: "Merge Marp slide decks into a single combined presentation, optionally driven by a manifest YAML file"
-argument-hint: "Manifest YAML path; leave blank to discover source decks"
+description: "Merge standalone Marp decks using a sources manifest or explicit source discovery"
+argument-hint: "Optional sources-manifest path"
 ai_generated: true
 model: "OpenAI/GPT-6@Luna"
 operator: "johnmillerATcodemag-com"
@@ -16,108 +16,76 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/merge-marp-decks.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Separated the repository-specific course manifest/PPTX workflow into build-course-slide-deck."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
-# Merge Marp Slide Decks
 
-Merge Marp slide decks according to a manifest file into a single combined presentation.
+# Merge Marp Decks
+
+Create a standalone combined Marp Markdown deck from a `sources` manifest or an explicit
+discovery request. This workflow does not produce a PPTX. For this repository's
+`sections`/`decks` course manifests and PPTX pipeline, use
+`.github/skills/build-course-slide-deck/SKILL.md`.
 
 ## Usage
 
-Invoke the skill with a manifest path:
-
 ```text
 /merge-marp-decks
-Manifest: slides/aiasd-311-tuesday.yaml
+Manifest: path/to/standalone-sources.manifest.yaml
 ```
 
-Omit the `Manifest:` line to use the fallback source discovery.
+If no manifest is supplied, use the fallback discovery behavior only when the user
+explicitly requests it. Do not confuse this format with the course pipeline's
+`sections`/`decks` format.
 
-## Manifest File Format
+For that explicit fallback, discover `*.md` files in `slides/marp/` with `marp: true`
+in front matter and write `slides/marp/ai-assisted-dev-overview.deck.md`.
 
-The manifest YAML file controls all inputs and the output path. It must follow this schema:
+## Manifest Format
 
 ```yaml
 title: "Combined deck title"
-output: "slides/marp/output-filename.deck.md"   # path to write the merged deck
-theme: default                         # Marp theme (default: default)
-paginate: true                         # Marp paginate (default: true)
+output: "slides/marp/output-filename.deck.md"
+theme: default
+paginate: true
 sources:
-  - file: "path/to/source.md"         # existing Marp slide file OR instruction file
-    topic: "Section topic label"       # used on the section divider slide
+  - file: "path/to/source.md"
+    topic: "Section topic label"
 ```
 
-When the skill invocation includes a manifest path, read that file to obtain the
-`title`, `output`, `theme`, `paginate`, and `sources` list.
+Read `title`, `output`, `theme`, `paginate`, and `sources` from the manifest. Each source
+must be an existing Marp slide file or an instruction file that can be converted using
+`.github/instructions/marp-slides.instructions.md`.
 
-If no manifest is provided, fall back to discovering all `*.md` files in
-`slides/marp/` that contain `marp: true` in their front matter and
-write the output to `slides/marp/ai-assisted-dev-overview.deck.md`.
+## Workflow
 
-## Instructions
-
-- Instructions for Marp slides: `.github/instructions/marp-slides.instructions.md`
-- Provenance policy: `.github/instructions/ai-assisted-output.instructions.md`
-
-## Steps
-
-0. **Read manifest**: If a manifest path was provided with the skill invocation, read that YAML
-   file and extract `title`, `output`, `theme`, `paginate`, and `sources`.
-   Otherwise use the fallback defaults described above.
-
-1. **Discover sources**: Collect the list of source files from the manifest `sources` field
-   (or from `slides/marp/*.deck.md` in fallback mode). For each source entry, note
-   the `file` path and `topic` label.
-
-2. **Read each source file**: Read its content. If it is a Marp slide file (contains
-   `marp: true` in front matter), strip the YAML front matter block and keep only the slide
-   content. If it is an instruction file, convert its content into Marp slides following
+1. Read and validate the manifest. If none was supplied, only discover source files after
+   the user explicitly requests fallback discovery; do not silently include every deck.
+2. Read each source. For Marp decks, remove source front matter and preserve slide content.
+   For instruction files, create slides following
    `.github/instructions/marp-slides.instructions.md`.
-
-3. **Assemble the combined deck**:
-   - Build a YAML front matter block with `marp: true`, `theme`, `paginate`, and full AI
-     provenance fields (see provenance policy).
-   - Add a title slide using the manifest `title` (or a sensible default).
-   - For each source, insert a `---` section divider slide with the `topic` as a heading,
-     then append that source's slide content.
-
-4. **Determine the output path** from the manifest `output` field (or the fallback
-   `slides/marp/ai-assisted-dev-overview.deck.md`).
-
-5. **Write the output file** — **IMPORTANT: check file existence first**:
-   - Use a file-read tool to check whether the output path already exists in the repository.
-   - **If the file exists**: use `edit` (or an update/replace operation) to overwrite its
-     content. Do **not** use `create` on an existing file.
-   - **If the file does not exist**: use `create` to create it.
-
-6. **Create ai-logs**: Write `ai-logs/<yyyy>/<mm>/<dd>/<chat-id>/conversation.md` and
-   `summary.md`. Apply the same exist-check rule: edit if present, create if absent.
-
-7. **Update README.md**: Add or update an entry for the new combined slide deck.
-   Check README.md for an existing entry for the output file; update it in place rather
-   than appending a duplicate.
-
-## Output Requirements
-
-- Every slide in the combined deck must have speaker notes using pandoc `:::notes` syntax.
-- The file must include complete AI provenance YAML front matter.
+3. Assemble a new Marp deck with `marp: true`, manifest theme and pagination values, and
+   complete provenance metadata required by
+   `.github/instructions/ai-assisted-output.instructions.md`.
+4. Add a title slide from `title`, then a divider using each source's `topic` before its
+   content. Preserve source order.
+5. Every slide must include substantive presenter notes using `:::notes` syntax. Do not
+   fabricate speaker guidance; flag source content that needs clarification.
+6. Write to the manifest's `output` path, or the fallback
+   `slides/marp/ai-assisted-dev-overview.deck.md`. Check the target first and overwrite
+   existing output rather than creating a duplicate.
+7. Create or update the chat's `conversation.md` and `summary.md`, then update README for
+   a durable deck. Do not edit source decks.
 
 ## Acceptance Criteria
 
-- [ ] Manifest file (if provided) was read and used for configuration.
-- [ ] All sources listed in the manifest (or discovered fallback) are represented.
-- [ ] Section divider slides separate each source deck.
-- [ ] Every slide has speaker notes.
-- [ ] Combined file has valid Marp front matter.
-- [ ] AI provenance metadata is complete.
-- [ ] Output file was edited (not re-created) if it already existed.
-- [ ] README updated with new or corrected entry — no duplicates added.
-
-## Changelog
-
-- **1.1.0** — Added `manifest` argument and manifest-driven workflow; added explicit file-existence
-  check (edit vs. create) to fix cloud Copilot overwrite bug; retained fallback discovery mode.
-- **1.0.0** — Initial version: discover `slides/marp/*.deck.md` and write to
-  `slides/marp/ai-assisted-dev-overview.deck.md`.
-
-
-
+- [ ] The standalone `sources` manifest or explicitly requested discovery set was validated.
+- [ ] All sources appear in manifest order with topic divider slides.
+- [ ] Every slide has substantive presenter notes.
+- [ ] The combined deck has valid Marp front matter and complete provenance.
+- [ ] Existing generated output is replaced; sources remain unchanged.
+- [ ] Required chat logs and README entry are present and links resolve.

@@ -4,7 +4,7 @@
 - Operator: johnmillerATcodemag-com
 - Model: unknown/unknown@unknown (runtime did not expose model/version)
 - Started: 2026-10-17T15:00:59.095-07:00
-- Ended: 2026-10-17T20:56:46.0719296-07:00
+- Ended: 2026-10-18T10:05:54.310-07:00
 
 ## Context
 
@@ -407,3 +407,77 @@ For the 31 missing agent paths, the targeted inventory review found most to be r
 ### Remaining review scope
 
 Other skill and instruction variants, prompt-to-skill mappings, and remaining GitHub configuration paths are not yet fully reviewed. Inventory counts above are discovery data, not a claim that every remaining file body was analyzed.
+
+## Applying Review Recommendations (2026-10-18)
+
+### 12 - Canonical Skill and Index Corrections
+
+[2026-10-18T09:28:23.289-07:00] User
+
+```text
+make the recommend changes
+```
+
+[2026-10-18] Assistant
+
+The prior review recommendations were applied in the canonical repository. Spoke repositories and the pre-existing legacy agent-instruction deletion were left untouched.
+
+- Clarified in `curate-ai-practitioner-resources` that per-resource metrics and catalog-wide aggregates require distinct, explicit scopes and thresholds; conflicting field definitions must be raised for clarification rather than silently reconciled.
+- Clarified in `count-workflow-paths` that generic graph analysis must not absorb repository-specific GitHub issue/project commands, labels, identifiers, or generated-artifact flows without verification and explicit authorization.
+- Added instruction-authoring migration guidance against carrying forward the singular `.instruction.md` suffix or unsupported metadata.
+- Updated `copilot-instructions.md` to accurately describe its repository-wide constraint scope and direct task-specific work to instruction files and skills.
+- Corrected the root README's stale prompt-index and deleted instruction links and updated its custom-agent, instruction-authoring, and Marp references.
+- Preserved the pre-existing deletion of `.github/instructions/agent-file.instructions-yaml.md`; did not edit any spoke repository or legacy prompt source.
+- Parsed front matter for changed instruction/skill files, validated changed skill links and README targets, checked stale deleted-path references, and ran `git diff --check`. No tests were run for these documentation changes.
+
+## Prompt-to-Skill Review Continuation (2026-10-18)
+
+### 13 - Course Workflow and Remaining Prompt Gaps
+
+[2026-10-18] Assistant
+
+Continued mapping legacy prompts to canonical skills. Kept the standalone Marp
+`sources` workflow distinct from the course `sections`/`decks` pipeline; created a
+course-manifest build skill and aligned the weekly runner and slide-pipeline guidance
+with the checked-in scripts. The five weekly manifests parsed as YAML and their
+referenced source files were present. A speaker-note audit found existing quality gaps,
+so no slide pipeline was run.
+
+Created three focused skills for uncovered prompt workflows:
+
+- `plan-implementation-roadmap` from the Academia execution-plan prompt, generalized
+  to approved requirements and dependency maps.
+- `transfer-blog-publication` from the preparation/restoration prompts; it preserves
+  source posts and requires confirmation because those prompts disagree on a contact
+  destination and do not define a complete inverse for image conversion.
+- `author-iec62304-work-instruction` from the Teleflex work-instruction prompt; it
+  requires an approved QMS template and authoritative sources, and produces a draft
+  only without compliance or approval claims.
+
+Mapped Git workflow, project overview, technology-specific, and C# instruction prompts
+to `generate-instructions`; legacy implementation-prompt generators remain retired and
+route to skill authoring. The medical-device template prompt remains a migration input
+only in spoke repositories; no spoke files were changed. The broader prompt inventory
+is still incomplete, and repository-specific guides and schemas are not being promoted
+as general-purpose skills without evidence of a reusable workflow.
+
+Refreshed the cross-repository inventory: 16 repositories and 493 configuration paths
+(95 canonical-only, 29 diverged, 4 identical, and 365 missing here). It reports 138
+legacy prompt-related paths across spokes. Reviewed an additional batch: mapped the
+issue-readiness prompt to `review-issue-readiness`, multi-response summarization to
+`summarize-transcript-content` with its privacy/attribution safeguards, and evergreen
+code review to the existing instruction-compliance and refactoring-analysis skills.
+The DGA status-report workflow is project-specific, and issue-intake test results and
+the PM JSON schema are supporting artifacts rather than reusable workflows; none was
+imported.
+
+Found and removed a stale link in `create-implementation-skills/SKILL.md` to the deleted
+legacy prompt migration index. Updated the skill to use current Academia skills and
+authoritative requirements, with prompts explicitly treated as migration inputs.
+
+Validated front matter YAML, required provenance fields, elapsed/task-duration arithmetic
+for the three newly authored skills, their local links, README/log targets, and the four
+source prompt paths. `git diff --check` passed; Git reported only the existing weekly
+skill line-ending conversion warning. No tests were run for documentation changes. The
+pre-existing `create-implementation-skills` metadata has a 32 ms rounding discrepancy;
+its historical timestamps were preserved rather than fabricated.

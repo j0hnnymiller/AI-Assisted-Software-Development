@@ -103,3 +103,40 @@ Reconcile applicable guidance from divergent agent and skill variants, then migr
 - Twelve chatmodes are missing. The PM mode set has an approval-label contradiction (one section requires human-only approval, another tells the PM to apply it) and a priority score normalization gap (formula max 25 versus labels 0-100). Many persona files lack supported front matter; do not import as-is.
 - The 21 workflow files are bound to the AI Practitioner Resources repository. Flagged command injection from direct PR body/ref interpolation in `capture-copilot-session.yml`, and untrusted PR code execution in the same workflow trust context as model API keys in `ai-code-review.yml`. The remaining workflows and guides were not imported; several guides reference legacy prompts.
 - Review was read-only in spoke repositories. Other instruction/skill variants, prompt mappings, and remaining GitHub config paths remain for later review.
+
+## Applying Review Recommendations (2026-10-18)
+
+- Updated `curate-ai-practitioner-resources` to distinguish per-resource metrics from catalog-wide aggregates and to surface conflicting scopes or thresholds for clarification.
+- Updated `count-workflow-paths` to separate generic path analysis from repository-specific issue/project automation and require verification plus explicit authorization for external writes.
+- Added a migration guardrail to `create-instruction-file-authoring-instructions` against stale singular instruction suffixes and unsupported metadata.
+- Clarified the narrow repository-wide role of `copilot-instructions.md`.
+- Updated the root README to remove links to deleted prompt/index instructions, correct Copilot guidance wording, and list the canonical custom-agent, instruction-file, and Marp instructions.
+- Preserved the existing deletion of `.github/instructions/agent-file.instructions-yaml.md`; no legacy prompt or spoke repository was modified.
+- Front matter YAML and changed local links validated; `git diff --check` passed. No tests were run. The broader README contains unrelated pre-existing broken links that were not changed.
+
+## Prompt-to-Skill Review Continuation (2026-10-18)
+
+### Completed
+
+- Separated the standalone Marp `sources` workflow from the course `sections`/`decks` pipeline. Created `build-course-slide-deck`, corrected `run-aiasd-weekly-slide-pipeline` script references, and updated slide-pipeline guidance and README entries.
+- Created `plan-implementation-roadmap` for evidence-grounded implementation roadmaps, `transfer-blog-publication` for reversible publication copies, and `author-iec62304-work-instruction` for controlled draft authoring from approved QMS sources.
+- Mapped Git workflow, project overview, technology-specific, and C# instruction prompts to `generate-instructions`; retired implementation-prompt generators remain routed to skills rather than new prompt files.
+- Kept source prompts and spoke repositories unchanged. Did not run the weekly slide pipeline because the note audit found source decks below the documented speaker-note quality threshold.
+- Refreshed the cross-repository inventory: 16 repositories, 493 configuration paths (95 canonical-only, 29 diverged, 4 identical, 365 missing here), including 138 legacy prompt-related paths in spokes.
+- Mapped the PM issue-review prompt to `review-issue-readiness`, multi-response summaries to `summarize-transcript-content` with privacy/attribution safeguards, and evergreen code review to existing instruction-compliance/refactoring skills. Kept DGA status reporting and issue-intake test artifacts repository-specific; the PM JSON schema remains a companion contract, not a separate skill.
+- Removed a stale reference to the deleted prompt migration index from `create-implementation-skills`; its revised guidance uses current skills and authoritative requirements.
+
+### Prompt review findings
+
+- The course-slide manifests use raw YAML with a `sections`/`decks` schema and string deck entries. Phase 1 builds merged Markdown; Phase 2 independently reads manifests and source slides to build PPTX; local PowerPoint finalization is a separate step.
+- The note audit found existing gaps: Monday 32 of 102 notes, Tuesday 28 of 97, Wednesday 6 of 52 plus one source without notes, Thursday 24 of 62 plus one source without notes, and Friday 3 of 56 were below the documented three-sentence minimum.
+- The blog preparation and restoration prompts conflict on a destination contact value and do not define the inverse image conversion; the new skill requires confirmation instead of guessing.
+- The medical-device work-instruction prompt relies on a spoke-specific approved template and QMS requirements. The new skill requires those controlled sources and qualified review; it does not make compliance, release, or approval claims.
+- The additional prompt batch did not require a new general skill beyond the three already created. Repository-specific status reporting, historical test results, and schema artifacts were not imported.
+- Prompt-to-skill coverage is not complete. Current inventory counts varied between refreshes; no claim is made that all prompt files were analyzed.
+
+### Validation
+
+- New/updated skill front matter, metadata fields, source prompt paths, and local links parsed and validated. `git diff --check` passed (with the existing weekly-skill LF-to-CRLF warning); no tests were run for these documentation-only changes.
+- The older `create-implementation-skills` artifact has a historical 32 ms discrepancy between its recorded elapsed time and rounded `total_duration`; it was not rewritten to avoid fabricating historical timestamps.
+- Prompt-gap review, skill authoring, and final provenance validation: 00:10:41 from 2026-10-18T09:55:12.922-07:00 to 2026-10-18T10:05:54.310-07:00.

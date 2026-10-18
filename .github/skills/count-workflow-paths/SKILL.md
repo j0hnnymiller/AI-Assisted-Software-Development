@@ -21,6 +21,11 @@ revisions:
     date: "2026-10-18"
     change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
     ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Separated generic path analysis from repository-specific issue/project automation."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 
 # Workflow Path Counting
@@ -35,7 +40,7 @@ Use this skill to count unique paths through a directed workflow graph and, when
 4. Enumerate simple paths using a visited-state set, or use an explicit loop bound for cyclic workflows. Record excluded/bounded edges and assumptions.
 5. Detect unreachable states, dead ends, duplicate transitions, invalid targets, and paths that cannot reach a terminal state.
 6. Report the count with a compact path listing or an approved artifact when tractable. For large graphs, report algorithm, bounds, and representative paths rather than implying exhaustive output.
-7. If asked to create test issues/projects, draft them first and obtain explicit authorization before any external write.
+7. Keep generic path analysis separate from repository-specific issue/project automation. If asked to create test issues or add them to a project, verify the active repository's generated artifact flow, permissions, labels, project identifiers, and commands; draft the actions first and obtain explicit authorization before any external write.
 
 ## Output
 
@@ -46,3 +51,10 @@ Include graph scope, path-counting rules, total count, enumerated paths (or arti
 - Never silently treat retries, cycles, or conditional branches as ordinary paths.
 - Do not claim exhaustive enumeration when a bound, truncation, or graph uncertainty exists.
 - Do not create external work items without approval.
+- Do not copy repository-specific issue templates, project IDs, labels, scripts, or `gh` commands from a legacy prompt into a generic workflow; verify them in the target repository and prefer its maintained generation/validation pipeline.
+
+---
+
+## Revision History
+
+- 2026-10-18 — Clarified the boundary between reusable path analysis and repository-specific issue/project automation. See the [chat log](../../../ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md).

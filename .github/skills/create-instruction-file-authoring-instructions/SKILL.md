@@ -27,6 +27,11 @@ revisions:
     date: "2026-10-18"
     change: "Applied approved skill naming decisions and updated active references; preserved workflow behavior and historical provenance."
     ai_log: "ai-logs/2026/10/18/skill-naming-convention-20261018/conversation.md"
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Added migration guardrails for the repository's plural instruction suffix and supported host metadata."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Generate Instruction-File Creation Guide
 
@@ -51,6 +56,7 @@ Tailor the guide to the task. Cover relevant items from this list rather than re
 ## YAML Front Matter Fields
 
 Document the provenance fields required by the current AI-assisted output policy. Describe additional fields, such as `applyTo`, only when they are supported and relevant to the target harness. Do not prescribe generic fields such as `name`, `version`, `author`, `tags`, `owner`, or review dates unless current repository policy or host documentation requires them.
+For migrated legacy guidance, verify the repository's plural `.instructions.md` suffix and supported host metadata; do not carry forward singular `.instruction.md` suffixes or invented front matter.
 
 ## Content Guidelines to Document
 

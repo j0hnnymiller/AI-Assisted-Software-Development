@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/run-aiasd-weekly-slide-pipeline.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-18"
+    change: "Corrected the weekly workflow to invoke the checked-in scripts and describe their distinct inputs."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Run AIASD Weekly Slide Pipeline
 
@@ -24,7 +30,7 @@ manifest to its own writable subagent.
 
 ## Context
 
-Use `.github/skills/merge-marp-decks/SKILL.md` as the execution contract for each
+Use `.github/skills/build-course-slide-deck/SKILL.md` as the execution contract for each
 manifest-specific run. Do not reimplement the merge logic in this skill. The subagent must
 follow that skill's validation, merge, overwrite, slide-count, and PPTX-generation rules.
 
@@ -48,20 +54,23 @@ Run the pipeline for exactly these manifests:
 1. Launch one writable subagent per manifest.
 2. Start all five subagents before waiting for any individual result.
 3. In each subagent's instructions, explicitly direct the subagent to execute
-   `.github/skills/merge-marp-decks/SKILL.md` with the exact invocation text:
+   `.github/skills/build-course-slide-deck/SKILL.md` with the exact invocation text:
 
    ```text
+   /build-course-slide-deck
    Manifest: slides/manifests/aiasd-311-<day>.manifest.md
    ```
 
 4. Each subagent must run the full workflow for its assigned manifest:
    - manifest validation
    - Phase 0 source-file validation
-   - Phase 1 merged deck generation
-   - Phase 2 PPTX generation via `scripts/generate_pptx.py`
+   - Phase 1 merged deck generation via `.github/scripts/phase1_merge_marp_decks.py`
+   - Phase 2 PPTX generation via `.github/scripts/generate_pptx.py`
+   - Phase 3 PPTX finalization via `.github/scripts/finalize_pptx_local.ps1` when Windows,
+     PowerPoint, and an unlocked output are available; otherwise report it as not finalized
 5. Do not serialize PPTX generation. Because each manifest runs in its own subagent, PPTX
    creation must proceed in parallel with the other manifest runs.
-6. Do not edit `.github/skills/merge-marp-decks/SKILL.md`.
+6. Do not edit `.github/skills/build-course-slide-deck/SKILL.md`.
 7. Do not substitute a read-only explorer agent for the execution subagents.
 8. If one manifest fails, continue collecting results from the remaining subagents and report
    the failure alongside the successful runs.
@@ -73,11 +82,17 @@ Run the pipeline for exactly these manifests:
 Use this structure for each subagent, replacing only the manifest path:
 
 ```text
-Execute `.github/skills/merge-marp-decks/SKILL.md` for this exact invocation:
+Execute `.github/skills/build-course-slide-deck/SKILL.md` for this exact invocation:
 
+/build-course-slide-deck
 Manifest: slides/manifests/aiasd-311-<day>.manifest.md
 
 Follow that skill end-to-end. Create or overwrite the derived merged deck and PPTX outputs.
+Run `.github/scripts/phase1_merge_marp_decks.py` with the manifest to create the merged
+Markdown. Run `.github/scripts/generate_pptx.py` with the same manifest and the derived PPTX
+path; the PPTX script reads the manifest and original source slides directly and does not
+consume the merged Markdown. Finalize the PPTX only if the local requirements are satisfied,
+and report if finalization is unavailable.
 Treat the manifest YAML file and all source slide files as read-only. Do not repair or rewrite
 manifest entries, rename slide paths, replace `.pptx` references with guessed `.md` files, or
 edit the source Marp slides. If you find input issues, report them.
@@ -89,6 +104,7 @@ Return a concise status report with:
 - manifest issues, if any
 - validation warnings, if any
 - final status: success or failure
+- finalization status
 ```
 
 ## Expected Outputs
@@ -115,10 +131,8 @@ After all subagents finish, provide:
 - All five manifest runs are dispatched through subagents
 - The dispatch is concurrent, not sequential
 - PPTX generation overlaps across manifest runs
-- Output files use the standard derived names from `.github/skills/merge-marp-decks/SKILL.md`
+- Output files use the standard derived names from `.github/skills/build-course-slide-deck/SKILL.md`
 - No manifest YAML or source Marp slide file is modified by the pipeline run
 - The final report clearly identifies successes, manifest issues, source warnings, and failures
-
-
 
 
