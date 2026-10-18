@@ -16,6 +16,12 @@ task_durations:
 total_duration: "00:18:03"
 ai_log: "ai-logs/2026/10/16/convert-prompt-files-to-skills-20261016/conversation.md"
 source: ".github/prompts/create-instruction-files-instructions.prompt.md"
+revisions:
+  - chat_id: "0ee42cac-b369-4e34-9193-397eba0fac7a"
+    model: "unknown/unknown@unknown"
+    date: "2026-10-17"
+    change: "Added current-repository verification, required-versus-recommended distinction, overwrite approval, and example/link validation; removed unsupported fixed metadata and length requirements."
+    ai_log: "ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md"
 ---
 # Generate Instruction-File Creation Guide
 
@@ -81,12 +87,9 @@ Complete, self-contained guide optimized for both AI assistants and to minimize 
 19. **Summary**: Key requirements checklist
 20. **Document Footer**: Version, last updated, maintainer, related instructions
 
-## Required YAML Front Matter Fields:
+## YAML Front Matter Fields:
 
-Document these required metadata fields:
-- AI Provenance: `ai_generated`, `model`, `operator`, `chat_id`, `prompt`, `started`, `ended`, `task_durations`, `total_duration`, `ai_log`, `source`
-- Copilot Metadata: `name`, `description`, `appliesTo`, `version`, `author`, `tags`
-- Governance: `owner`, `reviewedDate`, `nextReview`
+Document the provenance fields required by the current AI-assisted output policy. Describe additional fields, such as `applyTo`, only when they are supported and relevant to the target harness. Do not prescribe generic fields such as `name`, `version`, `author`, `tags`, `owner`, or review dates unless current repository policy or host documentation requires them.
 
 ## Content Guidelines to Document:
 
@@ -103,8 +106,8 @@ Document these required metadata fields:
 - Target audience: AI agents
 
 ### Security:
-- All instruction files involving code generation MUST include NON-NEGOTIABLE security rules
-- Security rules go in repo-level guardrails, NOT optional promptfiles
+- Include security requirements appropriate to the instruction's scope.
+- Put controls that must apply across tasks in repository-level instructions; task-specific instructions should reference canonical security guidance rather than duplicate it.
 
 ## Creation Methods to Document:
 
@@ -180,13 +183,26 @@ Link to related documentation:
 
 ## Output Requirements:
 
-- Comprehensive guide (600-700 lines)
-- Complete working examples with full metadata
+- Complete, self-contained guide without an arbitrary line-count target
+- Examples that match current repository and host-supported metadata
 - Clear section navigation with table of contents
 - Actionable checklists throughout
 - Cross-references to canonical requirements
 - Optimized for AI agent consumption
 
+## Authoring Workflow
+
+1. Inspect current repository instructions, examples, and the applicable provenance policy before setting requirements.
+2. Use `.github/instructions/<topic>.instructions.md` for repository instruction guides. Verify front matter and host fields against current repository conventions and supported schemas.
+3. Separate mandatory repository rules from recommendations. Include a practical template and realistic example, but do not invent fixed sections, governance fields, or length requirements without a demonstrated need.
+4. Ask before overwriting an existing guide or creating a competing canonical guide.
+5. Validate structure, YAML examples, links, and example consistency before finalizing.
+
+## Boundaries
+
+- Do not create or edit unrelated instruction files.
+- Do not treat a guide-generation skill as permission to overwrite its target.
+- Do not claim host behavior or metadata support without current evidence.
 
 
 
