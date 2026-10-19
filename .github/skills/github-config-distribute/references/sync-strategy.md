@@ -106,6 +106,29 @@ flowchart LR
 
 Writes happen on a new branch per spoke; commit is opt-in (`-Commit`); push and PR are always manual.
 
+## Complete Planning Report
+
+Planning is concise by default: differences and blockers, including `target-only`, with a brief `Reason`. Add `-Detailed` to include every selected, in-scope spoke config file, plus hub files missing from that spoke. Both the JSON `Plan` and console table include the repository, path, `Action` (sync status), and a brief `Reason`. The switch affects reporting only, not write eligibility.
+
+Plan one repository using its key relative to the configured root (not its absolute filesystem path):
+
+```powershell
+.\.github\skills\github-config-distribute\scripts\Sync-GithubConfig.ps1 -Repo 'AIASD/Fleetly'
+.\.github\skills\github-config-distribute\scripts\Sync-GithubConfig.ps1 -Repo 'AIASD/Fleetly' -Detailed
+```
+
+Repository keys use `/`, even on Windows; command paths use `\`. Wildcards such as `-Repo 'AIASD/*'` select groups. Each run replaces the default temporary report; use `-ReportFile` with a different output path to retain separate plans.
+
+- With `-Detailed`, matching files are visible as `in-sync`; spoke-only files remain visible as `target-only` in either mode.
+- With `-Detailed`, repository-excluded files are reported as `excluded`, and files with `distribute: "none"` as `distribution-disabled`. Neither status authorizes writes, including for legacy prompts.
+- With `-Detailed`, missing hub files without addition permission are reported as `missing-not-distributed`. These and the other informational statuses above are omitted by default.
+- `update` and `add` describe file-level eligibility, not a promise to write. Their reasons identify dirty working trees or non-sync repository modes that block application.
+- Planning accepts dirty spokes. Actual writes require the entire spoke working tree to be clean.
+- Global manifest scope/exclusions, discovery limits, ignored repositories, and explicit `-Repo` / `-Path` filters still bound the report. Git-ignored untracked files are not inventoried.
+- Only `update` and `add` can be copied. Reporting additional statuses does not expand write permissions or delete files.
+
+Run the [focused regression tests](../../../scripts/tests/sync-github-config.Tests.ps1) with `Invoke-Pester -Path .\.github\scripts\tests\sync-github-config.Tests.ps1 -Output Detailed` from the hub root.
+
 ## Automation Options
 
 | Option                                                                                 | Fit                    | Notes                                                                                                                                                                         |

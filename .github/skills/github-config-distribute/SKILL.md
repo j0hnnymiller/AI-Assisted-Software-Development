@@ -36,11 +36,11 @@ Hub-and-spoke sync: this repo is the hub. Spokes only receive updates that are p
 1. Commit consolidation changes in this repo first (uncommitted canonical files are skipped).
 2. Plan (dry run, read-only):
    ```powershell
-   ./.github/skills/github-config-distribute/scripts/Sync-GithubConfig.ps1 [-Repo 'AIASD/*'] [-Path '.github/instructions/x.md']
+   .\.github\skills\github-config-distribute\scripts\Sync-GithubConfig.ps1 [-Repo 'AIASD/*'] [-Path '.github/instructions/x.md'] [-Detailed]
    ```
    Writes `%TEMP%/github-config-sync-plan.json`. Use `-Path` (paths or globs) to scope a rollout to specific files; without it, `-Apply` writes every pending update/add in each repo.
    Known legacy prompt files have `distribute: "none"` and must not appear as rollout writes.
-3. Present the plan per repo. Explain non-write actions:
+3. By default, present differences and blockers per repo with `Action` (sync status) and brief `Reason`, including `target-only`. Use `-Detailed` to also include `in-sync`, `excluded`, `distribution-disabled`, and `missing-not-distributed` entries in JSON and console reports. Use an exact root-relative repo key, such as `-Repo 'AIASD/Fleetly'`, to plan one repo; wildcards select groups. Ignored repos and global scope/filter exclusions remain outside the report. Explain non-write actions:
    - `target-ahead` / `forked` → run `github-config-select-canonical` + `github-config-consolidate` for those files first
    - `target-only` → candidates for approved imports or repo-specific files; target-only `.github/prompts/**` files are migration candidates, never import targets
    - `uncommitted` / dirty repo → owner must commit or stash
@@ -58,7 +58,7 @@ Hub-and-spoke sync: this repo is the hub. Spokes only receive updates that are p
 
 - Overwrite only when the target's content is in canonical history or listed in `supersedes`
 - Never delete files; never touch files outside the manifest scope
-- Legacy prompt source files under `.github/prompts/**` are migration-only (README indexes may still sync). Keep prompt sources in inventory, set their canonical manifest entries to `distribute: "none"`, and exclude them from rollout plans.
+- Legacy prompt source files under `.github/prompts/**` are migration-only (README indexes may still sync). Keep prompt sources in inventory, set their canonical manifest entries to `distribute: "none"`, and report them as non-write entries only.
 - Add new files only when the manifest says `distribute: "all"` or lists the repo
 - Only the user pushes or merges
 

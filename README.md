@@ -73,6 +73,7 @@ This repo was created for the AIASD CODE Training Course
 
 ## Guidance & Instructions
 
+- [Config distribution](.github/skills/github-config-distribute/SKILL.md) reports differences and blockers with reasons by default; add `-Detailed` for every selected, in-scope config file or `-Repo 'AIASD/Fleetly'` to plan one repository. [Report boundaries and write safeguards](.github/skills/github-config-distribute/references/sync-strategy.md#complete-planning-report) distinguish visibility from permission to copy.
 - [Codebase Explorer](.github/agents/codebase-explorer.agent.md) combines unfamiliar-code orientation, bounded behavior/dependency tracing, and evidence-based archaeology. It requests only read/search tools, returns findings in chat, and reports unavailable history instead of adding command execution. Use [create-codebase-explorer-agent](.github/skills/create-codebase-explorer-agent/SKILL.md) only to create or adapt a profile, not to perform an investigation.
 - [Agent Host session guidance](.github/instructions/agent-host-sessions.instructions.md) covers workspace and harness selection, isolation, permissions, parallel work, validation, and handoff; it distinguishes current harness-specific behavior rather than assuming one runtime configuration applies everywhere.
 - [Agent Skill authoring](.github/instructions/agent-skills.instructions.md) defines entry-point naming, discovery descriptions, resource safety, and validation for repository skills.
