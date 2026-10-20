@@ -33,7 +33,7 @@ pattern targets standalone `.mmd` sources; load this instruction by task relevan
 or attach it explicitly for fenced Mermaid in Markdown. Verify discovery in the
 selected harness rather than assuming every harness uses description-based loading.
 
-For Marp content, also follow [slide authoring](marp-slides.instructions.md) and
+For Marp content, also follow the consuming repository's slide-authoring guidance and
 [pipeline constraints](slide-pipeline.instructions.md). Do not replace their
 renderer-specific requirements with generic Mermaid syntax.
 
@@ -125,5 +125,4 @@ Reference: [Mermaid documentation](https://mermaid.js.org/intro/).
 **Document Version**: 1.0.0  
 **Last Updated**: 2026-10-18  
 **Maintainer**: johnmillerATcodemag-com  
-**Related Instructions**: [Marp](marp-slides.instructions.md),
-[pipeline](slide-pipeline.instructions.md)
+**Related Instructions**: [pipeline](slide-pipeline.instructions.md)

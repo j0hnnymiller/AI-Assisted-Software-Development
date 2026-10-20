@@ -59,15 +59,16 @@ sources:
 
 Read `title`, `output`, `theme`, `paginate`, and `sources` from the manifest. Each source
 must be an existing Marp slide file or an instruction file that can be converted using
-`.github/instructions/marp-slides.instructions.md`.
+the consuming repository's slide-authoring guidance. Course-specific instructions
+belong to the Course repository, not the shared config hub.
 
 ## Workflow
 
 1. Read and validate the manifest. If none was supplied, only discover source files after
    the user explicitly requests fallback discovery; do not silently include every deck.
 2. Read each source. For Marp decks, remove source front matter and preserve slide content.
-   For instruction files, create slides following
-   `.github/instructions/marp-slides.instructions.md`.
+   For instruction files, create slides following the consuming repository's
+   slide-authoring guidance.
 3. Assemble a new Marp deck with `marp: true`, manifest theme and pagination values, and
    complete provenance metadata required by
    `.github/instructions/ai-assisted-output.instructions.md`.
