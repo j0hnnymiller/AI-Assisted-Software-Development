@@ -110,6 +110,8 @@ Writes happen on a new branch per spoke; commit is opt-in (`-Commit`); push and 
 
 Planning is concise by default: differences and blockers, including `target-only`, with a brief `Reason`. Add `-Detailed` to include every selected, in-scope spoke config file, plus hub files missing from that spoke. Both the JSON `Plan` and console table include the repository, path, `Action` (sync status), and a brief `Reason`. The switch affects reporting only, not write eligibility.
 
+Every run prints `Manifest: <absolute path>` before reading the manifest and records that location in the JSON report's `ManifestPath` field, regardless of reporting mode or whether any repositories match.
+
 Plan one repository using its key relative to the configured root (not its absolute filesystem path):
 
 ```powershell

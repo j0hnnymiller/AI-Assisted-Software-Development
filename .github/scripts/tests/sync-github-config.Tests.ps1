@@ -111,6 +111,34 @@ Describe 'Complete config distribution plans' {
         $report.Plan.Action | Should -Contain 'target-only'
     }
 
+    It 'outputs the resolved manifest location even with no matching repos (Detailed=<Detailed>)' -TestCases @(
+        @{ Detailed = $false }
+        @{ Detailed = $true }
+    ) {
+        param($Detailed)
+        $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $manifestPath
+        Push-Location $root
+        try {
+            $options = @{ Detailed = $Detailed }
+            $output = & $scriptPath -CanonicalRepo $hub -ManifestPath '.\manifest.json' -ReportFile $reportPath -Repo 'no-match' @options 6>&1
+            ($output -join "`n") | Should -Match ([regex]::Escape("Manifest: $manifestPath"))
+            $report = Get-Content -LiteralPath $reportPath -Raw | ConvertFrom-Json
+            $report.ManifestPath | Should -Be $manifestPath
+            $report.Repos.Count | Should -Be 0
+        }
+        finally {
+            Pop-Location
+        }
+    }
+
+    It 'outputs the default hub manifest location' {
+        $defaultManifest = Join-Path $hub '.github\github-config-sync.json'
+        $manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $defaultManifest
+        $output = & $scriptPath -CanonicalRepo $hub -ReportFile $reportPath -Repo 'no-match' 6>&1
+        ($output -join "`n") | Should -Match ([regex]::Escape("Manifest: $defaultManifest"))
+        (Get-Content -LiteralPath $reportPath -Raw | ConvertFrom-Json).ManifestPath | Should -Be $defaultManifest
+    }
+
     It 'keeps globally excluded files and ignored repos outside the report' {
         $manifest.exclude = @('.github/only.md')
         $report = Invoke-Plan @{ Detailed = $true }

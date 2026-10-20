@@ -42,6 +42,8 @@ if (-not $CanonicalRepo) { throw 'Run inside the canonical repo or pass -Canonic
 if ($Commit -and -not $Apply) { throw '-Commit requires -Apply.' }
 $CanonicalRepo = Resolve-RepoPath $CanonicalRepo
 if (-not $ManifestPath) { $ManifestPath = Join-Path $CanonicalRepo '.github/github-config-sync.json' }
+$ManifestPath = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($ManifestPath)
+Write-Host "Manifest: $ManifestPath"
 $manifest = Read-SyncManifest $ManifestPath
 if (-not $Root) { $Root = $manifest.root }
 $Root = Resolve-RepoPath $Root
@@ -165,6 +167,7 @@ Write-Progress -Activity 'Sync plan' -Completed
 
 [pscustomobject]@{
   Generated = (Get-Date).ToUniversalTime().ToString('o'); Canonical = $canonKey; CanonicalHead = $canon.State.Head
+  ManifestPath = $ManifestPath
   Applied = [bool]$Apply; Branch = $Branch; Repos = $repoResults; Plan = $plan
 } | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $ReportFile -Encoding utf8NoBOM
 
