@@ -33,10 +33,6 @@ pattern targets standalone `.mmd` sources; load this instruction by task relevan
 or attach it explicitly for fenced Mermaid in Markdown. Verify discovery in the
 selected harness rather than assuming every harness uses description-based loading.
 
-For Marp content, also follow the consuming repository's slide-authoring guidance and
-[pipeline constraints](slide-pipeline.instructions.md). Do not replace their
-renderer-specific requirements with generic Mermaid syntax.
-
 ## Table of Contents
 
 - [Diagram structure](#diagram-structure)
@@ -110,8 +106,7 @@ meaning; retain labels even when removing all styling.
 - [ ] Text contrast and readability are checked at the intended display/export size.
 - [ ] Render in the target environment; inspect labels, edges, clipping, and layout.
 - [ ] Report unavailable rendering or accessibility checks explicitly.
-- [ ] Follow slide/pipeline requirements for Marp; follow
-      [provenance policy](ai-assisted-output.instructions.md) for durable artifacts.
+- [ ] Follow [provenance policy](ai-assisted-output.instructions.md) for durable artifacts.
 
 ## Summary
 
@@ -125,4 +120,3 @@ Reference: [Mermaid documentation](https://mermaid.js.org/intro/).
 **Document Version**: 1.0.0  
 **Last Updated**: 2026-10-18  
 **Maintainer**: johnmillerATcodemag-com  
-**Related Instructions**: [pipeline](slide-pipeline.instructions.md)

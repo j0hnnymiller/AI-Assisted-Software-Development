@@ -33,7 +33,13 @@ Manifest: slides/manifests/aiasd-311-monday.manifest.md
 
 The manifest is raw YAML despite its `.md` extension. This course workflow uses the
 `sections`/`decks` schema. For a standalone Marp `sources` manifest or explicit source
-discovery, use `.github/skills/merge-marp-decks/SKILL.md`.
+discovery, use the Course repository's standalone merge workflow.
+
+The pipeline scripts and instructions are Course-repository dependencies, not hub
+assets. Before execution, verify that the consuming repository provides
+`.github/scripts/phase1_merge_marp_decks.py` and `.github/scripts/generate_pptx.py`.
+If either is absent, stop and report the missing prerequisite; do not recreate or
+import Course-specific scripts into the hub.
 
 ## Manifest Contract
 

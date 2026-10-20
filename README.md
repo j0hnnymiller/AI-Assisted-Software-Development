@@ -80,7 +80,7 @@ This repo was created for the AIASD CODE Training Course
 - [Mermaid authoring](.github/instructions/mermaid.instructions.md) covers semantic colors, non-color cues, and rendering checks. It automatically targets standalone `.mmd` sources; attach it or load it by task relevance for diagrams embedded in Markdown.
 - [Object Role Modeling](.github/instructions/object-role-modeling.instructions.md) guides conceptual fact-model creation and validation; [use-cases-from-conceptual-model](.github/skills/use-cases-from-conceptual-model/SKILL.md) separately derives use cases from a model that already exists.
 - [Vision and Scope guidance](.github/instructions/vision-and-scope.instructions.md) supports evidence-based system assessment, options, and delivery direction; use [PRD authoring](.github/skills/author-product-requirements/SKILL.md) for focused product/feature requirements.
-- [Slide Master](.github/agents/slide-master.agent.md) routes course-manifest PPTX builds to [build-course-slide-deck](.github/skills/build-course-slide-deck/SKILL.md), standalone Markdown merges to [merge-marp-decks](.github/skills/merge-marp-decks/SKILL.md), and read-only reviews to [review-marp-course-materials](.github/skills/review-marp-course-materials/SKILL.md).
+- The Slide Master agent and Course-specific merging, review, pipeline scripts, and instructions are maintained in the Course repository, not this hub.
 
 ## Useful Keybinding
 
@@ -110,7 +110,6 @@ Skill names use lowercase kebab-case, and each folder name matches the `name` in
 
 Use [`create-implementation-skills`](.github/skills/create-implementation-skills/SKILL.md) to author or update focused, repository-grounded implementation workflows.
 
-- Use [`review-marp-course-materials`](.github/skills/review-marp-course-materials/SKILL.md) to review a source deck, one course manifest, or a related multi-manifest sequence.
 - Use [`summarize-transcript-content`](.github/skills/summarize-transcript-content/SKILL.md) for VTT transcripts, VTI training indices with nested duration markers, or structured response aggregation. VTI summaries preserve hierarchy, distinguish declared and calculated durations, and flag incomplete or conflicting timing.
 - Use [`app-hosting-decision-tree`](.github/skills/app-hosting-decision-tree/SKILL.md) for a citizen-developer Azure app-host selection interview with functional-fit and cost screening. Imported unchanged from Messer, including its East US 2 pricing default. Use [`databricks-hosting-decisions`](.github/skills/databricks-hosting-decisions/SKILL.md) for a broader evidence-based hosting comparison without a fixed pricing-region default.
 
@@ -223,16 +222,9 @@ For legacy prompt migration history, see the [migration log](ai-logs/2026/10/17/
   - Drafts an AI-assisted medical-device software work instruction from an approved QMS template and verified sources; it does not make compliance or approval claims.
   - Provenance: [Chat log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md)
 - **Course Slide Deck Skill** ([`.github/skills/build-course-slide-deck/SKILL.md`](.github/skills/build-course-slide-deck/SKILL.md))
-  - Builds course-manifest merged Markdown and PPTX outputs with the checked-in scripts; PPTX generation reads the manifest and source slides directly.
+  - Describes course-manifest merged Markdown and PPTX outputs; execution requires the Course repository's scripts, which are not included in this hub.
   - Documents the `sections`/`decks` schema, derived outputs, note validation, and local finalization.
   - Provenance: [Chat log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md)
-- **AIASD Weekly Slide Pipeline Skill** ([`.github/skills/run-aiasd-weekly-slide-pipeline/SKILL.md`](.github/skills/run-aiasd-weekly-slide-pipeline/SKILL.md))
-  - Runs the five Monday-Friday course manifests in parallel through merge, PPTX generation, and available local finalization.
-  - Provenance: [Chat log](ai-logs/2026/10/17/0ee42cac-b369-4e34-9193-397eba0fac7a/conversation.md)
-- **Merge Marp Decks Skill** ([`.github/skills/merge-marp-decks/SKILL.md`](.github/skills/merge-marp-decks/SKILL.md))
-  - Creates a standalone combined Marp deck from a `sources` manifest or explicitly requested source discovery.
-  - Documents source ordering, topic dividers, presenter notes, provenance, and README/log updates.
-  - Provenance: [Chat log](ai-logs/2026/03/18/merge-marp-decks-20260318/conversation.md) | [Summary](ai-logs/2026/03/18/merge-marp-decks-20260318/summary.md)
 - **Updated Existing Skills**
   - [Vue Migration Testing](.github/skills/vue-migration-test-coverage/SKILL.md) adds evidence-checked Vue 3.4 regression surfaces.
   - [Tests Gap Analysis](.github/skills/analyze-test-gaps/SKILL.md) adds an optional eight-dimension brownfield testability scorecard.
@@ -365,7 +357,7 @@ This repository includes utility scripts for repository management and maintenan
 
 ### AI Instruction Synchronization
 
-The PowerShell script at [`.github/scripts/sync-ai-instructions.ps1`](.github/scripts/sync-ai-instructions.ps1) synchronizes `ai-assisted-output.instructions.md` copies under `C:\git`. Preview changes with `.\.github\scripts\sync-ai-instructions.ps1 -WhatIf`. See [`.github/scripts/README.md`](.github/scripts/README.md) for parameters and details.
+Use [config distribution](.github/skills/github-config-distribute/SKILL.md) for manifest-controlled planning and approved synchronization. The standalone instruction-sync and copy helpers have been retired.
 
 ## Document Conversion
 

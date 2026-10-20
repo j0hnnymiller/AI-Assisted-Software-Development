@@ -75,7 +75,7 @@ flowchart LR
     ".github/instructions/ai-assisted-output.instructions.md": {
       "distribute": "all",
     },
-    ".github/agents/slide-master.agent.md": {
+    ".github/agents/example.agent.md": {
       "distribute": "repos",
       "repos": ["AIASD/*"],
     },

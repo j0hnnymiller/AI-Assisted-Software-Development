@@ -124,7 +124,7 @@ sections:
 
 ```powershell
 # From repository root
-python scripts/merge_marp_decks.py slides\manifests\aiasd-311-monday.manifest.md | wc -l
+# Run the merge workflow in the Course repository; its scripts are not shipped by this hub.
 ```
 
 ### 2. Review and Refine Marp Source Files
@@ -489,7 +489,7 @@ git show --stat
 cat slides/manifests/aiasd-311-monday.manifest.md
 
 # Generate draft PPTX (from VS Code: /merge-marp-decks or use command line)
-python scripts/generate_pptx.py slides\manifests\aiasd-311-monday.manifest.md slides\output\aiasd-311-monday-draft.pptx
+# Run PPTX generation in the Course repository; its scripts are not shipped by this hub.
 
 # Commit updated source slides
 git add slides/marp/*.deck.md
@@ -602,8 +602,7 @@ git push
 
 ## Related Documentation
 
-- **Slide Pipeline Specification**: [`.github/instructions/slide-pipeline.instructions.md`](../.github/instructions/slide-pipeline.instructions.md)
-- **Scripts README**: [`scripts/README.md`](../scripts/README.md)
+- **Slide Pipeline Specification and Scripts**: Maintained in the Course repository, not this hub.
 - **AI-Assisted Output Instructions**: [`.github/instructions/ai-assisted-output.instructions.md`](../.github/instructions/ai-assisted-output.instructions.md)
 
 ---

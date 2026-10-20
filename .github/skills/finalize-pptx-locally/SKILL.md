@@ -71,7 +71,7 @@ slides/output/aiasd-311-monday-draft.pptx.
 
 1. Resolve the PPTX input path first.
 2. Confirm the input file exists before running anything.
-3. Run the PowerShell script at [scripts/finalize_pptx_local.ps1](../../scripts/finalize_pptx_local.ps1).
+3. Verify the consuming repository provides `.github/scripts/finalize_pptx_local.ps1`, then run it. This Course-specific script is not included in the hub. If absent, stop and report the missing prerequisite; do not recreate or import it.
 4. If `OutputPath` is omitted, finalize the file in place.
 5. If `OutputPath` is provided, allow the script to create or overwrite that destination.
 6. Do not edit the PPTX manually outside the script.
@@ -82,13 +82,13 @@ slides/output/aiasd-311-monday-draft.pptx.
 Run:
 
 ```powershell
-pwsh -File scripts/finalize_pptx_local.ps1 -Path "<input-path>"
+pwsh -File .github\scripts\finalize_pptx_local.ps1 -Path "<input-path>"
 ```
 
 If an output path is provided, run:
 
 ```powershell
-pwsh -File scripts/finalize_pptx_local.ps1 -Path "<input-path>" -OutputPath "<output-path>"
+pwsh -File .github\scripts\finalize_pptx_local.ps1 -Path "<input-path>" -OutputPath "<output-path>"
 ```
 
 ## Environment Constraints
@@ -106,7 +106,6 @@ Report:
 3. Fallback-adjusted text frame count
 4. Skipped text frame count
 5. Any prerequisite or COM automation blockers
-
 
 
 
