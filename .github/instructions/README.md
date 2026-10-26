@@ -55,7 +55,7 @@ This folder contains the canonical versions of all AI-assisted development instr
 | [`business-rules-to-slices.instructions.md`](business-rules-to-slices.instructions.md) | Vertical Slice Guidelines     | Convert business rules into vertical slice implementations              |
 | [`custom-agents.instructions.md`](custom-agents.instructions.md)                      | Agent Authoring               | Guidelines for creating focused custom agents using verified host support |
 | [`instruction-files.instructions.md`](instruction-files.instructions.md)               | Instruction Standards         | Standards for creating and maintaining instruction files                |
-| [`prompt-file.instructions.md`](prompt-file.instructions.md)                           | Legacy Prompt Migration | Historical prompt-file format and migration guidance |
+| [`microservices.instructions.md`](microservices.instructions.md)                     | Microservices                 | Design, build, and verify services when this architecture is selected     |
 | [`vertical-slice.instructions.md`](vertical-slice.instructions.md)                     | Vertical Slice Architecture   | Implementation guidelines for vertical slice patterns                   |
 
 ## Purpose
