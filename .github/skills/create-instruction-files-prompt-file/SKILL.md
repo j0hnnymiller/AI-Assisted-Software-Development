@@ -30,6 +30,6 @@ revisions:
 ---
 # Retired Prompt-Authoring Workflow
 
-Do not create prompt files or prompt-authoring guides. For current instruction creation and maintenance, use [`create-instruction-file-authoring-instructions`](../create-instruction-file-authoring-instructions/SKILL.md). Migrate reusable legacy workflows to skills after reviewing their current behavior.
+Do not create prompt files or prompt-authoring guides. For current instruction creation and maintenance, use [`create-instruction-file-authoring-instructions`](../create-instruction-file-authoring-instructions/SKILL.md). Consult [`prompt-file.instructions.md`](../../instructions/prompt-file.instructions.md) only when migrating an existing prompt.
 
 For a new reusable workflow, create or update a skill after approval and update the relevant README index.
