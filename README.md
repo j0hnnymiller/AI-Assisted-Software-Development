@@ -111,6 +111,7 @@ Skill names use lowercase kebab-case, and each folder name matches the `name` in
 Use [`create-implementation-skills`](.github/skills/create-implementation-skills/SKILL.md) to author or update focused, repository-grounded implementation workflows.
 
 - Use [`summarize-transcript-content`](.github/skills/summarize-transcript-content/SKILL.md) for VTT transcripts, VTI training indices with nested duration markers, or structured response aggregation. VTI summaries preserve hierarchy, distinguish declared and calculated durations, and flag incomplete or conflicting timing.
+- Use [`inventory-technology-stack`](.github/skills/inventory-technology-stack/SKILL.md) to list the languages, runtimes, frameworks, libraries, container images, and CI actions used in a folder tree, with each technology's version and reference count (manifest declarations + matching import statements + source files). Its read-only [scanner](.github/skills/inventory-technology-stack/scripts/inventory_technologies.py) needs only Python 3.11+ and outputs Markdown, JSON, or CSV.
 - Use [`app-hosting-decision-tree`](.github/skills/app-hosting-decision-tree/SKILL.md) for a citizen-developer Azure app-host selection interview with functional-fit and cost screening. Imported unchanged from Messer, including its East US 2 pricing default. Use [`databricks-hosting-decisions`](.github/skills/databricks-hosting-decisions/SKILL.md) for a broader evidence-based hosting comparison without a fixed pricing-region default.
 
 ## AI-Assisted Artifacts & Provenance
