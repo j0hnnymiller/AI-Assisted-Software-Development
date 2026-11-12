@@ -28,6 +28,11 @@ revisions:
     date: "2026-10-16"
     change: "Corrected the summary template heading to use chat terminology consistently."
     ai_log: "ai-logs/2026/10/16/reconcile-diverged-files-20261016/conversation.md"
+  - chat_id: "ae2e29d6-183f-4dde-8453-6726cf6c42cd"
+    model: "unknown/unknown@unknown"
+    date: "2026-11-12"
+    change: "Linked the human-facing writing guidance for readability standards."
+    ai_log: "ai-logs/2026/11/12/ae2e29d6-183f-4dde-8453-6726cf6c42cd/conversation.md"
 applyTo: "**/*"
 ---
 
@@ -191,6 +196,7 @@ source: "<creator or prompt path>"
 - Place logs in `ai-logs/yyyy/mm/dd/<chat-id>/`.
 - Prefer lowercase descriptive artifact filenames.
 - README entries are required for durable artifacts; optional for temporary drafts.
+- For human-facing writing standards, follow [Human-Facing Writing Instructions](human-facing-writing.instructions.md).
 - Files in `docs/`, all README files (e.g., `README.md`, `docs/README.md`), and files in the project root are exempt from token optimization requirements and should target human technical readers with full detail and explanation.
 - In those human-facing files, avoid AI slop: no generic filler, repetition, vague claims, inflated introductions, canned conclusions, or polished text without concrete information.
 

@@ -39,6 +39,11 @@ revisions:
     date: "2026-10-27"
     change: "Indexed TypeScript, JavaScript, and Node.js instruction files."
     ai_log: "ai-logs/2026/10/27/92373087-9b97-420d-a3ac-53f20e65be8a/conversation.md"
+  - chat_id: "ae2e29d6-183f-4dde-8453-6726cf6c42cd"
+    model: "unknown/unknown@unknown"
+    date: "2026-11-12"
+    change: "Indexed human-facing writing instructions."
+    ai_log: "ai-logs/2026/11/12/ae2e29d6-183f-4dde-8453-6726cf6c42cd/conversation.md"
 ---
 
 # Canonical AI Instructions
@@ -49,22 +54,23 @@ This folder contains the canonical versions of all AI-assisted development instr
 
 ## Files in this folder:
 
-| File                                                                                   | Purpose                       | Description                                                             |
-| -------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------- |
-| [`ai-assisted-output.instructions.md`](ai-assisted-output.instructions.md)             | AI Provenance Policy          | Main AI provenance and logging policy with chat management requirements |
-| [`agent-skills.instructions.md`](agent-skills.instructions.md) | Skill Authoring | Entry-point naming, discovery descriptions, resources, safety, and validation |
-| [`agent-host-sessions.instructions.md`](agent-host-sessions.instructions.md) | Agent Host Sessions | Workspace, harness, isolation, permissions, parallel work, validation, and handoff |
-| [`mermaid.instructions.md`](mermaid.instructions.md) | Diagram Authoring | Semantic colors and target-renderer checks; `.mmd` matching, with task-based or explicit loading for Markdown diagrams |
-| [`object-role-modeling.instructions.md`](object-role-modeling.instructions.md) | Object Role Modeling | Create and validate fact-oriented conceptual models; distinct from deriving use cases |
-| [`vision-and-scope.instructions.md`](vision-and-scope.instructions.md) | Vision and Scope | Evidence-based system assessment, target direction, requirements, options, and delivery planning |
-| [`typescript.instructions.md`](typescript.instructions.md) | TypeScript | Strict typing, explicit tsconfig, local `typescript` compiler, TS 6/7 migration checks |
-| [`javascript.instructions.md`](javascript.instructions.md) | JavaScript | Module format, modern syntax, JSDoc `checkJs`, promise and error handling |
-| [`nodejs.instructions.md`](nodejs.instructions.md) | Node.js Runtime | LTS targeting, `@types/node` alignment, scripts, built-ins, async I/O, configuration |
-| [`business-rules-to-slices.instructions.md`](business-rules-to-slices.instructions.md) | Vertical Slice Guidelines     | Convert business rules into vertical slice implementations              |
-| [`custom-agents.instructions.md`](custom-agents.instructions.md)                      | Agent Authoring               | Guidelines for creating focused custom agents using verified host support |
-| [`instruction-files.instructions.md`](instruction-files.instructions.md)               | Instruction Standards         | Standards for creating and maintaining instruction files                |
-| [`prompt-file.instructions.md`](prompt-file.instructions.md)                           | Legacy Prompt Migration | Historical prompt-file format and migration guidance |
-| [`vertical-slice.instructions.md`](vertical-slice.instructions.md)                     | Vertical Slice Architecture   | Implementation guidelines for vertical slice patterns                   |
+| File                                                                                   | Purpose                     | Description                                                                                                            |
+| -------------------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| [`ai-assisted-output.instructions.md`](ai-assisted-output.instructions.md)             | AI Provenance Policy        | Main AI provenance and logging policy with chat management requirements                                                |
+| [`human-facing-writing.instructions.md`](human-facing-writing.instructions.md)         | Human-Facing Writing        | Clear, readable prose for human-facing communications and documentation                                                |
+| [`agent-skills.instructions.md`](agent-skills.instructions.md)                         | Skill Authoring             | Entry-point naming, discovery descriptions, resources, safety, and validation                                          |
+| [`agent-host-sessions.instructions.md`](agent-host-sessions.instructions.md)           | Agent Host Sessions         | Workspace, harness, isolation, permissions, parallel work, validation, and handoff                                     |
+| [`mermaid.instructions.md`](mermaid.instructions.md)                                   | Diagram Authoring           | Semantic colors and target-renderer checks; `.mmd` matching, with task-based or explicit loading for Markdown diagrams |
+| [`object-role-modeling.instructions.md`](object-role-modeling.instructions.md)         | Object Role Modeling        | Create and validate fact-oriented conceptual models; distinct from deriving use cases                                  |
+| [`vision-and-scope.instructions.md`](vision-and-scope.instructions.md)                 | Vision and Scope            | Evidence-based system assessment, target direction, requirements, options, and delivery planning                       |
+| [`typescript.instructions.md`](typescript.instructions.md)                             | TypeScript                  | Strict typing, explicit tsconfig, local `typescript` compiler, TS 6/7 migration checks                                 |
+| [`javascript.instructions.md`](javascript.instructions.md)                             | JavaScript                  | Module format, modern syntax, JSDoc `checkJs`, promise and error handling                                              |
+| [`nodejs.instructions.md`](nodejs.instructions.md)                                     | Node.js Runtime             | LTS targeting, `@types/node` alignment, scripts, built-ins, async I/O, configuration                                   |
+| [`business-rules-to-slices.instructions.md`](business-rules-to-slices.instructions.md) | Vertical Slice Guidelines   | Convert business rules into vertical slice implementations                                                             |
+| [`custom-agents.instructions.md`](custom-agents.instructions.md)                       | Agent Authoring             | Guidelines for creating focused custom agents using verified host support                                              |
+| [`instruction-files.instructions.md`](instruction-files.instructions.md)               | Instruction Standards       | Standards for creating and maintaining instruction files                                                               |
+| [`prompt-file.instructions.md`](prompt-file.instructions.md)                           | Legacy Prompt Migration     | Historical prompt-file format and migration guidance                                                                   |
+| [`vertical-slice.instructions.md`](vertical-slice.instructions.md)                     | Vertical Slice Architecture | Implementation guidelines for vertical slice patterns                                                                  |
 
 ## Purpose
 

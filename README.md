@@ -64,6 +64,11 @@ revisions:
     date: "2026-10-18"
     change: "Documented the canonical Marp review workflow, VTI training-index support, and approved Azure hosting skill import from Messer."
     ai_log: "ai-logs/2026/10/18/c16f927f-91c4-4a30-aada-8f74b099e547/conversation.md"
+  - chat_id: "ae2e29d6-183f-4dde-8453-6726cf6c42cd"
+    model: "unknown/unknown@unknown"
+    date: "2026-11-12"
+    change: "Added human-facing writing guidance and linked its chat log."
+    ai_log: "ai-logs/2026/11/12/ae2e29d6-183f-4dde-8453-6726cf6c42cd/conversation.md"
 ---
 
 # AI-Assisted-Software-Development-Course
@@ -121,6 +126,7 @@ This repository enforces provenance and logging for any AI-assisted outputs (cod
 ### Guidance & Instructions
 
 - [`.github/instructions/ai-assisted-output.instructions.md`](.github/instructions/ai-assisted-output.instructions.md) — How to generate AI-assisted outputs with required metadata, logging, and CI enforcement
+- [`.github/instructions/human-facing-writing.instructions.md`](.github/instructions/human-facing-writing.instructions.md) — Clear, audience-aware prose for human-facing communications and documentation ([chat log](ai-logs/2026/11/12/ae2e29d6-183f-4dde-8453-6726cf6c42cd/conversation.md))
 - [`.github/instructions/business-rules-to-slices.instructions.md`](.github/instructions/business-rules-to-slices.instructions.md) — **AI Assistants**: Explicit procedures for analyzing business rules, extracting use cases, and designing vertical slices ([chat log](ai-logs/2025/10/22/business-rules-vertical-slices-20251022/conversation.md))
 - [`.github/instructions/vertical-slice.instructions.md`](.github/instructions/vertical-slice.instructions.md) — **AI Assistants**: Comprehensive guide for generating vertical slice code with rules, templates, and validation checklists ([chat log](ai-logs/2025/10/22/ai-vertical-slice-implementation-20251022/conversation.md))
 - [`.github/instructions/object-role-modeling.instructions.md`](.github/instructions/object-role-modeling.instructions.md) — Create and validate evidence-backed Object Role Modeling conceptual models; the use-case skill consumes an existing model.
