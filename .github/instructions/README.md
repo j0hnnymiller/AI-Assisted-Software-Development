@@ -44,6 +44,11 @@ revisions:
     date: "2026-11-12"
     change: "Indexed human-facing writing instructions."
     ai_log: "ai-logs/2026/11/12/ae2e29d6-183f-4dde-8453-6726cf6c42cd/conversation.md"
+  - chat_id: "github-issues-instructions-20261112-1120"
+    model: "unknown/unknown@unknown"
+    date: "2026-11-12"
+    change: "Added guidance for drafting, validating, and safely publishing GitHub issues."
+    ai_log: "ai-logs/2026/11/12/github-issues-instructions-20261112-1120/conversation.md"
 ---
 
 # Canonical AI Instructions
@@ -60,6 +65,7 @@ This folder contains the canonical versions of all AI-assisted development instr
 | [`human-facing-writing.instructions.md`](human-facing-writing.instructions.md)         | Human-Facing Writing        | Clear, readable prose for human-facing communications and documentation                                                |
 | [`agent-skills.instructions.md`](agent-skills.instructions.md)                         | Skill Authoring             | Entry-point naming, discovery descriptions, resources, safety, and validation                                          |
 | [`agent-host-sessions.instructions.md`](agent-host-sessions.instructions.md)           | Agent Host Sessions         | Workspace, harness, isolation, permissions, parallel work, validation, and handoff                                     |
+| [`github-issues.instructions.md`](github-issues.instructions.md)                       | GitHub Issue Authoring      | Evidence-based issue drafting, duplicate checks, privacy, and publishing authorization                                 |
 | [`mermaid.instructions.md`](mermaid.instructions.md)                                   | Diagram Authoring           | Semantic colors and target-renderer checks; `.mmd` matching, with task-based or explicit loading for Markdown diagrams |
 | [`object-role-modeling.instructions.md`](object-role-modeling.instructions.md)         | Object Role Modeling        | Create and validate fact-oriented conceptual models; distinct from deriving use cases                                  |
 | [`vision-and-scope.instructions.md`](vision-and-scope.instructions.md)                 | Vision and Scope            | Evidence-based system assessment, target direction, requirements, options, and delivery planning                       |

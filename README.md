@@ -69,6 +69,11 @@ revisions:
     date: "2026-11-12"
     change: "Added human-facing writing guidance and linked its chat log."
     ai_log: "ai-logs/2026/11/12/ae2e29d6-183f-4dde-8453-6726cf6c42cd/conversation.md"
+  - chat_id: "github-issues-instructions-20261112-1120"
+    model: "unknown/unknown@unknown"
+    date: "2026-11-12"
+    change: "Added GitHub issue authoring guidance and linked its chat log."
+    ai_log: "ai-logs/2026/11/12/github-issues-instructions-20261112-1120/conversation.md"
 ---
 
 # AI-Assisted-Software-Development-Course
@@ -81,6 +86,7 @@ This repo was created for the AIASD CODE Training Course
 - [Config distribution](.github/skills/github-config-distribute/SKILL.md) reports differences and blockers with reasons by default; add `-Detailed` for every selected, in-scope config file or `-Repo 'AIASD/Fleetly'` to plan one repository. [Report boundaries and write safeguards](.github/skills/github-config-distribute/references/sync-strategy.md#complete-planning-report) distinguish visibility from permission to copy.
 - [Codebase Explorer](.github/agents/codebase-explorer.agent.md) combines unfamiliar-code orientation, bounded behavior/dependency tracing, and evidence-based archaeology. It requests only read/search tools, returns findings in chat, and reports unavailable history instead of adding command execution. Use [create-codebase-explorer-agent](.github/skills/create-codebase-explorer-agent/SKILL.md) only to create or adapt a profile, not to perform an investigation.
 - [Agent Host session guidance](.github/instructions/agent-host-sessions.instructions.md) covers workspace and harness selection, isolation, permissions, parallel work, validation, and handoff; it distinguishes current harness-specific behavior rather than assuming one runtime configuration applies everywhere.
+- [GitHub issue authoring](.github/instructions/github-issues.instructions.md) covers evidence-based issue drafts, duplicate checks, privacy, and explicit authorization before publishing.
 - [Agent Skill authoring](.github/instructions/agent-skills.instructions.md) defines entry-point naming, discovery descriptions, resource safety, and validation for repository skills.
 - [Mermaid authoring](.github/instructions/mermaid.instructions.md) covers semantic colors, non-color cues, and rendering checks. It automatically targets standalone `.mmd` sources; attach it or load it by task relevance for diagrams embedded in Markdown.
 - [Object Role Modeling](.github/instructions/object-role-modeling.instructions.md) guides conceptual fact-model creation and validation; [use-cases-from-conceptual-model](.github/skills/use-cases-from-conceptual-model/SKILL.md) separately derives use cases from a model that already exists.
@@ -135,6 +141,7 @@ This repository enforces provenance and logging for any AI-assisted outputs (cod
 - [`.github/instructions/custom-agents.instructions.md`](.github/instructions/custom-agents.instructions.md) — Guidance for authoring focused custom-agent profiles using verified host support
 - [`.github/instructions/instruction-files.instructions.md`](.github/instructions/instruction-files.instructions.md) — Standards for creating and maintaining repository instruction files
 - [`.github/instructions/github-cli.instructions.md`](.github/instructions/github-cli.instructions.md) — Comprehensive guidance for using GitHub CLI effectively in development workflows, including authentication, repository operations, PR management, and automation ([chat log](ai-logs/2026/02/06/github-cli-instructions-20260206/conversation.md))
+- [`.github/instructions/github-issues.instructions.md`](.github/instructions/github-issues.instructions.md) — Evidence-based GitHub issue drafting, duplicate checks, privacy, and publication safeguards ([chat log](ai-logs/2026/11/12/github-issues-instructions-20261112-1120/conversation.md))
 - [`.github/instructions/cqrs-architecture.instructions.md`](.github/instructions/cqrs-architecture.instructions.md) — CQRS architecture guidance for command/query separation, consistency, and implementation checklists ([chat log](ai-logs/2026/02/07/cqrs-architecture-instructions-20260207/conversation.md))
 - [`.github/instructions/chatmode-file.instructions.md`](.github/instructions/chatmode-file.instructions.md) — Comprehensive authoring guidelines for creating custom GitHub Copilot chat modes ([chat log](ai-logs/2025/10/21/create-chatmode-instructions-20251021/conversation.md))
 - [`.github/instructions/prompt-file.instructions.md`](.github/instructions/prompt-file.instructions.md) — Deprecated prompt-file format and migration guidance; do not create new prompts
