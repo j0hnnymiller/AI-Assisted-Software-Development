@@ -49,6 +49,11 @@ revisions:
     date: "2026-11-12"
     change: "Added guidance for drafting, validating, and safely publishing GitHub issues."
     ai_log: "ai-logs/2026/11/12/github-issues-instructions-20261112-1120/conversation.md"
+  - chat_id: "5d5e4cc3-6034-4b17-aa97-f9c4df116620"
+    model: "unknown/unknown@unknown"
+    date: "2026-11-12"
+    change: "Added project requirements specification authoring guidance."
+    ai_log: "ai-logs/2026/11/12/5d5e4cc3-6034-4b17-aa97-f9c4df116620/conversation.md"
 ---
 
 # Canonical AI Instructions
@@ -69,6 +74,7 @@ This folder contains the canonical versions of all AI-assisted development instr
 | [`mermaid.instructions.md`](mermaid.instructions.md)                                   | Diagram Authoring           | Semantic colors and target-renderer checks; `.mmd` matching, with task-based or explicit loading for Markdown diagrams |
 | [`object-role-modeling.instructions.md`](object-role-modeling.instructions.md)         | Object Role Modeling        | Create and validate fact-oriented conceptual models; distinct from deriving use cases                                  |
 | [`vision-and-scope.instructions.md`](vision-and-scope.instructions.md)                 | Vision and Scope            | Evidence-based system assessment, target direction, requirements, options, and delivery planning                       |
+| [`project-requirements.instructions.md`](project-requirements.instructions.md)         | Project Requirements        | Evidence-based project scope, verifiable requirements, traceability, acceptance, and review                            |
 | [`typescript.instructions.md`](typescript.instructions.md)                             | TypeScript                  | Strict typing, explicit tsconfig, local `typescript` compiler, TS 6/7 migration checks                                 |
 | [`javascript.instructions.md`](javascript.instructions.md)                             | JavaScript                  | Module format, modern syntax, JSDoc `checkJs`, promise and error handling                                              |
 | [`nodejs.instructions.md`](nodejs.instructions.md)                                     | Node.js Runtime             | LTS targeting, `@types/node` alignment, scripts, built-ins, async I/O, configuration                                   |

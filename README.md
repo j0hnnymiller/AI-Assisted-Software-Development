@@ -74,6 +74,11 @@ revisions:
     date: "2026-11-12"
     change: "Added GitHub issue authoring guidance and linked its chat log."
     ai_log: "ai-logs/2026/11/12/github-issues-instructions-20261112-1120/conversation.md"
+  - chat_id: "5d5e4cc3-6034-4b17-aa97-f9c4df116620"
+    model: "unknown/unknown@unknown"
+    date: "2026-11-12"
+    change: "Added project requirements specification authoring guidance and indexed it in both READMEs."
+    ai_log: "ai-logs/2026/11/12/5d5e4cc3-6034-4b17-aa97-f9c4df116620/conversation.md"
 ---
 
 # AI-Assisted-Software-Development-Course
@@ -91,6 +96,7 @@ This repo was created for the AIASD CODE Training Course
 - [Mermaid authoring](.github/instructions/mermaid.instructions.md) covers semantic colors, non-color cues, and rendering checks. It automatically targets standalone `.mmd` sources; attach it or load it by task relevance for diagrams embedded in Markdown.
 - [Object Role Modeling](.github/instructions/object-role-modeling.instructions.md) guides conceptual fact-model creation and validation; [use-cases-from-conceptual-model](.github/skills/use-cases-from-conceptual-model/SKILL.md) separately derives use cases from a model that already exists.
 - [Vision and Scope guidance](.github/instructions/vision-and-scope.instructions.md) supports evidence-based system assessment, options, and delivery direction; use [PRD authoring](.github/skills/author-product-requirements/SKILL.md) for focused product/feature requirements.
+- [Project requirements specifications](.github/instructions/project-requirements.instructions.md) guide evidence-based scope, verifiable requirements, acceptance, traceability, and review.
 - The Slide Master agent and Course-specific merging, review, pipeline scripts, and instructions are maintained in the Course repository, not this hub.
 
 ## Useful Keybinding
